@@ -7,16 +7,20 @@ import { BackgroundGradientAnimation } from "@/components/ui/background-gradient
 import { Button } from "@/components/ui/button";
 import { Users, Play, Sparkles as SparklesIcon, CheckCircle } from "lucide-react";
 import { ThreeDCardDemo } from "@/components/ThreeDCardDemo";
+
 const HomePage = () => {
   const [currentText, setCurrentText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [showCursor, setShowCursor] = useState(true);
+
   const audienceTypes = ["Family Offices", "Institutions", "Asset Managers", "Startups", "Brokers", "Service Providers"];
+
   useEffect(() => {
     const typeSpeed = isDeleting ? 50 : 100;
     const currentPhrase = audienceTypes[currentIndex];
+
     const timeout = setTimeout(() => {
       if (!isDeleting && charIndex < currentPhrase.length) {
         setCurrentText(currentPhrase.substring(0, charIndex + 1));
@@ -31,9 +35,12 @@ const HomePage = () => {
         setCurrentIndex((currentIndex + 1) % audienceTypes.length);
       }
     }, typeSpeed);
+
     return () => clearTimeout(timeout);
   }, [charIndex, currentIndex, isDeleting, audienceTypes]);
-  return <div className="min-h-screen bg-background relative">
+
+  return (
+    <div className="min-h-screen bg-background relative">
       {/* Custom Grid Background */}
       <div className="absolute inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]"></div>
       
@@ -122,16 +129,16 @@ const HomePage = () => {
                 {/* Big gap before 3D card */}
                 <div className="h-16"></div>
                 
-                {/* 3D Card */}
-                <div className="w-full flex justify-center">
-                  <ThreeDCardDemo />
-                </div>
-                
               </div>
               
             </section>
             
           </div>
+        </div>
+        
+        {/* 3D Card - Full Width Section */}
+        <div className="w-full">
+          <ThreeDCardDemo />
         </div>
       </main>
       
@@ -141,6 +148,8 @@ const HomePage = () => {
       
       {/* Footer */}
       <Footer />
-    </div>;
+    </div>
+  );
 };
+
 export default HomePage;
