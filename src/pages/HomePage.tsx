@@ -60,7 +60,7 @@ const HomePage = () => {
                     <div className="space-y-6">
                       {/* Main Headline - Single Line */}
                       <div className="w-full flex justify-center">
-                        <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
+                        <h1 className="text-4xl lg:text-5xl xl:text-6xl font-black leading-tight">
                           <span className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 bg-clip-text text-transparent">
                             Private Investments AI for
                           </span>
