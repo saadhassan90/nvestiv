@@ -112,39 +112,6 @@ const HomePage = () => {
                 </div>
               </div>
               
-              {/* Right Side - Dashboard Mockup */}
-              <div className="hidden lg:flex flex-1 justify-end">
-                <div className="max-w-2xl">
-                  <div className="bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm rounded-2xl shadow-2xl border border-white/20 p-8 transform rotate-3 hover:rotate-0 transition-transform duration-500">
-                    <div className="space-y-6">
-                      <div className="flex items-center justify-between">
-                        <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Agent Templates</h3>
-                        <div className="text-sm text-gray-600 dark:text-gray-400">Dashboard • Agent Templates</div>
-                      </div>
-                      
-                      {/* Mock Dashboard Content */}
-                      <div className="grid grid-cols-2 gap-4">
-                        <div className="bg-black text-white p-4 rounded-lg">
-                          <div className="text-sm font-medium">Family Offices</div>
-                          <div className="text-xs opacity-70 mt-1">Personalized client for family office management</div>
-                        </div>
-                        <div className="border border-gray-200 dark:border-gray-700 p-4 rounded-lg">
-                          <div className="text-sm font-medium text-gray-900 dark:text-white">Investment Agent</div>
-                          <div className="text-xs text-gray-600 dark:text-gray-400 mt-1">Portfolio optimization</div>
-                        </div>
-                        <div className="border border-gray-200 dark:border-gray-700 p-4 rounded-lg">
-                          <div className="text-sm font-medium text-gray-900 dark:text-white">Deal Sourcing Agent</div>
-                          <div className="text-xs text-gray-600 dark:text-gray-400 mt-1">Aggregates deal sources</div>
-                        </div>
-                        <div className="border border-gray-200 dark:border-gray-700 p-4 rounded-lg">
-                          <div className="text-sm font-medium text-gray-900 dark:text-white">Due Diligence Agent</div>
-                          <div className="text-xs text-gray-600 dark:text-gray-400 mt-1">Generates due reports from data rooms</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
               
             </section>
             
