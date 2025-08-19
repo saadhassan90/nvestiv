@@ -103,7 +103,7 @@ const HomePage = () => {
                       
                       {/* Description Text */}
                       <p className="text-lg text-gray-600 leading-relaxed max-w-2xl lg:mx-0 mx-auto">
-                        Streamline your deal flow with an investment-specific CRM that uses AI for deal screening and due diligence.
+                        Your entire business on one AI CRM — speak custom agents into existence and automate everything. No code required.
                       </p>
                     </div>
                     
