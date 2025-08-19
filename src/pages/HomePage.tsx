@@ -50,13 +50,16 @@ const HomePage = () => {
             <section className="w-full min-h-[calc(100vh-8rem)] flex items-center justify-center py-8 sm:py-12 lg:py-16">
               
               {/* Vertical Layout Container - Centered */}
-              <div className="w-full max-w-7xl mx-auto flex flex-col items-center justify-center gap-8 lg:gap-12 text-center">
+              <div className="w-full max-w-7xl mx-auto flex flex-col items-center justify-center text-center">
+                
+                {/* Big gap before content */}
+                <div className="h-16"></div>
                 
                 {/* Text Content - Centered */}
                 <div className="flex flex-col items-center justify-center w-full max-w-4xl">
                   <div className="space-y-6">
                     
-                    {/* Group 1: Main Headlines */}
+                    {/* Main Headlines */}
                     <div className="space-y-6">
                       {/* Main Headline - Single Line */}
                       <div className="w-full flex justify-center">
@@ -78,40 +81,46 @@ const HomePage = () => {
                       </div>
                     </div>
                     
-                    {/* Group 2: Secondary Content */}
-                    <div className="space-y-8 pt-8">
-                      {/* Static Text */}
-                      <div className="flex justify-center">
-                        <div className="w-max">
-                          <h2 className="text-xl lg:text-2xl font-semibold text-gray-800 relative border-none pb-0">
-                            AI CRM. AI Agents
-                          </h2>
-                        </div>
-                      </div>
-                      
-                      {/* CTA Buttons */}
-                      <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Button size="lg" className="px-8 py-4 text-lg overflow-visible">
-                          <Play className="h-5 w-5 transition-all duration-300 group-hover:scale-125 group-hover:rotate-12" />
-                          <span>Try for FREE</span>
-                        </Button>
-                        <Button variant="secondary" size="lg" className="px-8 py-4 text-lg overflow-visible">
-                          <SparklesIcon className="h-5 w-5 transition-all duration-300 group-hover:scale-125 group-hover:rotate-180" />
-                          <span>Discover IRIS</span>
-                        </Button>
-                      </div>
-                      
-                      {/* Description Text */}
-                      <p className="text-lg text-gray-600 leading-relaxed w-full">
-                        Your entire business on one AI CRM — speak custom agents into existence and automate everything. No code, just plain english commands that transform how you work. Nvestiv unifies relationships, files, and investments into a single platform built for private markets.
-                      </p>
-                    </div>
-                    
-                    {/* Trust Indicators */}
-                    
+                    {/* Small gap */}
+                    <div className="h-4"></div>
                     
                   </div>
                 </div>
+                
+                {/* Medium gap */}
+                <div className="h-8"></div>
+                
+                {/* Secondary Content Group */}
+                <div className="flex flex-col items-center justify-center w-full max-w-4xl space-y-8">
+                  {/* Static Text */}
+                  <div className="flex justify-center">
+                    <div className="w-max">
+                      <h2 className="text-xl lg:text-2xl font-semibold text-gray-800 relative border-none pb-0">
+                        AI CRM. AI Agents
+                      </h2>
+                    </div>
+                  </div>
+                  
+                  {/* CTA Buttons */}
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <Button size="lg" className="px-8 py-4 text-lg overflow-visible">
+                      <Play className="h-5 w-5 transition-all duration-300 group-hover:scale-125 group-hover:rotate-12" />
+                      <span>Try for FREE</span>
+                    </Button>
+                    <Button variant="secondary" size="lg" className="px-8 py-4 text-lg overflow-visible">
+                      <SparklesIcon className="h-5 w-5 transition-all duration-300 group-hover:scale-125 group-hover:rotate-180" />
+                      <span>Discover IRIS</span>
+                    </Button>
+                  </div>
+                  
+                  {/* Description Text */}
+                  <p className="text-lg text-gray-600 leading-relaxed w-full">
+                    Your entire business on one AI CRM — speak custom agents into existence and automate everything. No code, just plain english commands that transform how you work. Nvestiv unifies relationships, files, and investments into a single platform built for private markets.
+                  </p>
+                </div>
+                
+                {/* Big gap before 3D card */}
+                <div className="h-16"></div>
                 
                 {/* 3D Card */}
                 <div className="w-full flex justify-center">
