@@ -4,7 +4,7 @@ import AsSeenOnCarousel from "@/components/AsSeenOnCarousel";
 import { GridBackground } from "@/components/GridBackground";
 import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
 import { Button } from "@/components/ui/button";
-import { Check, Users } from "lucide-react";
+import { Check, Users, Play, Sparkles } from "lucide-react";
 
 const HomePage = () => {
   return (
@@ -53,11 +53,13 @@ const HomePage = () => {
                   
                   {/* CTA Buttons */}
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <Button size="lg" className="px-8 py-4 text-lg">
-                      Join our BETA
+                    <Button size="lg" className="px-8 py-4 text-lg flex items-center space-x-2">
+                      <Play className="h-5 w-5" />
+                      <span>Try for FREE</span>
                     </Button>
-                    <Button variant="outline" size="lg" className="px-8 py-4 text-lg">
-                      📞 Book a demo
+                    <Button variant="outline" size="lg" className="px-8 py-4 text-lg flex items-center space-x-2">
+                      <Sparkles className="h-5 w-5" />
+                      <span>Discover IRIS</span>
                     </Button>
                   </div>
                   
