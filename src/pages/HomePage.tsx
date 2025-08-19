@@ -7,7 +7,7 @@ const HomePage = () => {
       <Navigation />
       
       {/* Main Content Area - Fully Responsive with Parallax */}
-      <main className="pt-16 md:pt-20 lg:pt-24">
+      <main className="pt-24 md:pt-28 lg:pt-32">
         {/* Container with proper responsive padding */}
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
           

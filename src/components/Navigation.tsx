@@ -22,76 +22,98 @@ const Navigation = () => {
   };
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "glass shadow-elegant backdrop-blur-xl"
-          : "bg-transparent"
-      }`}
-    >
-      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold text-foreground">
-              Nvestiv
-            </h1>
-          </div>
-
-          {/* Desktop Navigation - Empty state */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
-              {/* Navigation links will be added here */}
+    <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-full max-w-4xl px-4 sm:px-6">
+      <div
+        className={`navbar-floating transition-all duration-300 ${
+          isScrolled
+            ? "shadow-glow scale-[0.98]"
+            : "shadow-elegant scale-100"
+        }`}
+      >
+        <div className="px-6 py-4">
+          <div className="flex items-center justify-between">
+            {/* Logo - Centered on mobile, left on desktop */}
+            <div className="flex-shrink-0">
+              <h1 className="text-xl md:text-2xl font-bold text-foreground tracking-tight">
+                Nvestiv
+              </h1>
             </div>
-          </div>
 
-          {/* Theme Toggle & Mobile Menu */}
-          <div className="flex items-center space-x-4">
-            {/* Theme Toggle */}
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={toggleTheme}
-              className="p-2 hover:bg-muted"
-              aria-label="Toggle theme"
-            >
-              {theme === "dark" ? (
-                <Sun className="h-5 w-5" />
-              ) : (
-                <Moon className="h-5 w-5" />
-              )}
-            </Button>
+            {/* Desktop Navigation Menu - Centered */}
+            <div className="hidden md:flex items-center space-x-8 absolute left-1/2 transform -translate-x-1/2">
+              {/* Navigation links will be added here */}
+              <div className="flex items-center space-x-8">
+                <a href="#home" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+                  Home
+                </a>
+                <a href="#about" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+                  About
+                </a>
+                <a href="#services" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+                  Services
+                </a>
+                <a href="#contact" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+                  Contact
+                </a>
+              </div>
+            </div>
 
-            {/* Mobile menu button */}
-            <div className="md:hidden">
+            {/* Right Side Actions */}
+            <div className="flex items-center space-x-3">
+              {/* Theme Toggle */}
               <Button
                 variant="ghost"
                 size="sm"
-                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="p-2 hover:bg-muted"
-                aria-label="Toggle menu"
+                onClick={toggleTheme}
+                className="p-2 hover:bg-muted/50 rounded-xl"
+                aria-label="Toggle theme"
               >
-                {isMobileMenuOpen ? (
-                  <X className="h-5 w-5" />
+                {theme === "dark" ? (
+                  <Sun className="h-4 w-4" />
                 ) : (
-                  <Menu className="h-5 w-5" />
+                  <Moon className="h-4 w-4" />
                 )}
               </Button>
-            </div>
-          </div>
-        </div>
 
-        {/* Mobile Navigation - Empty state */}
-        {isMobileMenuOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 glass rounded-lg mt-2">
-              {/* Mobile navigation links will be added here */}
-              <div className="text-center text-muted-foreground text-sm py-4">
-                Navigation links will be added here
+              {/* Mobile menu button */}
+              <div className="md:hidden">
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                  className="p-2 hover:bg-muted/50 rounded-xl"
+                  aria-label="Toggle menu"
+                >
+                  {isMobileMenuOpen ? (
+                    <X className="h-4 w-4" />
+                  ) : (
+                    <Menu className="h-4 w-4" />
+                  )}
+                </Button>
               </div>
             </div>
           </div>
-        )}
+
+          {/* Mobile Navigation Menu */}
+          {isMobileMenuOpen && (
+            <div className="md:hidden mt-4 pt-4 border-t border-border/20">
+              <div className="space-y-3">
+                <a href="#home" className="block text-sm font-medium text-foreground hover:text-primary transition-colors py-2">
+                  Home
+                </a>
+                <a href="#about" className="block text-sm font-medium text-foreground hover:text-primary transition-colors py-2">
+                  About
+                </a>
+                <a href="#services" className="block text-sm font-medium text-foreground hover:text-primary transition-colors py-2">
+                  Services
+                </a>
+                <a href="#contact" className="block text-sm font-medium text-foreground hover:text-primary transition-colors py-2">
+                  Contact
+                </a>
+              </div>
+            </div>
+          )}
+        </div>
       </div>
     </nav>
   );
