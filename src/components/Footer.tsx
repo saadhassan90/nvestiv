@@ -48,7 +48,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-background border-t border-border">
+    <footer className="bg-black text-white border-t border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
         <div className="py-12">
@@ -57,16 +57,16 @@ const Footer = () => {
             <div className="lg:col-span-2">
               <div className="space-y-4">
                 <div className="flex items-center space-x-2">
-                  <h2 className="text-2xl font-bold text-foreground">
+                  <h2 className="text-2xl font-bold text-white">
                     Nvestiv
                   </h2>
                 </div>
-                <p className="text-muted-foreground max-w-md leading-relaxed">
+                <p className="text-gray-300 max-w-md leading-relaxed">
                   AI-powered solutions for private investments. Revolutionizing how institutional investors manage deal flow, due diligence, and portfolio optimization.
                 </p>
                 
                 {/* Contact Info */}
-                <div className="space-y-2 text-sm text-muted-foreground">
+                <div className="space-y-2 text-sm text-gray-300">
                   <div className="flex items-center space-x-2">
                     <MapPin className="h-4 w-4" />
                     <span>San Francisco, CA</span>
@@ -84,13 +84,13 @@ const Footer = () => {
                 {/* Social Links */}
                 <div className="flex space-x-4">
                   {socialLinks.map(({ icon: Icon, href, label }) => (
-                    <Button
-                      key={label}
-                      variant="ghost"
-                      size="sm"
-                      asChild
-                      className="p-2 hover:bg-muted/50 rounded-xl"
-                    >
+                      <Button
+                        key={label}
+                        variant="ghost"
+                        size="sm"
+                        asChild
+                        className="p-2 hover:bg-gray-800 rounded-xl text-gray-300 hover:text-white"
+                      >
                       <a
                         href={href}
                         target="_blank"
@@ -107,16 +107,16 @@ const Footer = () => {
 
             {/* Pages Section */}
             <div>
-              <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider mb-4">
+              <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
                 Pages
               </h3>
               <ul className="space-y-3">
                 {pageLinks.map(({ name, href }) => (
                   <li key={name}>
-                    <Link
-                      to={href}
-                      className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                    >
+                      <Link
+                        to={href}
+                        className="text-sm text-gray-300 hover:text-white transition-colors"
+                      >
                       {name}
                     </Link>
                   </li>
@@ -126,16 +126,16 @@ const Footer = () => {
 
             {/* Resources Section */}
             <div>
-              <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider mb-4">
+              <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
                 Resources
               </h3>
               <ul className="space-y-3">
                 {resourceLinks.map(({ name, href }) => (
                   <li key={name}>
-                    <Link
-                      to={href}
-                      className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                    >
+                      <Link
+                        to={href}
+                        className="text-sm text-gray-300 hover:text-white transition-colors"
+                      >
                       {name}
                     </Link>
                   </li>
@@ -145,16 +145,16 @@ const Footer = () => {
 
             {/* Legal Section */}
             <div>
-              <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider mb-4">
+              <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
                 Legal
               </h3>
               <ul className="space-y-3">
                 {legalLinks.map(({ name, href }) => (
                   <li key={name}>
-                    <Link
-                      to={href}
-                      className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                    >
+                      <Link
+                        to={href}
+                        className="text-sm text-gray-300 hover:text-white transition-colors"
+                      >
                       {name}
                     </Link>
                   </li>
@@ -165,13 +165,13 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <Separator />
+        <Separator className="bg-gray-800" />
         <div className="py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="text-sm text-muted-foreground">
+            <div className="text-sm text-gray-300">
               © {currentYear} Nvestiv. All rights reserved.
             </div>
-            <div className="flex items-center space-x-6 text-sm text-muted-foreground">
+            <div className="flex items-center space-x-6 text-sm text-gray-300">
               <span>Made with ❤️ for institutional investors</span>
             </div>
           </div>
