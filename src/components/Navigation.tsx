@@ -60,6 +60,17 @@ const Navigation = () => {
 
             {/* Right Side Actions */}
             <div className="flex items-center space-x-3">
+              {/* Login Button - Desktop */}
+              <div className="hidden md:block">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="text-sm font-medium px-4 py-2"
+                >
+                  Log In
+                </Button>
+              </div>
+
               {/* Theme Toggle */}
               <Button
                 variant="ghost"
@@ -110,6 +121,16 @@ const Navigation = () => {
                 <a href="#contact" className="block text-sm font-medium text-foreground hover:text-primary transition-colors py-2">
                   Contact
                 </a>
+                {/* Mobile Login Button */}
+                <div className="pt-2 border-t border-border/20">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="w-full text-sm font-medium"
+                  >
+                    Log In
+                  </Button>
+                </div>
               </div>
             </div>
           )}
