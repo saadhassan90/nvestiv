@@ -64,10 +64,8 @@ const HomePage = () => {
                         Private Investments AI
                         <br />
                         for{" "}
-                      </span>
-                      <span className="inline-flex items-baseline lg:justify-start justify-center">
-                        <span className="bg-gradient-to-r from-blue-900 to-blue-400 bg-clip-text text-transparent ml-3 inline-block w-[600px] text-left">{currentText}</span>
-                        {showCursor && <span className="animate-pulse bg-gradient-to-r from-blue-900 to-blue-400 bg-clip-text text-transparent ml-1">|</span>}
+                        <span className="bg-gradient-to-r from-blue-900 to-blue-400 bg-clip-text text-transparent">{currentText}</span>
+                        {showCursor && <span className="animate-pulse bg-gradient-to-r from-blue-900 to-blue-400 bg-clip-text text-transparent">|</span>}
                       </span>
                     </h1>
                     
