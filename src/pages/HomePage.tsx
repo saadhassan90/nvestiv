@@ -103,7 +103,7 @@ const HomePage = () => {
                       
                       {/* Description Text */}
                       <p className="text-lg text-gray-600 leading-relaxed max-w-2xl lg:mx-0 mx-auto">
-                        Your entire business on one AI CRM — speak custom agents into existence and automate everything. No code required.
+                        Your entire business on one AI CRM — speak custom agents into existence and automate everything. No code, just plain english commands that transform how you work. Nvestiv unifies relationships, files, and investments into a single platform built for private markets.
                       </p>
                     </div>
                     
