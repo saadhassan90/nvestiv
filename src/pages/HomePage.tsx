@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import AsSeenOnCarousel from "@/components/AsSeenOnCarousel";
 import { VideoBackground } from "@/components/VideoBackground";
 import { Button } from "@/components/ui/button";
 import { Check, Users } from "lucide-react";
@@ -110,24 +111,12 @@ const HomePage = () => {
               
             </section>
             
-            {/* As Seen On Section */}
-            <section className="py-16 border-t border-border/20">
-              <div className="text-center space-y-8">
-                <h3 className="text-lg font-medium text-muted-foreground">As Seen On</h3>
-                <div className="flex flex-wrap justify-center items-center gap-8 lg:gap-12 opacity-60 hover:opacity-80 transition-opacity">
-                  <div className="text-2xl font-serif text-muted-foreground">FINANCIAL POST</div>
-                  <div className="text-xl font-medium text-muted-foreground">MarketWatch</div>
-                  <div className="text-2xl font-bold text-muted-foreground">Bloomberg</div>
-                  <div className="text-lg font-bold text-muted-foreground">BUSINESS INSIDER</div>
-                  <div className="text-2xl font-bold text-muted-foreground">CBS</div>
-                  <div className="text-2xl font-serif text-muted-foreground">Forbes</div>
-                </div>
-              </div>
-            </section>
-            
           </div>
         </main>
       </VideoBackground>
+      
+      {/* As Seen On Carousel - Separate Section */}
+      <AsSeenOnCarousel />
           
       
       {/* Footer */}
