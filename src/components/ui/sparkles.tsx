@@ -18,68 +18,55 @@ export const SparklesCore = (props: SparklesProps) => {
     id,
     className,
     background = "transparent",
-    minSize = 0.5,
-    maxSize = 1.5,
-    particleDensity = 100,
-    particleColor = "#8215E0",
+    minSize = 0.4,
+    maxSize = 1,
+    particleDensity = 1200,
+    particleColor = "#FFFFFF",
     children,
   } = props;
   
   const [init, setInit] = useState(false);
-  const generatedId = useId();
-  const sparklesId = id || "sparkles" + generatedId;
 
   useEffect(() => {
     setInit(true);
   }, []);
 
-  // Generate random sparkles
-  const sparkles = Array.from({ length: 50 }, (_, i) => ({
-    id: i,
-    x: Math.random() * 100,
-    y: Math.random() * 100,
-    size: Math.random() * (maxSize - minSize) + minSize,
-    delay: Math.random() * 3,
-  }));
+  const particles = [];
+  for (let i = 0; i < particleDensity; i++) {
+    particles.push({
+      id: i,
+      x: Math.random() * 100,
+      y: Math.random() * 100,
+      size: Math.random() * (maxSize - minSize) + minSize,
+      opacity: Math.random() * 0.8 + 0.2,
+      delay: Math.random() * 20,
+    });
+  }
 
   return (
-    <div className={cn("relative overflow-hidden", className)}>
-      {/* Black background */}
-      <div className="absolute inset-0 bg-black" />
-      
-      {/* Sparkles overlay */}
+    <div className={cn("relative", className)} style={{ background }}>
       {init && (
-        <div className="absolute inset-0 w-full h-full">
-          {sparkles.map((sparkle) => (
+        <div className="absolute inset-0 overflow-hidden">
+          {particles.map((particle) => (
             <div
-              key={sparkle.id}
-              className="absolute animate-pulse"
+              key={particle.id}
+              className="absolute rounded-full animate-pulse"
               style={{
-                left: `${sparkle.x}%`,
-                top: `${sparkle.y}%`,
-                animationDelay: `${sparkle.delay}s`,
-                animationDuration: `${2 + Math.random() * 2}s`,
+                left: `${particle.x}%`,
+                top: `${particle.y}%`,
+                width: `${particle.size}px`,
+                height: `${particle.size}px`,
+                backgroundColor: particleColor,
+                opacity: particle.opacity,
+                animationDelay: `${particle.delay}s`,
+                animationDuration: `${3 + Math.random() * 3}s`,
+                boxShadow: `0 0 ${particle.size * 2}px ${particleColor}`,
               }}
-            >
-              <div
-                className="rounded-full opacity-70"
-                style={{
-                  width: `${sparkle.size}px`,
-                  height: `${sparkle.size}px`,
-                  backgroundColor: particleColor,
-                  boxShadow: `0 0 ${sparkle.size * 2}px ${particleColor}`,
-                }}
-              />
-            </div>
+            />
           ))}
         </div>
       )}
-      
-      {/* Gradient overlay for depth */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40" />
-      
-      {/* Content */}
-      <div className="relative z-10">{children}</div>
+      {children}
     </div>
   );
 };
@@ -88,7 +75,9 @@ export const Sparkles = ({ children, className, ...props }: SparklesProps) => {
   return (
     <SparklesCore
       className={cn("relative w-full h-full", className)}
-      particleColor="#8215E0"
+      background="black"
+      particleColor="#FFFFFF"
+      particleDensity={1200}
       {...props}
     >
       {children}

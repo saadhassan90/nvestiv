@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import AsSeenOnCarousel from "@/components/AsSeenOnCarousel";
 import { GridBackground } from "@/components/GridBackground";
 import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
-import { Sparkles } from "@/components/ui/sparkles";
+import { SparklesCore } from "@/components/ui/sparkles";
 import { Button } from "@/components/ui/button";
 import { Users, Play, Sparkles as SparklesIcon, CheckCircle } from "lucide-react";
 
@@ -18,7 +18,18 @@ const HomePage = () => {
       
       {/* Hero Section with Sparkles Background */}
       <main className="pt-24 md:pt-28 lg:pt-32 relative z-10">
-        <Sparkles className="min-h-[calc(100vh-8rem)]">
+        <div className="min-h-[calc(100vh-8rem)] w-full bg-black flex flex-col items-center justify-center overflow-hidden">
+          <SparklesCore
+            background="black"
+            minSize={0.4}
+            maxSize={1}
+            particleDensity={1200}
+            className="w-full h-full absolute inset-0"
+            particleColor="#FFFFFF"
+          />
+          
+          {/* Radial Gradient to prevent sharp edges */}
+          <div className="absolute inset-0 w-full h-full bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,white)]"></div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             {/* Hero Content */}
@@ -127,7 +138,7 @@ const HomePage = () => {
             </section>
             
           </div>
-        </Sparkles>
+        </div>
       </main>
       
       {/* As Seen On Carousel - Separate Section */}
