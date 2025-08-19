@@ -84,12 +84,6 @@ const HomePage = () => {
                       </div>
                     </div>
                     
-                    {/* Description Text */}
-                    <p className="text-lg text-gray-300 leading-relaxed max-w-2xl lg:mx-0 mx-auto">
-                      Streamline your deal flow with an investment-specific CRM that uses AI for deal screening and due diligence.
-                    </p>
-                    
-                    
                     {/* CTA Buttons */}
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                       <Button size="lg" className="px-8 py-4 text-lg bg-white text-black hover:bg-gray-100">
@@ -101,6 +95,11 @@ const HomePage = () => {
                         <span>Discover IRIS</span>
                       </Button>
                     </div>
+                    
+                    {/* Description Text */}
+                    <p className="text-lg text-gray-300 leading-relaxed max-w-2xl lg:mx-0 mx-auto">
+                      Streamline your deal flow with an investment-specific CRM that uses AI for deal screening and due diligence.
+                    </p>
                     
                     {/* Trust Indicators */}
                     
