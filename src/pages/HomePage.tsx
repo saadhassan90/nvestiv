@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import AsSeenOnCarousel from "@/components/AsSeenOnCarousel";
@@ -10,42 +9,6 @@ import { Users, Play, Sparkles as SparklesIcon, CheckCircle } from "lucide-react
 import { ThreeDCardDemo } from "@/components/ThreeDCardDemo";
 
 const HomePage = () => {
-  const [currentText, setCurrentText] = useState("");
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [charIndex, setCharIndex] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
-  const [showCursor, setShowCursor] = useState(true);
-  
-  const audienceTypes = [
-    "Family Offices",
-    "Institutions", 
-    "Asset Managers",
-    "Startups",
-    "Brokers",
-    "Service Providers"
-  ];
-
-  useEffect(() => {
-    const typeSpeed = isDeleting ? 50 : 100;
-    const currentPhrase = audienceTypes[currentIndex];
-    
-    const timeout = setTimeout(() => {
-      if (!isDeleting && charIndex < currentPhrase.length) {
-        setCurrentText(currentPhrase.substring(0, charIndex + 1));
-        setCharIndex(charIndex + 1);
-      } else if (isDeleting && charIndex > 0) {
-        setCurrentText(currentPhrase.substring(0, charIndex - 1));
-        setCharIndex(charIndex - 1);
-      } else if (!isDeleting && charIndex === currentPhrase.length) {
-        setTimeout(() => setIsDeleting(true), 2000);
-      } else if (isDeleting && charIndex === 0) {
-        setIsDeleting(false);
-        setCurrentIndex((currentIndex + 1) % audienceTypes.length);
-      }
-    }, typeSpeed);
-
-    return () => clearTimeout(timeout);
-  }, [charIndex, currentIndex, isDeleting, audienceTypes]);
 
   return (
     <div className="min-h-screen bg-background relative">
@@ -75,19 +38,9 @@ const HomePage = () => {
                     <div className="w-full flex justify-center">
                       <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
                         <span className="bg-gradient-to-br from-white via-gray-100 to-gray-300 bg-clip-text text-transparent">
-                          Private Investments AI for
+                          Private Investments AI CRM
                         </span>
                       </h1>
-                    </div>
-                    
-                    {/* Typewriter Container */}
-                    <div className="w-full">
-                      <div className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
-                        <span className="bg-gradient-to-br from-blue-400 via-blue-600 to-blue-900 bg-clip-text text-transparent">
-                          {currentText}
-                        </span>
-                        {showCursor && <span className="animate-pulse bg-gradient-to-br from-blue-400 via-blue-600 to-blue-900 bg-clip-text text-transparent ml-1">|</span>}
-                      </div>
                     </div>
                     
                     {/* Static Text */}
@@ -98,12 +51,6 @@ const HomePage = () => {
                         </h2>
                       </div>
                     </div>
-                    
-                    {/* Description Text */}
-                    <p className="text-lg text-gray-300 leading-relaxed max-w-2xl lg:mx-0 mx-auto">
-                      Streamline your deal flow with an investment-specific CRM that uses AI for deal screening and due diligence.
-                    </p>
-                    
                     
                     {/* CTA Buttons */}
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -116,6 +63,11 @@ const HomePage = () => {
                         <span>Discover IRIS</span>
                       </Button>
                     </div>
+                    
+                    {/* Description Text */}
+                    <p className="text-lg text-gray-300 leading-relaxed max-w-2xl lg:mx-0 mx-auto">
+                      Streamline your deal flow with an investment-specific CRM that uses AI for deal screening and due diligence.
+                    </p>
                     
                     {/* Trust Indicators */}
                     <div className="flex flex-wrap justify-center gap-6">
