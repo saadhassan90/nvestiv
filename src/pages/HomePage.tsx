@@ -7,6 +7,7 @@ import { BackgroundGradientAnimation } from "@/components/ui/background-gradient
 import { Button } from "@/components/ui/button";
 import { Users, Play, Sparkles as SparklesIcon, CheckCircle } from "lucide-react";
 import { ThreeDCardDemo } from "@/components/ThreeDCardDemo";
+import { Spotlight } from "@/components/ui/spotlight-new";
 const HomePage = () => {
   const [currentText, setCurrentText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -52,17 +53,21 @@ const HomePage = () => {
               {/* Horizontal Layout Container */}
               <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
                 
-                {/* Left Side - Existing Content */}
-                <div className="text-center lg:text-left w-full lg:w-1/2">
+                 {/* Left Side - Existing Content */}
+                <div className="text-center lg:text-left w-full lg:w-1/2 relative">
+                  <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill="white" />
                   <div className="space-y-8">
                     
                     {/* Main Headline with Typewriter */}
-                    <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight">
-                      Private Investments AI
-                      <br />
+                    <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
+                      <span className="bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
+                        Private Investments AI
+                        <br />
+                        for{" "}
+                      </span>
                       <span className="inline-flex items-baseline lg:justify-start justify-center">
-                        for <span className="text-primary ml-3 inline-block w-[600px] text-left">{currentText}</span>
-                        {showCursor && <span className="animate-pulse text-primary ml-1">|</span>}
+                        <span className="bg-gradient-to-r from-blue-900 to-blue-400 bg-clip-text text-transparent ml-3 inline-block w-[600px] text-left">{currentText}</span>
+                        {showCursor && <span className="animate-pulse bg-gradient-to-r from-blue-900 to-blue-400 bg-clip-text text-transparent ml-1">|</span>}
                       </span>
                     </h1>
                     
