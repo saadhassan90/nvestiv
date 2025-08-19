@@ -147,18 +147,42 @@
     @apply text-xl md:text-2xl font-medium tracking-tight;
   }
 
-  /* Parallax scroll support */
+  /* Enhanced Parallax Scroll System */
   @media (prefers-reduced-motion: no-preference) {
     .parallax {
       transform-style: preserve-3d;
       perspective: 1000px;
     }
+    
+    .parallax-slow {
+      transform: translateZ(-1px) scale(2);
+    }
+    
+    .parallax-medium {
+      transform: translateZ(-2px) scale(3);
+    }
+    
+    .parallax-fast {
+      transform: translateZ(-3px) scale(4);
+    }
+    
+    /* Smooth parallax elements */
+    .parallax-element {
+      will-change: transform;
+      backface-visibility: hidden;
+      transform-style: preserve-3d;
+    }
   }
 
-  /* Disable parallax for reduced motion */
+  /* Disable all parallax for reduced motion */
   @media (prefers-reduced-motion: reduce) {
-    .parallax {
+    .parallax,
+    .parallax-slow,
+    .parallax-medium,
+    .parallax-fast,
+    .parallax-element {
       transform: none !important;
+      will-change: auto !important;
     }
   }
 }
