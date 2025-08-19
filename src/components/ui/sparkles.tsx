@@ -50,17 +50,16 @@ export const SparklesCore = (props: SparklesProps) => {
           {particles.map((particle) => (
             <div
               key={particle.id}
-              className="absolute rounded-full animate-pulse"
+              className="absolute rounded-full animate-sparkle"
               style={{
                 left: `${particle.x}%`,
                 top: `${particle.y}%`,
                 width: `${particle.size}px`,
                 height: `${particle.size}px`,
                 backgroundColor: particleColor,
-                opacity: particle.opacity,
+                boxShadow: `0 0 ${particle.size * 2}px ${particleColor}`,
                 animationDelay: `${particle.delay}s`,
                 animationDuration: `${3 + Math.random() * 3}s`,
-                boxShadow: `0 0 ${particle.size * 2}px ${particleColor}`,
               }}
             />
           ))}
