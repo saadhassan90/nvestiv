@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import AsSeenOnCarousel from "@/components/AsSeenOnCarousel";
@@ -8,6 +9,36 @@ import { Button } from "@/components/ui/button";
 import { Users, Play, Sparkles as SparklesIcon, CheckCircle } from "lucide-react";
 
 const HomePage = () => {
+  const [currentText, setCurrentText] = useState("");
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [charIndex, setCharIndex] = useState(0);
+  
+  const audienceTypes = [
+    "Family Offices",
+    "Institutions", 
+    "Asset Managers",
+    "Startups",
+    "Brokers",
+    "Service Providers"
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (charIndex < audienceTypes[currentIndex].length) {
+        setCurrentText(audienceTypes[currentIndex].substring(0, charIndex + 1));
+        setCharIndex(charIndex + 1);
+      } else {
+        setTimeout(() => {
+          setCharIndex(0);
+          setCurrentText("");
+          setCurrentIndex((currentIndex + 1) % audienceTypes.length);
+        }, 2000);
+      }
+    }, 100);
+
+    return () => clearInterval(interval);
+  }, [charIndex, currentIndex, audienceTypes]);
+
   return (
     <div className="min-h-screen bg-background relative">
       {/* Custom Grid Background */}
@@ -29,11 +60,12 @@ const HomePage = () => {
               <div className="text-center w-[95%] mx-auto">
                 <div className="space-y-8 w-4/5 mx-auto">
                   
-                  {/* Main Headline - Centered */}
+                  {/* Main Headline with Typewriter */}
                   <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight">
-                    AI for Private
+                    Private Investments AI
                     <br />
-                    <span className="text-primary">Investments</span>
+                    for <span className="text-primary">{currentText}</span>
+                    <span className="animate-pulse text-primary ml-1">|</span>
                   </h1>
                   
                   {/* Static Text - Centered */}
