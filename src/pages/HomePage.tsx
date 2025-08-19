@@ -6,41 +6,8 @@ import { BackgroundGradientAnimation } from "@/components/ui/background-gradient
 import { SparklesCore } from "@/components/ui/sparkles";
 import { Button } from "@/components/ui/button";
 import { Users, Play, Sparkles as SparklesIcon, CheckCircle } from "lucide-react";
-import { useState, useEffect } from "react";
 
 const HomePage = () => {
-  const [displayText, setDisplayText] = useState("");
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
-  
-  const phrases = [
-    "AI Native CRM. AI Agents",
-    "Deal Flow Management",
-    "Smart Due Diligence", 
-    "Investment Analytics"
-  ];
-
-  useEffect(() => {
-    const currentPhrase = phrases[currentIndex];
-    const timeout = setTimeout(() => {
-      if (!isDeleting) {
-        if (displayText.length < currentPhrase.length) {
-          setDisplayText(currentPhrase.slice(0, displayText.length + 1));
-        } else {
-          setTimeout(() => setIsDeleting(true), 1500);
-        }
-      } else {
-        if (displayText.length > 0) {
-          setDisplayText(displayText.slice(0, -1));
-        } else {
-          setIsDeleting(false);
-          setCurrentIndex((prev) => (prev + 1) % phrases.length);
-        }
-      }
-    }, isDeleting ? 50 : 100);
-
-    return () => clearTimeout(timeout);
-  }, [displayText, currentIndex, isDeleting, phrases]);
   return (
     <div className="min-h-screen bg-background relative">
       {/* Custom Grid Background */}
@@ -51,7 +18,7 @@ const HomePage = () => {
       
       {/* Hero Section with Black Background */}
       <main className="pt-24 md:pt-28 lg:pt-32 relative z-10">
-        <div className="min-h-[calc(100vh-8rem)] w-full relative bg-black flex flex-col items-center justify-center overflow-hidden">
+        <div className="min-h-[calc(100vh-8rem)] w-full relative bg-gradient-to-br from-black to-slate-900 flex flex-col items-center justify-center overflow-hidden">
           <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
             
@@ -72,8 +39,8 @@ const HomePage = () => {
                   {/* Typewriter Text - Centered */}
                   <div className="flex justify-center">
                     <div className="w-max">
-                      <h2 className="text-xl lg:text-2xl font-semibold text-white relative min-h-[2.5rem]">
-                        {displayText}
+                      <h2 className="text-xl lg:text-2xl font-semibold text-white relative">
+                        AI Native CRM. AI Agents
                         <span className="animate-pulse text-white ml-1">|</span>
                       </h2>
                     </div>
