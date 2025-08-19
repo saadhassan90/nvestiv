@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import AsSeenOnCarousel from "@/components/AsSeenOnCarousel";
 import { GridBackground } from "@/components/GridBackground";
+import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
 import { Button } from "@/components/ui/button";
 import { Check, Users } from "lucide-react";
 
@@ -19,61 +20,75 @@ const HomePage = () => {
             {/* Hero Content */}
             <section className="min-h-[calc(100vh-8rem)] flex items-center justify-between py-8 sm:py-12 lg:py-16">
               
-              {/* Left Side - Content */}
-              <div className="flex-1 max-w-2xl space-y-8">
-                
-                {/* User Count Badge */}
-                <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-                  <Users className="h-4 w-4" />
-                  <span><strong className="text-foreground">4958 Users</strong> and counting</span>
-                </div>
-                
-                {/* Main Headline */}
-                <div className="space-y-6">
-                  <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-tight">
-                    AI for Private
-                    <br />
-                    <span className="text-primary">Investments</span>
-                  </h1>
+              {/* Left Side - Content with Gradient Animation */}
+              <BackgroundGradientAnimation 
+                className="flex-1 max-w-2xl rounded-3xl border border-border/20 backdrop-blur-sm"
+                firstColor="130, 21, 224"
+                secondColor="11, 14, 31"
+                thirdColor="130, 21, 224"
+                fourthColor="11, 14, 31"
+                fifthColor="130, 21, 224"
+                pointerColor="130, 21, 224"
+                size="60%"
+                blendingValue="overlay"
+                gradientBackgroundStart="hsl(var(--background))"
+                gradientBackgroundEnd="hsl(var(--background))"
+              >
+                <div className="relative z-50 p-8 space-y-8">
                   
-                  <h2 className="text-xl lg:text-2xl font-semibold text-foreground">
-                    CRM. DataRooms. Due Diligence.
-                  </h2>
+                  {/* User Count Badge */}
+                  <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+                    <Users className="h-4 w-4" />
+                    <span><strong className="text-foreground">4958 Users</strong> and counting</span>
+                  </div>
                   
-                  <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">
-                    Streamline your deal flow with an investment-specific CRM that uses AI for deal screening and due diligence.
-                  </p>
-                </div>
-                
-                {/* CTA Buttons */}
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button size="lg" className="px-8 py-4 text-lg">
-                    Join our BETA
-                  </Button>
-                  <Button variant="outline" size="lg" className="px-8 py-4 text-lg">
-                    📞 Book a demo
-                  </Button>
-                </div>
-                
-                {/* Trust Indicators */}
-                <div className="space-y-4">
-                  <div className="flex flex-col sm:flex-row gap-6">
-                    <div className="flex items-center space-x-2">
-                      <Check className="h-5 w-5 text-green-600" />
-                      <span className="text-sm font-medium">Family Offices</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <Check className="h-5 w-5 text-green-600" />
-                      <span className="text-sm font-medium">Institutional Investors</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <Check className="h-5 w-5 text-green-600" />
-                      <span className="text-sm font-medium">Fund Managers</span>
+                  {/* Main Headline */}
+                  <div className="space-y-6">
+                    <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-tight">
+                      AI for Private
+                      <br />
+                      <span className="text-primary">Investments</span>
+                    </h1>
+                    
+                    <h2 className="text-xl lg:text-2xl font-semibold text-foreground">
+                      CRM. DataRooms. Due Diligence.
+                    </h2>
+                    
+                    <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">
+                      Streamline your deal flow with an investment-specific CRM that uses AI for deal screening and due diligence.
+                    </p>
+                  </div>
+                  
+                  {/* CTA Buttons */}
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <Button size="lg" className="px-8 py-4 text-lg">
+                      Join our BETA
+                    </Button>
+                    <Button variant="outline" size="lg" className="px-8 py-4 text-lg">
+                      📞 Book a demo
+                    </Button>
+                  </div>
+                  
+                  {/* Trust Indicators */}
+                  <div className="space-y-4">
+                    <div className="flex flex-col sm:flex-row gap-6">
+                      <div className="flex items-center space-x-2">
+                        <Check className="h-5 w-5 text-green-600" />
+                        <span className="text-sm font-medium">Family Offices</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <Check className="h-5 w-5 text-green-600" />
+                        <span className="text-sm font-medium">Institutional Investors</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <Check className="h-5 w-5 text-green-600" />
+                        <span className="text-sm font-medium">Fund Managers</span>
+                      </div>
                     </div>
                   </div>
+                  
                 </div>
-                
-              </div>
+              </BackgroundGradientAnimation>
               
               {/* Right Side - Dashboard Mockup */}
               <div className="hidden lg:flex flex-1 justify-end">
