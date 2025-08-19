@@ -52,7 +52,7 @@ const HomePage = () => {
                     
                     <div className="w-max">
                       <h2 className="text-xl lg:text-2xl font-semibold text-foreground animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-foreground pr-2">
-                        CRM. DataRooms. Due Diligence.
+                        AI Native CRM. AI Agents
                       </h2>
                     </div>
                     
