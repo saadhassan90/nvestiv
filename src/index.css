@@ -190,20 +190,29 @@
   /* Premium button variants */
   .btn-hero {
     @apply bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold;
-    @apply hover:shadow-[var(--shadow-glow)] transition-[var(--transition-smooth)];
-    @apply hover:scale-105 active:scale-95;
+    @apply hover:scale-105 active:scale-95 transition-all duration-300;
+    box-shadow: var(--shadow-elegant);
+  }
+  
+  .btn-hero:hover {
+    box-shadow: var(--shadow-glow);
+    transition: var(--transition-smooth);
   }
   
   .btn-ghost-hero {
     @apply bg-transparent border-2 border-primary text-primary px-8 py-4 rounded-lg font-semibold;
-    @apply hover:bg-primary hover:text-primary-foreground transition-[var(--transition-smooth)];
+    @apply hover:bg-primary hover:text-primary-foreground transition-all duration-300;
   }
 
   /* Premium card styles */
   .card-premium {
-    @apply bg-card border border-border rounded-xl p-6;
-    @apply shadow-[var(--shadow-elegant)] hover:shadow-[var(--shadow-glow)];
-    @apply transition-[var(--transition-smooth)] hover:-translate-y-1;
+    @apply bg-card border border-border rounded-xl p-6 transition-all duration-300;
+    @apply hover:-translate-y-1;
+    box-shadow: var(--shadow-elegant);
+  }
+  
+  .card-premium:hover {
+    box-shadow: var(--shadow-glow);
   }
 
   /* Glass morphism effect */
@@ -213,7 +222,8 @@
 
   /* Floating navbar styles */
   .navbar-floating {
-    @apply bg-background/80 backdrop-blur-xl border border-border/20 rounded-2xl shadow-elegant;
+    @apply bg-background/80 backdrop-blur-xl border border-border/20 rounded-2xl;
     @apply transition-all duration-300 ease-out;
+    box-shadow: var(--shadow-elegant);
   }
 }
