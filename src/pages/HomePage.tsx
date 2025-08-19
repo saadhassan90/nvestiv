@@ -12,6 +12,8 @@ const HomePage = () => {
   const [currentText, setCurrentText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [showCursor, setShowCursor] = useState(true);
   
   const audienceTypes = [
     "Family Offices",
@@ -23,21 +25,26 @@ const HomePage = () => {
   ];
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      if (charIndex < audienceTypes[currentIndex].length) {
-        setCurrentText(audienceTypes[currentIndex].substring(0, charIndex + 1));
+    const typeSpeed = isDeleting ? 50 : 100;
+    const currentPhrase = audienceTypes[currentIndex];
+    
+    const timeout = setTimeout(() => {
+      if (!isDeleting && charIndex < currentPhrase.length) {
+        setCurrentText(currentPhrase.substring(0, charIndex + 1));
         setCharIndex(charIndex + 1);
-      } else {
-        setTimeout(() => {
-          setCharIndex(0);
-          setCurrentText("");
-          setCurrentIndex((currentIndex + 1) % audienceTypes.length);
-        }, 2000);
+      } else if (isDeleting && charIndex > 0) {
+        setCurrentText(currentPhrase.substring(0, charIndex - 1));
+        setCharIndex(charIndex - 1);
+      } else if (!isDeleting && charIndex === currentPhrase.length) {
+        setTimeout(() => setIsDeleting(true), 2000);
+      } else if (isDeleting && charIndex === 0) {
+        setIsDeleting(false);
+        setCurrentIndex((currentIndex + 1) % audienceTypes.length);
       }
-    }, 100);
+    }, typeSpeed);
 
-    return () => clearInterval(interval);
-  }, [charIndex, currentIndex, audienceTypes]);
+    return () => clearTimeout(timeout);
+  }, [charIndex, currentIndex, isDeleting, audienceTypes]);
 
   return (
     <div className="min-h-screen bg-background relative">
@@ -66,7 +73,7 @@ const HomePage = () => {
                     <br />
                     <span className="inline-flex items-baseline justify-center">
                       for <span className="text-primary ml-3 inline-block w-[600px] text-left">{currentText}</span>
-                      <span className="animate-pulse text-primary ml-1">|</span>
+                      {showCursor && <span className="animate-pulse text-primary ml-1">|</span>}
                     </span>
                   </h1>
                   
