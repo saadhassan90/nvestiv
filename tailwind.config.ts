@@ -19,6 +19,7 @@ export default {
 		},
 		extend: {
 			fontFamily: {
+				'sans': ['Roboto', 'sans-serif'],
 				'harabara': ['Harabara', 'sans-serif'],
 			},
 			colors: {
