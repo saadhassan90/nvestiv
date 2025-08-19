@@ -39,7 +39,7 @@ const HomePage = () => {
                 <div className="relative z-50 p-8 space-y-8">
                   
                   {/* User Count Badge */}
-                  <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+                  <div className="inline-flex items-center space-x-2 bg-muted/50 text-sm text-muted-foreground px-3 py-1.5 rounded-full border border-border/50 backdrop-blur-sm">
                     <Users className="h-4 w-4" />
                     <span><strong className="text-foreground">4958 Users</strong> and counting</span>
                   </div>
