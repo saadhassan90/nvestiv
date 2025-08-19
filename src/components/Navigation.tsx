@@ -80,8 +80,11 @@ const Navigation = () => {
                 <Button
                   size="sm"
                   className="text-sm font-medium px-4 py-2"
+                  asChild
                 >
-                  Log In
+                  <a href="https://iris.nvestiv.com" target="_blank" rel="noopener noreferrer">
+                    Log In
+                  </a>
                 </Button>
               </div>
 
@@ -125,8 +128,11 @@ const Navigation = () => {
                   <Button
                     size="sm"
                     className="w-full text-sm font-medium"
+                    asChild
                   >
-                    Log In
+                    <a href="https://iris.nvestiv.com" target="_blank" rel="noopener noreferrer">
+                      Log In
+                    </a>
                   </Button>
                 </div>
               </div>
