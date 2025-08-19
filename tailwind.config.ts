@@ -93,18 +93,16 @@ export default {
 				},
 				"typing": {
 					"0%": {
-						width: "0%",
-						visibility: "hidden"
+						width: "0%"
 					},
-					"50%": {
+					"40%": {
 						width: "100%"
 					},
-					"70%": {
+					"80%": {
 						width: "100%"
 					},
 					"100%": {
-						width: "0%",
-						visibility: "hidden"
+						width: "0%"
 					}
 				},
 				"blink": {
