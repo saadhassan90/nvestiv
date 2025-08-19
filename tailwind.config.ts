@@ -96,8 +96,15 @@ export default {
 						width: "0%",
 						visibility: "hidden"
 					},
-					"100%": {
+					"50%": {
 						width: "100%"
+					},
+					"70%": {
+						width: "100%"
+					},
+					"100%": {
+						width: "0%",
+						visibility: "hidden"
 					}
 				},
 				"blink": {
@@ -114,7 +121,7 @@ export default {
 				"accordion-up": "accordion-up 0.2s ease-out",
 				"fade-in": "fade-in 0.3s ease-out",
 				"parallax-float": "parallax-float 6s ease-in-out infinite",
-				"typing": "typing 4s steps(30) infinite alternate, blink .7s infinite"
+				"typing": "typing 6s steps(30) infinite, blink .7s infinite"
 			}
 		}
 	},
