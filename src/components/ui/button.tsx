@@ -5,24 +5,20 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 [&_svg]:transition-all [&_svg]:duration-300 group hover:scale-105 hover:[&_svg]:scale-110 hover:[&_svg]:translate-x-1 overflow-visible",
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
-        destructive:
-          "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        outline:
-          "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
-        secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline",
-        // Animated variants
-        "animated-primary": "bg-primary text-primary-foreground hover:bg-primary/90 group [&_svg]:transition-transform [&_svg]:duration-300 hover:[&_svg]:scale-110 hover:[&_svg]:translate-x-1",
-        "animated-secondary": "border border-input bg-background hover:bg-accent hover:text-accent-foreground group [&_svg]:transition-all [&_svg]:duration-300 hover:[&_svg]:rotate-12 hover:[&_svg]:scale-110",
-        "animated-outline": "border border-input bg-background hover:bg-accent hover:text-accent-foreground group [&_svg]:transition-transform [&_svg]:duration-300 hover:[&_svg]:scale-110 hover:[&_svg]:translate-x-1",
-        "black-animated": "bg-black text-white hover:bg-gray-900 group [&_svg]:transition-all [&_svg]:duration-300 hover:[&_svg]:scale-110 hover:[&_svg]:translate-x-2 transform hover:scale-105 transition-all",
+        // Light theme defaults (black buttons)
+        default: "bg-black text-white hover:bg-gray-900 dark:bg-white dark:text-black dark:hover:bg-gray-100",
+        destructive: "bg-red-600 text-white hover:bg-red-700 dark:bg-red-700 dark:hover:bg-red-800",
+        outline: "border border-gray-300 bg-transparent text-black hover:bg-gray-100 dark:border-gray-600 dark:text-white dark:hover:bg-gray-800",
+        secondary: "bg-gray-200 text-gray-800 hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600",
+        ghost: "text-black hover:bg-gray-100 dark:text-white dark:hover:bg-gray-800",
+        link: "text-black underline-offset-4 hover:underline dark:text-white",
+        // Special variants for specific use cases
+        "theme-toggle": "text-black hover:bg-gray-100 dark:text-white dark:hover:bg-gray-800 hover:scale-110 [&_svg]:hover:scale-100 [&_svg]:hover:translate-x-0",
+        "nav-mobile": "text-black hover:bg-gray-100 dark:text-white dark:hover:bg-gray-800 hover:scale-110 [&_svg]:hover:scale-100 [&_svg]:hover:translate-x-0",
       },
       size: {
         default: "h-10 px-4 py-2",

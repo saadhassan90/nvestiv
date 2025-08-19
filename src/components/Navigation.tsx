@@ -67,7 +67,7 @@ const Navigation = () => {
             <div className="flex items-center space-x-3">
               {/* Theme Toggle */}
               <Button
-                variant="ghost"
+                variant="theme-toggle"
                 size="sm"
                 onClick={toggleTheme}
                 className="p-2 hover:bg-muted/50 rounded-xl"
@@ -83,14 +83,14 @@ const Navigation = () => {
               {/* Login Button - Desktop */}
               <div className="hidden md:block">
                 <Button
-                  variant="black-animated"
+                  variant="default"
                   size="sm"
-                  className="text-sm font-medium px-6 py-2 overflow-visible"
+                  className="text-sm font-medium px-6 py-2"
                   asChild
                 >
                   <a href="https://iris.nvestiv.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                     <span>Log In</span>
-                    <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-2 group-hover:scale-110" />
+                    <ArrowRight className="h-4 w-4" />
                   </a>
                 </Button>
               </div>
@@ -98,7 +98,7 @@ const Navigation = () => {
               {/* Mobile menu button */}
               <div className="md:hidden">
                 <Button
-                  variant="ghost"
+                  variant="nav-mobile"
                   size="sm"
                   onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                   className="p-2 hover:bg-muted/50 rounded-xl"
@@ -133,14 +133,14 @@ const Navigation = () => {
                 {/* Mobile Login Button */}
                 <div className="pt-2 border-t border-border/20">
                   <Button
-                    variant="black-animated"
+                    variant="default"
                     size="sm"
-                    className="w-full text-sm font-medium overflow-visible"
+                    className="w-full text-sm font-medium"
                     asChild
                   >
                     <a href="https://iris.nvestiv.com" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
                       <span>Log In</span>
-                      <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-2 group-hover:scale-110" />
+                      <ArrowRight className="h-4 w-4" />
                     </a>
                   </Button>
                 </div>

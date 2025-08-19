@@ -1,5 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { Button } from "@/components/ui/button";
+import { Send } from "lucide-react";
 
 const Contact = () => {
   return (
@@ -60,12 +62,14 @@ const Contact = () => {
                       rows={4}
                       className="w-full px-4 py-2 border border-border rounded-lg bg-background text-foreground"
                     ></textarea>
-                    <button
+                    <Button
                       type="submit"
-                      className="w-full bg-primary text-primary-foreground px-4 py-2 rounded-lg font-medium hover:opacity-90 transition-opacity"
+                      className="w-full"
+                      size="default"
                     >
-                      Send Message
-                    </button>
+                      <Send className="h-4 w-4" />
+                      <span>Send Message</span>
+                    </Button>
                   </form>
                 </div>
               </div>
