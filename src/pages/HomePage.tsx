@@ -72,12 +72,15 @@ const HomePage = () => {
                   <div className="space-y-8">
                     
                     {/* Main Headline with Typewriter */}
-                    <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight">
-                      Private Investments AI
+                    <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
+                      <span className="bg-gradient-to-br from-white via-gray-100 to-gray-300 bg-clip-text text-transparent">
+                        Private Investments AI
+                      </span>
                       <br />
                       <span className="inline-flex items-baseline lg:justify-start justify-center">
-                        for <span className="text-primary ml-3 inline-block w-[600px] text-left">{currentText}</span>
-                        {showCursor && <span className="animate-pulse text-primary ml-1">|</span>}
+                        <span className="bg-gradient-to-br from-white via-gray-100 to-gray-300 bg-clip-text text-transparent">for </span>
+                        <span className="bg-gradient-to-br from-blue-400 via-blue-600 to-blue-900 bg-clip-text text-transparent ml-3 inline-block w-[600px] text-left">{currentText}</span>
+                        {showCursor && <span className="animate-pulse bg-gradient-to-br from-blue-400 via-blue-600 to-blue-900 bg-clip-text text-transparent ml-1">|</span>}
                       </span>
                     </h1>
                     
