@@ -65,7 +65,7 @@ const HomePage = () => {
                     Private Investments AI
                     <br />
                     <span className="inline-flex items-baseline justify-center">
-                      for <span className="text-primary ml-3 inline-block w-[500px] text-left">{currentText}</span>
+                      for <span className="text-primary ml-3 inline-block w-[600px] text-left">{currentText}</span>
                       <span className="animate-pulse text-primary ml-1">|</span>
                     </span>
                   </h1>
