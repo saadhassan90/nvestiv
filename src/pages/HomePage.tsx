@@ -3,8 +3,9 @@ import Footer from "@/components/Footer";
 import AsSeenOnCarousel from "@/components/AsSeenOnCarousel";
 import { GridBackground } from "@/components/GridBackground";
 import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
+import { Sparkles } from "@/components/ui/sparkles";
 import { Button } from "@/components/ui/button";
-import { Users, Play, Sparkles, CheckCircle } from "lucide-react";
+import { Users, Play, Sparkles as SparklesIcon, CheckCircle } from "lucide-react";
 
 const HomePage = () => {
   return (
@@ -15,8 +16,9 @@ const HomePage = () => {
       {/* Navigation */}
       <Navigation />
       
-      {/* Hero Section */}
+      {/* Hero Section with Sparkles Background */}
       <main className="pt-24 md:pt-28 lg:pt-32 relative z-10">
+        <Sparkles className="min-h-[calc(100vh-8rem)]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             {/* Hero Content */}
@@ -27,26 +29,26 @@ const HomePage = () => {
                 <div className="space-y-8">
                   
                   {/* User Count Badge */}
-                  <div className="inline-flex items-center space-x-2 bg-muted/50 text-sm text-muted-foreground px-3 py-1.5 rounded-lg border border-border/50 backdrop-blur-sm">
+                  <div className="inline-flex items-center space-x-2 bg-white/10 text-sm text-gray-300 px-3 py-1.5 rounded-lg border border-white/20 backdrop-blur-sm">
                     <Users className="h-4 w-4" />
-                    <span><strong className="text-foreground">4958 Users</strong> and counting</span>
+                    <span><strong className="text-white">4958 Users</strong> and counting</span>
                   </div>
                   
                   {/* Main Headline */}
                   <div className="space-y-6">
-                    <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-tight">
+                    <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight">
                       AI for Private
                       <br />
                       <span className="text-primary">Investments</span>
                     </h1>
                     
                     <div className="w-max">
-                      <h2 className="text-xl lg:text-2xl font-semibold text-foreground animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-foreground pr-2">
+                      <h2 className="text-xl lg:text-2xl font-semibold text-white animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-white pr-2">
                         AI Native CRM. AI Agents
                       </h2>
                     </div>
                     
-                    <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">
+                    <p className="text-lg text-gray-300 leading-relaxed max-w-lg">
                       Streamline your deal flow with an investment-specific CRM that uses AI for deal screening and due diligence.
                     </p>
                   </div>
@@ -57,8 +59,8 @@ const HomePage = () => {
                       <Play className="h-5 w-5" />
                       <span>Try for FREE</span>
                     </Button>
-                    <Button variant="animated-secondary" size="lg" className="px-8 py-4 text-lg">
-                      <Sparkles className="h-5 w-5" />
+                    <Button variant="animated-secondary" size="lg" className="px-8 py-4 text-lg bg-white/10 border-white/20 text-white hover:bg-white/20">
+                      <SparklesIcon className="h-5 w-5" />
                       <span>Discover IRIS</span>
                     </Button>
                   </div>
@@ -68,19 +70,19 @@ const HomePage = () => {
                     <div className="flex flex-col sm:flex-row gap-6">
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="h-5 w-5 text-primary" />
-                        <span className="text-sm font-medium">Family Offices</span>
+                        <span className="text-sm font-medium text-gray-300">Family Offices</span>
                       </div>
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="h-5 w-5 text-primary" />
-                        <span className="text-sm font-medium">Institutional Investors</span>
+                        <span className="text-sm font-medium text-gray-300">Institutional Investors</span>
                       </div>
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="h-5 w-5 text-primary" />
-                        <span className="text-sm font-medium">Asset Managers</span>
+                        <span className="text-sm font-medium text-gray-300">Asset Managers</span>
                       </div>
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="h-5 w-5 text-primary" />
-                        <span className="text-sm font-medium">Service Providers</span>
+                        <span className="text-sm font-medium text-gray-300">Service Providers</span>
                       </div>
                     </div>
                   </div>
@@ -91,11 +93,11 @@ const HomePage = () => {
               {/* Right Side - Dashboard Mockup */}
               <div className="hidden lg:flex flex-1 justify-end">
                 <div className="max-w-2xl">
-                  <div className="bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm rounded-2xl shadow-2xl border border-border/20 p-8 transform rotate-3 hover:rotate-0 transition-transform duration-500">
+                  <div className="bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm rounded-2xl shadow-2xl border border-white/20 p-8 transform rotate-3 hover:rotate-0 transition-transform duration-500">
                     <div className="space-y-6">
                       <div className="flex items-center justify-between">
-                        <h3 className="text-xl font-semibold text-foreground">Agent Templates</h3>
-                        <div className="text-sm text-muted-foreground">Dashboard • Agent Templates</div>
+                        <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Agent Templates</h3>
+                        <div className="text-sm text-gray-600 dark:text-gray-400">Dashboard • Agent Templates</div>
                       </div>
                       
                       {/* Mock Dashboard Content */}
@@ -104,17 +106,17 @@ const HomePage = () => {
                           <div className="text-sm font-medium">Family Offices</div>
                           <div className="text-xs opacity-70 mt-1">Personalized client for family office management</div>
                         </div>
-                        <div className="border border-border p-4 rounded-lg">
-                          <div className="text-sm font-medium text-foreground">Investment Agent</div>
-                          <div className="text-xs text-muted-foreground mt-1">Portfolio optimization</div>
+                        <div className="border border-gray-200 dark:border-gray-700 p-4 rounded-lg">
+                          <div className="text-sm font-medium text-gray-900 dark:text-white">Investment Agent</div>
+                          <div className="text-xs text-gray-600 dark:text-gray-400 mt-1">Portfolio optimization</div>
                         </div>
-                        <div className="border border-border p-4 rounded-lg">
-                          <div className="text-sm font-medium text-foreground">Deal Sourcing Agent</div>
-                          <div className="text-xs text-muted-foreground mt-1">Aggregates deal sources</div>
+                        <div className="border border-gray-200 dark:border-gray-700 p-4 rounded-lg">
+                          <div className="text-sm font-medium text-gray-900 dark:text-white">Deal Sourcing Agent</div>
+                          <div className="text-xs text-gray-600 dark:text-gray-400 mt-1">Aggregates deal sources</div>
                         </div>
-                        <div className="border border-border p-4 rounded-lg">
-                          <div className="text-sm font-medium text-foreground">Due Diligence Agent</div>
-                          <div className="text-xs text-muted-foreground mt-1">Generates due reports from data rooms</div>
+                        <div className="border border-gray-200 dark:border-gray-700 p-4 rounded-lg">
+                          <div className="text-sm font-medium text-gray-900 dark:text-white">Due Diligence Agent</div>
+                          <div className="text-xs text-gray-600 dark:text-gray-400 mt-1">Generates due reports from data rooms</div>
                         </div>
                       </div>
                     </div>
@@ -125,7 +127,8 @@ const HomePage = () => {
             </section>
             
           </div>
-        </main>
+        </Sparkles>
+      </main>
       
       {/* As Seen On Carousel - Separate Section */}
       <AsSeenOnCarousel />
