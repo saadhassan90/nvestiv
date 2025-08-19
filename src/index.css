@@ -111,9 +111,8 @@
   .dark {
     /* Additional gradients for dark mode can be added here if needed */
   }
-}
 
-@layer base {
+  /* Global base styles */
   * {
     @apply border-border;
   }
