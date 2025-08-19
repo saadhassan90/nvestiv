@@ -26,7 +26,7 @@ const HomePage = () => {
             <section className="min-h-[calc(100vh-8rem)] flex items-center justify-center py-8 sm:py-12 lg:py-16">
               
               {/* Centered Content */}
-              <div className="text-center max-w-4xl mx-auto">
+              <div className="text-center w-[95%] mx-auto">
                 <div className="space-y-8 w-4/5 mx-auto">
                   
                   {/* Main Headline - Centered */}
