@@ -22,21 +22,9 @@ const HomePage = () => {
             {/* Hero Content */}
             <section className="min-h-[calc(100vh-8rem)] flex items-center justify-between py-8 sm:py-12 lg:py-16">
               
-              {/* Left Side - Content with Gradient Animation */}
-              <BackgroundGradientAnimation 
-                className="flex-1 max-w-2xl rounded-3xl border border-border/20 backdrop-blur-sm"
-                firstColor="130, 21, 224"
-                secondColor="11, 14, 31"
-                thirdColor="130, 21, 224"
-                fourthColor="11, 14, 31"
-                fifthColor="130, 21, 224"
-                pointerColor="130, 21, 224"
-                size="60%"
-                blendingValue="overlay"
-                gradientBackgroundStart="hsl(var(--background))"
-                gradientBackgroundEnd="hsl(var(--background))"
-              >
-                <div className="relative z-50 p-8 space-y-8">
+              {/* Left Side - Content */}
+              <div className="flex-1 max-w-2xl">
+                <div className="space-y-8">
                   
                   {/* User Count Badge */}
                   <div className="inline-flex items-center space-x-2 bg-muted/50 text-sm text-muted-foreground px-3 py-1.5 rounded-lg border border-border/50 backdrop-blur-sm">
@@ -92,7 +80,7 @@ const HomePage = () => {
                   </div>
                   
                 </div>
-              </BackgroundGradientAnimation>
+              </div>
               
               {/* Right Side - Dashboard Mockup */}
               <div className="hidden lg:flex flex-1 justify-end">
