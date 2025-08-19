@@ -1,9 +1,9 @@
 import Navigation from "@/components/Navigation";
-import { GridBackgroundDemo } from "@/components/GridBackground";
+import { BackgroundBoxesDemo } from "@/components/BackgroundBoxes";
 
 const HomePage = () => {
   return (
-    <GridBackgroundDemo className="min-h-screen overflow-x-hidden parallax">
+    <BackgroundBoxesDemo>
       {/* Navigation */}
       <Navigation />
       
@@ -46,7 +46,7 @@ const HomePage = () => {
           
         </div>
       </main>
-    </GridBackgroundDemo>
+    </BackgroundBoxesDemo>
   );
 };
 
