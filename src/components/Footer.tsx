@@ -56,9 +56,14 @@ const Footer = () => {
             {/* Brand Section */}
             <div className="lg:col-span-2">
               <div className="space-y-4">
-                <div className="flex items-center space-x-2">
-                  <h2 className="text-2xl font-bold text-white">
-                    Nvestiv
+                <div className="flex items-center space-x-3">
+                  <img 
+                    src="/lovable-uploads/c6f05c4c-ee88-4c86-a4f7-98e6e90e6071.png" 
+                    alt="Nvestiv Logo" 
+                    className="h-8 w-8"
+                  />
+                  <h2 className="text-2xl font-bold text-white font-harabara lowercase">
+                    nvestiv
                   </h2>
                 </div>
                 <p className="text-gray-300 max-w-md leading-relaxed">
