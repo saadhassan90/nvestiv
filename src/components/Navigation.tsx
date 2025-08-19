@@ -83,13 +83,14 @@ const Navigation = () => {
               {/* Login Button - Desktop */}
               <div className="hidden md:block">
                 <Button
+                  variant="animated-outline"
                   size="sm"
-                  className="text-sm font-medium px-4 py-2 group flex items-center space-x-2"
+                  className="text-sm font-medium px-4 py-2"
                   asChild
                 >
                   <a href="https://iris.nvestiv.com" target="_blank" rel="noopener noreferrer">
                     <span>Log In</span>
-                    <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:scale-110 group-hover:translate-x-1" />
+                    <ArrowRight className="h-4 w-4" />
                   </a>
                 </Button>
               </div>
@@ -132,13 +133,14 @@ const Navigation = () => {
                 {/* Mobile Login Button */}
                 <div className="pt-2 border-t border-border/20">
                   <Button
+                    variant="animated-outline"
                     size="sm"
-                    className="w-full text-sm font-medium group flex items-center justify-center space-x-2"
+                    className="w-full text-sm font-medium"
                     asChild
                   >
                     <a href="https://iris.nvestiv.com" target="_blank" rel="noopener noreferrer">
                       <span>Log In</span>
-                      <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:scale-110 group-hover:translate-x-1" />
+                      <ArrowRight className="h-4 w-4" />
                     </a>
                   </Button>
                 </div>

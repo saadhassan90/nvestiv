@@ -53,12 +53,12 @@ const HomePage = () => {
                   
                   {/* CTA Buttons */}
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <Button size="lg" className="px-8 py-4 text-lg flex items-center space-x-2 group">
-                      <Play className="h-5 w-5 transition-transform duration-300 group-hover:scale-110 group-hover:translate-x-1" />
+                    <Button variant="animated-primary" size="lg" className="px-8 py-4 text-lg">
+                      <Play className="h-5 w-5" />
                       <span>Try for FREE</span>
                     </Button>
-                    <Button variant="outline" size="lg" className="px-8 py-4 text-lg flex items-center space-x-2 group">
-                      <Sparkles className="h-5 w-5 transition-all duration-300 group-hover:rotate-12 group-hover:scale-110" />
+                    <Button variant="animated-secondary" size="lg" className="px-8 py-4 text-lg">
+                      <Sparkles className="h-5 w-5" />
                       <span>Discover IRIS</span>
                     </Button>
                   </div>
