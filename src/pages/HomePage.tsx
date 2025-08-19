@@ -8,13 +8,15 @@ import { Check, Users } from "lucide-react";
 
 const HomePage = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background relative">
+      {/* Custom Grid Background */}
+      <div className="absolute inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]"></div>
+      
       {/* Navigation */}
       <Navigation />
       
-      {/* Hero Section with Grid Background */}
-      <GridBackground className="min-h-screen">
-        <main className="pt-24 md:pt-28 lg:pt-32">
+      {/* Hero Section */}
+      <main className="pt-24 md:pt-28 lg:pt-32 relative z-10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             {/* Hero Content */}
@@ -130,7 +132,6 @@ const HomePage = () => {
             
           </div>
         </main>
-      </GridBackground>
       
       {/* As Seen On Carousel - Separate Section */}
       <AsSeenOnCarousel />
