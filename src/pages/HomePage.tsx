@@ -1,7 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import AsSeenOnCarousel from "@/components/AsSeenOnCarousel";
-import { VideoBackground } from "@/components/VideoBackground";
+import { GridBackground } from "@/components/GridBackground";
 import { Button } from "@/components/ui/button";
 import { Check, Users } from "lucide-react";
 
@@ -11,8 +11,8 @@ const HomePage = () => {
       {/* Navigation */}
       <Navigation />
       
-      {/* Hero Section with Video Background */}
-      <VideoBackground className="min-h-screen">
+      {/* Hero Section with Grid Background */}
+      <GridBackground className="min-h-screen">
         <main className="pt-24 md:pt-28 lg:pt-32">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
@@ -113,7 +113,7 @@ const HomePage = () => {
             
           </div>
         </main>
-      </VideoBackground>
+      </GridBackground>
       
       {/* As Seen On Carousel - Separate Section */}
       <AsSeenOnCarousel />
