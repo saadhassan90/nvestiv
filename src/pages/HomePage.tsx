@@ -1,4 +1,5 @@
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 import { BackgroundBoxesDemo } from "@/components/BackgroundBoxes";
 
 const HomePage = () => {
@@ -46,6 +47,9 @@ const HomePage = () => {
           
         </div>
       </main>
+      
+      {/* Footer */}
+      <Footer />
     </BackgroundBoxesDemo>
   );
 };
