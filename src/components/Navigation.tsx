@@ -85,12 +85,12 @@ const Navigation = () => {
                 <Button
                   variant="black-animated"
                   size="sm"
-                  className="text-sm font-medium px-4 py-2"
+                  className="text-sm font-medium px-6 py-2 overflow-visible"
                   asChild
                 >
-                  <a href="https://iris.nvestiv.com" target="_blank" rel="noopener noreferrer">
+                  <a href="https://iris.nvestiv.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                     <span>Log In</span>
-                    <ArrowRight className="h-4 w-4" />
+                    <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-2 group-hover:scale-110" />
                   </a>
                 </Button>
               </div>
@@ -135,12 +135,12 @@ const Navigation = () => {
                   <Button
                     variant="black-animated"
                     size="sm"
-                    className="w-full text-sm font-medium"
+                    className="w-full text-sm font-medium overflow-visible"
                     asChild
                   >
-                    <a href="https://iris.nvestiv.com" target="_blank" rel="noopener noreferrer">
+                    <a href="https://iris.nvestiv.com" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
                       <span>Log In</span>
-                      <ArrowRight className="h-4 w-4" />
+                      <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-2 group-hover:scale-110" />
                     </a>
                   </Button>
                 </div>
