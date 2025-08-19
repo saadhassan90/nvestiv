@@ -61,7 +61,7 @@ const HomePage = () => {
                       {/* Main Headline - Single Line */}
                       <div className="w-full flex justify-center">
                         <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
-                          <span className="bg-gradient-to-br from-white via-gray-100 to-gray-300 bg-clip-text text-transparent">
+                          <span className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 bg-clip-text text-transparent">
                             Private Investments AI for
                           </span>
                         </h1>
@@ -70,10 +70,10 @@ const HomePage = () => {
                       {/* Typewriter Container */}
                       <div className="w-full">
                         <div className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
-                          <span className="bg-gradient-to-br from-blue-400 via-blue-600 to-blue-900 bg-clip-text text-transparent">
+                          <span className="bg-gradient-to-br from-gray-800 via-gray-700 to-gray-600 bg-clip-text text-transparent">
                             {currentText}
                           </span>
-                          {showCursor && <span className="animate-pulse bg-gradient-to-br from-blue-400 via-blue-600 to-blue-900 bg-clip-text text-transparent ml-1">|</span>}
+                          {showCursor && <span className="animate-pulse bg-gradient-to-br from-gray-800 via-gray-700 to-gray-600 bg-clip-text text-transparent ml-1">|</span>}
                         </div>
                       </div>
                     </div>
@@ -83,7 +83,7 @@ const HomePage = () => {
                       {/* Static Text */}
                       <div className="flex justify-center">
                         <div className="w-max">
-                          <h2 className="text-xl lg:text-2xl font-semibold text-white relative border-none pb-0">
+                          <h2 className="text-xl lg:text-2xl font-semibold text-gray-800 relative border-none pb-0">
                             AI CRM. AI Agents
                           </h2>
                         </div>
@@ -102,7 +102,7 @@ const HomePage = () => {
                       </div>
                       
                       {/* Description Text */}
-                      <p className="text-lg text-gray-300 leading-relaxed max-w-2xl lg:mx-0 mx-auto">
+                      <p className="text-lg text-gray-600 leading-relaxed max-w-2xl lg:mx-0 mx-auto">
                         Streamline your deal flow with an investment-specific CRM that uses AI for deal screening and due diligence.
                       </p>
                     </div>
