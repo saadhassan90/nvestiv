@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
-import { Moon, Sun, Menu, X } from "lucide-react";
+import { Moon, Sun, Menu, X, ArrowRight } from "lucide-react";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -84,11 +84,12 @@ const Navigation = () => {
               <div className="hidden md:block">
                 <Button
                   size="sm"
-                  className="text-sm font-medium px-4 py-2"
+                  className="text-sm font-medium px-4 py-2 group flex items-center space-x-2"
                   asChild
                 >
                   <a href="https://iris.nvestiv.com" target="_blank" rel="noopener noreferrer">
-                    Log In
+                    <span>Log In</span>
+                    <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:scale-110 group-hover:translate-x-1" />
                   </a>
                 </Button>
               </div>
@@ -132,11 +133,12 @@ const Navigation = () => {
                 <div className="pt-2 border-t border-border/20">
                   <Button
                     size="sm"
-                    className="w-full text-sm font-medium"
+                    className="w-full text-sm font-medium group flex items-center justify-center space-x-2"
                     asChild
                   >
                     <a href="https://iris.nvestiv.com" target="_blank" rel="noopener noreferrer">
-                      Log In
+                      <span>Log In</span>
+                      <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:scale-110 group-hover:translate-x-1" />
                     </a>
                   </Button>
                 </div>
