@@ -64,8 +64,10 @@ const HomePage = () => {
                   <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight">
                     Private Investments AI
                     <br />
-                    for <span className="text-primary">{currentText}</span>
-                    <span className="animate-pulse text-primary ml-1">|</span>
+                    <span className="inline-flex items-baseline">
+                      for <span className="text-primary ml-3 inline-block min-w-[300px] text-left">{currentText}</span>
+                      <span className="animate-pulse text-primary ml-1">|</span>
+                    </span>
                   </h1>
                   
                   {/* Static Text - Centered */}
