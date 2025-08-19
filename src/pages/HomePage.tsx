@@ -27,7 +27,7 @@ const HomePage = () => {
               
               {/* Centered Content */}
               <div className="text-center max-w-4xl mx-auto">
-                <div className="space-y-8">
+                <div className="space-y-8 w-4/5 mx-auto">
                   
                   {/* Main Headline - Centered */}
                   <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight">
