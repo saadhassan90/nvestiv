@@ -4,31 +4,19 @@ import Footer from "@/components/Footer";
 import AsSeenOnCarousel from "@/components/AsSeenOnCarousel";
 import { GridBackground } from "@/components/GridBackground";
 import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
-
 import { Button } from "@/components/ui/button";
 import { Users, Play, Sparkles as SparklesIcon, CheckCircle } from "lucide-react";
 import { ThreeDCardDemo } from "@/components/ThreeDCardDemo";
-
 const HomePage = () => {
   const [currentText, setCurrentText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [showCursor, setShowCursor] = useState(true);
-  
-  const audienceTypes = [
-    "Family Offices",
-    "Institutions", 
-    "Asset Managers",
-    "Startups",
-    "Brokers",
-    "Service Providers"
-  ];
-
+  const audienceTypes = ["Family Offices", "Institutions", "Asset Managers", "Startups", "Brokers", "Service Providers"];
   useEffect(() => {
     const typeSpeed = isDeleting ? 50 : 100;
     const currentPhrase = audienceTypes[currentIndex];
-    
     const timeout = setTimeout(() => {
       if (!isDeleting && charIndex < currentPhrase.length) {
         setCurrentText(currentPhrase.substring(0, charIndex + 1));
@@ -43,12 +31,9 @@ const HomePage = () => {
         setCurrentIndex((currentIndex + 1) % audienceTypes.length);
       }
     }, typeSpeed);
-
     return () => clearTimeout(timeout);
   }, [charIndex, currentIndex, isDeleting, audienceTypes]);
-
-  return (
-    <div className="min-h-screen bg-background relative">
+  return <div className="min-h-screen bg-background relative">
       {/* Custom Grid Background */}
       <div className="absolute inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]"></div>
       
@@ -64,40 +49,25 @@ const HomePage = () => {
             {/* Hero Content */}
             <section className="w-full min-h-[calc(100vh-8rem)] flex items-center justify-center py-8 sm:py-12 lg:py-16">
               
-              {/* Vertical Layout Container - Centered */}
-              <div className="w-full max-w-7xl mx-auto flex flex-col items-center justify-center gap-8 lg:gap-12 text-center">
+              {/* Horizontal Layout Container */}
+              <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
                 
-                {/* Text Content - Centered */}
-                <div className="flex flex-col items-center justify-center w-full max-w-4xl">
-                  <div className="space-y-6">
+                {/* Left Side - Existing Content */}
+                <div className="text-center lg:text-left w-full lg:w-1/2">
+                  <div className="space-y-8">
                     
-                    {/* Main Headline - Single Line */}
-                    <div className="w-full flex justify-center">
-                      <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
-                        <span className="bg-gradient-to-br from-white via-gray-100 to-gray-300 bg-clip-text text-transparent">
-                          Private Investments AI for
-                        </span>
-                      </h1>
-                    </div>
-                    
-                    {/* Typewriter Container */}
-                    <div className="w-full">
-                      <div className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
-                        <span className="bg-gradient-to-br from-blue-400 via-blue-600 to-blue-900 bg-clip-text text-transparent">
-                          {currentText}
-                        </span>
-                        {showCursor && <span className="animate-pulse bg-gradient-to-br from-blue-400 via-blue-600 to-blue-900 bg-clip-text text-transparent ml-1">|</span>}
-                      </div>
-                    </div>
+                    {/* Main Headline with Typewriter */}
+                    <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight">
+                      Private Investments AI
+                      <br />
+                      <span className="inline-flex items-baseline lg:justify-start justify-center">
+                        for <span className="text-primary ml-3 inline-block w-[600px] text-left">{currentText}</span>
+                        {showCursor && <span className="animate-pulse text-primary ml-1">|</span>}
+                      </span>
+                    </h1>
                     
                     {/* Static Text */}
-                    <div className="flex justify-center">
-                      <div className="w-max">
-                        <h2 className="text-xl lg:text-2xl font-semibold text-white relative border-none pb-0">
-                          AI CRM. AI Agents
-                        </h2>
-                      </div>
-                    </div>
+                    
                     
                     {/* Description Text */}
                     <p className="text-lg text-gray-300 leading-relaxed max-w-2xl lg:mx-0 mx-auto">
@@ -106,7 +76,7 @@ const HomePage = () => {
                     
                     
                     {/* CTA Buttons */}
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <div className="flex flex-col sm:flex-row gap-4 lg:justify-start justify-center">
                       <Button size="lg" className="px-8 py-4 text-lg bg-white text-black hover:bg-gray-100">
                         <Play className="h-5 w-5" />
                         <span>Try for FREE</span>
@@ -118,7 +88,7 @@ const HomePage = () => {
                     </div>
                     
                     {/* Trust Indicators */}
-                    <div className="flex flex-wrap justify-center gap-6">
+                    <div className="flex flex-wrap lg:justify-start justify-center gap-6">
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="h-5 w-5 text-primary" />
                         <span className="text-sm font-medium text-gray-300">Family Offices</span>
@@ -127,10 +97,7 @@ const HomePage = () => {
                         <CheckCircle className="h-5 w-5 text-primary" />
                         <span className="text-sm font-medium text-gray-300">Institutional Investors</span>
                       </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="h-5 w-5 text-primary" />
-                        <span className="text-sm font-medium text-gray-300">Asset Managers</span>
-                      </div>
+                      
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="h-5 w-5 text-primary" />
                         <span className="text-sm font-medium text-gray-300">Service Providers</span>
@@ -140,8 +107,8 @@ const HomePage = () => {
                   </div>
                 </div>
                 
-                {/* 3D Card */}
-                <div className="w-full flex justify-center">
+                {/* Right Side - 3D Card */}
+                <div className="w-full lg:w-1/2 flex justify-center">
                   <ThreeDCardDemo />
                 </div>
                 
@@ -159,8 +126,6 @@ const HomePage = () => {
       
       {/* Footer */}
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default HomePage;
