@@ -34,11 +34,9 @@ const Navigation = () => {
           <div className="flex items-center justify-between">
             {/* Logo - Centered on mobile, left on desktop */}
             <div className="flex-shrink-0">
-              <img 
-                src="/lovable-uploads/88e98889-5d30-4440-9343-ec95e05cf294.png" 
-                alt="Nvestiv" 
-                className="h-12 md:h-14 w-auto"
-              />
+              <h1 className="text-xl md:text-2xl font-bold text-foreground tracking-tight">
+                Nvestiv
+              </h1>
             </div>
 
             {/* Desktop Navigation Menu - Centered */}
