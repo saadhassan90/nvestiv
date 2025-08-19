@@ -4,7 +4,7 @@ import AsSeenOnCarousel from "@/components/AsSeenOnCarousel";
 import { GridBackground } from "@/components/GridBackground";
 import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
 import { Button } from "@/components/ui/button";
-import { Users, Play, Sparkles, Building2, TrendingUp, Briefcase } from "lucide-react";
+import { Users, Play, Sparkles, CheckCircle } from "lucide-react";
 
 const HomePage = () => {
   return (
@@ -67,16 +67,20 @@ const HomePage = () => {
                   <div className="space-y-4">
                     <div className="flex flex-col sm:flex-row gap-6">
                       <div className="flex items-center space-x-2">
-                        <Building2 className="h-5 w-5 text-primary" />
+                        <CheckCircle className="h-5 w-5 text-primary" />
                         <span className="text-sm font-medium">Family Offices</span>
                       </div>
                       <div className="flex items-center space-x-2">
-                        <TrendingUp className="h-5 w-5 text-primary" />
+                        <CheckCircle className="h-5 w-5 text-primary" />
                         <span className="text-sm font-medium">Institutional Investors</span>
                       </div>
                       <div className="flex items-center space-x-2">
-                        <Briefcase className="h-5 w-5 text-primary" />
-                        <span className="text-sm font-medium">Fund Managers</span>
+                        <CheckCircle className="h-5 w-5 text-primary" />
+                        <span className="text-sm font-medium">Asset Managers</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <CheckCircle className="h-5 w-5 text-primary" />
+                        <span className="text-sm font-medium">Service Providers</span>
                       </div>
                     </div>
                   </div>
