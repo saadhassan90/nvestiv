@@ -72,7 +72,7 @@ const HomePage = () => {
                   {/* Typewriter Text - Centered */}
                   <div className="flex justify-center">
                     <div className="w-max">
-                      <h2 className="text-xl lg:text-2xl font-semibold text-white relative min-h-[2.5rem] border-none pb-0">
+                      <h2 className="text-xl lg:text-2xl font-semibold text-white relative min-h-[2.5rem]">
                         {displayText}
                         <span className="animate-pulse text-white ml-1">|</span>
                       </h2>
