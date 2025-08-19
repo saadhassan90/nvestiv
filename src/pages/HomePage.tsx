@@ -16,21 +16,10 @@ const HomePage = () => {
       {/* Navigation */}
       <Navigation />
       
-      {/* Hero Section with Sparkles Background */}
+      {/* Hero Section with Black Background */}
       <main className="pt-24 md:pt-28 lg:pt-32 relative z-10">
         <div className="min-h-[calc(100vh-8rem)] w-full bg-black flex flex-col items-center justify-center overflow-hidden">
-          <SparklesCore
-            background="black"
-            minSize={0.4}
-            maxSize={1}
-            particleDensity={1200}
-            className="w-full h-full absolute inset-0"
-            particleColor="#FFFFFF"
-          />
-          
-          {/* Radial Gradient to prevent sharp edges */}
-          <div className="absolute inset-0 w-full h-full bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,white)]"></div>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
             
             {/* Hero Content */}
             <section className="min-h-[calc(100vh-8rem)] flex items-center justify-between py-8 sm:py-12 lg:py-16">
@@ -45,13 +34,35 @@ const HomePage = () => {
                     <span><strong className="text-white">4958 Users</strong> and counting</span>
                   </div>
                   
-                  {/* Main Headline */}
+                  {/* Main Headline with Sparkles underneath */}
                   <div className="space-y-6">
-                    <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight">
+                    <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight relative z-20">
                       AI for Private
                       <br />
                       <span className="text-primary">Investments</span>
                     </h1>
+                    
+                    {/* Sparkles Area - Only under the headline */}
+                    <div className="w-[40rem] h-40 relative">
+                      {/* Gradients */}
+                      <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
+                      <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
+                      <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[5px] w-1/4 blur-sm" />
+                      <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px w-1/4" />
+
+                      {/* Core component */}
+                      <SparklesCore
+                        background="transparent"
+                        minSize={0.4}
+                        maxSize={1}
+                        particleDensity={1200}
+                        className="w-full h-full"
+                        particleColor="#FFFFFF"
+                      />
+
+                      {/* Radial Gradient to prevent sharp edges */}
+                      <div className="absolute inset-0 w-full h-full bg-black [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
+                    </div>
                     
                     <div className="w-max">
                       <h2 className="text-xl lg:text-2xl font-semibold text-white animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-white pr-2">
