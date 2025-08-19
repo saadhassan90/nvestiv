@@ -22,6 +22,7 @@ const buttonVariants = cva(
         "animated-primary": "bg-primary text-primary-foreground hover:bg-primary/90 group [&_svg]:transition-transform [&_svg]:duration-300 hover:[&_svg]:scale-110 hover:[&_svg]:translate-x-1",
         "animated-secondary": "border border-input bg-background hover:bg-accent hover:text-accent-foreground group [&_svg]:transition-all [&_svg]:duration-300 hover:[&_svg]:rotate-12 hover:[&_svg]:scale-110",
         "animated-outline": "border border-input bg-background hover:bg-accent hover:text-accent-foreground group [&_svg]:transition-transform [&_svg]:duration-300 hover:[&_svg]:scale-110 hover:[&_svg]:translate-x-1",
+        "black-animated": "bg-black text-white hover:bg-gray-900 group [&_svg]:transition-all [&_svg]:duration-300 hover:[&_svg]:scale-110 hover:[&_svg]:translate-x-1 transform hover:scale-105 transition-all",
       },
       size: {
         default: "h-10 px-4 py-2",

@@ -83,7 +83,7 @@ const Navigation = () => {
               {/* Login Button - Desktop */}
               <div className="hidden md:block">
                 <Button
-                  variant="animated-outline"
+                  variant="black-animated"
                   size="sm"
                   className="text-sm font-medium px-4 py-2"
                   asChild
@@ -133,7 +133,7 @@ const Navigation = () => {
                 {/* Mobile Login Button */}
                 <div className="pt-2 border-t border-border/20">
                   <Button
-                    variant="animated-outline"
+                    variant="black-animated"
                     size="sm"
                     className="w-full text-sm font-medium"
                     asChild
