@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Spotlight } from "@/components/ui/spotlight-new";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import AsSeenOnCarousel from "@/components/AsSeenOnCarousel";
@@ -58,6 +59,7 @@ const HomePage = () => {
       {/* Hero Section with Black Background */}
       <main className="pt-24 md:pt-28 lg:pt-32 relative z-10">
         <div className="min-h-[calc(100vh-8rem)] w-full relative bg-black flex flex-col items-center justify-center overflow-hidden">
+          <Spotlight className="top-40 left-0 md:left-60 md:-top-20" fill="white" />
           <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
           <div className="w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
             
@@ -72,7 +74,7 @@ const HomePage = () => {
                   <div className="space-y-8">
                     
                     {/* Main Headline with Typewriter */}
-                    <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight">
+                    <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
                       Private Investments AI
                       <br />
                       <span className="inline-flex items-baseline lg:justify-start justify-center">
