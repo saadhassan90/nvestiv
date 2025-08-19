@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import AsSeenOnCarousel from "@/components/AsSeenOnCarousel";
 import { GridBackground } from "@/components/GridBackground";
 import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
-import { SparklesCore } from "@/components/ui/sparkles";
+
 import { Button } from "@/components/ui/button";
 import { Users, Play, Sparkles as SparklesIcon, CheckCircle } from "lucide-react";
 import { ThreeDCardDemo } from "@/components/ThreeDCardDemo";
@@ -95,29 +95,6 @@ const HomePage = () => {
                       Streamline your deal flow with an investment-specific CRM that uses AI for deal screening and due diligence.
                     </p>
                     
-                    {/* Sparkles Area */}
-                    <div className="flex lg:justify-start justify-center">
-                      <div className="w-[40rem] h-40 relative">
-                        {/* Gradients */}
-                        <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
-                        <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
-                        <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[5px] w-1/4 blur-sm" />
-                        <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px w-1/4" />
-
-                        {/* Core component */}
-                        <SparklesCore
-                          background="transparent"
-                          minSize={0.4}
-                          maxSize={1}
-                          particleDensity={1200}
-                          className="w-full h-full"
-                          particleColor="#FFFFFF"
-                        />
-
-                        {/* Radial Gradient to prevent sharp edges */}
-                        <div className="absolute inset-0 w-full h-full bg-black [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
-                      </div>
-                    </div>
                     
                     {/* CTA Buttons */}
                     <div className="flex flex-col sm:flex-row gap-4 lg:justify-start justify-center">
