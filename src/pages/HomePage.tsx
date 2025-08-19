@@ -38,8 +38,9 @@ const HomePage = () => {
                   {/* Typewriter Text - Centered */}
                   <div className="flex justify-center">
                     <div className="w-max">
-                      <h2 className="text-xl lg:text-2xl font-semibold text-white animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-white pr-2">
+                      <h2 className="text-xl lg:text-2xl font-semibold text-white relative">
                         AI Native CRM. AI Agents
+                        <span className="animate-pulse text-white ml-1">|</span>
                       </h2>
                     </div>
                   </div>
