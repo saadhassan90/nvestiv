@@ -64,28 +64,34 @@ const HomePage = () => {
             {/* Hero Content */}
             <section className="w-full min-h-[calc(100vh-8rem)] flex items-center justify-center py-8 sm:py-12 lg:py-16">
               
-              {/* Horizontal Layout Container */}
-              <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
+              {/* Vertical Layout Container */}
+              <div className="w-full max-w-7xl mx-auto flex flex-col items-center justify-center gap-8 lg:gap-12">
                 
-                {/* Left Side - Existing Content */}
-                <div className="text-center lg:text-left w-full lg:w-1/2">
-                  <div className="space-y-8">
+                {/* Text Content - Stacked Vertically */}
+                <div className="text-center w-full">
+                  <div className="space-y-6">
                     
-                    {/* Main Headline with Typewriter */}
-                    <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
-                      <span className="bg-gradient-to-br from-white via-gray-100 to-gray-300 bg-clip-text text-transparent">
-                        Private Investments AI
-                      </span>
-                      <br />
-                      <span className="inline-flex items-baseline lg:justify-start justify-center">
-                        <span className="bg-gradient-to-br from-white via-gray-100 to-gray-300 bg-clip-text text-transparent">for </span>
-                        <span className="bg-gradient-to-br from-blue-400 via-blue-600 to-blue-900 bg-clip-text text-transparent ml-3 inline-block w-[600px] text-left">{currentText}</span>
+                    {/* Main Headline - Single Line */}
+                    <div className="w-full">
+                      <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
+                        <span className="bg-gradient-to-br from-white via-gray-100 to-gray-300 bg-clip-text text-transparent">
+                          Private Investments AI for
+                        </span>
+                      </h1>
+                    </div>
+                    
+                    {/* Typewriter Container */}
+                    <div className="w-full">
+                      <div className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
+                        <span className="bg-gradient-to-br from-blue-400 via-blue-600 to-blue-900 bg-clip-text text-transparent">
+                          {currentText}
+                        </span>
                         {showCursor && <span className="animate-pulse bg-gradient-to-br from-blue-400 via-blue-600 to-blue-900 bg-clip-text text-transparent ml-1">|</span>}
-                      </span>
-                    </h1>
+                      </div>
+                    </div>
                     
                     {/* Static Text */}
-                    <div className="flex lg:justify-start justify-center">
+                    <div className="flex justify-center">
                       <div className="w-max">
                         <h2 className="text-xl lg:text-2xl font-semibold text-white relative border-none pb-0">
                           AI CRM. AI Agents
@@ -100,7 +106,7 @@ const HomePage = () => {
                     
                     
                     {/* CTA Buttons */}
-                    <div className="flex flex-col sm:flex-row gap-4 lg:justify-start justify-center">
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
                       <Button size="lg" className="px-8 py-4 text-lg bg-white text-black hover:bg-gray-100">
                         <Play className="h-5 w-5" />
                         <span>Try for FREE</span>
@@ -112,7 +118,7 @@ const HomePage = () => {
                     </div>
                     
                     {/* Trust Indicators */}
-                    <div className="flex flex-wrap lg:justify-start justify-center gap-6">
+                    <div className="flex flex-wrap justify-center gap-6">
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="h-5 w-5 text-primary" />
                         <span className="text-sm font-medium text-gray-300">Family Offices</span>
@@ -134,8 +140,8 @@ const HomePage = () => {
                   </div>
                 </div>
                 
-                {/* Right Side - 3D Card */}
-                <div className="w-full lg:w-1/2 flex justify-center">
+                {/* 3D Card */}
+                <div className="w-full flex justify-center">
                   <ThreeDCardDemo />
                 </div>
                 
