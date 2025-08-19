@@ -137,7 +137,7 @@ const HomePage = () => {
         </div>
         
         {/* 3D Card - Full Width Section */}
-        <div className="w-full">
+        <div className="w-full max-w-7xl mx-auto">
           <ThreeDCardDemo />
         </div>
       </main>
