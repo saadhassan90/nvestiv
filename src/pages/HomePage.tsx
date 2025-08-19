@@ -50,9 +50,11 @@ const HomePage = () => {
                       <span className="text-primary">Investments</span>
                     </h1>
                     
-                    <h2 className="text-xl lg:text-2xl font-semibold text-foreground">
-                      CRM. DataRooms. Due Diligence.
-                    </h2>
+                    <div className="w-max">
+                      <h2 className="text-xl lg:text-2xl font-semibold text-foreground animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-foreground pr-2">
+                        CRM. DataRooms. Due Diligence.
+                      </h2>
+                    </div>
                     
                     <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">
                       Streamline your deal flow with an investment-specific CRM that uses AI for deal screening and due diligence.
