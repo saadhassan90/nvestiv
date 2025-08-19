@@ -56,50 +56,56 @@ const HomePage = () => {
                 <div className="flex flex-col items-center justify-center w-full max-w-4xl">
                   <div className="space-y-6">
                     
-                    {/* Main Headline - Single Line */}
-                    <div className="w-full flex justify-center">
-                      <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
-                        <span className="bg-gradient-to-br from-white via-gray-100 to-gray-300 bg-clip-text text-transparent">
-                          Private Investments AI for
-                        </span>
-                      </h1>
-                    </div>
-                    
-                    {/* Typewriter Container */}
-                    <div className="w-full">
-                      <div className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
-                        <span className="bg-gradient-to-br from-blue-400 via-blue-600 to-blue-900 bg-clip-text text-transparent">
-                          {currentText}
-                        </span>
-                        {showCursor && <span className="animate-pulse bg-gradient-to-br from-blue-400 via-blue-600 to-blue-900 bg-clip-text text-transparent ml-1">|</span>}
+                    {/* Group 1: Main Headlines */}
+                    <div className="space-y-6">
+                      {/* Main Headline - Single Line */}
+                      <div className="w-full flex justify-center">
+                        <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
+                          <span className="bg-gradient-to-br from-white via-gray-100 to-gray-300 bg-clip-text text-transparent">
+                            Private Investments AI for
+                          </span>
+                        </h1>
+                      </div>
+                      
+                      {/* Typewriter Container */}
+                      <div className="w-full">
+                        <div className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
+                          <span className="bg-gradient-to-br from-blue-400 via-blue-600 to-blue-900 bg-clip-text text-transparent">
+                            {currentText}
+                          </span>
+                          {showCursor && <span className="animate-pulse bg-gradient-to-br from-blue-400 via-blue-600 to-blue-900 bg-clip-text text-transparent ml-1">|</span>}
+                        </div>
                       </div>
                     </div>
                     
-                    {/* Static Text */}
-                    <div className="flex justify-center">
-                      <div className="w-max">
-                        <h2 className="text-xl lg:text-2xl font-semibold text-white relative border-none pb-0">
-                          AI CRM. AI Agents
-                        </h2>
+                    {/* Group 2: Secondary Content */}
+                    <div className="space-y-8 pt-8">
+                      {/* Static Text */}
+                      <div className="flex justify-center">
+                        <div className="w-max">
+                          <h2 className="text-xl lg:text-2xl font-semibold text-white relative border-none pb-0">
+                            AI CRM. AI Agents
+                          </h2>
+                        </div>
                       </div>
+                      
+                      {/* CTA Buttons */}
+                      <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                        <Button size="lg" className="px-8 py-4 text-lg bg-white text-black hover:bg-gray-100">
+                          <Play className="h-5 w-5" />
+                          <span>Try for FREE</span>
+                        </Button>
+                        <Button size="lg" className="px-8 py-4 text-lg bg-gray-600 text-white hover:bg-gray-500 border-0">
+                          <SparklesIcon className="h-5 w-5" />
+                          <span>Discover IRIS</span>
+                        </Button>
+                      </div>
+                      
+                      {/* Description Text */}
+                      <p className="text-lg text-gray-300 leading-relaxed max-w-2xl lg:mx-0 mx-auto">
+                        Streamline your deal flow with an investment-specific CRM that uses AI for deal screening and due diligence.
+                      </p>
                     </div>
-                    
-                    {/* CTA Buttons */}
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                      <Button size="lg" className="px-8 py-4 text-lg bg-white text-black hover:bg-gray-100">
-                        <Play className="h-5 w-5" />
-                        <span>Try for FREE</span>
-                      </Button>
-                      <Button size="lg" className="px-8 py-4 text-lg bg-gray-600 text-white hover:bg-gray-500 border-0">
-                        <SparklesIcon className="h-5 w-5" />
-                        <span>Discover IRIS</span>
-                      </Button>
-                    </div>
-                    
-                    {/* Description Text */}
-                    <p className="text-lg text-gray-300 leading-relaxed max-w-2xl lg:mx-0 mx-auto">
-                      Streamline your deal flow with an investment-specific CRM that uses AI for deal screening and due diligence.
-                    </p>
                     
                     {/* Trust Indicators */}
                     
