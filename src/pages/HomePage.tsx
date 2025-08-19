@@ -64,15 +64,15 @@ const HomePage = () => {
             {/* Hero Content */}
             <section className="w-full min-h-[calc(100vh-8rem)] flex items-center justify-center py-8 sm:py-12 lg:py-16">
               
-              {/* Vertical Layout Container */}
-              <div className="w-full max-w-7xl mx-auto flex flex-col items-center justify-center gap-8 lg:gap-12">
+              {/* Vertical Layout Container - Centered */}
+              <div className="w-full max-w-7xl mx-auto flex flex-col items-center justify-center gap-8 lg:gap-12 text-center">
                 
-                {/* Text Content - Stacked Vertically */}
-                <div className="text-center w-full">
+                {/* Text Content - Centered */}
+                <div className="flex flex-col items-center justify-center w-full max-w-4xl">
                   <div className="space-y-6">
                     
                     {/* Main Headline - Single Line */}
-                    <div className="w-full">
+                    <div className="w-full flex justify-center">
                       <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
                         <span className="bg-gradient-to-br from-white via-gray-100 to-gray-300 bg-clip-text text-transparent">
                           Private Investments AI for
