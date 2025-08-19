@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import AsSeenOnCarousel from "@/components/AsSeenOnCarousel";
@@ -9,34 +8,6 @@ import { Button } from "@/components/ui/button";
 import { Users, Play, Sparkles as SparklesIcon, CheckCircle } from "lucide-react";
 
 const HomePage = () => {
-  const [currentText, setCurrentText] = useState("");
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [charIndex, setCharIndex] = useState(0);
-  
-  const phrases = [
-    "AI Native CRM. AI Agents",
-    "Deal Flow Management",
-    "Investment Intelligence",
-    "Due Diligence Automation"
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (charIndex < phrases[currentIndex].length) {
-        setCurrentText(phrases[currentIndex].substring(0, charIndex + 1));
-        setCharIndex(charIndex + 1);
-      } else {
-        setTimeout(() => {
-          setCharIndex(0);
-          setCurrentText("");
-          setCurrentIndex((currentIndex + 1) % phrases.length);
-        }, 2000);
-      }
-    }, 100);
-
-    return () => clearInterval(interval);
-  }, [charIndex, currentIndex, phrases]);
-
   return (
     <div className="min-h-screen bg-background relative">
       {/* Custom Grid Background */}
@@ -65,12 +36,11 @@ const HomePage = () => {
                     <span className="text-primary">Investments</span>
                   </h1>
                   
-                  {/* Typewriter Text - Centered */}
+                  {/* Static Text - Centered */}
                   <div className="flex justify-center">
                     <div className="w-max">
                       <h2 className="text-xl lg:text-2xl font-semibold text-white relative border-none pb-0">
-                        {currentText}
-                        <span className="animate-pulse text-white ml-1">|</span>
+                        AI CRM. AI Agents
                       </h2>
                     </div>
                   </div>
