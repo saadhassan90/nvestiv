@@ -64,10 +64,10 @@ const Contact = () => {
                     ></textarea>
                     <Button
                       type="submit"
-                      className="w-full"
+                      className="w-full overflow-visible"
                       size="default"
                     >
-                      <Send className="h-4 w-4" />
+                      <Send className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-3 group-hover:scale-110" />
                       <span>Send Message</span>
                     </Button>
                   </form>

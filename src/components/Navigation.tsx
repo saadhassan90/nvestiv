@@ -22,7 +22,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 w-full max-w-4xl px-4 sm:px-6">
+    <nav className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 w-full max-w-4xl px-4 sm:px-6 overflow-visible">
       <div
         className={`navbar-floating transition-all duration-300 ${
           isScrolled
@@ -81,16 +81,16 @@ const Navigation = () => {
               </Button>
 
               {/* Login Button - Desktop */}
-              <div className="hidden md:block">
+              <div className="hidden md:block overflow-visible">
                 <Button
                   variant="default"
                   size="sm"
-                  className="text-sm font-medium px-6 py-2"
+                  className="text-sm font-medium px-6 py-2 overflow-visible"
                   asChild
                 >
-                  <a href="https://iris.nvestiv.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                  <a href="https://iris.nvestiv.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 overflow-visible">
                     <span>Log In</span>
-                    <ArrowRight className="h-4 w-4" />
+                    <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-3 group-hover:scale-110" />
                   </a>
                 </Button>
               </div>
@@ -135,12 +135,12 @@ const Navigation = () => {
                   <Button
                     variant="default"
                     size="sm"
-                    className="w-full text-sm font-medium"
+                    className="w-full text-sm font-medium overflow-visible"
                     asChild
                   >
-                    <a href="https://iris.nvestiv.com" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
+                    <a href="https://iris.nvestiv.com" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 overflow-visible">
                       <span>Log In</span>
-                      <ArrowRight className="h-4 w-4" />
+                      <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-3 group-hover:scale-110" />
                     </a>
                   </Button>
                 </div>
