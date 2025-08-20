@@ -4,7 +4,7 @@ import { Mail, Timer, FileText, UserPlus, Link, Send, Download } from "lucide-re
 
 export function ThreeDCardDemo() {
   return (
-    <div className="w-full py-8">
+    <div className="w-full py-16">
       <div className="bg-gray-50 relative dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-8 border">
         
         {/* Header */}
