@@ -9,8 +9,8 @@ export function ThreeDCardDemo() {
   return (
     <div className="w-full">
       <div className="relative w-full h-auto">
-        <EvervaultCard className="absolute inset-0 rounded-xl" />
-        <div className="bg-gray-50/90 backdrop-blur-sm relative dark:bg-black/90 dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-8 border z-10">
+        <EvervaultCard className="absolute inset-0 rounded-xl">
+          <div className="bg-gray-50/90 backdrop-blur-sm relative dark:bg-black/90 dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-8 border z-10">
         
         {/* Header */}
         <div className="w-full">
@@ -160,7 +160,8 @@ export function ThreeDCardDemo() {
             </div>
           </div>
         </div>
-        </div>
+          </div>
+        </EvervaultCard>
       </div>
     </div>
   );
