@@ -56,38 +56,38 @@ export function ThreeDCardDemo() {
               {/* Activity Cards */}
               <div className="space-y-2 ml-4 border-l-2 border-gray-200 dark:border-gray-600 pl-3">
               {/* Read Email Card */}
-              <div className="bg-gray-50/30 dark:bg-gray-900/30 border border-gray-100/50 dark:border-gray-800/50 rounded-md p-3">
-                <div className="flex items-center justify-between">
-                  <div className="text-left flex items-center gap-2 flex-1">
-                    <Mail className="w-4 h-4 text-gray-500 flex-shrink-0" />
-                    <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 flex-1">
-                      <h3 className="text-sm font-medium text-gray-700 dark:text-gray-300">Read incoming email</h3>
-                      <p className="text-xs text-gray-500 dark:text-gray-400">Subject: Introducing Terraview Capital Partners.</p>
-                    </div>
+              <div className="bg-gray-50/30 dark:bg-gray-900/30 border border-gray-300 dark:border-gray-600 rounded-md p-3">
+                <div className="flex items-center justify-between mb-2">
+                  <div className="flex items-center gap-2">
+                    <Mail className="w-4 h-4 text-gray-500" />
+                    <h3 className="text-sm font-medium text-gray-700 dark:text-gray-300">Read incoming email</h3>
                   </div>
-                  <Badge variant="outline" className="text-xs font-normal text-green-700 border-green-300 flex-shrink-0">
+                  <Badge variant="outline" className="text-xs font-normal text-green-700 border-green-300">
                     ✓ Complete
                   </Badge>
+                </div>
+                <div className="flex items-center gap-4">
+                  <p className="text-xs text-gray-500 dark:text-gray-400">Subject: Introducing Terraview Capital Partners.</p>
                 </div>
               </div>
 
                 {/* Detected Body Text Card */}
-                <div className="bg-gray-50/30 dark:bg-gray-900/30 border border-gray-100/50 dark:border-gray-800/50 rounded-md p-3">
-                  <div className="flex items-center justify-between">
-                    <div className="flex-1 text-left flex items-center gap-2">
-                      <FileText className="w-4 h-4 text-gray-500 flex-shrink-0" />
-                      <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 flex-1">
-                        <h3 className="text-sm font-medium text-gray-700 dark:text-gray-300">Detected body text + 1 attachments</h3>
-                        <p className="text-xs text-gray-500 dark:text-gray-400">Email summary generated. Parsed .pdf file</p>
-                        <div className="flex items-center gap-2">
-                          <FileText className="w-3 h-3 text-gray-500" />
-                          <span className="text-xs text-gray-600 dark:text-gray-400">Terraview CP 2024 Performance YTD</span>
-                        </div>
-                      </div>
+                <div className="bg-gray-50/30 dark:bg-gray-900/30 border border-gray-300 dark:border-gray-600 rounded-md p-3">
+                  <div className="flex items-center justify-between mb-2">
+                    <div className="flex items-center gap-2">
+                      <FileText className="w-4 h-4 text-gray-500" />
+                      <h3 className="text-sm font-medium text-gray-700 dark:text-gray-300">Detected body text + 1 attachments</h3>
                     </div>
-                    <Badge variant="outline" className="text-xs font-normal text-green-700 border-green-300 flex-shrink-0">
+                    <Badge variant="outline" className="text-xs font-normal text-green-700 border-green-300">
                       ✓ Complete
                     </Badge>
+                  </div>
+                  <div className="flex items-center gap-4">
+                    <p className="text-xs text-gray-500 dark:text-gray-400">Email summary generated. Parsed .pdf file</p>
+                    <div className="flex items-center gap-2">
+                      <FileText className="w-3 h-3 text-gray-500" />
+                      <span className="text-xs text-gray-600 dark:text-gray-400">Terraview CP 2024 Performance YTD</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -106,59 +106,60 @@ export function ThreeDCardDemo() {
               {/* CRM Activity Cards */}
               <div className="space-y-2 ml-4 border-l-2 border-gray-200 dark:border-gray-600 pl-3">
                 {/* New Contact Card */}
-                <div className="bg-gray-50/30 dark:bg-gray-900/30 border border-gray-100/50 dark:border-gray-800/50 rounded-md p-3">
-                  <div className="flex items-center justify-between">
-                    <div className="text-left flex items-center gap-2 flex-1">
-                      <UserPlus className="w-4 h-4 text-gray-500 flex-shrink-0" />
-                      <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 flex-1">
-                        <h3 className="text-sm font-medium text-gray-700 dark:text-gray-300">New Contact & Company Created</h3>
-                        <p className="text-xs text-gray-500 dark:text-gray-400">Terraview and Jordan Noah did not already exist. Updated contact using email details.</p>
-                      </div>
+                <div className="bg-gray-50/30 dark:bg-gray-900/30 border border-gray-300 dark:border-gray-600 rounded-md p-3">
+                  <div className="flex items-center justify-between mb-2">
+                    <div className="flex items-center gap-2">
+                      <UserPlus className="w-4 h-4 text-gray-500" />
+                      <h3 className="text-sm font-medium text-gray-700 dark:text-gray-300">New Contact & Company Created</h3>
                     </div>
-                    <Badge variant="outline" className="text-xs font-normal text-green-700 border-green-300 flex-shrink-0">
+                    <Badge variant="outline" className="text-xs font-normal text-green-700 border-green-300">
                       ✓ Complete
                     </Badge>
+                  </div>
+                  <div className="flex items-center gap-4">
+                    <p className="text-xs text-gray-500 dark:text-gray-400">Terraview and Jordan Noah did not already exist.</p>
+                    <p className="text-xs text-gray-500 dark:text-gray-400">Updated contact using email details.</p>
                   </div>
                 </div>
 
                 {/* Associated File Card */}
-                <div className="bg-gray-50/30 dark:bg-gray-900/30 border border-gray-100/50 dark:border-gray-800/50 rounded-md p-3">
-                  <div className="flex items-center justify-between">
-                    <div className="flex-1 text-left flex items-center gap-2">
-                      <Link className="w-4 h-4 text-gray-500 flex-shrink-0" />
-                      <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 flex-1">
-                        <h3 className="text-sm font-medium text-gray-700 dark:text-gray-300">Associated File to Jordan Noah</h3>
-                        <p className="text-xs text-gray-500 dark:text-gray-400">Uploaded file, summarized, and tagged to profile.</p>
-                        <div className="flex items-center gap-2">
-                          <FileText className="w-3 h-3 text-gray-500" />
-                          <span className="text-xs text-gray-600 dark:text-gray-400">Terraview CP 2024 Performance YTD</span>
-                        </div>
-                      </div>
+                <div className="bg-gray-50/30 dark:bg-gray-900/30 border border-gray-300 dark:border-gray-600 rounded-md p-3">
+                  <div className="flex items-center justify-between mb-2">
+                    <div className="flex items-center gap-2">
+                      <Link className="w-4 h-4 text-gray-500" />
+                      <h3 className="text-sm font-medium text-gray-700 dark:text-gray-300">Associated File to Jordan Noah</h3>
                     </div>
-                    <Badge variant="outline" className="text-xs font-normal text-green-700 border-green-300 flex-shrink-0">
+                    <Badge variant="outline" className="text-xs font-normal text-green-700 border-green-300">
                       ✓ Complete
                     </Badge>
+                  </div>
+                  <div className="flex items-center gap-4">
+                    <p className="text-xs text-gray-500 dark:text-gray-400">Uploaded file, summarized, and tagged to profile.</p>
+                    <div className="flex items-center gap-2">
+                      <FileText className="w-3 h-3 text-gray-500" />
+                      <span className="text-xs text-gray-600 dark:text-gray-400">Terraview CP 2024 Performance YTD</span>
+                    </div>
                   </div>
                 </div>
 
                 {/* Sending Email Card */}
-                <div className="bg-gray-50/30 dark:bg-gray-900/30 border border-gray-100/50 dark:border-gray-800/50 rounded-md p-3">
-                  <div className="flex items-center justify-between">
-                    <div className="flex-1 text-left flex items-center gap-2">
-                      <Send className="w-4 h-4 text-gray-500 flex-shrink-0" />
-                      <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 flex-1">
-                        <h3 className="text-sm font-medium text-gray-700 dark:text-gray-300">Sending email introduction</h3>
-                        <p className="text-xs text-gray-500 dark:text-gray-400">Logical next step is to introduce Jordan to</p>
-                        <div className="flex items-center gap-2">
-                          <div className="w-4 h-4 bg-gray-300 dark:bg-gray-600 rounded-full"></div>
-                          <span className="text-xs text-gray-600 dark:text-gray-400">Misha Fuentes @ Demarquay Family Office</span>
-                        </div>
-                      </div>
+                <div className="bg-gray-50/30 dark:bg-gray-900/30 border border-gray-300 dark:border-gray-600 rounded-md p-3">
+                  <div className="flex items-center justify-between mb-2">
+                    <div className="flex items-center gap-2">
+                      <Send className="w-4 h-4 text-gray-500" />
+                      <h3 className="text-sm font-medium text-gray-700 dark:text-gray-300">Sending email introduction</h3>
                     </div>
-                    <Badge variant="outline" className="text-xs font-normal text-blue-700 border-blue-300 flex-shrink-0">
+                    <Badge variant="outline" className="text-xs font-normal text-blue-700 border-blue-300">
                       <Send className="w-3 h-3 mr-1 text-gray-500" />
                       Sending Email
                     </Badge>
+                  </div>
+                  <div className="flex items-center gap-4">
+                    <p className="text-xs text-gray-500 dark:text-gray-400">Logical next step is to introduce Jordan to</p>
+                    <div className="flex items-center gap-2">
+                      <div className="w-4 h-4 bg-gray-300 dark:bg-gray-600 rounded-full"></div>
+                      <span className="text-xs text-gray-600 dark:text-gray-400">Misha Fuentes @ Demarquay Family Office</span>
+                    </div>
                   </div>
                 </div>
               </div>
