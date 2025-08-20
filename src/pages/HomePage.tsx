@@ -45,7 +45,7 @@ const HomePage = () => {
       <div className="absolute inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem] dark:hidden"></div>
       
       {/* Dark Mode Background */}
-      <div className="absolute inset-0 -z-10 h-full w-full bg-gradient-to-b from-[#141E30] to-[#243B55] hidden dark:block"></div>
+      <div className="absolute inset-0 -z-10 h-full w-full bg-gradient-to-br from-[#05081b] to-[#0a0e1f] hidden dark:block"></div>
       
       {/* Navigation */}
       <Navigation />
