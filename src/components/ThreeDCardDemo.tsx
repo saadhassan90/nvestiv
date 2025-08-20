@@ -7,7 +7,7 @@ export function ThreeDCardDemo() {
   return (
     <CardContainer className="inter-var w-full">
       <CardBody
-        className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-4 border">
+        className="bg-white/20 backdrop-blur-lg relative group/card shadow-2xl border border-white/30 w-full h-auto rounded-xl p-4">
         
         {/* Header */}
         <CardItem translateZ="20" className="w-full">
@@ -52,7 +52,7 @@ export function ThreeDCardDemo() {
             {/* Activity Cards */}
             <div className="space-y-2 ml-4 border-l-2 border-gray-200 pl-3">
               {/* Read Email Card */}
-              <div className="bg-white border border-gray-200 rounded-md p-3">
+              <div className="bg-white/40 backdrop-blur-sm border border-white/50 rounded-md p-3 shadow-lg">
                 <div className="flex items-center justify-between">
                   <div>
                     <h3 className="text-sm font-medium text-neutral-700">Read incoming email</h3>
@@ -65,7 +65,7 @@ export function ThreeDCardDemo() {
               </div>
 
               {/* Detected Body Text Card */}
-              <div className="bg-white border border-gray-200 rounded-md p-3">
+              <div className="bg-white/40 backdrop-blur-sm border border-white/50 rounded-md p-3 shadow-lg">
                 <div className="flex items-center justify-between">
                   <div className="flex-1">
                     <h3 className="text-sm font-medium text-neutral-700">Detected body text + 1 attachments</h3>
@@ -96,7 +96,7 @@ export function ThreeDCardDemo() {
             {/* CRM Activity Cards */}
             <div className="space-y-2 ml-4 border-l-2 border-gray-200 pl-3">
               {/* New Contact Card */}
-              <div className="bg-white border border-gray-200 rounded-md p-3">
+              <div className="bg-white/40 backdrop-blur-sm border border-white/50 rounded-md p-3 shadow-lg">
                 <div className="flex items-center justify-between">
                   <div>
                     <h3 className="text-sm font-medium text-neutral-700">New Contact & Company Created</h3>
@@ -109,7 +109,7 @@ export function ThreeDCardDemo() {
               </div>
 
               {/* Associated File Card */}
-              <div className="bg-white border border-gray-200 rounded-md p-3">
+              <div className="bg-white/40 backdrop-blur-sm border border-white/50 rounded-md p-3 shadow-lg">
                 <div className="flex items-center justify-between">
                   <div className="flex-1">
                     <h3 className="text-sm font-medium text-neutral-700">Associated File to Jordan Noah</h3>
@@ -126,7 +126,7 @@ export function ThreeDCardDemo() {
               </div>
 
               {/* Sending Email Card */}
-              <div className="bg-white border border-gray-200 rounded-md p-3">
+              <div className="bg-white/40 backdrop-blur-sm border border-white/50 rounded-md p-3 shadow-lg">
                 <div className="flex items-center justify-between">
                   <div className="flex-1">
                     <h3 className="text-sm font-medium text-neutral-700">Sending email introduction</h3>
