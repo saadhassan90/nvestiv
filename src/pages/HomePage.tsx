@@ -175,196 +175,211 @@ const HomePage = () => {
           {/* Features Cards Grid */}
           <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
             {/* AI CRM Column */}
-            <div className="card-dark-premium text-center transition-all duration-500 hover:scale-[1.02] flex flex-col">
-              <div className="inline-flex items-center gap-2 px-3 py-1 bg-muted/50 rounded-full text-sm font-medium text-muted-foreground mb-6">
-                <div className="w-2 h-2 bg-foreground rounded-full"></div>
-                AI CRM
+            <div className="card-dark-premium text-center transition-all duration-500 hover:scale-[1.02] flex flex-col h-full">
+              {/* Header Content - Fixed Height */}
+              <div className="flex-shrink-0">
+                <div className="inline-flex items-center gap-2 px-3 py-1 bg-muted/50 rounded-full text-sm font-medium text-muted-foreground mb-6">
+                  <div className="w-2 h-2 bg-foreground rounded-full"></div>
+                  AI CRM
+                </div>
+                <h3 className="text-2xl font-bold text-foreground mb-4 h-16 flex items-center justify-center">
+                  Purpose built for Private Investments
+                </h3>
+                <p className="text-muted-foreground mb-8 leading-relaxed h-12 flex items-center justify-center">
+                  Fully AI data backbone for all contacts, deals, files and insights—to eliminate silos and spreadsheets.
+                </p>
               </div>
-              <h3 className="text-2xl font-bold text-foreground mb-4">
-                Purpose built for Private Investments
-              </h3>
-              <p className="text-muted-foreground mb-8 leading-relaxed">
-                Fully AI data backbone for all contacts, deals, files and insights—to eliminate silos and spreadsheets.
-              </p>
               
-              {/* Enhanced CRM Contact Profile Mockup - Fixed Height */}
-              <div className="card-nested p-4 text-left h-[280px] flex flex-col overflow-hidden">
-                {/* Contact Header */}
-                <div className="flex items-center gap-3 mb-3 pb-2 border-b border-border/10 min-h-0">
-                  <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xs flex-shrink-0">
-                    SJ
+              {/* Mockup Content - Fixed Height */}
+              <div className="flex-1 flex flex-col">
+                <div className="card-nested p-4 text-left h-[280px] flex flex-col overflow-hidden">
+                  {/* Contact Header */}
+                  <div className="flex items-center gap-3 mb-3 pb-2 border-b border-border/10 min-h-0">
+                    <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xs flex-shrink-0">
+                      SJ
+                    </div>
+                    <div className="flex-1 min-w-0 overflow-hidden">
+                      <h4 className="font-semibold text-foreground text-xs truncate">Sarah Johnson</h4>
+                      <p className="text-xs text-muted-foreground truncate">Managing Partner • Blackstone</p>
+                    </div>
+                    <div className="px-2 py-0.5 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded text-xs flex-shrink-0">
+                      Active
+                    </div>
                   </div>
-                  <div className="flex-1 min-w-0 overflow-hidden">
-                    <h4 className="font-semibold text-foreground text-xs truncate">Sarah Johnson</h4>
-                    <p className="text-xs text-muted-foreground truncate">Managing Partner • Blackstone</p>
+                  
+                  {/* Investment Profile */}
+                  <div className="space-y-2 mb-3 overflow-hidden">
+                    <div className="flex justify-between text-xs">
+                      <span className="text-muted-foreground">AUM:</span>
+                      <span className="text-foreground font-medium">$2.4B</span>
+                    </div>
+                    <div className="flex justify-between text-xs">
+                      <span className="text-muted-foreground">Check Size:</span>
+                      <span className="text-foreground">$50M-$200M</span>
+                    </div>
+                    <div className="flex justify-between text-xs">
+                      <span className="text-muted-foreground">Stage:</span>
+                      <span className="text-foreground">Growth, Buyout</span>
+                    </div>
                   </div>
-                  <div className="px-2 py-0.5 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded text-xs flex-shrink-0">
-                    Active
+
+                  {/* Asset Classes */}
+                  <div className="mb-3 overflow-hidden">
+                    <p className="text-xs font-medium text-muted-foreground mb-1.5">Asset Classes</p>
+                    <div className="flex flex-wrap gap-1 overflow-hidden">
+                      <span className="px-2 py-0.5 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded text-xs whitespace-nowrap">Private Equity</span>
+                      <span className="px-2 py-0.5 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded text-xs whitespace-nowrap">Real Estate</span>
+                      <span className="px-2 py-0.5 bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 rounded text-xs whitespace-nowrap">Infrastructure</span>
+                    </div>
+                  </div>
+
+                  {/* Investment Vehicles */}
+                  <div className="mb-3 overflow-hidden">
+                    <p className="text-xs font-medium text-muted-foreground mb-1.5">Investment Vehicles</p>
+                    <div className="flex flex-wrap gap-1 overflow-hidden">
+                      <span className="px-2 py-0.5 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded text-xs whitespace-nowrap">Direct Investment</span>
+                      <span className="px-2 py-0.5 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded text-xs whitespace-nowrap">Fund of Funds</span>
+                    </div>
+                  </div>
+                  
+                  {/* Recent Activity */}
+                  <div className="pt-2 border-t border-border/10 flex-1 overflow-hidden">
+                    <p className="text-xs font-medium text-muted-foreground mb-1.5">Recent Activity</p>
+                    <div className="space-y-1 overflow-hidden">
+                      <div className="flex items-center gap-2 text-xs">
+                        <div className="w-1 h-1 bg-blue-500 rounded-full flex-shrink-0"></div>
+                        <span className="text-foreground truncate">Reviewed Series A deck</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-xs">
+                        <div className="w-1 h-1 bg-green-500 rounded-full flex-shrink-0"></div>
+                        <span className="text-foreground truncate">Scheduled follow-up call</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 
-                {/* Investment Profile */}
-                <div className="space-y-2 mb-3 overflow-hidden">
-                  <div className="flex justify-between text-xs">
-                    <span className="text-muted-foreground">AUM:</span>
-                    <span className="text-foreground font-medium">$2.4B</span>
-                  </div>
-                  <div className="flex justify-between text-xs">
-                    <span className="text-muted-foreground">Check Size:</span>
-                    <span className="text-foreground">$50M-$200M</span>
-                  </div>
-                  <div className="flex justify-between text-xs">
-                    <span className="text-muted-foreground">Stage:</span>
-                    <span className="text-foreground">Growth, Buyout</span>
-                  </div>
+                {/* Learn More Button - Always at bottom */}
+                <div className="mt-6">
+                  <Button variant="outline" size="sm" className="w-full text-xs h-8">
+                    Learn More
+                  </Button>
                 </div>
-
-                {/* Asset Classes */}
-                <div className="mb-3 overflow-hidden">
-                  <p className="text-xs font-medium text-muted-foreground mb-1.5">Asset Classes</p>
-                  <div className="flex flex-wrap gap-1 overflow-hidden">
-                    <span className="px-2 py-0.5 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded text-xs whitespace-nowrap">Private Equity</span>
-                    <span className="px-2 py-0.5 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded text-xs whitespace-nowrap">Real Estate</span>
-                    <span className="px-2 py-0.5 bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 rounded text-xs whitespace-nowrap">Infrastructure</span>
-                  </div>
-                </div>
-
-                {/* Investment Vehicles */}
-                <div className="mb-3 overflow-hidden">
-                  <p className="text-xs font-medium text-muted-foreground mb-1.5">Investment Vehicles</p>
-                  <div className="flex flex-wrap gap-1 overflow-hidden">
-                    <span className="px-2 py-0.5 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded text-xs whitespace-nowrap">Direct Investment</span>
-                    <span className="px-2 py-0.5 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded text-xs whitespace-nowrap">Fund of Funds</span>
-                  </div>
-                </div>
-                
-                {/* Recent Activity */}
-                <div className="pt-2 border-t border-border/10 flex-1 overflow-hidden">
-                  <p className="text-xs font-medium text-muted-foreground mb-1.5">Recent Activity</p>
-                  <div className="space-y-1 overflow-hidden">
-                    <div className="flex items-center gap-2 text-xs">
-                      <div className="w-1 h-1 bg-blue-500 rounded-full flex-shrink-0"></div>
-                      <span className="text-foreground truncate">Reviewed Series A deck</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-xs">
-                      <div className="w-1 h-1 bg-green-500 rounded-full flex-shrink-0"></div>
-                      <span className="text-foreground truncate">Scheduled follow-up call</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Learn More Button */}
-              <div className="mt-6">
-                <Button variant="outline" size="sm" className="w-full text-xs h-8">
-                  Learn More
-                </Button>
               </div>
             </div>
 
             {/* AI Agents Column */}
-            <div className="card-dark-premium text-center transition-all duration-500 hover:scale-[1.02] flex flex-col">
-              <div className="inline-flex items-center gap-2 px-3 py-1 bg-muted/50 rounded-full text-sm font-medium text-muted-foreground mb-6">
-                <div className="w-2 h-2 bg-foreground rounded-full"></div>
-                AI Agents
+            <div className="card-dark-premium text-center transition-all duration-500 hover:scale-[1.02] flex flex-col h-full">
+              {/* Header Content - Fixed Height */}
+              <div className="flex-shrink-0">
+                <div className="inline-flex items-center gap-2 px-3 py-1 bg-muted/50 rounded-full text-sm font-medium text-muted-foreground mb-6">
+                  <div className="w-2 h-2 bg-foreground rounded-full"></div>
+                  AI Agents
+                </div>
+                <h3 className="text-2xl font-bold text-foreground mb-4 h-16 flex items-center justify-center">
+                  Deploy Pre-Built AI Agents in One Click
+                </h3>
+                <p className="text-muted-foreground mb-8 leading-relaxed h-12 flex items-center justify-center">
+                  Curated library of agents that work 24/7 for you to automate and scale your business.
+                </p>
               </div>
-              <h3 className="text-2xl font-bold text-foreground mb-4">
-                Deploy Pre-Built AI Agents in One Click
-              </h3>
-              <p className="text-muted-foreground mb-8 leading-relaxed">
-                Curated library of agents that work 24/7 for you to automate and scale your business.
-              </p>
               
-              {/* Agents Preview Mockup - Fixed Height */}
-              <div className="card-nested p-4 h-[280px] flex flex-col justify-center">
-                <div className="grid grid-cols-2 gap-3">
-                  <div className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 p-4 rounded-lg text-center">
-                    <div className="w-10 h-10 bg-blue-500 rounded-full mx-auto mb-2 flex items-center justify-center">
-                      <Users className="w-5 h-5 text-white" />
+              {/* Mockup Content - Fixed Height */}
+              <div className="flex-1 flex flex-col">
+                <div className="card-nested p-4 h-[280px] flex flex-col justify-center">
+                  <div className="grid grid-cols-2 gap-3">
+                    <div className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 p-4 rounded-lg text-center">
+                      <div className="w-10 h-10 bg-blue-500 rounded-full mx-auto mb-2 flex items-center justify-center">
+                        <Users className="w-5 h-5 text-white" />
+                      </div>
+                      <div className="font-semibold text-foreground text-xs">Due Diligence</div>
+                      <div className="text-muted-foreground text-xs mt-1">Portfolio Management</div>
                     </div>
-                    <div className="font-semibold text-foreground text-xs">Due Diligence</div>
-                    <div className="text-muted-foreground text-xs mt-1">Portfolio Management</div>
-                  </div>
-                  <div className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 p-4 rounded-lg text-center">
-                    <div className="w-10 h-10 bg-green-500 rounded-full mx-auto mb-2 flex items-center justify-center">
-                      <CheckCircle className="w-5 h-5 text-white" />
+                    <div className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 p-4 rounded-lg text-center">
+                      <div className="w-10 h-10 bg-green-500 rounded-full mx-auto mb-2 flex items-center justify-center">
+                        <CheckCircle className="w-5 h-5 text-white" />
+                      </div>
+                      <div className="font-semibold text-foreground text-xs">Risk Analysis</div>
+                      <div className="text-muted-foreground text-xs mt-1">Capital Raising</div>
                     </div>
-                    <div className="font-semibold text-foreground text-xs">Risk Analysis</div>
-                    <div className="text-muted-foreground text-xs mt-1">Capital Raising</div>
-                  </div>
-                  <div className="bg-gradient-to-br from-purple-50 to-violet-50 dark:from-purple-900/20 dark:to-violet-900/20 p-4 rounded-lg text-center">
-                    <div className="w-10 h-10 bg-purple-500 rounded-full mx-auto mb-2 flex items-center justify-center">
-                      <SparklesIcon className="w-5 h-5 text-white" />
+                    <div className="bg-gradient-to-br from-purple-50 to-violet-50 dark:from-purple-900/20 dark:to-violet-900/20 p-4 rounded-lg text-center">
+                      <div className="w-10 h-10 bg-purple-500 rounded-full mx-auto mb-2 flex items-center justify-center">
+                        <SparklesIcon className="w-5 h-5 text-white" />
+                      </div>
+                      <div className="font-semibold text-foreground text-xs">Market Research</div>
+                      <div className="text-muted-foreground text-xs mt-1">Deal Sourcing</div>
                     </div>
-                    <div className="font-semibold text-foreground text-xs">Market Research</div>
-                    <div className="text-muted-foreground text-xs mt-1">Deal Sourcing</div>
-                  </div>
-                  <div className="bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 p-4 rounded-lg text-center">
-                    <div className="w-10 h-10 bg-orange-500 rounded-full mx-auto mb-2 flex items-center justify-center">
-                      <Play className="w-5 h-5 text-white" />
+                    <div className="bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 p-4 rounded-lg text-center">
+                      <div className="w-10 h-10 bg-orange-500 rounded-full mx-auto mb-2 flex items-center justify-center">
+                        <Play className="w-5 h-5 text-white" />
+                      </div>
+                      <div className="font-semibold text-foreground text-xs">Compliance</div>
+                      <div className="text-muted-foreground text-xs mt-1">Reporting</div>
                     </div>
-                    <div className="font-semibold text-foreground text-xs">Compliance</div>
-                    <div className="text-muted-foreground text-xs mt-1">Reporting</div>
                   </div>
                 </div>
-              </div>
-              
-              {/* Learn More Button */}
-              <div className="mt-6">
-                <Button variant="outline" size="sm" className="w-full text-xs h-8">
-                  Learn More
-                </Button>
+                
+                {/* Learn More Button - Always at bottom */}
+                <div className="mt-6">
+                  <Button variant="outline" size="sm" className="w-full text-xs h-8">
+                    Learn More
+                  </Button>
+                </div>
               </div>
             </div>
 
             {/* IRIS Column */}
-            <div className="card-dark-premium text-center transition-all duration-500 hover:scale-[1.02] flex flex-col">
-              <div className="inline-flex items-center gap-2 px-3 py-1 bg-muted/50 rounded-full text-sm font-medium text-muted-foreground mb-6">
-                <div className="w-2 h-2 bg-foreground rounded-full"></div>
-                IRIS
+            <div className="card-dark-premium text-center transition-all duration-500 hover:scale-[1.02] flex flex-col h-full">
+              {/* Header Content - Fixed Height */}
+              <div className="flex-shrink-0">
+                <div className="inline-flex items-center gap-2 px-3 py-1 bg-muted/50 rounded-full text-sm font-medium text-muted-foreground mb-6">
+                  <div className="w-2 h-2 bg-foreground rounded-full"></div>
+                  IRIS
+                </div>
+                <h3 className="text-2xl font-bold text-foreground mb-4 h-16 flex items-center justify-center">
+                  Conversational AI in your CRM
+                </h3>
+                <p className="text-muted-foreground mb-8 leading-relaxed h-12 flex items-center justify-center">
+                  Talk to IRIS—generate memos, run analyses or pull up any deal data in seconds.
+                </p>
               </div>
-              <h3 className="text-2xl font-bold text-foreground mb-4">
-                Conversational AI in your CRM
-              </h3>
-              <p className="text-muted-foreground mb-8 leading-relaxed">
-                Talk to IRIS—generate memos, run analyses or pull up any deal data in seconds.
-              </p>
               
-              {/* IRIS Chat Preview Mockup - Fixed Height */}
-              <div className="card-nested p-4 text-left h-[280px] flex flex-col justify-center">
-                <div className="space-y-4">
-                  <div className="flex gap-3">
-                    <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-xs font-bold text-primary-foreground">I</div>
-                    <div className="flex-1 bg-muted/50 rounded-lg p-3 text-xs text-muted-foreground">
-                      Hello! I'm IRIS, your AI assistant. How can I help you today?
+              {/* Mockup Content - Fixed Height */}
+              <div className="flex-1 flex flex-col">
+                <div className="card-nested p-4 text-left h-[280px] flex flex-col justify-center">
+                  <div className="space-y-4">
+                    <div className="flex gap-3">
+                      <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-xs font-bold text-primary-foreground">I</div>
+                      <div className="flex-1 bg-muted/50 rounded-lg p-3 text-xs text-muted-foreground">
+                        Hello! I'm IRIS, your AI assistant. How can I help you today?
+                      </div>
                     </div>
-                  </div>
-                  <div className="flex gap-3 justify-end">
-                    <div className="bg-primary/10 rounded-lg p-3 text-xs text-foreground max-w-[200px]">
-                      Show me the top 5 deals by value this quarter
+                    <div className="flex gap-3 justify-end">
+                      <div className="bg-primary/10 rounded-lg p-3 text-xs text-foreground max-w-[200px]">
+                        Show me the top 5 deals by value this quarter
+                      </div>
+                      <div className="w-8 h-8 bg-muted rounded-full"></div>
                     </div>
-                    <div className="w-8 h-8 bg-muted rounded-full"></div>
-                  </div>
-                  <div className="flex gap-3">
-                    <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-xs font-bold text-primary-foreground">I</div>
-                    <div className="flex-1 bg-muted/50 rounded-lg p-3 text-xs text-muted-foreground">
-                      Here are your top 5 deals this quarter by transaction value...
+                    <div className="flex gap-3">
+                      <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-xs font-bold text-primary-foreground">I</div>
+                      <div className="flex-1 bg-muted/50 rounded-lg p-3 text-xs text-muted-foreground">
+                        Here are your top 5 deals this quarter by transaction value...
+                      </div>
                     </div>
-                  </div>
-                  <div className="flex gap-3 justify-end">
-                    <div className="bg-primary/10 rounded-lg p-3 text-xs text-foreground max-w-[180px]">
-                      Generate investment memo for TechCorp
+                    <div className="flex gap-3 justify-end">
+                      <div className="bg-primary/10 rounded-lg p-3 text-xs text-foreground max-w-[180px]">
+                        Generate investment memo for TechCorp
+                      </div>
+                      <div className="w-8 h-8 bg-muted rounded-full"></div>
                     </div>
-                    <div className="w-8 h-8 bg-muted rounded-full"></div>
                   </div>
                 </div>
-              </div>
-              
-              {/* Learn More Button */}
-              <div className="mt-6">
-                <Button variant="outline" size="sm" className="w-full text-xs h-8">
-                  Learn More
-                </Button>
+                
+                {/* Learn More Button - Always at bottom */}
+                <div className="mt-6">
+                  <Button variant="outline" size="sm" className="w-full text-xs h-8">
+                    Learn More
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
