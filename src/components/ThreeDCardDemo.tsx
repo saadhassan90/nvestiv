@@ -23,11 +23,11 @@ export function ThreeDCardDemo() {
             
             {/* Status Badges */}
             <div className="flex gap-2">
-              <Badge variant="outline" className="text-xs flex items-center gap-1">
+              <Badge variant="outline" className="text-xs font-normal flex items-center gap-1">
                 <Mail className="w-3 h-3" />
                 Email Agent
               </Badge>
-              <Badge variant="outline" className="text-xs flex items-center gap-1">
+              <Badge variant="outline" className="text-xs font-normal flex items-center gap-1">
                 <Timer className="w-3 h-3" />
                 In Progress
               </Badge>
@@ -53,14 +53,14 @@ export function ThreeDCardDemo() {
               {/* Read Email Card */}
               <div className="bg-gray-200/50 dark:bg-gray-800/50 border border-gray-300 dark:border-gray-600 rounded-md p-3">
                 <div className="flex items-center justify-between">
-                  <div className="text-left flex items-center gap-2">
-                    <Mail className="w-4 h-4 text-blue-600" />
+                  <div className="text-left flex items-start gap-2">
+                    <Mail className="w-4 h-4 text-blue-600 mt-0.5" />
                     <div>
                       <h3 className="text-sm font-medium text-neutral-700 dark:text-neutral-200">Read incoming email</h3>
                       <p className="text-xs text-neutral-500 dark:text-neutral-400">Subject: Introducing Terraview Capital Partners.</p>
                     </div>
                   </div>
-                  <Badge variant="outline" className="text-xs text-green-700 border-green-300">
+                  <Badge variant="outline" className="text-xs font-normal text-green-700 border-green-300">
                     ✓ Complete
                   </Badge>
                 </div>
@@ -80,7 +80,7 @@ export function ThreeDCardDemo() {
                       </div>
                     </div>
                   </div>
-                  <Badge variant="outline" className="text-xs text-green-700 border-green-300">
+                  <Badge variant="outline" className="text-xs font-normal text-green-700 border-green-300">
                     ✓ Complete
                   </Badge>
                 </div>
@@ -110,7 +110,7 @@ export function ThreeDCardDemo() {
                       <p className="text-xs text-neutral-500 dark:text-neutral-400">Terraview and Jordan Noah did not already exist. Updated contact using email details.</p>
                     </div>
                   </div>
-                  <Badge variant="outline" className="text-xs text-green-700 border-green-300">
+                  <Badge variant="outline" className="text-xs font-normal text-green-700 border-green-300">
                     ✓ Complete
                   </Badge>
                 </div>
@@ -130,7 +130,7 @@ export function ThreeDCardDemo() {
                       </div>
                     </div>
                   </div>
-                  <Badge variant="outline" className="text-xs text-green-700 border-green-300">
+                  <Badge variant="outline" className="text-xs font-normal text-green-700 border-green-300">
                     ✓ Complete
                   </Badge>
                 </div>
@@ -150,7 +150,7 @@ export function ThreeDCardDemo() {
                       </div>
                     </div>
                   </div>
-                  <Badge variant="outline" className="text-xs text-blue-700 border-blue-300">
+                  <Badge variant="outline" className="text-xs font-normal text-blue-700 border-blue-300">
                     <Send className="w-3 h-3 mr-1" />
                     Sending Email
                   </Badge>
