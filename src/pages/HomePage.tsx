@@ -80,7 +80,7 @@ const HomePage = () => {
                       {/* Typewriter Container */}
                       <div className="w-full">
                         <div className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
-                          <span className="bg-gradient-to-r from-blue-600 via-blue-400 to-teal-400 bg-clip-text text-transparent">
+                          <span className="bg-gradient-to-r from-blue-700 via-blue-600 to-blue-500 bg-clip-text text-transparent">
                             {currentText}
                           </span>
                           {showCursor && <span className="animate-pulse text-gray-600 ml-1">|</span>}
