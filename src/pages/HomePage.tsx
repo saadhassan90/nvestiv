@@ -187,50 +187,103 @@ const HomePage = () => {
                 Fully AI data backbone for all contacts, deals, files and insights—to eliminate silos and spreadsheets.
               </p>
               
-              {/* CRM Contact Profile Mockup */}
-              <div className="card-nested p-6 text-left">
+              {/* Advanced CRM Contact Profile */}
+              <div className="card-nested p-6 text-left space-y-4">
                 {/* Contact Header */}
-                <div className="flex items-center gap-3 mb-4 pb-3 border-b border-border/10">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold">
+                <div className="flex items-start gap-4 pb-4 border-b border-border/10">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center text-white font-bold text-lg">
                     SJ
                   </div>
-                  <div className="flex-1">
-                    <h4 className="font-semibold text-foreground text-sm">Sarah Johnson</h4>
-                    <p className="text-xs text-muted-foreground">Managing Partner</p>
-                    <p className="text-xs text-muted-foreground">Blackstone Capital</p>
-                  </div>
-                  <div className="px-2 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded text-xs">
-                    Active
-                  </div>
-                </div>
-                
-                {/* Contact Details */}
-                <div className="space-y-2 mb-4">
-                  <div className="flex justify-between text-xs">
-                    <span className="text-muted-foreground">Email:</span>
-                    <span className="text-foreground">s.johnson@blackstone.com</span>
-                  </div>
-                  <div className="flex justify-between text-xs">
-                    <span className="text-muted-foreground">AUM:</span>
-                    <span className="text-foreground">$2.4B</span>
-                  </div>
-                  <div className="flex justify-between text-xs">
-                    <span className="text-muted-foreground">Last Contact:</span>
-                    <span className="text-foreground">2 days ago</span>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-2 mb-1">
+                      <h4 className="font-bold text-foreground">Sarah Johnson</h4>
+                      <div className="px-2 py-0.5 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded-full text-xs font-medium">
+                        LP
+                      </div>
+                    </div>
+                    <p className="text-sm text-muted-foreground mb-1">Managing Partner</p>
+                    <p className="text-sm font-medium text-foreground">Blackstone Capital Partners</p>
+                    <div className="flex items-center gap-4 mt-2 text-xs text-muted-foreground">
+                      <span>AUM: $2.4B</span>
+                      <span>•</span>
+                      <span>Portfolio: 45 cos</span>
+                      <span>•</span>
+                      <span>IRR: 18.2%</span>
+                    </div>
                   </div>
                 </div>
-                
+
+                {/* Investment Focus */}
+                <div>
+                  <h5 className="text-xs font-semibold text-muted-foreground mb-2 uppercase tracking-wide">Asset Classes</h5>
+                  <div className="flex flex-wrap gap-1.5">
+                    <span className="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded text-xs font-medium">Private Equity</span>
+                    <span className="px-2 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded text-xs font-medium">Growth Equity</span>
+                    <span className="px-2 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 rounded text-xs font-medium">Real Estate</span>
+                    <span className="px-2 py-1 bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 rounded text-xs font-medium">Infrastructure</span>
+                  </div>
+                </div>
+
+                {/* Investment Vehicles */}
+                <div>
+                  <h5 className="text-xs font-semibold text-muted-foreground mb-2 uppercase tracking-wide">Investment Vehicles</h5>
+                  <div className="grid grid-cols-2 gap-2 text-xs">
+                    <div className="flex items-center justify-between p-2 bg-muted/30 rounded">
+                      <span className="text-muted-foreground">Fund Commitments</span>
+                      <span className="font-medium text-foreground">$850M</span>
+                    </div>
+                    <div className="flex items-center justify-between p-2 bg-muted/30 rounded">
+                      <span className="text-muted-foreground">Direct Investments</span>
+                      <span className="font-medium text-foreground">$320M</span>
+                    </div>
+                    <div className="flex items-center justify-between p-2 bg-muted/30 rounded">
+                      <span className="text-muted-foreground">Co-Investments</span>
+                      <span className="font-medium text-foreground">$180M</span>
+                    </div>
+                    <div className="flex items-center justify-between p-2 bg-muted/30 rounded">
+                      <span className="text-muted-foreground">Secondaries</span>
+                      <span className="font-medium text-foreground">$95M</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Investment Preferences */}
+                <div>
+                  <h5 className="text-xs font-semibold text-muted-foreground mb-2 uppercase tracking-wide">Investment Criteria</h5>
+                  <div className="space-y-2 text-xs">
+                    <div className="flex justify-between">
+                      <span className="text-muted-foreground">Check Size:</span>
+                      <span className="text-foreground font-medium">$25M - $150M</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-muted-foreground">Geography:</span>
+                      <span className="text-foreground font-medium">North America, Europe</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-muted-foreground">Sectors:</span>
+                      <span className="text-foreground font-medium">Technology, Healthcare</span>
+                    </div>
+                  </div>
+                </div>
+
                 {/* Recent Activity */}
-                <div className="pt-3 border-t border-border/10">
-                  <p className="text-xs font-medium text-muted-foreground mb-2">Recent Activity</p>
-                  <div className="space-y-1">
+                <div className="pt-2 border-t border-border/10">
+                  <h5 className="text-xs font-semibold text-muted-foreground mb-2 uppercase tracking-wide">Recent Activity</h5>
+                  <div className="space-y-2">
                     <div className="flex items-center gap-2 text-xs">
                       <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
-                      <span className="text-foreground">Reviewed Series A deck</span>
+                      <span className="text-foreground">Committed $50M to Vista Fund VII</span>
+                      <span className="text-muted-foreground ml-auto">2d</span>
                     </div>
                     <div className="flex items-center gap-2 text-xs">
                       <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
-                      <span className="text-foreground">Scheduled follow-up call</span>
+                      <span className="text-foreground">Reviewed TechCorp acquisition deck</span>
+                      <span className="text-muted-foreground ml-auto">1w</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-xs">
+                      <div className="w-1.5 h-1.5 bg-purple-500 rounded-full"></div>
+                      <span className="text-foreground">LP call - Q3 portfolio review</span>
+                      <span className="text-muted-foreground ml-auto">2w</span>
                     </div>
                   </div>
                 </div>
