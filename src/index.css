@@ -189,7 +189,7 @@
 
   /* Moving border animation */
   .moving-border-spin {
-    animation: moving-border-spin 3s linear infinite;
+    animation: moving-border-spin 6s linear infinite;
   }
 
   @keyframes moving-border-spin {

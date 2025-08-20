@@ -5,7 +5,9 @@ import { Mail, Timer, FileText, UserPlus, Link, Send, Download } from "lucide-re
 
 export function ThreeDCardDemo() {
   return (
-    <div className="w-full py-16">
+    <div className="w-full py-16 relative">
+      {/* Glow effect behind the card */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#0B0E1F] via-[#8215E0]/20 to-[#0B0E1F] blur-3xl opacity-30 -z-10"></div>
       <MovingBorder
         borderRadius="1rem"
         className="text-gray-900 dark:text-white"
