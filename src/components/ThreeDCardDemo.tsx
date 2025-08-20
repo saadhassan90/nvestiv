@@ -8,11 +8,11 @@ export function ThreeDCardDemo() {
     <div className="w-full py-16">
       <MovingBorder
         borderRadius="1rem"
-        className="bg-gray-50 dark:bg-black text-gray-900 dark:text-white border-gray-200 dark:border-gray-800"
+        className="text-gray-900 dark:text-white"
         containerClassName="w-full"
         duration={3}
       >
-        <div className="w-full h-auto p-8">
+        <div className="p-8">
           
           {/* Header */}
           <div className="w-full">

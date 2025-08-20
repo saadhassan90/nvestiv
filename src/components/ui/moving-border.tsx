@@ -14,19 +14,19 @@ export interface MovingBorderProps {
 }
 
 export function Button({
-  borderRadius = "1.75rem",
+  borderRadius = "1rem",
   children,
-  as: Component = "button",
+  as: Component = "div",
   containerClassName,
   borderClassName,
-  duration,
+  duration = 2,
   className,
   ...otherProps
 }: MovingBorderProps) {
   return (
     <Component
       className={cn(
-        "bg-transparent relative text-xl h-16 w-full p-[1px] overflow-hidden",
+        "bg-transparent relative p-[1px] overflow-hidden",
         containerClassName
       )}
       style={{
@@ -35,15 +35,15 @@ export function Button({
       {...otherProps}
     >
       <div
-        className="absolute inset-0 rounded-[inherit] [mask:linear-gradient(white,transparent)] z-[0]"
+        className="absolute inset-0 rounded-[inherit] z-[0]"
         style={{
           background: `conic-gradient(from 0deg, transparent, #8215E0, transparent 30%)`,
-          animation: `spin ${duration ?? 2}s linear infinite`,
+          animation: `spin ${duration}s linear infinite`,
         }}
       />
       <div
         className={cn(
-          "relative bg-slate-900/[0.8] border border-slate-800 backdrop-blur-xl text-white flex items-center justify-center w-full h-full text-sm antialiased",
+          "relative bg-gray-50 dark:bg-black border border-gray-200 dark:border-gray-800 w-full h-full",
           className
         )}
         style={{
