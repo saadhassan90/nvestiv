@@ -48,7 +48,7 @@ export const CardContainer = ({
     <MouseEnterContext.Provider value={[isMouseEntered, setIsMouseEntered]}>
       <div
         className={cn(
-          "py-4 flex items-center justify-center",
+          "py-20 flex items-center justify-center",
           containerClassName
         )}
         style={{
@@ -78,11 +78,9 @@ export const CardContainer = ({
 export const CardBody = ({
   children,
   className,
-  style,
 }: {
   children: React.ReactNode;
   className?: string;
-  style?: React.CSSProperties;
 }) => {
   return (
     <div
@@ -90,7 +88,6 @@ export const CardBody = ({
         "w-full [transform-style:preserve-3d] [&>*]:[transform-style:preserve-3d]",
         className
       )}
-      style={style}
     >
       {children}
     </div>
