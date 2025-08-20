@@ -59,8 +59,8 @@ const HomePage = () => {
               {/* Vertical Layout Container - Centered */}
               <div className="w-full max-w-7xl mx-auto flex flex-col items-center justify-center text-center">
                 
-                {/* Big gap before content */}
-                <div className="h-16"></div>
+                {/* Reduced gap before content */}
+                <div className="h-8"></div>
                 
                 {/* Text Content - Centered */}
                 <div className="flex flex-col items-center justify-center w-full max-w-4xl">
@@ -126,8 +126,8 @@ const HomePage = () => {
                   </p>
                 </div>
                 
-                {/* Big gap before 3D card */}
-                <div className="h-16"></div>
+                {/* Small gap before 3D card */}
+                <div className="h-8"></div>
                 
               </div>
               
