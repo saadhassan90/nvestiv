@@ -61,15 +61,15 @@ export function ThreeDCardDemo() {
               {/* Activity Cards */}
               <div className="space-y-2 ml-4 border-l-2 border-gray-200 dark:border-gray-600 pl-3 sm:pl-4">
               {/* Read Email Card */}
-              <div className="bg-gray-50/30 dark:bg-gray-900/30 border border-gray-300/30 dark:border-gray-600/30 rounded-md p-3 sm:p-4">
+              <div className="bg-gray-50/30 dark:bg-gray-900/30 border border-gray-300/30 dark:border-gray-600/30 rounded-md p-3 sm:p-4 overflow-hidden">
                 <div className="flex flex-col items-center text-center sm:flex-row sm:justify-between sm:text-left sm:items-start gap-2 sm:gap-4">
-                  <div className="flex-1">
+                  <div className="flex-1 min-w-0 w-full">
                     <div className="flex items-center justify-center sm:justify-start gap-2 mb-2">
                       <Mail className="w-4 h-4 text-gray-500 flex-shrink-0" />
-                      <h3 className="text-sm font-medium text-gray-700 dark:text-gray-300">Read incoming email</h3>
+                      <h3 className="text-sm font-medium text-gray-700 dark:text-gray-300 truncate">Read incoming email</h3>
                     </div>
-                    <div className="break-words">
-                      <p className="text-xs text-gray-500 dark:text-gray-400">Subject: Introducing Terraview Capital Partners.</p>
+                    <div className="w-full">
+                      <p className="text-xs text-gray-500 dark:text-gray-400 break-words">Subject: Introducing Terraview Capital Partners.</p>
                     </div>
                   </div>
                   <Badge variant="outline" className="text-xs font-normal text-green-700 border-green-300 flex-shrink-0">
@@ -79,16 +79,16 @@ export function ThreeDCardDemo() {
               </div>
 
                 {/* Detected Body Text Card */}
-                <div className="bg-gray-50/30 dark:bg-gray-900/30 border border-gray-300/30 dark:border-gray-600/30 rounded-md p-3 sm:p-4">
+                <div className="bg-gray-50/30 dark:bg-gray-900/30 border border-gray-300/30 dark:border-gray-600/30 rounded-md p-3 sm:p-4 overflow-hidden">
                   <div className="flex flex-col items-center text-center sm:flex-row sm:justify-between sm:text-left sm:items-start gap-2 sm:gap-4">
-                    <div className="flex-1 min-w-0">
+                    <div className="flex-1 min-w-0 w-full">
                       <div className="flex items-center justify-center sm:justify-start gap-2 mb-2">
                         <FileType className="w-4 h-4 text-red-500 flex-shrink-0" />
-                        <h3 className="text-sm font-medium text-gray-700 dark:text-gray-300">Detected body text + 1 attachments</h3>
+                        <h3 className="text-sm font-medium text-gray-700 dark:text-gray-300 break-words">Detected body text + 1 attachments</h3>
                       </div>
-                      <div className="flex flex-col items-center sm:flex-row gap-2 sm:gap-4">
-                        <p className="text-xs text-gray-500 dark:text-gray-400">Email summary generated. Parsed .pdf file</p>
-                        <div className="flex items-center gap-2">
+                      <div className="flex flex-col items-center sm:flex-row gap-2 sm:gap-4 w-full">
+                        <p className="text-xs text-gray-500 dark:text-gray-400 break-words">Email summary generated. Parsed .pdf file</p>
+                        <div className="flex items-center gap-2 min-w-0">
                           <FileType className="w-3 h-3 text-red-500 flex-shrink-0" />
                           <span className="text-xs text-gray-600 dark:text-gray-400 truncate">Terraview CP 2024 Performance YTD</span>
                         </div>
@@ -115,16 +115,16 @@ export function ThreeDCardDemo() {
               {/* CRM Activity Cards */}
               <div className="space-y-2 ml-4 border-l-2 border-gray-200 dark:border-gray-600 pl-3 sm:pl-4">
                 {/* New Contact Card */}
-                <div className="bg-gray-50/30 dark:bg-gray-900/30 border border-gray-300/30 dark:border-gray-600/30 rounded-md p-3 sm:p-4">
+                <div className="bg-gray-50/30 dark:bg-gray-900/30 border border-gray-300/30 dark:border-gray-600/30 rounded-md p-3 sm:p-4 overflow-hidden">
                   <div className="flex flex-col items-center text-center sm:flex-row sm:justify-between sm:text-left sm:items-start gap-2 sm:gap-4">
-                    <div className="flex-1 min-w-0">
+                    <div className="flex-1 min-w-0 w-full">
                       <div className="flex items-center justify-center sm:justify-start gap-2 mb-2">
                         <UserPlus className="w-4 h-4 text-gray-500 flex-shrink-0" />
-                        <h3 className="text-sm font-medium text-gray-700 dark:text-gray-300">New Contact & Company Created</h3>
+                        <h3 className="text-sm font-medium text-gray-700 dark:text-gray-300 break-words">New Contact & Company Created</h3>
                       </div>
-                      <div className="flex flex-col items-center sm:flex-row gap-2 sm:gap-4">
-                        <p className="text-xs text-gray-500 dark:text-gray-400">Terraview and Jordan Noah did not already exist.</p>
-                        <p className="text-xs text-gray-500 dark:text-gray-400">Updated contact using email details.</p>
+                      <div className="flex flex-col items-center sm:flex-row gap-2 sm:gap-4 w-full">
+                        <p className="text-xs text-gray-500 dark:text-gray-400 break-words">Terraview and Jordan Noah did not already exist.</p>
+                        <p className="text-xs text-gray-500 dark:text-gray-400 break-words">Updated contact using email details.</p>
                       </div>
                     </div>
                     <Badge variant="outline" className="text-xs font-normal text-green-700 border-green-300 flex-shrink-0">
@@ -134,16 +134,16 @@ export function ThreeDCardDemo() {
                 </div>
 
                 {/* Associated File Card */}
-                <div className="bg-gray-50/30 dark:bg-gray-900/30 border border-gray-300/30 dark:border-gray-600/30 rounded-md p-3 sm:p-4">
+                <div className="bg-gray-50/30 dark:bg-gray-900/30 border border-gray-300/30 dark:border-gray-600/30 rounded-md p-3 sm:p-4 overflow-hidden">
                   <div className="flex flex-col items-center text-center sm:flex-row sm:justify-between sm:text-left sm:items-start gap-2 sm:gap-4">
-                    <div className="flex-1 min-w-0">
+                    <div className="flex-1 min-w-0 w-full">
                       <div className="flex items-center justify-center sm:justify-start gap-2 mb-2">
                         <Link className="w-4 h-4 text-gray-500 flex-shrink-0" />
-                        <h3 className="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-1">Associated File to <img src={jordanAvatar} alt="Jordan Noah" className="w-4 h-4 sm:w-5 sm:h-5 rounded-full border-2 border-gray-200 dark:border-gray-600 mx-1 flex-shrink-0" />Jordan Noah</h3>
+                        <h3 className="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-1 break-words">Associated File to <img src={jordanAvatar} alt="Jordan Noah" className="w-4 h-4 sm:w-5 sm:h-5 rounded-full border-2 border-gray-200 dark:border-gray-600 mx-1 flex-shrink-0" />Jordan Noah</h3>
                       </div>
-                      <div className="flex flex-col items-center sm:flex-row gap-2 sm:gap-4">
-                        <p className="text-xs text-gray-500 dark:text-gray-400">Uploaded file, summarized, and tagged to profile.</p>
-                        <div className="flex items-center gap-2">
+                      <div className="flex flex-col items-center sm:flex-row gap-2 sm:gap-4 w-full">
+                        <p className="text-xs text-gray-500 dark:text-gray-400 break-words">Uploaded file, summarized, and tagged to profile.</p>
+                        <div className="flex items-center gap-2 min-w-0">
                           <FileType className="w-3 h-3 text-red-500 flex-shrink-0" />
                           <span className="text-xs text-gray-600 dark:text-gray-400 truncate">Terraview CP 2024 Performance YTD</span>
                         </div>
@@ -156,16 +156,16 @@ export function ThreeDCardDemo() {
                 </div>
 
                 {/* Sending Email Card */}
-                <div className="bg-gray-50/30 dark:bg-gray-900/30 border border-gray-300/30 dark:border-gray-600/30 rounded-md p-3 sm:p-4">
+                <div className="bg-gray-50/30 dark:bg-gray-900/30 border border-gray-300/30 dark:border-gray-600/30 rounded-md p-3 sm:p-4 overflow-hidden">
                   <div className="flex flex-col items-center text-center sm:flex-row sm:justify-between sm:text-left sm:items-start gap-2 sm:gap-4">
-                    <div className="flex-1 min-w-0">
+                    <div className="flex-1 min-w-0 w-full">
                       <div className="flex items-center justify-center sm:justify-start gap-2 mb-2">
                         <Send className="w-4 h-4 text-gray-500 flex-shrink-0" />
-                        <h3 className="text-sm font-medium text-gray-700 dark:text-gray-300">Sending email introduction</h3>
+                        <h3 className="text-sm font-medium text-gray-700 dark:text-gray-300 break-words">Sending email introduction</h3>
                       </div>
-                      <div className="flex flex-col items-center sm:flex-row gap-2 sm:gap-4">
-                        <p className="text-xs text-gray-500 dark:text-gray-400">Logical next step is to introduce Jordan to</p>
-                        <div className="flex items-center gap-2">
+                      <div className="flex flex-col items-center sm:flex-row gap-2 sm:gap-4 w-full">
+                        <p className="text-xs text-gray-500 dark:text-gray-400 break-words">Logical next step is to introduce Jordan to</p>
+                        <div className="flex items-center gap-2 min-w-0">
                           <img src={mishaAvatar} alt="Misha Fuentes" className="w-4 h-4 sm:w-5 sm:h-5 rounded-full border-2 border-gray-200 dark:border-gray-600 flex-shrink-0" />
                           <span className="text-xs text-gray-600 dark:text-gray-400 truncate">Misha Fuentes @ Demarquay Family Office</span>
                         </div>
