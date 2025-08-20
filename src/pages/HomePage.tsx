@@ -7,7 +7,7 @@ import { BackgroundGradientAnimation } from "@/components/ui/background-gradient
 import { Button } from "@/components/ui/button";
 import { Users, Play, Sparkles as SparklesIcon, CheckCircle } from "lucide-react";
 import { ThreeDCardDemo } from "@/components/ThreeDCardDemo";
-import crmContactProfile from "@/assets/crm-contact-profile-hd.jpg";
+import { ExpandableCard } from "@/components/ui/expandable-card";
 
 const HomePage = () => {
   const [currentText, setCurrentText] = useState("");
@@ -172,21 +172,45 @@ const HomePage = () => {
             </p>
           </div>
 
-          {/* Features Cards Grid */}
+          {/* Expandable Cards Grid */}
           <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
             {/* AI CRM Column */}
-            <div className="card-dark-premium text-center transition-all duration-500 hover:scale-[1.02]">
-              <div className="inline-flex items-center gap-2 px-3 py-1 bg-muted/50 rounded-full text-sm font-medium text-muted-foreground mb-6">
-                <div className="w-2 h-2 bg-foreground rounded-full"></div>
-                AI CRM
-              </div>
-              <h3 className="text-2xl font-bold text-foreground mb-4">
-                Purpose built for Private Investments
-              </h3>
-              <p className="text-muted-foreground mb-8 leading-relaxed">
-                Fully AI data backbone for all contacts, deals, files and insights—to eliminate silos and spreadsheets.
-              </p>
-              
+            <ExpandableCard
+              badge="AI CRM"
+              title="Purpose built for Private Investments"
+              description="Fully AI data backbone for all contacts, deals, files and insights—to eliminate silos and spreadsheets."
+              expandedContent={
+                <div className="text-left space-y-4">
+                  <div>
+                    <h4 className="font-semibold text-foreground mb-3">Key Features</h4>
+                    <ul className="space-y-2 text-sm text-muted-foreground">
+                      <li className="flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                        Automated data ingestion from emails and documents
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                        Real-time entity recognition and matching
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                        360° relationship mapping and deal tracking
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                        Integrated fund administration and reporting
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-foreground mb-2">ROI Impact</h4>
+                    <p className="text-sm text-muted-foreground">
+                      Reduce manual data entry by 85% and improve deal sourcing efficiency by 3x
+                    </p>
+                  </div>
+                </div>
+              }
+            >
               {/* Advanced CRM Contact Profile */}
               <div className="card-nested p-6 text-left space-y-4">
                 {/* Contact Header */}
@@ -220,89 +244,38 @@ const HomePage = () => {
                     <span className="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded text-xs font-medium">Private Equity</span>
                     <span className="px-2 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded text-xs font-medium">Growth Equity</span>
                     <span className="px-2 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 rounded text-xs font-medium">Real Estate</span>
-                    <span className="px-2 py-1 bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 rounded text-xs font-medium">Infrastructure</span>
-                  </div>
-                </div>
-
-                {/* Investment Vehicles */}
-                <div>
-                  <h5 className="text-xs font-semibold text-muted-foreground mb-2 uppercase tracking-wide">Investment Vehicles</h5>
-                  <div className="grid grid-cols-2 gap-2 text-xs">
-                    <div className="flex items-center justify-between p-2 bg-muted/30 rounded">
-                      <span className="text-muted-foreground">Fund Commitments</span>
-                      <span className="font-medium text-foreground">$850M</span>
-                    </div>
-                    <div className="flex items-center justify-between p-2 bg-muted/30 rounded">
-                      <span className="text-muted-foreground">Direct Investments</span>
-                      <span className="font-medium text-foreground">$320M</span>
-                    </div>
-                    <div className="flex items-center justify-between p-2 bg-muted/30 rounded">
-                      <span className="text-muted-foreground">Co-Investments</span>
-                      <span className="font-medium text-foreground">$180M</span>
-                    </div>
-                    <div className="flex items-center justify-between p-2 bg-muted/30 rounded">
-                      <span className="text-muted-foreground">Secondaries</span>
-                      <span className="font-medium text-foreground">$95M</span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Investment Preferences */}
-                <div>
-                  <h5 className="text-xs font-semibold text-muted-foreground mb-2 uppercase tracking-wide">Investment Criteria</h5>
-                  <div className="space-y-2 text-xs">
-                    <div className="flex justify-between">
-                      <span className="text-muted-foreground">Check Size:</span>
-                      <span className="text-foreground font-medium">$25M - $150M</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-muted-foreground">Geography:</span>
-                      <span className="text-foreground font-medium">North America, Europe</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-muted-foreground">Sectors:</span>
-                      <span className="text-foreground font-medium">Technology, Healthcare</span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Recent Activity */}
-                <div className="pt-2 border-t border-border/10">
-                  <h5 className="text-xs font-semibold text-muted-foreground mb-2 uppercase tracking-wide">Recent Activity</h5>
-                  <div className="space-y-2">
-                    <div className="flex items-center gap-2 text-xs">
-                      <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
-                      <span className="text-foreground">Committed $50M to Vista Fund VII</span>
-                      <span className="text-muted-foreground ml-auto">2d</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-xs">
-                      <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
-                      <span className="text-foreground">Reviewed TechCorp acquisition deck</span>
-                      <span className="text-muted-foreground ml-auto">1w</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-xs">
-                      <div className="w-1.5 h-1.5 bg-purple-500 rounded-full"></div>
-                      <span className="text-foreground">LP call - Q3 portfolio review</span>
-                      <span className="text-muted-foreground ml-auto">2w</span>
-                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </ExpandableCard>
 
             {/* AI Agents Column */}
-            <div className="card-dark-premium text-center transition-all duration-500 hover:scale-[1.02]">
-              <div className="inline-flex items-center gap-2 px-3 py-1 bg-muted/50 rounded-full text-sm font-medium text-muted-foreground mb-6">
-                <div className="w-2 h-2 bg-foreground rounded-full"></div>
-                AI Agents
-              </div>
-              <h3 className="text-2xl font-bold text-foreground mb-4">
-                Deploy Pre-Built AI Agents in One Click
-              </h3>
-              <p className="text-muted-foreground mb-8 leading-relaxed">
-                Curated library of agents that work 24/7 for you to automate and scale your business.
-              </p>
-              
+            <ExpandableCard
+              badge="AI Agents"
+              title="Deploy Pre-Built AI Agents in One Click"
+              description="Curated library of agents that work 24/7 for you to automate and scale your business."
+              expandedContent={
+                <div className="text-left space-y-4">
+                  <div>
+                    <h4 className="font-semibold text-foreground mb-3">Available Agent Types</h4>
+                    <div className="grid grid-cols-1 gap-3">
+                      <div className="p-3 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-lg">
+                        <div className="font-medium text-foreground text-sm">Investment Analysis Agent</div>
+                        <div className="text-xs text-muted-foreground mt-1">Automated financial modeling and risk assessment</div>
+                      </div>
+                      <div className="p-3 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 rounded-lg">
+                        <div className="font-medium text-foreground text-sm">Deal Sourcing Agent</div>
+                        <div className="text-xs text-muted-foreground mt-1">Continuous market scanning and opportunity identification</div>
+                      </div>
+                      <div className="p-3 bg-gradient-to-br from-purple-50 to-violet-50 dark:from-purple-900/20 dark:to-violet-900/20 rounded-lg">
+                        <div className="font-medium text-foreground text-sm">Portfolio Monitoring Agent</div>
+                        <div className="text-xs text-muted-foreground mt-1">Real-time performance tracking and alerts</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              }
+            >
               {/* Agents Preview Mockup */}
               <div className="card-nested p-6">
                 <div className="grid grid-cols-2 gap-3 text-xs">
@@ -328,21 +301,45 @@ const HomePage = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </ExpandableCard>
 
             {/* IRIS Column */}
-            <div className="card-dark-premium text-center transition-all duration-500 hover:scale-[1.02]">
-              <div className="inline-flex items-center gap-2 px-3 py-1 bg-muted/50 rounded-full text-sm font-medium text-muted-foreground mb-6">
-                <div className="w-2 h-2 bg-foreground rounded-full"></div>
-                IRIS
-              </div>
-              <h3 className="text-2xl font-bold text-foreground mb-4">
-                Conversational AI in your CRM
-              </h3>
-              <p className="text-muted-foreground mb-8 leading-relaxed">
-                Talk to IRIS—generate memos, run analyses or pull up any deal data in seconds.
-              </p>
-              
+            <ExpandableCard
+              badge="IRIS"
+              title="Conversational AI in your CRM"
+              description="Talk to IRIS—generate memos, run analyses or pull up any deal data in seconds."
+              expandedContent={
+                <div className="text-left space-y-4">
+                  <div>
+                    <h4 className="font-semibold text-foreground mb-3">IRIS Capabilities</h4>
+                    <ul className="space-y-2 text-sm text-muted-foreground">
+                      <li className="flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                        Generate investment memos and reports in minutes
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                        Natural language queries across all your data
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                        Instant market comparisons and benchmarking
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                        Automated follow-up suggestions and reminders
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-foreground mb-2">Integration</h4>
+                    <p className="text-sm text-muted-foreground">
+                      Works seamlessly with your existing tools: Salesforce, Outlook, Teams, and 100+ other platforms
+                    </p>
+                  </div>
+                </div>
+              }
+            >
               {/* IRIS Chat Preview Mockup */}
               <div className="card-nested p-6 text-left">
                 <div className="space-y-4">
@@ -366,7 +363,7 @@ const HomePage = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </ExpandableCard>
           </div>
         </div>
       </section>
