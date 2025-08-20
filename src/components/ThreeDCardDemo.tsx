@@ -1,7 +1,9 @@
 import React from "react";
 import { Badge } from "@/components/ui/badge";
 import { MovingBorder } from "@/components/ui/moving-border";
-import { Mail, Timer, FileText, UserPlus, Link, Send, Download } from "lucide-react";
+import { Mail, Timer, UserPlus, Link, Send, Download, FileType } from "lucide-react";
+import mishaAvatar from "@/assets/misha-fuentes-avatar.jpg";
+import jordanAvatar from "@/assets/jordan-noah-avatar.jpg";
 
 export function ThreeDCardDemo() {
   return (
@@ -23,7 +25,10 @@ export function ThreeDCardDemo() {
                 <h1 className="text-lg font-bold text-neutral-800 dark:text-white">
                   New Incoming Email
                 </h1>
-                <span className="text-xs text-neutral-500">from jordan.n@terraview.com</span>
+                <div className="flex items-center gap-2">
+                  <img src={jordanAvatar} alt="Jordan Noah" className="w-4 h-4 rounded-full" />
+                  <span className="text-xs text-neutral-500">from jordan.n@terraview.com</span>
+                </div>
               </div>
               
               {/* Status Badges */}
@@ -78,13 +83,13 @@ export function ThreeDCardDemo() {
                   <div className="flex items-center justify-between">
                     <div className="flex-1">
                       <div className="flex items-center gap-2 mb-2">
-                        <FileText className="w-4 h-4 text-gray-500" />
+                        <FileType className="w-4 h-4 text-red-500" />
                         <h3 className="text-sm font-medium text-gray-700 dark:text-gray-300">Detected body text + 1 attachments</h3>
                       </div>
                       <div className="flex items-center gap-4">
                         <p className="text-xs text-gray-500 dark:text-gray-400">Email summary generated. Parsed .pdf file</p>
                         <div className="flex items-center gap-2">
-                          <FileText className="w-3 h-3 text-gray-500" />
+                          <FileType className="w-3 h-3 text-red-500" />
                           <span className="text-xs text-gray-600 dark:text-gray-400">Terraview CP 2024 Performance YTD</span>
                         </div>
                       </div>
@@ -139,7 +144,7 @@ export function ThreeDCardDemo() {
                       <div className="flex items-center gap-4">
                         <p className="text-xs text-gray-500 dark:text-gray-400">Uploaded file, summarized, and tagged to profile.</p>
                         <div className="flex items-center gap-2">
-                          <FileText className="w-3 h-3 text-gray-500" />
+                          <FileType className="w-3 h-3 text-red-500" />
                           <span className="text-xs text-gray-600 dark:text-gray-400">Terraview CP 2024 Performance YTD</span>
                         </div>
                       </div>
@@ -161,7 +166,7 @@ export function ThreeDCardDemo() {
                       <div className="flex items-center gap-4">
                         <p className="text-xs text-gray-500 dark:text-gray-400">Logical next step is to introduce Jordan to</p>
                         <div className="flex items-center gap-2">
-                          <div className="w-4 h-4 bg-gray-300 dark:bg-gray-600 rounded-full"></div>
+                          <img src={mishaAvatar} alt="Misha Fuentes" className="w-4 h-4 rounded-full" />
                           <span className="text-xs text-gray-600 dark:text-gray-400">Misha Fuentes @ Demarquay Family Office</span>
                         </div>
                       </div>
