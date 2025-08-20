@@ -7,6 +7,7 @@ import { BackgroundGradientAnimation } from "@/components/ui/background-gradient
 import { Button } from "@/components/ui/button";
 import { Users, Play, Sparkles as SparklesIcon, CheckCircle } from "lucide-react";
 import { ThreeDCardDemo } from "@/components/ThreeDCardDemo";
+import crmContactProfile from "@/assets/crm-contact-profile.jpg";
 
 const HomePage = () => {
   const [currentText, setCurrentText] = useState("");
@@ -186,31 +187,13 @@ const HomePage = () => {
                 Fully AI data backbone for all contacts, deals, files and insights—to eliminate silos and spreadsheets.
               </p>
               
-              {/* CRM Preview Mockup */}
-              <div className="card-nested p-6 text-left">
-                <h4 className="text-sm font-semibold text-foreground mb-4">Incoming Email</h4>
-                <div className="space-y-3 text-xs">
-                  <div className="flex items-center justify-between p-2 bg-muted/30 rounded">
-                    <span className="text-muted-foreground">Ingest email w/ attachment</span>
-                    <span className="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded text-xs">Done</span>
-                  </div>
-                  <div className="flex items-center justify-between p-2 bg-muted/30 rounded">
-                    <span className="text-muted-foreground">Parse & Analyze entities</span>
-                    <span className="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded text-xs">Done</span>
-                  </div>
-                  <div className="flex items-center justify-between p-2 bg-muted/30 rounded">
-                    <span className="text-muted-foreground">Update CRM records</span>
-                    <span className="px-2 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300 rounded text-xs">Running</span>
-                  </div>
-                  <div className="flex items-center justify-between p-2 bg-muted/30 rounded">
-                    <span className="text-muted-foreground">Tag file to contact</span>
-                    <span className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 rounded text-xs">Queued</span>
-                  </div>
-                  <div className="flex items-center justify-between p-2 bg-muted/30 rounded">
-                    <span className="text-muted-foreground">Upload to Google Drive</span>
-                    <span className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 rounded text-xs">Queued</span>
-                  </div>
-                </div>
+              {/* CRM Contact Profile Image */}
+              <div className="card-nested p-0 overflow-hidden">
+                <img 
+                  src={crmContactProfile} 
+                  alt="CRM contact profile showing Sarah Johnson, Managing Partner at Blackstone Capital with contact details and interaction history"
+                  className="w-full h-auto rounded-lg"
+                />
               </div>
             </div>
 
