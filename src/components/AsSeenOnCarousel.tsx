@@ -12,6 +12,8 @@ const AsSeenOnCarousel = () => {
     { src: "/lovable-uploads/7736c9d6-18c9-451c-8135-9a61754d1b2f.png", alt: "Forbes", name: "Forbes" },
     { src: "/lovable-uploads/c0ad1a8f-2840-497a-8bf1-09b533efd318.png", alt: "Yahoo Finance", name: "Yahoo Finance" },
     { src: "/lovable-uploads/365d1b63-327f-4bf9-a82d-35954fb0b85a.png", alt: "The Globe and Mail", name: "The Globe and Mail" },
+    { src: "/lovable-uploads/b9204742-94a6-42f4-9385-5ccfd47be4b3.png", alt: "FOX", name: "FOX" },
+    { src: "/lovable-uploads/6dce7d92-328b-4fc2-81de-59044c364f97.png", alt: "Benzinga", name: "Benzinga" },
   ];
 
   // Duplicate logos for seamless loop
