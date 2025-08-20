@@ -16,7 +16,7 @@ export function ThreeDCardDemo() {
         containerClassName="w-full max-w-4xl mx-auto"
         duration={6}
       >
-        <div className="card-dark-premium">
+        <div className="card-premium dark:card-dark-premium">
           
           {/* Header */}
           <div className="w-full">
