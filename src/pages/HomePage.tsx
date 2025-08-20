@@ -145,7 +145,150 @@ const HomePage = () => {
       </main>
       
       {/* As Seen On Carousel - Separate Section */}
-      <AsSeenOnCarousel />
+      <section className="py-16 bg-gray-50 dark:bg-background/50">
+        <AsSeenOnCarousel />
+      </section>
+      
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
+        <div className="max-w-7xl mx-auto">
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-muted rounded-full text-sm font-medium text-muted-foreground mb-4">
+              <div className="w-2 h-2 bg-primary rounded-full"></div>
+              Overview
+            </div>
+            <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
+              Unlock Private Investments with AI
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+              Centralize your data and deploy AI agents to automate critical tasks—so you never miss an opportunity or risk because of workplace slog
+            </p>
+          </div>
+
+          {/* Three Column Features */}
+          <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
+            {/* AI CRM Column */}
+            <div className="card-dark-premium text-center">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-muted/50 rounded-full text-sm font-medium text-muted-foreground mb-6">
+                <div className="w-2 h-2 bg-foreground rounded-full"></div>
+                AI CRM
+              </div>
+              <h3 className="text-2xl font-bold text-foreground mb-4">
+                Purpose built for Private Investments
+              </h3>
+              <p className="text-muted-foreground mb-8 leading-relaxed">
+                Fully AI data backbone for all contacts, deals, files and insights—to eliminate silos and spreadsheets.
+              </p>
+              
+              {/* CRM Preview Mockup */}
+              <div className="card-nested p-6 text-left">
+                <h4 className="text-sm font-semibold text-foreground mb-4">Incoming Email</h4>
+                <div className="space-y-3 text-xs">
+                  <div className="flex items-center justify-between p-2 bg-muted/30 rounded">
+                    <span className="text-muted-foreground">Ingest email w/ attachment</span>
+                    <span className="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded text-xs">Done</span>
+                  </div>
+                  <div className="flex items-center justify-between p-2 bg-muted/30 rounded">
+                    <span className="text-muted-foreground">Parse & Analyze entities</span>
+                    <span className="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded text-xs">Done</span>
+                  </div>
+                  <div className="flex items-center justify-between p-2 bg-muted/30 rounded">
+                    <span className="text-muted-foreground">Update CRM records</span>
+                    <span className="px-2 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300 rounded text-xs">Running</span>
+                  </div>
+                  <div className="flex items-center justify-between p-2 bg-muted/30 rounded">
+                    <span className="text-muted-foreground">Tag file to contact</span>
+                    <span className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 rounded text-xs">Queued</span>
+                  </div>
+                  <div className="flex items-center justify-between p-2 bg-muted/30 rounded">
+                    <span className="text-muted-foreground">Upload to Google Drive</span>
+                    <span className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 rounded text-xs">Queued</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* AI Agents Column */}
+            <div className="card-dark-premium text-center">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-muted/50 rounded-full text-sm font-medium text-muted-foreground mb-6">
+                <div className="w-2 h-2 bg-foreground rounded-full"></div>
+                AI Agents
+              </div>
+              <h3 className="text-2xl font-bold text-foreground mb-4">
+                Deploy Pre-Built AI Agents in One Click
+              </h3>
+              <p className="text-muted-foreground mb-8 leading-relaxed">
+                Curated library of agents that work 24/7 for you to automate and scale your business.
+              </p>
+              
+              {/* Agents Preview Mockup */}
+              <div className="card-nested p-6">
+                <div className="grid grid-cols-2 gap-3 text-xs">
+                  <div className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 p-4 rounded-lg text-center">
+                    <div className="w-8 h-8 bg-blue-500 rounded-full mx-auto mb-2"></div>
+                    <div className="font-semibold text-foreground">Due Diligence</div>
+                    <div className="text-muted-foreground text-xs mt-1">Portfolio Management</div>
+                  </div>
+                  <div className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 p-4 rounded-lg text-center">
+                    <div className="w-8 h-8 bg-green-500 rounded-full mx-auto mb-2"></div>
+                    <div className="font-semibold text-foreground">Risk Analysis</div>
+                    <div className="text-muted-foreground text-xs mt-1">Capital Raising</div>
+                  </div>
+                  <div className="bg-gradient-to-br from-purple-50 to-violet-50 dark:from-purple-900/20 dark:to-violet-900/20 p-4 rounded-lg text-center">
+                    <div className="w-8 h-8 bg-purple-500 rounded-full mx-auto mb-2"></div>
+                    <div className="font-semibold text-foreground">Market Research</div>
+                    <div className="text-muted-foreground text-xs mt-1">Deal Sourcing</div>
+                  </div>
+                  <div className="bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 p-4 rounded-lg text-center">
+                    <div className="w-8 h-8 bg-orange-500 rounded-full mx-auto mb-2"></div>
+                    <div className="font-semibold text-foreground">Compliance</div>
+                    <div className="text-muted-foreground text-xs mt-1">Reporting</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* IRIS Column */}
+            <div className="card-dark-premium text-center">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-muted/50 rounded-full text-sm font-medium text-muted-foreground mb-6">
+                <div className="w-2 h-2 bg-foreground rounded-full"></div>
+                IRIS
+              </div>
+              <h3 className="text-2xl font-bold text-foreground mb-4">
+                Conversational AI in your CRM
+              </h3>
+              <p className="text-muted-foreground mb-8 leading-relaxed">
+                Talk to IRIS—generate memos, run analyses or pull up any deal data in seconds.
+              </p>
+              
+              {/* IRIS Chat Preview Mockup */}
+              <div className="card-nested p-6 text-left">
+                <div className="space-y-4">
+                  <div className="flex gap-3">
+                    <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center text-xs font-bold text-primary-foreground">I</div>
+                    <div className="flex-1 bg-muted/50 rounded-lg p-3 text-sm text-muted-foreground">
+                      Hello! I'm IRIS, your AI assistant. How can I help you today?
+                    </div>
+                  </div>
+                  <div className="flex gap-3 justify-end">
+                    <div className="bg-primary/10 rounded-lg p-3 text-sm text-foreground max-w-xs">
+                      Show me the top 5 deals by value this quarter
+                    </div>
+                    <div className="w-6 h-6 bg-muted rounded-full"></div>
+                  </div>
+                  <div className="flex gap-3">
+                    <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center text-xs font-bold text-primary-foreground">I</div>
+                    <div className="flex-1 bg-muted/50 rounded-lg p-3 text-sm text-muted-foreground">
+                      Here are your top 5 deals this quarter by transaction value...
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
           
       
       {/* Footer */}
