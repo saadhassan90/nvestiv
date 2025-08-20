@@ -1,21 +1,17 @@
 import { useEffect, useRef } from "react";
-import bloombergLogo from "@/assets/logos/bloomberg-logo.png";
-import forbesLogo from "@/assets/logos/forbes-logo.png";
-import cbsLogo from "@/assets/logos/cbs-logo.png";
-import businessInsiderLogo from "@/assets/logos/business-insider-logo.png";
-import marketwatchLogo from "@/assets/logos/marketwatch-logo.png";
-import financialPostLogo from "@/assets/logos/financial-post-logo.png";
 
 const AsSeenOnCarousel = () => {
   const carouselRef = useRef<HTMLDivElement>(null);
 
   const logos = [
-    { src: financialPostLogo, alt: "Financial Post", name: "Financial Post" },
-    { src: marketwatchLogo, alt: "MarketWatch", name: "MarketWatch" },
-    { src: bloombergLogo, alt: "Bloomberg", name: "Bloomberg" },
-    { src: businessInsiderLogo, alt: "Business Insider", name: "Business Insider" },
-    { src: cbsLogo, alt: "CBS", name: "CBS" },
-    { src: forbesLogo, alt: "Forbes", name: "Forbes" },
+    { src: "/lovable-uploads/de6798b4-d76f-4fd1-b15b-0d23d3d6cf39.png", alt: "Financial Post", name: "Financial Post" },
+    { src: "/lovable-uploads/632be4bf-2422-4044-bb35-bdc1297e2a7c.png", alt: "MarketWatch", name: "MarketWatch" },
+    { src: "/lovable-uploads/f21a6d0a-679a-4d9f-8868-fd5fd054075b.png", alt: "Bloomberg", name: "Bloomberg" },
+    { src: "/lovable-uploads/d2dc2ce4-ee9c-413a-876f-52b2593401c7.png", alt: "Business Insider", name: "Business Insider" },
+    { src: "/lovable-uploads/469d1b42-23bf-4a6e-822c-415fef3a34d7.png", alt: "CBS", name: "CBS" },
+    { src: "/lovable-uploads/7736c9d6-18c9-451c-8135-9a61754d1b2f.png", alt: "Forbes", name: "Forbes" },
+    { src: "/lovable-uploads/c0ad1a8f-2840-497a-8bf1-09b533efd318.png", alt: "Yahoo Finance", name: "Yahoo Finance" },
+    { src: "/lovable-uploads/365d1b63-327f-4bf9-a82d-35954fb0b85a.png", alt: "The Globe and Mail", name: "The Globe and Mail" },
   ];
 
   // Duplicate logos for seamless loop
