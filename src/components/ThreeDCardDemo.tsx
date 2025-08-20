@@ -16,7 +16,7 @@ export function ThreeDCardDemo() {
         containerClassName="w-full max-w-4xl mx-auto"
         duration={6}
       >
-        <div className="p-4 sm:p-6 lg:p-8">
+        <div className="card-dark-premium">
           
           {/* Header */}
           <div className="w-full">
@@ -61,7 +61,7 @@ export function ThreeDCardDemo() {
               {/* Activity Cards */}
               <div className="space-y-2 ml-4 border-l-2 border-gray-200 dark:border-gray-600 pl-3 sm:pl-4">
               {/* Read Email Card */}
-              <div className="bg-gray-50/30 dark:bg-gray-900/30 border border-gray-300/30 dark:border-gray-600/30 rounded-md p-3 sm:p-4 overflow-hidden">
+              <div className="card-nested">
                 <div className="flex flex-col items-center text-center space-y-2 sm:flex-row sm:justify-between sm:text-left sm:items-start sm:space-y-0 gap-2 sm:gap-4">
                   <div className="flex-1 min-w-0 w-full">
                     <div className="flex items-center justify-center gap-2 mb-2 sm:justify-start">
@@ -79,7 +79,7 @@ export function ThreeDCardDemo() {
               </div>
 
                 {/* Detected Body Text Card */}
-                <div className="bg-gray-50/30 dark:bg-gray-900/30 border border-gray-300/30 dark:border-gray-600/30 rounded-md p-3 sm:p-4 overflow-hidden">
+                <div className="card-nested">
                   <div className="flex flex-col items-center text-center space-y-2 sm:flex-row sm:justify-between sm:text-left sm:items-start sm:space-y-0 gap-2 sm:gap-4">
                     <div className="flex-1 min-w-0 w-full">
                       <div className="flex items-center justify-center gap-2 mb-2 sm:justify-start">
@@ -115,7 +115,7 @@ export function ThreeDCardDemo() {
               {/* CRM Activity Cards */}
               <div className="space-y-2 ml-4 border-l-2 border-gray-200 dark:border-gray-600 pl-3 sm:pl-4">
                 {/* New Contact Card */}
-                <div className="bg-gray-50/30 dark:bg-gray-900/30 border border-gray-300/30 dark:border-gray-600/30 rounded-md p-3 sm:p-4 overflow-hidden">
+                <div className="card-nested">
                   <div className="flex flex-col items-center text-center space-y-2 sm:flex-row sm:justify-between sm:text-left sm:items-start sm:space-y-0 gap-2 sm:gap-4">
                     <div className="flex-1 min-w-0 w-full">
                       <div className="flex items-center justify-center gap-2 mb-2 sm:justify-start">
@@ -134,7 +134,7 @@ export function ThreeDCardDemo() {
                 </div>
 
                 {/* Associated File Card */}
-                <div className="bg-gray-50/30 dark:bg-gray-900/30 border border-gray-300/30 dark:border-gray-600/30 rounded-md p-3 sm:p-4 overflow-hidden">
+                <div className="card-nested">
                   <div className="flex flex-col items-center text-center space-y-2 sm:flex-row sm:justify-between sm:text-left sm:items-start sm:space-y-0 gap-2 sm:gap-4">
                     <div className="flex-1 min-w-0 w-full">
                       <div className="flex items-center justify-center gap-2 mb-2 sm:justify-start">
@@ -156,7 +156,7 @@ export function ThreeDCardDemo() {
                 </div>
 
                 {/* Sending Email Card */}
-                <div className="bg-gray-50/30 dark:bg-gray-900/30 border border-gray-300/30 dark:border-gray-600/30 rounded-md p-3 sm:p-4 overflow-hidden">
+                <div className="card-nested">
                   <div className="flex flex-col items-center text-center space-y-2 sm:flex-row sm:justify-between sm:text-left sm:items-start sm:space-y-0 gap-2 sm:gap-4">
                     <div className="flex-1 min-w-0 w-full">
                       <div className="flex items-center justify-center gap-2 mb-2 sm:justify-start">
