@@ -171,7 +171,7 @@ export function ThreeDCardDemo() {
                         </div>
                       </div>
                     </div>
-                    <Badge variant="outline" className="text-xs font-normal text-blue-700 border-blue-300 flex-shrink-0">
+                    <Badge variant="outline" className="text-xs font-normal text-blue-700 border-blue-300 flex-shrink-0 self-center">
                       <Send className="w-3 h-3 mr-1 text-gray-500" />
                       Sending Email
                     </Badge>
