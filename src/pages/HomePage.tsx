@@ -50,11 +50,11 @@ const HomePage = () => {
       {/* Hero Section with Black Background */}
       <main className="pt-24 md:pt-28 lg:pt-32 relative z-10 bg-white">
         <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f15_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f15_1px,transparent_1px)] bg-[size:120px_120px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"></div>
-        <div className="min-h-[calc(100vh-8rem)] w-full relative flex flex-col items-center justify-center overflow-hidden">
+        <div className="w-full relative flex flex-col items-center justify-center overflow-hidden">
           <div className="w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
             
             {/* Hero Content */}
-            <section className="w-full min-h-[calc(100vh-8rem)] flex items-center justify-center pt-8 sm:pt-12 lg:pt-16 pb-5">
+            <section className="w-full flex items-center justify-center pt-8 sm:pt-12 lg:pt-16 pb-5">
               
               {/* Vertical Layout Container - Centered */}
               <div className="w-full max-w-7xl mx-auto flex flex-col items-center justify-center text-center">
@@ -126,19 +126,16 @@ const HomePage = () => {
                   </p>
                 </div>
                 
-                {/* Small gap before 3D card */}
-                <div className="h-8"></div>
+                {/* 3D Card */}
+                <div className="w-full">
+                  <ThreeDCardDemo />
+                </div>
                 
               </div>
               
             </section>
             
           </div>
-        </div>
-        
-        {/* 3D Card - Full Width Section */}
-        <div className="w-full max-w-7xl mx-auto">
-          <ThreeDCardDemo />
         </div>
       </main>
       
