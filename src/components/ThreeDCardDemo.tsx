@@ -1,18 +1,14 @@
-"use client";
-
 import React from "react";
-import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import { Badge } from "@/components/ui/badge";
 import { Mail, Timer, FileText, UserPlus, Link, Send, Download } from "lucide-react";
 
 export function ThreeDCardDemo() {
   return (
-    <CardContainer className="inter-var w-full">
-      <CardBody
-        className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-8 border">
+    <div className="w-full">
+      <div className="bg-gray-50 relative dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-8 border">
         
         {/* Header */}
-        <CardItem translateZ="20" className="w-full">
+        <div className="w-full">
           <div className="flex flex-col space-y-2">
             <div className="flex items-center justify-between">
               <h1 className="text-lg font-bold text-neutral-800">
@@ -33,14 +29,14 @@ export function ThreeDCardDemo() {
               </Badge>
             </div>
           </div>
-        </CardItem>
+        </div>
 
-        <CardItem translateZ="30" className="w-full mt-3">
+        <div className="w-full mt-3">
           <hr className="border-gray-200" />
-        </CardItem>
+        </div>
 
         {/* Outlook API Section */}
-        <CardItem translateZ="40" className="w-full mt-4">
+        <div className="w-full mt-4">
           <div className="space-y-3">
             {/* Outlook API Header */}
             <div className="flex items-center gap-2">
@@ -87,10 +83,10 @@ export function ThreeDCardDemo() {
               </div>
             </div>
           </div>
-        </CardItem>
+        </div>
 
         {/* IRIS CRM Management Section */}
-        <CardItem translateZ="40" className="w-full mt-4">
+        <div className="w-full mt-4">
           <div className="space-y-3">
             {/* IRIS CRM Header */}
             <div className="flex items-center gap-2">
@@ -158,8 +154,8 @@ export function ThreeDCardDemo() {
               </div>
             </div>
           </div>
-        </CardItem>
-      </CardBody>
-    </CardContainer>
+        </div>
+      </div>
+    </div>
   );
 }
