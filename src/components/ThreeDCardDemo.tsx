@@ -2,14 +2,18 @@
 
 import React from "react";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
+import { EvervaultCard } from "@/components/ui/evervault-card";
 import { Badge } from "@/components/ui/badge";
 import { Mail, Timer, FileText, UserPlus, Link, Send, Download } from "lucide-react";
 
 export function ThreeDCardDemo() {
   return (
     <CardContainer className="inter-var w-full">
-      <CardBody
-        className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-8 border">
+      <div className="relative w-full h-auto">
+        <EvervaultCard className="absolute inset-0 rounded-xl" />
+        <CardBody
+          className="bg-gray-50/90 backdrop-blur-sm relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black/90 dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-8 border z-10">
+        
         
         {/* Header */}
         <CardItem translateZ="20" className="w-full">
@@ -159,7 +163,8 @@ export function ThreeDCardDemo() {
             </div>
           </div>
         </CardItem>
-      </CardBody>
+        </CardBody>
+      </div>
     </CardContainer>
   );
 }
