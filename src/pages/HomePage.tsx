@@ -175,7 +175,7 @@ const HomePage = () => {
           {/* Features Cards Grid */}
           <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
             {/* AI CRM Column */}
-            <div className="card-dark-premium text-center transition-all duration-500 hover:scale-[1.02]">
+            <div className="card-dark-premium text-center transition-all duration-500 hover:scale-[1.02] flex flex-col">
               <div className="inline-flex items-center gap-2 px-3 py-1 bg-muted/50 rounded-full text-sm font-medium text-muted-foreground mb-6">
                 <div className="w-2 h-2 bg-foreground rounded-full"></div>
                 AI CRM
@@ -187,8 +187,8 @@ const HomePage = () => {
                 Fully AI data backbone for all contacts, deals, files and insights—to eliminate silos and spreadsheets.
               </p>
               
-              {/* Enhanced CRM Contact Profile Mockup */}
-              <div className="card-nested p-4 text-left">
+              {/* Enhanced CRM Contact Profile Mockup - Fixed Height */}
+              <div className="card-nested p-4 text-left h-[280px] flex flex-col">
                 {/* Contact Header */}
                 <div className="flex items-center gap-3 mb-3 pb-2 border-b border-border/10">
                   <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xs">
@@ -239,7 +239,7 @@ const HomePage = () => {
                 </div>
                 
                 {/* Recent Activity */}
-                <div className="pt-2 border-t border-border/10">
+                <div className="pt-2 border-t border-border/10 flex-1">
                   <p className="text-xs font-medium text-muted-foreground mb-1.5">Recent Activity</p>
                   <div className="space-y-1">
                     <div className="flex items-center gap-2 text-xs">
@@ -263,7 +263,7 @@ const HomePage = () => {
             </div>
 
             {/* AI Agents Column */}
-            <div className="card-dark-premium text-center transition-all duration-500 hover:scale-[1.02]">
+            <div className="card-dark-premium text-center transition-all duration-500 hover:scale-[1.02] flex flex-col">
               <div className="inline-flex items-center gap-2 px-3 py-1 bg-muted/50 rounded-full text-sm font-medium text-muted-foreground mb-6">
                 <div className="w-2 h-2 bg-foreground rounded-full"></div>
                 AI Agents
@@ -275,28 +275,36 @@ const HomePage = () => {
                 Curated library of agents that work 24/7 for you to automate and scale your business.
               </p>
               
-              {/* Agents Preview Mockup */}
-              <div className="card-nested p-4">
-                <div className="grid grid-cols-2 gap-2 text-xs mb-4">
-                  <div className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 p-3 rounded-lg text-center">
-                    <div className="w-6 h-6 bg-blue-500 rounded-full mx-auto mb-1"></div>
+              {/* Agents Preview Mockup - Fixed Height */}
+              <div className="card-nested p-4 h-[280px] flex flex-col justify-center">
+                <div className="grid grid-cols-2 gap-3">
+                  <div className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 p-4 rounded-lg text-center">
+                    <div className="w-10 h-10 bg-blue-500 rounded-full mx-auto mb-2 flex items-center justify-center">
+                      <Users className="w-5 h-5 text-white" />
+                    </div>
                     <div className="font-semibold text-foreground text-xs">Due Diligence</div>
-                    <div className="text-muted-foreground text-xs mt-0.5">Portfolio Management</div>
+                    <div className="text-muted-foreground text-xs mt-1">Portfolio Management</div>
                   </div>
-                  <div className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 p-3 rounded-lg text-center">
-                    <div className="w-6 h-6 bg-green-500 rounded-full mx-auto mb-1"></div>
+                  <div className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 p-4 rounded-lg text-center">
+                    <div className="w-10 h-10 bg-green-500 rounded-full mx-auto mb-2 flex items-center justify-center">
+                      <CheckCircle className="w-5 h-5 text-white" />
+                    </div>
                     <div className="font-semibold text-foreground text-xs">Risk Analysis</div>
-                    <div className="text-muted-foreground text-xs mt-0.5">Capital Raising</div>
+                    <div className="text-muted-foreground text-xs mt-1">Capital Raising</div>
                   </div>
-                  <div className="bg-gradient-to-br from-purple-50 to-violet-50 dark:from-purple-900/20 dark:to-violet-900/20 p-3 rounded-lg text-center">
-                    <div className="w-6 h-6 bg-purple-500 rounded-full mx-auto mb-1"></div>
+                  <div className="bg-gradient-to-br from-purple-50 to-violet-50 dark:from-purple-900/20 dark:to-violet-900/20 p-4 rounded-lg text-center">
+                    <div className="w-10 h-10 bg-purple-500 rounded-full mx-auto mb-2 flex items-center justify-center">
+                      <SparklesIcon className="w-5 h-5 text-white" />
+                    </div>
                     <div className="font-semibold text-foreground text-xs">Market Research</div>
-                    <div className="text-muted-foreground text-xs mt-0.5">Deal Sourcing</div>
+                    <div className="text-muted-foreground text-xs mt-1">Deal Sourcing</div>
                   </div>
-                  <div className="bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 p-3 rounded-lg text-center">
-                    <div className="w-6 h-6 bg-orange-500 rounded-full mx-auto mb-1"></div>
+                  <div className="bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 p-4 rounded-lg text-center">
+                    <div className="w-10 h-10 bg-orange-500 rounded-full mx-auto mb-2 flex items-center justify-center">
+                      <Play className="w-5 h-5 text-white" />
+                    </div>
                     <div className="font-semibold text-foreground text-xs">Compliance</div>
-                    <div className="text-muted-foreground text-xs mt-0.5">Reporting</div>
+                    <div className="text-muted-foreground text-xs mt-1">Reporting</div>
                   </div>
                 </div>
               </div>
@@ -310,7 +318,7 @@ const HomePage = () => {
             </div>
 
             {/* IRIS Column */}
-            <div className="card-dark-premium text-center transition-all duration-500 hover:scale-[1.02]">
+            <div className="card-dark-premium text-center transition-all duration-500 hover:scale-[1.02] flex flex-col">
               <div className="inline-flex items-center gap-2 px-3 py-1 bg-muted/50 rounded-full text-sm font-medium text-muted-foreground mb-6">
                 <div className="w-2 h-2 bg-foreground rounded-full"></div>
                 IRIS
@@ -322,26 +330,32 @@ const HomePage = () => {
                 Talk to IRIS—generate memos, run analyses or pull up any deal data in seconds.
               </p>
               
-              {/* IRIS Chat Preview Mockup */}
-              <div className="card-nested p-4 text-left mb-4">
-                <div className="space-y-3">
-                  <div className="flex gap-2">
-                    <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center text-xs font-bold text-primary-foreground">I</div>
-                    <div className="flex-1 bg-muted/50 rounded-lg p-2 text-xs text-muted-foreground">
+              {/* IRIS Chat Preview Mockup - Fixed Height */}
+              <div className="card-nested p-4 text-left h-[280px] flex flex-col justify-center">
+                <div className="space-y-4">
+                  <div className="flex gap-3">
+                    <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-xs font-bold text-primary-foreground">I</div>
+                    <div className="flex-1 bg-muted/50 rounded-lg p-3 text-xs text-muted-foreground">
                       Hello! I'm IRIS, your AI assistant. How can I help you today?
                     </div>
                   </div>
-                  <div className="flex gap-2 justify-end">
-                    <div className="bg-primary/10 rounded-lg p-2 text-xs text-foreground max-w-xs">
+                  <div className="flex gap-3 justify-end">
+                    <div className="bg-primary/10 rounded-lg p-3 text-xs text-foreground max-w-[200px]">
                       Show me the top 5 deals by value this quarter
                     </div>
-                    <div className="w-5 h-5 bg-muted rounded-full"></div>
+                    <div className="w-8 h-8 bg-muted rounded-full"></div>
                   </div>
-                  <div className="flex gap-2">
-                    <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center text-xs font-bold text-primary-foreground">I</div>
-                    <div className="flex-1 bg-muted/50 rounded-lg p-2 text-xs text-muted-foreground">
+                  <div className="flex gap-3">
+                    <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-xs font-bold text-primary-foreground">I</div>
+                    <div className="flex-1 bg-muted/50 rounded-lg p-3 text-xs text-muted-foreground">
                       Here are your top 5 deals this quarter by transaction value...
                     </div>
+                  </div>
+                  <div className="flex gap-3 justify-end">
+                    <div className="bg-primary/10 rounded-lg p-3 text-xs text-foreground max-w-[180px]">
+                      Generate investment memo for TechCorp
+                    </div>
+                    <div className="w-8 h-8 bg-muted rounded-full"></div>
                   </div>
                 </div>
               </div>
