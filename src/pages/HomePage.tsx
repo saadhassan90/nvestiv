@@ -7,7 +7,7 @@ import { BackgroundGradientAnimation } from "@/components/ui/background-gradient
 import { Button } from "@/components/ui/button";
 import { Users, Play, Sparkles as SparklesIcon, CheckCircle } from "lucide-react";
 import { ThreeDCardDemo } from "@/components/ThreeDCardDemo";
-import crmContactProfile from "@/assets/crm-contact-profile.jpg";
+import crmContactProfile from "@/assets/crm-contact-profile-hd.jpg";
 
 const HomePage = () => {
   const [currentText, setCurrentText] = useState("");
