@@ -52,9 +52,9 @@ export function ThreeDCardDemo() {
             {/* Activity Cards */}
             <div className="space-y-2 ml-4 border-l-2 border-gray-200 pl-3">
               {/* Read Email Card */}
-              <div className="bg-white border border-gray-200 rounded-md p-3">
+              <div className="bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-md p-3">
                 <div className="flex items-center justify-between">
-                  <div>
+                  <div className="text-left">
                     <h3 className="text-sm font-medium text-neutral-700">Read incoming email</h3>
                     <p className="text-xs text-neutral-500">Subject: Introducing Terraview Capital Partners.</p>
                   </div>
@@ -65,14 +65,14 @@ export function ThreeDCardDemo() {
               </div>
 
               {/* Detected Body Text Card */}
-              <div className="bg-white border border-gray-200 rounded-md p-3">
+              <div className="bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-md p-3">
                 <div className="flex items-center justify-between">
-                  <div className="flex-1">
-                    <h3 className="text-sm font-medium text-neutral-700">Detected body text + 1 attachments</h3>
-                    <p className="text-xs text-neutral-500">Email summary generated. Parsed .pdf file</p>
+                  <div className="flex-1 text-left">
+                    <h3 className="text-sm font-medium text-neutral-700 dark:text-neutral-200">Detected body text + 1 attachments</h3>
+                    <p className="text-xs text-neutral-500 dark:text-neutral-400">Email summary generated. Parsed .pdf file</p>
                     <div className="flex items-center gap-2 mt-1">
                       <span className="text-red-600 text-xs">📄</span>
-                      <span className="text-xs text-neutral-600">Terraview CP 2024 Performance YTD</span>
+                      <span className="text-xs text-neutral-600 dark:text-neutral-300">Terraview CP 2024 Performance YTD</span>
                     </div>
                   </div>
                   <span className="px-2 py-1 bg-green-100 text-green-800 text-xs rounded border border-green-200">
@@ -96,11 +96,11 @@ export function ThreeDCardDemo() {
             {/* CRM Activity Cards */}
             <div className="space-y-2 ml-4 border-l-2 border-gray-200 pl-3">
               {/* New Contact Card */}
-              <div className="bg-white border border-gray-200 rounded-md p-3">
+              <div className="bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-md p-3">
                 <div className="flex items-center justify-between">
-                  <div>
-                    <h3 className="text-sm font-medium text-neutral-700">New Contact & Company Created</h3>
-                    <p className="text-xs text-neutral-500">Terraview and Jordan Noah did not already exist. Updated contact using email details.</p>
+                  <div className="text-left">
+                    <h3 className="text-sm font-medium text-neutral-700 dark:text-neutral-200">New Contact & Company Created</h3>
+                    <p className="text-xs text-neutral-500 dark:text-neutral-400">Terraview and Jordan Noah did not already exist. Updated contact using email details.</p>
                   </div>
                   <span className="px-2 py-1 bg-green-100 text-green-800 text-xs rounded border border-green-200">
                     ✓ Complete
@@ -109,14 +109,14 @@ export function ThreeDCardDemo() {
               </div>
 
               {/* Associated File Card */}
-              <div className="bg-white border border-gray-200 rounded-md p-3">
+              <div className="bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-md p-3">
                 <div className="flex items-center justify-between">
-                  <div className="flex-1">
-                    <h3 className="text-sm font-medium text-neutral-700">Associated File to Jordan Noah</h3>
-                    <p className="text-xs text-neutral-500">Uploaded file, summarized, and tagged to profile.</p>
+                  <div className="flex-1 text-left">
+                    <h3 className="text-sm font-medium text-neutral-700 dark:text-neutral-200">Associated File to Jordan Noah</h3>
+                    <p className="text-xs text-neutral-500 dark:text-neutral-400">Uploaded file, summarized, and tagged to profile.</p>
                     <div className="flex items-center gap-2 mt-1">
                       <span className="text-red-600 text-xs">📄</span>
-                      <span className="text-xs text-neutral-600">Terraview CP 2024 Performance YTD</span>
+                      <span className="text-xs text-neutral-600 dark:text-neutral-300">Terraview CP 2024 Performance YTD</span>
                     </div>
                   </div>
                   <span className="px-2 py-1 bg-green-100 text-green-800 text-xs rounded border border-green-200">
@@ -126,14 +126,14 @@ export function ThreeDCardDemo() {
               </div>
 
               {/* Sending Email Card */}
-              <div className="bg-white border border-gray-200 rounded-md p-3">
+              <div className="bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-md p-3">
                 <div className="flex items-center justify-between">
-                  <div className="flex-1">
-                    <h3 className="text-sm font-medium text-neutral-700">Sending email introduction</h3>
-                    <p className="text-xs text-neutral-500">Logical next step is to introduce Jordan to</p>
+                  <div className="flex-1 text-left">
+                    <h3 className="text-sm font-medium text-neutral-700 dark:text-neutral-200">Sending email introduction</h3>
+                    <p className="text-xs text-neutral-500 dark:text-neutral-400">Logical next step is to introduce Jordan to</p>
                     <div className="flex items-center gap-2 mt-1">
-                      <div className="w-4 h-4 bg-gray-300 rounded-full"></div>
-                      <span className="text-xs text-neutral-600">Misha Fuentes @ Demarquay Family Office</span>
+                      <div className="w-4 h-4 bg-gray-300 dark:bg-gray-600 rounded-full"></div>
+                      <span className="text-xs text-neutral-600 dark:text-neutral-300">Misha Fuentes @ Demarquay Family Office</span>
                     </div>
                   </div>
                   <span className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded border border-blue-200">
