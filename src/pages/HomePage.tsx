@@ -102,8 +102,10 @@ const HomePage = () => {
                   {/* Static Text */}
                   <div className="flex justify-center">
                     <div className="w-max">
-                      <h2 className="text-xl lg:text-2xl font-semibold text-gray-800 relative border-none pb-0">
-                        AI CRM. AI Agents
+                      <h2 className="text-xl lg:text-2xl font-semibold text-gray-800 relative border-none pb-0 flex items-center gap-4">
+                        <span>AI CRM</span>
+                        <div className="w-px h-6 bg-gradient-to-b from-transparent via-gray-400 to-transparent"></div>
+                        <span>AI Agents</span>
                       </h2>
                     </div>
                   </div>
