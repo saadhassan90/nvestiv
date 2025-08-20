@@ -187,53 +187,78 @@ const HomePage = () => {
                 Fully AI data backbone for all contacts, deals, files and insights—to eliminate silos and spreadsheets.
               </p>
               
-              {/* CRM Contact Profile Mockup */}
-              <div className="card-nested p-6 text-left">
+              {/* Enhanced CRM Contact Profile Mockup */}
+              <div className="card-nested p-4 text-left">
                 {/* Contact Header */}
-                <div className="flex items-center gap-3 mb-4 pb-3 border-b border-border/10">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold">
+                <div className="flex items-center gap-3 mb-3 pb-2 border-b border-border/10">
+                  <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xs">
                     SJ
                   </div>
-                  <div className="flex-1">
-                    <h4 className="font-semibold text-foreground text-sm">Sarah Johnson</h4>
-                    <p className="text-xs text-muted-foreground">Managing Partner</p>
-                    <p className="text-xs text-muted-foreground">Blackstone Capital</p>
+                  <div className="flex-1 min-w-0">
+                    <h4 className="font-semibold text-foreground text-xs">Sarah Johnson</h4>
+                    <p className="text-xs text-muted-foreground truncate">Managing Partner • Blackstone Capital</p>
                   </div>
-                  <div className="px-2 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded text-xs">
+                  <div className="px-2 py-0.5 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded text-xs">
                     Active
                   </div>
                 </div>
                 
-                {/* Contact Details */}
-                <div className="space-y-2 mb-4">
-                  <div className="flex justify-between text-xs">
-                    <span className="text-muted-foreground">Email:</span>
-                    <span className="text-foreground">s.johnson@blackstone.com</span>
-                  </div>
+                {/* Investment Profile */}
+                <div className="space-y-2 mb-3">
                   <div className="flex justify-between text-xs">
                     <span className="text-muted-foreground">AUM:</span>
-                    <span className="text-foreground">$2.4B</span>
+                    <span className="text-foreground font-medium">$2.4B</span>
                   </div>
                   <div className="flex justify-between text-xs">
-                    <span className="text-muted-foreground">Last Contact:</span>
-                    <span className="text-foreground">2 days ago</span>
+                    <span className="text-muted-foreground">Check Size:</span>
+                    <span className="text-foreground">$50M-$200M</span>
+                  </div>
+                  <div className="flex justify-between text-xs">
+                    <span className="text-muted-foreground">Stage:</span>
+                    <span className="text-foreground">Growth, Buyout</span>
+                  </div>
+                </div>
+
+                {/* Asset Classes */}
+                <div className="mb-3">
+                  <p className="text-xs font-medium text-muted-foreground mb-1.5">Asset Classes</p>
+                  <div className="flex flex-wrap gap-1">
+                    <span className="px-2 py-0.5 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded text-xs">Private Equity</span>
+                    <span className="px-2 py-0.5 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded text-xs">Real Estate</span>
+                    <span className="px-2 py-0.5 bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 rounded text-xs">Infrastructure</span>
+                  </div>
+                </div>
+
+                {/* Investment Vehicles */}
+                <div className="mb-3">
+                  <p className="text-xs font-medium text-muted-foreground mb-1.5">Investment Vehicles</p>
+                  <div className="flex flex-wrap gap-1">
+                    <span className="px-2 py-0.5 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded text-xs">Direct Investment</span>
+                    <span className="px-2 py-0.5 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded text-xs">Fund of Funds</span>
                   </div>
                 </div>
                 
                 {/* Recent Activity */}
-                <div className="pt-3 border-t border-border/10">
-                  <p className="text-xs font-medium text-muted-foreground mb-2">Recent Activity</p>
+                <div className="pt-2 border-t border-border/10">
+                  <p className="text-xs font-medium text-muted-foreground mb-1.5">Recent Activity</p>
                   <div className="space-y-1">
                     <div className="flex items-center gap-2 text-xs">
-                      <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
+                      <div className="w-1 h-1 bg-blue-500 rounded-full"></div>
                       <span className="text-foreground">Reviewed Series A deck</span>
                     </div>
                     <div className="flex items-center gap-2 text-xs">
-                      <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
+                      <div className="w-1 h-1 bg-green-500 rounded-full"></div>
                       <span className="text-foreground">Scheduled follow-up call</span>
                     </div>
                   </div>
                 </div>
+              </div>
+              
+              {/* Learn More Button */}
+              <div className="mt-6">
+                <Button variant="ghost" size="sm" className="w-full text-xs h-8">
+                  Learn More
+                </Button>
               </div>
             </div>
 
@@ -251,29 +276,36 @@ const HomePage = () => {
               </p>
               
               {/* Agents Preview Mockup */}
-              <div className="card-nested p-6">
-                <div className="grid grid-cols-2 gap-3 text-xs">
-                  <div className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 p-4 rounded-lg text-center">
-                    <div className="w-8 h-8 bg-blue-500 rounded-full mx-auto mb-2"></div>
-                    <div className="font-semibold text-foreground">Due Diligence</div>
-                    <div className="text-muted-foreground text-xs mt-1">Portfolio Management</div>
+              <div className="card-nested p-4">
+                <div className="grid grid-cols-2 gap-2 text-xs mb-4">
+                  <div className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 p-3 rounded-lg text-center">
+                    <div className="w-6 h-6 bg-blue-500 rounded-full mx-auto mb-1"></div>
+                    <div className="font-semibold text-foreground text-xs">Due Diligence</div>
+                    <div className="text-muted-foreground text-xs mt-0.5">Portfolio Management</div>
                   </div>
-                  <div className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 p-4 rounded-lg text-center">
-                    <div className="w-8 h-8 bg-green-500 rounded-full mx-auto mb-2"></div>
-                    <div className="font-semibold text-foreground">Risk Analysis</div>
-                    <div className="text-muted-foreground text-xs mt-1">Capital Raising</div>
+                  <div className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 p-3 rounded-lg text-center">
+                    <div className="w-6 h-6 bg-green-500 rounded-full mx-auto mb-1"></div>
+                    <div className="font-semibold text-foreground text-xs">Risk Analysis</div>
+                    <div className="text-muted-foreground text-xs mt-0.5">Capital Raising</div>
                   </div>
-                  <div className="bg-gradient-to-br from-purple-50 to-violet-50 dark:from-purple-900/20 dark:to-violet-900/20 p-4 rounded-lg text-center">
-                    <div className="w-8 h-8 bg-purple-500 rounded-full mx-auto mb-2"></div>
-                    <div className="font-semibold text-foreground">Market Research</div>
-                    <div className="text-muted-foreground text-xs mt-1">Deal Sourcing</div>
+                  <div className="bg-gradient-to-br from-purple-50 to-violet-50 dark:from-purple-900/20 dark:to-violet-900/20 p-3 rounded-lg text-center">
+                    <div className="w-6 h-6 bg-purple-500 rounded-full mx-auto mb-1"></div>
+                    <div className="font-semibold text-foreground text-xs">Market Research</div>
+                    <div className="text-muted-foreground text-xs mt-0.5">Deal Sourcing</div>
                   </div>
-                  <div className="bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 p-4 rounded-lg text-center">
-                    <div className="w-8 h-8 bg-orange-500 rounded-full mx-auto mb-2"></div>
-                    <div className="font-semibold text-foreground">Compliance</div>
-                    <div className="text-muted-foreground text-xs mt-1">Reporting</div>
+                  <div className="bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 p-3 rounded-lg text-center">
+                    <div className="w-6 h-6 bg-orange-500 rounded-full mx-auto mb-1"></div>
+                    <div className="font-semibold text-foreground text-xs">Compliance</div>
+                    <div className="text-muted-foreground text-xs mt-0.5">Reporting</div>
                   </div>
                 </div>
+              </div>
+              
+              {/* Learn More Button */}
+              <div className="mt-6">
+                <Button variant="ghost" size="sm" className="w-full text-xs h-8">
+                  Learn More
+                </Button>
               </div>
             </div>
 
@@ -291,27 +323,34 @@ const HomePage = () => {
               </p>
               
               {/* IRIS Chat Preview Mockup */}
-              <div className="card-nested p-6 text-left">
-                <div className="space-y-4">
-                  <div className="flex gap-3">
-                    <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center text-xs font-bold text-primary-foreground">I</div>
-                    <div className="flex-1 bg-muted/50 rounded-lg p-3 text-sm text-muted-foreground">
+              <div className="card-nested p-4 text-left mb-4">
+                <div className="space-y-3">
+                  <div className="flex gap-2">
+                    <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center text-xs font-bold text-primary-foreground">I</div>
+                    <div className="flex-1 bg-muted/50 rounded-lg p-2 text-xs text-muted-foreground">
                       Hello! I'm IRIS, your AI assistant. How can I help you today?
                     </div>
                   </div>
-                  <div className="flex gap-3 justify-end">
-                    <div className="bg-primary/10 rounded-lg p-3 text-sm text-foreground max-w-xs">
+                  <div className="flex gap-2 justify-end">
+                    <div className="bg-primary/10 rounded-lg p-2 text-xs text-foreground max-w-xs">
                       Show me the top 5 deals by value this quarter
                     </div>
-                    <div className="w-6 h-6 bg-muted rounded-full"></div>
+                    <div className="w-5 h-5 bg-muted rounded-full"></div>
                   </div>
-                  <div className="flex gap-3">
-                    <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center text-xs font-bold text-primary-foreground">I</div>
-                    <div className="flex-1 bg-muted/50 rounded-lg p-3 text-sm text-muted-foreground">
+                  <div className="flex gap-2">
+                    <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center text-xs font-bold text-primary-foreground">I</div>
+                    <div className="flex-1 bg-muted/50 rounded-lg p-2 text-xs text-muted-foreground">
                       Here are your top 5 deals this quarter by transaction value...
                     </div>
                   </div>
                 </div>
+              </div>
+              
+              {/* Learn More Button */}
+              <div className="mt-6">
+                <Button variant="ghost" size="sm" className="w-full text-xs h-8">
+                  Learn More
+                </Button>
               </div>
             </div>
           </div>
