@@ -174,45 +174,43 @@ const HomePage = () => {
           {/* Three Column Features */}
           <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
             {/* AI CRM Column */}
-            <div className="group relative p-[2px] rounded-2xl overflow-hidden transition-all duration-500 hover:scale-[1.02] cursor-pointer bg-gradient-to-r from-transparent via-primary/10 to-transparent hover:from-primary/20 hover:via-primary/30 hover:to-primary/20">
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/20 to-transparent opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500"></div>
-              <div className="relative bg-background/95 backdrop-blur-sm rounded-2xl p-8 h-full border border-border/50 group-hover:border-primary/30 transition-all duration-500">
-                <div className="text-center">
-                  <div className="inline-flex items-center gap-2 px-3 py-1 bg-muted/50 rounded-full text-sm font-medium text-muted-foreground mb-6 group-hover:bg-primary/10 group-hover:text-primary transition-colors duration-300">
-                    <div className="w-2 h-2 bg-foreground rounded-full group-hover:bg-primary transition-colors duration-300"></div>
-                    AI CRM
-                  </div>
-                  <h3 className="text-2xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors duration-300">
-                    Purpose built for Private Investments
-                  </h3>
-                  <p className="text-muted-foreground mb-8 leading-relaxed">
-                    Fully AI data backbone for all contacts, deals, files and insights—to eliminate silos and spreadsheets.
-                  </p>
-                  
-                  {/* CRM Preview Mockup */}
-                  <div className="card-nested p-6 text-left group-hover:shadow-lg group-hover:shadow-primary/10 transition-all duration-500">
-                    <h4 className="text-sm font-semibold text-foreground mb-4">Incoming Email</h4>
-                    <div className="space-y-3 text-xs">
-                      <div className="flex items-center justify-between p-2 bg-muted/30 rounded group-hover:bg-muted/50 transition-colors duration-300">
-                        <span className="text-muted-foreground">Ingest email w/ attachment</span>
-                        <span className="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded text-xs animate-pulse">Done</span>
-                      </div>
-                      <div className="flex items-center justify-between p-2 bg-muted/30 rounded group-hover:bg-muted/50 transition-colors duration-300">
-                        <span className="text-muted-foreground">Parse & Analyze entities</span>
-                        <span className="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded text-xs">Done</span>
-                      </div>
-                      <div className="flex items-center justify-between p-2 bg-muted/30 rounded group-hover:bg-muted/50 transition-colors duration-300">
-                        <span className="text-muted-foreground">Update CRM records</span>
-                        <span className="px-2 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300 rounded text-xs animate-pulse">Running</span>
-                      </div>
-                      <div className="flex items-center justify-between p-2 bg-muted/30 rounded group-hover:bg-muted/50 transition-colors duration-300">
-                        <span className="text-muted-foreground">Tag file to contact</span>
-                        <span className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 rounded text-xs">Queued</span>
-                      </div>
-                      <div className="flex items-center justify-between p-2 bg-muted/30 rounded group-hover:bg-muted/50 transition-colors duration-300">
-                        <span className="text-muted-foreground">Upload to Google Drive</span>
-                        <span className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 rounded text-xs">Queued</span>
-                      </div>
+            <div className="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 cursor-pointer">
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-primary via-primary/50 to-primary rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
+              <div className="relative card-premium dark:card-dark-premium text-center h-full">
+                <div className="inline-flex items-center gap-2 px-3 py-1 bg-muted/50 rounded-full text-sm font-medium text-muted-foreground mb-6 group-hover:bg-primary/10 group-hover:text-primary transition-colors duration-300">
+                  <div className="w-2 h-2 bg-foreground rounded-full group-hover:bg-primary transition-colors duration-300"></div>
+                  AI CRM
+                </div>
+                <h3 className="text-2xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors duration-300">
+                  Purpose built for Private Investments
+                </h3>
+                <p className="text-muted-foreground mb-8 leading-relaxed">
+                  Fully AI data backbone for all contacts, deals, files and insights—to eliminate silos and spreadsheets.
+                </p>
+                
+                {/* CRM Preview Mockup */}
+                <div className="card-nested p-6 text-left group-hover:shadow-lg group-hover:shadow-primary/20 transition-all duration-300">
+                  <h4 className="text-sm font-semibold text-foreground mb-4">Incoming Email</h4>
+                  <div className="space-y-3 text-xs">
+                    <div className="flex items-center justify-between p-2 bg-muted/30 rounded group-hover:bg-muted/50 transition-colors duration-200">
+                      <span className="text-muted-foreground">Ingest email w/ attachment</span>
+                      <span className="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded text-xs">Done</span>
+                    </div>
+                    <div className="flex items-center justify-between p-2 bg-muted/30 rounded group-hover:bg-muted/50 transition-colors duration-200">
+                      <span className="text-muted-foreground">Parse & Analyze entities</span>
+                      <span className="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded text-xs">Done</span>
+                    </div>
+                    <div className="flex items-center justify-between p-2 bg-muted/30 rounded group-hover:bg-muted/50 transition-colors duration-200">
+                      <span className="text-muted-foreground">Update CRM records</span>
+                      <span className="px-2 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300 rounded text-xs animate-pulse">Running</span>
+                    </div>
+                    <div className="flex items-center justify-between p-2 bg-muted/30 rounded group-hover:bg-muted/50 transition-colors duration-200">
+                      <span className="text-muted-foreground">Tag file to contact</span>
+                      <span className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 rounded text-xs">Queued</span>
+                    </div>
+                    <div className="flex items-center justify-between p-2 bg-muted/30 rounded group-hover:bg-muted/50 transition-colors duration-200">
+                      <span className="text-muted-foreground">Upload to Google Drive</span>
+                      <span className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 rounded text-xs">Queued</span>
                     </div>
                   </div>
                 </div>
@@ -220,44 +218,42 @@ const HomePage = () => {
             </div>
 
             {/* AI Agents Column */}
-            <div className="group relative p-[2px] rounded-2xl overflow-hidden transition-all duration-500 hover:scale-[1.02] cursor-pointer bg-gradient-to-r from-transparent via-primary/10 to-transparent hover:from-primary/20 hover:via-primary/30 hover:to-primary/20">
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/20 to-transparent opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500"></div>
-              <div className="relative bg-background/95 backdrop-blur-sm rounded-2xl p-8 h-full border border-border/50 group-hover:border-primary/30 transition-all duration-500">
-                <div className="text-center">
-                  <div className="inline-flex items-center gap-2 px-3 py-1 bg-muted/50 rounded-full text-sm font-medium text-muted-foreground mb-6 group-hover:bg-primary/10 group-hover:text-primary transition-colors duration-300">
-                    <div className="w-2 h-2 bg-foreground rounded-full group-hover:bg-primary transition-colors duration-300"></div>
-                    AI Agents
-                  </div>
-                  <h3 className="text-2xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors duration-300">
-                    Deploy Pre-Built AI Agents in One Click
-                  </h3>
-                  <p className="text-muted-foreground mb-8 leading-relaxed">
-                    Curated library of agents that work 24/7 for you to automate and scale your business.
-                  </p>
-                  
-                  {/* Agents Preview Mockup */}
-                  <div className="card-nested p-6 group-hover:shadow-lg group-hover:shadow-primary/10 transition-all duration-500">
-                    <div className="grid grid-cols-2 gap-3 text-xs">
-                      <div className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 p-4 rounded-lg text-center transform group-hover:scale-105 transition-transform duration-300">
-                        <div className="w-8 h-8 bg-blue-500 rounded-full mx-auto mb-2 animate-pulse"></div>
-                        <div className="font-semibold text-foreground">Due Diligence</div>
-                        <div className="text-muted-foreground text-xs mt-1">Portfolio Management</div>
-                      </div>
-                      <div className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 p-4 rounded-lg text-center transform group-hover:scale-105 transition-transform duration-300 delay-75">
-                        <div className="w-8 h-8 bg-green-500 rounded-full mx-auto mb-2"></div>
-                        <div className="font-semibold text-foreground">Risk Analysis</div>
-                        <div className="text-muted-foreground text-xs mt-1">Capital Raising</div>
-                      </div>
-                      <div className="bg-gradient-to-br from-purple-50 to-violet-50 dark:from-purple-900/20 dark:to-violet-900/20 p-4 rounded-lg text-center transform group-hover:scale-105 transition-transform duration-300 delay-150">
-                        <div className="w-8 h-8 bg-purple-500 rounded-full mx-auto mb-2"></div>
-                        <div className="font-semibold text-foreground">Market Research</div>
-                        <div className="text-muted-foreground text-xs mt-1">Deal Sourcing</div>
-                      </div>
-                      <div className="bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 p-4 rounded-lg text-center transform group-hover:scale-105 transition-transform duration-300 delay-200">
-                        <div className="w-8 h-8 bg-orange-500 rounded-full mx-auto mb-2"></div>
-                        <div className="font-semibold text-foreground">Compliance</div>
-                        <div className="text-muted-foreground text-xs mt-1">Reporting</div>
-                      </div>
+            <div className="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 cursor-pointer">
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-primary via-primary/50 to-primary rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
+              <div className="relative card-premium dark:card-dark-premium text-center h-full">
+                <div className="inline-flex items-center gap-2 px-3 py-1 bg-muted/50 rounded-full text-sm font-medium text-muted-foreground mb-6 group-hover:bg-primary/10 group-hover:text-primary transition-colors duration-300">
+                  <div className="w-2 h-2 bg-foreground rounded-full group-hover:bg-primary transition-colors duration-300"></div>
+                  AI Agents
+                </div>
+                <h3 className="text-2xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors duration-300">
+                  Deploy Pre-Built AI Agents in One Click
+                </h3>
+                <p className="text-muted-foreground mb-8 leading-relaxed">
+                  Curated library of agents that work 24/7 for you to automate and scale your business.
+                </p>
+                
+                {/* Agents Preview Mockup */}
+                <div className="card-nested p-6 group-hover:shadow-lg group-hover:shadow-primary/20 transition-all duration-300">
+                  <div className="grid grid-cols-2 gap-3 text-xs">
+                    <div className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 p-4 rounded-lg text-center transform group-hover:scale-110 transition-transform duration-300">
+                      <div className="w-8 h-8 bg-blue-500 rounded-full mx-auto mb-2"></div>
+                      <div className="font-semibold text-foreground">Due Diligence</div>
+                      <div className="text-muted-foreground text-xs mt-1">Portfolio Management</div>
+                    </div>
+                    <div className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 p-4 rounded-lg text-center transform group-hover:scale-110 transition-transform duration-300 delay-75">
+                      <div className="w-8 h-8 bg-green-500 rounded-full mx-auto mb-2"></div>
+                      <div className="font-semibold text-foreground">Risk Analysis</div>
+                      <div className="text-muted-foreground text-xs mt-1">Capital Raising</div>
+                    </div>
+                    <div className="bg-gradient-to-br from-purple-50 to-violet-50 dark:from-purple-900/20 dark:to-violet-900/20 p-4 rounded-lg text-center transform group-hover:scale-110 transition-transform duration-300 delay-150">
+                      <div className="w-8 h-8 bg-purple-500 rounded-full mx-auto mb-2"></div>
+                      <div className="font-semibold text-foreground">Market Research</div>
+                      <div className="text-muted-foreground text-xs mt-1">Deal Sourcing</div>
+                    </div>
+                    <div className="bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 p-4 rounded-lg text-center transform group-hover:scale-110 transition-transform duration-300 delay-200">
+                      <div className="w-8 h-8 bg-orange-500 rounded-full mx-auto mb-2"></div>
+                      <div className="font-semibold text-foreground">Compliance</div>
+                      <div className="text-muted-foreground text-xs mt-1">Reporting</div>
                     </div>
                   </div>
                 </div>
@@ -265,41 +261,39 @@ const HomePage = () => {
             </div>
 
             {/* IRIS Column */}
-            <div className="group relative p-[2px] rounded-2xl overflow-hidden transition-all duration-500 hover:scale-[1.02] cursor-pointer bg-gradient-to-r from-transparent via-primary/10 to-transparent hover:from-primary/20 hover:via-primary/30 hover:to-primary/20">
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/20 to-transparent opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500"></div>
-              <div className="relative bg-background/95 backdrop-blur-sm rounded-2xl p-8 h-full border border-border/50 group-hover:border-primary/30 transition-all duration-500">
-                <div className="text-center">
-                  <div className="inline-flex items-center gap-2 px-3 py-1 bg-muted/50 rounded-full text-sm font-medium text-muted-foreground mb-6 group-hover:bg-primary/10 group-hover:text-primary transition-colors duration-300">
-                    <div className="w-2 h-2 bg-foreground rounded-full group-hover:bg-primary transition-colors duration-300"></div>
-                    IRIS
-                  </div>
-                  <h3 className="text-2xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors duration-300">
-                    Conversational AI in your CRM
-                  </h3>
-                  <p className="text-muted-foreground mb-8 leading-relaxed">
-                    Talk to IRIS—generate memos, run analyses or pull up any deal data in seconds.
-                  </p>
-                  
-                  {/* IRIS Chat Preview Mockup */}
-                  <div className="card-nested p-6 text-left group-hover:shadow-lg group-hover:shadow-primary/10 transition-all duration-500">
-                    <div className="space-y-4">
-                      <div className="flex gap-3 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-500">
-                        <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center text-xs font-bold text-primary-foreground animate-pulse">I</div>
-                        <div className="flex-1 bg-muted/50 rounded-lg p-3 text-sm text-muted-foreground">
-                          Hello! I'm IRIS, your AI assistant. How can I help you today?
-                        </div>
+            <div className="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 cursor-pointer">
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-primary via-primary/50 to-primary rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
+              <div className="relative card-premium dark:card-dark-premium text-center h-full">
+                <div className="inline-flex items-center gap-2 px-3 py-1 bg-muted/50 rounded-full text-sm font-medium text-muted-foreground mb-6 group-hover:bg-primary/10 group-hover:text-primary transition-colors duration-300">
+                  <div className="w-2 h-2 bg-foreground rounded-full group-hover:bg-primary transition-colors duration-300"></div>
+                  IRIS
+                </div>
+                <h3 className="text-2xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors duration-300">
+                  Conversational AI in your CRM
+                </h3>
+                <p className="text-muted-foreground mb-8 leading-relaxed">
+                  Talk to IRIS—generate memos, run analyses or pull up any deal data in seconds.
+                </p>
+                
+                {/* IRIS Chat Preview Mockup */}
+                <div className="card-nested p-6 text-left group-hover:shadow-lg group-hover:shadow-primary/20 transition-all duration-300">
+                  <div className="space-y-4">
+                    <div className="flex gap-3 transform translate-y-1 group-hover:translate-y-0 transition-transform duration-300">
+                      <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center text-xs font-bold text-primary-foreground">I</div>
+                      <div className="flex-1 bg-muted/50 rounded-lg p-3 text-sm text-muted-foreground">
+                        Hello! I'm IRIS, your AI assistant. How can I help you today?
                       </div>
-                      <div className="flex gap-3 justify-end opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-700">
-                        <div className="bg-primary/10 rounded-lg p-3 text-sm text-foreground max-w-xs">
-                          Show me the top 5 deals by value this quarter
-                        </div>
-                        <div className="w-6 h-6 bg-muted rounded-full"></div>
+                    </div>
+                    <div className="flex gap-3 justify-end transform translate-y-1 group-hover:translate-y-0 transition-transform duration-300 delay-100">
+                      <div className="bg-primary/10 rounded-lg p-3 text-sm text-foreground max-w-xs">
+                        Show me the top 5 deals by value this quarter
                       </div>
-                      <div className="flex gap-3 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-1000">
-                        <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center text-xs font-bold text-primary-foreground">I</div>
-                        <div className="flex-1 bg-muted/50 rounded-lg p-3 text-sm text-muted-foreground">
-                          Here are your top 5 deals this quarter by transaction value...
-                        </div>
+                      <div className="w-6 h-6 bg-muted rounded-full"></div>
+                    </div>
+                    <div className="flex gap-3 transform translate-y-1 group-hover:translate-y-0 transition-transform duration-300 delay-200">
+                      <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center text-xs font-bold text-primary-foreground">I</div>
+                      <div className="flex-1 bg-muted/50 rounded-lg p-3 text-sm text-muted-foreground">
+                        Here are your top 5 deals this quarter by transaction value...
                       </div>
                     </div>
                   </div>
