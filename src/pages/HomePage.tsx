@@ -187,13 +187,53 @@ const HomePage = () => {
                 Fully AI data backbone for all contacts, deals, files and insights—to eliminate silos and spreadsheets.
               </p>
               
-              {/* CRM Contact Profile Image */}
-              <div className="bg-muted/50 border border-border/10 rounded-xl p-0 overflow-hidden">
-                <img 
-                  src={crmContactProfile} 
-                  alt="CRM contact profile showing Sarah Johnson, Managing Partner at Blackstone Capital with contact details and interaction history"
-                  className="w-full h-auto rounded-lg"
-                />
+              {/* CRM Contact Profile Mockup */}
+              <div className="card-nested p-6 text-left">
+                {/* Contact Header */}
+                <div className="flex items-center gap-3 mb-4 pb-3 border-b border-border/10">
+                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold">
+                    SJ
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="font-semibold text-foreground text-sm">Sarah Johnson</h4>
+                    <p className="text-xs text-muted-foreground">Managing Partner</p>
+                    <p className="text-xs text-muted-foreground">Blackstone Capital</p>
+                  </div>
+                  <div className="px-2 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded text-xs">
+                    Active
+                  </div>
+                </div>
+                
+                {/* Contact Details */}
+                <div className="space-y-2 mb-4">
+                  <div className="flex justify-between text-xs">
+                    <span className="text-muted-foreground">Email:</span>
+                    <span className="text-foreground">s.johnson@blackstone.com</span>
+                  </div>
+                  <div className="flex justify-between text-xs">
+                    <span className="text-muted-foreground">AUM:</span>
+                    <span className="text-foreground">$2.4B</span>
+                  </div>
+                  <div className="flex justify-between text-xs">
+                    <span className="text-muted-foreground">Last Contact:</span>
+                    <span className="text-foreground">2 days ago</span>
+                  </div>
+                </div>
+                
+                {/* Recent Activity */}
+                <div className="pt-3 border-t border-border/10">
+                  <p className="text-xs font-medium text-muted-foreground mb-2">Recent Activity</p>
+                  <div className="space-y-1">
+                    <div className="flex items-center gap-2 text-xs">
+                      <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
+                      <span className="text-foreground">Reviewed Series A deck</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-xs">
+                      <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
+                      <span className="text-foreground">Scheduled follow-up call</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
