@@ -1,25 +1,22 @@
 "use client";
 
 import React from "react";
-import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import { EvervaultCard } from "@/components/ui/evervault-card";
 import { Badge } from "@/components/ui/badge";
 import { Mail, Timer, FileText, UserPlus, Link, Send, Download } from "lucide-react";
 
 export function ThreeDCardDemo() {
   return (
-    <CardContainer className="inter-var w-full">
+    <div className="w-full">
       <div className="relative w-full h-auto">
         <EvervaultCard className="absolute inset-0 rounded-xl" />
-        <CardBody
-          className="bg-gray-50/90 backdrop-blur-sm relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black/90 dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-8 border z-10">
-        
+        <div className="bg-gray-50/90 backdrop-blur-sm relative dark:bg-black/90 dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-8 border z-10">
         
         {/* Header */}
-        <CardItem translateZ="20" className="w-full">
+        <div className="w-full">
           <div className="flex flex-col space-y-2">
             <div className="flex items-center justify-between">
-              <h1 className="text-lg font-bold text-neutral-800">
+              <h1 className="text-lg font-bold text-neutral-800 dark:text-white">
                 New Incoming Email
               </h1>
               <span className="text-xs text-neutral-500">from jordan.n@terraview.com</span>
@@ -37,14 +34,14 @@ export function ThreeDCardDemo() {
               </Badge>
             </div>
           </div>
-        </CardItem>
+        </div>
 
-        <CardItem translateZ="30" className="w-full mt-3">
-          <hr className="border-gray-200" />
-        </CardItem>
+        <div className="w-full mt-3">
+          <hr className="border-gray-200 dark:border-gray-600" />
+        </div>
 
         {/* Outlook API Section */}
-        <CardItem translateZ="40" className="w-full mt-4">
+        <div className="w-full mt-4">
           <div className="space-y-3">
             {/* Outlook API Header */}
             <div className="flex items-center gap-2">
@@ -91,14 +88,14 @@ export function ThreeDCardDemo() {
               </div>
             </div>
           </div>
-        </CardItem>
+        </div>
 
         {/* IRIS CRM Management Section */}
-        <CardItem translateZ="40" className="w-full mt-4">
+        <div className="w-full mt-4">
           <div className="space-y-3">
             {/* IRIS CRM Header */}
             <div className="flex items-center gap-2">
-              <img src="/public/lovable-uploads/c6f05c4c-ee88-4c86-a4f7-98e6e90e6071.png" alt="IRIS CRM" className="w-4 h-4" />
+              <img src="/lovable-uploads/c6f05c4c-ee88-4c86-a4f7-98e6e90e6071.png" alt="IRIS CRM" className="w-4 h-4" />
               <span className="text-sm font-medium text-gray-600 dark:text-gray-400">IRIS CRM Management</span>
             </div>
 
@@ -162,9 +159,9 @@ export function ThreeDCardDemo() {
               </div>
             </div>
           </div>
-        </CardItem>
-        </CardBody>
+        </div>
+        </div>
       </div>
-    </CardContainer>
+    </div>
   );
 }
