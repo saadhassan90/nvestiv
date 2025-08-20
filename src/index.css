@@ -176,6 +176,23 @@
     @apply shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-1;
   }
 
+  /* Dark mode card variants inspired by CloudFlask */
+  .card-dark-premium {
+    @apply bg-card border border-border/20 rounded-2xl p-8;
+    @apply shadow-lg shadow-black/10 transition-all duration-200;
+  }
+  
+  .card-nested {
+    @apply bg-muted/50 border border-border/10 rounded-xl p-4;
+    @apply backdrop-blur-sm;
+  }
+
+  /* Enhanced glass effect for dark mode */
+  .glass-dark {
+    @apply bg-card/60 backdrop-blur-md border border-border/20;
+    @apply shadow-xl shadow-black/20;
+  }
+
   /* Minimal glass effect */
   .glass {
     @apply bg-background/95 backdrop-blur-sm border border-border/50;
