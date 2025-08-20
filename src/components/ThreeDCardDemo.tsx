@@ -139,7 +139,7 @@ export function ThreeDCardDemo() {
                     <div className="flex-1">
                       <div className="flex items-center gap-2 mb-2">
                         <Link className="w-4 h-4 text-gray-500" />
-                        <h3 className="text-sm font-medium text-gray-700 dark:text-gray-300">Associated File to Jordan Noah</h3>
+                        <h3 className="text-sm font-medium text-gray-700 dark:text-gray-300">Associated File to <span className="inline-flex items-center gap-1"><img src={jordanAvatar} alt="Jordan Noah" className="w-3 h-3 rounded-full" />Jordan Noah</span></h3>
                       </div>
                       <div className="flex items-center gap-4">
                         <p className="text-xs text-gray-500 dark:text-gray-400">Uploaded file, summarized, and tagged to profile.</p>
