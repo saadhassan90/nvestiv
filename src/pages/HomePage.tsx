@@ -188,7 +188,7 @@ const HomePage = () => {
               </p>
               
               {/* CRM Contact Profile Image */}
-              <div className="card-nested p-0 overflow-hidden">
+              <div className="bg-muted/50 border border-border/10 rounded-xl p-0 overflow-hidden">
                 <img 
                   src={crmContactProfile} 
                   alt="CRM contact profile showing Sarah Johnson, Managing Partner at Blackstone Capital with contact details and interaction history"
