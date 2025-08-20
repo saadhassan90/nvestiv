@@ -40,15 +40,18 @@ const HomePage = () => {
   }, [charIndex, currentIndex, isDeleting, audienceTypes]);
 
   return (
-    <div className="min-h-screen bg-background relative">
-      {/* Custom Grid Background */}
-      <div className="absolute inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]"></div>
+    <div className="min-h-screen relative">
+      {/* Light Mode Background */}
+      <div className="absolute inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem] dark:hidden"></div>
+      
+      {/* Dark Mode Background */}
+      <div className="absolute inset-0 -z-10 h-full w-full bg-gradient-to-b from-[#141E30] to-[#243B55] hidden dark:block"></div>
       
       {/* Navigation */}
       <Navigation />
       
       {/* Hero Section with Black Background */}
-      <main className="pt-24 md:pt-28 lg:pt-32 relative z-10 bg-white">
+      <main className="pt-24 md:pt-28 lg:pt-32 relative z-10 bg-white dark:bg-transparent">
         <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f15_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f15_1px,transparent_1px)] bg-[size:120px_120px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"></div>
         <div className="w-full relative flex flex-col items-center justify-center overflow-hidden">
           <div className="w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
