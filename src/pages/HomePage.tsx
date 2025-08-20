@@ -171,10 +171,10 @@ const HomePage = () => {
             </p>
           </div>
 
-          {/* Three Column Features */}
-          <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
+          {/* Focus Cards Grid */}
+          <div className="grid md:grid-cols-3 gap-8 lg:gap-12 group">
             {/* AI CRM Column */}
-            <div className="card-dark-premium text-center">
+            <div className="card-dark-premium text-center transition-all duration-500 hover:scale-[1.02] group-hover:blur-sm hover:!blur-none relative z-10 hover:z-20">
               <div className="inline-flex items-center gap-2 px-3 py-1 bg-muted/50 rounded-full text-sm font-medium text-muted-foreground mb-6">
                 <div className="w-2 h-2 bg-foreground rounded-full"></div>
                 AI CRM
@@ -215,7 +215,7 @@ const HomePage = () => {
             </div>
 
             {/* AI Agents Column */}
-            <div className="card-dark-premium text-center">
+            <div className="card-dark-premium text-center transition-all duration-500 hover:scale-[1.02] group-hover:blur-sm hover:!blur-none relative z-10 hover:z-20">
               <div className="inline-flex items-center gap-2 px-3 py-1 bg-muted/50 rounded-full text-sm font-medium text-muted-foreground mb-6">
                 <div className="w-2 h-2 bg-foreground rounded-full"></div>
                 AI Agents
@@ -255,7 +255,7 @@ const HomePage = () => {
             </div>
 
             {/* IRIS Column */}
-            <div className="card-dark-premium text-center">
+            <div className="card-dark-premium text-center transition-all duration-500 hover:scale-[1.02] group-hover:blur-sm hover:!blur-none relative z-10 hover:z-20">
               <div className="inline-flex items-center gap-2 px-3 py-1 bg-muted/50 rounded-full text-sm font-medium text-muted-foreground mb-6">
                 <div className="w-2 h-2 bg-foreground rounded-full"></div>
                 IRIS
