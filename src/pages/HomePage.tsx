@@ -256,7 +256,7 @@ const HomePage = () => {
               
               {/* Learn More Button */}
               <div className="mt-6">
-                <Button variant="ghost" size="sm" className="w-full text-xs h-8">
+                <Button variant="outline" size="sm" className="w-full text-xs h-8">
                   Learn More
                 </Button>
               </div>
@@ -311,7 +311,7 @@ const HomePage = () => {
               
               {/* Learn More Button */}
               <div className="mt-6">
-                <Button variant="ghost" size="sm" className="w-full text-xs h-8">
+                <Button variant="outline" size="sm" className="w-full text-xs h-8">
                   Learn More
                 </Button>
               </div>
@@ -362,7 +362,7 @@ const HomePage = () => {
               
               {/* Learn More Button */}
               <div className="mt-6">
-                <Button variant="ghost" size="sm" className="w-full text-xs h-8">
+                <Button variant="outline" size="sm" className="w-full text-xs h-8">
                   Learn More
                 </Button>
               </div>
