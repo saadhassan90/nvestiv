@@ -54,7 +54,7 @@ const HomePage = () => {
           <div className="w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
             
             {/* Hero Content */}
-            <section className="w-full min-h-[calc(100vh-8rem)] flex items-center justify-center py-8 sm:py-12 lg:py-16">
+            <section className="w-full min-h-[calc(100vh-8rem)] flex items-center justify-center pt-8 sm:pt-12 lg:pt-16 pb-5">
               
               {/* Vertical Layout Container - Centered */}
               <div className="w-full max-w-7xl mx-auto flex flex-col items-center justify-center text-center">
