@@ -35,9 +35,10 @@ export function Button({
       {...otherProps}
     >
       <div
-        className="absolute inset-0 rounded-[inherit] z-[0] moving-border-spin"
+        className="absolute inset-0 rounded-[inherit] z-[0]"
         style={{
           background: `conic-gradient(from 0deg, transparent, #8215E0, transparent 30%)`,
+          animation: `moving-border-spin ${duration}s cubic-bezier(0.4, 0, 0.2, 1) infinite`,
         }}
       />
       <div

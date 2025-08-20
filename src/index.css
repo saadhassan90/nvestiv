@@ -187,11 +187,6 @@
     @apply transition-all duration-200 ease-out;
   }
 
-  /* Moving border animation */
-  .moving-border-spin {
-    animation: moving-border-spin 6s linear infinite;
-  }
-
   @keyframes moving-border-spin {
     from {
       transform: rotate(0deg);
