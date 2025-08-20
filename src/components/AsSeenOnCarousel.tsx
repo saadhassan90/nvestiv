@@ -42,22 +42,8 @@ const AsSeenOnCarousel = () => {
 
     animationId = requestAnimationFrame(animate);
 
-    // Pause on hover
-    const handleMouseEnter = () => {
-      cancelAnimationFrame(animationId);
-    };
-
-    const handleMouseLeave = () => {
-      animationId = requestAnimationFrame(animate);
-    };
-
-    carousel.addEventListener('mouseenter', handleMouseEnter);
-    carousel.addEventListener('mouseleave', handleMouseLeave);
-
     return () => {
       cancelAnimationFrame(animationId);
-      carousel.removeEventListener('mouseenter', handleMouseEnter);
-      carousel.removeEventListener('mouseleave', handleMouseLeave);
     };
   }, []);
 
@@ -82,7 +68,7 @@ const AsSeenOnCarousel = () => {
                   <img
                     src={logo.src}
                     alt={logo.alt}
-                    className="max-h-full max-w-full object-contain opacity-60 hover:opacity-80 transition-opacity filter grayscale hover:grayscale-0"
+                    className="max-h-full max-w-full object-contain opacity-60 filter grayscale"
                   />
                 </div>
               ))}
