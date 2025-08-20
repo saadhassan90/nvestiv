@@ -108,7 +108,7 @@ export function ThreeDCardDemo() {
             <div className="space-y-3">
               {/* IRIS CRM Header */}
               <div className="flex items-center gap-2">
-                <img src="/public/lovable-uploads/c6f05c4c-ee88-4c86-a4f7-98e6e90e6071.png" alt="IRIS CRM" className="w-4 h-4" />
+                <img src="/lovable-uploads/f2431190-7d25-4418-8529-0fa8f1178f73.png" alt="IRIS CRM" className="w-4 h-4" />
                 <span className="text-sm font-medium text-gray-600 dark:text-gray-400">IRIS CRM Management</span>
               </div>
 
