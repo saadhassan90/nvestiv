@@ -7,7 +7,13 @@ export function ThreeDCardDemo() {
   return (
     <CardContainer className="inter-var w-full">
       <CardBody
-        className="bg-white/20 backdrop-blur-lg relative group/card shadow-2xl border border-white/30 w-full h-auto rounded-xl p-4">
+        className="relative group/card w-full h-auto rounded-xl p-4"
+        style={{
+          background: "rgba(255, 255, 255, 0.1)",
+          backdropFilter: "blur(20px)",
+          border: "1px solid rgba(255, 255, 255, 0.2)",
+          boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.37)",
+        }}>
         
         {/* Header */}
         <CardItem translateZ="20" className="w-full">
