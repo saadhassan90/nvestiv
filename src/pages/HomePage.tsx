@@ -182,10 +182,10 @@ const HomePage = () => {
                   <div className="w-2 h-2 bg-foreground rounded-full"></div>
                   AI CRM
                 </div>
-                <h3 className="text-2xl font-bold text-foreground mb-8 h-16 flex items-center justify-center">
+                <h3 className="text-2xl font-bold text-foreground mb-6 h-16 flex items-center justify-center">
                   Purpose built for Private Investments
                 </h3>
-                <p className="text-muted-foreground mb-8 leading-relaxed h-12 flex items-center justify-center">
+                <p className="text-muted-foreground mb-6 leading-relaxed h-12 flex items-center justify-center">
                   Fully AI data backbone for all contacts, deals, files and insights—to eliminate silos and spreadsheets.
                 </p>
               </div>
@@ -275,10 +275,10 @@ const HomePage = () => {
                   <div className="w-2 h-2 bg-foreground rounded-full"></div>
                   AI Agents
                 </div>
-                <h3 className="text-2xl font-bold text-foreground mb-8 h-16 flex items-center justify-center">
+                <h3 className="text-2xl font-bold text-foreground mb-6 h-16 flex items-center justify-center">
                   Deploy Pre-Built AI Agents in One Click
                 </h3>
-                <p className="text-muted-foreground mb-8 leading-relaxed h-12 flex items-center justify-center">
+                <p className="text-muted-foreground mb-6 leading-relaxed h-12 flex items-center justify-center">
                   Curated library of agents that work 24/7 for you to automate and scale your business.
                 </p>
               </div>
@@ -335,10 +335,10 @@ const HomePage = () => {
                   <div className="w-2 h-2 bg-foreground rounded-full"></div>
                   IRIS
                 </div>
-                <h3 className="text-2xl font-bold text-foreground mb-8 h-16 flex items-center justify-center">
+                <h3 className="text-2xl font-bold text-foreground mb-6 h-16 flex items-center justify-center">
                   Conversational AI in your CRM
                 </h3>
-                <p className="text-muted-foreground mb-8 leading-relaxed h-12 flex items-center justify-center">
+                <p className="text-muted-foreground mb-6 leading-relaxed h-12 flex items-center justify-center">
                   Talk to IRIS—generate memos, run analyses or pull up any deal data in seconds.
                 </p>
               </div>
