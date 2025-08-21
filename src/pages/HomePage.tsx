@@ -182,7 +182,7 @@ const HomePage = () => {
                   <div className="w-2 h-2 bg-foreground rounded-full"></div>
                   AI CRM
                 </div>
-                <h3 className="text-2xl font-bold text-foreground mb-4 h-16 flex items-center justify-center">
+                <h3 className="text-2xl font-bold text-foreground mb-8 h-16 flex items-center justify-center">
                   Purpose built for Private Investments
                 </h3>
                 <p className="text-muted-foreground mb-8 leading-relaxed h-12 flex items-center justify-center">
@@ -275,7 +275,7 @@ const HomePage = () => {
                   <div className="w-2 h-2 bg-foreground rounded-full"></div>
                   AI Agents
                 </div>
-                <h3 className="text-2xl font-bold text-foreground mb-4 h-16 flex items-center justify-center">
+                <h3 className="text-2xl font-bold text-foreground mb-8 h-16 flex items-center justify-center">
                   Deploy Pre-Built AI Agents in One Click
                 </h3>
                 <p className="text-muted-foreground mb-8 leading-relaxed h-12 flex items-center justify-center">
@@ -335,7 +335,7 @@ const HomePage = () => {
                   <div className="w-2 h-2 bg-foreground rounded-full"></div>
                   IRIS
                 </div>
-                <h3 className="text-2xl font-bold text-foreground mb-4 h-16 flex items-center justify-center">
+                <h3 className="text-2xl font-bold text-foreground mb-8 h-16 flex items-center justify-center">
                   Conversational AI in your CRM
                 </h3>
                 <p className="text-muted-foreground mb-8 leading-relaxed h-12 flex items-center justify-center">
