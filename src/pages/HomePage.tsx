@@ -177,12 +177,12 @@ const HomePage = () => {
             {/* AI CRM Column */}
             <div className="card-dark-premium text-center transition-all duration-500 hover:scale-[1.02] flex flex-col h-full">
               {/* Header Content - Fixed Height */}
-              <div className="flex-shrink-0 px-6 pt-8 pb-4">
-                <div className="inline-flex items-center gap-2 px-3 py-1 bg-muted/50 rounded-full text-sm font-medium text-muted-foreground mb-4">
+              <div className="flex-shrink-0 px-8 pt-8 pb-6">
+                <div className="inline-flex items-center gap-2 px-3 py-1 bg-muted/50 rounded-full text-sm font-medium text-muted-foreground mb-6">
                   <div className="w-2 h-2 bg-foreground rounded-full"></div>
                   AI CRM
                 </div>
-                <h3 className="text-2xl font-bold text-foreground mb-4">
+                <h3 className="text-2xl font-bold text-foreground mb-6">
                   Purpose built for Private Investments
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -191,7 +191,7 @@ const HomePage = () => {
               </div>
               
               {/* Mockup Content - Fixed Height */}
-              <div className="flex-1 flex flex-col px-6 pb-6">
+              <div className="flex-1 flex flex-col px-8 pb-8">
                 <div className="card-nested p-4 text-left h-[280px] flex flex-col overflow-hidden mb-6">
                   {/* Contact Header */}
                   <div className="flex items-center gap-3 mb-3 pb-2 border-b border-border/10 min-h-0">
@@ -270,12 +270,12 @@ const HomePage = () => {
             {/* AI Agents Column */}
             <div className="card-dark-premium text-center transition-all duration-500 hover:scale-[1.02] flex flex-col h-full">
               {/* Header Content - Fixed Height */}
-              <div className="flex-shrink-0 px-6 pt-8 pb-4">
-                <div className="inline-flex items-center gap-2 px-3 py-1 bg-muted/50 rounded-full text-sm font-medium text-muted-foreground mb-4">
+              <div className="flex-shrink-0 px-8 pt-8 pb-6">
+                <div className="inline-flex items-center gap-2 px-3 py-1 bg-muted/50 rounded-full text-sm font-medium text-muted-foreground mb-6">
                   <div className="w-2 h-2 bg-foreground rounded-full"></div>
                   AI Agents
                 </div>
-                <h3 className="text-2xl font-bold text-foreground mb-4">
+                <h3 className="text-2xl font-bold text-foreground mb-6">
                   Deploy Pre-Built AI Agents in One Click
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -284,7 +284,7 @@ const HomePage = () => {
               </div>
               
               {/* Mockup Content - Fixed Height */}
-              <div className="flex-1 flex flex-col px-6 pb-6">
+              <div className="flex-1 flex flex-col px-8 pb-8">
                 <div className="card-nested p-4 h-[280px] flex flex-col justify-center mb-6">
                   <div className="grid grid-cols-2 gap-3">
                     <div className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 p-4 rounded-lg text-center">
@@ -330,12 +330,12 @@ const HomePage = () => {
             {/* IRIS Column */}
             <div className="card-dark-premium text-center transition-all duration-500 hover:scale-[1.02] flex flex-col h-full">
               {/* Header Content - Fixed Height */}
-              <div className="flex-shrink-0 px-6 pt-8 pb-4">
-                <div className="inline-flex items-center gap-2 px-3 py-1 bg-muted/50 rounded-full text-sm font-medium text-muted-foreground mb-4">
+              <div className="flex-shrink-0 px-8 pt-8 pb-6">
+                <div className="inline-flex items-center gap-2 px-3 py-1 bg-muted/50 rounded-full text-sm font-medium text-muted-foreground mb-6">
                   <div className="w-2 h-2 bg-foreground rounded-full"></div>
                   IRIS
                 </div>
-                <h3 className="text-2xl font-bold text-foreground mb-4">
+                <h3 className="text-2xl font-bold text-foreground mb-6">
                   Conversational AI in your CRM
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -344,7 +344,7 @@ const HomePage = () => {
               </div>
               
               {/* Mockup Content - Fixed Height */}
-              <div className="flex-1 flex flex-col px-6 pb-6">
+              <div className="flex-1 flex flex-col px-8 pb-8">
                 <div className="card-nested p-4 text-left h-[280px] flex flex-col justify-center mb-6">
                   <div className="space-y-4">
                     <div className="flex gap-3">
