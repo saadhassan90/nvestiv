@@ -171,7 +171,16 @@ const HomePage = () => {
               Overview
             </div>
             <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-              Unlock Private Investments with AI
+              Unlock{" "}
+              <PointerHighlight
+                rectangleClassName="bg-gradient-to-r from-blue-100/80 to-sky-100/80 dark:from-blue-800/40 dark:to-sky-800/40 border border-blue-300/50 dark:border-blue-600/50 leading-loose"
+                pointerClassName="text-blue-500 h-3 w-3"
+                containerClassName="inline-block mr-1"
+                className="text-foreground"
+              >
+                <span className="relative z-20">Private Investments</span>
+              </PointerHighlight>
+              {" "}with AI
             </h2>
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
               Centralize your data and deploy AI agents to automate critical tasks—so you never miss an opportunity or risk because of workplace slog
