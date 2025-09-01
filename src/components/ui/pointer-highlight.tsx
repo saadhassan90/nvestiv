@@ -19,20 +19,20 @@ export function PointerHighlight({
   return (
     <span className={cn("relative", containerClassName)}>
       <motion.div
-        initial={{ opacity: 0, scale: 0.95 }}
+        initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.2 }}
+        transition={{ duration: 0.4, ease: "easeOut" }}
         className={cn(
           "absolute inset-0 rounded-md",
           rectangleClassName
         )}
       />
       <motion.div
-        initial={{ opacity: 0, x: -20, y: -20 }}
+        initial={{ opacity: 0, x: 10, y: 10 }}
         animate={{ opacity: 1, x: 0, y: 0 }}
-        transition={{ duration: 0.3, delay: 0.1 }}
+        transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
         className={cn(
-          "absolute -top-2 -left-2 transform rotate-12",
+          "absolute -bottom-1 -right-1 transform rotate-12",
           pointerClassName
         )}
       >
@@ -53,7 +53,7 @@ export function PointerHighlight({
           />
         </svg>
       </motion.div>
-      <span className={cn("relative z-10", className)}>{children}</span>
+      <span className={cn("relative z-20", className)}>{children}</span>
     </span>
   );
 }

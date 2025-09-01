@@ -72,11 +72,12 @@ const HomePage = () => {
                         <h1 className="text-4xl lg:text-5xl xl:text-6xl font-black leading-tight" style={{ fontWeight: 900 }}>
                           <span className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 bg-clip-text text-transparent">
                             <PointerHighlight
-                              rectangleClassName="bg-gradient-to-r from-blue-50 to-sky-50 dark:from-blue-900/20 dark:to-sky-900/20 border border-blue-200 dark:border-blue-700 leading-loose"
+                              rectangleClassName="bg-gradient-to-r from-blue-100/80 to-sky-100/80 dark:from-blue-800/40 dark:to-sky-800/40 border border-blue-300/50 dark:border-blue-600/50 leading-loose"
                               pointerClassName="text-blue-500 h-3 w-3"
                               containerClassName="inline-block mr-1"
+                              className="text-gray-900 dark:text-white"
                             >
-                              <span className="relative z-10">AI Operating System</span>
+                              <span className="relative z-20">AI Operating System</span>
                             </PointerHighlight>
                             {" "}for Private Investment Firms
                           </span>
