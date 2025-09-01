@@ -67,7 +67,7 @@ const Footer = () => {
                   </h2>
                 </div>
                 <p className="text-gray-300 max-w-md leading-relaxed">
-                  AI-powered solutions for private investments. Revolutionizing how institutional investors manage deal flow, due diligence, and portfolio optimization.
+                  Your entire business on one AI CRM — speak custom agents into existence and automate everything. No code, just plain english commands that transform how you work. Nvestiv unifies relationships, files, and investments into a single platform built for private markets.
                 </p>
                 
                 {/* Contact Info */}
