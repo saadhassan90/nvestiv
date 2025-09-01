@@ -155,8 +155,8 @@ const HomePage = () => {
         <div className="max-w-7xl mx-auto relative z-10">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-muted border border-border rounded-lg shadow-sm text-sm font-medium text-muted-foreground mb-4">
-              <Eye className="w-3 h-3" />
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-muted border border-border rounded-lg shadow-sm text-sm font-medium text-black mb-4">
+              <Eye className="w-3 h-3 text-black" />
               Overview
             </div>
             <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
@@ -173,8 +173,8 @@ const HomePage = () => {
             <div className="card-dark-premium text-center transition-all duration-500 hover:scale-[1.02] flex flex-col h-full">
               {/* Header Content - Fixed Height */}
               <div className="flex-shrink-0 px-8 pt-8 pb-6">
-                <div className="inline-flex items-center gap-2 px-3 py-1 bg-muted/50 border border-border rounded-lg shadow-sm text-sm font-medium text-muted-foreground mb-6">
-                  <Database className="w-3 h-3" />
+                <div className="inline-flex items-center gap-2 px-3 py-1 bg-muted/50 border border-border rounded-lg shadow-sm text-sm font-medium text-black mb-6">
+                  <Database className="w-3 h-3 text-black" />
                   AI CRM
                 </div>
                 <h3 className="text-2xl font-bold text-foreground mb-6">
@@ -266,8 +266,8 @@ const HomePage = () => {
             <div className="card-dark-premium text-center transition-all duration-500 hover:scale-[1.02] flex flex-col h-full">
               {/* Header Content - Fixed Height */}
               <div className="flex-shrink-0 px-8 pt-8 pb-6">
-                <div className="inline-flex items-center gap-2 px-3 py-1 bg-muted/50 border border-border rounded-lg shadow-sm text-sm font-medium text-muted-foreground mb-6">
-                  <Bot className="w-3 h-3" />
+                <div className="inline-flex items-center gap-2 px-3 py-1 bg-muted/50 border border-border rounded-lg shadow-sm text-sm font-medium text-black mb-6">
+                  <Bot className="w-3 h-3 text-black" />
                   AI Agents
                 </div>
                 <h3 className="text-2xl font-bold text-foreground mb-6">
@@ -326,8 +326,8 @@ const HomePage = () => {
             <div className="card-dark-premium text-center transition-all duration-500 hover:scale-[1.02] flex flex-col h-full">
               {/* Header Content - Fixed Height */}
               <div className="flex-shrink-0 px-8 pt-8 pb-6">
-                <div className="inline-flex items-center gap-2 px-3 py-1 bg-muted/50 border border-border rounded-lg shadow-sm text-sm font-medium text-muted-foreground mb-6">
-                  <MessageCircle className="w-3 h-3" />
+                <div className="inline-flex items-center gap-2 px-3 py-1 bg-muted/50 border border-border rounded-lg shadow-sm text-sm font-medium text-black mb-6">
+                  <MessageCircle className="w-3 h-3 text-black" />
                   IRIS
                 </div>
                 <h3 className="text-2xl font-bold text-foreground mb-6">
