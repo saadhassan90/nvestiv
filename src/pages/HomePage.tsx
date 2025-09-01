@@ -7,7 +7,7 @@ import { BackgroundGradientAnimation } from "@/components/ui/background-gradient
 import { Button } from "@/components/ui/button";
 import { Users, Play, Sparkles as SparklesIcon, CheckCircle } from "lucide-react";
 import { ThreeDCardDemo } from "@/components/ThreeDCardDemo";
-import { FlipWords } from "@/components/ui/flip-words";
+import { TextRotate } from "@/components/ui/text-rotate";
 import crmContactProfile from "@/assets/crm-contact-profile-hd.jpg";
 const HomePage = () => {
   const audienceTypes = ["Family Offices", "Institutions", "Asset Managers", "Startups", "Brokers", "Service Providers"];
@@ -52,7 +52,7 @@ const HomePage = () => {
                       {/* Text Flip Container */}
                       <div className="w-full flex justify-center">
                         <div className="text-2xl lg:text-3xl xl:text-4xl font-bold leading-tight">
-                          <FlipWords 
+                          <TextRotate 
                             words={audienceTypes}
                             className="bg-gradient-to-r from-[#2B32B2] to-[#1488CC] bg-clip-text text-transparent"
                           />
