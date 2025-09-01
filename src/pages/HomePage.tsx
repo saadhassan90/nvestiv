@@ -67,19 +67,19 @@ const HomePage = () => {
                     <div className="space-y-6">
                       {/* Main Headline - Single Line */}
                       <div className="w-full flex justify-center">
-                        <h1 className="text-4xl lg:text-5xl xl:text-6xl font-black leading-tight">
+                        <h1 className="text-4xl lg:text-5xl xl:text-6xl font-black leading-tight" style={{ fontWeight: 900 }}>
                           <span className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 bg-clip-text text-transparent">AI Operating System for Private Investment Firms</span>
                         </h1>
                       </div>
                       
                       {/* Typewriter Container */}
                       <div className="w-full">
-                        <div className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
+                        <h3 className="text-2xl lg:text-3xl xl:text-4xl font-bold leading-tight">
                           <span className="bg-gradient-to-r from-[#2B32B2] to-[#1488CC] bg-clip-text text-transparent">
                             {currentText}
                           </span>
                           {showCursor && <span className="animate-pulse text-gray-600 ml-1">|</span>}
-                        </div>
+                        </h3>
                       </div>
                     </div>
                     
