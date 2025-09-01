@@ -1,12 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { 
-  Github, 
-  Twitter, 
   Linkedin, 
-  Mail, 
   Phone,
-  MapPin
+  MapPin,
+  Mail
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -14,10 +12,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Github, href: "#", label: "GitHub" },
-    { icon: Mail, href: "mailto:contact@nvestiv.com", label: "Email" },
+    { icon: Linkedin, href: "http://www.linkedin.com/company/nvestiv", label: "LinkedIn" },
   ];
 
   const pageLinks = [
@@ -79,15 +74,15 @@ const Footer = () => {
                 <div className="space-y-2 text-sm text-gray-300">
                   <div className="flex items-center space-x-2">
                     <MapPin className="h-4 w-4" />
-                    <span>San Francisco, CA</span>
+                    <span>80 Atlantic Ave 4th Floor, Toronto, Ontario, Canada, M6K 1X9</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <Mail className="h-4 w-4" />
-                    <span>contact@nvestiv.com</span>
+                    <span>info@nvestiv.com</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <Phone className="h-4 w-4" />
-                    <span>+1 (555) 123-4567</span>
+                    <span>1 (888) 831-9886</span>
                   </div>
                 </div>
 
@@ -177,12 +172,9 @@ const Footer = () => {
         {/* Bottom Bar */}
         <Separator className="bg-gray-800" />
         <div className="py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+          <div className="flex justify-center w-full">
             <div className="text-sm text-gray-300">
               © {currentYear} Nvestiv. All rights reserved.
-            </div>
-            <div className="flex items-center space-x-6 text-sm text-gray-300">
-              <span>Made with ❤️ for institutional investors</span>
             </div>
           </div>
         </div>

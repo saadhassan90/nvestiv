@@ -31,15 +31,15 @@ const Contact = () => {
                   <div className="space-y-4">
                     <div>
                       <h3 className="font-medium text-foreground">Email</h3>
-                      <p className="text-muted-foreground">contact@nvestiv.com</p>
+                      <p className="text-muted-foreground">info@nvestiv.com</p>
                     </div>
                     <div>
                       <h3 className="font-medium text-foreground">Phone</h3>
-                      <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                      <p className="text-muted-foreground">1 (888) 831-9886</p>
                     </div>
                     <div>
                       <h3 className="font-medium text-foreground">Office</h3>
-                      <p className="text-muted-foreground">San Francisco, CA</p>
+                      <p className="text-muted-foreground">80 Atlantic Ave 4th Floor, Toronto, Ontario, Canada, M6K 1X9</p>
                     </div>
                   </div>
                 </div>
