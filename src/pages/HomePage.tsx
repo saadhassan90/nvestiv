@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Users, Play, Sparkles as SparklesIcon, CheckCircle, Eye, Database, Bot, MessageCircle } from "lucide-react";
 import { ThreeDCardDemo } from "@/components/ThreeDCardDemo";
 import { MacBrowser } from "@/components/ui/mac-browser";
+import { PointerHighlight } from "@/components/ui/pointer-highlight";
 import crmContactProfile from "@/assets/crm-contact-profile-hd.jpg";
 const HomePage = () => {
   const [currentText, setCurrentText] = useState("");
@@ -69,7 +70,16 @@ const HomePage = () => {
                       {/* Main Headline - Single Line */}
                       <div className="w-full flex justify-center">
                         <h1 className="text-4xl lg:text-5xl xl:text-6xl font-black leading-tight" style={{ fontWeight: 900 }}>
-                          <span className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 bg-clip-text text-transparent">AI Operating System for Private Investment Firms</span>
+                          <span className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 bg-clip-text text-transparent">
+                            <PointerHighlight
+                              rectangleClassName="bg-gradient-to-r from-blue-50 to-sky-50 dark:from-blue-900/20 dark:to-sky-900/20 border border-blue-200 dark:border-blue-700 leading-loose"
+                              pointerClassName="text-blue-500 h-3 w-3"
+                              containerClassName="inline-block mr-1"
+                            >
+                              <span className="relative z-10">AI Operating System</span>
+                            </PointerHighlight>
+                            {" "}for Private Investment Firms
+                          </span>
                         </h1>
                       </div>
                       
