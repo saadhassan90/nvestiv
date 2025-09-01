@@ -7,6 +7,7 @@ import { BackgroundGradientAnimation } from "@/components/ui/background-gradient
 import { Button } from "@/components/ui/button";
 import { Users, Play, Sparkles as SparklesIcon, CheckCircle } from "lucide-react";
 import { ThreeDCardDemo } from "@/components/ThreeDCardDemo";
+import { MacBrowser } from "@/components/ui/mac-browser";
 import crmContactProfile from "@/assets/crm-contact-profile-hd.jpg";
 const HomePage = () => {
   const [currentText, setCurrentText] = useState("");
@@ -124,9 +125,11 @@ const HomePage = () => {
                   </p>
                 </div>
                 
-                {/* 3D Card */}
-                <div className="w-full">
-                  <ThreeDCardDemo />
+                {/* 3D Card in Mac Browser */}
+                <div className="w-full mt-12">
+                  <MacBrowser>
+                    <ThreeDCardDemo />
+                  </MacBrowser>
                 </div>
                 
               </div>
