@@ -141,7 +141,7 @@ const HomePage = () => {
       </main>
       
       {/* As Seen On Carousel - Separate Section */}
-      <section className="py-16 bg-gray-50 dark:bg-background/50">
+      <section className="py-8 bg-gray-50 dark:bg-background/50">
         <AsSeenOnCarousel />
       </section>
       
