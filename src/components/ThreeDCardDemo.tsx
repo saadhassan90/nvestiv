@@ -7,7 +7,7 @@ import jordanAvatar from "@/assets/jordan-noah-avatar.jpg";
 
 export function ThreeDCardDemo() {
   return (
-    <div className="w-full py-8 sm:py-12 md:py-16 px-4 sm:px-6 lg:px-8 relative">
+    <div className="w-full relative">
       {/* Glow effect behind the card */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-blue-500/30 to-blue-900/20 blur-3xl opacity-50 -z-10"></div>
       <MovingBorder
