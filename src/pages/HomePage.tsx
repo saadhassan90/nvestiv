@@ -75,6 +75,7 @@ const HomePage = () => {
                       {/* Typewriter Container */}
                       <div className="w-full">
                         <h3 className="text-2xl lg:text-3xl xl:text-4xl font-bold leading-tight">
+                          <span className="text-gray-500">Trusted by </span>
                           <span className="bg-gradient-to-r from-[#2B32B2] to-[#1488CC] bg-clip-text text-transparent">
                             {currentText}
                           </span>
