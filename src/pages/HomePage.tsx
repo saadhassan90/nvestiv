@@ -5,7 +5,7 @@ import AsSeenOnCarousel from "@/components/AsSeenOnCarousel";
 import { GridBackground } from "@/components/GridBackground";
 import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
 import { Button } from "@/components/ui/button";
-import { Users, Play, Sparkles as SparklesIcon, CheckCircle } from "lucide-react";
+import { Users, Play, Sparkles as SparklesIcon, CheckCircle, Eye, Database, Bot, MessageCircle } from "lucide-react";
 import { ThreeDCardDemo } from "@/components/ThreeDCardDemo";
 import { MacBrowser } from "@/components/ui/mac-browser";
 import crmContactProfile from "@/assets/crm-contact-profile-hd.jpg";
@@ -156,7 +156,7 @@ const HomePage = () => {
           {/* Section Header */}
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-muted border border-border rounded-lg shadow-sm text-sm font-medium text-muted-foreground mb-4">
-              <div className="w-2 h-2 bg-primary rounded-full"></div>
+              <Eye className="w-3 h-3" />
               Overview
             </div>
             <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
@@ -174,7 +174,7 @@ const HomePage = () => {
               {/* Header Content - Fixed Height */}
               <div className="flex-shrink-0 px-8 pt-8 pb-6">
                 <div className="inline-flex items-center gap-2 px-3 py-1 bg-muted/50 border border-border rounded-lg shadow-sm text-sm font-medium text-muted-foreground mb-6">
-                  <div className="w-2 h-2 bg-foreground rounded-full"></div>
+                  <Database className="w-3 h-3" />
                   AI CRM
                 </div>
                 <h3 className="text-2xl font-bold text-foreground mb-6">
@@ -267,7 +267,7 @@ const HomePage = () => {
               {/* Header Content - Fixed Height */}
               <div className="flex-shrink-0 px-8 pt-8 pb-6">
                 <div className="inline-flex items-center gap-2 px-3 py-1 bg-muted/50 border border-border rounded-lg shadow-sm text-sm font-medium text-muted-foreground mb-6">
-                  <div className="w-2 h-2 bg-foreground rounded-full"></div>
+                  <Bot className="w-3 h-3" />
                   AI Agents
                 </div>
                 <h3 className="text-2xl font-bold text-foreground mb-6">
@@ -327,7 +327,7 @@ const HomePage = () => {
               {/* Header Content - Fixed Height */}
               <div className="flex-shrink-0 px-8 pt-8 pb-6">
                 <div className="inline-flex items-center gap-2 px-3 py-1 bg-muted/50 border border-border rounded-lg shadow-sm text-sm font-medium text-muted-foreground mb-6">
-                  <div className="w-2 h-2 bg-foreground rounded-full"></div>
+                  <MessageCircle className="w-3 h-3" />
                   IRIS
                 </div>
                 <h3 className="text-2xl font-bold text-foreground mb-6">
