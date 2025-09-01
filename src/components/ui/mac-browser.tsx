@@ -14,7 +14,7 @@ export const MacBrowser = ({
 }: MacBrowserProps) => {
   return (
     <div className={cn(
-      "w-full max-w-6xl mx-auto bg-gray-800 rounded-xl shadow-2xl overflow-hidden border border-gray-600",
+      "w-fit mx-auto bg-gray-800 rounded-xl shadow-2xl overflow-hidden border border-gray-600",
       className
     )}>
       {/* Browser Header */}
@@ -27,8 +27,8 @@ export const MacBrowser = ({
         </div>
       </div>
       
-      {/* Browser Content */}
-      <div className="bg-gray-800">
+      {/* Browser Content - No background, fits content exactly */}
+      <div>
         {children}
       </div>
     </div>
