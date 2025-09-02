@@ -5,7 +5,8 @@ import AsSeenOnCarousel from "@/components/AsSeenOnCarousel";
 import { GridBackground } from "@/components/GridBackground";
 import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
 import { Button } from "@/components/ui/button";
-import { Users, Play, Sparkles as SparklesIcon, CheckCircle, Eye, Database, Bot, MessageCircle } from "lucide-react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
+import { Users, Play, Sparkles as SparklesIcon, CheckCircle, Eye, Database, Bot, MessageCircle, X, Calendar, FileText, BarChart3, Zap, Target, Settings } from "lucide-react";
 import { ThreeDCardDemo } from "@/components/ThreeDCardDemo";
 import { MacBrowser } from "@/components/ui/mac-browser";
 import { PointerHighlight } from "@/components/ui/pointer-highlight";
@@ -16,6 +17,9 @@ const HomePage = () => {
   const [charIndex, setCharIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [showCursor, setShowCursor] = useState(true);
+  const [crmModalOpen, setCrmModalOpen] = useState(false);
+  const [agentsModalOpen, setAgentsModalOpen] = useState(false);
+  const [irisModalOpen, setIrisModalOpen] = useState(false);
   const audienceTypes = ["Family Offices", "Institutions", "Asset Managers", "Startups", "Brokers", "Service Providers"];
   useEffect(() => {
     const typeSpeed = isDeleting ? 50 : 100;
@@ -207,7 +211,10 @@ const HomePage = () => {
               
               {/* Mockup Content - Fixed Height */}
               <div className="flex-1 flex flex-col px-8 pb-8">
-                <div className="card-nested p-4 text-left h-[280px] flex flex-col overflow-hidden mb-6">
+                <div 
+                  className="card-nested p-4 text-left h-[280px] flex flex-col overflow-hidden mb-6 cursor-pointer hover:bg-muted/5 transition-all duration-300"
+                  onClick={() => setCrmModalOpen(true)}
+                >
                   {/* Contact Header */}
                   <div className="flex items-center gap-3 mb-3 pb-2 border-b border-border/10 min-h-0">
                     <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xs flex-shrink-0">
@@ -275,7 +282,12 @@ const HomePage = () => {
                 
                 {/* Learn More Button - Always at bottom */}
                 <div className="mt-auto">
-                  <Button variant="outline" size="sm" className="w-full text-xs h-8">
+                  <Button 
+                    variant="outline" 
+                    size="sm" 
+                    className="w-full text-xs h-8"
+                    onClick={() => setCrmModalOpen(true)}
+                  >
                     Learn More
                   </Button>
                 </div>
@@ -300,7 +312,10 @@ const HomePage = () => {
               
               {/* Mockup Content - Fixed Height */}
               <div className="flex-1 flex flex-col px-8 pb-8">
-                <div className="card-nested p-4 h-[280px] flex flex-col justify-center mb-6">
+                <div 
+                  className="card-nested p-4 h-[280px] flex flex-col justify-center mb-6 cursor-pointer hover:bg-muted/5 transition-all duration-300"
+                  onClick={() => setAgentsModalOpen(true)}
+                >
                   <div className="grid grid-cols-2 gap-3">
                     <div className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 p-4 rounded-lg text-center">
                       <div className="w-10 h-10 bg-blue-500 rounded-full mx-auto mb-2 flex items-center justify-center">
@@ -311,31 +326,36 @@ const HomePage = () => {
                     </div>
                     <div className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 p-4 rounded-lg text-center">
                       <div className="w-10 h-10 bg-green-500 rounded-full mx-auto mb-2 flex items-center justify-center">
-                        <CheckCircle className="w-5 h-5 text-white" />
+                        <BarChart3 className="w-5 h-5 text-white" />
                       </div>
-                      <div className="font-semibold text-foreground text-xs">Risk Analysis</div>
-                      <div className="text-muted-foreground text-xs mt-1">Capital Raising</div>
+                      <div className="font-semibold text-foreground text-xs">Fund Raising</div>
+                      <div className="text-muted-foreground text-xs mt-1">LP Relations</div>
                     </div>
                     <div className="bg-gradient-to-br from-purple-50 to-violet-50 dark:from-purple-900/20 dark:to-violet-900/20 p-4 rounded-lg text-center">
                       <div className="w-10 h-10 bg-purple-500 rounded-full mx-auto mb-2 flex items-center justify-center">
-                        <SparklesIcon className="w-5 h-5 text-white" />
+                        <Target className="w-5 h-5 text-white" />
                       </div>
-                      <div className="font-semibold text-foreground text-xs">Market Research</div>
-                      <div className="text-muted-foreground text-xs mt-1">Deal Sourcing</div>
+                      <div className="font-semibold text-foreground text-xs">Deal Sourcing</div>
+                      <div className="text-muted-foreground text-xs mt-1">Market Analysis</div>
                     </div>
                     <div className="bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 p-4 rounded-lg text-center">
                       <div className="w-10 h-10 bg-orange-500 rounded-full mx-auto mb-2 flex items-center justify-center">
-                        <Play className="w-5 h-5 text-white" />
+                        <Zap className="w-5 h-5 text-white" />
                       </div>
-                      <div className="font-semibold text-foreground text-xs">Compliance</div>
-                      <div className="text-muted-foreground text-xs mt-1">Reporting</div>
+                      <div className="font-semibold text-foreground text-xs">Automation</div>
+                      <div className="text-muted-foreground text-xs mt-1">Workflow Builder</div>
                     </div>
                   </div>
                 </div>
                 
                 {/* Learn More Button - Always at bottom */}
                 <div className="mt-auto">
-                  <Button variant="outline" size="sm" className="w-full text-xs h-8">
+                  <Button 
+                    variant="outline" 
+                    size="sm" 
+                    className="w-full text-xs h-8"
+                    onClick={() => setAgentsModalOpen(true)}
+                  >
                     Learn More
                   </Button>
                 </div>
@@ -360,7 +380,10 @@ const HomePage = () => {
               
               {/* Mockup Content - Fixed Height */}
               <div className="flex-1 flex flex-col px-8 pb-8">
-                <div className="card-nested p-4 text-left h-[280px] flex flex-col justify-center mb-6">
+                <div 
+                  className="card-nested p-4 text-left h-[280px] flex flex-col justify-center mb-6 cursor-pointer hover:bg-muted/5 transition-all duration-300"
+                  onClick={() => setIrisModalOpen(true)}
+                >
                   <div className="space-y-4">
                     <div className="flex gap-3">
                       <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-xs font-bold text-primary-foreground">I</div>
@@ -391,7 +414,12 @@ const HomePage = () => {
                 
                 {/* Learn More Button - Always at bottom */}
                 <div className="mt-auto">
-                  <Button variant="outline" size="sm" className="w-full text-xs h-8">
+                  <Button 
+                    variant="outline" 
+                    size="sm" 
+                    className="w-full text-xs h-8"
+                    onClick={() => setIrisModalOpen(true)}
+                  >
                     Learn More
                   </Button>
                 </div>
@@ -404,6 +432,348 @@ const HomePage = () => {
       
       {/* Footer */}
       <Footer />
+      
+      {/* AI CRM Modal */}
+      <Dialog open={crmModalOpen} onOpenChange={setCrmModalOpen}>
+        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle className="text-2xl font-bold flex items-center gap-3">
+              <div className="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center">
+                <Database className="w-5 h-5 text-white" />
+              </div>
+              AI CRM for Private Investments
+            </DialogTitle>
+            <DialogDescription className="text-lg text-muted-foreground">
+              The first CRM purpose-built for private markets, powered by AI to eliminate silos and spreadsheets.
+            </DialogDescription>
+          </DialogHeader>
+          
+          <div className="space-y-8 mt-6">
+            {/* Key Features */}
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold">Unified Data Backbone</h3>
+                <div className="space-y-3">
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5" />
+                    <div>
+                      <p className="font-medium">Contact & Company Profiles</p>
+                      <p className="text-sm text-muted-foreground">Complete investor profiles with AUM, check sizes, preferences</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5" />
+                    <div>
+                      <p className="font-medium">Deal Flow Management</p>
+                      <p className="text-sm text-muted-foreground">Track opportunities from sourcing to close</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5" />
+                    <div>
+                      <p className="font-medium">Document Management</p>
+                      <p className="text-sm text-muted-foreground">AI-powered file organization and search</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold">AI-Powered Insights</h3>
+                <div className="space-y-3">
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5" />
+                    <div>
+                      <p className="font-medium">Smart Matching</p>
+                      <p className="text-sm text-muted-foreground">Auto-match deals to relevant investors</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5" />
+                    <div>
+                      <p className="font-medium">Relationship Intelligence</p>
+                      <p className="text-sm text-muted-foreground">Track interaction history and preferences</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5" />
+                    <div>
+                      <p className="font-medium">Portfolio Analytics</p>
+                      <p className="text-sm text-muted-foreground">Real-time performance tracking</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Demo Section */}
+            <div className="bg-muted/30 rounded-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">See It In Action</h3>
+              <div className="bg-background rounded-lg p-4 border">
+                <img 
+                  src={crmContactProfile} 
+                  alt="CRM Contact Profile Demo"
+                  className="w-full rounded-lg shadow-sm"
+                />
+              </div>
+            </div>
+            
+            {/* CTA */}
+            <div className="flex gap-4 pt-4">
+              <Button size="lg" className="flex-1">
+                <Play className="w-4 h-4 mr-2" />
+                Try CRM Free
+              </Button>
+              <Button variant="outline" size="lg" className="flex-1">
+                Schedule Demo
+              </Button>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
+      
+      {/* AI Agents Modal */}
+      <Dialog open={agentsModalOpen} onOpenChange={setAgentsModalOpen}>
+        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle className="text-2xl font-bold flex items-center gap-3">
+              <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-blue-500 rounded-lg flex items-center justify-center">
+                <Bot className="w-5 h-5 text-white" />
+              </div>
+              AI Agents Library
+            </DialogTitle>
+            <DialogDescription className="text-lg text-muted-foreground">
+              Deploy specialized AI agents that work 24/7 to automate your most critical business processes.
+            </DialogDescription>
+          </DialogHeader>
+          
+          <div className="space-y-8 mt-6">
+            {/* Agent Categories */}
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="space-y-4">
+                <div className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 p-6 rounded-lg">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center">
+                      <Users className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold">Due Diligence Agent</h3>
+                      <p className="text-sm text-muted-foreground">Automated research & analysis</p>
+                    </div>
+                  </div>
+                  <ul className="space-y-2 text-sm">
+                    <li className="flex items-center gap-2">
+                      <CheckCircle className="w-4 h-4 text-green-500" />
+                      Company background research
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle className="w-4 h-4 text-green-500" />
+                      Financial analysis & modeling
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle className="w-4 h-4 text-green-500" />
+                      Risk assessment reports
+                    </li>
+                  </ul>
+                </div>
+                
+                <div className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 p-6 rounded-lg">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center">
+                      <BarChart3 className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold">Fund Raising Agent</h3>
+                      <p className="text-sm text-muted-foreground">LP relations & fundraising</p>
+                    </div>
+                  </div>
+                  <ul className="space-y-2 text-sm">
+                    <li className="flex items-center gap-2">
+                      <CheckCircle className="w-4 h-4 text-green-500" />
+                      LP outreach campaigns
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle className="w-4 h-4 text-green-500" />
+                      Pitch deck generation
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle className="w-4 h-4 text-green-500" />
+                      Performance reporting
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div className="space-y-4">
+                <div className="bg-gradient-to-br from-purple-50 to-violet-50 dark:from-purple-900/20 dark:to-violet-900/20 p-6 rounded-lg">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center">
+                      <Target className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold">Deal Sourcing Agent</h3>
+                      <p className="text-sm text-muted-foreground">Market intelligence & sourcing</p>
+                    </div>
+                  </div>
+                  <ul className="space-y-2 text-sm">
+                    <li className="flex items-center gap-2">
+                      <CheckCircle className="w-4 h-4 text-green-500" />
+                      Market opportunity scanning
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle className="w-4 h-4 text-green-500" />
+                      Competitive analysis
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle className="w-4 h-4 text-green-500" />
+                      Lead qualification
+                    </li>
+                  </ul>
+                </div>
+                
+                <div className="bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 p-6 rounded-lg">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center">
+                      <Zap className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold">Workflow Automation</h3>
+                      <p className="text-sm text-muted-foreground">Custom process automation</p>
+                    </div>
+                  </div>
+                  <ul className="space-y-2 text-sm">
+                    <li className="flex items-center gap-2">
+                      <CheckCircle className="w-4 h-4 text-green-500" />
+                      Email automation
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle className="w-4 h-4 text-green-500" />
+                      Document processing
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle className="w-4 h-4 text-green-500" />
+                      Task scheduling
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            {/* CTA */}
+            <div className="flex gap-4 pt-4">
+              <Button size="lg" className="flex-1">
+                <Bot className="w-4 h-4 mr-2" />
+                Deploy Agents
+              </Button>
+              <Button variant="outline" size="lg" className="flex-1">
+                View All Agents
+              </Button>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
+      
+      {/* IRIS Modal */}
+      <Dialog open={irisModalOpen} onOpenChange={setIrisModalOpen}>
+        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle className="text-2xl font-bold flex items-center gap-3">
+              <div className="w-10 h-10 bg-gradient-to-br from-primary to-blue-600 rounded-lg flex items-center justify-center">
+                <MessageCircle className="w-5 h-5 text-white" />
+              </div>
+              IRIS AI Assistant
+            </DialogTitle>
+            <DialogDescription className="text-lg text-muted-foreground">
+              Your conversational AI that understands private markets and can instantly access all your deal data.
+            </DialogDescription>
+          </DialogHeader>
+          
+          <div className="space-y-8 mt-6">
+            {/* Chat Demo */}
+            <div className="bg-muted/30 rounded-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Natural Language Interface</h3>
+              <div className="bg-background rounded-lg p-4 border space-y-4 max-h-80 overflow-y-auto">
+                <div className="flex gap-3">
+                  <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-sm font-bold text-primary-foreground">I</div>
+                  <div className="flex-1 bg-muted/50 rounded-lg p-3 text-sm">
+                    Hello! I'm IRIS, your AI assistant for private markets. I can help you analyze deals, generate reports, and answer questions about your portfolio. What would you like to know?
+                  </div>
+                </div>
+                <div className="flex gap-3 justify-end">
+                  <div className="bg-primary/10 rounded-lg p-3 text-sm max-w-sm">
+                    Show me all Series B deals from the past 6 months with check sizes over $20M
+                  </div>
+                  <div className="w-8 h-8 bg-muted rounded-full"></div>
+                </div>
+                <div className="flex gap-3">
+                  <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-sm font-bold text-primary-foreground">I</div>
+                  <div className="flex-1 bg-muted/50 rounded-lg p-3 text-sm">
+                    I found 12 Series B deals matching your criteria. Here's a summary:
+                    <br/><br/>
+                    • TechCorp Series B - $35M (SaaS, Enterprise)
+                    <br/>
+                    • HealthTech Inc - $28M (Healthcare, B2B)  
+                    <br/>
+                    • FinanceAI - $45M (Fintech, AI)
+                    <br/><br/>
+                    Would you like me to generate a detailed analysis report?
+                  </div>
+                </div>
+                <div className="flex gap-3 justify-end">
+                  <div className="bg-primary/10 rounded-lg p-3 text-sm max-w-sm">
+                    Yes, create an investment committee memo for TechCorp
+                  </div>
+                  <div className="w-8 h-8 bg-muted rounded-full"></div>
+                </div>
+                <div className="flex gap-3">
+                  <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-sm font-bold text-primary-foreground">I</div>
+                  <div className="flex-1 bg-muted/50 rounded-lg p-3 text-sm">
+                    I've generated a comprehensive investment memo for TechCorp including market analysis, financial projections, and risk assessment. The document is now available in your files. Would you like me to email it to the investment committee?
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Capabilities */}
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="text-center p-4">
+                <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center mx-auto mb-3">
+                  <FileText className="w-6 h-6 text-blue-600" />
+                </div>
+                <h3 className="font-semibold mb-2">Document Generation</h3>
+                <p className="text-sm text-muted-foreground">Investment memos, pitch decks, and reports generated instantly</p>
+              </div>
+              
+              <div className="text-center p-4">
+                <div className="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center mx-auto mb-3">
+                  <BarChart3 className="w-6 h-6 text-green-600" />
+                </div>
+                <h3 className="font-semibold mb-2">Data Analysis</h3>
+                <p className="text-sm text-muted-foreground">Complex queries across your entire deal database</p>
+              </div>
+              
+              <div className="text-center p-4">
+                <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center mx-auto mb-3">
+                  <Calendar className="w-6 h-6 text-purple-600" />
+                </div>
+                <h3 className="font-semibold mb-2">Task Automation</h3>
+                <p className="text-sm text-muted-foreground">Schedule meetings, send updates, manage workflows</p>
+              </div>
+            </div>
+            
+            {/* CTA */}
+            <div className="flex gap-4 pt-4">
+              <Button size="lg" className="flex-1">
+                <MessageCircle className="w-4 h-4 mr-2" />
+                Chat with IRIS
+              </Button>
+              <Button variant="outline" size="lg" className="flex-1">
+                Watch Demo
+              </Button>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>;
 };
 export default HomePage;
