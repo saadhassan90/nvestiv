@@ -435,7 +435,7 @@ const HomePage = () => {
       
       {/* AI CRM Modal */}
       <Dialog open={crmModalOpen} onOpenChange={setCrmModalOpen}>
-        <DialogContent className="max-w-3xl">
+        <DialogContent className="max-w-4xl">
           <DialogHeader>
             <DialogTitle className="text-2xl font-bold flex items-center gap-3">
               <div className="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center">
@@ -449,6 +449,97 @@ const HomePage = () => {
           </DialogHeader>
           
           <div className="space-y-6">
+            {/* Profile Demo */}
+            <div className="bg-muted/30 rounded-lg p-6">
+              <h3 className="text-lg font-semibold mb-4">Live Profile Example</h3>
+              <div className="bg-background rounded-lg border p-6 space-y-6">
+                {/* Header */}
+                <div className="flex items-start gap-4 pb-4 border-b">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
+                    CFA
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center gap-3 mb-2">
+                      <h4 className="text-xl font-bold text-foreground">Central Family Advisors</h4>
+                      <span className="px-2 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded text-sm font-medium">
+                        Active
+                      </span>
+                    </div>
+                    <p className="text-muted-foreground mb-2">Family Office • Diversified Investor</p>
+                    <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                      <span>contact@centralfamilyadvisors.com</span>
+                      <span>•</span>
+                      <span>AUM: $579.18M</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Content Grid */}
+                <div className="grid md:grid-cols-2 gap-6">
+                  {/* Investment Profile */}
+                  <div className="space-y-4">
+                    <h5 className="font-semibold text-foreground">Investment Profile</h5>
+                    <div className="space-y-3">
+                      <div className="flex justify-between text-sm">
+                        <span className="text-muted-foreground">Total AUM:</span>
+                        <span className="text-foreground font-medium">$579.18M</span>
+                      </div>
+                      <div className="flex justify-between text-sm">
+                        <span className="text-muted-foreground">Investor Type:</span>
+                        <span className="text-foreground">Family Office</span>
+                      </div>
+                      <div className="flex justify-between text-sm">
+                        <span className="text-muted-foreground">Profile Type:</span>
+                        <span className="text-foreground">Investor</span>
+                      </div>
+                    </div>
+                    
+                    <div className="pt-3 border-t border-border/20">
+                      <p className="text-sm font-medium text-muted-foreground mb-2">Preferred Asset Classes</p>
+                      <div className="flex flex-wrap gap-1">
+                        <span className="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded text-xs">Buyout</span>
+                        <span className="px-2 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded text-xs">Private Equity</span>
+                        <span className="px-2 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded text-xs">Growth/Expansion</span>
+                        <span className="px-2 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 rounded text-xs">VC Early Stage</span>
+                        <span className="px-2 py-1 bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300 rounded text-xs">VC Later Stage</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Geographic & Preferences */}
+                  <div className="space-y-4">
+                    <h5 className="font-semibold text-foreground">Geographic & Preferences</h5>
+                    <div className="space-y-3">
+                      <div>
+                        <p className="text-sm font-medium text-muted-foreground mb-2">Geographic Focus</p>
+                        <div className="flex flex-wrap gap-1">
+                          <span className="px-2 py-1 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded text-xs">Global</span>
+                          <span className="px-2 py-1 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded text-xs">Americas</span>
+                          <span className="px-2 py-1 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded text-xs">Europe</span>
+                          <span className="px-2 py-1 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded text-xs">Asia</span>
+                        </div>
+                      </div>
+                      
+                      <div className="space-y-2 text-sm">
+                        <div className="flex justify-between">
+                          <span className="text-muted-foreground">Co-Investment:</span>
+                          <span className="text-red-600 dark:text-red-400">No</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-muted-foreground">Tax Incentives:</span>
+                          <span className="text-red-600 dark:text-red-400">No</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-muted-foreground">Market Recs:</span>
+                          <span className="text-red-600 dark:text-red-400">No</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             {/* Key Features */}
             <div className="grid md:grid-cols-2 gap-6">
               <div className="space-y-3">
