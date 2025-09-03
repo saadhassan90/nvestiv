@@ -950,7 +950,7 @@ const HomePage = () => {
       
       {/* IRIS Modal */}
       <Dialog open={irisModalOpen} onOpenChange={setIrisModalOpen}>
-        <DialogContent className="max-w-6xl max-h-[90vh] overflow-hidden">
+        <DialogContent className="max-w-6xl max-h-[90vh] overflow-hidden p-6">
           <div className="grid grid-cols-2 gap-8 h-[75vh]">
             {/* Left Column - Information */}
             <div className="space-y-6 overflow-y-auto pr-2">
@@ -1015,11 +1015,11 @@ const HomePage = () => {
             </div>
             
             {/* Right Column - Chat Window */}
-            <div className="flex flex-col h-full">
-              <h3 className="text-lg font-semibold text-center mb-4">Live Chat Preview: NYC Trip Planning</h3>
-              <div className="bg-muted/30 rounded-lg p-4 flex-1 overflow-hidden">
-                <div className="bg-background rounded-lg p-4 border h-full overflow-y-auto">
-                  <div className="space-y-4 pb-4">
+            <div className="flex flex-col h-full min-w-0">
+              <h3 className="text-lg font-semibold text-center mb-4 flex-shrink-0">Live Chat Preview: NYC Trip Planning</h3>
+              <div className="bg-muted/30 rounded-lg p-3 flex-1 overflow-hidden">
+                <div className="bg-background rounded-lg p-3 border h-full overflow-y-auto">
+                  <div className="space-y-4 pr-2">
                   
                   {/* User Message 1 */}
                   <div className="flex gap-3 justify-end">
