@@ -573,109 +573,96 @@ const HomePage = () => {
         </DialogContent>
       </Dialog>
       
-      {/* AI Agents Modal */}
+      {/* AI Agents Library Modal */}
       <Dialog open={agentsModalOpen} onOpenChange={setAgentsModalOpen}>
-        <DialogContent className="max-w-4xl">
+        <DialogContent className="max-w-7xl max-h-[90vh] overflow-y-auto">
           <DialogHeader>
-            <DialogTitle className="text-2xl font-bold flex items-center gap-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-blue-500 rounded-lg flex items-center justify-center">
-                <Bot className="w-5 h-5 text-white" />
-              </div>
-              AI Agents Library
-            </DialogTitle>
-            <DialogDescription className="text-muted-foreground">
-              Deploy specialized AI agents that work 24/7 to automate your business processes.
+            <DialogTitle className="text-2xl font-bold">AI Agents Library</DialogTitle>
+            <DialogDescription>
+              Specialized AI agents pre-trained for private market investments
             </DialogDescription>
           </DialogHeader>
           
           <div className="space-y-6">
-            {/* Agent Categories */}
-            <div className="grid grid-cols-2 gap-4">
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 p-4 rounded-lg">
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center">
-                    <Users className="w-4 h-4 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold">Due Diligence Agent</h3>
-                    <p className="text-xs text-muted-foreground">Research & analysis</p>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 p-4 rounded-lg">
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center">
-                    <BarChart3 className="w-4 h-4 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold">Fund Raising Agent</h3>
-                    <p className="text-xs text-muted-foreground">LP relations</p>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="bg-gradient-to-br from-purple-50 to-violet-50 dark:from-purple-900/20 dark:to-violet-900/20 p-4 rounded-lg">
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="w-8 h-8 bg-purple-500 rounded-lg flex items-center justify-center">
-                    <Target className="w-4 h-4 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold">Deal Sourcing Agent</h3>
-                    <p className="text-xs text-muted-foreground">Market intelligence</p>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 p-4 rounded-lg">
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="w-8 h-8 bg-orange-500 rounded-lg flex items-center justify-center">
-                    <Zap className="w-4 h-4 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold">Workflow Automation</h3>
-                    <p className="text-xs text-muted-foreground">Process automation</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <p className="text-muted-foreground leading-relaxed">
+              Nvestiv's AI Agents are intelligent assistants that understand your business context and investment mandates. 
+              Each agent has been pre-trained on private alternatives data and industry best practices, enabling them to 
+              analyze opportunities through the lens of your specific investment strategy and risk parameters.
+            </p>
             
-            {/* Key Benefits */}
-            <div className="grid md:grid-cols-3 gap-4 text-center">
-              <div>
-                <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center mx-auto mb-2">
-                  <CheckCircle className="w-6 h-6 text-blue-600" />
-                </div>
-                <h3 className="font-semibold text-sm">One-Click Deployment</h3>
-                <p className="text-xs text-muted-foreground">Deploy agents instantly</p>
+            {/* Two-column layout */}
+            <div className="flex gap-6">
+              {/* Sidebar - 20% */}
+              <div className="w-1/5 space-y-2">
+                <nav className="space-y-1">
+                  <button className="w-full text-left px-3 py-2 text-sm font-medium bg-primary/10 text-primary rounded-md">
+                    Family Offices
+                  </button>
+                  <button className="w-full text-left px-3 py-2 text-sm text-muted-foreground hover:bg-muted rounded-md">
+                    Institutional Investors
+                  </button>
+                  <button className="w-full text-left px-3 py-2 text-sm text-muted-foreground hover:bg-muted rounded-md">
+                    Real Estate Funds
+                  </button>
+                  <button className="w-full text-left px-3 py-2 text-sm text-muted-foreground hover:bg-muted rounded-md">
+                    Venture Capital
+                  </button>
+                  <button className="w-full text-left px-3 py-2 text-sm text-muted-foreground hover:bg-muted rounded-md">
+                    Private Equity
+                  </button>
+                  <button className="w-full text-left px-3 py-2 text-sm text-muted-foreground hover:bg-muted rounded-md">
+                    Private Credit
+                  </button>
+                  <button className="w-full text-left px-3 py-2 text-sm text-muted-foreground hover:bg-muted rounded-md">
+                    Hedge Funds & Alternatives
+                  </button>
+                  <button className="w-full text-left px-3 py-2 text-sm text-muted-foreground hover:bg-muted rounded-md">
+                    Wealth Managers
+                  </button>
+                  <button className="w-full text-left px-3 py-2 text-sm text-muted-foreground hover:bg-muted rounded-md">
+                    Investment Bankers
+                  </button>
+                </nav>
               </div>
               
-              <div>
-                <div className="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center mx-auto mb-2">
-                  <Bot className="w-6 h-6 text-green-600" />
+              {/* Main content - 80% */}
+              <div className="flex-1">
+                <div className="space-y-4">
+                  <h3 className="text-lg font-semibold">Family Offices</h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="p-4 border rounded-lg space-y-2 hover:shadow-md transition-shadow">
+                      <h4 className="font-semibold text-primary">Portfolio Management Agent</h4>
+                      <p className="text-sm text-muted-foreground">
+                        Consolidates holdings across accounts to deliver a real-time snapshot of performance and exposures.
+                      </p>
+                    </div>
+                    <div className="p-4 border rounded-lg space-y-2 hover:shadow-md transition-shadow">
+                      <h4 className="font-semibold text-primary">Succession Planning Agent</h4>
+                      <p className="text-sm text-muted-foreground">
+                        Models wealth transfer strategies and tax impacts for multi-generational planning.
+                      </p>
+                    </div>
+                    <div className="p-4 border rounded-lg space-y-2 hover:shadow-md transition-shadow">
+                      <h4 className="font-semibold text-primary">Risk Analyst Agent</h4>
+                      <p className="text-sm text-muted-foreground">
+                        Scans portfolios against market, macro, and concentration risks with proactive alerts.
+                      </p>
+                    </div>
+                    <div className="p-4 border rounded-lg space-y-2 hover:shadow-md transition-shadow">
+                      <h4 className="font-semibold text-primary">Co-Investment Screener Agent</h4>
+                      <p className="text-sm text-muted-foreground">
+                        Sources and evaluates direct deal opportunities alongside other families.
+                      </p>
+                    </div>
+                    <div className="p-4 border rounded-lg space-y-2 hover:shadow-md transition-shadow">
+                      <h4 className="font-semibold text-primary">Investor Reporting Agent</h4>
+                      <p className="text-sm text-muted-foreground">
+                        Automates quarterly reporting packages tailored for family principals and trustees.
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                <h3 className="font-semibold text-sm">24/7 Operation</h3>
-                <p className="text-xs text-muted-foreground">Never stop working</p>
               </div>
-              
-              <div>
-                <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center mx-auto mb-2">
-                  <Settings className="w-6 h-6 text-purple-600" />
-                </div>
-                <h3 className="font-semibold text-sm">Fully Customizable</h3>
-                <p className="text-xs text-muted-foreground">Tailor to your needs</p>
-              </div>
-            </div>
-            
-            {/* CTA */}
-            <div className="flex gap-4 pt-4 border-t">
-              <Button size="lg" className="flex-1">
-                <Bot className="w-4 h-4 mr-2" />
-                Deploy Agents
-              </Button>
-              <Button variant="outline" size="lg" className="flex-1">
-                View Library
-              </Button>
             </div>
           </div>
         </DialogContent>
