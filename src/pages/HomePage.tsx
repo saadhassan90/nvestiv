@@ -73,14 +73,11 @@ const HomePage = () => {
                     <div className="space-y-6">
                       {/* Main Headline - Single Line */}
                       <div className="w-full flex justify-center">
-                        <h1 className="text-4xl lg:text-5xl xl:text-6xl font-black leading-tight" style={{ fontWeight: 900 }}>
+                        <h1 className="text-4xl lg:text-5xl xl:text-6xl font-black leading-tight" style={{
+                        fontWeight: 900
+                      }}>
                           <span className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 bg-clip-text text-transparent">
-                            <PointerHighlight
-                              rectangleClassName="bg-gradient-to-r from-blue-100/80 to-sky-100/80 dark:from-blue-800/40 dark:to-sky-800/40 border border-blue-300/50 dark:border-blue-600/50 leading-loose"
-                              pointerClassName="text-blue-500 h-3 w-3"
-                              containerClassName="inline-block mr-1"
-                              className="text-gray-900 dark:text-white"
-                            >
+                            <PointerHighlight rectangleClassName="bg-gradient-to-r from-blue-100/80 to-sky-100/80 dark:from-blue-800/40 dark:to-sky-800/40 border border-blue-300/50 dark:border-blue-600/50 leading-loose" pointerClassName="text-blue-500 h-3 w-3" containerClassName="inline-block mr-1" className="text-gray-900 dark:text-white">
                               <span className="relative z-20">AI Operating System</span>
                             </PointerHighlight>
                             {" "}for Private Investment Firms
@@ -176,12 +173,7 @@ const HomePage = () => {
             </div>
             <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
               Unlock{" "}
-              <PointerHighlight
-                rectangleClassName="bg-gradient-to-r from-blue-100/80 to-sky-100/80 dark:from-blue-800/40 dark:to-sky-800/40 border border-blue-300/50 dark:border-blue-600/50 leading-loose"
-                pointerClassName="text-blue-500 h-3 w-3"
-                containerClassName="inline-block mr-1"
-                className="text-foreground"
-              >
+              <PointerHighlight rectangleClassName="bg-gradient-to-r from-blue-100/80 to-sky-100/80 dark:from-blue-800/40 dark:to-sky-800/40 border border-blue-300/50 dark:border-blue-600/50 leading-loose" pointerClassName="text-blue-500 h-3 w-3" containerClassName="inline-block mr-1" className="text-foreground">
                 <span className="relative z-20">Private Investments</span>
               </PointerHighlight>
               {" "}with AI
@@ -211,10 +203,7 @@ const HomePage = () => {
               
               {/* Mockup Content - Fixed Height */}
               <div className="flex-1 flex flex-col px-8 pb-8">
-                <div 
-                  className="card-nested p-4 text-left h-[280px] flex flex-col overflow-hidden mb-6 cursor-pointer hover:bg-muted/5 transition-all duration-300"
-                  onClick={() => setCrmModalOpen(true)}
-                >
+                <div className="card-nested p-4 text-left h-[280px] flex flex-col overflow-hidden mb-6 cursor-pointer hover:bg-muted/5 transition-all duration-300" onClick={() => setCrmModalOpen(true)}>
                   {/* Contact Header */}
                   <div className="flex items-center gap-3 mb-3 pb-2 border-b border-border/10 min-h-0">
                     <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xs flex-shrink-0">
@@ -282,12 +271,7 @@ const HomePage = () => {
                 
                 {/* Learn More Button - Always at bottom */}
                 <div className="mt-auto">
-                  <Button 
-                    variant="outline" 
-                    size="sm" 
-                    className="w-full text-xs h-8"
-                    onClick={() => setCrmModalOpen(true)}
-                  >
+                  <Button variant="outline" size="sm" className="w-full text-xs h-8" onClick={() => setCrmModalOpen(true)}>
                     Learn More
                   </Button>
                 </div>
@@ -312,10 +296,7 @@ const HomePage = () => {
               
               {/* Mockup Content - Fixed Height */}
               <div className="flex-1 flex flex-col px-8 pb-8">
-                <div 
-                  className="card-nested p-4 h-[280px] flex flex-col justify-center mb-6 cursor-pointer hover:bg-muted/5 transition-all duration-300"
-                  onClick={() => setAgentsModalOpen(true)}
-                >
+                <div className="card-nested p-4 h-[280px] flex flex-col justify-center mb-6 cursor-pointer hover:bg-muted/5 transition-all duration-300" onClick={() => setAgentsModalOpen(true)}>
                   <div className="grid grid-cols-2 gap-3">
                     <div className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 p-4 rounded-lg text-center">
                       <div className="w-10 h-10 bg-blue-500 rounded-full mx-auto mb-2 flex items-center justify-center">
@@ -350,12 +331,7 @@ const HomePage = () => {
                 
                 {/* Learn More Button - Always at bottom */}
                 <div className="mt-auto">
-                  <Button 
-                    variant="outline" 
-                    size="sm" 
-                    className="w-full text-xs h-8"
-                    onClick={() => setAgentsModalOpen(true)}
-                  >
+                  <Button variant="outline" size="sm" className="w-full text-xs h-8" onClick={() => setAgentsModalOpen(true)}>
                     Learn More
                   </Button>
                 </div>
@@ -380,10 +356,7 @@ const HomePage = () => {
               
               {/* Mockup Content - Fixed Height */}
               <div className="flex-1 flex flex-col px-8 pb-8">
-                <div 
-                  className="card-nested p-4 text-left h-[280px] flex flex-col justify-center mb-6 cursor-pointer hover:bg-muted/5 transition-all duration-300"
-                  onClick={() => setIrisModalOpen(true)}
-                >
+                <div className="card-nested p-4 text-left h-[280px] flex flex-col justify-center mb-6 cursor-pointer hover:bg-muted/5 transition-all duration-300" onClick={() => setIrisModalOpen(true)}>
                   <div className="space-y-4">
                     <div className="flex gap-3">
                       <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-xs font-bold text-primary-foreground">I</div>
@@ -414,12 +387,7 @@ const HomePage = () => {
                 
                 {/* Learn More Button - Always at bottom */}
                 <div className="mt-auto">
-                  <Button 
-                    variant="outline" 
-                    size="sm" 
-                    className="w-full text-xs h-8"
-                    onClick={() => setIrisModalOpen(true)}
-                  >
+                  <Button variant="outline" size="sm" className="w-full text-xs h-8" onClick={() => setIrisModalOpen(true)}>
                     Learn More
                   </Button>
                 </div>
@@ -554,7 +522,7 @@ const HomePage = () => {
                   <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
                   <div>
                     <p className="font-medium">AI Bulk Uploads</p>
-                    <p className="text-sm text-muted-foreground">Intelligent data extraction from pitch decks and documents</p>
+                    <p className="text-sm text-muted-foreground">Intelligent data extraction from CSVs, and documents</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -571,21 +539,21 @@ const HomePage = () => {
                   <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
                   <div>
                     <p className="font-medium">AI Notetaker</p>
-                    <p className="text-sm text-muted-foreground">Automatically fills meeting data and updates contact profiles</p>
+                    <p className="text-sm text-muted-foreground">Automatically fills meeting data and updates contact profiles from meeting recordings and notes.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
                   <div>
                     <p className="font-medium">Files Management & Cloud Integration</p>
-                    <p className="text-sm text-muted-foreground">Seamless integration with cloud storage and document management</p>
+                    <p className="text-sm text-muted-foreground">Seamless integration with cloud storage and document management for a 360 degree view of your business.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
                   <div>
                     <p className="font-medium">Advanced Analytics</p>
-                    <p className="text-sm text-muted-foreground">Real-time insights and performance tracking across your portfolio</p>
+                    <p className="text-sm text-muted-foreground">Real-time insights and performance tracking across your portfolio and teams.</p>
                   </div>
                 </div>
               </div>
