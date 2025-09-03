@@ -950,10 +950,10 @@ const HomePage = () => {
       
       {/* IRIS Modal */}
       <Dialog open={irisModalOpen} onOpenChange={setIrisModalOpen}>
-        <DialogContent className="max-w-6xl">
-          <div className="grid grid-cols-2 gap-8 h-[80vh]">
+        <DialogContent className="max-w-6xl max-h-[90vh] overflow-hidden">
+          <div className="grid grid-cols-2 gap-8 h-[75vh]">
             {/* Left Column - Information */}
-            <div className="space-y-6">
+            <div className="space-y-6 overflow-y-auto pr-2">
               <div>
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-12 h-12 bg-gradient-to-br from-primary to-blue-600 rounded-lg flex items-center justify-center">
@@ -1015,17 +1015,17 @@ const HomePage = () => {
             </div>
             
             {/* Right Column - Chat Window */}
-            <div className="space-y-4 flex flex-col h-full">
-              <h3 className="text-lg font-semibold text-center">Live Chat Preview: NYC Trip Planning</h3>
-              <div className="bg-muted/30 rounded-lg p-4 flex-1">
-                <div className="bg-background rounded-lg p-4 border space-y-4 h-full overflow-y-auto">
+            <div className="flex flex-col h-full">
+              <h3 className="text-lg font-semibold text-center mb-4">Live Chat Preview: NYC Trip Planning</h3>
+              <div className="bg-muted/30 rounded-lg p-4 flex-1 min-h-0">
+                <div className="bg-background rounded-lg p-4 border h-full overflow-y-auto space-y-4">
                   
                   {/* User Message 1 */}
                   <div className="flex gap-3 justify-end">
                     <div className="bg-primary/10 rounded-lg p-3 text-sm max-w-xs">
                       I'm going to be in NYC April 15-17 for business. Who should I prioritize meeting with while I'm there?
                     </div>
-                    <div className="w-8 h-8 bg-muted rounded-full flex items-center justify-center">
+                    <div className="w-8 h-8 bg-muted rounded-full flex items-center justify-center flex-shrink-0">
                       <div className="w-4 h-4 bg-muted-foreground rounded-full"></div>
                     </div>
                   </div>
@@ -1058,7 +1058,7 @@ const HomePage = () => {
                     <div className="bg-primary/10 rounded-lg p-3 text-sm max-w-xs">
                       Perfect! Can you draft outreach messages and suggest meeting logistics?
                     </div>
-                    <div className="w-8 h-8 bg-muted rounded-full flex items-center justify-center">
+                    <div className="w-8 h-8 bg-muted rounded-full flex items-center justify-center flex-shrink-0">
                       <div className="w-4 h-4 bg-muted-foreground rounded-full"></div>
                     </div>
                   </div>
@@ -1091,7 +1091,7 @@ const HomePage = () => {
                     <div className="bg-primary/10 rounded-lg p-3 text-sm max-w-xs">
                       Yes, and what's my backup plan if some people can't meet?
                     </div>
-                    <div className="w-8 h-8 bg-muted rounded-full flex items-center justify-center">
+                    <div className="w-8 h-8 bg-muted rounded-full flex items-center justify-center flex-shrink-0">
                       <div className="w-4 h-4 bg-muted-foreground rounded-full"></div>
                     </div>
                   </div>
@@ -1126,7 +1126,7 @@ const HomePage = () => {
                     <div className="bg-primary/10 rounded-lg p-3 text-sm max-w-xs">
                       Perfect, IRIS. Can you go ahead and send those outreach emails to James, Patricia, and Robert?
                     </div>
-                    <div className="w-8 h-8 bg-muted rounded-full flex items-center justify-center">
+                    <div className="w-8 h-8 bg-muted rounded-full flex items-center justify-center flex-shrink-0">
                       <div className="w-4 h-4 bg-muted-foreground rounded-full"></div>
                     </div>
                   </div>
