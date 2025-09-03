@@ -664,18 +664,18 @@ const HomePage = () => {
       
       {/* AI CRM Modal */}
       <Dialog open={crmModalOpen} onOpenChange={setCrmModalOpen}>
-        <DialogContent className="modal-content max-w-4xl">
-          <div className="modal-header">
-            <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-              <Database className="w-4 h-4 text-primary-foreground" />
-            </div>
-            <div>
-              <h2 className="text-h4 font-semibold">AI CRM for Private Investments</h2>
-              <p className="text-body-small text-muted-foreground">
-                Purpose-built CRM for private markets with unified data and AI-powered insights.
-              </p>
-            </div>
-          </div>
+        <DialogContent className="max-w-4xl">
+          <DialogHeader>
+            <DialogTitle className="text-xl font-semibold flex items-center gap-3">
+              <div className="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center">
+                <Database className="w-4 h-4 text-white" />
+              </div>
+              AI CRM for Private Investments
+            </DialogTitle>
+            <DialogDescription className="text-muted-foreground text-sm">
+              Purpose-built CRM for private markets with unified data and AI-powered insights.
+            </DialogDescription>
+          </DialogHeader>
           
           <div className="space-y-6">
             {/* Profile Demo */}
@@ -836,18 +836,18 @@ const HomePage = () => {
       
       {/* AI Agents Library Modal */}
       <Dialog open={agentsModalOpen} onOpenChange={setAgentsModalOpen}>
-        <DialogContent className="modal-content max-w-6xl">
-          <div className="modal-header pb-6">
-            <div className="w-8 h-8 bg-gradient-to-br from-primary to-primary/80 rounded-lg flex items-center justify-center">
-              <Bot className="w-4 h-4 text-primary-foreground" />
-            </div>
-            <div>
-              <h2 className="text-h4 font-semibold">AI Agents Library</h2>
-              <p className="text-body-small text-muted-foreground">
-                Specialized AI agents pre-trained for private market investments
-              </p>
-            </div>
-          </div>
+        <DialogContent className="max-w-6xl max-h-[90vh] overflow-hidden">
+          <DialogHeader className="pb-6">
+            <DialogTitle className="text-xl font-semibold flex items-center gap-3">
+              <div className="w-8 h-8 bg-gradient-to-br from-purple-500 to-blue-500 rounded-lg flex items-center justify-center">
+                <Bot className="w-4 h-4 text-white" />
+              </div>
+              AI Agents Library
+            </DialogTitle>
+            <DialogDescription className="text-muted-foreground text-sm">
+              Specialized AI agents pre-trained for private market investments
+            </DialogDescription>
+          </DialogHeader>
           
           <div className="space-y-6">
             <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
@@ -862,7 +862,7 @@ const HomePage = () => {
             <div className="flex gap-6">
               {/* Sidebar - 25% */}
               <div className="w-1/4 bg-muted/30 rounded-lg p-4">
-                <h3 className="text-caption font-medium mb-3">Categories</h3>
+                <h3 className="text-sm font-medium mb-3">Categories</h3>
                 <nav className="space-y-1">
                   {Object.keys(agentCategories).map((category) => {
                     const IconComponent = categoryIcons[category as keyof typeof categoryIcons];
@@ -898,7 +898,7 @@ const HomePage = () => {
                         </div>
                       );
                     })()}
-                    <h3 className="text-h6 font-medium">{selectedAgentCategory}</h3>
+                    <h3 className="text-base font-semibold">{selectedAgentCategory}</h3>
                   </div>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -950,33 +950,33 @@ const HomePage = () => {
       
       {/* IRIS Modal */}
       <Dialog open={irisModalOpen} onOpenChange={setIrisModalOpen}>
-        <DialogContent className="modal-content max-w-6xl">
+        <DialogContent className="max-w-6xl max-h-[90vh] overflow-hidden p-6">
           <div className="grid grid-cols-2 gap-8 h-[75vh]">
             {/* Left Column - Information */}
             <div className="space-y-6 overflow-y-auto pr-2">
               <div>
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-gradient-to-br from-primary to-primary/80 rounded-lg flex items-center justify-center">
-                    <MessageCircle className="w-5 h-5 text-primary-foreground" />
+                  <div className="w-10 h-10 bg-gradient-to-br from-primary to-blue-600 rounded-lg flex items-center justify-center">
+                    <MessageCircle className="w-5 h-5 text-white" />
                   </div>
-                  <h2 className="text-h4 font-semibold">IRIS AI Assistant</h2>
+                  <h2 className="text-xl font-semibold">IRIS AI Assistant</h2>
                 </div>
-                <p className="text-body-small text-muted-foreground">
+                <p className="text-muted-foreground text-sm leading-relaxed">
                   Meet your intelligent investment companion. IRIS understands private markets and instantly accesses your deal data to provide intelligent insights, generate documents, and automate workflows.
                 </p>
               </div>
               
               {/* Features */}
               <div className="space-y-4">
-                <h3 className="text-h6 font-medium">Key Capabilities</h3>
+                <h3 className="text-base font-semibold">Key Capabilities</h3>
                 <div className="space-y-3">
                   <div className="flex items-start gap-3">
                     <div className="w-8 h-8 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center mt-0.5">
                       <FileText className="w-4 h-4 text-blue-600" />
                     </div>
                     <div>
-                      <h4 className="text-body font-medium">Document Generation</h4>
-                      <p className="text-body-small text-muted-foreground">Generate investment memos, reports, and analyses instantly</p>
+                      <h4 className="text-sm font-medium">Document Generation</h4>
+                      <p className="text-sm text-muted-foreground">Generate investment memos, reports, and analyses instantly</p>
                     </div>
                   </div>
                   
@@ -985,8 +985,8 @@ const HomePage = () => {
                       <BarChart3 className="w-4 h-4 text-green-600" />
                     </div>
                     <div>
-                      <h4 className="text-body font-medium">Data Analysis</h4>
-                      <p className="text-body-small text-muted-foreground">Query your entire deal database with natural language</p>
+                      <h4 className="text-sm font-medium">Data Analysis</h4>
+                      <p className="text-sm text-muted-foreground">Query your entire deal database with natural language</p>
                     </div>
                   </div>
                   
@@ -995,8 +995,8 @@ const HomePage = () => {
                       <Calendar className="w-4 h-4 text-purple-600" />
                     </div>
                     <div>
-                      <h4 className="text-body font-medium">Task Automation</h4>
-                      <p className="text-body-small text-muted-foreground">Schedule meetings, send emails, and manage workflows</p>
+                      <h4 className="text-sm font-medium">Task Automation</h4>
+                      <p className="text-sm text-muted-foreground">Schedule meetings, send emails, and manage workflows</p>
                     </div>
                   </div>
                 </div>
@@ -1004,11 +1004,11 @@ const HomePage = () => {
               
               {/* CTA Buttons */}
               <div className="flex gap-3 pt-4">
-                <Button className="btn-primary flex-1">
+                <Button size="lg" className="flex-1">
                   <MessageCircle className="w-4 h-4 mr-2" />
                   Start Chat
                 </Button>
-                <Button variant="outline" className="flex-1">
+                <Button variant="outline" size="lg" className="flex-1">
                   Watch Demo
                 </Button>
               </div>
@@ -1016,8 +1016,8 @@ const HomePage = () => {
             
             {/* Right Column - Chat Window */}
             <div className="flex flex-col h-full min-w-0">
-              <h3 className="text-h6 font-medium text-center mb-4 flex-shrink-0">Live Chat Preview: NYC Trip Planning</h3>
-              <div className="card-glass p-3 flex-1 overflow-hidden">
+              <h3 className="text-base font-semibold text-center mb-4 flex-shrink-0">Live Chat Preview: NYC Trip Planning</h3>
+              <div className="bg-muted/30 rounded-lg p-3 flex-1 overflow-hidden">
                 <div className="bg-background rounded-lg p-3 border h-full overflow-y-auto">
                   <div className="space-y-4 pr-2">
                   
