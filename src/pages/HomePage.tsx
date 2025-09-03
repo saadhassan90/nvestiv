@@ -575,94 +575,460 @@ const HomePage = () => {
       
       {/* AI Agents Library Modal */}
       <Dialog open={agentsModalOpen} onOpenChange={setAgentsModalOpen}>
-        <DialogContent className="max-w-7xl max-h-[90vh] overflow-y-auto">
-          <DialogHeader>
-            <DialogTitle className="text-2xl font-bold">AI Agents Library</DialogTitle>
-            <DialogDescription>
+        <DialogContent className="max-w-7xl max-h-[90vh] overflow-hidden">
+          <DialogHeader className="pb-6">
+            <DialogTitle className="text-2xl font-bold flex items-center gap-3">
+              <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-blue-500 rounded-lg flex items-center justify-center">
+                <Bot className="w-5 h-5 text-white" />
+              </div>
+              AI Agents Library
+            </DialogTitle>
+            <DialogDescription className="text-muted-foreground">
               Specialized AI agents pre-trained for private market investments
             </DialogDescription>
           </DialogHeader>
           
           <div className="space-y-6">
-            <p className="text-muted-foreground leading-relaxed">
-              Nvestiv's AI Agents are intelligent assistants that understand your business context and investment mandates. 
-              Each agent has been pre-trained on private alternatives data and industry best practices, enabling them to 
-              analyze opportunities through the lens of your specific investment strategy and risk parameters.
-            </p>
+            <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+              <p className="text-muted-foreground leading-relaxed">
+                Nvestiv's AI Agents are intelligent assistants that understand your business context and investment mandates. 
+                Each agent has been pre-trained on private alternatives data and industry best practices, enabling them to 
+                analyze opportunities through the lens of your specific investment strategy and risk parameters.
+              </p>
+            </div>
             
             {/* Two-column layout */}
-            <div className="flex gap-6">
+            <div className="flex gap-6 h-[500px]">
               {/* Sidebar - 20% */}
-              <div className="w-1/5 space-y-2">
+              <div className="w-1/5 bg-muted/30 rounded-lg p-4">
+                <h3 className="font-semibold mb-3 text-sm">Categories</h3>
                 <nav className="space-y-1">
-                  <button className="w-full text-left px-3 py-2 text-sm font-medium bg-primary/10 text-primary rounded-md">
+                  <button className="w-full text-left px-3 py-2 text-sm font-medium bg-primary/10 text-primary rounded-md transition-colors">
                     Family Offices
                   </button>
-                  <button className="w-full text-left px-3 py-2 text-sm text-muted-foreground hover:bg-muted rounded-md">
+                  <button className="w-full text-left px-3 py-2 text-sm text-muted-foreground hover:bg-muted rounded-md transition-colors">
                     Institutional Investors
                   </button>
-                  <button className="w-full text-left px-3 py-2 text-sm text-muted-foreground hover:bg-muted rounded-md">
+                  <button className="w-full text-left px-3 py-2 text-sm text-muted-foreground hover:bg-muted rounded-md transition-colors">
                     Real Estate Funds
                   </button>
-                  <button className="w-full text-left px-3 py-2 text-sm text-muted-foreground hover:bg-muted rounded-md">
+                  <button className="w-full text-left px-3 py-2 text-sm text-muted-foreground hover:bg-muted rounded-md transition-colors">
                     Venture Capital
                   </button>
-                  <button className="w-full text-left px-3 py-2 text-sm text-muted-foreground hover:bg-muted rounded-md">
+                  <button className="w-full text-left px-3 py-2 text-sm text-muted-foreground hover:bg-muted rounded-md transition-colors">
                     Private Equity
                   </button>
-                  <button className="w-full text-left px-3 py-2 text-sm text-muted-foreground hover:bg-muted rounded-md">
+                  <button className="w-full text-left px-3 py-2 text-sm text-muted-foreground hover:bg-muted rounded-md transition-colors">
                     Private Credit
                   </button>
-                  <button className="w-full text-left px-3 py-2 text-sm text-muted-foreground hover:bg-muted rounded-md">
+                  <button className="w-full text-left px-3 py-2 text-sm text-muted-foreground hover:bg-muted rounded-md transition-colors">
                     Hedge Funds & Alternatives
                   </button>
-                  <button className="w-full text-left px-3 py-2 text-sm text-muted-foreground hover:bg-muted rounded-md">
+                  <button className="w-full text-left px-3 py-2 text-sm text-muted-foreground hover:bg-muted rounded-md transition-colors">
                     Wealth Managers
                   </button>
-                  <button className="w-full text-left px-3 py-2 text-sm text-muted-foreground hover:bg-muted rounded-md">
+                  <button className="w-full text-left px-3 py-2 text-sm text-muted-foreground hover:bg-muted rounded-md transition-colors">
                     Investment Bankers
                   </button>
                 </nav>
               </div>
               
-              {/* Main content - 80% */}
-              <div className="flex-1">
-                <div className="space-y-4">
-                  <h3 className="text-lg font-semibold">Family Offices</h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div className="p-4 border rounded-lg space-y-2 hover:shadow-md transition-shadow">
-                      <h4 className="font-semibold text-primary">Portfolio Management Agent</h4>
-                      <p className="text-sm text-muted-foreground">
-                        Consolidates holdings across accounts to deliver a real-time snapshot of performance and exposures.
-                      </p>
+              {/* Main content - 80% - Scrollable */}
+              <div className="flex-1 overflow-y-auto pr-2">
+                <div className="space-y-8">
+                  
+                  {/* Family Offices */}
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center">
+                        <Users className="w-4 h-4 text-white" />
+                      </div>
+                      <h3 className="text-lg font-semibold">Family Offices</h3>
                     </div>
-                    <div className="p-4 border rounded-lg space-y-2 hover:shadow-md transition-shadow">
-                      <h4 className="font-semibold text-primary">Succession Planning Agent</h4>
-                      <p className="text-sm text-muted-foreground">
-                        Models wealth transfer strategies and tax impacts for multi-generational planning.
-                      </p>
-                    </div>
-                    <div className="p-4 border rounded-lg space-y-2 hover:shadow-md transition-shadow">
-                      <h4 className="font-semibold text-primary">Risk Analyst Agent</h4>
-                      <p className="text-sm text-muted-foreground">
-                        Scans portfolios against market, macro, and concentration risks with proactive alerts.
-                      </p>
-                    </div>
-                    <div className="p-4 border rounded-lg space-y-2 hover:shadow-md transition-shadow">
-                      <h4 className="font-semibold text-primary">Co-Investment Screener Agent</h4>
-                      <p className="text-sm text-muted-foreground">
-                        Sources and evaluates direct deal opportunities alongside other families.
-                      </p>
-                    </div>
-                    <div className="p-4 border rounded-lg space-y-2 hover:shadow-md transition-shadow">
-                      <h4 className="font-semibold text-primary">Investor Reporting Agent</h4>
-                      <p className="text-sm text-muted-foreground">
-                        Automates quarterly reporting packages tailored for family principals and trustees.
-                      </p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div className="p-4 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 border border-blue-200 dark:border-blue-800 rounded-lg hover:shadow-md transition-all duration-200 hover:scale-[1.02]">
+                        <h4 className="font-semibold text-blue-700 dark:text-blue-300 mb-2">Portfolio Management Agent</h4>
+                        <p className="text-sm text-muted-foreground">
+                          Consolidates holdings across accounts to deliver a real-time snapshot of performance and exposures.
+                        </p>
+                      </div>
+                      <div className="p-4 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 border border-green-200 dark:border-green-800 rounded-lg hover:shadow-md transition-all duration-200 hover:scale-[1.02]">
+                        <h4 className="font-semibold text-green-700 dark:text-green-300 mb-2">Succession Planning Agent</h4>
+                        <p className="text-sm text-muted-foreground">
+                          Models wealth transfer strategies and tax impacts for multi-generational planning.
+                        </p>
+                      </div>
+                      <div className="p-4 bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 border border-orange-200 dark:border-orange-800 rounded-lg hover:shadow-md transition-all duration-200 hover:scale-[1.02]">
+                        <h4 className="font-semibold text-orange-700 dark:text-orange-300 mb-2">Risk Analyst Agent</h4>
+                        <p className="text-sm text-muted-foreground">
+                          Scans portfolios against market, macro, and concentration risks with proactive alerts.
+                        </p>
+                      </div>
+                      <div className="p-4 bg-gradient-to-br from-purple-50 to-violet-50 dark:from-purple-900/20 dark:to-violet-900/20 border border-purple-200 dark:border-purple-800 rounded-lg hover:shadow-md transition-all duration-200 hover:scale-[1.02]">
+                        <h4 className="font-semibold text-purple-700 dark:text-purple-300 mb-2">Co-Investment Screener Agent</h4>
+                        <p className="text-sm text-muted-foreground">
+                          Sources and evaluates direct deal opportunities alongside other families.
+                        </p>
+                      </div>
+                      <div className="p-4 bg-gradient-to-br from-teal-50 to-cyan-50 dark:from-teal-900/20 dark:to-cyan-900/20 border border-teal-200 dark:border-teal-800 rounded-lg hover:shadow-md transition-all duration-200 hover:scale-[1.02]">
+                        <h4 className="font-semibold text-teal-700 dark:text-teal-300 mb-2">Investor Reporting Agent</h4>
+                        <p className="text-sm text-muted-foreground">
+                          Automates quarterly reporting packages tailored for family principals and trustees.
+                        </p>
+                      </div>
                     </div>
                   </div>
+
+                  {/* Institutional Investors */}
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 bg-gradient-to-br from-emerald-500 to-green-600 rounded-lg flex items-center justify-center">
+                        <BarChart3 className="w-4 h-4 text-white" />
+                      </div>
+                      <h3 className="text-lg font-semibold">Institutional Investors</h3>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div className="p-4 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 border border-blue-200 dark:border-blue-800 rounded-lg hover:shadow-md transition-all duration-200 hover:scale-[1.02]">
+                        <h4 className="font-semibold text-blue-700 dark:text-blue-300 mb-2">Mandate Fit Screener Agent</h4>
+                        <p className="text-sm text-muted-foreground">
+                          Evaluates incoming deals against mandate rules and IPS criteria.
+                        </p>
+                      </div>
+                      <div className="p-4 bg-gradient-to-br from-red-50 to-pink-50 dark:from-red-900/20 dark:to-pink-900/20 border border-red-200 dark:border-red-800 rounded-lg hover:shadow-md transition-all duration-200 hover:scale-[1.02]">
+                        <h4 className="font-semibold text-red-700 dark:text-red-300 mb-2">Regulatory Compliance Agent</h4>
+                        <p className="text-sm text-muted-foreground">
+                          Monitors portfolios for evolving pension, SEC, and global regulations.
+                        </p>
+                      </div>
+                      <div className="p-4 bg-gradient-to-br from-purple-50 to-violet-50 dark:from-purple-900/20 dark:to-violet-900/20 border border-purple-200 dark:border-purple-800 rounded-lg hover:shadow-md transition-all duration-200 hover:scale-[1.02]">
+                        <h4 className="font-semibold text-purple-700 dark:text-purple-300 mb-2">Asset Allocation Optimizer Agent</h4>
+                        <p className="text-sm text-muted-foreground">
+                          Suggests allocation shifts based on models, benchmarks, and risk targets.
+                        </p>
+                      </div>
+                      <div className="p-4 bg-gradient-to-br from-orange-50 to-yellow-50 dark:from-orange-900/20 dark:to-yellow-900/20 border border-orange-200 dark:border-orange-800 rounded-lg hover:shadow-md transition-all duration-200 hover:scale-[1.02]">
+                        <h4 className="font-semibold text-orange-700 dark:text-orange-300 mb-2">Stress Testing Agent</h4>
+                        <p className="text-sm text-muted-foreground">
+                          Runs scenario analyses across economic downturns, rate changes, and shocks.
+                        </p>
+                      </div>
+                      <div className="p-4 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 border border-green-200 dark:border-green-800 rounded-lg hover:shadow-md transition-all duration-200 hover:scale-[1.02]">
+                        <h4 className="font-semibold text-green-700 dark:text-green-300 mb-2">ESG Scoring Agent</h4>
+                        <p className="text-sm text-muted-foreground">
+                          Scores assets on ESG metrics and integrates with sustainability frameworks.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Real Estate Funds */}
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 bg-gradient-to-br from-amber-500 to-orange-600 rounded-lg flex items-center justify-center">
+                        <FileText className="w-4 h-4 text-white" />
+                      </div>
+                      <h3 className="text-lg font-semibold">Real Estate Funds</h3>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div className="p-4 bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-900/20 dark:to-orange-900/20 border border-amber-200 dark:border-amber-800 rounded-lg hover:shadow-md transition-all duration-200 hover:scale-[1.02]">
+                        <h4 className="font-semibold text-amber-700 dark:text-amber-300 mb-2">Deal Underwriting Agent</h4>
+                        <p className="text-sm text-muted-foreground">
+                          Automates property underwriting with income, expense, and comps analysis.
+                        </p>
+                      </div>
+                      <div className="p-4 bg-gradient-to-br from-teal-50 to-cyan-50 dark:from-teal-900/20 dark:to-cyan-900/20 border border-teal-200 dark:border-teal-800 rounded-lg hover:shadow-md transition-all duration-200 hover:scale-[1.02]">
+                        <h4 className="font-semibold text-teal-700 dark:text-teal-300 mb-2">Market Area Analysis Agent</h4>
+                        <p className="text-sm text-muted-foreground">
+                          Uses Google Maps and datasets to evaluate neighborhood drivers and risks.
+                        </p>
+                      </div>
+                      <div className="p-4 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 border border-blue-200 dark:border-blue-800 rounded-lg hover:shadow-md transition-all duration-200 hover:scale-[1.02]">
+                        <h4 className="font-semibold text-blue-700 dark:text-blue-300 mb-2">Lease & Cashflow Agent</h4>
+                        <p className="text-sm text-muted-foreground">
+                          Projects lease rollovers, rent escalations, and stabilized NOI.
+                        </p>
+                      </div>
+                      <div className="p-4 bg-gradient-to-br from-red-50 to-pink-50 dark:from-red-900/20 dark:to-pink-900/20 border border-red-200 dark:border-red-800 rounded-lg hover:shadow-md transition-all duration-200 hover:scale-[1.02]">
+                        <h4 className="font-semibold text-red-700 dark:text-red-300 mb-2">Construction Risk Agent</h4>
+                        <p className="text-sm text-muted-foreground">
+                          Flags permitting, budget, and contractor risks during development.
+                        </p>
+                      </div>
+                      <div className="p-4 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 border border-green-200 dark:border-green-800 rounded-lg hover:shadow-md transition-all duration-200 hover:scale-[1.02]">
+                        <h4 className="font-semibold text-green-700 dark:text-green-300 mb-2">Exit Scenario Agent</h4>
+                        <p className="text-sm text-muted-foreground">
+                          Models multiple sale and refinance exit strategies with projected returns.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Venture Capital */}
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 bg-gradient-to-br from-violet-500 to-purple-600 rounded-lg flex items-center justify-center">
+                        <Zap className="w-4 h-4 text-white" />
+                      </div>
+                      <h3 className="text-lg font-semibold">Venture Capital</h3>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div className="p-4 bg-gradient-to-br from-violet-50 to-purple-50 dark:from-violet-900/20 dark:to-purple-900/20 border border-violet-200 dark:border-violet-800 rounded-lg hover:shadow-md transition-all duration-200 hover:scale-[1.02]">
+                        <h4 className="font-semibold text-violet-700 dark:text-violet-300 mb-2">Startup Screening Agent</h4>
+                        <p className="text-sm text-muted-foreground">
+                          Scores startups on team, traction, market, and financials.
+                        </p>
+                      </div>
+                      <div className="p-4 bg-gradient-to-br from-indigo-50 to-blue-50 dark:from-indigo-900/20 dark:to-blue-900/20 border border-indigo-200 dark:border-indigo-800 rounded-lg hover:shadow-md transition-all duration-200 hover:scale-[1.02]">
+                        <h4 className="font-semibold text-indigo-700 dark:text-indigo-300 mb-2">Founder Background Agent</h4>
+                        <p className="text-sm text-muted-foreground">
+                          Surfaces founder track record, experience, and credibility.
+                        </p>
+                      </div>
+                      <div className="p-4 bg-gradient-to-br from-cyan-50 to-teal-50 dark:from-cyan-900/20 dark:to-teal-900/20 border border-cyan-200 dark:border-cyan-800 rounded-lg hover:shadow-md transition-all duration-200 hover:scale-[1.02]">
+                        <h4 className="font-semibold text-cyan-700 dark:text-cyan-300 mb-2">Cap Table Analyzer Agent</h4>
+                        <p className="text-sm text-muted-foreground">
+                          Reviews ownership structures, dilution, and investor alignment.
+                        </p>
+                      </div>
+                      <div className="p-4 bg-gradient-to-br from-emerald-50 to-green-50 dark:from-emerald-900/20 dark:to-green-900/20 border border-emerald-200 dark:border-emerald-800 rounded-lg hover:shadow-md transition-all duration-200 hover:scale-[1.02]">
+                        <h4 className="font-semibold text-emerald-700 dark:text-emerald-300 mb-2">Growth Metrics Agent</h4>
+                        <p className="text-sm text-muted-foreground">
+                          Analyzes revenue, user growth, retention, and customer metrics.
+                        </p>
+                      </div>
+                      <div className="p-4 bg-gradient-to-br from-rose-50 to-pink-50 dark:from-rose-900/20 dark:to-pink-900/20 border border-rose-200 dark:border-rose-800 rounded-lg hover:shadow-md transition-all duration-200 hover:scale-[1.02]">
+                        <h4 className="font-semibold text-rose-700 dark:text-rose-300 mb-2">Exit Mapping Agent</h4>
+                        <p className="text-sm text-muted-foreground">
+                          Identifies potential acquirers and IPO scenarios for portfolio companies.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Private Equity */}
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 bg-gradient-to-br from-slate-500 to-gray-600 rounded-lg flex items-center justify-center">
+                        <Target className="w-4 h-4 text-white" />
+                      </div>
+                      <h3 className="text-lg font-semibold">Private Equity</h3>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div className="p-4 bg-gradient-to-br from-slate-50 to-gray-50 dark:from-slate-900/20 dark:to-gray-900/20 border border-slate-200 dark:border-slate-800 rounded-lg hover:shadow-md transition-all duration-200 hover:scale-[1.02]">
+                        <h4 className="font-semibold text-slate-700 dark:text-slate-300 mb-2">Buyout Due Diligence Agent</h4>
+                        <p className="text-sm text-muted-foreground">
+                          Automates diligence across financials, contracts, and market position.
+                        </p>
+                      </div>
+                      <div className="p-4 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 border border-blue-200 dark:border-blue-800 rounded-lg hover:shadow-md transition-all duration-200 hover:scale-[1.02]">
+                        <h4 className="font-semibold text-blue-700 dark:text-blue-300 mb-2">LBO Model Agent</h4>
+                        <p className="text-sm text-muted-foreground">
+                          Builds leveraged buyout models with debt and return scenarios.
+                        </p>
+                      </div>
+                      <div className="p-4 bg-gradient-to-br from-purple-50 to-violet-50 dark:from-purple-900/20 dark:to-violet-900/20 border border-purple-200 dark:border-purple-800 rounded-lg hover:shadow-md transition-all duration-200 hover:scale-[1.02]">
+                        <h4 className="font-semibold text-purple-700 dark:text-purple-300 mb-2">Fund Terms Analyzer Agent</h4>
+                        <p className="text-sm text-muted-foreground">
+                          Reviews GP/LP terms, fees, and waterfall structures.
+                        </p>
+                      </div>
+                      <div className="p-4 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 border border-green-200 dark:border-green-800 rounded-lg hover:shadow-md transition-all duration-200 hover:scale-[1.02]">
+                        <h4 className="font-semibold text-green-700 dark:text-green-300 mb-2">Debt Structure Optimizer Agent</h4>
+                        <p className="text-sm text-muted-foreground">
+                          Suggests optimal financing mix for acquisitions.
+                        </p>
+                      </div>
+                      <div className="p-4 bg-gradient-to-br from-orange-50 to-amber-50 dark:from-orange-900/20 dark:to-amber-900/20 border border-orange-200 dark:border-orange-800 rounded-lg hover:shadow-md transition-all duration-200 hover:scale-[1.02]">
+                        <h4 className="font-semibold text-orange-700 dark:text-orange-300 mb-2">Co-Investor Alignment Agent</h4>
+                        <p className="text-sm text-muted-foreground">
+                          Assesses deal alignment and syndication opportunities.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Private Credit */}
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 bg-gradient-to-br from-red-500 to-rose-600 rounded-lg flex items-center justify-center">
+                        <BarChart3 className="w-4 h-4 text-white" />
+                      </div>
+                      <h3 className="text-lg font-semibold">Private Credit</h3>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div className="p-4 bg-gradient-to-br from-red-50 to-rose-50 dark:from-red-900/20 dark:to-rose-900/20 border border-red-200 dark:border-red-800 rounded-lg hover:shadow-md transition-all duration-200 hover:scale-[1.02]">
+                        <h4 className="font-semibold text-red-700 dark:text-red-300 mb-2">Credit Underwriter Agent</h4>
+                        <p className="text-sm text-muted-foreground">
+                          Scores borrowers using cash flows, collateral, and covenants.
+                        </p>
+                      </div>
+                      <div className="p-4 bg-gradient-to-br from-yellow-50 to-amber-50 dark:from-yellow-900/20 dark:to-amber-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg hover:shadow-md transition-all duration-200 hover:scale-[1.02]">
+                        <h4 className="font-semibold text-yellow-700 dark:text-yellow-300 mb-2">Covenant Monitoring Agent</h4>
+                        <p className="text-sm text-muted-foreground">
+                          Tracks covenant compliance across loan portfolios.
+                        </p>
+                      </div>
+                      <div className="p-4 bg-gradient-to-br from-teal-50 to-cyan-50 dark:from-teal-900/20 dark:to-cyan-900/20 border border-teal-200 dark:border-teal-800 rounded-lg hover:shadow-md transition-all duration-200 hover:scale-[1.02]">
+                        <h4 className="font-semibold text-teal-700 dark:text-teal-300 mb-2">Collateral Valuation Agent</h4>
+                        <p className="text-sm text-muted-foreground">
+                          Estimates collateral liquidation and recovery values.
+                        </p>
+                      </div>
+                      <div className="p-4 bg-gradient-to-br from-purple-50 to-violet-50 dark:from-purple-900/20 dark:to-violet-900/20 border border-purple-200 dark:border-purple-800 rounded-lg hover:shadow-md transition-all duration-200 hover:scale-[1.02]">
+                        <h4 className="font-semibold text-purple-700 dark:text-purple-300 mb-2">Default Probability Agent</h4>
+                        <p className="text-sm text-muted-foreground">
+                          Projects default risk under base and stress scenarios.
+                        </p>
+                      </div>
+                      <div className="p-4 bg-gradient-to-br from-indigo-50 to-blue-50 dark:from-indigo-900/20 dark:to-blue-900/20 border border-indigo-200 dark:border-indigo-800 rounded-lg hover:shadow-md transition-all duration-200 hover:scale-[1.02]">
+                        <h4 className="font-semibold text-indigo-700 dark:text-indigo-300 mb-2">Loan Portfolio Diversification Agent</h4>
+                        <p className="text-sm text-muted-foreground">
+                          Recommends allocations to balance credit exposures.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Hedge Funds & Alternatives */}
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 bg-gradient-to-br from-pink-500 to-rose-600 rounded-lg flex items-center justify-center">
+                        <Zap className="w-4 h-4 text-white" />
+                      </div>
+                      <h3 className="text-lg font-semibold">Hedge Funds & Alternatives</h3>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div className="p-4 bg-gradient-to-br from-pink-50 to-rose-50 dark:from-pink-900/20 dark:to-rose-900/20 border border-pink-200 dark:border-pink-800 rounded-lg hover:shadow-md transition-all duration-200 hover:scale-[1.02]">
+                        <h4 className="font-semibold text-pink-700 dark:text-pink-300 mb-2">Macro Risk Analyst Agent</h4>
+                        <p className="text-sm text-muted-foreground">
+                          Monitors global markets, rates, and commodities for risk signals.
+                        </p>
+                      </div>
+                      <div className="p-4 bg-gradient-to-br from-cyan-50 to-teal-50 dark:from-cyan-900/20 dark:to-teal-900/20 border border-cyan-200 dark:border-cyan-800 rounded-lg hover:shadow-md transition-all duration-200 hover:scale-[1.02]">
+                        <h4 className="font-semibold text-cyan-700 dark:text-cyan-300 mb-2">Quant Signal Agent</h4>
+                        <p className="text-sm text-muted-foreground">
+                          Generates alpha signals from structured and alternative datasets.
+                        </p>
+                      </div>
+                      <div className="p-4 bg-gradient-to-br from-violet-50 to-purple-50 dark:from-violet-900/20 dark:to-purple-900/20 border border-violet-200 dark:border-violet-800 rounded-lg hover:shadow-md transition-all duration-200 hover:scale-[1.02]">
+                        <h4 className="font-semibold text-violet-700 dark:text-violet-300 mb-2">Derivative Hedging Agent</h4>
+                        <p className="text-sm text-muted-foreground">
+                          Structures options and futures strategies to protect downside.
+                        </p>
+                      </div>
+                      <div className="p-4 bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-900/20 dark:to-orange-900/20 border border-amber-200 dark:border-amber-800 rounded-lg hover:shadow-md transition-all duration-200 hover:scale-[1.02]">
+                        <h4 className="font-semibold text-amber-700 dark:text-amber-300 mb-2">Cross-Asset Arbitrage Agent</h4>
+                        <p className="text-sm text-muted-foreground">
+                          Identifies arbitrage opportunities across equities, credit, and FX.
+                        </p>
+                      </div>
+                      <div className="p-4 bg-gradient-to-br from-emerald-50 to-green-50 dark:from-emerald-900/20 dark:to-green-900/20 border border-emerald-200 dark:border-emerald-800 rounded-lg hover:shadow-md transition-all duration-200 hover:scale-[1.02]">
+                        <h4 className="font-semibold text-emerald-700 dark:text-emerald-300 mb-2">Investor Relations Agent</h4>
+                        <p className="text-sm text-muted-foreground">
+                          Prepares tailored updates, decks, and letters for LPs.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Wealth Managers */}
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center">
+                        <Users className="w-4 h-4 text-white" />
+                      </div>
+                      <h3 className="text-lg font-semibold">Wealth Managers</h3>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div className="p-4 bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-900/20 dark:to-teal-900/20 border border-emerald-200 dark:border-emerald-800 rounded-lg hover:shadow-md transition-all duration-200 hover:scale-[1.02]">
+                        <h4 className="font-semibold text-emerald-700 dark:text-emerald-300 mb-2">Client Mandate Builder Agent</h4>
+                        <p className="text-sm text-muted-foreground">
+                          Extracts client goals and builds customized investment policies.
+                        </p>
+                      </div>
+                      <div className="p-4 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 border border-blue-200 dark:border-blue-800 rounded-lg hover:shadow-md transition-all duration-200 hover:scale-[1.02]">
+                        <h4 className="font-semibold text-blue-700 dark:text-blue-300 mb-2">Portfolio Rebalancer Agent</h4>
+                        <p className="text-sm text-muted-foreground">
+                          Suggests timely rebalancing to keep client portfolios aligned with targets.
+                        </p>
+                      </div>
+                      <div className="p-4 bg-gradient-to-br from-purple-50 to-indigo-50 dark:from-purple-900/20 dark:to-indigo-900/20 border border-purple-200 dark:border-purple-800 rounded-lg hover:shadow-md transition-all duration-200 hover:scale-[1.02]">
+                        <h4 className="font-semibold text-purple-700 dark:text-purple-300 mb-2">Financial Planning Agent</h4>
+                        <p className="text-sm text-muted-foreground">
+                          Integrates income, expenses, taxes, and insurance into holistic plans.
+                        </p>
+                      </div>
+                      <div className="p-4 bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 border border-orange-200 dark:border-orange-800 rounded-lg hover:shadow-md transition-all duration-200 hover:scale-[1.02]">
+                        <h4 className="font-semibold text-orange-700 dark:text-orange-300 mb-2">Product Matching Agent</h4>
+                        <p className="text-sm text-muted-foreground">
+                          Matches clients with funds, SMAs, or alternatives suited to their profile.
+                        </p>
+                      </div>
+                      <div className="p-4 bg-gradient-to-br from-teal-50 to-cyan-50 dark:from-teal-900/20 dark:to-cyan-900/20 border border-teal-200 dark:border-teal-800 rounded-lg hover:shadow-md transition-all duration-200 hover:scale-[1.02]">
+                        <h4 className="font-semibold text-teal-700 dark:text-teal-300 mb-2">Client Reporting Agent</h4>
+                        <p className="text-sm text-muted-foreground">
+                          Generates white-labeled performance and planning reports.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Investment Bankers / Advisors */}
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 bg-gradient-to-br from-indigo-500 to-blue-600 rounded-lg flex items-center justify-center">
+                        <FileText className="w-4 h-4 text-white" />
+                      </div>
+                      <h3 className="text-lg font-semibold">Investment Bankers / Advisors</h3>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div className="p-4 bg-gradient-to-br from-indigo-50 to-blue-50 dark:from-indigo-900/20 dark:to-blue-900/20 border border-indigo-200 dark:border-indigo-800 rounded-lg hover:shadow-md transition-all duration-200 hover:scale-[1.02]">
+                        <h4 className="font-semibold text-indigo-700 dark:text-indigo-300 mb-2">Sell-Side Deal Preparation Agent</h4>
+                        <p className="text-sm text-muted-foreground">
+                          Structures CIMs, teasers, and data rooms for companies going to market.
+                        </p>
+                      </div>
+                      <div className="p-4 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 border border-green-200 dark:border-green-800 rounded-lg hover:shadow-md transition-all duration-200 hover:scale-[1.02]">
+                        <h4 className="font-semibold text-green-700 dark:text-green-300 mb-2">Valuation & Modeling Agent</h4>
+                        <p className="text-sm text-muted-foreground">
+                          Builds comps, precedent transaction, and DCF analyses.
+                        </p>
+                      </div>
+                      <div className="p-4 bg-gradient-to-br from-violet-50 to-purple-50 dark:from-violet-900/20 dark:to-purple-900/20 border border-violet-200 dark:border-violet-800 rounded-lg hover:shadow-md transition-all duration-200 hover:scale-[1.02]">
+                        <h4 className="font-semibold text-violet-700 dark:text-violet-300 mb-2">Investor Targeting Agent</h4>
+                        <p className="text-sm text-muted-foreground">
+                          Identifies and ranks likely acquirers or capital providers.
+                        </p>
+                      </div>
+                      <div className="p-4 bg-gradient-to-br from-rose-50 to-pink-50 dark:from-rose-900/20 dark:to-pink-900/20 border border-rose-200 dark:border-rose-800 rounded-lg hover:shadow-md transition-all duration-200 hover:scale-[1.02]">
+                        <h4 className="font-semibold text-rose-700 dark:text-rose-300 mb-2">Due Diligence Agent</h4>
+                        <p className="text-sm text-muted-foreground">
+                          Coordinates and flags red flags across buyer/seller diligence processes.
+                        </p>
+                      </div>
+                      <div className="p-4 bg-gradient-to-br from-amber-50 to-yellow-50 dark:from-amber-900/20 dark:to-yellow-900/20 border border-amber-200 dark:border-amber-800 rounded-lg hover:shadow-md transition-all duration-200 hover:scale-[1.02]">
+                        <h4 className="font-semibold text-amber-700 dark:text-amber-300 mb-2">Placement Agent Assistant</h4>
+                        <p className="text-sm text-muted-foreground">
+                          Personalizes outreach campaigns and tracks investor engagement.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
                 </div>
               </div>
+            </div>
+
+            {/* CTAs */}
+            <div className="flex gap-4 pt-6 border-t">
+              <Button size="lg" className="flex-1">
+                <Bot className="w-4 h-4 mr-2" />
+                Deploy Agents
+              </Button>
+              <Button variant="outline" size="lg" className="flex-1">
+                <Calendar className="w-4 h-4 mr-2" />
+                Schedule Demo
+              </Button>
             </div>
           </div>
         </DialogContent>
