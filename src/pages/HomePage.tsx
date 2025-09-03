@@ -950,142 +950,206 @@ const HomePage = () => {
       
       {/* IRIS Modal */}
       <Dialog open={irisModalOpen} onOpenChange={setIrisModalOpen}>
-        <DialogContent className="max-w-5xl">
-          <div className="space-y-6">
-            {/* Header Section */}
-            <div className="grid grid-cols-2 gap-8">
-              {/* Left Column - Information */}
-              <div className="space-y-6">
-                <div>
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-primary to-blue-600 rounded-lg flex items-center justify-center">
-                      <MessageCircle className="w-6 h-6 text-white" />
-                    </div>
-                    <h2 className="text-2xl font-bold">IRIS AI Assistant</h2>
+        <DialogContent className="max-w-6xl">
+          <div className="grid grid-cols-2 gap-8 h-[80vh]">
+            {/* Left Column - Information */}
+            <div className="space-y-6">
+              <div>
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-primary to-blue-600 rounded-lg flex items-center justify-center">
+                    <MessageCircle className="w-6 h-6 text-white" />
                   </div>
-                  <p className="text-muted-foreground text-lg leading-relaxed">
-                    Meet your intelligent investment companion. IRIS understands private markets and instantly accesses your deal data to provide intelligent insights, generate documents, and automate workflows.
-                  </p>
+                  <h2 className="text-2xl font-bold">IRIS AI Assistant</h2>
                 </div>
-                
-                {/* Features */}
-                <div className="space-y-4">
-                  <h3 className="text-lg font-semibold">Key Capabilities</h3>
-                  <div className="space-y-3">
-                    <div className="flex items-start gap-3">
-                      <div className="w-8 h-8 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center mt-0.5">
-                        <FileText className="w-4 h-4 text-blue-600" />
-                      </div>
-                      <div>
-                        <h4 className="font-semibold">Document Generation</h4>
-                        <p className="text-sm text-muted-foreground">Generate investment memos, reports, and analyses instantly</p>
-                      </div>
+                <p className="text-muted-foreground text-lg leading-relaxed">
+                  Meet your intelligent investment companion. IRIS understands private markets and instantly accesses your deal data to provide intelligent insights, generate documents, and automate workflows.
+                </p>
+              </div>
+              
+              {/* Features */}
+              <div className="space-y-4">
+                <h3 className="text-lg font-semibold">Key Capabilities</h3>
+                <div className="space-y-3">
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center mt-0.5">
+                      <FileText className="w-4 h-4 text-blue-600" />
                     </div>
-                    
-                    <div className="flex items-start gap-3">
-                      <div className="w-8 h-8 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center mt-0.5">
-                        <BarChart3 className="w-4 h-4 text-green-600" />
-                      </div>
-                      <div>
-                        <h4 className="font-semibold">Data Analysis</h4>
-                        <p className="text-sm text-muted-foreground">Query your entire deal database with natural language</p>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-start gap-3">
-                      <div className="w-8 h-8 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center mt-0.5">
-                        <Calendar className="w-4 h-4 text-purple-600" />
-                      </div>
-                      <div>
-                        <h4 className="font-semibold">Task Automation</h4>
-                        <p className="text-sm text-muted-foreground">Schedule meetings, set reminders, and manage workflows</p>
-                      </div>
+                    <div>
+                      <h4 className="font-semibold">Document Generation</h4>
+                      <p className="text-sm text-muted-foreground">Generate investment memos, reports, and analyses instantly</p>
                     </div>
                   </div>
-                </div>
-                
-                {/* CTA Buttons */}
-                <div className="flex gap-3 pt-4">
-                  <Button size="lg" className="flex-1">
-                    <MessageCircle className="w-4 h-4 mr-2" />
-                    Start Chat
-                  </Button>
-                  <Button variant="outline" size="lg" className="flex-1">
-                    Watch Demo
-                  </Button>
+                  
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center mt-0.5">
+                      <BarChart3 className="w-4 h-4 text-green-600" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold">Data Analysis</h4>
+                      <p className="text-sm text-muted-foreground">Query your entire deal database with natural language</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center mt-0.5">
+                      <Calendar className="w-4 h-4 text-purple-600" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold">Task Automation</h4>
+                      <p className="text-sm text-muted-foreground">Schedule meetings, send emails, and manage workflows</p>
+                    </div>
+                  </div>
                 </div>
               </div>
               
-              {/* Right Column - Chat Preview Label */}
-              <div className="flex items-center justify-center">
-                <h3 className="text-lg font-semibold">Live Chat Preview</h3>
+              {/* CTA Buttons */}
+              <div className="flex gap-3 pt-4">
+                <Button size="lg" className="flex-1">
+                  <MessageCircle className="w-4 h-4 mr-2" />
+                  Start Chat
+                </Button>
+                <Button variant="outline" size="lg" className="flex-1">
+                  Watch Demo
+                </Button>
               </div>
             </div>
             
-            {/* Full Width Chat Window */}
-            <div className="bg-muted/30 rounded-lg p-4">
-              <div className="bg-background rounded-lg p-4 border space-y-4 h-96 overflow-y-auto">
-                <div className="flex gap-3">
-                  <div className="w-8 h-8 rounded-full overflow-hidden">
-                    <img src="/lovable-uploads/e84fc1b3-aa69-4b05-bb30-566bd7f37da6.png" alt="IRIS AI Assistant" className="w-full h-full object-cover" />
+            {/* Right Column - Chat Window */}
+            <div className="space-y-4 flex flex-col h-full">
+              <h3 className="text-lg font-semibold text-center">Live Chat Preview: NYC Trip Planning</h3>
+              <div className="bg-muted/30 rounded-lg p-4 flex-1">
+                <div className="bg-background rounded-lg p-4 border space-y-4 h-full overflow-y-auto">
+                  
+                  {/* User Message 1 */}
+                  <div className="flex gap-3 justify-end">
+                    <div className="bg-primary/10 rounded-lg p-3 text-sm max-w-xs">
+                      I'm going to be in NYC April 15-17 for business. Who should I prioritize meeting with while I'm there?
+                    </div>
+                    <div className="w-8 h-8 bg-muted rounded-full flex items-center justify-center">
+                      <div className="w-4 h-4 bg-muted-foreground rounded-full"></div>
+                    </div>
                   </div>
-                  <div className="flex-1 bg-muted/50 rounded-lg p-3 text-sm">
-                    Hello! I'm IRIS, your AI investment assistant. I can help you analyze deals, generate reports, and answer questions about your portfolio. What would you like to explore today?
-                  </div>
-                </div>
-                
-                <div className="flex gap-3 justify-end">
-                  <div className="bg-primary/10 rounded-lg p-3 text-sm max-w-xs">
-                    Show me the top 5 Series B deals over $20M from this quarter
-                  </div>
-                  <div className="w-8 h-8 bg-muted rounded-full flex items-center justify-center">
-                    <div className="w-4 h-4 bg-muted-foreground rounded-full"></div>
-                  </div>
-                </div>
-                
-                <div className="flex gap-3">
-                  <div className="w-8 h-8 rounded-full overflow-hidden">
-                    <img src="/lovable-uploads/e84fc1b3-aa69-4b05-bb30-566bd7f37da6.png" alt="IRIS AI Assistant" className="w-full h-full object-cover" />
-                  </div>
-                  <div className="flex-1 bg-muted/50 rounded-lg p-3 text-sm">
-                    <div className="space-y-2">
-                      <p>I found 5 Series B deals over $20M this quarter:</p>
-                      <div className="text-xs space-y-1">
-                        <div>• TechCorp - $35M Series B (SaaS)</div>
-                        <div>• HealthTech Solutions - $28M Series B (HealthTech)</div>
-                        <div>• FinanceAI - $45M Series B (FinTech)</div>
-                        <div>• GreenEnergy Co - $32M Series B (CleanTech)</div>
-                        <div>• DataLabs - $25M Series B (AI/ML)</div>
+                  
+                  {/* IRIS Response 1 */}
+                  <div className="flex gap-3">
+                    <div className="w-8 h-8 rounded-full overflow-hidden flex-shrink-0">
+                      <img src="/lovable-uploads/e84fc1b3-aa69-4b05-bb30-566bd7f37da6.png" alt="IRIS AI Assistant" className="w-full h-full object-cover" />
+                    </div>
+                    <div className="flex-1 bg-muted/50 rounded-lg p-3 text-sm">
+                      <div className="space-y-2">
+                        <p>Great opportunity for face-to-face meetings! Let me analyze your NYC contacts and prioritize based on relationship value and current opportunities.</p>
+                        <p className="text-xs italic">*Analyzing 89 NYC-based contacts for meeting priority…*</p>
+                        <p>Found <strong>23 high-value contacts</strong> in NYC. Here are your <strong>top 6 meeting priorities</strong>:</p>
+                        <div className="text-xs space-y-1 mt-2">
+                          <div><strong>1. James Wilson - Blackstone Real Estate</strong> ⭐⭐⭐⭐⭐</div>
+                          <div className="ml-2">• Why urgent: Mentioned co-investment opportunities in February</div>
+                          <div><strong>2. Patricia Lee - NYC Teachers' Retirement</strong> ⭐⭐⭐⭐⭐</div>
+                          <div className="ml-2">• Why urgent: Decision committee meeting April 22nd</div>
+                          <div><strong>3. Robert Chen - Empire Family Office</strong> ⭐⭐⭐⭐</div>
+                          <div className="ml-2">• Why important: Last met 8 months ago, relationship cooling</div>
+                        </div>
+                        <p className="font-medium text-xs">Recommendation: James and Patricia are must-reaches. Start with them today.</p>
                       </div>
                     </div>
                   </div>
-                </div>
-                
-                <div className="flex gap-3 justify-end">
-                  <div className="bg-primary/10 rounded-lg p-3 text-sm max-w-xs">
-                    Generate an investment memo for TechCorp
+                  
+                  {/* User Message 2 */}
+                  <div className="flex gap-3 justify-end">
+                    <div className="bg-primary/10 rounded-lg p-3 text-sm max-w-xs">
+                      Perfect! Can you draft outreach messages and suggest meeting logistics?
+                    </div>
+                    <div className="w-8 h-8 bg-muted rounded-full flex items-center justify-center">
+                      <div className="w-4 h-4 bg-muted-foreground rounded-full"></div>
+                    </div>
                   </div>
-                  <div className="w-8 h-8 bg-muted rounded-full flex items-center justify-center">
-                    <div className="w-4 h-4 bg-muted-foreground rounded-full"></div>
+                  
+                  {/* IRIS Response 2 */}
+                  <div className="flex gap-3">
+                    <div className="w-8 h-8 rounded-full overflow-hidden flex-shrink-0">
+                      <img src="/lovable-uploads/e84fc1b3-aa69-4b05-bb30-566bd7f37da6.png" alt="IRIS AI Assistant" className="w-full h-full object-cover" />
+                    </div>
+                    <div className="flex-1 bg-muted/50 rounded-lg p-3 text-sm">
+                      <div className="space-y-2">
+                        <p><strong>Outreach Messages Ready:</strong></p>
+                        <div className="text-xs space-y-2">
+                          <div><strong>For James Wilson:</strong> <em>"James, I'll be in NYC April 15-17 and remembered our February conversation about co-investment opportunities..."</em></div>
+                          <div><strong>For Patricia Lee:</strong> <em>"Patricia, I'll be in the city April 15-17, right before your committee meeting on the 22nd..."</em></div>
+                        </div>
+                        <p><strong>Suggested Meeting Flow:</strong></p>
+                        <div className="text-xs">
+                          <div>• Day 1: James (Midtown) + Sarah (Financial District)</div>
+                          <div>• Day 2: Patricia (Lower Manhattan) + Robert (Upper East)</div>
+                          <div>• Day 3: Michael (informal) + buffer time</div>
+                        </div>
+                        <p className="text-xs">Should I create the calendar invites once you send these messages?</p>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                
-                <div className="flex gap-3">
-                  <div className="w-8 h-8 rounded-full overflow-hidden">
-                    <img src="/lovable-uploads/e84fc1b3-aa69-4b05-bb30-566bd7f37da6.png" alt="IRIS AI Assistant" className="w-full h-full object-cover" />
+                  
+                  {/* User Message 3 */}
+                  <div className="flex gap-3 justify-end">
+                    <div className="bg-primary/10 rounded-lg p-3 text-sm max-w-xs">
+                      Yes, and what's my backup plan if some people can't meet?
+                    </div>
+                    <div className="w-8 h-8 bg-muted rounded-full flex items-center justify-center">
+                      <div className="w-4 h-4 bg-muted-foreground rounded-full"></div>
+                    </div>
                   </div>
-                  <div className="flex-1 bg-muted/50 rounded-lg p-3 text-sm">
-                    I'll generate a comprehensive investment memo for TechCorp's $35M Series B. This will include market analysis, financial projections, team assessment, and risk factors. The memo will be ready in 30 seconds.
+                  
+                  {/* IRIS Response 3 */}
+                  <div className="flex gap-3">
+                    <div className="w-8 h-8 rounded-full overflow-hidden flex-shrink-0">
+                      <img src="/lovable-uploads/e84fc1b3-aa69-4b05-bb30-566bd7f37da6.png" alt="IRIS AI Assistant" className="w-full h-full object-cover" />
+                    </div>
+                    <div className="flex-1 bg-muted/50 rounded-lg p-3 text-sm">
+                      <div className="space-y-2">
+                        <p><strong>Backup Contact Strategy:</strong></p>
+                        <div className="text-xs space-y-1">
+                          <div><strong>7. David Park - Manhattan Family Office</strong></div>
+                          <div>• Why good backup: Always responsive, could introduce you to others</div>
+                          <div><strong>8. Lisa Chen - Riverside Capital</strong></div>
+                          <div>• Why backup: Interested in real estate deals, easier to book short notice</div>
+                        </div>
+                        <p><strong>Alternative Meeting Strategies:</strong></p>
+                        <div className="text-xs">
+                          <div>• Group meetings: Combine 2-3 contacts for efficiency</div>
+                          <div>• Breakfast meetings: 7:30 AM slots often available last-minute</div>
+                          <div>• Airport meetings: Day 3 departure timing</div>
+                        </div>
+                        <p className="text-xs">You'll have a full schedule either way - start with the top 6 outreach today.</p>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                
-                <div className="flex gap-3 justify-end">
-                  <div className="bg-primary/10 rounded-lg p-3 text-sm max-w-xs">
-                    Perfect! Also schedule a follow-up call with their CEO
+                  
+                  {/* User Message 4 */}
+                  <div className="flex gap-3 justify-end">
+                    <div className="bg-primary/10 rounded-lg p-3 text-sm max-w-xs">
+                      Perfect, IRIS. Can you go ahead and send those outreach emails to James, Patricia, and Robert?
+                    </div>
+                    <div className="w-8 h-8 bg-muted rounded-full flex items-center justify-center">
+                      <div className="w-4 h-4 bg-muted-foreground rounded-full"></div>
+                    </div>
                   </div>
-                  <div className="w-8 h-8 bg-muted rounded-full flex items-center justify-center">
-                    <div className="w-4 h-4 bg-muted-foreground rounded-full"></div>
+                  
+                  {/* IRIS Response 4 */}
+                  <div className="flex gap-3">
+                    <div className="w-8 h-8 rounded-full overflow-hidden flex-shrink-0">
+                      <img src="/lovable-uploads/e84fc1b3-aa69-4b05-bb30-566bd7f37da6.png" alt="IRIS AI Assistant" className="w-full h-full object-cover" />
+                    </div>
+                    <div className="flex-1 bg-muted/50 rounded-lg p-3 text-sm">
+                      <div className="space-y-2">
+                        <p>Absolutely! Sending your priority outreach emails now…</p>
+                        <div className="text-xs space-y-1">
+                          <div>✅ <strong>Email sent to James Wilson</strong> (Blackstone Real Estate)</div>
+                          <div>✅ <strong>Email sent to Patricia Lee</strong> (NYC Teachers' Retirement)</div>
+                          <div>✅ <strong>Email sent to Robert Chen</strong> (Empire Family Office)</div>
+                        </div>
+                        <p className="text-xs">All three emails have been delivered. I will monitor for responses and alert you by text when they reply.</p>
+                        <p className="text-xs font-medium">Expected timeline: Responses typically within 24-48 hours for these contacts.</p>
+                      </div>
+                    </div>
                   </div>
+                  
                 </div>
               </div>
             </div>
