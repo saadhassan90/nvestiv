@@ -543,49 +543,49 @@ const HomePage = () => {
             {/* Key Features */}
             <div className="grid md:grid-cols-2 gap-6">
               <div className="space-y-3">
-                <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-500" />
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
                   <div>
-                    <p className="font-medium">Contact & Company Profiles</p>
-                    <p className="text-sm text-muted-foreground">Complete investor profiles with AUM, preferences</p>
+                    <p className="font-medium">Contact Management</p>
+                    <p className="text-sm text-muted-foreground">Comprehensive contact and company profiles with detailed investment preferences</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-500" />
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
                   <div>
-                    <p className="font-medium">Deal Flow Management</p>
-                    <p className="text-sm text-muted-foreground">Track opportunities from sourcing to close</p>
+                    <p className="font-medium">AI Bulk Uploads</p>
+                    <p className="text-sm text-muted-foreground">Intelligent data extraction from pitch decks and documents</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-500" />
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
                   <div>
-                    <p className="font-medium">Document Management</p>
-                    <p className="text-sm text-muted-foreground">AI-powered file organization</p>
+                    <p className="font-medium">Lists and Tasks Auto Maintained Using AI</p>
+                    <p className="text-sm text-muted-foreground">Smart task creation and list management based on deal flow</p>
                   </div>
                 </div>
               </div>
               
               <div className="space-y-3">
-                <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-500" />
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
                   <div>
-                    <p className="font-medium">Smart Matching</p>
-                    <p className="text-sm text-muted-foreground">Auto-match deals to investors</p>
+                    <p className="font-medium">AI Notetaker</p>
+                    <p className="text-sm text-muted-foreground">Automatically fills meeting data and updates contact profiles</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-500" />
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
                   <div>
-                    <p className="font-medium">Relationship Intelligence</p>
-                    <p className="text-sm text-muted-foreground">Track interaction history</p>
+                    <p className="font-medium">Files Management & Cloud Integration</p>
+                    <p className="text-sm text-muted-foreground">Seamless integration with cloud storage and document management</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-500" />
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
                   <div>
-                    <p className="font-medium">Portfolio Analytics</p>
-                    <p className="text-sm text-muted-foreground">Real-time performance tracking</p>
+                    <p className="font-medium">Advanced Analytics</p>
+                    <p className="text-sm text-muted-foreground">Real-time insights and performance tracking across your portfolio</p>
                   </div>
                 </div>
               </div>
