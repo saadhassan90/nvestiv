@@ -46,6 +46,11 @@ const HomePage = () => {
       {
         name: "Investor Reporting Agent",
         description: "Automates quarterly reporting packages tailored for family principals and trustees."
+      },
+      {
+        name: "Discover 15+ More Agents",
+        description: "Unlock specialized tools for tax optimization, board management, philanthropy tracking, and family governance—all tailored for your office.",
+        isMoreCard: true
       }
     ],
     "Institutional Investors": [
@@ -68,6 +73,11 @@ const HomePage = () => {
       {
         name: "ESG Scoring Agent",
         description: "Scores assets on ESG metrics and integrates with sustainability frameworks."
+      },
+      {
+        name: "Explore 20+ More Solutions",
+        description: "Access advanced tools for liability modeling, peer benchmarking, alternative data integration, and regulatory reporting automation.",
+        isMoreCard: true
       }
     ],
     "Real Estate Funds": [
@@ -90,6 +100,11 @@ const HomePage = () => {
       {
         name: "Exit Scenario Agent",
         description: "Models multiple sale and refinance exit strategies with projected returns."
+      },
+      {
+        name: "Browse 12+ Property Tools",
+        description: "Discover agents for zoning analysis, environmental due diligence, tenant screening, and REIT performance optimization.",
+        isMoreCard: true
       }
     ],
     "Venture Capital": [
@@ -112,6 +127,11 @@ const HomePage = () => {
       {
         name: "Exit Mapping Agent",
         description: "Identifies potential acquirers and IPO scenarios for portfolio companies."
+      },
+      {
+        name: "Access 18+ Startup Intelligence",
+        description: "Unlock tools for patent analysis, competitive intelligence, market sizing, and accelerator program evaluation.",
+        isMoreCard: true
       }
     ],
     "Private Equity": [
@@ -134,6 +154,11 @@ const HomePage = () => {
       {
         name: "Co-Investor Alignment Agent",
         description: "Assesses deal alignment and syndication opportunities."
+      },
+      {
+        name: "View 25+ Deal Tools",
+        description: "Explore agents for management team assessment, industry comps, operational improvements, and portfolio company monitoring.",
+        isMoreCard: true
       }
     ],
     "Private Credit": [
@@ -156,6 +181,11 @@ const HomePage = () => {
       {
         name: "Loan Portfolio Diversification Agent",
         description: "Recommends allocations to balance credit exposures."
+      },
+      {
+        name: "Discover 14+ Credit Solutions",
+        description: "Access specialized tools for distressed debt analysis, mezzanine structuring, and direct lending optimization.",
+        isMoreCard: true
       }
     ],
     "Hedge Funds & Alternatives": [
@@ -178,6 +208,11 @@ const HomePage = () => {
       {
         name: "Investor Relations Agent",
         description: "Prepares tailored updates, decks, and letters for LPs."
+      },
+      {
+        name: "Unlock 22+ Alpha Generators",
+        description: "Explore cutting-edge tools for crypto analysis, volatility trading, event-driven strategies, and systematic risk management.",
+        isMoreCard: true
       }
     ],
     "Wealth Managers": [
@@ -200,6 +235,11 @@ const HomePage = () => {
       {
         name: "Client Reporting Agent",
         description: "Generates white-labeled performance and planning reports."
+      },
+      {
+        name: "Explore 16+ Client Solutions",
+        description: "Access tools for estate planning, tax-loss harvesting, alternative investments screening, and high-net-worth family services.",
+        isMoreCard: true
       }
     ],
     "Investment Bankers": [
@@ -222,6 +262,11 @@ const HomePage = () => {
       {
         name: "Placement Agent Assistant",
         description: "Personalizes outreach campaigns and tracks investor engagement."
+      },
+      {
+        name: "Access 19+ Deal Makers",
+        description: "Discover tools for pitch book automation, roadshow optimization, regulatory filing assistance, and cross-border transaction support.",
+        isMoreCard: true
       }
     ]
   };
@@ -856,16 +901,31 @@ const HomePage = () => {
                     <h3 className="text-lg font-semibold">{selectedAgentCategory}</h3>
                   </div>
                   
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     {agentCategories[selectedAgentCategory as keyof typeof agentCategories].map((agent, index) => (
                       <div
                         key={index}
-                        className="p-4 border border-border rounded-lg hover:shadow-md transition-all duration-200 hover:scale-[1.02] bg-card hover:bg-muted/50"
+                        className={`p-4 border border-border rounded-lg hover:shadow-md transition-all duration-200 hover:scale-[1.02] ${
+                          agent.isMoreCard 
+                            ? 'bg-gradient-to-br from-primary/5 to-primary/10 border-primary/20 hover:border-primary/30' 
+                            : 'bg-card hover:bg-muted/50'
+                        }`}
                       >
-                        <h4 className="font-semibold text-foreground mb-2">{agent.name}</h4>
+                        <h4 className={`font-semibold mb-2 ${
+                          agent.isMoreCard ? 'text-primary' : 'text-foreground'
+                        }`}>
+                          {agent.name}
+                        </h4>
                         <p className="text-sm text-muted-foreground">
                           {agent.description}
                         </p>
+                        {agent.isMoreCard && (
+                          <div className="mt-3 pt-3 border-t border-primary/20">
+                            <Button variant="outline" size="sm" className="w-full text-xs">
+                              View Full Library
+                            </Button>
+                          </div>
+                        )}
                       </div>
                     ))}
                   </div>
