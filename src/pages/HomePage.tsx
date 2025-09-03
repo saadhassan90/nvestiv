@@ -1018,7 +1018,8 @@ const HomePage = () => {
             <div className="flex flex-col h-full">
               <h3 className="text-lg font-semibold text-center mb-4">Live Chat Preview: NYC Trip Planning</h3>
               <div className="bg-muted/30 rounded-lg p-4 flex-1 min-h-0">
-                <div className="bg-background rounded-lg p-4 border h-full overflow-y-auto space-y-4">
+                <div className="bg-background rounded-lg p-4 border h-full overflow-y-scroll overscroll-contain space-y-4 scrollbar-thin scrollbar-thumb-muted scrollbar-track-transparent"
+                     style={{ maxHeight: '100%', scrollBehavior: 'smooth' }}>
                   
                   {/* User Message 1 */}
                   <div className="flex gap-3 justify-end">
