@@ -950,86 +950,133 @@ const HomePage = () => {
       
       {/* IRIS Modal */}
       <Dialog open={irisModalOpen} onOpenChange={setIrisModalOpen}>
-        <DialogContent className="max-w-3xl">
-          <DialogHeader>
-            <DialogTitle className="text-2xl font-bold flex items-center gap-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary to-blue-600 rounded-lg flex items-center justify-center">
-                <MessageCircle className="w-5 h-5 text-white" />
+        <DialogContent className="max-w-5xl">
+          <div className="grid grid-cols-2 gap-8">
+            {/* Left Column - Information */}
+            <div className="space-y-6">
+              <div>
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-primary to-blue-600 rounded-lg flex items-center justify-center">
+                    <MessageCircle className="w-6 h-6 text-white" />
+                  </div>
+                  <h2 className="text-2xl font-bold">IRIS AI Assistant</h2>
+                </div>
+                <p className="text-muted-foreground text-lg leading-relaxed">
+                  Meet your intelligent investment companion. IRIS understands private markets and instantly accesses your deal data to provide intelligent insights, generate documents, and automate workflows.
+                </p>
               </div>
-              IRIS AI Assistant
-            </DialogTitle>
-            <DialogDescription className="text-muted-foreground">
-              Conversational AI that understands private markets and instantly accesses your deal data.
-            </DialogDescription>
-          </DialogHeader>
-          
-          <div className="space-y-6">
-            {/* Chat Demo */}
-            <div className="bg-muted/30 rounded-lg p-4">
-              <div className="bg-background rounded-lg p-4 border space-y-3 h-48 overflow-y-auto">
-                <div className="flex gap-3">
-                  <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center text-xs font-bold text-primary-foreground">I</div>
-                  <div className="flex-1 bg-muted/50 rounded-lg p-2 text-xs">
-                    Hello! I can analyze deals, generate reports, and answer questions about your portfolio.
+              
+              {/* Features */}
+              <div className="space-y-4">
+                <h3 className="text-lg font-semibold">Key Capabilities</h3>
+                <div className="space-y-3">
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center mt-0.5">
+                      <FileText className="w-4 h-4 text-blue-600" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold">Document Generation</h4>
+                      <p className="text-sm text-muted-foreground">Generate investment memos, reports, and analyses instantly</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center mt-0.5">
+                      <BarChart3 className="w-4 h-4 text-green-600" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold">Data Analysis</h4>
+                      <p className="text-sm text-muted-foreground">Query your entire deal database with natural language</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center mt-0.5">
+                      <Calendar className="w-4 h-4 text-purple-600" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold">Task Automation</h4>
+                      <p className="text-sm text-muted-foreground">Schedule meetings, set reminders, and manage workflows</p>
+                    </div>
                   </div>
                 </div>
-                <div className="flex gap-3 justify-end">
-                  <div className="bg-primary/10 rounded-lg p-2 text-xs max-w-xs">
-                    Show me top 5 Series B deals over $20M this quarter
-                  </div>
-                  <div className="w-6 h-6 bg-muted rounded-full"></div>
-                </div>
-                <div className="flex gap-3">
-                  <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center text-xs font-bold text-primary-foreground">I</div>
-                  <div className="flex-1 bg-muted/50 rounded-lg p-2 text-xs">
-                    Found 5 deals: TechCorp ($35M), HealthTech ($28M), FinanceAI ($45M)...
-                  </div>
-                </div>
-                <div className="flex gap-3 justify-end">
-                  <div className="bg-primary/10 rounded-lg p-2 text-xs max-w-xs">
-                    Generate investment memo for TechCorp
-                  </div>
-                  <div className="w-6 h-6 bg-muted rounded-full"></div>
-                </div>
+              </div>
+              
+              {/* CTA Buttons */}
+              <div className="flex gap-3 pt-4">
+                <Button size="lg" className="flex-1">
+                  <MessageCircle className="w-4 h-4 mr-2" />
+                  Start Chat
+                </Button>
+                <Button variant="outline" size="lg" className="flex-1">
+                  Watch Demo
+                </Button>
               </div>
             </div>
             
-            {/* Capabilities */}
-            <div className="grid md:grid-cols-3 gap-4 text-center">
-              <div>
-                <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center mx-auto mb-2">
-                  <FileText className="w-5 h-5 text-blue-600" />
+            {/* Right Column - Chat Window */}
+            <div className="space-y-4">
+              <h3 className="text-lg font-semibold text-center">Live Chat Preview</h3>
+              <div className="bg-muted/30 rounded-lg p-4 h-96">
+                <div className="bg-background rounded-lg p-4 border space-y-4 h-full overflow-y-auto">
+                  <div className="flex gap-3">
+                    <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-sm font-bold text-primary-foreground">I</div>
+                    <div className="flex-1 bg-muted/50 rounded-lg p-3 text-sm">
+                      Hello! I'm IRIS, your AI investment assistant. I can help you analyze deals, generate reports, and answer questions about your portfolio. What would you like to explore today?
+                    </div>
+                  </div>
+                  
+                  <div className="flex gap-3 justify-end">
+                    <div className="bg-primary/10 rounded-lg p-3 text-sm max-w-xs">
+                      Show me the top 5 Series B deals over $20M from this quarter
+                    </div>
+                    <div className="w-8 h-8 bg-muted rounded-full flex items-center justify-center">
+                      <div className="w-4 h-4 bg-muted-foreground rounded-full"></div>
+                    </div>
+                  </div>
+                  
+                  <div className="flex gap-3">
+                    <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-sm font-bold text-primary-foreground">I</div>
+                    <div className="flex-1 bg-muted/50 rounded-lg p-3 text-sm">
+                      <div className="space-y-2">
+                        <p>I found 5 Series B deals over $20M this quarter:</p>
+                        <div className="text-xs space-y-1">
+                          <div>• TechCorp - $35M Series B (SaaS)</div>
+                          <div>• HealthTech Solutions - $28M Series B (HealthTech)</div>
+                          <div>• FinanceAI - $45M Series B (FinTech)</div>
+                          <div>• GreenEnergy Co - $32M Series B (CleanTech)</div>
+                          <div>• DataLabs - $25M Series B (AI/ML)</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="flex gap-3 justify-end">
+                    <div className="bg-primary/10 rounded-lg p-3 text-sm max-w-xs">
+                      Generate an investment memo for TechCorp
+                    </div>
+                    <div className="w-8 h-8 bg-muted rounded-full flex items-center justify-center">
+                      <div className="w-4 h-4 bg-muted-foreground rounded-full"></div>
+                    </div>
+                  </div>
+                  
+                  <div className="flex gap-3">
+                    <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-sm font-bold text-primary-foreground">I</div>
+                    <div className="flex-1 bg-muted/50 rounded-lg p-3 text-sm">
+                      I'll generate a comprehensive investment memo for TechCorp's $35M Series B. This will include market analysis, financial projections, team assessment, and risk factors. The memo will be ready in 30 seconds.
+                    </div>
+                  </div>
+                  
+                  <div className="flex gap-3 justify-end">
+                    <div className="bg-primary/10 rounded-lg p-3 text-sm max-w-xs">
+                      Perfect! Also schedule a follow-up call with their CEO
+                    </div>
+                    <div className="w-8 h-8 bg-muted rounded-full flex items-center justify-center">
+                      <div className="w-4 h-4 bg-muted-foreground rounded-full"></div>
+                    </div>
+                  </div>
                 </div>
-                <h3 className="font-semibold text-sm">Document Generation</h3>
-                <p className="text-xs text-muted-foreground">Instant memos & reports</p>
               </div>
-              
-              <div>
-                <div className="w-10 h-10 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center mx-auto mb-2">
-                  <BarChart3 className="w-5 h-5 text-green-600" />
-                </div>
-                <h3 className="font-semibold text-sm">Data Analysis</h3>
-                <p className="text-xs text-muted-foreground">Query entire database</p>
-              </div>
-              
-              <div>
-                <div className="w-10 h-10 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center mx-auto mb-2">
-                  <Calendar className="w-5 h-5 text-purple-600" />
-                </div>
-                <h3 className="font-semibold text-sm">Task Automation</h3>
-                <p className="text-xs text-muted-foreground">Schedule & manage</p>
-              </div>
-            </div>
-            
-            {/* CTA */}
-            <div className="flex gap-4 pt-4 border-t">
-              <Button size="lg" className="flex-1">
-                <MessageCircle className="w-4 h-4 mr-2" />
-                Chat with IRIS
-              </Button>
-              <Button variant="outline" size="lg" className="flex-1">
-                Watch Demo
-              </Button>
             </div>
           </div>
         </DialogContent>
