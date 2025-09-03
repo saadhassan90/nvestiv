@@ -1017,9 +1017,9 @@ const HomePage = () => {
             {/* Right Column - Chat Window */}
             <div className="flex flex-col h-full">
               <h3 className="text-lg font-semibold text-center mb-4">Live Chat Preview: NYC Trip Planning</h3>
-              <div className="bg-muted/30 rounded-lg p-4 flex-1 min-h-0">
-                <div className="bg-background rounded-lg p-4 border h-full overflow-y-scroll overscroll-contain space-y-4 scrollbar-thin scrollbar-thumb-muted scrollbar-track-transparent"
-                     style={{ maxHeight: '100%', scrollBehavior: 'smooth' }}>
+              <div className="bg-muted/30 rounded-lg p-4 flex-1 overflow-hidden">
+                <div className="bg-background rounded-lg p-4 border h-full overflow-y-auto">
+                  <div className="space-y-4 pb-4">
                   
                   {/* User Message 1 */}
                   <div className="flex gap-3 justify-end">
@@ -1150,7 +1150,7 @@ const HomePage = () => {
                       </div>
                     </div>
                   </div>
-                  
+                  </div>
                 </div>
               </div>
             </div>
