@@ -159,15 +159,55 @@
 }
 
 @layer components {
-  /* Clean minimal button variants */
+  /* Perplexity-inspired Component Styles */
   .btn-hero {
-    @apply bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold;
-    @apply hover:scale-105 active:scale-95 transition-all duration-200;
+    @apply bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary/80 text-primary-foreground shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl px-8 py-4 text-lg font-semibold;
   }
-  
+
   .btn-ghost-hero {
-    @apply bg-transparent border-2 border-primary text-primary px-8 py-4 rounded-lg font-semibold;
-    @apply hover:bg-primary hover:text-primary-foreground transition-all duration-200;
+    @apply border-2 border-primary/20 hover:border-primary/40 bg-transparent hover:bg-primary/5 text-foreground shadow-sm hover:shadow-lg transition-all duration-300 rounded-xl px-8 py-4 text-lg font-semibold;
+  }
+
+  /* Perplexity-style Search Box */
+  .search-box-perplexity {
+    @apply w-full max-w-3xl mx-auto bg-background border border-border rounded-3xl shadow-sm hover:shadow-md transition-all duration-200 focus-within:shadow-lg focus-within:border-primary/50;
+  }
+
+  /* Perplexity-style Pills */
+  .pill-suggestion {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-full bg-muted/50 hover:bg-muted text-muted-foreground hover:text-foreground text-sm font-medium transition-all duration-200 cursor-pointer border border-transparent hover:border-border;
+  }
+
+  /* Perplexity-style Sidebar */
+  .sidebar-perplexity {
+    @apply fixed left-0 top-0 h-full w-16 bg-background/95 backdrop-blur-sm border-r border-border z-50 flex flex-col items-center py-4 gap-4;
+  }
+
+  .sidebar-item {
+    @apply w-10 h-10 rounded-xl flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-all duration-200 cursor-pointer;
+  }
+
+  .sidebar-item.active {
+    @apply text-primary bg-primary/10 border border-primary/20;
+  }
+
+  /* Perplexity-style Cards */
+  .card-perplexity {
+    @apply bg-background border border-border rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-200;
+  }
+
+  /* Clean Input Styles */
+  .input-perplexity {
+    @apply w-full bg-transparent border-0 outline-0 text-foreground placeholder:text-muted-foreground text-lg px-6 py-4 rounded-3xl focus:outline-none focus:ring-0;
+  }
+
+  /* Minimal Button Styles */
+  .btn-minimal {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 hover:bg-muted/50;
+  }
+
+  .btn-primary-minimal {
+    @apply btn-minimal bg-primary text-primary-foreground hover:bg-primary/90;
   }
 
   /* Clean card styles */
