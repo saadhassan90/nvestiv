@@ -46,9 +46,9 @@
     
     /* Typography hierarchy tokens */
     --text-display: 0 0% 9%; /* Main headlines */
-    --text-primary: 0 0% 9%; /* Primary text */
-    --text-secondary: 0 0% 45%; /* Secondary text */
-    --text-muted: 0 0% 65%; /* Muted text */
+    --text-primary: 0 0% 15%; /* Primary text - dark gray */
+    --text-secondary: 0 0% 25%; /* Secondary text - darker gray for better contrast */
+    --text-muted: 0 0% 40%; /* Muted text - still readable on white */
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 215 16% 47%;
