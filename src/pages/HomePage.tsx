@@ -9,52 +9,6 @@ const HomePage = () => {
   const [agentsModalOpen, setAgentsModalOpen] = useState(false);
   const [irisModalOpen, setIrisModalOpen] = useState(false);
 
-  // Typewriter animation
-  const typewriterTexts = ["Private Equity", "Venture Capital", "Family Offices", "Hedge Funds", "Asset Managers", "Investment Banks"];
-  useEffect(() => {
-    let currentIndex = 0;
-    let currentText = "";
-    let isDeleting = false;
-    let textIndex = 0;
-    let timeoutId: NodeJS.Timeout;
-    const typewriterElement = document.getElementById("typewriter-text");
-    if (!typewriterElement) return;
-    const typeSpeed = 60;
-    const deleteSpeed = 30;
-    const pauseTime = 1200;
-    function type() {
-      const fullText = typewriterTexts[textIndex];
-      if (isDeleting) {
-        currentText = fullText.substring(0, currentIndex - 1);
-        currentIndex--;
-      } else {
-        currentText = fullText.substring(0, currentIndex + 1);
-        currentIndex++;
-      }
-
-      // Use a more stable text update method
-      typewriterElement.style.opacity = "1";
-      typewriterElement.textContent = currentText;
-      let typeSpeedValue = isDeleting ? deleteSpeed : typeSpeed;
-      if (!isDeleting && currentIndex === fullText.length) {
-        typeSpeedValue = pauseTime;
-        isDeleting = true;
-      } else if (isDeleting && currentIndex === 0) {
-        isDeleting = false;
-        textIndex = (textIndex + 1) % typewriterTexts.length;
-        typeSpeedValue = typeSpeed;
-      }
-      timeoutId = setTimeout(type, typeSpeedValue);
-    }
-    type();
-
-    // Cleanup function
-    return () => {
-      if (timeoutId) {
-        clearTimeout(timeoutId);
-      }
-    };
-  }, []);
   return <div className="min-h-screen bg-background">
       {/* Website Header */}
       <header className="h-16 border-b border-border flex items-center justify-between px-6">
@@ -107,11 +61,12 @@ const HomePage = () => {
                     Private Investments AI
                   </h1>
                 </div>
-                <div className="flex justify-center">
-                  <h2 className="h2 text-blue-400 leading-tight text-left">
-                    <span className="inline-block min-w-[280px] text-left" id="typewriter-text">Private Equity</span>
-                  </h2>
-                </div>
+                <h2 className="h2 text-blue-400 leading-tight">
+                  IRIS Is Your Second Brain.
+                </h2>
+                <p className="text-lg text-white/80 max-w-3xl mx-auto leading-relaxed">
+                  Finally, an AI Operating System that centralizes your scattered work. Emails, files, and software—unified, intelligent, and always at your fingertips.
+                </p>
               </div>
             </div>
 
