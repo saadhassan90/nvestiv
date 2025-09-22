@@ -46,7 +46,7 @@ const HomePage = () => {
           {/* Request early access button */}
           <div className="absolute top-8 left-8">
             <Button variant="outline" size="sm" className="bg-black/20 border-white/20 text-white hover:bg-white/10">
-              <div className="w-2 h-2 bg-emerald-500 rounded-full mr-2"></div>
+              <div className="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
               Request early access
             </Button>
           </div>
@@ -56,9 +56,9 @@ const HomePage = () => {
             <div className="text-left space-y-8">
               <div className="space-y-4">
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
-                  Invest <span className="text-emerald-400">Smarter</span>
+                  Invest <span className="text-blue-400">Smarter</span>
                   <br />
-                  Grow <span className="text-emerald-400">Faster</span>
+                  Grow <span className="text-blue-400">Faster</span>
                 </h1>
                 <p className="text-xl text-gray-300 max-w-lg">
                   Unlock your portfolio's full potential with AI agents that save time, cut costs, and scale with you — no code, no clutter, just results.
@@ -92,8 +92,8 @@ const HomePage = () => {
                     </div>
                   </div>
                   <div className="space-y-3">
-                    <div className="bg-emerald-500/20 border border-emerald-500/30 rounded p-3">
-                      <div className="text-emerald-400 text-2xl font-bold">$2.4M</div>
+                    <div className="bg-blue-500/20 border border-blue-500/30 rounded p-3">
+                      <div className="text-blue-400 text-2xl font-bold">$2.4M</div>
                       <div className="text-gray-300 text-sm">Total AUM</div>
                     </div>
                     <div className="grid grid-cols-2 gap-3">
