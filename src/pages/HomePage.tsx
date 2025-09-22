@@ -42,7 +42,7 @@ const HomePage = () => {
       </header>
       
       {/* Main Content */}
-      <main className="max-w-[1080px] mx-auto">
+      <main className="max-w-[1200px] mx-auto">
         {/* Hero Section */}
         <section className="w-full h-[calc(100vh-8rem)] flex items-center justify-center px-6 relative overflow-hidden bg-gradient-to-br from-slate-900 from-70% via-slate-800 via-80% to-blue-700 rounded-3xl my-4" aria-labelledby="hero-heading">
           {/* Request early access button */}
