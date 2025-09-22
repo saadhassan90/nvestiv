@@ -65,13 +65,6 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				},
-				// Nvestiv Brand Colors
-				brand: {
-					'blue-light': 'hsl(var(--brand-blue-light))',
-					'blue-dark': 'hsl(var(--brand-blue-dark))',
-					'accent': 'hsl(var(--brand-accent))',
-					'navy': 'hsl(var(--brand-navy))'
 				}
 			},
 			borderRadius: {
