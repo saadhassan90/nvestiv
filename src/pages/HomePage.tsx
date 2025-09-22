@@ -88,41 +88,33 @@ const HomePage = () => {
             </Button>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full max-w-6xl mx-auto">
-            {/* Left Content */}
-            <div className="text-left space-y-8">
-              <div className="space-y-4">
-                <div className="space-y-2">
-                  <div>
-                    <h1 id="hero-heading" className="text-display text-white leading-tight">
-                      Private Investments <span className="text-blue-400">AI</span>
-                    </h1>
-                  </div>
-                  <div>
-                    <h2 className="text-display text-white leading-tight">
-                      For <span className="text-blue-400 inline-block min-w-[280px] text-left" id="typewriter-text">Private Equity</span>
-                    </h2>
-                  </div>
+          <div className="w-full max-w-6xl mx-auto text-center space-y-8">
+            <div className="space-y-4">
+              <div className="space-y-2">
+                <div>
+                  <h1 id="hero-heading" className="text-display text-white leading-tight">
+                    Private Investments AI
+                  </h1>
                 </div>
-                <p className="text-lg text-gray-300 max-w-lg">
-                  Your entire business on one AI CRM — speak custom agents into existence and automate everything. No code, just plain english commands that transform how you work. Nvestiv unifies relationships, files, and investments into a single platform built for private markets.
-                </p>
+                <div>
+                  <h2 className="text-display text-white leading-tight">
+                    For <span className="text-blue-400 inline-block min-w-[280px]" id="typewriter-text">Private Equity</span>
+                  </h2>
+                </div>
               </div>
-
-              {/* CTA Buttons */}
-              <div className="flex gap-4">
-                <Button size="lg" className="bg-white text-black hover:bg-gray-100 font-medium">
-                  Explore Platform
-                </Button>
-                <Button variant="ghost" size="lg" className="text-white hover:bg-white/10 font-medium">
-                  Book a Demo
-                </Button>
-              </div>
+              <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+                Your entire business on one AI CRM — speak custom agents into existence and automate everything. No code, just plain english commands that transform how you work. Nvestiv unifies relationships, files, and investments into a single platform built for private markets.
+              </p>
             </div>
 
-            {/* Right Content - Dashboard Preview */}
-            <div className="relative">
-              
+            {/* CTA Buttons */}
+            <div className="flex gap-4 justify-center">
+              <Button size="lg" className="bg-white text-black hover:bg-gray-100 font-medium">
+                Explore Platform
+              </Button>
+              <Button variant="ghost" size="lg" className="text-white hover:bg-white/10 font-medium">
+                Book a Demo
+              </Button>
             </div>
           </div>
         </section>
