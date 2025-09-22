@@ -269,14 +269,6 @@
 }
 
 @layer components {
-  /* Perplexity-inspired Component Styles */
-  .btn-hero {
-    @apply bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary/80 text-primary-foreground shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl px-8 py-4 text-lg font-semibold;
-  }
-
-  .btn-ghost-hero {
-    @apply border-2 border-primary/20 hover:border-primary/40 bg-transparent hover:bg-primary/5 text-foreground shadow-sm hover:shadow-lg transition-all duration-300 rounded-xl px-8 py-4 text-lg font-semibold;
-  }
 
   /* Perplexity-style Search Box */
   .search-box-perplexity {

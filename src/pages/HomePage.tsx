@@ -32,10 +32,10 @@ const HomePage = () => {
         
         {/* Right Side Actions */}
         <div className="flex items-center gap-3">
-          <Button variant="outline" size="sm">
+          <Button variant="secondary" size="sm">
             Book Demo
           </Button>
-          <Button size="sm" className="bg-black text-white hover:bg-black/90">
+          <Button variant="default" size="sm">
             Log In
           </Button>
         </div>
@@ -85,9 +85,9 @@ const HomePage = () => {
                   </div>
 
                   {/* Send Button */}
-                  <button className="w-10 h-10 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 rounded-lg flex items-center justify-center transition-all shadow-lg">
-                    <ArrowRight className="w-4 h-4 text-white" />
-                  </button>
+                  <Button size="icon" variant="default" className="w-10 h-10 rounded-lg">
+                    <ArrowRight className="w-4 h-4" />
+                  </Button>
                 </div>
               </div>
 
@@ -265,7 +265,7 @@ const HomePage = () => {
                             Centralize all your relationships, deals, and communications in one intelligent platform. 
                             Our AI automatically enriches contact data, tracks deal progress, and surfaces the most relevant opportunities.
                           </p>
-                          <Button className="btn-hero">
+                          <Button variant="default">
                             Explore CRM Features
                           </Button>
                         </div>
@@ -300,7 +300,7 @@ const HomePage = () => {
                             Deploy specialized AI agents that work 24/7 to screen deals, conduct due diligence, 
                             and automate routine tasks. Each agent learns from your preferences and improves over time.
                           </p>
-                          <Button className="btn-hero">
+                          <Button variant="default">
                             Deploy Agents
                           </Button>
                         </div>
@@ -335,7 +335,7 @@ const HomePage = () => {
                             Organize and search through thousands of documents with AI-powered insights. 
                             Automatically categorize files, extract key information, and find what you need instantly.
                           </p>
-                          <Button className="btn-hero">
+                          <Button variant="default">
                             Organize Files
                           </Button>
                         </div>
@@ -370,7 +370,7 @@ const HomePage = () => {
                             Connect your existing tools and platforms seamlessly. From Bloomberg to your favorite 
                             spreadsheet software, IRIS integrates with your entire investment technology stack.
                           </p>
-                          <Button className="btn-hero">
+                          <Button variant="default">
                             View Integrations
                           </Button>
                         </div>
