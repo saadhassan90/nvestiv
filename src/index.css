@@ -46,9 +46,9 @@
     
     /* Typography hierarchy tokens */
     --text-display: 0 0% 9%; /* Main headlines */
-    --text-primary: 0 0% 20%; /* Primary text - dark gray for body text */
-    --text-secondary: 0 0% 35%; /* Secondary text - medium gray */
-    --text-muted: 0 0% 50%; /* Muted text */
+    --text-primary: 0 0% 30%; /* Primary text - dark gray for body text */
+    --text-secondary: 0 0% 45%; /* Secondary text - medium gray */
+    --text-muted: 0 0% 60%; /* Muted text */
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 215 16% 47%;
@@ -173,16 +173,17 @@
   /* Body Typography */
   p, .text-body {
     @apply leading-relaxed text-base md:text-lg [&:not(:first-child)]:mt-4;
-    color: hsl(0 0% 20%); /* Direct dark gray color */
+    color: hsl(var(--text-primary));
   }
 
   .text-secondary {
     @apply leading-relaxed text-sm md:text-base;
-    color: hsl(0 0% 35%); /* Direct medium gray color */
+    color: hsl(var(--text-secondary));
   }
-
-  .text-primary {
-    color: hsl(0 0% 20%); /* Direct dark gray color */
+  /* Large body text for hero sections */
+  .text-hero-body {
+    @apply leading-relaxed text-lg md:text-xl lg:text-2xl;
+    color: hsl(var(--text-secondary));
   }
 
   .text-muted {
