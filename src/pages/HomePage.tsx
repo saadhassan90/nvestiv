@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Database, Bot, Sparkles as SparklesIcon, Search } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-
 const HomePage = () => {
   console.log("HomePage component is rendering");
   const [crmModalOpen, setCrmModalOpen] = useState(false);
@@ -11,31 +10,19 @@ const HomePage = () => {
   const [irisModalOpen, setIrisModalOpen] = useState(false);
 
   // Typewriter animation
-  const typewriterTexts = [
-    "Private Equity",
-    "Venture Capital", 
-    "Family Offices",
-    "Hedge Funds",
-    "Asset Managers",
-    "Investment Banks"
-  ];
-
+  const typewriterTexts = ["Private Equity", "Venture Capital", "Family Offices", "Hedge Funds", "Asset Managers", "Investment Banks"];
   useEffect(() => {
     let currentIndex = 0;
     let currentText = "";
     let isDeleting = false;
     let textIndex = 0;
-
     const typewriterElement = document.getElementById("typewriter-text");
     if (!typewriterElement) return;
-
     const typeSpeed = 100;
     const deleteSpeed = 50;
     const pauseTime = 2000;
-
     function type() {
       const fullText = typewriterTexts[textIndex];
-
       if (isDeleting) {
         currentText = fullText.substring(0, currentIndex - 1);
         currentIndex--;
@@ -43,11 +30,8 @@ const HomePage = () => {
         currentText = fullText.substring(0, currentIndex + 1);
         currentIndex++;
       }
-
       typewriterElement.textContent = currentText;
-
       let typeSpeedValue = isDeleting ? deleteSpeed : typeSpeed;
-
       if (!isDeleting && currentIndex === fullText.length) {
         typeSpeedValue = pauseTime;
         isDeleting = true;
@@ -56,15 +40,11 @@ const HomePage = () => {
         textIndex = (textIndex + 1) % typewriterTexts.length;
         typeSpeedValue = typeSpeed;
       }
-
       setTimeout(type, typeSpeedValue);
     }
-
     type();
   }, []);
-
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       {/* Website Header */}
       <header className="h-16 border-b border-border flex items-center justify-between px-6">
         {/* Logo */}
@@ -142,34 +122,7 @@ const HomePage = () => {
 
             {/* Right Content - Dashboard Preview */}
             <div className="relative">
-              <div className="bg-gray-900/50 backdrop-blur rounded-2xl p-6 border border-white/10" role="img" aria-label="Portfolio analytics dashboard preview">
-                <div className="bg-gray-800 rounded-lg p-4 mb-4">
-                  <div className="flex items-center justify-between mb-4">
-                    <h2 className="text-white font-medium">Portfolio Analytics</h2>
-                    <div className="flex gap-2" aria-hidden="true">
-                      <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                      <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                      <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                    </div>
-                  </div>
-                  <div className="space-y-3">
-                    <div className="bg-blue-500/20 border border-blue-500/30 rounded p-3">
-                      <div className="text-blue-400 text-2xl font-bold">$2.4M</div>
-                      <div className="text-gray-300 text-sm">Total AUM</div>
-                    </div>
-                    <div className="grid grid-cols-2 gap-3">
-                      <div className="bg-gray-700 rounded p-3">
-                        <div className="text-white font-medium">125</div>
-                        <div className="text-gray-400 text-sm">Active Deals</div>
-                      </div>
-                      <div className="bg-gray-700 rounded p-3">
-                        <div className="text-white font-medium">18%</div>
-                        <div className="text-gray-400 text-sm">IRR</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              
             </div>
           </div>
         </section>
@@ -189,12 +142,7 @@ const HomePage = () => {
               <div className="mt-12 max-w-2xl mx-auto">
                 <div className="relative">
                   <label htmlFor="platform-search" className="sr-only">Search platform features and capabilities</label>
-                  <input 
-                    id="platform-search"
-                    type="text" 
-                    placeholder="Ask about your investments, portfolio, or create AI agents..." 
-                    className="w-full px-4 py-3 pr-12 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" 
-                  />
+                  <input id="platform-search" type="text" placeholder="Ask about your investments, portfolio, or create AI agents..." className="w-full px-4 py-3 pr-12 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" />
                   <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-muted-foreground" aria-hidden="true" />
                 </div>
               </div>
@@ -324,8 +272,6 @@ const HomePage = () => {
           </div>
         </DialogContent>
       </Dialog>
-    </div>
-  );
+    </div>;
 };
-
 export default HomePage;
