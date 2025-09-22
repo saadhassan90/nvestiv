@@ -55,7 +55,7 @@ const HomePage = () => {
 
           <div className="w-full max-w-6xl mx-auto text-center space-y-8">
             <div className="space-y-4">
-              <div className="space-y-2">
+              <div className="space-y-6">
                 <div>
                   <h1 id="hero-heading" className="text-display text-white leading-tight">
                     Private Investments AI
