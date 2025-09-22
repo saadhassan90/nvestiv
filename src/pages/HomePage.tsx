@@ -18,11 +18,14 @@ const HomePage = () => {
     let textIndex = 0;
     const typewriterElement = document.getElementById("typewriter-text");
     if (!typewriterElement) return;
-    const typeSpeed = 100;
-    const deleteSpeed = 50;
-    const pauseTime = 2000;
+    
+    const typeSpeed = 80;
+    const deleteSpeed = 40;
+    const pauseTime = 1500;
+    
     function type() {
       const fullText = typewriterTexts[textIndex];
+      
       if (isDeleting) {
         currentText = fullText.substring(0, currentIndex - 1);
         currentIndex--;
@@ -30,8 +33,11 @@ const HomePage = () => {
         currentText = fullText.substring(0, currentIndex + 1);
         currentIndex++;
       }
+      
       typewriterElement.textContent = currentText;
+      
       let typeSpeedValue = isDeleting ? deleteSpeed : typeSpeed;
+      
       if (!isDeleting && currentIndex === fullText.length) {
         typeSpeedValue = pauseTime;
         isDeleting = true;
@@ -40,8 +46,10 @@ const HomePage = () => {
         textIndex = (textIndex + 1) % typewriterTexts.length;
         typeSpeedValue = typeSpeed;
       }
+      
       setTimeout(type, typeSpeedValue);
     }
+    
     type();
   }, []);
   return <div className="min-h-screen bg-background">
@@ -97,8 +105,8 @@ const HomePage = () => {
                   </h1>
                 </div>
                 <div>
-                  <h2 className="text-display text-white leading-tight">
-                    For <span className="text-blue-400 inline-block min-w-[280px]" id="typewriter-text">Private Equity</span>
+                  <h2 className="h2 text-blue-400 leading-tight">
+                    <span className="inline-block min-w-[280px]" id="typewriter-text">Private Equity</span>
                   </h2>
                 </div>
               </div>
@@ -112,7 +120,7 @@ const HomePage = () => {
               <Button size="lg" className="bg-white text-black hover:bg-gray-100 font-medium">
                 Explore Platform
               </Button>
-              <Button variant="ghost" size="lg" className="text-white hover:bg-white/10 font-medium">
+              <Button variant="ghost" size="lg" className="text-white hover:bg-white/10 font-medium border border-gray-600">
                 Book a Demo
               </Button>
             </div>
