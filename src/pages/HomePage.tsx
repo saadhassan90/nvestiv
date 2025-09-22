@@ -280,7 +280,7 @@ const HomePage = () => {
                           </div>
                           
                           <Button variant="default">
-                            Explore CRM Features
+                            Learn More
                           </Button>
                         </div>
                       </div>
