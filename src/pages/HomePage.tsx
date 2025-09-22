@@ -149,16 +149,16 @@ const HomePage = () => {
               {/* Suggestion Pills */}
               <div className="flex flex-wrap gap-2 mt-4 justify-center">
                 <button className="px-4 py-2 text-xs bg-white/5 text-white/70 rounded-full hover:bg-white/10 transition-colors border border-white/10">
-                  CRM Management
+                  AI CRM
+                </button>
+                <button className="px-4 py-2 text-xs bg-white/5 text-white/70 rounded-full hover:bg-white/10 transition-colors border border-white/10">
+                  AI Agents
                 </button>
                 <button className="px-4 py-2 text-xs bg-white/5 text-white/70 rounded-full hover:bg-white/10 transition-colors border border-white/10">
                   File System
                 </button>
                 <button className="px-4 py-2 text-xs bg-white/5 text-white/70 rounded-full hover:bg-white/10 transition-colors border border-white/10">
                   Integrated Apps
-                </button>
-                <button className="px-4 py-2 text-xs bg-white/5 text-white/70 rounded-full hover:bg-white/10 transition-colors border border-white/10">
-                  AI Agents
                 </button>
               </div>
             </div>
