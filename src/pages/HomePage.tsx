@@ -17,17 +17,13 @@ const HomePage = () => {
     let isDeleting = false;
     let textIndex = 0;
     let timeoutId: NodeJS.Timeout;
-    
     const typewriterElement = document.getElementById("typewriter-text");
     if (!typewriterElement) return;
-    
     const typeSpeed = 60;
     const deleteSpeed = 30;
     const pauseTime = 1200;
-    
     function type() {
       const fullText = typewriterTexts[textIndex];
-      
       if (isDeleting) {
         currentText = fullText.substring(0, currentIndex - 1);
         currentIndex--;
@@ -35,13 +31,11 @@ const HomePage = () => {
         currentText = fullText.substring(0, currentIndex + 1);
         currentIndex++;
       }
-      
+
       // Use a more stable text update method
       typewriterElement.style.opacity = "1";
       typewriterElement.textContent = currentText;
-      
       let typeSpeedValue = isDeleting ? deleteSpeed : typeSpeed;
-      
       if (!isDeleting && currentIndex === fullText.length) {
         typeSpeedValue = pauseTime;
         isDeleting = true;
@@ -50,12 +44,10 @@ const HomePage = () => {
         textIndex = (textIndex + 1) % typewriterTexts.length;
         typeSpeedValue = typeSpeed;
       }
-      
       timeoutId = setTimeout(type, typeSpeedValue);
     }
-    
     type();
-    
+
     // Cleanup function
     return () => {
       if (timeoutId) {
@@ -144,11 +136,7 @@ const HomePage = () => {
                 <div className="flex items-center gap-3 p-3">
                   {/* Main Input Area */}
                   <div className="flex-1 relative">
-                    <input
-                      type="text"
-                      placeholder="Ask IRIS anything about private investments..."
-                      className="w-full bg-transparent text-white placeholder:text-white/50 text-sm focus:outline-none py-2 px-2"
-                    />
+                    <input type="text" placeholder="Ask IRIS anything about private investments..." className="w-full bg-transparent text-white placeholder:text-white/50 text-sm focus:outline-none py-2 px-2" />
                   </div>
 
                   {/* Send Button */}
@@ -180,9 +168,7 @@ const HomePage = () => {
             <div className="w-full max-w-4xl mx-auto text-center space-y-8">
               <header className="space-y-4">
                 <h2 id="features-heading" className="h2">Explore Our AI-Powered Platform</h2>
-                <p className="text-secondary max-w-2xl mx-auto">
-                  Discover how Nvestiv transforms private investment workflows with intelligent automation and seamless integration.
-                </p>
+                
                 <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                   Your entire business on one AI CRM — speak custom agents into existence and automate everything. No code, just plain english commands that transform how you work. Nvestiv unifies relationships, files, and investments into a single platform built for private markets.
                 </p>
