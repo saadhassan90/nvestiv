@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { PerplexitySidebar } from "@/components/PerplexitySidebar";
 import { PerplexitySearchBox } from "@/components/PerplexitySearchBox";
 import { PerplexitySuggestions } from "@/components/PerplexitySuggestions";
 import { Button } from "@/components/ui/button";
@@ -14,30 +13,27 @@ const HomePage = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Perplexity-style Sidebar */}
-      <PerplexitySidebar />
-      
-      {/* Main Content Area */}
-      <main className="ml-16 min-h-screen">
-        {/* Top Navigation Bar */}
-        <div className="h-14 border-b border-border flex items-center justify-between px-6">
-          <div className="flex items-center gap-6">
-            <span className="font-semibold text-lg">nvestiv</span>
-            <nav className="flex items-center gap-4">
-              <a href="#" className="text-sm text-muted-foreground hover:text-foreground">Finance</a>
-              <a href="#" className="text-sm text-muted-foreground hover:text-foreground">Investments</a>
-              <a href="#" className="text-sm text-muted-foreground hover:text-foreground">CRM</a>
-              <a href="#" className="text-sm text-muted-foreground hover:text-foreground">Agents</a>
-            </nav>
-          </div>
-          
-          <div className="flex items-center gap-4">
-            <Button variant="outline" size="sm">Sign in</Button>
-            <Button size="sm">Get Started</Button>
-          </div>
+      {/* Website Header */}
+      <header className="h-16 border-b border-border flex items-center justify-between px-6">
+        <div className="flex items-center gap-6">
+          <span className="font-semibold text-xl">nvestiv</span>
+          <nav className="flex items-center gap-6">
+            <a href="#" className="text-sm text-muted-foreground hover:text-foreground">Finance</a>
+            <a href="#" className="text-sm text-muted-foreground hover:text-foreground">Investments</a>
+            <a href="#" className="text-sm text-muted-foreground hover:text-foreground">CRM</a>
+            <a href="#" className="text-sm text-muted-foreground hover:text-foreground">Agents</a>
+          </nav>
         </div>
         
-        {/* Hero Section - Perplexity Style */}
+        <div className="flex items-center gap-4">
+          <Button variant="outline" size="sm">Sign in</Button>
+          <Button size="sm">Get Started</Button>
+        </div>
+      </header>
+      
+      {/* Main Content */}
+      <main className="min-h-screen">
+        {/* Hero Section */}
         <div className="flex-1 flex flex-col items-center justify-center px-6 py-20">
           <div className="w-full max-w-4xl mx-auto text-center space-y-8">
             
