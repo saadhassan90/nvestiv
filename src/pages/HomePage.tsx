@@ -5,6 +5,7 @@ import { Database, Bot, Sparkles as SparklesIcon, Search } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 const HomePage = () => {
+  console.log("HomePage component is rendering");
   const [crmModalOpen, setCrmModalOpen] = useState(false);
   const [agentsModalOpen, setAgentsModalOpen] = useState(false);
   const [irisModalOpen, setIrisModalOpen] = useState(false);

@@ -6,26 +6,26 @@
 
 @layer base {
   :root {
-    /* Light Mode - Nvestiv Brand Colors */
-    --background: 0 0% 99%; /* Off-white background */
-    --foreground: 0 0% 6%; /* Near black text */
+    /* Simple Light Mode Colors */
+    --background: 0 0% 100%; /* Pure white background */
+    --foreground: 0 0% 9%; /* Near black text */
     
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 6%;
+    --card-foreground: 0 0% 9%;
     
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 6%;
+    --popover-foreground: 0 0% 9%;
     
     /* Primary - Electric Violet */
     --primary: 266 90% 48%; /* #8215E0 Electric Violet */
     --primary-foreground: 0 0% 98%;
     
-    /* Secondary - Soft gray tones */
-    --secondary: 210 11% 96%;
+    /* Secondary - Light gray */
+    --secondary: 0 0% 96%;
     --secondary-foreground: 0 0% 9%;
     
-    --muted: 210 11% 96%;
-    --muted-foreground: 215 16% 47%; /* Slate gray */
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
     
     --accent: 266 90% 48%; /* Electric Violet accent */
     --accent-foreground: 0 0% 98%;
@@ -33,8 +33,8 @@
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
     
-    --border: 214 13% 91%;
-    --input: 214 13% 91%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
     --ring: 266 90% 48%;
     
     --radius: 0.75rem;
@@ -42,13 +42,13 @@
     /* Brand-specific tokens */
     --brand-violet: 266 90% 48%; /* Electric Violet */
     --brand-navy: 225 39% 10%; /* Deep Navy */
-    --brand-light-bg: 210 20% 98%; /* Light background */
+    --brand-light-bg: 0 0% 98%; /* Light background */
     
     /* Typography hierarchy tokens */
-    --text-display: 0 0% 6%; /* Main headlines */
+    --text-display: 0 0% 9%; /* Main headlines */
     --text-primary: 0 0% 9%; /* Primary text */
-    --text-secondary: 215 16% 47%; /* Secondary text */
-    --text-muted: 215 10% 65%; /* Muted text */
+    --text-secondary: 0 0% 45%; /* Secondary text */
+    --text-muted: 0 0% 65%; /* Muted text */
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 215 16% 47%;
