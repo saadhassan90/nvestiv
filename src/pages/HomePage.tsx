@@ -33,10 +33,10 @@ const HomePage = () => {
         {/* Right Side Actions */}
         <div className="flex items-center gap-3">
           <Button variant="outline" size="sm">
-            Placeholder
+            Book Demo
           </Button>
           <Button size="sm" className="bg-black text-white hover:bg-black/90">
-            Go to App
+            Log In
           </Button>
         </div>
       </header>
@@ -70,15 +70,6 @@ const HomePage = () => {
               </div>
             </div>
 
-            {/* CTA Buttons */}
-            <div className="flex gap-4 justify-center">
-              <Button size="lg" className="bg-white text-black hover:bg-gray-100 font-medium">
-                Explore Platform
-              </Button>
-              <Button variant="ghost" size="lg" className="text-white hover:bg-white/10 font-medium border border-gray-600">
-                Book a Demo
-              </Button>
-            </div>
 
             {/* Subtle Divider */}
             <div className="mt-16 mb-8 max-w-2xl mx-auto">
