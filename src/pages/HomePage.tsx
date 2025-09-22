@@ -3,11 +3,14 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Database, Bot, Sparkles as SparklesIcon, Search } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+
 const HomePage = () => {
   const [crmModalOpen, setCrmModalOpen] = useState(false);
   const [agentsModalOpen, setAgentsModalOpen] = useState(false);
   const [irisModalOpen, setIrisModalOpen] = useState(false);
-  return <div className="min-h-screen bg-background">
+
+  return (
+    <div className="min-h-screen bg-background">
       {/* Website Header */}
       <header className="h-16 border-b border-border flex items-center justify-between px-6">
         {/* Logo */}
@@ -19,7 +22,7 @@ const HomePage = () => {
         </div>
         
         {/* Center Navigation */}
-        <nav className="flex items-center gap-8">
+        <nav className="flex items-center gap-8" role="navigation" aria-label="Main navigation">
           <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Home</a>
           <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Products</a>
           <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">About</a>
@@ -42,11 +45,11 @@ const HomePage = () => {
       {/* Main Content */}
       <main className="max-w-screen-xl mx-auto">
         {/* Hero Section */}
-        <section className="h-[calc(100vh-8rem)] flex items-center justify-center px-6 relative overflow-hidden bg-gradient-to-br from-slate-900 from-50% via-blue-900 via-70% via-blue-800 via-80% via-slate-600 via-90% to-blue-600 rounded-3xl mx-4 my-4">
+        <section className="h-[calc(100vh-8rem)] flex items-center justify-center px-6 relative overflow-hidden bg-gradient-to-br from-slate-900 from-50% via-blue-900 via-70% via-blue-800 via-80% via-slate-600 via-90% to-blue-600 rounded-3xl mx-4 my-4" aria-labelledby="hero-heading">
           {/* Request early access button */}
           <div className="absolute top-8 left-8">
             <Button variant="outline" size="sm" className="bg-black/20 border-white/20 text-white hover:bg-white/10">
-              <div className="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
+              <div className="w-2 h-2 bg-blue-500 rounded-full mr-2" aria-hidden="true"></div>
               Request early access
             </Button>
           </div>
@@ -55,12 +58,12 @@ const HomePage = () => {
             {/* Left Content */}
             <div className="text-left space-y-8">
               <div className="space-y-4">
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
+                <h1 id="hero-heading" className="text-display text-white leading-tight">
                   Invest <span className="text-blue-400">Smarter</span>
                   <br />
                   Grow <span className="text-blue-400">Faster</span>
                 </h1>
-                <p className="text-xl text-gray-300 max-w-lg">
+                <p className="text-hero-body text-gray-300 max-w-lg">
                   Your entire business on one AI CRM — speak custom agents into existence and automate everything. No code, just plain english commands that transform how you work. Nvestiv unifies relationships, files, and investments into a single platform built for private markets.
                 </p>
               </div>
@@ -74,18 +77,15 @@ const HomePage = () => {
                   Book a Demo
                 </Button>
               </div>
-
-              {/* Feature highlights */}
-              
             </div>
 
             {/* Right Content - Dashboard Preview */}
             <div className="relative">
-              <div className="bg-gray-900/50 backdrop-blur rounded-2xl p-6 border border-white/10">
+              <div className="bg-gray-900/50 backdrop-blur rounded-2xl p-6 border border-white/10" role="img" aria-label="Portfolio analytics dashboard preview">
                 <div className="bg-gray-800 rounded-lg p-4 mb-4">
                   <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-white font-medium">Portfolio Analytics</h3>
-                    <div className="flex gap-2">
+                    <h2 className="text-white font-medium">Portfolio Analytics</h2>
+                    <div className="flex gap-2" aria-hidden="true">
                       <div className="w-3 h-3 bg-red-500 rounded-full"></div>
                       <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
                       <div className="w-3 h-3 bg-green-500 rounded-full"></div>
@@ -113,41 +113,53 @@ const HomePage = () => {
           </div>
         </section>
 
-        {/* Content Section */}
-        <section className="min-h-screen py-20">
+        {/* Platform Features Section */}
+        <section className="min-h-screen py-20" aria-labelledby="features-heading">
           <div className="flex-1 flex flex-col items-center justify-center px-6">
             <div className="w-full max-w-4xl mx-auto text-center space-y-8">
+              <header className="space-y-4">
+                <h2 id="features-heading" className="h2">Explore Our AI-Powered Platform</h2>
+                <p className="text-secondary max-w-2xl mx-auto">
+                  Discover how Nvestiv transforms private investment workflows with intelligent automation and seamless integration.
+                </p>
+              </header>
               
               {/* Main Search Box */}
               <div className="mt-12 max-w-2xl mx-auto">
                 <div className="relative">
-                  <input type="text" placeholder="Ask about your investments, portfolio, or create AI agents..." className="w-full px-4 py-3 pr-12 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" />
-                  <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-muted-foreground" />
+                  <label htmlFor="platform-search" className="sr-only">Search platform features and capabilities</label>
+                  <input 
+                    id="platform-search"
+                    type="text" 
+                    placeholder="Ask about your investments, portfolio, or create AI agents..." 
+                    className="w-full px-4 py-3 pr-12 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" 
+                  />
+                  <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-muted-foreground" aria-hidden="true" />
                 </div>
               </div>
               
               {/* Suggestion Pills */}
-              <div className="flex flex-wrap items-center justify-center gap-3 mt-6">
+              <div className="flex flex-wrap items-center justify-center gap-3 mt-6" role="group" aria-label="Feature suggestions">
                 <button className="px-4 py-2 rounded-full border border-border bg-background text-sm text-foreground hover:bg-muted/50 transition-colors flex items-center gap-2">
-                  <Database className="w-4 h-4" />
+                  <Database className="w-4 h-4" aria-hidden="true" />
                   AI CRM Demo
                 </button>
                 <button className="px-4 py-2 rounded-full border border-border bg-background text-sm text-foreground hover:bg-muted/50 transition-colors flex items-center gap-2">
-                  <Bot className="w-4 h-4" />
+                  <Bot className="w-4 h-4" aria-hidden="true" />
                   Investment Agents
                 </button>
                 <button className="px-4 py-2 rounded-full border border-border bg-background text-sm text-foreground hover:bg-muted/50 transition-colors flex items-center gap-2">
-                  <SparklesIcon className="w-4 h-4" />
+                  <SparklesIcon className="w-4 h-4" aria-hidden="true" />
                   Portfolio Analytics
                 </button>
               </div>
               
               {/* Quick Access Cards */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-12">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-12" role="group" aria-label="Platform features">
                 <Card className="card-perplexity cursor-pointer hover:bg-muted/20" onClick={() => setCrmModalOpen(true)}>
                   <CardHeader className="pb-3">
                     <CardTitle className="text-lg flex items-center gap-2">
-                      <Database className="w-5 h-5 text-primary" />
+                      <Database className="w-5 h-5 text-primary" aria-hidden="true" />
                       AI CRM
                     </CardTitle>
                   </CardHeader>
@@ -161,7 +173,7 @@ const HomePage = () => {
                 <Card className="card-perplexity cursor-pointer hover:bg-muted/20" onClick={() => setAgentsModalOpen(true)}>
                   <CardHeader className="pb-3">
                     <CardTitle className="text-lg flex items-center gap-2">
-                      <Bot className="w-5 h-5 text-primary" />
+                      <Bot className="w-5 h-5 text-primary" aria-hidden="true" />
                       AI Agents
                     </CardTitle>
                   </CardHeader>
@@ -175,7 +187,7 @@ const HomePage = () => {
                 <Card className="card-perplexity cursor-pointer hover:bg-muted/20" onClick={() => setIrisModalOpen(true)}>
                   <CardHeader className="pb-3">
                     <CardTitle className="text-lg flex items-center gap-2">
-                      <SparklesIcon className="w-5 h-5 text-primary" />
+                      <SparklesIcon className="w-5 h-5 text-primary" aria-hidden="true" />
                       IRIS Platform
                     </CardTitle>
                   </CardHeader>
@@ -251,6 +263,8 @@ const HomePage = () => {
           </div>
         </DialogContent>
       </Dialog>
-    </div>;
+    </div>
+  );
 };
+
 export default HomePage;

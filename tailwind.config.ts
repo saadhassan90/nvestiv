@@ -56,6 +56,19 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				// Nvestiv Brand Colors
+				brand: {
+					violet: 'hsl(var(--brand-violet))',
+					navy: 'hsl(var(--brand-navy))',
+					'light-bg': 'hsl(var(--brand-light-bg))',
+				},
+				// Semantic text colors
+				text: {
+					display: 'hsl(var(--text-display))',
+					primary: 'hsl(var(--text-primary))',
+					secondary: 'hsl(var(--text-secondary))',
+					muted: 'hsl(var(--text-muted))',
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',

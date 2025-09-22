@@ -2,92 +2,114 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Nvestiv Design System - Clean Black & White Theme */
+/* Nvestiv Design System - Brand Color Palette */
 
 @layer base {
   :root {
-    /* Clean Black & White Color Palette */
-    --background: 0 0% 100%; /* Pure white */
-    --foreground: 0 0% 3.9%; /* Near black */
+    /* Light Mode - Nvestiv Brand Colors */
+    --background: 0 0% 99%; /* Off-white background */
+    --foreground: 0 0% 6%; /* Near black text */
     
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 3.9%;
+    --card-foreground: 0 0% 6%;
     
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 3.9%;
+    --popover-foreground: 0 0% 6%;
     
-    /* Primary - Clean Black */
-    --primary: 0 0% 9%;
+    /* Primary - Electric Violet */
+    --primary: 266 90% 48%; /* #8215E0 Electric Violet */
     --primary-foreground: 0 0% 98%;
     
-    /* Secondary - Light Grey */
-    --secondary: 0 0% 96.1%;
+    /* Secondary - Soft gray tones */
+    --secondary: 210 11% 96%;
     --secondary-foreground: 0 0% 9%;
     
-    --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 45.1%;
+    --muted: 210 11% 96%;
+    --muted-foreground: 215 16% 47%; /* Slate gray */
     
-    --accent: 0 0% 96.1%;
-    --accent-foreground: 0 0% 9%;
+    --accent: 266 90% 48%; /* Electric Violet accent */
+    --accent-foreground: 0 0% 98%;
     
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
     
-    --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
-    --ring: 0 0% 3.9%;
+    --border: 214 13% 91%;
+    --input: 214 13% 91%;
+    --ring: 266 90% 48%;
     
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Brand-specific tokens */
+    --brand-violet: 266 90% 48%; /* Electric Violet */
+    --brand-navy: 225 39% 10%; /* Deep Navy */
+    --brand-light-bg: 210 20% 98%; /* Light background */
+    
+    /* Typography hierarchy tokens */
+    --text-display: 0 0% 6%; /* Main headlines */
+    --text-primary: 0 0% 9%; /* Primary text */
+    --text-secondary: 215 16% 47%; /* Secondary text */
+    --text-muted: 215 10% 65%; /* Muted text */
 
     --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 0 0% 45.1%;
-    --sidebar-primary: 0 0% 9%;
+    --sidebar-foreground: 215 16% 47%;
+    --sidebar-primary: 266 90% 48%;
     --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 0 0% 96.1%;
+    --sidebar-accent: 210 11% 96%;
     --sidebar-accent-foreground: 0 0% 9%;
-    --sidebar-border: 0 0% 89.8%;
-    --sidebar-ring: 0 0% 9%;
+    --sidebar-border: 214 13% 91%;
+    --sidebar-ring: 266 90% 48%;
   }
 
   .dark {
-    /* Dark Mode - Deep Navy/Blue Theme with proper contrast */
-    --background: 220 30% 8%;  /* Deep navy background */
-    --foreground: 0 0% 95%;    /* Light text for good contrast */
+    /* Dark Mode - Deep Navy Brand Theme */
+    --background: 225 39% 8%; /* Deep Navy #0B0E1F */
+    --foreground: 0 0% 95%; /* Light text */
     
-    --card: 220 25% 12%;       /* Darker blue for cards */
-    --card-foreground: 0 0% 92%; /* Light text on cards */
+    --card: 225 30% 12%; /* Darker navy for cards */
+    --card-foreground: 0 0% 92%;
     
-    --popover: 220 25% 12%;
+    --popover: 225 30% 12%;
     --popover-foreground: 0 0% 92%;
     
-    /* Primary - White for buttons and important elements */
-    --primary: 0 0% 95%;
-    --primary-foreground: 220 30% 8%; /* Dark text on light buttons */
+    /* Primary - Electric Violet */
+    --primary: 266 90% 48%; /* Electric Violet maintained */
+    --primary-foreground: 0 0% 98%;
     
-    --secondary: 220 20% 18%;  /* Medium dark blue-gray */
-    --secondary-foreground: 0 0% 88%; /* Light text on secondary elements */
+    --secondary: 225 25% 18%; /* Navy-tinted secondary */
+    --secondary-foreground: 0 0% 88%;
     
-    --muted: 220 15% 15%;      /* Muted dark blue */
-    --muted-foreground: 0 0% 70%; /* Light gray text */
+    --muted: 225 20% 15%; /* Muted navy */
+    --muted-foreground: 0 0% 70%; /* Light muted text */
     
-    --accent: 220 25% 20%;     /* Slightly lighter blue for accents */
-    --accent-foreground: 0 0% 90%; /* Light text on accents */
+    --accent: 266 90% 48%; /* Electric Violet accent */
+    --accent-foreground: 0 0% 98%;
     
-    --destructive: 0 62.8% 50%;
+    --destructive: 0 63% 50%;
     --destructive-foreground: 0 0% 95%;
     
-    --border: 220 20% 18%;     /* Subtle blue-tinted borders */
-    --input: 220 25% 12%;
-    --ring: 0 0% 80%;
+    --border: 225 20% 18%; /* Navy-tinted borders */
+    --input: 225 25% 12%;
+    --ring: 266 90% 48%; /* Electric Violet ring */
 
-    --sidebar-background: 220 30% 8%;
+    /* Brand-specific tokens for dark mode */
+    --brand-violet: 266 90% 48%; /* Electric Violet */
+    --brand-navy: 225 39% 8%; /* Deep Navy background */
+    --brand-light-bg: 225 30% 12%; /* Light navy for cards */
+    
+    /* Typography hierarchy tokens for dark mode */
+    --text-display: 0 0% 95%; /* Main headlines */
+    --text-primary: 0 0% 92%; /* Primary text */
+    --text-secondary: 0 0% 70%; /* Secondary text */
+    --text-muted: 0 0% 55%; /* Muted text */
+
+    --sidebar-background: 225 39% 8%;
     --sidebar-foreground: 0 0% 70%;
-    --sidebar-primary: 0 0% 95%;
-    --sidebar-primary-foreground: 220 30% 8%;
-    --sidebar-accent: 220 20% 18%;
+    --sidebar-primary: 266 90% 48%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 225 20% 18%;
     --sidebar-accent-foreground: 0 0% 88%;
-    --sidebar-border: 220 20% 18%;
-    --sidebar-ring: 0 0% 95%;
+    --sidebar-border: 225 20% 18%;
+    --sidebar-ring: 266 90% 48%;
   }
 
   /* Global base styles */
@@ -99,25 +121,103 @@
     @apply bg-background text-foreground;
   }
 
-  /* Typography hierarchy */
-  h1 {
-    @apply scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl;
+  /* SEO-Optimized Typography Hierarchy - Nvestiv Brand */
+  
+  /* Display Typography - For heroes and major headings */
+  .text-display {
+    @apply text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight;
+    color: hsl(var(--text-display));
   }
   
-  h2 {
-    @apply scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0;
-  }
-  
-  h3 {
-    @apply scroll-m-20 text-2xl font-semibold tracking-tight;
-  }
-  
-  h4 {
-    @apply scroll-m-20 text-xl font-semibold tracking-tight;
+  .text-display-accent {
+    @apply text-display;
+    color: hsl(var(--brand-violet));
   }
 
-  p {
-    @apply leading-7 [&:not(:first-child)]:mt-6;
+  /* H1 - Page Title (SEO: One per page) */
+  h1, .h1 {
+    @apply scroll-m-20 text-4xl md:text-5xl font-bold tracking-tight leading-tight;
+    color: hsl(var(--text-display));
+  }
+  
+  /* H2 - Section Headers */
+  h2, .h2 {
+    @apply scroll-m-20 text-3xl md:text-4xl font-semibold tracking-tight leading-tight mt-12 mb-6 first:mt-0;
+    color: hsl(var(--text-primary));
+  }
+  
+  /* H3 - Subsection Headers */
+  h3, .h3 {
+    @apply scroll-m-20 text-2xl md:text-3xl font-semibold tracking-tight leading-tight mt-8 mb-4;
+    color: hsl(var(--text-primary));
+  }
+  
+  /* H4 - Content Block Headers */
+  h4, .h4 {
+    @apply scroll-m-20 text-xl md:text-2xl font-semibold tracking-tight leading-tight mt-6 mb-3;
+    color: hsl(var(--text-primary));
+  }
+
+  /* H5 - Subheadings */
+  h5, .h5 {
+    @apply scroll-m-20 text-lg md:text-xl font-medium tracking-tight leading-tight mt-4 mb-2;
+    color: hsl(var(--text-primary));
+  }
+
+  /* H6 - Minor headings */
+  h6, .h6 {
+    @apply scroll-m-20 text-base md:text-lg font-medium tracking-tight leading-tight mt-3 mb-2;
+    color: hsl(var(--text-secondary));
+  }
+
+  /* Body Typography */
+  p, .text-body {
+    @apply leading-relaxed text-base md:text-lg [&:not(:first-child)]:mt-4;
+    color: hsl(var(--text-primary));
+  }
+
+  .text-secondary {
+    @apply leading-relaxed text-sm md:text-base;
+    color: hsl(var(--text-secondary));
+  }
+
+  .text-muted {
+    @apply leading-relaxed text-sm;
+    color: hsl(var(--text-muted));
+  }
+
+  /* Large body text for hero sections */
+  .text-hero-body {
+    @apply leading-relaxed text-lg md:text-xl lg:text-2xl;
+    color: hsl(var(--text-secondary));
+  }
+
+  /* Accent text using brand violet */
+  .text-brand-accent {
+    color: hsl(var(--brand-violet));
+  }
+
+  /* Small text */
+  small, .text-small {
+    @apply text-sm leading-normal;
+    color: hsl(var(--text-muted));
+  }
+
+  /* Code typography */
+  code {
+    @apply relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-medium;
+    color: hsl(var(--text-primary));
+  }
+
+  /* Link styles */
+  a:not(.no-underline) {
+    @apply underline underline-offset-4 transition-colors;
+    color: hsl(var(--brand-violet));
+  }
+  
+  a:hover:not(.no-underline) {
+    text-decoration: none;
+    color: hsl(var(--brand-violet) / 0.8);
   }
 
   /* Enhanced Parallax Support */
