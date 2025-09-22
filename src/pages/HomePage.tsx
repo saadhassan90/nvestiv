@@ -133,6 +133,11 @@ const HomePage = () => {
               </Button>
             </div>
 
+            {/* Subtle Divider */}
+            <div className="mt-16 mb-8 flex items-center justify-center">
+              <div className="w-24 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
+            </div>
+
             {/* AI Chat Interface */}
             <div className="mt-12 max-w-2xl mx-auto">
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
