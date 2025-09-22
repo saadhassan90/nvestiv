@@ -1,9 +1,7 @@
 import { useState } from "react";
-import { PerplexitySearchBox } from "@/components/PerplexitySearchBox";
-import { PerplexitySuggestions } from "@/components/PerplexitySuggestions";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
-import { Database, Bot, Sparkles as SparklesIcon } from "lucide-react";
+import { Database, Bot, Sparkles as SparklesIcon, Search } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 const HomePage = () => {
@@ -48,15 +46,32 @@ const HomePage = () => {
             </div>
             
             {/* Main Search Box */}
-            <div className="mt-12">
-              <PerplexitySearchBox 
-                placeholder="Ask about your investments, portfolio, or create AI agents..."
-                onSearch={(query) => console.log("Search:", query)}
-              />
+            <div className="mt-12 max-w-2xl mx-auto">
+              <div className="relative">
+                <input
+                  type="text"
+                  placeholder="Ask about your investments, portfolio, or create AI agents..."
+                  className="w-full px-4 py-3 pr-12 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                />
+                <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-muted-foreground" />
+              </div>
             </div>
             
             {/* Suggestion Pills */}
-            <PerplexitySuggestions />
+            <div className="flex flex-wrap items-center justify-center gap-3 mt-6">
+              <button className="px-4 py-2 rounded-full border border-border bg-background text-sm text-foreground hover:bg-muted/50 transition-colors flex items-center gap-2">
+                <Database className="w-4 h-4" />
+                AI CRM Demo
+              </button>
+              <button className="px-4 py-2 rounded-full border border-border bg-background text-sm text-foreground hover:bg-muted/50 transition-colors flex items-center gap-2">
+                <Bot className="w-4 h-4" />
+                Investment Agents
+              </button>
+              <button className="px-4 py-2 rounded-full border border-border bg-background text-sm text-foreground hover:bg-muted/50 transition-colors flex items-center gap-2">
+                <SparklesIcon className="w-4 h-4" />
+                Portfolio Analytics
+              </button>
+            </div>
             
             {/* Quick Access Cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-12">
