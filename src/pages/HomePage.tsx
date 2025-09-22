@@ -43,104 +43,108 @@ const HomePage = () => {
       </header>
       
       {/* Main Content */}
-      <main className="min-h-screen">
+      <main>
         {/* Hero Section */}
-        <div className="flex-1 flex flex-col items-center justify-center px-6 py-20">
-          <div className="w-full max-w-4xl mx-auto text-center space-y-8">
-            
-            {/* Brand Logo/Title */}
-            <div className="space-y-4">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
-                nvestiv
-              </h1>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                AI Operating System for Private Investment Firms
-              </p>
-            </div>
-            
-            {/* Main Search Box */}
-            <div className="mt-12 max-w-2xl mx-auto">
-              <div className="relative">
-                <input
-                  type="text"
-                  placeholder="Ask about your investments, portfolio, or create AI agents..."
-                  className="w-full px-4 py-3 pr-12 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-                />
-                <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-muted-foreground" />
+        <section className="h-screen flex items-center justify-center px-6">
+          <div className="w-full max-w-4xl mx-auto text-center">
+            <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6">
+              nvestiv
+            </h1>
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
+              AI Operating System for Private Investment Firms
+            </p>
+          </div>
+        </section>
+
+        {/* Content Section */}
+        <section className="min-h-screen py-20">
+          <div className="flex-1 flex flex-col items-center justify-center px-6">
+            <div className="w-full max-w-4xl mx-auto text-center space-y-8">
+              
+              {/* Main Search Box */}
+              <div className="mt-12 max-w-2xl mx-auto">
+                <div className="relative">
+                  <input
+                    type="text"
+                    placeholder="Ask about your investments, portfolio, or create AI agents..."
+                    className="w-full px-4 py-3 pr-12 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                  />
+                  <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-muted-foreground" />
+                </div>
+              </div>
+              
+              {/* Suggestion Pills */}
+              <div className="flex flex-wrap items-center justify-center gap-3 mt-6">
+                <button className="px-4 py-2 rounded-full border border-border bg-background text-sm text-foreground hover:bg-muted/50 transition-colors flex items-center gap-2">
+                  <Database className="w-4 h-4" />
+                  AI CRM Demo
+                </button>
+                <button className="px-4 py-2 rounded-full border border-border bg-background text-sm text-foreground hover:bg-muted/50 transition-colors flex items-center gap-2">
+                  <Bot className="w-4 h-4" />
+                  Investment Agents
+                </button>
+                <button className="px-4 py-2 rounded-full border border-border bg-background text-sm text-foreground hover:bg-muted/50 transition-colors flex items-center gap-2">
+                  <SparklesIcon className="w-4 h-4" />
+                  Portfolio Analytics
+                </button>
+              </div>
+              
+              {/* Quick Access Cards */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-12">
+                <Card 
+                  className="card-perplexity cursor-pointer hover:bg-muted/20"
+                  onClick={() => setCrmModalOpen(true)}
+                >
+                  <CardHeader className="pb-3">
+                    <CardTitle className="text-lg flex items-center gap-2">
+                      <Database className="w-5 h-5 text-primary" />
+                      AI CRM
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <CardDescription>
+                      Unified relationship management for private markets
+                    </CardDescription>
+                  </CardContent>
+                </Card>
+                
+                <Card 
+                  className="card-perplexity cursor-pointer hover:bg-muted/20"
+                  onClick={() => setAgentsModalOpen(true)}
+                >
+                  <CardHeader className="pb-3">
+                    <CardTitle className="text-lg flex items-center gap-2">
+                      <Bot className="w-5 h-5 text-primary" />
+                      AI Agents
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <CardDescription>
+                      Custom agents for every investment workflow
+                    </CardDescription>
+                  </CardContent>
+                </Card>
+                
+                <Card 
+                  className="card-perplexity cursor-pointer hover:bg-muted/20"
+                  onClick={() => setIrisModalOpen(true)}
+                >
+                  <CardHeader className="pb-3">
+                    <CardTitle className="text-lg flex items-center gap-2">
+                      <SparklesIcon className="w-5 h-5 text-primary" />
+                      IRIS Platform
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <CardDescription>
+                      Intelligent investment research and analytics
+                    </CardDescription>
+                  </CardContent>
+                </Card>
               </div>
             </div>
-            
-            {/* Suggestion Pills */}
-            <div className="flex flex-wrap items-center justify-center gap-3 mt-6">
-              <button className="px-4 py-2 rounded-full border border-border bg-background text-sm text-foreground hover:bg-muted/50 transition-colors flex items-center gap-2">
-                <Database className="w-4 h-4" />
-                AI CRM Demo
-              </button>
-              <button className="px-4 py-2 rounded-full border border-border bg-background text-sm text-foreground hover:bg-muted/50 transition-colors flex items-center gap-2">
-                <Bot className="w-4 h-4" />
-                Investment Agents
-              </button>
-              <button className="px-4 py-2 rounded-full border border-border bg-background text-sm text-foreground hover:bg-muted/50 transition-colors flex items-center gap-2">
-                <SparklesIcon className="w-4 h-4" />
-                Portfolio Analytics
-              </button>
-            </div>
-            
-            {/* Quick Access Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-12">
-              <Card 
-                className="card-perplexity cursor-pointer hover:bg-muted/20"
-                onClick={() => setCrmModalOpen(true)}
-              >
-                <CardHeader className="pb-3">
-                  <CardTitle className="text-lg flex items-center gap-2">
-                    <Database className="w-5 h-5 text-primary" />
-                    AI CRM
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription>
-                    Unified relationship management for private markets
-                  </CardDescription>
-                </CardContent>
-              </Card>
-              
-              <Card 
-                className="card-perplexity cursor-pointer hover:bg-muted/20"
-                onClick={() => setAgentsModalOpen(true)}
-              >
-                <CardHeader className="pb-3">
-                  <CardTitle className="text-lg flex items-center gap-2">
-                    <Bot className="w-5 h-5 text-primary" />
-                    AI Agents
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription>
-                    Custom agents for every investment workflow
-                  </CardDescription>
-                </CardContent>
-              </Card>
-              
-              <Card 
-                className="card-perplexity cursor-pointer hover:bg-muted/20"
-                onClick={() => setIrisModalOpen(true)}
-              >
-                <CardHeader className="pb-3">
-                  <CardTitle className="text-lg flex items-center gap-2">
-                    <SparklesIcon className="w-5 h-5 text-primary" />
-                    IRIS Platform
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription>
-                    Intelligent investment research and analytics
-                  </CardDescription>
-                </CardContent>
-              </Card>
-            </div>
           </div>
-        </div>
+        </section>
       </main>
       
       {/* Modals */}
