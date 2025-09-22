@@ -291,7 +291,7 @@ const HomePage = () => {
                             {/* User Message */}
                             <div className="flex justify-end">
                               <div className="bg-slate-600 text-white rounded-2xl px-4 py-2 max-w-[80%]">
-                                <p className="text-sm">Who do I know that looks at healthcare rollups in Florida?</p>
+                                <p className="text-sm text-white">Who do I know that looks at healthcare rollups in Florida?</p>
                               </div>
                             </div>
                             
