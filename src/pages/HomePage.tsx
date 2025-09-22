@@ -258,11 +258,37 @@ const HomePage = () => {
                           <span className="text-sm font-medium text-muted-foreground">01</span>
                         </div>
                         <div>
-                          <h3 className="h3 mb-4">AI CRM for Private Markets</h3>
+                          <h3 className="h3 mb-4">The CRM That Updates Itself</h3>
                           <p className="text-lg leading-relaxed mb-6">
-                            Centralize all your relationships, deals, and communications in one intelligent platform. 
-                            Our AI automatically enriches contact data, tracks deal progress, and surfaces the most relevant opportunities.
+                            Every email, every interaction, every detail—IRIS reads it all and automatically updates your CRM in real-time. Ask IRIS anything about your relationships through chat or voice, and get instant insights from your entire communication history. No manual entry. No data gaps. Just talk to IRIS and watch your CRM become smarter with every conversation.
                           </p>
+                          
+                          <div className="space-y-3 mb-6">
+                            <h4 className="font-semibold text-foreground">Key Features</h4>
+                            <ul className="space-y-2 text-sm text-muted-foreground">
+                              <li className="flex items-start gap-2">
+                                <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                                <span><strong>Auto-syncing email integration</strong> - Every past and incoming email is read, organized, and used to update contact records automatically</span>
+                              </li>
+                              <li className="flex items-start gap-2">
+                                <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                                <span><strong>Voice & chat interface</strong> - Ask IRIS anything through the floating chat bubble using voice or text</span>
+                              </li>
+                              <li className="flex items-start gap-2">
+                                <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                                <span><strong>Intelligent relationship mapping</strong> - IRIS derives context from all communications to build comprehensive relationship profiles</span>
+                              </li>
+                              <li className="flex items-start gap-2">
+                                <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                                <span><strong>Agentic database management</strong> - IRIS autonomously creates, updates, and organizes your CRM without manual input</span>
+                              </li>
+                              <li className="flex items-start gap-2">
+                                <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                                <span><strong>Instant insights on demand</strong> - Get answers about any contact, deal, or relationship pattern from your entire communication history</span>
+                              </li>
+                            </ul>
+                          </div>
+                          
                           <Button variant="default">
                             Explore CRM Features
                           </Button>
