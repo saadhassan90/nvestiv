@@ -360,6 +360,7 @@ const HomePage = () => {
                               </Button>
                             </div>
                           </div>
+                          </div>
                         </div>
                       </div>
                     </div>
