@@ -100,6 +100,14 @@ const HomePage = () => {
                       <span className="hidden sm:inline">AI Agents</span>
                     </button>
                     <button className="px-3 py-2 text-xs bg-white/5 text-white/70 rounded-lg hover:bg-white/10 transition-colors border border-white/10 flex items-center gap-2">
+                      <FolderOpen className="w-3 h-3" />
+                      <span className="hidden sm:inline">Files</span>
+                    </button>
+                    <button className="px-3 py-2 text-xs bg-white/5 text-white/70 rounded-lg hover:bg-white/10 transition-colors border border-white/10 flex items-center gap-2">
+                      <Grid3X3 className="w-3 h-3" />
+                      <span className="hidden sm:inline">Apps</span>
+                    </button>
+                    <button className="px-3 py-2 text-xs bg-white/5 text-white/70 rounded-lg hover:bg-white/10 transition-colors border border-white/10 flex items-center gap-2">
                       <Plus className="w-3 h-3" />
                     </button>
                   </div>
@@ -109,18 +117,6 @@ const HomePage = () => {
                     <ArrowRight className="w-4 h-4" />
                   </Button>
                 </div>
-              </div>
-
-              {/* Additional Suggestion Pills */}
-              <div className="flex flex-wrap gap-2 mt-4 justify-center">
-                <button className="px-4 py-2 text-xs bg-white/5 text-white/70 rounded-full hover:bg-white/10 transition-colors border border-white/10 flex items-center gap-2">
-                  <FolderOpen className="w-3 h-3" />
-                  File System
-                </button>
-                <button className="px-4 py-2 text-xs bg-white/5 text-white/70 rounded-full hover:bg-white/10 transition-colors border border-white/10 flex items-center gap-2">
-                  <Grid3X3 className="w-3 h-3" />
-                  Integrated Apps
-                </button>
               </div>
             </div>
           </div>
