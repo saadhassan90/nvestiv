@@ -395,10 +395,9 @@ const HomePage = () => {
                     <div className="grid lg:grid-cols-2 gap-8 items-start">
                        <div className="space-y-6 flex flex-col justify-start">
                         <div>
-                          <h3 className="h3 mb-4">Intelligent AI Agents</h3>
-                          <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
-                            Deploy specialized AI agents that work 24/7 to screen deals, conduct due diligence, 
-                            and automate routine tasks. Each agent learns from your preferences and improves over time.
+                           <h3 className="h3 mb-4">Speak Your Workflow Into Existence</h3>
+                           <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
+                            Create custom AI agents using plain English. Tell IRIS what you need done, which tools to connect, and how—she builds the entire workflow for you. No code, no complexity.
                           </p>
                           
                           <div className="space-y-3 mb-6">
@@ -406,15 +405,19 @@ const HomePage = () => {
                             <ul className="space-y-2 text-sm text-muted-foreground">
                               <li className="flex items-start gap-2">
                                 <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                                <span><strong>Deal Screening Agent</strong> - Automatically screens incoming deals based on your criteria</span>
+                                <span><strong>Natural language agent creation</strong> - Describe your workflow, IRIS builds it</span>
                               </li>
                               <li className="flex items-start gap-2">
                                 <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                                <span><strong>Due Diligence Assistant</strong> - Conducts initial research and fact-checking</span>
+                                <span><strong>Zero technical skills required</strong> - Just talk through what you want to achieve</span>
                               </li>
                               <li className="flex items-start gap-2">
                                 <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                                <span><strong>Market Intelligence Agent</strong> - Tracks industry trends and competitor analysis</span>
+                                <span><strong>Auto-vectorized outputs</strong> - Agent work feeds back into IRIS for complete business context</span>
+                              </li>
+                              <li className="flex items-start gap-2">
+                                <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                                <span><strong>Pre-built agent catalog</strong> - Ready-made agents for family offices, institutions, and asset managers</span>
                               </li>
                             </ul>
                           </div>
