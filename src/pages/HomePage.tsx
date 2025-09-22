@@ -538,10 +538,9 @@ const HomePage = () => {
                     <div className="grid lg:grid-cols-2 gap-8 items-start">
                        <div className="space-y-6 flex flex-col justify-start">
                         <div>
-                          <h3 className="h3 mb-4">Smart File Management</h3>
-                          <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
-                            Organize and search through thousands of documents with AI-powered insights. 
-                            Automatically categorize files, extract key information, and find what you need instantly.
+                           <h3 className="h3 mb-4">Your Files, Intelligently Connected</h3>
+                           <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
+                            Upload directly or connect Google Drive, Microsoft, Dropbox—IRIS reads every file and connects the dots. Auto-organized storage that links documents to contacts, powers your agents, and fuels smarter decisions.
                           </p>
                           
                           <div className="space-y-3 mb-6">
@@ -549,15 +548,19 @@ const HomePage = () => {
                             <ul className="space-y-2 text-sm text-muted-foreground">
                               <li className="flex items-start gap-2">
                                 <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                                <span><strong>AI Document Analysis</strong> - Automatically extracts key metrics and insights</span>
+                                <span><strong>Universal file integration</strong> - Upload directly or sync cloud drives seamlessly</span>
                               </li>
                               <li className="flex items-start gap-2">
                                 <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                                <span><strong>Smart Categorization</strong> - Files organized by deal stage, sector, and type</span>
+                                <span><strong>Complete file intelligence</strong> - IRIS processes every document for full context</span>
                               </li>
                               <li className="flex items-start gap-2">
                                 <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                                <span><strong>Instant Search</strong> - Natural language search across all documents</span>
+                                <span><strong>Smart auto-organization</strong> - Files sorted and linked to relevant CRM contacts</span>
+                              </li>
+                              <li className="flex items-start gap-2">
+                                <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                                <span><strong>Agent-ready knowledge</strong> - All files available for automation and research tasks</span>
                               </li>
                             </ul>
                           </div>
