@@ -8,7 +8,6 @@ const HomePage = () => {
   const [crmModalOpen, setCrmModalOpen] = useState(false);
   const [agentsModalOpen, setAgentsModalOpen] = useState(false);
   const [irisModalOpen, setIrisModalOpen] = useState(false);
-
   return <div className="min-h-screen bg-background">
       {/* Website Header */}
       <header className="h-16 border-b border-border flex items-center justify-between px-6">
@@ -131,9 +130,7 @@ const HomePage = () => {
               <h3 className="text-2xl font-semibold text-gray-900 mb-2">
                 Trusted by Leading Investment Firms
               </h3>
-              <p className="text-gray-600">
-                Join hundreds of firms already using IRIS to transform their investment process
-              </p>
+              
             </div>
             
             <div className="relative">
