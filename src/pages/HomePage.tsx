@@ -64,7 +64,7 @@ const HomePage = () => {
                   <br />
                   Grow <span className="text-blue-400">Faster</span>
                 </h1>
-                <p className="text-hero-body text-gray-300 max-w-lg">
+                <p className="text-lg text-gray-300 max-w-lg">
                   Your entire business on one AI CRM — speak custom agents into existence and automate everything. No code, just plain english commands that transform how you work. Nvestiv unifies relationships, files, and investments into a single platform built for private markets.
                 </p>
               </div>

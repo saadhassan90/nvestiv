@@ -169,6 +169,31 @@ const TypographyStyleGuide = () => {
         </Card>
       </section>
 
+      {/* Brand Component Styles */}
+      <section className="space-y-6">
+        <h2>Brand Component Styles</h2>
+        <Card>
+          <CardHeader>
+            <CardTitle>Reusable Brand Elements</CardTitle>
+            <CardDescription>Consistent styling patterns for brand components</CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-6">
+            <div>
+              <p className="text-small text-muted mb-2">Hero Gradient Card (.hero-gradient-card)</p>
+              <div className="hero-gradient-card p-8 text-white">
+                <h3 className="text-2xl font-bold mb-4">Sample Hero Content</h3>
+                <p className="text-lg opacity-90">
+                  Deep navy to electric blue gradient - perfect for hero sections and feature highlights.
+                </p>
+              </div>
+              <code className="text-xs text-muted-foreground mt-2 block">
+                bg-gradient-to-br from-slate-900 from-70% via-slate-800 via-80% to-blue-700
+              </code>
+            </div>
+          </CardContent>
+        </Card>
+      </section>
+
       {/* Usage Guidelines */}
       <section className="space-y-6">
         <h2>SEO & Accessibility Guidelines</h2>
