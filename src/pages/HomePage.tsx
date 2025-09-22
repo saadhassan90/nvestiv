@@ -42,7 +42,7 @@ const HomePage = () => {
       </header>
       
       {/* Main Content */}
-      <main className="max-w-screen-xl mx-auto">
+      <main className="max-w-[1080px] mx-auto">
         {/* Hero Section */}
         <section className="h-[calc(100vh-8rem)] flex items-center justify-center px-6 relative overflow-hidden bg-gradient-to-br from-slate-900 from-70% via-slate-800 via-80% to-blue-700 rounded-3xl mx-4 my-4" aria-labelledby="hero-heading">
           {/* Request early access button */}
@@ -123,11 +123,10 @@ const HomePage = () => {
             </div>
           </div>
         </section>
-      </main>
 
-      {/* Companies Marquee Section */}
-      <section className="bg-gray-50 py-16 overflow-hidden">
-        <div className="max-w-screen-xl mx-auto px-6">
+        {/* Companies Marquee Section */}
+        <section className="bg-gray-50 py-16 overflow-hidden rounded-3xl mx-4 mb-4">
+          <div className="px-6">
             <div className="text-center mb-12">
               <h3 className="text-2xl font-semibold text-gray-900 mb-2">
                 Trusted by Leading Investment Firms
@@ -228,7 +227,8 @@ const HomePage = () => {
             </div>
           </div>
         </section>
-      
+      </main>
+
       {/* Modals */}
       {/* CRM Modal */}
       <Dialog open={crmModalOpen} onOpenChange={setCrmModalOpen}>
