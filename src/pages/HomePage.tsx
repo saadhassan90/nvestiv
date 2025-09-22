@@ -227,28 +227,29 @@ const HomePage = () => {
             </div>
 
             <Tabs defaultValue="ai-crm" className="w-full max-w-6xl mx-auto">
-              <TabsList className="grid w-full grid-cols-4 mb-8">
-                <TabsTrigger value="ai-crm" className="flex items-center gap-2">
-                  <Database className="w-4 h-4" />
-                  <span className="hidden sm:inline">AI CRM</span>
-                </TabsTrigger>
-                <TabsTrigger value="ai-agents" className="flex items-center gap-2">
-                  <Bot className="w-4 h-4" />
-                  <span className="hidden sm:inline">AI Agents</span>
-                </TabsTrigger>
-                <TabsTrigger value="files" className="flex items-center gap-2">
-                  <FileText className="w-4 h-4" />
-                  <span className="hidden sm:inline">Files</span>
-                </TabsTrigger>
-                <TabsTrigger value="integrations" className="flex items-center gap-2">
-                  <Settings className="w-4 h-4" />
-                  <span className="hidden sm:inline">Integrations</span>
-                </TabsTrigger>
-              </TabsList>
-
               <TabsContent value="ai-crm" className="mt-0">
                 <Card className="border-0 shadow-lg bg-gray-50">
-                  <CardContent className="p-16">
+                  <div className="p-6 pb-0">
+                    <TabsList className="grid w-full grid-cols-4">
+                      <TabsTrigger value="ai-crm" className="flex items-center gap-2">
+                        <Database className="w-4 h-4" />
+                        <span className="hidden sm:inline">AI CRM</span>
+                      </TabsTrigger>
+                      <TabsTrigger value="ai-agents" className="flex items-center gap-2">
+                        <Bot className="w-4 h-4" />
+                        <span className="hidden sm:inline">AI Agents</span>
+                      </TabsTrigger>
+                      <TabsTrigger value="files" className="flex items-center gap-2">
+                        <FileText className="w-4 h-4" />
+                        <span className="hidden sm:inline">Files</span>
+                      </TabsTrigger>
+                      <TabsTrigger value="integrations" className="flex items-center gap-2">
+                        <Settings className="w-4 h-4" />
+                        <span className="hidden sm:inline">Integrations</span>
+                      </TabsTrigger>
+                    </TabsList>
+                  </div>
+                  <CardContent className="p-16 pt-6">
                     <div className="grid lg:grid-cols-2 gap-8 items-start">
                        <div className="space-y-6 flex flex-col justify-start">
                         <div>
