@@ -105,8 +105,8 @@ const HomePage = () => {
                   </h1>
                 </div>
                 <div>
-                  <h2 className="h2 text-blue-400 leading-tight">
-                    <span className="inline-block min-w-[280px]" id="typewriter-text">Private Equity</span>
+                  <h2 className="h2 text-blue-400 leading-tight text-left">
+                    <span className="inline-block min-w-[280px] text-left" id="typewriter-text">Private Equity</span>
                   </h2>
                 </div>
               </div>
