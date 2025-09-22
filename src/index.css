@@ -178,7 +178,7 @@
 
   .text-secondary {
     @apply leading-relaxed text-sm md:text-base;
-    color: hsl(var(--text-secondary));
+    color: hsl(var(--text-primary)); /* Changed from text-secondary to text-primary for darker text */
   }
 
   .text-muted {

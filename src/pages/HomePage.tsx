@@ -233,7 +233,7 @@ const HomePage = () => {
               <h2 id="features-heading" className="h2 mb-4">
                 Complete AI Operating System
               </h2>
-              <p className="text-secondary max-w-2xl mx-auto">
+              <p className="text-primary max-w-2xl mx-auto">
                 Discover how IRIS transforms your private investment workflow with intelligent automation and seamless integration.
               </p>
             </div>
@@ -271,7 +271,7 @@ const HomePage = () => {
                         </div>
                         <div>
                           <h3 className="h3 mb-4">AI CRM for Private Markets</h3>
-                          <p className="text-secondary text-lg leading-relaxed mb-6">
+                          <p className="text-primary text-lg leading-relaxed mb-6">
                             Centralize all your relationships, deals, and communications in one intelligent platform. 
                             Our AI automatically enriches contact data, tracks deal progress, and surfaces the most relevant opportunities.
                           </p>
@@ -306,7 +306,7 @@ const HomePage = () => {
                         </div>
                         <div>
                           <h3 className="h3 mb-4">Intelligent AI Agents</h3>
-                          <p className="text-secondary text-lg leading-relaxed mb-6">
+                          <p className="text-primary text-lg leading-relaxed mb-6">
                             Deploy specialized AI agents that work 24/7 to screen deals, conduct due diligence, 
                             and automate routine tasks. Each agent learns from your preferences and improves over time.
                           </p>
@@ -341,7 +341,7 @@ const HomePage = () => {
                         </div>
                         <div>
                           <h3 className="h3 mb-4">Smart File Management</h3>
-                          <p className="text-secondary text-lg leading-relaxed mb-6">
+                          <p className="text-primary text-lg leading-relaxed mb-6">
                             Organize and search through thousands of documents with AI-powered insights. 
                             Automatically categorize files, extract key information, and find what you need instantly.
                           </p>
@@ -376,7 +376,7 @@ const HomePage = () => {
                         </div>
                         <div>
                           <h3 className="h3 mb-4">Seamless Integrations</h3>
-                          <p className="text-secondary text-lg leading-relaxed mb-6">
+                          <p className="text-primary text-lg leading-relaxed mb-6">
                             Connect your existing tools and platforms seamlessly. From Bloomberg to your favorite 
                             spreadsheet software, IRIS integrates with your entire investment technology stack.
                           </p>
