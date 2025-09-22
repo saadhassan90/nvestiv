@@ -222,7 +222,7 @@ const HomePage = () => {
             {/* Section Label */}
             <div className="flex justify-center mb-8">
               <div className="relative inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 text-gray-600">
-                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#8215E0] via-[#0B0E1F] to-transparent opacity-40 p-[1px]">
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#8215E0] from-0% via-[#8215E0] via-70% to-[#8215E0]/10 to-100% p-[1px]">
                   <div className="h-full w-full rounded-full bg-gray-100"></div>
                 </div>
                 <div className="relative z-10 flex items-center gap-2">
