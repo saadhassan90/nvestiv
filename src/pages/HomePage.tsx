@@ -114,12 +114,12 @@ const HomePage = () => {
               <div className="space-y-4">
                 <div className="space-y-2">
                   <div>
-                    <h1 id="hero-heading" className="text-display text-white leading-tight">
+                    <h1 id="hero-heading" className="h2 text-white leading-tight">
                       Private Investments <span className="text-blue-400">AI</span>
                     </h1>
                   </div>
                   <div>
-                    <h2 className="text-display text-white leading-tight">
+                    <h2 className="h2 text-white leading-tight">
                       For <span className="text-blue-400 inline-block min-w-[280px] text-left" id="typewriter-text">Private Equity</span>
                     </h2>
                   </div>
