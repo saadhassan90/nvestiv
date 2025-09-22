@@ -285,76 +285,78 @@ const HomePage = () => {
                         </div>
                       </div>
                       <div className="lg:pl-8">
-                        <div className="bg-white rounded-2xl p-6 h-[500px] flex flex-col border border-gray-200 shadow-sm">
-                          {/* Chat History Container */}
-                          <div className="flex-1 space-y-4 mb-4 overflow-y-auto">
-                            {/* User Message */}
-                            <div className="flex justify-end gap-2">
-                              <div className="flex flex-col items-end max-w-[80%]">
-                                <div className="flex items-center gap-2 mb-1">
-                                  <span className="text-xs text-gray-500">12:34 PM</span>
-                                  <span className="text-xs font-medium text-gray-700">You</span>
-                                  <div className="w-6 h-6 bg-slate-500 rounded-full flex items-center justify-center">
-                                    <span className="text-white font-medium text-xs">Y</span>
+                        <div className="bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-cyan-500 rounded-2xl p-[2px]">
+                          <div className="bg-white rounded-2xl p-6 h-[500px] flex flex-col shadow-sm">
+                            {/* Chat History Container */}
+                            <div className="flex-1 space-y-4 mb-4 overflow-y-auto">
+                              {/* User Message */}
+                              <div className="flex justify-end gap-2">
+                                <div className="flex flex-col items-end max-w-[80%]">
+                                  <div className="flex items-center gap-2 mb-1">
+                                    <span className="text-xs text-gray-500">12:34 PM</span>
+                                    <span className="text-xs font-medium text-gray-700">You</span>
+                                    <div className="w-6 h-6 bg-slate-500 rounded-full flex items-center justify-center">
+                                      <span className="text-white font-medium text-xs">Y</span>
+                                    </div>
+                                  </div>
+                                  <div className="bg-slate-600 text-white rounded-2xl px-4 py-2">
+                                    <p className="text-sm text-white">Who do I know that looks at healthcare rollups in Florida?</p>
                                   </div>
                                 </div>
-                                <div className="bg-slate-600 text-white rounded-2xl px-4 py-2">
-                                  <p className="text-sm text-white">Who do I know that looks at healthcare rollups in Florida?</p>
+                              </div>
+                              
+                              {/* IRIS Response */}
+                              <div className="flex justify-start gap-2">
+                                <div className="flex flex-col items-start max-w-[85%]">
+                                  <div className="flex items-center gap-2 mb-1">
+                                    <div className="w-6 h-6 bg-gray-400 rounded-full flex items-center justify-center">
+                                      <span className="text-white font-medium text-xs">I</span>
+                                    </div>
+                                    <span className="text-xs font-medium text-gray-700">IRIS</span>
+                                    <span className="text-xs text-gray-500">12:34 PM</span>
+                                  </div>
+                                  <div className="bg-gray-100 rounded-2xl px-4 py-2">
+                                    <p className="text-sm text-gray-800">Searched the CRM and found Jason Ozler, who told you in 2024 that he likes to invest in US healthcare PE strategies.</p>
+                                    <p className="text-sm text-gray-800 mt-2 font-medium">Want me to email him requesting a meeting?</p>
+                                  </div>
+                                </div>
+                              </div>
+                              
+                              {/* Contact Card */}
+                              <div className="flex justify-start">
+                                <div className="bg-white border border-gray-200 rounded-lg p-3 max-w-[85%] shadow-sm">
+                                  <div className="flex items-center gap-3">
+                                    <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center">
+                                      <span className="text-white font-medium text-sm">JO</span>
+                                    </div>
+                                    <div className="flex-1">
+                                      <h4 className="font-medium text-sm text-gray-900">Jason Ozler</h4>
+                                      <p className="text-xs text-gray-500">Partner @ Florida Health Ventures</p>
+                                      <p className="text-xs text-gray-400">Last contact: March 2024</p>
+                                    </div>
+                                  </div>
+                                  <div className="mt-2 pt-2 border-t border-gray-100">
+                                    <p className="text-xs text-gray-600">"Looking for healthcare PE opportunities in Southeast US markets"</p>
+                                  </div>
                                 </div>
                               </div>
                             </div>
                             
-                            {/* IRIS Response */}
-                            <div className="flex justify-start gap-2">
-                              <div className="flex flex-col items-start max-w-[85%]">
-                                <div className="flex items-center gap-2 mb-1">
-                                  <div className="w-6 h-6 bg-gray-400 rounded-full flex items-center justify-center">
-                                    <span className="text-white font-medium text-xs">I</span>
-                                  </div>
-                                  <span className="text-xs font-medium text-gray-700">IRIS</span>
-                                  <span className="text-xs text-gray-500">12:34 PM</span>
+                            {/* Chat Widget */}
+                            <div className="bg-black/5 backdrop-blur-sm rounded-xl p-1 border border-gray-200">
+                              <div className="flex items-center gap-2 p-2">
+                                <div className="flex-1 relative">
+                                  <input 
+                                    type="text" 
+                                    placeholder="Ask IRIS something..." 
+                                    className="w-full bg-transparent text-gray-700 placeholder:text-gray-400 text-xs focus:outline-none py-1 px-2" 
+                                    disabled
+                                  />
                                 </div>
-                                <div className="bg-gray-100 rounded-2xl px-4 py-2">
-                                  <p className="text-sm text-gray-800">Searched the CRM and found Jason Ozler, who told you in 2024 that he likes to invest in US healthcare PE strategies.</p>
-                                  <p className="text-sm text-gray-800 mt-2 font-medium">Want me to email him requesting a meeting?</p>
-                                </div>
+                                <Button size="icon" variant="default" className="w-8 h-8 rounded-lg">
+                                  <ArrowRight className="w-3 h-3" />
+                                </Button>
                               </div>
-                            </div>
-                            
-                            {/* Contact Card */}
-                            <div className="flex justify-start">
-                              <div className="bg-white border border-gray-200 rounded-lg p-3 max-w-[85%] shadow-sm">
-                                <div className="flex items-center gap-3">
-                                  <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center">
-                                    <span className="text-white font-medium text-sm">JO</span>
-                                  </div>
-                                  <div className="flex-1">
-                                    <h4 className="font-medium text-sm text-gray-900">Jason Ozler</h4>
-                                    <p className="text-xs text-gray-500">Partner @ Florida Health Ventures</p>
-                                    <p className="text-xs text-gray-400">Last contact: March 2024</p>
-                                  </div>
-                                </div>
-                                <div className="mt-2 pt-2 border-t border-gray-100">
-                                  <p className="text-xs text-gray-600">"Looking for healthcare PE opportunities in Southeast US markets"</p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          
-                          {/* Chat Widget */}
-                          <div className="bg-black/5 backdrop-blur-sm rounded-xl p-1 border border-gray-200">
-                            <div className="flex items-center gap-2 p-2">
-                              <div className="flex-1 relative">
-                                <input 
-                                  type="text" 
-                                  placeholder="Ask IRIS something..." 
-                                  className="w-full bg-transparent text-gray-700 placeholder:text-gray-400 text-xs focus:outline-none py-1 px-2" 
-                                  disabled
-                                />
-                              </div>
-                              <Button size="icon" variant="default" className="w-8 h-8 rounded-lg">
-                                <ArrowRight className="w-3 h-3" />
-                              </Button>
                             </div>
                           </div>
                         </div>
