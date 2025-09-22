@@ -121,9 +121,6 @@ const HomePage = () => {
                   </h2>
                 </div>
               </div>
-              <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-                Your entire business on one AI CRM — speak custom agents into existence and automate everything. No code, just plain english commands that transform how you work. Nvestiv unifies relationships, files, and investments into a single platform built for private markets.
-              </p>
             </div>
 
             {/* CTA Buttons */}
@@ -146,6 +143,9 @@ const HomePage = () => {
                 <h2 id="features-heading" className="h2">Explore Our AI-Powered Platform</h2>
                 <p className="text-secondary max-w-2xl mx-auto">
                   Discover how Nvestiv transforms private investment workflows with intelligent automation and seamless integration.
+                </p>
+                <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                  Your entire business on one AI CRM — speak custom agents into existence and automate everything. No code, just plain english commands that transform how you work. Nvestiv unifies relationships, files, and investments into a single platform built for private markets.
                 </p>
               </header>
               
