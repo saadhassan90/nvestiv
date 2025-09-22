@@ -132,6 +132,44 @@ const HomePage = () => {
                 Book a Demo
               </Button>
             </div>
+
+            {/* AI Chat Interface */}
+            <div className="mt-12 max-w-2xl mx-auto">
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                <div className="space-y-4">
+                  <div className="flex items-center gap-2 text-white/80 text-sm">
+                    <Bot className="w-4 h-4" />
+                    <span>Ask Nvestiv AI anything about private investments</span>
+                  </div>
+                  
+                  <div className="relative">
+                    <textarea 
+                      placeholder="What would you like to know about private equity deal flow management?"
+                      className="w-full bg-white/5 border border-white/20 rounded-xl p-4 pr-12 text-white placeholder:text-white/50 resize-none h-20 focus:outline-none focus:border-white/40 focus:bg-white/10 transition-all"
+                      rows={3}
+                    />
+                    <Button 
+                      size="sm" 
+                      className="absolute bottom-3 right-3 bg-blue-500 hover:bg-blue-600 text-white border-0 rounded-lg px-4"
+                    >
+                      <Search className="w-4 h-4" />
+                    </Button>
+                  </div>
+                  
+                  <div className="flex flex-wrap gap-2">
+                    <button className="px-3 py-1.5 text-xs bg-white/10 text-white/80 rounded-full hover:bg-white/20 transition-colors border border-white/20">
+                      Deal sourcing strategies
+                    </button>
+                    <button className="px-3 py-1.5 text-xs bg-white/10 text-white/80 rounded-full hover:bg-white/20 transition-colors border border-white/20">
+                      Portfolio management
+                    </button>
+                    <button className="px-3 py-1.5 text-xs bg-white/10 text-white/80 rounded-full hover:bg-white/20 transition-colors border border-white/20">
+                      Due diligence automation
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
