@@ -3,11 +3,14 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Database, Bot, Sparkles as SparklesIcon, Search } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+
 const HomePage = () => {
   const [crmModalOpen, setCrmModalOpen] = useState(false);
   const [agentsModalOpen, setAgentsModalOpen] = useState(false);
   const [irisModalOpen, setIrisModalOpen] = useState(false);
-  return <div className="min-h-screen bg-background">
+
+  return (
+    <div className="min-h-screen bg-background">
       {/* Website Header */}
       <header className="h-16 border-b border-border flex items-center justify-between px-6">
         {/* Logo */}
@@ -42,7 +45,7 @@ const HomePage = () => {
       {/* Main Content */}
       <main className="max-w-screen-xl mx-auto">
         {/* Hero Section */}
-        <section className="h-[calc(100vh-8rem)] flex items-center justify-center px-6 relative overflow-hidden bg-gradient-to-br from-slate-900 from-30% via-slate-800 via-50% via-slate-700 via-70% via-slate-600 via-80% to-slate-500 rounded-3xl mx-4 my-4">
+        <section className="h-[calc(100vh-8rem)] flex items-center justify-center px-6 relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 via-gray-900 to-blue-600 rounded-3xl mx-4 my-4">
           {/* Request early access button */}
           <div className="absolute top-8 left-8">
             <Button variant="outline" size="sm" className="bg-black/20 border-white/20 text-white hover:bg-white/10">
@@ -76,7 +79,26 @@ const HomePage = () => {
               </div>
 
               {/* Feature highlights */}
-              
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-8">
+                <div className="flex items-center gap-3">
+                  <div className="w-6 h-6 bg-emerald-500 rounded flex items-center justify-center">
+                    <span className="text-white text-sm">⚡</span>
+                  </div>
+                  <div>
+                    <h3 className="text-white font-medium">Built for Speed</h3>
+                    <p className="text-gray-400 text-sm">Get started in minutes</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-6 h-6 bg-emerald-500 rounded flex items-center justify-center">
+                    <span className="text-white text-sm">🎯</span>
+                  </div>
+                  <div>
+                    <h3 className="text-white font-medium">AI-Powered</h3>
+                    <p className="text-gray-400 text-sm">Smart automation for investments</p>
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Right Content - Dashboard Preview */}
@@ -121,7 +143,11 @@ const HomePage = () => {
               {/* Main Search Box */}
               <div className="mt-12 max-w-2xl mx-auto">
                 <div className="relative">
-                  <input type="text" placeholder="Ask about your investments, portfolio, or create AI agents..." className="w-full px-4 py-3 pr-12 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" />
+                  <input
+                    type="text"
+                    placeholder="Ask about your investments, portfolio, or create AI agents..."
+                    className="w-full px-4 py-3 pr-12 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                  />
                   <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-muted-foreground" />
                 </div>
               </div>
@@ -144,7 +170,10 @@ const HomePage = () => {
               
               {/* Quick Access Cards */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-12">
-                <Card className="card-perplexity cursor-pointer hover:bg-muted/20" onClick={() => setCrmModalOpen(true)}>
+                <Card 
+                  className="card-perplexity cursor-pointer hover:bg-muted/20"
+                  onClick={() => setCrmModalOpen(true)}
+                >
                   <CardHeader className="pb-3">
                     <CardTitle className="text-lg flex items-center gap-2">
                       <Database className="w-5 h-5 text-primary" />
@@ -158,7 +187,10 @@ const HomePage = () => {
                   </CardContent>
                 </Card>
                 
-                <Card className="card-perplexity cursor-pointer hover:bg-muted/20" onClick={() => setAgentsModalOpen(true)}>
+                <Card 
+                  className="card-perplexity cursor-pointer hover:bg-muted/20"
+                  onClick={() => setAgentsModalOpen(true)}
+                >
                   <CardHeader className="pb-3">
                     <CardTitle className="text-lg flex items-center gap-2">
                       <Bot className="w-5 h-5 text-primary" />
@@ -172,7 +204,10 @@ const HomePage = () => {
                   </CardContent>
                 </Card>
                 
-                <Card className="card-perplexity cursor-pointer hover:bg-muted/20" onClick={() => setIrisModalOpen(true)}>
+                <Card 
+                  className="card-perplexity cursor-pointer hover:bg-muted/20"
+                  onClick={() => setIrisModalOpen(true)}
+                >
                   <CardHeader className="pb-3">
                     <CardTitle className="text-lg flex items-center gap-2">
                       <SparklesIcon className="w-5 h-5 text-primary" />
@@ -251,6 +286,8 @@ const HomePage = () => {
           </div>
         </DialogContent>
       </Dialog>
-    </div>;
+    </div>
+  );
 };
+
 export default HomePage;
