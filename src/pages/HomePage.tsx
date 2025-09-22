@@ -131,7 +131,7 @@ const HomePage = () => {
             </div>
 
             {/* AI Chat Interface */}
-            <div className="mt-20 max-w-3xl mx-auto">
+            <div className="mt-40 max-w-3xl mx-auto">
               <div className="bg-black/40 backdrop-blur-sm rounded-2xl p-1 border border-white/10">
                 <div className="flex items-center gap-3 p-3">
                   {/* Main Input Area */}
