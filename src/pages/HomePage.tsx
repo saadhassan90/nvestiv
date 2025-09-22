@@ -290,7 +290,7 @@ const HomePage = () => {
                           <div className="flex-1 space-y-4 mb-4 overflow-y-auto">
                             {/* User Message */}
                             <div className="flex justify-end">
-                              <div className="bg-primary text-primary-foreground rounded-2xl px-4 py-2 max-w-[80%]">
+                              <div className="bg-blue-600 text-white rounded-2xl px-4 py-2 max-w-[80%]">
                                 <p className="text-sm">Who do I know that looks at healthcare rollups in Florida?</p>
                               </div>
                             </div>
@@ -299,6 +299,7 @@ const HomePage = () => {
                             <div className="flex justify-start">
                               <div className="bg-gray-100 rounded-2xl px-4 py-2 max-w-[85%]">
                                 <p className="text-sm text-gray-800">Searched the CRM and found Jason Ozler, who told you in 2024 that he likes to invest in US healthcare PE strategies.</p>
+                                <p className="text-sm text-gray-800 mt-2 font-medium">Want me to email him requesting a meeting?</p>
                               </div>
                             </div>
                             
@@ -328,7 +329,7 @@ const HomePage = () => {
                               <div className="flex-1 relative">
                                 <input 
                                   type="text" 
-                                  placeholder="Ask IRIS about your contacts..." 
+                                  placeholder="Ask IRIS something..." 
                                   className="w-full bg-transparent text-gray-700 placeholder:text-gray-400 text-xs focus:outline-none py-1 px-2" 
                                   disabled
                                 />
