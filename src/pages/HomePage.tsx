@@ -60,7 +60,7 @@ const HomePage = () => {
             <div className="text-left space-y-8">
               <div className="space-y-4">
                 <h1 id="hero-heading" className="text-display text-white leading-tight">
-                  AI For Private Investments
+                  <span className="text-blue-400">AI</span> For Private Investments
                 </h1>
                 <p className="text-lg text-gray-300 max-w-lg">
                   Your entire business on one AI CRM — speak custom agents into existence and automate everything. No code, just plain english commands that transform how you work. Nvestiv unifies relationships, files, and investments into a single platform built for private markets.
