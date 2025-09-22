@@ -287,7 +287,7 @@ const HomePage = () => {
                       <div className="lg:pl-8">
                         <div className="bg-white rounded-2xl p-6 h-[500px] flex flex-col shadow-lg relative">
                           {/* Gradient glow shadow */}
-                          <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-cyan-500 rounded-2xl blur-sm opacity-30 -z-10"></div>
+                          <div className="absolute -inset-2 bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-cyan-500 rounded-2xl blur-md opacity-60 -z-10"></div>
                           
                           {/* Chat History Container */}
                           <div className="flex-1 space-y-4 mb-4 overflow-y-auto">
