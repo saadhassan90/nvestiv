@@ -566,7 +566,7 @@ const HomePage = () => {
                           </div>
                           
                           <Button variant="default">
-                            Organize Files
+                            Learn More
                           </Button>
                         </div>
                       </div>
