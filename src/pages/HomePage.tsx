@@ -308,7 +308,7 @@ const HomePage = () => {
                             <div className="flex justify-start gap-2">
                               <div className="flex flex-col items-start max-w-[85%]">
                                 <div className="flex items-center gap-2 mb-1">
-                                  <div className="w-6 h-6 bg-purple-600 rounded-full flex items-center justify-center">
+                                  <div className="w-6 h-6 bg-gray-400 rounded-full flex items-center justify-center">
                                     <span className="text-white font-medium text-xs">I</span>
                                   </div>
                                   <span className="text-xs font-medium text-gray-700">IRIS</span>
