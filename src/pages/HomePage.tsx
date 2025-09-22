@@ -24,12 +24,12 @@ const HomePage = () => {
         
         {/* Center Navigation */}
         <nav className="flex items-center gap-8" role="navigation" aria-label="Main navigation">
-          <a href="#" className="text-sm text-foreground hover:text-muted-foreground transition-colors no-underline">Home</a>
-          <a href="#" className="text-sm text-foreground hover:text-muted-foreground transition-colors no-underline">Products</a>
-          <a href="#" className="text-sm text-foreground hover:text-muted-foreground transition-colors no-underline">About</a>
-          <a href="#" className="text-sm text-foreground hover:text-muted-foreground transition-colors no-underline">Integrations</a>
-          <a href="#" className="text-sm text-foreground hover:text-muted-foreground transition-colors no-underline">Pricing</a>
-          <a href="#" className="text-sm text-foreground hover:text-muted-foreground transition-colors no-underline">Contact</a>
+          <a href="#" className="text-sm font-medium text-foreground hover:text-muted-foreground transition-colors no-underline">Home</a>
+          <a href="#" className="text-sm font-medium text-foreground hover:text-muted-foreground transition-colors no-underline">Products</a>
+          <a href="#" className="text-sm font-medium text-foreground hover:text-muted-foreground transition-colors no-underline">About</a>
+          <a href="#" className="text-sm font-medium text-foreground hover:text-muted-foreground transition-colors no-underline">Integrations</a>
+          <a href="#" className="text-sm font-medium text-foreground hover:text-muted-foreground transition-colors no-underline">Pricing</a>
+          <a href="#" className="text-sm font-medium text-foreground hover:text-muted-foreground transition-colors no-underline">Contact</a>
         </nav>
         
         {/* Right Side Actions */}
