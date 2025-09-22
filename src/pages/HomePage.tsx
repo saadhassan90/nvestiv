@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
-import { Database, Bot, Sparkles as SparklesIcon, Search, ArrowRight, FolderOpen, Grid3X3 } from "lucide-react";
+import { Database, Bot, Sparkles as SparklesIcon, Search, ArrowRight, FolderOpen, Grid3X3, Settings, Users, FileText, Zap } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 const HomePage = () => {
   console.log("HomePage component is rendering");
   const [crmModalOpen, setCrmModalOpen] = useState(false);
@@ -222,6 +223,181 @@ const HomePage = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Product Features Section */}
+        <section className="w-full py-16" aria-labelledby="features-heading">
+          <div className="px-6">
+            <div className="text-center mb-12">
+              <h2 id="features-heading" className="h2 mb-4">
+                Complete AI Operating System
+              </h2>
+              <p className="text-secondary max-w-2xl mx-auto">
+                Discover how IRIS transforms your private investment workflow with intelligent automation and seamless integration.
+              </p>
+            </div>
+
+            <Tabs defaultValue="ai-crm" className="w-full max-w-6xl mx-auto">
+              <TabsList className="grid w-full grid-cols-4 mb-8">
+                <TabsTrigger value="ai-crm" className="flex items-center gap-2">
+                  <Database className="w-4 h-4" />
+                  <span className="hidden sm:inline">AI CRM</span>
+                </TabsTrigger>
+                <TabsTrigger value="ai-agents" className="flex items-center gap-2">
+                  <Bot className="w-4 h-4" />
+                  <span className="hidden sm:inline">AI Agents</span>
+                </TabsTrigger>
+                <TabsTrigger value="files" className="flex items-center gap-2">
+                  <FileText className="w-4 h-4" />
+                  <span className="hidden sm:inline">Files</span>
+                </TabsTrigger>
+                <TabsTrigger value="integrations" className="flex items-center gap-2">
+                  <Settings className="w-4 h-4" />
+                  <span className="hidden sm:inline">Integrations</span>
+                </TabsTrigger>
+              </TabsList>
+
+              <TabsContent value="ai-crm" className="mt-0">
+                <Card className="border-0 shadow-lg bg-gradient-to-br from-card to-muted/20">
+                  <CardContent className="p-8">
+                    <div className="grid lg:grid-cols-2 gap-8 items-center">
+                      <div className="space-y-6">
+                        <div className="flex items-center gap-3">
+                          <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center">
+                            <Database className="w-4 h-4 text-primary" />
+                          </div>
+                          <span className="text-sm font-medium text-muted-foreground">01</span>
+                        </div>
+                        <div>
+                          <h3 className="h3 mb-4">AI CRM for Private Markets</h3>
+                          <p className="text-secondary text-lg leading-relaxed mb-6">
+                            Centralize all your relationships, deals, and communications in one intelligent platform. 
+                            Our AI automatically enriches contact data, tracks deal progress, and surfaces the most relevant opportunities.
+                          </p>
+                          <Button className="btn-hero">
+                            Explore CRM Features
+                          </Button>
+                        </div>
+                      </div>
+                      <div className="lg:pl-8">
+                        <div className="bg-muted/30 rounded-2xl p-6 h-64 flex items-center justify-center">
+                          <div className="text-center space-y-4">
+                            <Users className="w-16 h-16 text-primary mx-auto" />
+                            <p className="text-muted-foreground">CRM Interface Preview</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </TabsContent>
+
+              <TabsContent value="ai-agents" className="mt-0">
+                <Card className="border-0 shadow-lg bg-gradient-to-br from-card to-muted/20">
+                  <CardContent className="p-8">
+                    <div className="grid lg:grid-cols-2 gap-8 items-center">
+                      <div className="space-y-6">
+                        <div className="flex items-center gap-3">
+                          <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center">
+                            <Bot className="w-4 h-4 text-primary" />
+                          </div>
+                          <span className="text-sm font-medium text-muted-foreground">02</span>
+                        </div>
+                        <div>
+                          <h3 className="h3 mb-4">Intelligent AI Agents</h3>
+                          <p className="text-secondary text-lg leading-relaxed mb-6">
+                            Deploy specialized AI agents that work 24/7 to screen deals, conduct due diligence, 
+                            and automate routine tasks. Each agent learns from your preferences and improves over time.
+                          </p>
+                          <Button className="btn-hero">
+                            Deploy Agents
+                          </Button>
+                        </div>
+                      </div>
+                      <div className="lg:pl-8">
+                        <div className="bg-muted/30 rounded-2xl p-6 h-64 flex items-center justify-center">
+                          <div className="text-center space-y-4">
+                            <Zap className="w-16 h-16 text-primary mx-auto" />
+                            <p className="text-muted-foreground">AI Agents Dashboard</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </TabsContent>
+
+              <TabsContent value="files" className="mt-0">
+                <Card className="border-0 shadow-lg bg-gradient-to-br from-card to-muted/20">
+                  <CardContent className="p-8">
+                    <div className="grid lg:grid-cols-2 gap-8 items-center">
+                      <div className="space-y-6">
+                        <div className="flex items-center gap-3">
+                          <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center">
+                            <FileText className="w-4 h-4 text-primary" />
+                          </div>
+                          <span className="text-sm font-medium text-muted-foreground">03</span>
+                        </div>
+                        <div>
+                          <h3 className="h3 mb-4">Smart File Management</h3>
+                          <p className="text-secondary text-lg leading-relaxed mb-6">
+                            Organize and search through thousands of documents with AI-powered insights. 
+                            Automatically categorize files, extract key information, and find what you need instantly.
+                          </p>
+                          <Button className="btn-hero">
+                            Organize Files
+                          </Button>
+                        </div>
+                      </div>
+                      <div className="lg:pl-8">
+                        <div className="bg-muted/30 rounded-2xl p-6 h-64 flex items-center justify-center">
+                          <div className="text-center space-y-4">
+                            <FolderOpen className="w-16 h-16 text-primary mx-auto" />
+                            <p className="text-muted-foreground">File System Interface</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </TabsContent>
+
+              <TabsContent value="integrations" className="mt-0">
+                <Card className="border-0 shadow-lg bg-gradient-to-br from-card to-muted/20">
+                  <CardContent className="p-8">
+                    <div className="grid lg:grid-cols-2 gap-8 items-center">
+                      <div className="space-y-6">
+                        <div className="flex items-center gap-3">
+                          <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center">
+                            <Settings className="w-4 h-4 text-primary" />
+                          </div>
+                          <span className="text-sm font-medium text-muted-foreground">04</span>
+                        </div>
+                        <div>
+                          <h3 className="h3 mb-4">Seamless Integrations</h3>
+                          <p className="text-secondary text-lg leading-relaxed mb-6">
+                            Connect your existing tools and platforms seamlessly. From Bloomberg to your favorite 
+                            spreadsheet software, IRIS integrates with your entire investment technology stack.
+                          </p>
+                          <Button className="btn-hero">
+                            View Integrations
+                          </Button>
+                        </div>
+                      </div>
+                      <div className="lg:pl-8">
+                        <div className="bg-muted/30 rounded-2xl p-6 h-64 flex items-center justify-center">
+                          <div className="text-center space-y-4">
+                            <Grid3X3 className="w-16 h-16 text-primary mx-auto" />
+                            <p className="text-muted-foreground">Integration Hub</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </TabsContent>
+            </Tabs>
           </div>
         </section>
       </main>
