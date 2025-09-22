@@ -289,17 +289,35 @@ const HomePage = () => {
                           {/* Chat History Container */}
                           <div className="flex-1 space-y-4 mb-4 overflow-y-auto">
                             {/* User Message */}
-                            <div className="flex justify-end">
-                              <div className="bg-slate-600 text-white rounded-2xl px-4 py-2 max-w-[80%]">
-                                <p className="text-sm text-white">Who do I know that looks at healthcare rollups in Florida?</p>
+                            <div className="flex justify-end gap-2">
+                              <div className="flex flex-col items-end max-w-[80%]">
+                                <div className="flex items-center gap-2 mb-1">
+                                  <span className="text-xs text-gray-500">12:34 PM</span>
+                                  <span className="text-xs font-medium text-gray-700">You</span>
+                                  <div className="w-6 h-6 bg-slate-500 rounded-full flex items-center justify-center">
+                                    <span className="text-white font-medium text-xs">Y</span>
+                                  </div>
+                                </div>
+                                <div className="bg-slate-600 text-white rounded-2xl px-4 py-2">
+                                  <p className="text-sm text-white">Who do I know that looks at healthcare rollups in Florida?</p>
+                                </div>
                               </div>
                             </div>
                             
                             {/* IRIS Response */}
-                            <div className="flex justify-start">
-                              <div className="bg-gray-100 rounded-2xl px-4 py-2 max-w-[85%]">
-                                <p className="text-sm text-gray-800">Searched the CRM and found Jason Ozler, who told you in 2024 that he likes to invest in US healthcare PE strategies.</p>
-                                <p className="text-sm text-gray-800 mt-2 font-medium">Want me to email him requesting a meeting?</p>
+                            <div className="flex justify-start gap-2">
+                              <div className="flex flex-col items-start max-w-[85%]">
+                                <div className="flex items-center gap-2 mb-1">
+                                  <div className="w-6 h-6 bg-purple-600 rounded-full flex items-center justify-center">
+                                    <span className="text-white font-medium text-xs">I</span>
+                                  </div>
+                                  <span className="text-xs font-medium text-gray-700">IRIS</span>
+                                  <span className="text-xs text-gray-500">12:34 PM</span>
+                                </div>
+                                <div className="bg-gray-100 rounded-2xl px-4 py-2">
+                                  <p className="text-sm text-gray-800">Searched the CRM and found Jason Ozler, who told you in 2024 that he likes to invest in US healthcare PE strategies.</p>
+                                  <p className="text-sm text-gray-800 mt-2 font-medium">Want me to email him requesting a meeting?</p>
+                                </div>
                               </div>
                             </div>
                             
