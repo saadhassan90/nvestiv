@@ -16,8 +16,8 @@
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 9%;
     
-    /* Primary - Electric Violet */
-    --primary: 266 90% 48%; /* #8215E0 Electric Violet */
+    /* Primary - Electric Blue */
+    --primary: 210 100% 50%; /* Electric Blue */
     --primary-foreground: 0 0% 98%;
     
     /* Secondary - Light gray */
@@ -27,7 +27,7 @@
     --muted: 0 0% 96%;
     --muted-foreground: 0 0% 45%;
     
-    --accent: 266 90% 48%; /* Electric Violet accent */
+    --accent: 210 100% 50%; /* Electric Blue accent */
     --accent-foreground: 0 0% 98%;
     
     --destructive: 0 84% 60%;
@@ -35,12 +35,12 @@
     
     --border: 0 0% 90%;
     --input: 0 0% 90%;
-    --ring: 266 90% 48%;
+    --ring: 210 100% 50%;
     
     --radius: 0.75rem;
 
     /* Brand-specific tokens */
-    --brand-violet: 266 90% 48%; /* Electric Violet */
+    --brand-blue: 210 100% 50%; /* Electric Blue */
     --brand-navy: 225 39% 10%; /* Deep Navy */
     --brand-light-bg: 0 0% 98%; /* Light background */
     
@@ -71,8 +71,8 @@
     --popover: 225 30% 12%;
     --popover-foreground: 0 0% 92%;
     
-    /* Primary - Electric Violet */
-    --primary: 266 90% 48%; /* Electric Violet maintained */
+    /* Primary - Electric Blue */
+    --primary: 210 100% 50%; /* Electric Blue maintained */
     --primary-foreground: 0 0% 98%;
     
     --secondary: 225 25% 18%; /* Navy-tinted secondary */
@@ -81,7 +81,7 @@
     --muted: 225 20% 15%; /* Muted navy */
     --muted-foreground: 0 0% 70%; /* Light muted text */
     
-    --accent: 266 90% 48%; /* Electric Violet accent */
+    --accent: 210 100% 50%; /* Electric Blue accent */
     --accent-foreground: 0 0% 98%;
     
     --destructive: 0 63% 50%;
@@ -89,10 +89,10 @@
     
     --border: 225 20% 18%; /* Navy-tinted borders */
     --input: 225 25% 12%;
-    --ring: 266 90% 48%; /* Electric Violet ring */
+    --ring: 210 100% 50%; /* Electric Blue ring */
 
     /* Brand-specific tokens for dark mode */
-    --brand-violet: 266 90% 48%; /* Electric Violet */
+    --brand-blue: 210 100% 50%; /* Electric Blue */
     --brand-navy: 225 39% 8%; /* Deep Navy background */
     --brand-light-bg: 225 30% 12%; /* Light navy for cards */
     
@@ -104,12 +104,12 @@
 
     --sidebar-background: 225 39% 8%;
     --sidebar-foreground: 0 0% 70%;
-    --sidebar-primary: 266 90% 48%;
+    --sidebar-primary: 210 100% 50%;
     --sidebar-primary-foreground: 0 0% 98%;
     --sidebar-accent: 225 20% 18%;
     --sidebar-accent-foreground: 0 0% 88%;
     --sidebar-border: 225 20% 18%;
-    --sidebar-ring: 266 90% 48%;
+    --sidebar-ring: 210 100% 50%;
   }
 
   /* Global base styles */
@@ -192,9 +192,9 @@
     color: hsl(var(--text-secondary));
   }
 
-  /* Accent text using brand violet */
+  /* Accent text using brand blue */
   .text-brand-accent {
-    color: hsl(var(--brand-violet));
+    color: hsl(var(--brand-blue));
   }
 
   /* Small text */
@@ -212,12 +212,12 @@
   /* Link styles */
   a:not(.no-underline) {
     @apply underline underline-offset-4 transition-colors;
-    color: hsl(var(--brand-violet));
+    color: hsl(var(--brand-blue));
   }
   
   a:hover:not(.no-underline) {
     text-decoration: none;
-    color: hsl(var(--brand-violet) / 0.8);
+    color: hsl(var(--brand-blue) / 0.8);
   }
 
   /* Enhanced Parallax Support */

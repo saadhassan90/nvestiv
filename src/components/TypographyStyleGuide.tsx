@@ -142,17 +142,17 @@ const TypographyStyleGuide = () => {
         <Card>
           <CardHeader>
             <CardTitle>Nvestiv Color Palette</CardTitle>
-            <CardDescription>Electric Violet and Deep Navy brand colors</CardDescription>
+            <CardDescription>Electric Blue and Deep Navy brand colors</CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-3">
-                <h3 className="text-brand-accent">Electric Violet Accent</h3>
+                <h3 className="text-brand-accent">Electric Blue Accent</h3>
                 <p className="text-secondary">
                   Used for primary actions, highlights, and interactive elements.
                 </p>
-                <div className="w-full h-16 bg-brand-violet rounded-lg flex items-center justify-center">
-                  <span className="text-white font-medium">#8215E0</span>
+                <div className="w-full h-16 bg-brand-blue rounded-lg flex items-center justify-center">
+                  <span className="text-white font-medium">#007BFF</span>
                 </div>
               </div>
               <div className="space-y-3">

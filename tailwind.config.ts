@@ -58,7 +58,7 @@ export default {
 				},
 				// Nvestiv Brand Colors
 				brand: {
-					violet: 'hsl(var(--brand-violet))',
+					blue: 'hsl(var(--brand-blue))',
 					navy: 'hsl(var(--brand-navy))',
 					'light-bg': 'hsl(var(--brand-light-bg))',
 				},
