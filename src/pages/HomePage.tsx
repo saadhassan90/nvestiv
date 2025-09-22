@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
-import { Database, Bot, Sparkles as SparklesIcon, Search, ArrowRight, FolderOpen, Grid3X3, Settings, Users, FileText, Zap } from "lucide-react";
+import { Database, Bot, Sparkles as SparklesIcon, Search, ArrowRight, FolderOpen, Grid3X3, Settings, Users, FileText, Zap, Circle } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 const HomePage = () => {
@@ -61,8 +61,10 @@ const HomePage = () => {
                     Private Investments AI
                   </h1>
                 </div>
-                <h2 className="h3 text-blue-400 leading-tight">
-                  IRIS Is Your Second Brain.
+                <h2 className="h3 text-blue-400 leading-tight flex items-center justify-center gap-4">
+                  <span>AI CRM</span>
+                  <Circle className="w-2 h-2 text-blue-400/60" />
+                  <span>Agentic Operating System</span>
                 </h2>
                 <p className="text-lg text-white/80 max-w-3xl mx-auto leading-relaxed">
                   Finally, an AI Operating System that centralizes your scattered work. Emails, files, and software—unified, intelligent, and always at your fingertips.
