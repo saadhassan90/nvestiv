@@ -139,6 +139,10 @@ export default {
 						opacity: "1",
 						transform: "scale(1)"
 					}
+				},
+				"marquee": {
+					"0%": { transform: "translateX(0%)" },
+					"100%": { transform: "translateX(-50%)" }
 				}
 			},
 			animation: {
@@ -147,7 +151,8 @@ export default {
 				"fade-in": "fade-in 0.3s ease-out",
 				"parallax-float": "parallax-float 6s ease-in-out infinite",
 				"typing": "typing 6s steps(30) infinite, blink .7s infinite",
-				"sparkle": "sparkle 3s ease-in-out infinite"
+				"sparkle": "sparkle 3s ease-in-out infinite",
+				"marquee": "marquee 30s linear infinite"
 			}
 		}
 	},

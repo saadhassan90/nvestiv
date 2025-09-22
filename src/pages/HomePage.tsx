@@ -124,6 +124,110 @@ const HomePage = () => {
           </div>
         </section>
 
+        {/* Companies Marquee Section */}
+        <section className="bg-gray-50 py-16 overflow-hidden">
+          <div className="max-w-screen-xl mx-auto px-6">
+            <div className="text-center mb-12">
+              <h3 className="text-2xl font-semibold text-gray-900 mb-2">
+                Trusted by Leading Investment Firms
+              </h3>
+              <p className="text-gray-600">
+                Join hundreds of firms already using IRIS to transform their investment process
+              </p>
+            </div>
+            
+            <div className="relative">
+              <div className="flex animate-marquee space-x-16">
+                {/* First set of companies */}
+                <div className="flex items-center space-x-4 min-w-max">
+                  <div className="w-12 h-12 bg-gray-300 rounded-lg flex items-center justify-center">
+                    <span className="text-gray-600 font-bold text-lg">KKR</span>
+                  </div>
+                  <span className="text-gray-700 font-medium whitespace-nowrap">KKR & Co</span>
+                </div>
+                
+                <div className="flex items-center space-x-4 min-w-max">
+                  <div className="w-12 h-12 bg-gray-300 rounded-lg flex items-center justify-center">
+                    <span className="text-gray-600 font-bold text-lg">TPG</span>
+                  </div>
+                  <span className="text-gray-700 font-medium whitespace-nowrap">TPG Capital</span>
+                </div>
+                
+                <div className="flex items-center space-x-4 min-w-max">
+                  <div className="w-12 h-12 bg-gray-300 rounded-lg flex items-center justify-center">
+                    <span className="text-gray-600 font-bold text-lg">CVC</span>
+                  </div>
+                  <span className="text-gray-700 font-medium whitespace-nowrap">CVC Capital</span>
+                </div>
+                
+                <div className="flex items-center space-x-4 min-w-max">
+                  <div className="w-12 h-12 bg-gray-300 rounded-lg flex items-center justify-center">
+                    <span className="text-gray-600 font-bold text-lg">BC</span>
+                  </div>
+                  <span className="text-gray-700 font-medium whitespace-nowrap">Bain Capital</span>
+                </div>
+                
+                <div className="flex items-center space-x-4 min-w-max">
+                  <div className="w-12 h-12 bg-gray-300 rounded-lg flex items-center justify-center">
+                    <span className="text-gray-600 font-bold text-lg">A16Z</span>
+                  </div>
+                  <span className="text-gray-700 font-medium whitespace-nowrap">Andreessen Horowitz</span>
+                </div>
+                
+                <div className="flex items-center space-x-4 min-w-max">
+                  <div className="w-12 h-12 bg-gray-300 rounded-lg flex items-center justify-center">
+                    <span className="text-gray-600 font-bold text-lg">SV</span>
+                  </div>
+                  <span className="text-gray-700 font-medium whitespace-nowrap">Sequoia Capital</span>
+                </div>
+                
+                {/* Duplicate set for seamless loop */}
+                <div className="flex items-center space-x-4 min-w-max">
+                  <div className="w-12 h-12 bg-gray-300 rounded-lg flex items-center justify-center">
+                    <span className="text-gray-600 font-bold text-lg">KKR</span>
+                  </div>
+                  <span className="text-gray-700 font-medium whitespace-nowrap">KKR & Co</span>
+                </div>
+                
+                <div className="flex items-center space-x-4 min-w-max">
+                  <div className="w-12 h-12 bg-gray-300 rounded-lg flex items-center justify-center">
+                    <span className="text-gray-600 font-bold text-lg">TPG</span>
+                  </div>
+                  <span className="text-gray-700 font-medium whitespace-nowrap">TPG Capital</span>
+                </div>
+                
+                <div className="flex items-center space-x-4 min-w-max">
+                  <div className="w-12 h-12 bg-gray-300 rounded-lg flex items-center justify-center">
+                    <span className="text-gray-600 font-bold text-lg">CVC</span>
+                  </div>
+                  <span className="text-gray-700 font-medium whitespace-nowrap">CVC Capital</span>
+                </div>
+                
+                <div className="flex items-center space-x-4 min-w-max">
+                  <div className="w-12 h-12 bg-gray-300 rounded-lg flex items-center justify-center">
+                    <span className="text-gray-600 font-bold text-lg">BC</span>
+                  </div>
+                  <span className="text-gray-700 font-medium whitespace-nowrap">Bain Capital</span>
+                </div>
+                
+                <div className="flex items-center space-x-4 min-w-max">
+                  <div className="w-12 h-12 bg-gray-300 rounded-lg flex items-center justify-center">
+                    <span className="text-gray-600 font-bold text-lg">A16Z</span>
+                  </div>
+                  <span className="text-gray-700 font-medium whitespace-nowrap">Andreessen Horowitz</span>
+                </div>
+                
+                <div className="flex items-center space-x-4 min-w-max">
+                  <div className="w-12 h-12 bg-gray-300 rounded-lg flex items-center justify-center">
+                    <span className="text-gray-600 font-bold text-lg">SV</span>
+                  </div>
+                  <span className="text-gray-700 font-medium whitespace-nowrap">Sequoia Capital</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Platform Features Section */}
         
       </main>
