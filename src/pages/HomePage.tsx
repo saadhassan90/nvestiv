@@ -259,7 +259,7 @@ const HomePage = () => {
                         </div>
                         <div>
                           <h3 className="h3 mb-4">The CRM That Updates Itself</h3>
-                          <p className="text-lg leading-relaxed mb-6">
+                          <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
                             Every email, every interaction—IRIS reads it all and updates your CRM automatically. Just ask IRIS anything through voice or chat. No manual entry, ever.
                           </p>
                           
