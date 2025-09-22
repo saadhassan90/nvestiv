@@ -146,7 +146,7 @@ const HomePage = () => {
                   <div className="flex-1 relative">
                     <input
                       type="text"
-                      placeholder="Ask about private equity deals, portfolio management, or investment strategies..."
+                      placeholder="Ask IRIS anything about private investments..."
                       className="w-full bg-transparent text-white placeholder:text-white/50 text-sm focus:outline-none py-2 px-2"
                     />
                   </div>
