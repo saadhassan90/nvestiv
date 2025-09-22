@@ -139,40 +139,68 @@ const HomePage = () => {
             </div>
 
             {/* AI Chat Interface */}
-            <div className="mt-12 max-w-2xl mx-auto">
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                <div className="space-y-4">
-                  <div className="flex items-center gap-2 text-white/80 text-sm">
-                    <Bot className="w-4 h-4" />
-                    <span>Ask Nvestiv AI anything about private investments</span>
+            <div className="mt-12 max-w-3xl mx-auto">
+              <div className="bg-black/40 backdrop-blur-sm rounded-2xl p-1 border border-white/10">
+                <div className="flex items-center gap-3 p-3">
+                  {/* Left Side Icons */}
+                  <div className="flex items-center gap-2">
+                    <button className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center border border-white/20 transition-all">
+                      <Search className="w-4 h-4 text-white/70" />
+                    </button>
+                    <button className="w-10 h-10 hover:bg-white/10 rounded-lg flex items-center justify-center transition-all">
+                      <Bot className="w-4 h-4 text-white/50" />
+                    </button>
+                    <button className="w-10 h-10 hover:bg-white/10 rounded-lg flex items-center justify-center transition-all">
+                      <SparklesIcon className="w-4 h-4 text-white/50" />
+                    </button>
                   </div>
-                  
-                  <div className="relative">
-                    <textarea 
-                      placeholder="What would you like to know about private equity deal flow management?"
-                      className="w-full bg-white/5 border border-white/20 rounded-xl p-4 pr-12 text-white placeholder:text-white/50 resize-none h-20 focus:outline-none focus:border-white/40 focus:bg-white/10 transition-all"
-                      rows={3}
+
+                  {/* Main Input Area */}
+                  <div className="flex-1 relative">
+                    <input
+                      type="text"
+                      placeholder="Ask about private equity deals, portfolio management, or investment strategies..."
+                      className="w-full bg-transparent text-white placeholder:text-white/50 text-sm focus:outline-none py-2 px-2"
                     />
-                    <Button 
-                      size="sm" 
-                      className="absolute bottom-3 right-3 bg-blue-500 hover:bg-blue-600 text-white border-0 rounded-lg px-4"
-                    >
-                      <Search className="w-4 h-4" />
-                    </Button>
                   </div>
-                  
-                  <div className="flex flex-wrap gap-2">
-                    <button className="px-3 py-1.5 text-xs bg-white/10 text-white/80 rounded-full hover:bg-white/20 transition-colors border border-white/20">
-                      Deal sourcing strategies
+
+                  {/* Right Side Icons */}
+                  <div className="flex items-center gap-2">
+                    <button className="w-8 h-8 hover:bg-white/10 rounded-md flex items-center justify-center transition-all">
+                      <Database className="w-3.5 h-3.5 text-white/50" />
                     </button>
-                    <button className="px-3 py-1.5 text-xs bg-white/10 text-white/80 rounded-full hover:bg-white/20 transition-colors border border-white/20">
-                      Portfolio management
+                    <button className="w-8 h-8 hover:bg-white/10 rounded-md flex items-center justify-center transition-all">
+                      <svg className="w-3.5 h-3.5 text-white/50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13" />
+                      </svg>
                     </button>
-                    <button className="px-3 py-1.5 text-xs bg-white/10 text-white/80 rounded-full hover:bg-white/20 transition-colors border border-white/20">
-                      Due diligence automation
+                    <button className="w-8 h-8 hover:bg-white/10 rounded-md flex items-center justify-center transition-all">
+                      <svg className="w-3.5 h-3.5 text-white/50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+                      </svg>
+                    </button>
+                    
+                    {/* Submit Button */}
+                    <button className="w-10 h-10 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 rounded-lg flex items-center justify-center transition-all shadow-lg">
+                      <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                      </svg>
                     </button>
                   </div>
                 </div>
+              </div>
+
+              {/* Suggestion Pills */}
+              <div className="flex flex-wrap gap-2 mt-4 justify-center">
+                <button className="px-4 py-2 text-xs bg-white/5 text-white/70 rounded-full hover:bg-white/10 transition-colors border border-white/10">
+                  Deal sourcing strategies
+                </button>
+                <button className="px-4 py-2 text-xs bg-white/5 text-white/70 rounded-full hover:bg-white/10 transition-colors border border-white/10">
+                  Portfolio management
+                </button>
+                <button className="px-4 py-2 text-xs bg-white/5 text-white/70 rounded-full hover:bg-white/10 transition-colors border border-white/10">
+                  Due diligence automation
+                </button>
               </div>
             </div>
           </div>
