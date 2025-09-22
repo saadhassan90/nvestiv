@@ -285,7 +285,7 @@ const HomePage = () => {
                         </div>
                       </div>
                       <div className="lg:pl-8">
-                        <div className="bg-white rounded-2xl p-6 h-[400px] flex flex-col border border-gray-200 shadow-sm">
+                        <div className="bg-white rounded-2xl p-6 h-[500px] flex flex-col border border-gray-200 shadow-sm">
                           {/* Chat History Container */}
                           <div className="flex-1 space-y-4 mb-4 overflow-y-auto">
                             {/* User Message */}
