@@ -250,7 +250,7 @@ const HomePage = () => {
                 <Card className="border-0 shadow-lg bg-gray-50">
                   <CardContent className="p-16">
                     <div className="grid lg:grid-cols-2 gap-8 items-start">
-                       <div className="space-y-6">
+                       <div className="space-y-6 flex flex-col justify-start">
                         <div>
                           <h3 className="h3 mb-4">The CRM That Updates Itself</h3>
                           <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
