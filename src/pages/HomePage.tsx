@@ -219,19 +219,16 @@ const HomePage = () => {
         {/* Product Features Section */}
         <section className="w-full py-16" aria-labelledby="features-heading">
           <div className="px-6">
-            <div className="text-center mb-12">
-              <h2 id="features-heading" className="h2 mb-4">Complete 360° Intelligence Across Your Investment Operations</h2>
-              	<p className="text-secondary max-w-2xl mx-auto">
-                Discover how IRIS transforms your private investment workflow with intelligent automation and seamless integration.
-              </p>
-            </div>
-
             {/* Section Label */}
             <div className="flex justify-center mb-8">
               <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full border border-primary/20">
                 <Cpu className="w-4 h-4" />
                 <span className="text-sm font-medium">AI Operating System</span>
               </div>
+            </div>
+
+            <div className="text-center mb-12">
+              <h2 id="features-heading" className="h2 mb-4">Complete 360° Intelligence Across Your Investment Operations</h2>
             </div>
 
             <Tabs defaultValue="ai-crm" className="w-full max-w-6xl mx-auto">
