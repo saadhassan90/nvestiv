@@ -61,7 +61,7 @@ const HomePage = () => {
                     Private Investments AI
                   </h1>
                 </div>
-                <h2 className="h2 text-blue-400 leading-tight">
+                <h2 className="h3 text-blue-400 leading-tight">
                   IRIS Is Your Second Brain.
                 </h2>
                 <p className="text-lg text-white/80 max-w-3xl mx-auto leading-relaxed">
