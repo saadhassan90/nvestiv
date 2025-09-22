@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Database, Bot, Sparkles as SparklesIcon, Search } from "lucide-react";
@@ -9,6 +9,59 @@ const HomePage = () => {
   const [crmModalOpen, setCrmModalOpen] = useState(false);
   const [agentsModalOpen, setAgentsModalOpen] = useState(false);
   const [irisModalOpen, setIrisModalOpen] = useState(false);
+
+  // Typewriter animation
+  const typewriterTexts = [
+    "Private Equity",
+    "Venture Capital", 
+    "Family Offices",
+    "Hedge Funds",
+    "Asset Managers",
+    "Investment Banks"
+  ];
+
+  useEffect(() => {
+    let currentIndex = 0;
+    let currentText = "";
+    let isDeleting = false;
+    let textIndex = 0;
+
+    const typewriterElement = document.getElementById("typewriter-text");
+    if (!typewriterElement) return;
+
+    const typeSpeed = 100;
+    const deleteSpeed = 50;
+    const pauseTime = 2000;
+
+    function type() {
+      const fullText = typewriterTexts[textIndex];
+
+      if (isDeleting) {
+        currentText = fullText.substring(0, currentIndex - 1);
+        currentIndex--;
+      } else {
+        currentText = fullText.substring(0, currentIndex + 1);
+        currentIndex++;
+      }
+
+      typewriterElement.textContent = currentText;
+
+      let typeSpeedValue = isDeleting ? deleteSpeed : typeSpeed;
+
+      if (!isDeleting && currentIndex === fullText.length) {
+        typeSpeedValue = pauseTime;
+        isDeleting = true;
+      } else if (isDeleting && currentIndex === 0) {
+        isDeleting = false;
+        textIndex = (textIndex + 1) % typewriterTexts.length;
+        typeSpeedValue = typeSpeed;
+      }
+
+      setTimeout(type, typeSpeedValue);
+    }
+
+    type();
+  }, []);
 
   return (
     <div className="min-h-screen bg-background">
@@ -59,9 +112,18 @@ const HomePage = () => {
             {/* Left Content */}
             <div className="text-left space-y-8">
               <div className="space-y-4">
-                <h1 id="hero-heading" className="text-display text-white leading-tight">
-                  <span className="text-blue-400">AI</span> For Private Investments
-                </h1>
+                <div className="space-y-2">
+                  <div>
+                    <h1 id="hero-heading" className="text-display text-white leading-tight">
+                      Private Investments <span className="text-blue-400">AI</span>
+                    </h1>
+                  </div>
+                  <div>
+                    <h2 className="text-display text-white leading-tight">
+                      For <span className="text-blue-400 inline-block min-w-[280px] text-left" id="typewriter-text">Private Equity</span>
+                    </h2>
+                  </div>
+                </div>
                 <p className="text-lg text-gray-300 max-w-lg">
                   Your entire business on one AI CRM — speak custom agents into existence and automate everything. No code, just plain english commands that transform how you work. Nvestiv unifies relationships, files, and investments into a single platform built for private markets.
                 </p>
