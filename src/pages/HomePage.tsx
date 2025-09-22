@@ -61,7 +61,7 @@ const HomePage = () => {
                   Grow <span className="text-blue-400">Faster</span>
                 </h1>
                 <p className="text-xl text-gray-300 max-w-lg">
-                  Unlock your portfolio's full potential with AI agents that save time, cut costs, and scale with you — no code, no clutter, just results.
+                  Your entire business on one AI CRM — speak custom agents into existence and automate everything. No code, just plain english commands that transform how you work. Nvestiv unifies relationships, files, and investments into a single platform built for private markets.
                 </p>
               </div>
 
