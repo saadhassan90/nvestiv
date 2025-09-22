@@ -77,7 +77,7 @@ const HomePage = () => {
 
             {/* AI Chat Interface */}
             <div className="mt-40 max-w-3xl mx-auto">
-              <div className="bg-gradient-to-br from-purple-700/80 via-purple-800/80 to-slate-900/80 backdrop-blur-sm rounded-2xl border border-white/10 overflow-hidden">
+              <div className="bg-black/40 backdrop-blur-sm rounded-2xl border border-white/10 overflow-hidden">
                 {/* Input Area - Full Width at Top */}
                 <div className="p-4">
                   <textarea 
