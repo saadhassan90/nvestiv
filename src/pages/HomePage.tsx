@@ -221,9 +221,9 @@ const HomePage = () => {
           <div className="px-6">
             {/* Section Label */}
             <div className="flex justify-center mb-8">
-              <div className="relative inline-flex items-center gap-2 bg-primary/8 text-primary px-4 py-2 rounded-full overflow-hidden">
-                <div className="absolute inset-0 rounded-full border border-transparent bg-gradient-to-r from-primary/40 via-primary/20 to-transparent p-[1px]">
-                  <div className="h-full w-full rounded-full bg-primary/8"></div>
+              <div className="relative inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 text-gray-600">
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#8215E0] via-[#0B0E1F] to-transparent opacity-40 p-[1px]">
+                  <div className="h-full w-full rounded-full bg-gray-100"></div>
                 </div>
                 <div className="relative z-10 flex items-center gap-2">
                   <Cpu className="w-4 h-4" />
