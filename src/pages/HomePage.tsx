@@ -24,19 +24,20 @@ const HomePage = () => {
         {/* Center Navigation */}
         <nav className="flex items-center gap-8">
           <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Home</a>
-          <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Features</a>
+          <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Products</a>
+          <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">About</a>
           <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Integrations</a>
           <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Pricing</a>
+          <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Contact</a>
         </nav>
         
         {/* Right Side Actions */}
-        <div className="flex items-center gap-4">
-          <Button variant="ghost" size="sm" className="text-muted-foreground">
-            <span className="mr-2">☰</span>
-            All Pages
+        <div className="flex items-center gap-3">
+          <Button variant="outline" size="sm">
+            Placeholder
           </Button>
           <Button size="sm" className="bg-black text-white hover:bg-black/90">
-            Buy Template
+            Go to App
           </Button>
         </div>
       </header>
