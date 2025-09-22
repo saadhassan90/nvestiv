@@ -250,13 +250,7 @@ const HomePage = () => {
                 <Card className="border-0 shadow-lg bg-gradient-to-br from-card to-muted/20">
                   <CardContent className="p-8">
                     <div className="grid lg:grid-cols-2 gap-8 items-center">
-                      <div className="space-y-6">
-                        <div className="flex items-center gap-3">
-                          <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center">
-                            <Database className="w-4 h-4 text-primary" />
-                          </div>
-                          <span className="text-sm font-medium text-muted-foreground">01</span>
-                        </div>
+                       <div className="space-y-6">
                         <div>
                           <h3 className="h3 mb-4">The CRM That Updates Itself</h3>
                           <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
@@ -307,13 +301,7 @@ const HomePage = () => {
                 <Card className="border-0 shadow-lg bg-gradient-to-br from-card to-muted/20">
                   <CardContent className="p-8">
                     <div className="grid lg:grid-cols-2 gap-8 items-center">
-                      <div className="space-y-6">
-                        <div className="flex items-center gap-3">
-                          <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center">
-                            <Bot className="w-4 h-4 text-primary" />
-                          </div>
-                          <span className="text-sm font-medium text-muted-foreground">02</span>
-                        </div>
+                       <div className="space-y-6">
                         <div>
                           <h3 className="h3 mb-4">Intelligent AI Agents</h3>
                           <p className="text-lg leading-relaxed mb-6">
@@ -342,13 +330,7 @@ const HomePage = () => {
                 <Card className="border-0 shadow-lg bg-gradient-to-br from-card to-muted/20">
                   <CardContent className="p-8">
                     <div className="grid lg:grid-cols-2 gap-8 items-center">
-                      <div className="space-y-6">
-                        <div className="flex items-center gap-3">
-                          <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center">
-                            <FileText className="w-4 h-4 text-primary" />
-                          </div>
-                          <span className="text-sm font-medium text-muted-foreground">03</span>
-                        </div>
+                       <div className="space-y-6">
                         <div>
                           <h3 className="h3 mb-4">Smart File Management</h3>
                           <p className="text-lg leading-relaxed mb-6">
@@ -377,13 +359,7 @@ const HomePage = () => {
                 <Card className="border-0 shadow-lg bg-gradient-to-br from-card to-muted/20">
                   <CardContent className="p-8">
                     <div className="grid lg:grid-cols-2 gap-8 items-center">
-                      <div className="space-y-6">
-                        <div className="flex items-center gap-3">
-                          <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center">
-                            <Settings className="w-4 h-4 text-primary" />
-                          </div>
-                          <span className="text-sm font-medium text-muted-foreground">04</span>
-                        </div>
+                       <div className="space-y-6">
                         <div>
                           <h3 className="h3 mb-4">Seamless Integrations</h3>
                           <p className="text-lg leading-relaxed mb-6">
