@@ -247,7 +247,7 @@ const HomePage = () => {
               </TabsList>
 
               <TabsContent value="ai-crm" className="mt-0">
-                <Card className="border-0 shadow-lg bg-gradient-to-br from-card to-muted/20">
+                <Card className="border-0 shadow-lg bg-gray-50">
                   <CardContent className="p-16">
                     <div className="grid lg:grid-cols-2 gap-8 items-center">
                        <div className="space-y-6">
@@ -298,7 +298,7 @@ const HomePage = () => {
               </TabsContent>
 
               <TabsContent value="ai-agents" className="mt-0">
-                <Card className="border-0 shadow-lg bg-gradient-to-br from-card to-muted/20">
+                <Card className="border-0 shadow-lg bg-gray-50">
                   <CardContent className="p-16">
                     <div className="grid lg:grid-cols-2 gap-8 items-center">
                        <div className="space-y-6">
@@ -327,7 +327,7 @@ const HomePage = () => {
               </TabsContent>
 
               <TabsContent value="files" className="mt-0">
-                <Card className="border-0 shadow-lg bg-gradient-to-br from-card to-muted/20">
+                <Card className="border-0 shadow-lg bg-gray-50">
                   <CardContent className="p-16">
                     <div className="grid lg:grid-cols-2 gap-8 items-center">
                        <div className="space-y-6">
@@ -356,7 +356,7 @@ const HomePage = () => {
               </TabsContent>
 
               <TabsContent value="integrations" className="mt-0">
-                <Card className="border-0 shadow-lg bg-gradient-to-br from-card to-muted/20">
+                <Card className="border-0 shadow-lg bg-gray-50">
                   <CardContent className="p-16">
                     <div className="grid lg:grid-cols-2 gap-8 items-center">
                        <div className="space-y-6">
