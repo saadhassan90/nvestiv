@@ -61,9 +61,9 @@ const HomePage = () => {
                     Private Investments AI
                   </h1>
                 </div>
-                <h2 className="h3 text-blue-400 leading-tight flex items-center justify-center gap-4">
+                <h2 className="h4 text-blue-400 leading-tight flex items-center justify-center gap-4">
                   <span>AI CRM</span>
-                  <Circle className="w-2 h-2 text-blue-400/60" />
+                  <SparklesIcon className="w-4 h-4 text-blue-400/60" />
                   <span>Agentic Operating System</span>
                 </h2>
                 <p className="text-lg text-white/80 max-w-3xl mx-auto leading-relaxed">
