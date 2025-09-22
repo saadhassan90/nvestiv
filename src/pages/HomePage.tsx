@@ -423,7 +423,7 @@ const HomePage = () => {
                           </div>
                           
                           <Button variant="default">
-                            Deploy Agents
+                            See Agent Catalog
                           </Button>
                         </div>
                       </div>
