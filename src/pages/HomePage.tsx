@@ -16,12 +16,14 @@ const HomePage = () => {
     let currentText = "";
     let isDeleting = false;
     let textIndex = 0;
+    let timeoutId: NodeJS.Timeout;
+    
     const typewriterElement = document.getElementById("typewriter-text");
     if (!typewriterElement) return;
     
-    const typeSpeed = 80;
-    const deleteSpeed = 40;
-    const pauseTime = 1500;
+    const typeSpeed = 60;
+    const deleteSpeed = 30;
+    const pauseTime = 1200;
     
     function type() {
       const fullText = typewriterTexts[textIndex];
@@ -34,6 +36,8 @@ const HomePage = () => {
         currentIndex++;
       }
       
+      // Use a more stable text update method
+      typewriterElement.style.opacity = "1";
       typewriterElement.textContent = currentText;
       
       let typeSpeedValue = isDeleting ? deleteSpeed : typeSpeed;
@@ -47,10 +51,17 @@ const HomePage = () => {
         typeSpeedValue = typeSpeed;
       }
       
-      setTimeout(type, typeSpeedValue);
+      timeoutId = setTimeout(type, typeSpeedValue);
     }
     
     type();
+    
+    // Cleanup function
+    return () => {
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
+    };
   }, []);
   return <div className="min-h-screen bg-background">
       {/* Website Header */}
@@ -104,7 +115,7 @@ const HomePage = () => {
                     Private Investments AI
                   </h1>
                 </div>
-                <div>
+                <div className="flex justify-center">
                   <h2 className="h2 text-blue-400 leading-tight text-left">
                     <span className="inline-block min-w-[280px] text-left" id="typewriter-text">Private Equity</span>
                   </h2>
