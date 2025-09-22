@@ -47,10 +47,7 @@ const HomePage = () => {
         <section className="w-full h-[calc(100vh-8rem)] flex items-center justify-center px-6 relative overflow-hidden bg-gradient-to-br from-slate-900 from-70% via-slate-800 via-80% to-blue-700 rounded-3xl my-4" aria-labelledby="hero-heading">
           {/* Request early access button */}
           <div className="absolute top-8 left-8">
-            <Button variant="outline" size="sm" className="bg-black/20 border-white/20 text-white hover:bg-white/10">
-              <div className="w-2 h-2 bg-blue-500 rounded-full mr-2" aria-hidden="true"></div>
-              Request early access
-            </Button>
+            
           </div>
 
           <div className="w-full max-w-6xl mx-auto text-center space-y-8">
