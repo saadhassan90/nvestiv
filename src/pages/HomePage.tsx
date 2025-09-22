@@ -665,35 +665,38 @@ const HomePage = () => {
                   <CardContent className="p-16 pt-6">
                     <div className="grid lg:grid-cols-2 gap-8 items-start">
                        <div className="space-y-6 flex flex-col justify-start">
-                        <div>
-                          <h3 className="h3 mb-4">Seamless Integrations</h3>
-                          <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
-                            Connect your existing tools and platforms seamlessly. From Bloomberg to your favorite 
-                            spreadsheet software, IRIS integrates with your entire investment technology stack.
-                          </p>
-                          
-                          <div className="space-y-3 mb-6">
-                            <h4 className="font-semibold text-foreground">Key Features</h4>
-                            <ul className="space-y-2 text-sm text-muted-foreground">
-                              <li className="flex items-start gap-2">
-                                <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                                <span><strong>Data Providers</strong> - Bloomberg, Refinitiv, PitchBook, CapIQ</span>
-                              </li>
-                              <li className="flex items-start gap-2">
-                                <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                                <span><strong>Communication</strong> - Outlook, Gmail, Slack, Microsoft Teams</span>
-                              </li>
-                              <li className="flex items-start gap-2">
-                                <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                                <span><strong>Analytics Tools</strong> - Excel, Power BI, Tableau, custom APIs</span>
-                              </li>
-                            </ul>
-                          </div>
-                          
-                          <Button variant="default">
-                            View Integrations
-                          </Button>
-                        </div>
+                         <div>
+                           <h3 className="h3 mb-4">One OS, Every Tool</h3>
+                           <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
+                             Connect your entire tech stack into one unified workspace. IRIS doesn't just pull data—she works directly in your connected tools, breaking down silos and orchestrating multi-platform workflows from a single command center.
+                           </p>
+                           
+                           <div className="space-y-3 mb-6">
+                             <h4 className="font-semibold text-foreground">Key Features</h4>
+                             <ul className="space-y-2 text-sm text-muted-foreground">
+                               <li className="flex items-start gap-2">
+                                 <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                                 <span><strong>Complete tech stack integration</strong> - Connect every software you use</span>
+                               </li>
+                               <li className="flex items-start gap-2">
+                                 <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                                 <span><strong>Deep tool connectivity</strong> - IRIS works directly in connected platforms, not just through APIs</span>
+                               </li>
+                               <li className="flex items-start gap-2">
+                                 <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                                 <span><strong>Cross-platform workflows</strong> - Bridge data silos and create seamless pathways</span>
+                               </li>
+                               <li className="flex items-start gap-2">
+                                 <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                                 <span><strong>Multi-tool orchestration</strong> - Engage multiple systems to complete complex tasks</span>
+                               </li>
+                             </ul>
+                           </div>
+                           
+                           <Button variant="default">
+                             See Available Integrations
+                           </Button>
+                         </div>
                       </div>
                       <div className="lg:pl-8">
                         <div className="relative rounded-2xl">
