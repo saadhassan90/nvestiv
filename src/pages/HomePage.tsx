@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
-import { Database, Bot, Sparkles as SparklesIcon, Search, ArrowRight } from "lucide-react";
+import { Database, Bot, Sparkles as SparklesIcon, Search, ArrowRight, FolderOpen, Grid3X3 } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 const HomePage = () => {
   console.log("HomePage component is rendering");
@@ -148,16 +148,20 @@ const HomePage = () => {
 
               {/* Suggestion Pills */}
               <div className="flex flex-wrap gap-2 mt-4 justify-center">
-                <button className="px-4 py-2 text-xs bg-white/5 text-white/70 rounded-full hover:bg-white/10 transition-colors border border-white/10">
+                <button className="px-4 py-2 text-xs bg-white/5 text-white/70 rounded-full hover:bg-white/10 transition-colors border border-white/10 flex items-center gap-2">
+                  <Database className="w-3 h-3" />
                   AI CRM
                 </button>
-                <button className="px-4 py-2 text-xs bg-white/5 text-white/70 rounded-full hover:bg-white/10 transition-colors border border-white/10">
+                <button className="px-4 py-2 text-xs bg-white/5 text-white/70 rounded-full hover:bg-white/10 transition-colors border border-white/10 flex items-center gap-2">
+                  <Bot className="w-3 h-3" />
                   AI Agents
                 </button>
-                <button className="px-4 py-2 text-xs bg-white/5 text-white/70 rounded-full hover:bg-white/10 transition-colors border border-white/10">
+                <button className="px-4 py-2 text-xs bg-white/5 text-white/70 rounded-full hover:bg-white/10 transition-colors border border-white/10 flex items-center gap-2">
+                  <FolderOpen className="w-3 h-3" />
                   File System
                 </button>
-                <button className="px-4 py-2 text-xs bg-white/5 text-white/70 rounded-full hover:bg-white/10 transition-colors border border-white/10">
+                <button className="px-4 py-2 text-xs bg-white/5 text-white/70 rounded-full hover:bg-white/10 transition-colors border border-white/10 flex items-center gap-2">
+                  <Grid3X3 className="w-3 h-3" />
                   Integrated Apps
                 </button>
               </div>
