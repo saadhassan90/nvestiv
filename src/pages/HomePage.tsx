@@ -125,7 +125,7 @@ const HomePage = () => {
         </section>
 
         {/* Companies Marquee Section */}
-        <section className="w-full bg-gray-50 py-16 overflow-hidden rounded-3xl mb-4">
+        <section className="w-full py-16 overflow-hidden rounded-3xl mb-4">
           <div className="w-full px-6">
             <div className="text-center mb-12">
               <h3 className="text-2xl font-semibold text-gray-900 mb-2">
