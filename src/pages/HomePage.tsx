@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
-import { Database, Bot, Sparkles as SparklesIcon, Search, ArrowRight, FolderOpen, Grid3X3, Settings, Users, FileText, Zap, Circle } from "lucide-react";
+import { Database, Bot, Sparkles as SparklesIcon, Search, ArrowRight, FolderOpen, Grid3X3, Settings, Users, FileText, Zap, Circle, TrendingUp, Plus, Folder, Link } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 const HomePage = () => {
@@ -371,25 +371,136 @@ const HomePage = () => {
 
               <TabsContent value="ai-agents" className="mt-0">
                 <Card className="border-0 shadow-lg bg-gray-50">
-                  <CardContent className="p-16">
-                    <div className="grid lg:grid-cols-2 gap-8 items-center">
-                       <div className="space-y-6">
+                  <div className="p-6 pb-0">
+                    <TabsList className="grid w-full grid-cols-4">
+                      <TabsTrigger value="ai-crm" className="flex items-center gap-2">
+                        <Database className="w-4 h-4" />
+                        <span className="hidden sm:inline">AI CRM</span>
+                      </TabsTrigger>
+                      <TabsTrigger value="ai-agents" className="flex items-center gap-2">
+                        <Bot className="w-4 h-4" />
+                        <span className="hidden sm:inline">AI Agents</span>
+                      </TabsTrigger>
+                      <TabsTrigger value="files" className="flex items-center gap-2">
+                        <FileText className="w-4 h-4" />
+                        <span className="hidden sm:inline">Files</span>
+                      </TabsTrigger>
+                      <TabsTrigger value="integrations" className="flex items-center gap-2">
+                        <Settings className="w-4 h-4" />
+                        <span className="hidden sm:inline">Integrations</span>
+                      </TabsTrigger>
+                    </TabsList>
+                  </div>
+                  <CardContent className="p-16 pt-6">
+                    <div className="grid lg:grid-cols-2 gap-8 items-start">
+                       <div className="space-y-6 flex flex-col justify-start">
                         <div>
                           <h3 className="h3 mb-4">Intelligent AI Agents</h3>
-                          <p className="text-lg leading-relaxed mb-6">
+                          <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
                             Deploy specialized AI agents that work 24/7 to screen deals, conduct due diligence, 
                             and automate routine tasks. Each agent learns from your preferences and improves over time.
                           </p>
+                          
+                          <div className="space-y-3 mb-6">
+                            <h4 className="font-semibold text-foreground">Key Features</h4>
+                            <ul className="space-y-2 text-sm text-muted-foreground">
+                              <li className="flex items-start gap-2">
+                                <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                                <span><strong>Deal Screening Agent</strong> - Automatically screens incoming deals based on your criteria</span>
+                              </li>
+                              <li className="flex items-start gap-2">
+                                <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                                <span><strong>Due Diligence Assistant</strong> - Conducts initial research and fact-checking</span>
+                              </li>
+                              <li className="flex items-start gap-2">
+                                <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                                <span><strong>Market Intelligence Agent</strong> - Tracks industry trends and competitor analysis</span>
+                              </li>
+                            </ul>
+                          </div>
+                          
                           <Button variant="default">
                             Deploy Agents
                           </Button>
                         </div>
                       </div>
                       <div className="lg:pl-8">
-                        <div className="bg-muted/30 rounded-2xl p-6 h-64 flex items-center justify-center">
-                          <div className="text-center space-y-4">
-                            <Zap className="w-16 h-16 text-primary mx-auto" />
-                            <p className="text-muted-foreground">AI Agents Dashboard</p>
+                        <div className="relative rounded-2xl">
+                          <div className="pointer-events-none absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-cyan-500 rounded-[18px] blur-md opacity-30"></div>
+                          <div className="relative z-10 bg-white rounded-2xl p-6 h-[500px] flex flex-col shadow-none">
+                          
+                          {/* Agent Dashboard */}
+                          <div className="flex-1 space-y-4 mb-4 overflow-y-auto">
+                            <div className="flex items-center justify-between mb-4">
+                              <h4 className="font-semibold text-gray-900">Active AI Agents</h4>
+                              <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">3 Active</span>
+                            </div>
+                            
+                            {/* Agent Cards */}
+                            <div className="space-y-3">
+                              <div className="bg-gray-50 rounded-lg p-4">
+                                <div className="flex items-start justify-between">
+                                  <div className="flex items-center gap-3">
+                                    <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
+                                      <Bot className="w-4 h-4 text-white" />
+                                    </div>
+                                    <div>
+                                      <h5 className="font-medium text-gray-900 text-sm">Deal Screener</h5>
+                                      <p className="text-xs text-gray-500">Processing 12 new deals</p>
+                                    </div>
+                                  </div>
+                                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                                </div>
+                              </div>
+                              
+                              <div className="bg-gray-50 rounded-lg p-4">
+                                <div className="flex items-start justify-between">
+                                  <div className="flex items-center gap-3">
+                                    <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center">
+                                      <Search className="w-4 h-4 text-white" />
+                                    </div>
+                                    <div>
+                                      <h5 className="font-medium text-gray-900 text-sm">Due Diligence</h5>
+                                      <p className="text-xs text-gray-500">Analyzing HealthTech Inc.</p>
+                                    </div>
+                                  </div>
+                                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                                </div>
+                              </div>
+                              
+                              <div className="bg-gray-50 rounded-lg p-4">
+                                <div className="flex items-start justify-between">
+                                  <div className="flex items-center gap-3">
+                                    <div className="w-8 h-8 bg-pink-500 rounded-full flex items-center justify-center">
+                                      <TrendingUp className="w-4 h-4 text-white" />
+                                    </div>
+                                    <div>
+                                      <h5 className="font-medium text-gray-900 text-sm">Market Intel</h5>
+                                      <p className="text-xs text-gray-500">Tracking SaaS trends</p>
+                                    </div>
+                                  </div>
+                                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          {/* Quick Actions */}
+                          <div className="bg-black/5 backdrop-blur-sm rounded-xl p-1 border border-gray-200">
+                            <div className="flex items-center gap-2 p-2">
+                              <div className="flex-1 relative">
+                                <input 
+                                  type="text" 
+                                  placeholder="Configure new agent..." 
+                                  className="w-full bg-transparent text-gray-700 placeholder:text-gray-400 text-xs focus:outline-none py-1 px-2" 
+                                  disabled
+                                />
+                              </div>
+                              <Button size="icon" variant="default" className="w-6 h-6 rounded-md">
+                                <Plus className="w-3 h-3" />
+                              </Button>
+                            </div>
+                          </div>
                           </div>
                         </div>
                       </div>
@@ -400,25 +511,121 @@ const HomePage = () => {
 
               <TabsContent value="files" className="mt-0">
                 <Card className="border-0 shadow-lg bg-gray-50">
-                  <CardContent className="p-16">
-                    <div className="grid lg:grid-cols-2 gap-8 items-center">
-                       <div className="space-y-6">
+                  <div className="p-6 pb-0">
+                    <TabsList className="grid w-full grid-cols-4">
+                      <TabsTrigger value="ai-crm" className="flex items-center gap-2">
+                        <Database className="w-4 h-4" />
+                        <span className="hidden sm:inline">AI CRM</span>
+                      </TabsTrigger>
+                      <TabsTrigger value="ai-agents" className="flex items-center gap-2">
+                        <Bot className="w-4 h-4" />
+                        <span className="hidden sm:inline">AI Agents</span>
+                      </TabsTrigger>
+                      <TabsTrigger value="files" className="flex items-center gap-2">
+                        <FileText className="w-4 h-4" />
+                        <span className="hidden sm:inline">Files</span>
+                      </TabsTrigger>
+                      <TabsTrigger value="integrations" className="flex items-center gap-2">
+                        <Settings className="w-4 h-4" />
+                        <span className="hidden sm:inline">Integrations</span>
+                      </TabsTrigger>
+                    </TabsList>
+                  </div>
+                  <CardContent className="p-16 pt-6">
+                    <div className="grid lg:grid-cols-2 gap-8 items-start">
+                       <div className="space-y-6 flex flex-col justify-start">
                         <div>
                           <h3 className="h3 mb-4">Smart File Management</h3>
-                          <p className="text-lg leading-relaxed mb-6">
+                          <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
                             Organize and search through thousands of documents with AI-powered insights. 
                             Automatically categorize files, extract key information, and find what you need instantly.
                           </p>
+                          
+                          <div className="space-y-3 mb-6">
+                            <h4 className="font-semibold text-foreground">Key Features</h4>
+                            <ul className="space-y-2 text-sm text-muted-foreground">
+                              <li className="flex items-start gap-2">
+                                <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                                <span><strong>AI Document Analysis</strong> - Automatically extracts key metrics and insights</span>
+                              </li>
+                              <li className="flex items-start gap-2">
+                                <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                                <span><strong>Smart Categorization</strong> - Files organized by deal stage, sector, and type</span>
+                              </li>
+                              <li className="flex items-start gap-2">
+                                <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                                <span><strong>Instant Search</strong> - Natural language search across all documents</span>
+                              </li>
+                            </ul>
+                          </div>
+                          
                           <Button variant="default">
                             Organize Files
                           </Button>
                         </div>
                       </div>
                       <div className="lg:pl-8">
-                        <div className="bg-muted/30 rounded-2xl p-6 h-64 flex items-center justify-center">
-                          <div className="text-center space-y-4">
-                            <FolderOpen className="w-16 h-16 text-primary mx-auto" />
-                            <p className="text-muted-foreground">File System Interface</p>
+                        <div className="relative rounded-2xl">
+                          <div className="pointer-events-none absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-cyan-500 rounded-[18px] blur-md opacity-30"></div>
+                          <div className="relative z-10 bg-white rounded-2xl p-6 h-[500px] flex flex-col shadow-none">
+                          
+                          {/* File Explorer */}
+                          <div className="flex-1 space-y-4 mb-4 overflow-y-auto">
+                            <div className="flex items-center justify-between mb-4">
+                              <h4 className="font-semibold text-gray-900">Document Library</h4>
+                              <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">2,847 Files</span>
+                            </div>
+                            
+                            {/* Folder Structure */}
+                            <div className="space-y-2">
+                              <div className="flex items-center gap-3 p-2 bg-gray-50 rounded-lg">
+                                <Folder className="w-4 h-4 text-blue-500" />
+                                <span className="text-sm text-gray-900">Active Deals</span>
+                                <span className="text-xs text-gray-500 ml-auto">127 files</span>
+                              </div>
+                              
+                              <div className="flex items-center gap-3 p-2 hover:bg-gray-50 rounded-lg">
+                                <Folder className="w-4 h-4 text-purple-500" />
+                                <span className="text-sm text-gray-900">Due Diligence</span>
+                                <span className="text-xs text-gray-500 ml-auto">89 files</span>
+                              </div>
+                              
+                              <div className="flex items-center gap-3 p-2 hover:bg-gray-50 rounded-lg">
+                                <FileText className="w-4 h-4 text-green-500" />
+                                <span className="text-sm text-gray-900">HealthTech_Financials.pdf</span>
+                                <span className="text-xs text-gray-500 ml-auto">2.4 MB</span>
+                              </div>
+                              
+                              <div className="flex items-center gap-3 p-2 hover:bg-gray-50 rounded-lg">
+                                <FileText className="w-4 h-4 text-red-500" />
+                                <span className="text-sm text-gray-900">Market_Analysis_Q4.xlsx</span>
+                                <span className="text-xs text-gray-500 ml-auto">1.8 MB</span>
+                              </div>
+                              
+                              <div className="flex items-center gap-3 p-2 hover:bg-gray-50 rounded-lg">
+                                <FileText className="w-4 h-4 text-orange-500" />
+                                <span className="text-sm text-gray-900">Legal_Review_Summary.docx</span>
+                                <span className="text-xs text-gray-500 ml-auto">956 KB</span>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          {/* Search Bar */}
+                          <div className="bg-black/5 backdrop-blur-sm rounded-xl p-1 border border-gray-200">
+                            <div className="flex items-center gap-2 p-2">
+                              <div className="flex-1 relative">
+                                <input 
+                                  type="text" 
+                                  placeholder="Search files and documents..." 
+                                  className="w-full bg-transparent text-gray-700 placeholder:text-gray-400 text-xs focus:outline-none py-1 px-2" 
+                                  disabled
+                                />
+                              </div>
+                              <Button size="icon" variant="default" className="w-6 h-6 rounded-md">
+                                <Search className="w-3 h-3" />
+                              </Button>
+                            </div>
+                          </div>
                           </div>
                         </div>
                       </div>
@@ -429,25 +636,135 @@ const HomePage = () => {
 
               <TabsContent value="integrations" className="mt-0">
                 <Card className="border-0 shadow-lg bg-gray-50">
-                  <CardContent className="p-16">
-                    <div className="grid lg:grid-cols-2 gap-8 items-center">
-                       <div className="space-y-6">
+                  <div className="p-6 pb-0">
+                    <TabsList className="grid w-full grid-cols-4">
+                      <TabsTrigger value="ai-crm" className="flex items-center gap-2">
+                        <Database className="w-4 h-4" />
+                        <span className="hidden sm:inline">AI CRM</span>
+                      </TabsTrigger>
+                      <TabsTrigger value="ai-agents" className="flex items-center gap-2">
+                        <Bot className="w-4 h-4" />
+                        <span className="hidden sm:inline">AI Agents</span>
+                      </TabsTrigger>
+                      <TabsTrigger value="files" className="flex items-center gap-2">
+                        <FileText className="w-4 h-4" />
+                        <span className="hidden sm:inline">Files</span>
+                      </TabsTrigger>
+                      <TabsTrigger value="integrations" className="flex items-center gap-2">
+                        <Settings className="w-4 h-4" />
+                        <span className="hidden sm:inline">Integrations</span>
+                      </TabsTrigger>
+                    </TabsList>
+                  </div>
+                  <CardContent className="p-16 pt-6">
+                    <div className="grid lg:grid-cols-2 gap-8 items-start">
+                       <div className="space-y-6 flex flex-col justify-start">
                         <div>
                           <h3 className="h3 mb-4">Seamless Integrations</h3>
-                          <p className="text-lg leading-relaxed mb-6">
+                          <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
                             Connect your existing tools and platforms seamlessly. From Bloomberg to your favorite 
                             spreadsheet software, IRIS integrates with your entire investment technology stack.
                           </p>
+                          
+                          <div className="space-y-3 mb-6">
+                            <h4 className="font-semibold text-foreground">Key Features</h4>
+                            <ul className="space-y-2 text-sm text-muted-foreground">
+                              <li className="flex items-start gap-2">
+                                <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                                <span><strong>Data Providers</strong> - Bloomberg, Refinitiv, PitchBook, CapIQ</span>
+                              </li>
+                              <li className="flex items-start gap-2">
+                                <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                                <span><strong>Communication</strong> - Outlook, Gmail, Slack, Microsoft Teams</span>
+                              </li>
+                              <li className="flex items-start gap-2">
+                                <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                                <span><strong>Analytics Tools</strong> - Excel, Power BI, Tableau, custom APIs</span>
+                              </li>
+                            </ul>
+                          </div>
+                          
                           <Button variant="default">
                             View Integrations
                           </Button>
                         </div>
                       </div>
                       <div className="lg:pl-8">
-                        <div className="bg-muted/30 rounded-2xl p-6 h-64 flex items-center justify-center">
-                          <div className="text-center space-y-4">
-                            <Grid3X3 className="w-16 h-16 text-primary mx-auto" />
-                            <p className="text-muted-foreground">Integration Hub</p>
+                        <div className="relative rounded-2xl">
+                          <div className="pointer-events-none absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-cyan-500 rounded-[18px] blur-md opacity-30"></div>
+                          <div className="relative z-10 bg-white rounded-2xl p-6 h-[500px] flex flex-col shadow-none">
+                          
+                          {/* Integration Hub */}
+                          <div className="flex-1 space-y-4 mb-4 overflow-y-auto">
+                            <div className="flex items-center justify-between mb-4">
+                              <h4 className="font-semibold text-gray-900">Connected Services</h4>
+                              <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">12 Active</span>
+                            </div>
+                            
+                            {/* Integration Cards */}
+                            <div className="grid grid-cols-2 gap-3">
+                              <div className="bg-blue-50 rounded-lg p-3 border border-blue-200">
+                                <div className="flex items-center gap-2 mb-2">
+                                  <div className="w-6 h-6 bg-blue-500 rounded-sm"></div>
+                                  <span className="text-xs font-medium text-gray-900">Bloomberg</span>
+                                </div>
+                                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                              </div>
+                              
+                              <div className="bg-orange-50 rounded-lg p-3 border border-orange-200">
+                                <div className="flex items-center gap-2 mb-2">
+                                  <div className="w-6 h-6 bg-orange-500 rounded-sm"></div>
+                                  <span className="text-xs font-medium text-gray-900">PitchBook</span>
+                                </div>
+                                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                              </div>
+                              
+                              <div className="bg-purple-50 rounded-lg p-3 border border-purple-200">
+                                <div className="flex items-center gap-2 mb-2">
+                                  <div className="w-6 h-6 bg-purple-500 rounded-sm"></div>
+                                  <span className="text-xs font-medium text-gray-900">Outlook</span>
+                                </div>
+                                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                              </div>
+                              
+                              <div className="bg-green-50 rounded-lg p-3 border border-green-200">
+                                <div className="flex items-center gap-2 mb-2">
+                                  <div className="w-6 h-6 bg-green-500 rounded-sm"></div>
+                                  <span className="text-xs font-medium text-gray-900">Excel</span>
+                                </div>
+                                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                              </div>
+                              
+                              <div className="bg-red-50 rounded-lg p-3 border border-red-200">
+                                <div className="flex items-center gap-2 mb-2">
+                                  <div className="w-6 h-6 bg-red-500 rounded-sm"></div>
+                                  <span className="text-xs font-medium text-gray-900">CapIQ</span>
+                                </div>
+                                <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                              </div>
+                              
+                              <div className="bg-gray-50 rounded-lg p-3 border border-gray-200 flex items-center justify-center">
+                                <Plus className="w-4 h-4 text-gray-400" />
+                              </div>
+                            </div>
+                          </div>
+                          
+                          {/* Integration Search */}
+                          <div className="bg-black/5 backdrop-blur-sm rounded-xl p-1 border border-gray-200">
+                            <div className="flex items-center gap-2 p-2">
+                              <div className="flex-1 relative">
+                                <input 
+                                  type="text" 
+                                  placeholder="Add new integration..." 
+                                  className="w-full bg-transparent text-gray-700 placeholder:text-gray-400 text-xs focus:outline-none py-1 px-2" 
+                                  disabled
+                                />
+                              </div>
+                              <Button size="icon" variant="default" className="w-6 h-6 rounded-md">
+                                <Link className="w-3 h-3" />
+                              </Button>
+                            </div>
+                          </div>
                           </div>
                         </div>
                       </div>
