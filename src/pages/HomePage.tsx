@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
-import { Database, Bot, Sparkles as SparklesIcon, Search, ArrowRight, FolderOpen, Grid3X3, Settings, Users, FileText, Zap, Circle, TrendingUp, Plus, Folder, Link } from "lucide-react";
+import { Database, Bot, Sparkles as SparklesIcon, Search, ArrowRight, FolderOpen, Grid3X3, Settings, Users, FileText, Zap, Circle, TrendingUp, Plus, Folder, Link, Cpu } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 const HomePage = () => {
@@ -224,6 +224,14 @@ const HomePage = () => {
               	<p className="text-secondary max-w-2xl mx-auto">
                 Discover how IRIS transforms your private investment workflow with intelligent automation and seamless integration.
               </p>
+            </div>
+
+            {/* Section Label */}
+            <div className="flex justify-center mb-8">
+              <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full border border-primary/20">
+                <Cpu className="w-4 h-4" />
+                <span className="text-sm font-medium">AI Operating System</span>
+              </div>
             </div>
 
             <Tabs defaultValue="ai-crm" className="w-full max-w-6xl mx-auto">
