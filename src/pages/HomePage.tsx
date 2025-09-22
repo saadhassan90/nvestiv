@@ -13,19 +13,31 @@ const HomePage = () => {
     <div className="min-h-screen bg-background">
       {/* Website Header */}
       <header className="h-16 border-b border-border flex items-center justify-between px-6">
-        <div className="flex items-center gap-6">
+        {/* Logo */}
+        <div className="flex items-center gap-2">
+          <div className="w-8 h-8 bg-primary rounded flex items-center justify-center">
+            <span className="text-primary-foreground font-bold text-sm">N</span>
+          </div>
           <span className="font-semibold text-xl">nvestiv</span>
-          <nav className="flex items-center gap-6">
-            <a href="#" className="text-sm text-muted-foreground hover:text-foreground">Finance</a>
-            <a href="#" className="text-sm text-muted-foreground hover:text-foreground">Investments</a>
-            <a href="#" className="text-sm text-muted-foreground hover:text-foreground">CRM</a>
-            <a href="#" className="text-sm text-muted-foreground hover:text-foreground">Agents</a>
-          </nav>
         </div>
         
+        {/* Center Navigation */}
+        <nav className="flex items-center gap-8">
+          <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Home</a>
+          <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Features</a>
+          <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Integrations</a>
+          <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Pricing</a>
+        </nav>
+        
+        {/* Right Side Actions */}
         <div className="flex items-center gap-4">
-          <Button variant="outline" size="sm">Sign in</Button>
-          <Button size="sm">Get Started</Button>
+          <Button variant="ghost" size="sm" className="text-muted-foreground">
+            <span className="mr-2">☰</span>
+            All Pages
+          </Button>
+          <Button size="sm" className="bg-black text-white hover:bg-black/90">
+            Buy Template
+          </Button>
         </div>
       </header>
       
