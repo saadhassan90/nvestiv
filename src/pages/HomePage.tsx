@@ -142,19 +142,6 @@ const HomePage = () => {
             <div className="mt-12 max-w-3xl mx-auto">
               <div className="bg-black/40 backdrop-blur-sm rounded-2xl p-1 border border-white/10">
                 <div className="flex items-center gap-3 p-3">
-                  {/* Left Side Icons */}
-                  <div className="flex items-center gap-2">
-                    <button className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center border border-white/20 transition-all">
-                      <Search className="w-4 h-4 text-white/70" />
-                    </button>
-                    <button className="w-10 h-10 hover:bg-white/10 rounded-lg flex items-center justify-center transition-all">
-                      <Bot className="w-4 h-4 text-white/50" />
-                    </button>
-                    <button className="w-10 h-10 hover:bg-white/10 rounded-lg flex items-center justify-center transition-all">
-                      <SparklesIcon className="w-4 h-4 text-white/50" />
-                    </button>
-                  </div>
-
                   {/* Main Input Area */}
                   <div className="flex-1 relative">
                     <input
@@ -164,29 +151,12 @@ const HomePage = () => {
                     />
                   </div>
 
-                  {/* Right Side Icons */}
-                  <div className="flex items-center gap-2">
-                    <button className="w-8 h-8 hover:bg-white/10 rounded-md flex items-center justify-center transition-all">
-                      <Database className="w-3.5 h-3.5 text-white/50" />
-                    </button>
-                    <button className="w-8 h-8 hover:bg-white/10 rounded-md flex items-center justify-center transition-all">
-                      <svg className="w-3.5 h-3.5 text-white/50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13" />
-                      </svg>
-                    </button>
-                    <button className="w-8 h-8 hover:bg-white/10 rounded-md flex items-center justify-center transition-all">
-                      <svg className="w-3.5 h-3.5 text-white/50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
-                      </svg>
-                    </button>
-                    
-                    {/* Submit Button */}
-                    <button className="w-10 h-10 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 rounded-lg flex items-center justify-center transition-all shadow-lg">
-                      <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                      </svg>
-                    </button>
-                  </div>
+                  {/* Send Button */}
+                  <button className="w-10 h-10 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 rounded-lg flex items-center justify-center transition-all shadow-lg">
+                    <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                    </svg>
+                  </button>
                 </div>
               </div>
 
