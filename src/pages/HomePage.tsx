@@ -42,10 +42,7 @@ const HomePage = () => {
       {/* Main Content */}
       <main className="max-w-[1200px] mx-auto">
         {/* Hero Section */}
-        <section className="w-full h-[700px] flex items-center justify-center px-6 relative overflow-hidden rounded-3xl my-4" style={{ 
-          background: 'linear-gradient(to bottom right, #150b36 70%, #19226d)',
-          boxShadow: '0 0 80px 20px rgba(15, 23, 42, 0.3), 0 0 120px 40px rgba(30, 41, 59, 0.2)'
-        }} aria-labelledby="hero-heading">
+        <section className="w-full h-[700px] flex items-center justify-center px-6 relative overflow-hidden rounded-3xl my-4" style={{ background: 'linear-gradient(to bottom right, #150b36 70%, #19226d)' }} aria-labelledby="hero-heading">
           {/* Request early access button */}
           <div className="absolute top-8 left-8">
             
@@ -247,7 +244,9 @@ const HomePage = () => {
 
             <Tabs defaultValue="ai-crm" className="w-full max-w-6xl mx-auto">
               <TabsContent value="ai-crm" className="mt-0">
-                <Card className="border-0 shadow-lg bg-gray-50">
+                <Card className="border-0 shadow-lg bg-gray-50" style={{
+                  boxShadow: '0 0 80px 20px rgba(15, 23, 42, 0.3), 0 0 120px 40px rgba(30, 41, 59, 0.2)'
+                }}>
                   <div className="p-6 pb-0">
                     <TabsList className="grid w-full grid-cols-4">
                       <TabsTrigger value="ai-crm" className="flex items-center gap-2">
