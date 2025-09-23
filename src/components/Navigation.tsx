@@ -72,13 +72,13 @@ const Navigation = () => {
                             </div>
                           </a>
                           
-                          <a href="#crm" className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-800 transition-colors cursor-pointer group">
+                          <a href="/ai-crm" className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-800 transition-colors cursor-pointer group">
                             <div className="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
                               <Database className="h-4 w-4 text-primary" />
                             </div>
                             <div className="flex-1">
-                              <div className="font-medium text-white text-sm">CRM</div>
-                              <div className="text-xs text-gray-400">Get started with our latest</div>
+                              <div className="font-medium text-white text-sm">AI CRM</div>
+                              <div className="text-xs text-gray-400">Intelligent CRM for private markets</div>
                             </div>
                           </a>
                           
@@ -182,7 +182,7 @@ const Navigation = () => {
                 <div className="space-y-2">
                   <div className="text-sm font-medium text-foreground py-2">Products</div>
                   <div className="pl-4 space-y-2">
-                    <a href="#ai-crm" className="block text-sm text-muted-foreground hover:text-primary transition-colors py-1">
+                    <a href="/ai-crm" className="block text-sm text-muted-foreground hover:text-primary transition-colors py-1">
                       AI CRM
                     </a>
                     <a href="#data-enrichment" className="block text-sm text-muted-foreground hover:text-primary transition-colors py-1">

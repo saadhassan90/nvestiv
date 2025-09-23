@@ -359,8 +359,8 @@ const HomePage = () => {
                             </ul>
                           </div>
                           
-                          <Button variant="default">
-                            Learn More
+                          <Button variant="default" asChild>
+                            <a href="/ai-crm">Learn More</a>
                           </Button>
                         </div>
                       </div>
