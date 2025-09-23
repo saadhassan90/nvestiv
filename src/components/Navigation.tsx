@@ -56,49 +56,49 @@ const Navigation = () => {
                   </NavigationMenuItem>
                   
                   <NavigationMenuItem>
-                    <NavigationMenuTrigger className="text-sm font-medium text-foreground hover:text-primary transition-colors bg-transparent hover:bg-muted/50">
+                    <NavigationMenuTrigger className="text-sm font-medium text-foreground hover:text-primary transition-colors bg-transparent hover:bg-muted/50 data-[state=open]:bg-muted/50">
                       Products
                     </NavigationMenuTrigger>
-                    <NavigationMenuContent className="z-[70]">
-                      <div className="p-4 w-[280px] bg-gray-900 border border-gray-800 rounded-lg shadow-xl">
+                    <NavigationMenuContent className="z-[70] data-[motion^=from-]:animate-in data-[motion^=to-]:animate-out data-[motion^=from-]:fade-in data-[motion^=to-]:fade-out data-[motion=from-end]:slide-in-from-right-52 data-[motion=from-start]:slide-in-from-left-52 data-[motion=to-end]:slide-out-to-right-52 data-[motion=to-start]:slide-out-to-left-52 md:absolute md:w-auto">
+                      <div className="p-4 w-[280px] bg-background border border-border rounded-lg shadow-xl mt-1">
                         <div className="space-y-1">
-                          <a href="#iris" className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-800 transition-colors cursor-pointer group">
+                          <a href="#iris" className="flex items-center space-x-3 p-3 rounded-lg hover:bg-muted transition-colors cursor-pointer group">
                             <div className="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
                               <Brain className="h-4 w-4 text-primary" />
                             </div>
                             <div className="flex-1">
-                              <div className="font-medium text-white text-sm">IRIS</div>
-                              <div className="text-xs text-gray-400">One AI bot to action</div>
+                              <div className="font-medium text-foreground text-sm">IRIS</div>
+                              <div className="text-xs text-muted-foreground">One AI bot to action</div>
                             </div>
                           </a>
                           
-                          <a href="/ai-crm" className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-800 transition-colors cursor-pointer group">
+                          <a href="/ai-crm" className="flex items-center space-x-3 p-3 rounded-lg hover:bg-muted transition-colors cursor-pointer group">
                             <div className="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
                               <Database className="h-4 w-4 text-primary" />
                             </div>
                             <div className="flex-1">
-                              <div className="font-medium text-white text-sm">AI CRM</div>
-                              <div className="text-xs text-gray-400">Intelligent CRM for private markets</div>
+                              <div className="font-medium text-foreground text-sm">AI CRM</div>
+                              <div className="text-xs text-muted-foreground">Intelligent CRM for private markets</div>
                             </div>
                           </a>
                           
-                          <a href="#ai-agents" className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-800 transition-colors cursor-pointer group">
+                          <a href="#ai-agents" className="flex items-center space-x-3 p-3 rounded-lg hover:bg-muted transition-colors cursor-pointer group">
                             <div className="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
                               <ChartBar className="h-4 w-4 text-primary" />
                             </div>
                             <div className="flex-1">
-                              <div className="font-medium text-white text-sm">AI Agents</div>
-                              <div className="text-xs text-gray-400">Design your AI bot capabilities</div>
+                              <div className="font-medium text-foreground text-sm">AI Agents</div>
+                              <div className="text-xs text-muted-foreground">Design your AI bot capabilities</div>
                             </div>
                           </a>
                           
-                          <a href="#ai-notetaker" className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-800 transition-colors cursor-pointer group">
+                          <a href="#ai-notetaker" className="flex items-center space-x-3 p-3 rounded-lg hover:bg-muted transition-colors cursor-pointer group">
                             <div className="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
                               <Shield className="h-4 w-4 text-primary" />
                             </div>
                             <div className="flex-1">
-                              <div className="font-medium text-white text-sm">AI Notetaker</div>
-                              <div className="text-xs text-gray-400">AI notetaker to save and do</div>
+                              <div className="font-medium text-foreground text-sm">AI Notetaker</div>
+                              <div className="text-xs text-muted-foreground">AI notetaker to save and do</div>
                             </div>
                           </a>
                         </div>
