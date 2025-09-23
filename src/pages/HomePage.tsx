@@ -267,7 +267,7 @@ const HomePage = () => {
                   </div>
                   <CardContent className="p-16 pt-6">
                     <div className="grid lg:grid-cols-2 gap-8 items-start">
-                       <div className="space-y-6 flex flex-col justify-start border border-gray-200 rounded-xl p-6">
+                       <div className="space-y-6 flex flex-col justify-start border border-slate-200 rounded-xl p-6">
                         <div>
                           <h3 className="h3 mb-4">The CRM That Updates Itself</h3>
                           <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
@@ -409,7 +409,7 @@ const HomePage = () => {
                   </div>
                   <CardContent className="p-16 pt-6">
                     <div className="grid lg:grid-cols-2 gap-8 items-start">
-                       <div className="space-y-6 flex flex-col justify-start border border-gray-200 rounded-xl p-6">
+                       <div className="space-y-6 flex flex-col justify-start border border-slate-200 rounded-xl p-6">
                         <div>
                            <h3 className="h3 mb-4">Speak Your Workflow Into Existence</h3>
                            <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
@@ -552,7 +552,7 @@ const HomePage = () => {
                   </div>
                   <CardContent className="p-16 pt-6">
                     <div className="grid lg:grid-cols-2 gap-8 items-start">
-                       <div className="space-y-6 flex flex-col justify-start border border-gray-200 rounded-xl p-6">
+                       <div className="space-y-6 flex flex-col justify-start border border-slate-200 rounded-xl p-6">
                         <div>
                            <h3 className="h3 mb-4">Your Files, Intelligently Connected</h3>
                            <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
@@ -680,7 +680,7 @@ const HomePage = () => {
                   </div>
                   <CardContent className="p-16 pt-6">
                     <div className="grid lg:grid-cols-2 gap-8 items-start">
-                       <div className="space-y-6 flex flex-col justify-start border border-gray-200 rounded-xl p-6">
+                       <div className="space-y-6 flex flex-col justify-start border border-slate-200 rounded-xl p-6">
                          <div>
                            <h3 className="h3 mb-4">One OS, Every Tool</h3>
                            <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
