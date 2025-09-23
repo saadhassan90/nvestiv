@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
-import { Moon, Sun, Menu, X, ArrowRight } from "lucide-react";
+import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
+import { Moon, Sun, Menu, X, ArrowRight, Brain, Database, ChartBar, Shield } from "lucide-react";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -45,22 +46,77 @@ const Navigation = () => {
             </div>
 
             {/* Desktop Navigation Menu - Centered */}
-            <div className="hidden md:flex items-center space-x-8 absolute left-1/2 transform -translate-x-1/2">
-              {/* Navigation links will be added here */}
-              <div className="flex items-center space-x-8">
-                <a href="#home" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
-                  Home
-                </a>
-                <a href="#about" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
-                  About
-                </a>
-                <a href="#services" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
-                  Services
-                </a>
-                <a href="#contact" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
-                  Contact
-                </a>
-              </div>
+            <div className="hidden md:flex items-center absolute left-1/2 transform -translate-x-1/2">
+              <NavigationMenu>
+                <NavigationMenuList>
+                  <NavigationMenuItem>
+                    <NavigationMenuLink href="#home" className="text-sm font-medium text-foreground hover:text-primary transition-colors px-4 py-2">
+                      Home
+                    </NavigationMenuLink>
+                  </NavigationMenuItem>
+                  
+                  <NavigationMenuItem>
+                    <NavigationMenuTrigger className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+                      Products
+                    </NavigationMenuTrigger>
+                    <NavigationMenuContent>
+                      <div className="grid gap-3 p-6 w-[600px] grid-cols-2 bg-white dark:bg-gray-900 rounded-lg shadow-lg border">
+                        <div className="flex items-start space-x-4 p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                          <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <Brain className="h-6 w-6 text-primary" />
+                          </div>
+                          <div>
+                            <h3 className="font-semibold text-foreground">AI CRM</h3>
+                            <p className="text-sm text-muted-foreground">Intelligent customer relationship management powered by AI</p>
+                          </div>
+                        </div>
+                        
+                        <div className="flex items-start space-x-4 p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                          <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <Database className="h-6 w-6 text-primary" />
+                          </div>
+                          <div>
+                            <h3 className="font-semibold text-foreground">Data Enrichment</h3>
+                            <p className="text-sm text-muted-foreground">Enhanced data insights and enrichment services</p>
+                          </div>
+                        </div>
+                        
+                        <div className="flex items-start space-x-4 p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                          <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <ChartBar className="h-6 w-6 text-primary" />
+                          </div>
+                          <div>
+                            <h3 className="font-semibold text-foreground">Analytics Suite</h3>
+                            <p className="text-sm text-muted-foreground">Comprehensive analytics and reporting tools</p>
+                          </div>
+                        </div>
+                        
+                        <div className="flex items-start space-x-4 p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                          <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <Shield className="h-6 w-6 text-primary" />
+                          </div>
+                          <div>
+                            <h3 className="font-semibold text-foreground">Security Center</h3>
+                            <p className="text-sm text-muted-foreground">Advanced security and compliance management</p>
+                          </div>
+                        </div>
+                      </div>
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
+                  
+                  <NavigationMenuItem>
+                    <NavigationMenuLink href="#about" className="text-sm font-medium text-foreground hover:text-primary transition-colors px-4 py-2">
+                      About
+                    </NavigationMenuLink>
+                  </NavigationMenuItem>
+                  
+                  <NavigationMenuItem>
+                    <NavigationMenuLink href="#contact" className="text-sm font-medium text-foreground hover:text-primary transition-colors px-4 py-2">
+                      Contact
+                    </NavigationMenuLink>
+                  </NavigationMenuItem>
+                </NavigationMenuList>
+              </NavigationMenu>
             </div>
 
             {/* Right Side Actions */}
@@ -121,11 +177,25 @@ const Navigation = () => {
                 <a href="#home" className="block text-sm font-medium text-foreground hover:text-primary transition-colors py-2">
                   Home
                 </a>
+                <div className="space-y-2">
+                  <div className="text-sm font-medium text-foreground py-2">Products</div>
+                  <div className="pl-4 space-y-2">
+                    <a href="#ai-crm" className="block text-sm text-muted-foreground hover:text-primary transition-colors py-1">
+                      AI CRM
+                    </a>
+                    <a href="#data-enrichment" className="block text-sm text-muted-foreground hover:text-primary transition-colors py-1">
+                      Data Enrichment
+                    </a>
+                    <a href="#analytics" className="block text-sm text-muted-foreground hover:text-primary transition-colors py-1">
+                      Analytics Suite
+                    </a>
+                    <a href="#security" className="block text-sm text-muted-foreground hover:text-primary transition-colors py-1">
+                      Security Center
+                    </a>
+                  </div>
+                </div>
                 <a href="#about" className="block text-sm font-medium text-foreground hover:text-primary transition-colors py-2">
                   About
-                </a>
-                <a href="#services" className="block text-sm font-medium text-foreground hover:text-primary transition-colors py-2">
-                  Services
                 </a>
                 <a href="#contact" className="block text-sm font-medium text-foreground hover:text-primary transition-colors py-2">
                   Contact
