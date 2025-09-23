@@ -343,19 +343,19 @@ const HomePage = () => {
                             
                             {/* Contact Card */}
                             <div className="flex justify-start">
-                              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-200/50 rounded-xl p-3 max-w-[85%] shadow-sm">
-                                <div className="flex items-center gap-3">
-                                  <div className="w-9 h-9 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center shadow-sm">
-                                    <span className="text-white font-semibold text-sm">JO</span>
+                              <div className="bg-gradient-to-br from-slate-50 to-blue-50/30 border border-slate-200/50 rounded-lg p-2.5 max-w-[85%] shadow-sm hover:shadow-md transition-shadow">
+                                <div className="flex items-center gap-2.5">
+                                  <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center shadow-sm">
+                                    <span className="text-white font-semibold text-xs">JO</span>
                                   </div>
-                                  <div className="flex-1 min-w-0">
-                                    <h4 className="font-semibold text-sm text-gray-900 truncate">Jason Ozler</h4>
-                                    <p className="text-xs text-blue-600 font-medium truncate">Partner @ Florida Health Ventures</p>
-                                    <p className="text-xs text-gray-500">Last contact: March 2024</p>
+                                  <div className="flex-1 min-w-0 space-y-0.5">
+                                    <h4 className="font-semibold text-sm text-gray-900 truncate leading-none">Jason Ozler</h4>
+                                    <p className="text-xs text-blue-600 font-medium truncate leading-none">Partner @ Florida Health Ventures</p>
+                                    <p className="text-xs text-gray-500 leading-none">Last contact: March 2024</p>
                                   </div>
                                 </div>
-                                <div className="mt-2 pt-2 border-t border-blue-100">
-                                  <p className="text-xs text-gray-700 italic">"Looking for healthcare PE opportunities in Southeast US markets"</p>
+                                <div className="mt-2 pt-2 border-t border-slate-200/50">
+                                  <p className="text-xs text-gray-600 italic leading-tight">"Looking for healthcare PE opportunities in Southeast US markets"</p>
                                 </div>
                               </div>
                             </div>
