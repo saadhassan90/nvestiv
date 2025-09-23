@@ -14,9 +14,7 @@ const HomePage = () => {
       <header className="h-16 border-b border-border flex items-center justify-between px-6">
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-primary rounded flex items-center justify-center">
-            <span className="text-primary-foreground font-bold text-sm">N</span>
-          </div>
+          <img src="/lovable-uploads/nvestiv-logo.png" alt="Nvestiv Logo" className="w-8 h-8" />
           <span className="font-semibold text-xl">nvestiv</span>
         </div>
         
