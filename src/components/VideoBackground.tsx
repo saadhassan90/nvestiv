@@ -34,7 +34,7 @@ export function VideoBackground({
           muted
           playsInline
           preload="metadata"
-          className="absolute inset-0 w-full h-full object-cover opacity-40"
+          className="absolute inset-0 w-full h-full object-cover opacity-100"
           onLoadedData={() => {
             // Ensure video plays when loaded
             if (videoRef.current) {
@@ -51,9 +51,6 @@ export function VideoBackground({
         >
           <source src={videoUrl} type="video/mp4" />
         </video>
-        
-        {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/90 to-background/95" />
         
         {/* Fallback background */}
         <div className={cn("absolute inset-0 -z-10", fallbackColor)} />
