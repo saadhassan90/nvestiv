@@ -118,8 +118,9 @@
   }
 
   body {
-    background: linear-gradient(135deg, #f0f4f9 0%, #e8f0f7 100%);
+    background: linear-gradient(135deg, #f0f4f9 0%, #dce7f2 50%, #e8f0f7 100%);
     @apply text-foreground;
+    min-height: 100vh;
   }
 
   .dark body {
