@@ -106,7 +106,7 @@ const HomePage = () => {
         >
           <section className="w-full h-full flex items-center justify-center px-6 relative overflow-hidden" aria-labelledby="hero-heading">
             {/* Additional gradient overlay to match existing design */}
-            <div className="absolute inset-0 bg-gradient-to-br from-[#150b36]/90 via-[#150b36]/80 to-[#19226d]/90" />
+            <div className="absolute inset-0 bg-gradient-to-br from-[#150b36]/60 via-[#150b36]/50 to-[#19226d]/60" />
             
             {/* Request early access button */}
             <div className="absolute top-8 left-8 z-10">
