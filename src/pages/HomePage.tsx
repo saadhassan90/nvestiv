@@ -44,7 +44,7 @@ const HomePage = () => {
       {/* Main Content */}
       <main className="max-w-[1200px] mx-auto">
         {/* Hero Section */}
-        <section className="w-full h-[700px] flex items-center justify-center px-6 relative overflow-hidden bg-gradient-to-br from-purple-950 via-purple-900 to-purple-800 rounded-3xl my-4" aria-labelledby="hero-heading">
+        <section className="w-full h-[700px] flex items-center justify-center px-6 relative overflow-hidden rounded-3xl my-4" style={{ background: 'linear-gradient(to bottom right, #270a5e, #15062d, #19226d)' }} aria-labelledby="hero-heading">
           {/* Request early access button */}
           <div className="absolute top-8 left-8">
             
