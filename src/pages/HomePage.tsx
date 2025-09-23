@@ -102,16 +102,16 @@ const HomePage = () => {
         {/* Hero Section */}
         <VideoBackground 
           videoUrl="https://cdn.midjourney.com/video/59ad271f-d702-49b6-b74f-ee4f4d2e5e86/3.mp4"
-          className="w-full h-[700px] rounded-3xl my-4"
+          className="w-full h-[700px] rounded-3xl my-4 flex items-center justify-center"
         >
-          <section className="w-full h-full flex items-center justify-center px-6 relative overflow-hidden" aria-labelledby="hero-heading">
+          <section className="w-full px-6" aria-labelledby="hero-heading">
             
             {/* Request early access button */}
             <div className="absolute top-8 left-8 z-10">
               
             </div>
 
-            <div className="w-full max-w-6xl mx-auto text-center space-y-8 relative z-10">
+            <div className="w-full max-w-6xl mx-auto text-center space-y-8 flex flex-col items-center justify-center min-h-full relative z-10">
             <div className="space-y-4">
               <div className="space-y-6">
                 <div>
