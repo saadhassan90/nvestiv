@@ -306,7 +306,7 @@ const HomePage = () => {
               <h2 id="features-heading" className="h2 mb-4">Complete 360° Intelligence Across Your Investment Operations</h2>
             </div>
 
-            <Tabs defaultValue="ai-crm" className="w-full max-w-6xl mx-auto">
+            <Tabs defaultValue="ai-crm" className="w-full">
               <TabsContent value="ai-crm" className="mt-0">
                 <Card className="border-0 shadow-lg bg-white">
                   <div className="p-6 pb-0">
