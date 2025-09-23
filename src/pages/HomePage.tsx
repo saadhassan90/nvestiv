@@ -5,6 +5,7 @@ import { Database, Bot, Sparkles as SparklesIcon, Search, ArrowRight, ChevronDow
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { VideoBackground } from "@/components/VideoBackground";
+import Footer from "@/components/Footer";
 const HomePage = () => {
   console.log("HomePage component is rendering");
   const [crmModalOpen, setCrmModalOpen] = useState(false);
@@ -930,6 +931,8 @@ const HomePage = () => {
           </div>
         </DialogContent>
       </Dialog>
+
+      <Footer />
     </div>;
 };
 export default HomePage;
