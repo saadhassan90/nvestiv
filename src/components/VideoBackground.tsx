@@ -57,7 +57,7 @@ export function VideoBackground({
       </div>
 
       {/* Content */}
-      <div className="relative z-10 h-full">
+      <div className="relative z-10 h-full flex items-center justify-center">
         {children}
       </div>
     </div>
