@@ -367,7 +367,7 @@ const HomePage = () => {
                       </div>
                       <div className="lg:pl-8">
                         <div className="relative rounded-2xl">
-                          <div className="pointer-events-none absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-cyan-500 rounded-[18px] blur-md opacity-30"></div>
+                          <div className="pointer-events-none absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-cyan-500 rounded-[18px] blur-md opacity-15"></div>
                           <div className="relative z-10 bg-white rounded-2xl p-6 h-[500px] flex flex-col shadow-none">
                           
                           {/* Chat History Container */}
@@ -509,7 +509,7 @@ const HomePage = () => {
                       </div>
                       <div className="lg:pl-8">
                         <div className="relative rounded-2xl">
-                          <div className="pointer-events-none absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-cyan-500 rounded-[18px] blur-md opacity-30"></div>
+                          <div className="pointer-events-none absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-cyan-500 rounded-[18px] blur-md opacity-15"></div>
                           <div className="relative z-10 bg-white rounded-2xl p-6 h-[500px] flex flex-col shadow-none">
                           
                           {/* Agent Dashboard */}
@@ -652,7 +652,7 @@ const HomePage = () => {
                       </div>
                       <div className="lg:pl-8">
                         <div className="relative rounded-2xl">
-                          <div className="pointer-events-none absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-cyan-500 rounded-[18px] blur-md opacity-30"></div>
+                          <div className="pointer-events-none absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-cyan-500 rounded-[18px] blur-md opacity-15"></div>
                           <div className="relative z-10 bg-white rounded-2xl p-6 h-[500px] flex flex-col shadow-none">
                           
                           {/* File Explorer */}
@@ -780,7 +780,7 @@ const HomePage = () => {
                       </div>
                       <div className="lg:pl-8">
                         <div className="relative rounded-2xl">
-                          <div className="pointer-events-none absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-cyan-500 rounded-[18px] blur-md opacity-30"></div>
+                          <div className="pointer-events-none absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-cyan-500 rounded-[18px] blur-md opacity-15"></div>
                           <div className="relative z-10 bg-white rounded-2xl p-6 h-[500px] flex flex-col shadow-none">
                           
                           {/* Integration Hub */}
