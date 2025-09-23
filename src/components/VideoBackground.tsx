@@ -19,7 +19,7 @@ export function VideoBackground({
   useEffect(() => {
     const video = videoRef.current;
     if (video) {
-      video.playbackRate = 0.75; // Slower playback for subtle effect
+      video.playbackRate = 0.5; // Slower playback for subtle effect
     }
   }, []);
 
