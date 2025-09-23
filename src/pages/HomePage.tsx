@@ -401,9 +401,9 @@ const HomePage = () => {
                             Create custom AI agents using plain English. Tell IRIS what you need done, which tools to connect, and how—she builds the entire workflow for you. No code, no complexity.
                           </p>
                           
-                          <div className="space-y-3 mb-6">
-                            <h4 className="font-semibold text-foreground">Key Features</h4>
-                            <ul className="space-y-2 text-sm text-muted-foreground">
+                            <div className="space-y-3 mb-6">
+                             <h4 className="font-semibold text-muted-foreground">Key Features</h4>
+                             <ul className="space-y-2 text-sm text-muted-foreground">
                               <li className="flex items-start gap-2">
                                 <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                                 <span><strong>Natural language agent creation</strong> - Describe your workflow, IRIS builds it</span>
@@ -544,9 +544,9 @@ const HomePage = () => {
                             Upload directly or connect Google Drive, Microsoft, Dropbox—IRIS reads every file and connects the dots. Auto-organized storage that links documents to contacts, powers your agents, and fuels smarter decisions.
                           </p>
                           
-                          <div className="space-y-3 mb-6">
-                            <h4 className="font-semibold text-foreground">Key Features</h4>
-                            <ul className="space-y-2 text-sm text-muted-foreground">
+                           <div className="space-y-3 mb-6">
+                             <h4 className="font-semibold text-muted-foreground">Key Features</h4>
+                             <ul className="space-y-2 text-sm text-muted-foreground">
                               <li className="flex items-start gap-2">
                                 <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                                 <span><strong>Universal file integration</strong> - Upload directly or sync cloud drives seamlessly</span>
@@ -672,8 +672,8 @@ const HomePage = () => {
                              Connect your entire tech stack into one unified workspace. IRIS doesn't just pull data—she works directly in your connected tools, breaking down silos and orchestrating multi-platform workflows from a single command center.
                            </p>
                            
-                           <div className="space-y-3 mb-6">
-                             <h4 className="font-semibold text-foreground">Key Features</h4>
+                            <div className="space-y-3 mb-6">
+                              <h4 className="font-semibold text-muted-foreground">Key Features</h4>
                              <ul className="space-y-2 text-sm text-muted-foreground">
                                <li className="flex items-start gap-2">
                                  <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
@@ -793,9 +793,14 @@ const HomePage = () => {
         <div className="max-w-[1200px] mx-auto px-4">
           <div className="text-center mb-12">
             <div className="flex justify-center mb-4">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium text-muted-foreground bg-muted/50 border border-border/20">
-                <Bot className="w-3 h-3" />
-                IRIS
+              <div className="relative inline-flex items-center gap-2 px-4 py-2 rounded-full bg-muted text-muted-foreground">
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary from-0% via-primary via-70% to-primary/10 to-100% p-[1px]">
+                  <div className="h-full w-full rounded-full bg-muted"></div>
+                </div>
+                <div className="relative z-10 flex items-center gap-2">
+                  <Bot className="w-4 h-4" />
+                  <span className="text-sm font-medium">IRIS</span>
+                </div>
               </div>
             </div>
             <h2 id="iris-heading" className="h2 mb-4">The Future is AI</h2>
@@ -812,7 +817,7 @@ const HomePage = () => {
                   {/* Left Content */}
                   <div className="space-y-6">
                     <div>
-                      <h3 className="h3 mb-4 text-foreground">Meet IRIS, your AI analyst</h3>
+                      <h3 className="h3 mb-4 text-muted-foreground">Meet IRIS, your AI analyst</h3>
                       <p className="text-lg leading-relaxed text-muted-foreground mb-6">
                         IRIS is your dedicated AI due diligence agent that transforms deal screening. She automates comprehensive analysis, flags potential risks, and benchmarks opportunities—giving you the clear, actionable insights you need to make faster, smarter investment decisions.
                       </p>
