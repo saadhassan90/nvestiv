@@ -47,24 +47,32 @@ const HomePage = () => {
                 className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-[400px] rounded-xl border bg-card text-card-foreground shadow-xl z-[100]"
               >
                 <div className="grid grid-cols-2 gap-3 p-4">
-                  <a href="#iris" role="menuitem" className="flex items-center gap-3 rounded-lg p-3 border border-border hover:bg-muted transition-colors">
-                    <img src="/placeholder.svg" alt="IRIS product thumbnail" loading="lazy" className="h-10 w-10 rounded-lg object-cover" />
-                    <div className="text-sm font-semibold">IRIS</div>
+                  <a href="#iris" role="menuitem" className="flex items-center gap-3 rounded-lg p-3 border border-border hover:bg-muted transition-colors no-underline">
+                    <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                      <Bot className="h-5 w-5 text-primary" />
+                    </div>
+                    <div className="text-sm font-medium text-foreground">IRIS</div>
                   </a>
                   
-                  <a href="#crm" role="menuitem" className="flex items-center gap-3 rounded-lg p-3 border border-border hover:bg-muted transition-colors">
-                    <img src="/placeholder.svg" alt="AI CRM product thumbnail" loading="lazy" className="h-10 w-10 rounded-lg object-cover" />
-                    <div className="text-sm font-semibold">AI CRM</div>
+                  <a href="#crm" role="menuitem" className="flex items-center gap-3 rounded-lg p-3 border border-border hover:bg-muted transition-colors no-underline">
+                    <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                      <Database className="h-5 w-5 text-primary" />
+                    </div>
+                    <div className="text-sm font-medium text-foreground">AI CRM</div>
                   </a>
                   
-                  <a href="#ai-agents" role="menuitem" className="flex items-center gap-3 rounded-lg p-3 border border-border hover:bg-muted transition-colors">
-                    <img src="/placeholder.svg" alt="AI Agents product thumbnail" loading="lazy" className="h-10 w-10 rounded-lg object-cover" />
-                    <div className="text-sm font-semibold">AI Agents</div>
+                  <a href="#ai-agents" role="menuitem" className="flex items-center gap-3 rounded-lg p-3 border border-border hover:bg-muted transition-colors no-underline">
+                    <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                      <Users className="h-5 w-5 text-primary" />
+                    </div>
+                    <div className="text-sm font-medium text-foreground">AI Agents</div>
                   </a>
                   
-                  <a href="#ai-notetaker" role="menuitem" className="flex items-center gap-3 rounded-lg p-3 border border-border hover:bg-muted transition-colors">
-                    <img src="/placeholder.svg" alt="AI Notetaker product thumbnail" loading="lazy" className="h-10 w-10 rounded-lg object-cover" />
-                    <div className="text-sm font-semibold">AI Notetaker</div>
+                  <a href="#ai-notetaker" role="menuitem" className="flex items-center gap-3 rounded-lg p-3 border border-border hover:bg-muted transition-colors no-underline">
+                    <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                      <FileText className="h-5 w-5 text-primary" />
+                    </div>
+                    <div className="text-sm font-medium text-foreground">AI Notetaker</div>
                   </a>
                 </div>
               </div>
