@@ -7,7 +7,7 @@
 @layer base {
   :root {
     /* Simple Light Mode Colors */
-    --background: 0 0% 100%; /* Pure white background */
+    --background: 220 16% 94%; /* #ebf0f7 converted to HSL */
     --foreground: 0 0% 9%; /* Near black text */
     
     --card: 0 0% 100%;
