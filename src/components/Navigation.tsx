@@ -46,7 +46,7 @@ const Navigation = () => {
             </div>
 
             {/* Desktop Navigation Menu - Centered */}
-            <div className="hidden md:flex items-center absolute left-1/2 transform -translate-x-1/2">
+            <div className="hidden md:flex items-center absolute left-1/2 transform -translate-x-1/2 z-[60]">
               <NavigationMenu>
                 <NavigationMenuList>
                   <NavigationMenuItem>
@@ -56,12 +56,12 @@ const Navigation = () => {
                   </NavigationMenuItem>
                   
                   <NavigationMenuItem>
-                    <NavigationMenuTrigger className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+                    <NavigationMenuTrigger className="text-sm font-medium text-foreground hover:text-primary transition-colors bg-transparent hover:bg-muted/50">
                       Products
                     </NavigationMenuTrigger>
-                    <NavigationMenuContent>
-                      <div className="grid gap-3 p-6 w-[600px] grid-cols-2 bg-white dark:bg-gray-900 rounded-lg shadow-lg border">
-                        <div className="flex items-start space-x-4 p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                    <NavigationMenuContent className="z-[70]">
+                      <div className="grid gap-3 p-6 w-[600px] grid-cols-2 bg-background border border-border rounded-lg shadow-lg">
+                        <a href="#ai-crm" className="flex items-start space-x-4 p-3 rounded-lg hover:bg-muted transition-colors cursor-pointer">
                           <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
                             <Brain className="h-6 w-6 text-primary" />
                           </div>
@@ -69,9 +69,9 @@ const Navigation = () => {
                             <h3 className="font-semibold text-foreground">AI CRM</h3>
                             <p className="text-sm text-muted-foreground">Intelligent customer relationship management powered by AI</p>
                           </div>
-                        </div>
+                        </a>
                         
-                        <div className="flex items-start space-x-4 p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                        <a href="#data-enrichment" className="flex items-start space-x-4 p-3 rounded-lg hover:bg-muted transition-colors cursor-pointer">
                           <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
                             <Database className="h-6 w-6 text-primary" />
                           </div>
@@ -79,9 +79,9 @@ const Navigation = () => {
                             <h3 className="font-semibold text-foreground">Data Enrichment</h3>
                             <p className="text-sm text-muted-foreground">Enhanced data insights and enrichment services</p>
                           </div>
-                        </div>
+                        </a>
                         
-                        <div className="flex items-start space-x-4 p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                        <a href="#analytics" className="flex items-start space-x-4 p-3 rounded-lg hover:bg-muted transition-colors cursor-pointer">
                           <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
                             <ChartBar className="h-6 w-6 text-primary" />
                           </div>
@@ -89,9 +89,9 @@ const Navigation = () => {
                             <h3 className="font-semibold text-foreground">Analytics Suite</h3>
                             <p className="text-sm text-muted-foreground">Comprehensive analytics and reporting tools</p>
                           </div>
-                        </div>
+                        </a>
                         
-                        <div className="flex items-start space-x-4 p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                        <a href="#security" className="flex items-start space-x-4 p-3 rounded-lg hover:bg-muted transition-colors cursor-pointer">
                           <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
                             <Shield className="h-6 w-6 text-primary" />
                           </div>
@@ -99,7 +99,7 @@ const Navigation = () => {
                             <h3 className="font-semibold text-foreground">Security Center</h3>
                             <p className="text-sm text-muted-foreground">Advanced security and compliance management</p>
                           </div>
-                        </div>
+                        </a>
                       </div>
                     </NavigationMenuContent>
                   </NavigationMenuItem>
