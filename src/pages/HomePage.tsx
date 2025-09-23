@@ -244,7 +244,7 @@ const HomePage = () => {
 
             <Tabs defaultValue="ai-crm" className="w-full max-w-6xl mx-auto">
               <TabsContent value="ai-crm" className="mt-0">
-                <Card className="border-0 shadow-lg bg-gray-50">
+                <Card className="border-0 shadow-lg bg-white">
                   <div className="p-6 pb-0">
                     <TabsList className="grid w-full grid-cols-4">
                       <TabsTrigger value="ai-crm" className="flex items-center gap-2">
