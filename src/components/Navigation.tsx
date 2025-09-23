@@ -60,46 +60,48 @@ const Navigation = () => {
                       Products
                     </NavigationMenuTrigger>
                     <NavigationMenuContent className="z-[70]">
-                      <div className="grid gap-3 p-6 w-[600px] grid-cols-2 bg-background border border-border rounded-lg shadow-lg">
-                        <a href="#ai-crm" className="flex items-start space-x-4 p-3 rounded-lg hover:bg-muted transition-colors cursor-pointer">
-                          <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                            <Brain className="h-6 w-6 text-primary" />
-                          </div>
-                          <div>
-                            <h3 className="font-semibold text-foreground">AI CRM</h3>
-                            <p className="text-sm text-muted-foreground">Intelligent customer relationship management powered by AI</p>
-                          </div>
-                        </a>
-                        
-                        <a href="#data-enrichment" className="flex items-start space-x-4 p-3 rounded-lg hover:bg-muted transition-colors cursor-pointer">
-                          <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                            <Database className="h-6 w-6 text-primary" />
-                          </div>
-                          <div>
-                            <h3 className="font-semibold text-foreground">Data Enrichment</h3>
-                            <p className="text-sm text-muted-foreground">Enhanced data insights and enrichment services</p>
-                          </div>
-                        </a>
-                        
-                        <a href="#analytics" className="flex items-start space-x-4 p-3 rounded-lg hover:bg-muted transition-colors cursor-pointer">
-                          <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                            <ChartBar className="h-6 w-6 text-primary" />
-                          </div>
-                          <div>
-                            <h3 className="font-semibold text-foreground">Analytics Suite</h3>
-                            <p className="text-sm text-muted-foreground">Comprehensive analytics and reporting tools</p>
-                          </div>
-                        </a>
-                        
-                        <a href="#security" className="flex items-start space-x-4 p-3 rounded-lg hover:bg-muted transition-colors cursor-pointer">
-                          <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                            <Shield className="h-6 w-6 text-primary" />
-                          </div>
-                          <div>
-                            <h3 className="font-semibold text-foreground">Security Center</h3>
-                            <p className="text-sm text-muted-foreground">Advanced security and compliance management</p>
-                          </div>
-                        </a>
+                      <div className="p-4 w-[280px] bg-gray-900 border border-gray-800 rounded-lg shadow-xl">
+                        <div className="space-y-1">
+                          <a href="#iris" className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-800 transition-colors cursor-pointer group">
+                            <div className="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                              <Brain className="h-4 w-4 text-primary" />
+                            </div>
+                            <div className="flex-1">
+                              <div className="font-medium text-white text-sm">IRIS</div>
+                              <div className="text-xs text-gray-400">One AI bot to action</div>
+                            </div>
+                          </a>
+                          
+                          <a href="#crm" className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-800 transition-colors cursor-pointer group">
+                            <div className="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                              <Database className="h-4 w-4 text-primary" />
+                            </div>
+                            <div className="flex-1">
+                              <div className="font-medium text-white text-sm">CRM</div>
+                              <div className="text-xs text-gray-400">Get started with our latest</div>
+                            </div>
+                          </a>
+                          
+                          <a href="#ai-agents" className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-800 transition-colors cursor-pointer group">
+                            <div className="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                              <ChartBar className="h-4 w-4 text-primary" />
+                            </div>
+                            <div className="flex-1">
+                              <div className="font-medium text-white text-sm">AI Agents</div>
+                              <div className="text-xs text-gray-400">Design your AI bot capabilities</div>
+                            </div>
+                          </a>
+                          
+                          <a href="#ai-notetaker" className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-800 transition-colors cursor-pointer group">
+                            <div className="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                              <Shield className="h-4 w-4 text-primary" />
+                            </div>
+                            <div className="flex-1">
+                              <div className="font-medium text-white text-sm">AI Notetaker</div>
+                              <div className="text-xs text-gray-400">AI notetaker to save and do</div>
+                            </div>
+                          </a>
+                        </div>
                       </div>
                     </NavigationMenuContent>
                   </NavigationMenuItem>
