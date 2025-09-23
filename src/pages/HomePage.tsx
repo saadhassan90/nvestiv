@@ -44,46 +44,29 @@ const HomePage = () => {
               <div
                 id="products-menu"
                 role="menu"
-                className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-[420px] rounded-xl border bg-card text-card-foreground shadow-xl z-[100]"
+                className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-[400px] rounded-xl border bg-card text-card-foreground shadow-xl z-[100]"
               >
-                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 p-3">
-                  <li>
-                    <a href="#iris" role="menuitem" className="flex items-center gap-3 rounded-lg p-3 hover:bg-muted transition-colors">
-                      <img src="/placeholder.svg" alt="IRIS product thumbnail" loading="lazy" className="h-12 w-12 rounded-lg object-cover" />
-                      <div className="min-w-0">
-                        <div className="text-sm font-semibold">IRIS</div>
-                        <p className="text-xs text-muted-foreground truncate">See IRIS in action</p>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#crm" role="menuitem" className="flex items-center gap-3 rounded-lg p-3 hover:bg-muted transition-colors">
-                      <img src="/placeholder.svg" alt="AI CRM product thumbnail" loading="lazy" className="h-12 w-12 rounded-lg object-cover" />
-                      <div className="min-w-0">
-                        <div className="text-sm font-semibold">AI CRM</div>
-                        <p className="text-xs text-muted-foreground truncate">Get in touch with our team</p>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#ai-agents" role="menuitem" className="flex items-center gap-3 rounded-lg p-3 hover:bg-muted transition-colors">
-                      <img src="/placeholder.svg" alt="AI Agents product thumbnail" loading="lazy" className="h-12 w-12 rounded-lg object-cover" />
-                      <div className="min-w-0">
-                        <div className="text-sm font-semibold">AI Agents</div>
-                        <p className="text-xs text-muted-foreground truncate">Discover capabilities</p>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#ai-notetaker" role="menuitem" className="flex items-center gap-3 rounded-lg p-3 hover:bg-muted transition-colors">
-                      <img src="/placeholder.svg" alt="AI Notetaker product thumbnail" loading="lazy" className="h-12 w-12 rounded-lg object-cover" />
-                      <div className="min-w-0">
-                        <div className="text-sm font-semibold">AI Notetaker</div>
-                        <p className="text-xs text-muted-foreground truncate">Who we are, what we do</p>
-                      </div>
-                    </a>
-                  </li>
-                </ul>
+                <div className="grid grid-cols-2 gap-3 p-4">
+                  <a href="#iris" role="menuitem" className="flex items-center gap-3 rounded-lg p-3 border border-border hover:bg-muted transition-colors">
+                    <img src="/placeholder.svg" alt="IRIS product thumbnail" loading="lazy" className="h-10 w-10 rounded-lg object-cover" />
+                    <div className="text-sm font-semibold">IRIS</div>
+                  </a>
+                  
+                  <a href="#crm" role="menuitem" className="flex items-center gap-3 rounded-lg p-3 border border-border hover:bg-muted transition-colors">
+                    <img src="/placeholder.svg" alt="AI CRM product thumbnail" loading="lazy" className="h-10 w-10 rounded-lg object-cover" />
+                    <div className="text-sm font-semibold">AI CRM</div>
+                  </a>
+                  
+                  <a href="#ai-agents" role="menuitem" className="flex items-center gap-3 rounded-lg p-3 border border-border hover:bg-muted transition-colors">
+                    <img src="/placeholder.svg" alt="AI Agents product thumbnail" loading="lazy" className="h-10 w-10 rounded-lg object-cover" />
+                    <div className="text-sm font-semibold">AI Agents</div>
+                  </a>
+                  
+                  <a href="#ai-notetaker" role="menuitem" className="flex items-center gap-3 rounded-lg p-3 border border-border hover:bg-muted transition-colors">
+                    <img src="/placeholder.svg" alt="AI Notetaker product thumbnail" loading="lazy" className="h-10 w-10 rounded-lg object-cover" />
+                    <div className="text-sm font-semibold">AI Notetaker</div>
+                  </a>
+                </div>
               </div>
             )}
           </div>
