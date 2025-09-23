@@ -33,8 +33,16 @@ export function VideoBackground({
           loop
           muted
           playsInline
-          className="absolute inset-0 w-full h-full object-cover opacity-20"
-          onError={() => {
+          preload="metadata"
+          className="absolute inset-0 w-full h-full object-cover opacity-40"
+          onLoadedData={() => {
+            // Ensure video plays when loaded
+            if (videoRef.current) {
+              videoRef.current.play().catch(console.error);
+            }
+          }}
+          onError={(e) => {
+            console.error('Video failed to load:', e);
             // Fallback if video fails to load
             if (videoRef.current) {
               videoRef.current.style.display = 'none';
