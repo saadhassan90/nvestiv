@@ -288,7 +288,7 @@ const HomePage = () => {
 
         {/* Product Features Section */}
         <section className="w-full py-16" aria-labelledby="features-heading">
-          <div className="px-8">
+          <div className="">
             {/* Section Label */}
             <div className="flex justify-center mb-8">
               <div className="relative inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 text-gray-600">
