@@ -111,7 +111,7 @@ const HomePage = () => {
               
             </div>
 
-            <div className="w-full max-w-6xl mx-auto text-center space-y-8 flex flex-col items-center justify-center min-h-full relative z-10">
+            <div className="w-full max-w-6xl mx-auto text-center space-y-8 flex flex-col justify-center h-full py-16 relative z-10">
             <div className="space-y-4">
               <div className="space-y-6">
                 <div>
@@ -132,12 +132,12 @@ const HomePage = () => {
 
 
             {/* Subtle Divider */}
-            <div className="mt-16 mb-8 max-w-2xl mx-auto">
+            <div className="max-w-2xl mx-auto">
               <div className="w-full h-px bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
             </div>
 
             {/* AI Chat Interface */}
-            <div className="mt-40 max-w-3xl mx-auto">
+            <div className="w-full mx-auto">
               <div className="bg-black/40 backdrop-blur-sm rounded-2xl border border-white/10 overflow-hidden">
                 {/* Input Area - Full Width at Top */}
                 <div className="p-4">
