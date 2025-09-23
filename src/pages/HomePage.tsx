@@ -13,7 +13,7 @@ const HomePage = () => {
   const [isProductsOpen, setIsProductsOpen] = useState(false);
   return <div className="min-h-screen bg-transparent">
       {/* Website Header */}
-      <header className="h-16 border-b border-border flex items-center justify-between px-6">
+      <header className="h-16 border-b border-border flex items-center justify-between px-8">
         {/* Logo */}
         <div className="flex items-center gap-2">
           <img src="/lovable-uploads/nvestiv-logo.png" alt="Nvestiv Logo" className="w-8 h-8" />
@@ -104,7 +104,7 @@ const HomePage = () => {
           videoUrl="https://cdn.midjourney.com/video/59ad271f-d702-49b6-b74f-ee4f4d2e5e86/3.mp4"
           className="w-full h-[700px] rounded-3xl my-4 flex items-center justify-center"
         >
-          <section className="w-full px-6" aria-labelledby="hero-heading">
+          <section className="w-full px-8" aria-labelledby="hero-heading">
             
             {/* Request early access button */}
             <div className="absolute top-8 left-8 z-10">
@@ -149,7 +149,7 @@ const HomePage = () => {
                 </div>
 
                 {/* Bottom Row - Side by Side Containers */}
-                <div className="flex items-center justify-between px-4 pb-4">
+                <div className="flex items-center justify-between px-6 pb-4">
                   {/* Left Side - Action Buttons */}
                   <div className="flex items-center gap-2">
                     <button className="px-3 py-2 text-xs bg-white/5 text-white/70 rounded-lg hover:bg-white/10 transition-colors border border-white/10 flex items-center gap-2">
@@ -186,7 +186,7 @@ const HomePage = () => {
 
         {/* Companies Marquee Section */}
         <section className="w-full py-6 overflow-hidden rounded-3xl mb-4">
-          <div className="w-full px-6">
+          <div className="w-full px-8">
             <div className="text-center mb-12">
               <h3 className="text-2xl font-semibold text-gray-900 mb-2">
                 Trusted by Leading Investment Firms
@@ -288,7 +288,7 @@ const HomePage = () => {
 
         {/* Product Features Section */}
         <section className="w-full py-16" aria-labelledby="features-heading">
-          <div className="px-6">
+          <div className="px-8">
             {/* Section Label */}
             <div className="flex justify-center mb-8">
               <div className="relative inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 text-gray-600">
@@ -329,9 +329,9 @@ const HomePage = () => {
                       </TabsTrigger>
                     </TabsList>
                   </div>
-                  <CardContent className="p-16 pt-6">
+                  <CardContent className="p-8">
                     <div className="grid lg:grid-cols-2 gap-8 items-start">
-                       <div className="space-y-6 flex flex-col justify-start border border-slate-200 rounded-xl p-6">
+                       <div className="space-y-6 flex flex-col justify-start border border-slate-200 rounded-xl p-8">
                         <div>
                           <h3 className="h3 mb-4">The CRM That Updates Itself</h3>
                           <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
@@ -368,7 +368,7 @@ const HomePage = () => {
                       <div className="lg:pl-8">
                         <div className="relative rounded-2xl">
                           <div className="pointer-events-none absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-cyan-500 rounded-[18px] blur-md opacity-15"></div>
-                          <div className="relative z-10 bg-white rounded-2xl p-6 h-[500px] flex flex-col shadow-none">
+                           <div className="relative z-10 bg-white rounded-2xl p-8 h-[500px] flex flex-col shadow-none">
                           
                           {/* Chat History Container */}
                           <div className="flex-1 space-y-4 mb-4 overflow-y-auto">
@@ -471,9 +471,9 @@ const HomePage = () => {
                       </TabsTrigger>
                     </TabsList>
                   </div>
-                  <CardContent className="p-16 pt-6">
+                  <CardContent className="p-8">
                     <div className="grid lg:grid-cols-2 gap-8 items-start">
-                       <div className="space-y-6 flex flex-col justify-start border border-slate-200 rounded-xl p-6">
+                       <div className="space-y-6 flex flex-col justify-start border border-slate-200 rounded-xl p-8">
                         <div>
                            <h3 className="h3 mb-4">Speak Your Workflow Into Existence</h3>
                            <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
@@ -510,7 +510,7 @@ const HomePage = () => {
                       <div className="lg:pl-8">
                         <div className="relative rounded-2xl">
                           <div className="pointer-events-none absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-cyan-500 rounded-[18px] blur-md opacity-15"></div>
-                          <div className="relative z-10 bg-white rounded-2xl p-6 h-[500px] flex flex-col shadow-none">
+                           <div className="relative z-10 bg-white rounded-2xl p-8 h-[500px] flex flex-col shadow-none">
                           
                           {/* Agent Dashboard */}
                           <div className="flex-1 space-y-4 mb-4 overflow-y-auto">
@@ -614,9 +614,9 @@ const HomePage = () => {
                       </TabsTrigger>
                     </TabsList>
                   </div>
-                  <CardContent className="p-16 pt-6">
+                  <CardContent className="p-8">
                     <div className="grid lg:grid-cols-2 gap-8 items-start">
-                       <div className="space-y-6 flex flex-col justify-start border border-slate-200 rounded-xl p-6">
+                       <div className="space-y-6 flex flex-col justify-start border border-slate-200 rounded-xl p-8">
                         <div>
                            <h3 className="h3 mb-4">Your Files, Intelligently Connected</h3>
                            <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
@@ -653,7 +653,7 @@ const HomePage = () => {
                       <div className="lg:pl-8">
                         <div className="relative rounded-2xl">
                           <div className="pointer-events-none absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-cyan-500 rounded-[18px] blur-md opacity-15"></div>
-                          <div className="relative z-10 bg-white rounded-2xl p-6 h-[500px] flex flex-col shadow-none">
+                           <div className="relative z-10 bg-white rounded-2xl p-8 h-[500px] flex flex-col shadow-none">
                           
                           {/* File Explorer */}
                           <div className="flex-1 space-y-4 mb-4 overflow-y-auto">
@@ -742,9 +742,9 @@ const HomePage = () => {
                       </TabsTrigger>
                     </TabsList>
                   </div>
-                  <CardContent className="p-16 pt-6">
+                  <CardContent className="p-8">
                     <div className="grid lg:grid-cols-2 gap-8 items-start">
-                       <div className="space-y-6 flex flex-col justify-start border border-slate-200 rounded-xl p-6">
+                       <div className="space-y-6 flex flex-col justify-start border border-slate-200 rounded-xl p-8">
                          <div>
                            <h3 className="h3 mb-4">One OS, Every Tool</h3>
                            <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
@@ -781,7 +781,7 @@ const HomePage = () => {
                       <div className="lg:pl-8">
                         <div className="relative rounded-2xl">
                           <div className="pointer-events-none absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-cyan-500 rounded-[18px] blur-md opacity-15"></div>
-                          <div className="relative z-10 bg-white rounded-2xl p-6 h-[500px] flex flex-col shadow-none">
+                          <div className="relative z-10 bg-white rounded-2xl p-8 h-[500px] flex flex-col shadow-none">
                           
                           {/* Integration Hub */}
                           <div className="flex-1 space-y-4 mb-4 overflow-y-auto">

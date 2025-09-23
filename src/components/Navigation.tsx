@@ -31,7 +31,7 @@ const Navigation = () => {
             : "shadow-elegant scale-100"
         }`}
       >
-        <div className="px-6 py-4">
+        <div className="px-8 py-4">
           <div className="flex items-center justify-between">
             {/* Logo - Centered on mobile, left on desktop */}
             <div className="flex-shrink-0 flex items-center space-x-3">
