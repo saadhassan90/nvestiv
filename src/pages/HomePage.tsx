@@ -9,7 +9,7 @@ const HomePage = () => {
   const [crmModalOpen, setCrmModalOpen] = useState(false);
   const [agentsModalOpen, setAgentsModalOpen] = useState(false);
   const [irisModalOpen, setIrisModalOpen] = useState(false);
-  return <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-transparent">
       {/* Website Header */}
       <header className="h-16 border-b border-border flex items-center justify-between px-6">
         {/* Logo */}
