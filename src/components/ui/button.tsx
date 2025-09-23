@@ -10,7 +10,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         // Primary - Black fill
-        default: "bg-black text-white hover:bg-gray-900 dark:bg-white dark:text-black dark:hover:bg-gray-100",
+        default: "bg-black text-white hover:bg-gray-900 dark:bg-black dark:text-white dark:hover:bg-gray-900",
         // Secondary - Light gray fill  
         secondary: "bg-gray-200 text-gray-800 hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600",
         // Other variants
