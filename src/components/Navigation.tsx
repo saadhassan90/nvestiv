@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
@@ -7,7 +7,9 @@ import { Moon, Sun, Menu, X, ArrowRight, Brain, Database, ChartBar, Shield } fro
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isProductsOpen, setIsProductsOpen] = useState(false);
   const { theme, setTheme } = useTheme();
+  const timeoutRef = useRef<NodeJS.Timeout>();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,6 +22,31 @@ const Navigation = () => {
 
   const toggleTheme = () => {
     setTheme(theme === "dark" ? "light" : "dark");
+  };
+
+  const handleProductsMouseEnter = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+    setIsProductsOpen(true);
+  };
+
+  const handleProductsMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => {
+      setIsProductsOpen(false);
+    }, 100); // Small delay to allow cursor movement to submenu
+  };
+
+  const handleSubmenuMouseEnter = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+  };
+
+  const handleSubmenuMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => {
+      setIsProductsOpen(false);
+    }, 100);
   };
 
   return (
@@ -47,20 +74,28 @@ const Navigation = () => {
 
             {/* Desktop Navigation Menu - Centered */}
             <div className="hidden md:flex items-center absolute left-1/2 transform -translate-x-1/2 z-[60]">
-              <NavigationMenu>
-                <NavigationMenuList>
-                  <NavigationMenuItem>
-                    <NavigationMenuLink href="#home" className="text-sm font-medium text-foreground hover:text-primary transition-colors px-4 py-2">
-                      Home
-                    </NavigationMenuLink>
-                  </NavigationMenuItem>
+              <nav className="flex items-center space-x-1">
+                <a href="#home" className="text-sm font-medium text-foreground hover:text-primary transition-colors px-4 py-2">
+                  Home
+                </a>
+                
+                <div 
+                  className="relative"
+                  onMouseEnter={handleProductsMouseEnter}
+                  onMouseLeave={handleProductsMouseLeave}
+                >
+                  <button className="text-sm font-medium text-foreground hover:text-primary transition-colors bg-transparent hover:bg-muted/50 px-4 py-2 flex items-center gap-1">
+                    Products
+                    <ArrowRight className={`h-3 w-3 transition-transform duration-200 ${isProductsOpen ? 'rotate-90' : 'rotate-0'}`} />
+                  </button>
                   
-                  <NavigationMenuItem>
-                    <NavigationMenuTrigger className="text-sm font-medium text-foreground hover:text-primary transition-colors bg-transparent hover:bg-muted/50 data-[state=open]:bg-muted/50">
-                      Products
-                    </NavigationMenuTrigger>
-                    <NavigationMenuContent className="z-[70] data-[motion^=from-]:animate-in data-[motion^=to-]:animate-out data-[motion^=from-]:fade-in data-[motion^=to-]:fade-out data-[motion=from-end]:slide-in-from-right-52 data-[motion=from-start]:slide-in-from-left-52 data-[motion=to-end]:slide-out-to-right-52 data-[motion=to-start]:slide-out-to-left-52 md:absolute md:w-auto">
-                      <div className="p-4 w-[280px] bg-background border border-border rounded-lg shadow-xl mt-1">
+                  {isProductsOpen && (
+                    <div 
+                      className="absolute top-full left-0 mt-1 z-[70]"
+                      onMouseEnter={handleSubmenuMouseEnter}
+                      onMouseLeave={handleSubmenuMouseLeave}
+                    >
+                      <div className="p-4 w-[280px] bg-background border border-border rounded-lg shadow-xl">
                         <div className="space-y-1">
                           <a href="#iris" className="flex items-center space-x-3 p-3 rounded-lg hover:bg-muted transition-colors cursor-pointer group">
                             <div className="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -103,22 +138,18 @@ const Navigation = () => {
                           </a>
                         </div>
                       </div>
-                    </NavigationMenuContent>
-                  </NavigationMenuItem>
-                  
-                  <NavigationMenuItem>
-                    <NavigationMenuLink href="#about" className="text-sm font-medium text-foreground hover:text-primary transition-colors px-4 py-2">
-                      About
-                    </NavigationMenuLink>
-                  </NavigationMenuItem>
-                  
-                  <NavigationMenuItem>
-                    <NavigationMenuLink href="#contact" className="text-sm font-medium text-foreground hover:text-primary transition-colors px-4 py-2">
-                      Contact
-                    </NavigationMenuLink>
-                  </NavigationMenuItem>
-                </NavigationMenuList>
-              </NavigationMenu>
+                    </div>
+                  )}
+                </div>
+                
+                <a href="#about" className="text-sm font-medium text-foreground hover:text-primary transition-colors px-4 py-2">
+                  About
+                </a>
+                
+                <a href="#contact" className="text-sm font-medium text-foreground hover:text-primary transition-colors px-4 py-2">
+                  Contact
+                </a>
+              </nav>
             </div>
 
             {/* Right Side Actions */}
