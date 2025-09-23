@@ -17,7 +17,7 @@ const HomePage = () => {
       <Navigation />
       
       {/* Main Content */}
-      <main className="max-w-[1200px] mx-auto">
+      <main className="max-w-[1200px] mx-auto mt-24">
         {/* Hero Section */}
         <VideoBackground 
           videoUrl="https://cdn.midjourney.com/video/59ad271f-d702-49b6-b74f-ee4f4d2e5e86/3.mp4"
