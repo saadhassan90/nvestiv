@@ -2,7 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Database, Bot, TrendingUp, Shield, Users, Zap, Target, BarChart3, ArrowRight } from "lucide-react";
+import { Database, Bot, TrendingUp, Shield, Users, Zap, Target, BarChart3, ArrowRight, Play, Calendar } from "lucide-react";
 
 const AiCrm = () => {
   return (
@@ -36,6 +36,7 @@ const AiCrm = () => {
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <Button variant="outline" size="lg" className="text-lg px-8 py-4">
+              <Play className="mr-2 h-5 w-5" />
               Watch Demo
             </Button>
           </div>
@@ -255,6 +256,7 @@ const AiCrm = () => {
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <Button variant="outline" size="lg" className="text-lg px-8 py-4">
+              <Calendar className="mr-2 h-5 w-5" />
               Schedule Demo
             </Button>
           </div>

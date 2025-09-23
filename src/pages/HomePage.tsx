@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
-import { Database, Bot, Sparkles as SparklesIcon, Search, ArrowRight, ChevronDown, FolderOpen, Grid3X3, Settings, Users, FileText, Zap, Circle, TrendingUp, Plus, Folder, Link, Cpu } from "lucide-react";
+import { Database, Bot, Sparkles as SparklesIcon, Search, ArrowRight, ChevronDown, FolderOpen, Grid3X3, Settings, Users, FileText, Zap, Circle, TrendingUp, Plus, Folder, Link, Cpu, Calendar, LogIn, Plug, Play } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { VideoBackground } from "@/components/VideoBackground";
@@ -89,9 +89,11 @@ const HomePage = () => {
         {/* Right Side Actions */}
         <div className="flex items-center gap-3">
           <Button variant="secondary" size="sm">
+            <Calendar className="h-4 w-4 mr-2" />
             Book Demo
           </Button>
           <Button variant="default" size="sm">
+            <LogIn className="h-4 w-4 mr-2" />
             Log In
           </Button>
         </div>
@@ -360,7 +362,10 @@ const HomePage = () => {
                           </div>
                           
                           <Button variant="default" asChild>
-                            <a href="/ai-crm" className="text-white no-underline">Learn More</a>
+                            <a href="/ai-crm" className="text-white no-underline flex items-center gap-2">
+                              Learn More
+                              <ArrowRight className="h-4 w-4" />
+                            </a>
                           </Button>
                         </div>
                       </div>
@@ -501,6 +506,7 @@ const HomePage = () => {
                           </div>
                           
                           <Button variant="default">
+                            <Bot className="h-4 w-4 mr-2" />
                             See Agent Catalog
                           </Button>
                         </div>
@@ -643,6 +649,7 @@ const HomePage = () => {
                           </div>
                           
                           <Button variant="default">
+                            <ArrowRight className="h-4 w-4 mr-2" />
                             Learn More
                           </Button>
                         </div>
@@ -769,9 +776,10 @@ const HomePage = () => {
                              </ul>
                            </div>
                            
-                           <Button variant="default">
-                             See Available Integrations
-                           </Button>
+                            <Button variant="default">
+                              <Plug className="h-4 w-4 mr-2" />
+                              See Available Integrations
+                            </Button>
                          </div>
                       </div>
                       <div className="lg:pl-8">
