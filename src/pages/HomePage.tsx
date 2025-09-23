@@ -343,19 +343,19 @@ const HomePage = () => {
                             
                             {/* Contact Card */}
                             <div className="flex justify-start">
-                              <div className="bg-white border border-gray-200 rounded-lg p-3 max-w-[85%] shadow-sm">
+                              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-200/50 rounded-xl p-3 max-w-[85%] shadow-sm">
                                 <div className="flex items-center gap-3">
-                                  <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center">
-                                    <span className="text-white font-medium text-sm">JO</span>
+                                  <div className="w-9 h-9 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center shadow-sm">
+                                    <span className="text-white font-semibold text-sm">JO</span>
                                   </div>
-                                  <div className="flex-1">
-                                    <h4 className="font-medium text-sm text-gray-900">Jason Ozler</h4>
-                                    <p className="text-xs text-gray-500">Partner @ Florida Health Ventures</p>
-                                    <p className="text-xs text-gray-400">Last contact: March 2024</p>
+                                  <div className="flex-1 min-w-0">
+                                    <h4 className="font-semibold text-sm text-gray-900 truncate">Jason Ozler</h4>
+                                    <p className="text-xs text-blue-600 font-medium truncate">Partner @ Florida Health Ventures</p>
+                                    <p className="text-xs text-gray-500">Last contact: March 2024</p>
                                   </div>
                                 </div>
-                                <div className="mt-2 pt-2 border-t border-gray-100">
-                                  <p className="text-xs text-gray-600">"Looking for healthcare PE opportunities in Southeast US markets"</p>
+                                <div className="mt-2 pt-2 border-t border-blue-100">
+                                  <p className="text-xs text-gray-700 italic">"Looking for healthcare PE opportunities in Southeast US markets"</p>
                                 </div>
                               </div>
                             </div>
