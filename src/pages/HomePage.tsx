@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { VideoBackground } from "@/components/VideoBackground";
 import Footer from "@/components/Footer";
+import Navigation from "@/components/Navigation";
 const HomePage = () => {
   console.log("HomePage component is rendering");
   const [crmModalOpen, setCrmModalOpen] = useState(false);
@@ -13,92 +14,7 @@ const HomePage = () => {
   const [irisModalOpen, setIrisModalOpen] = useState(false);
   const [isProductsOpen, setIsProductsOpen] = useState(false);
   return <div className="min-h-screen bg-transparent">
-      {/* Website Header */}
-      <header className="h-16 border-b border-border flex items-center justify-between px-8">
-        {/* Logo */}
-        <div className="flex items-center gap-2">
-          <img src="/lovable-uploads/nvestiv-logo.png" alt="Nvestiv Logo" className="w-8 h-8" />
-          <span className="font-semibold text-xl">nvestiv</span>
-        </div>
-        
-        {/* Center Navigation */}
-        <nav className="flex items-center gap-8" role="navigation" aria-label="Main navigation">
-          <a href="#" className="text-sm font-medium text-foreground hover:text-muted-foreground transition-colors no-underline">Home</a>
-
-          {/* Products dropdown (hover) */}
-          <div
-            className="relative"
-            onMouseEnter={() => setIsProductsOpen(true)}
-            onMouseLeave={() => setIsProductsOpen(false)}
-          >
-            <button
-              type="button"
-              className="text-sm font-medium text-foreground hover:text-primary transition-colors no-underline inline-flex items-center gap-1"
-              aria-haspopup="menu"
-              aria-expanded={isProductsOpen}
-              aria-controls="products-menu"
-            >
-              Products
-              <ChevronDown className={`h-4 w-4 transition-transform ${isProductsOpen ? 'rotate-180' : ''}`} />
-            </button>
-
-            {isProductsOpen && (
-              <div
-                id="products-menu"
-                role="menu"
-                className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-[400px] rounded-xl border bg-card text-card-foreground shadow-xl z-[100]"
-              >
-                <div className="grid grid-cols-2 gap-3 p-4">
-                  <a href="#iris" role="menuitem" className="flex items-center gap-3 rounded-lg p-3 border border-border hover:bg-muted transition-colors no-underline">
-                    <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                      <Bot className="h-5 w-5 text-primary" />
-                    </div>
-                    <div className="text-sm font-medium text-foreground">IRIS</div>
-                  </a>
-                  
-                  <a href="#crm" role="menuitem" className="flex items-center gap-3 rounded-lg p-3 border border-border hover:bg-muted transition-colors no-underline">
-                    <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                      <Database className="h-5 w-5 text-primary" />
-                    </div>
-                    <div className="text-sm font-medium text-foreground">AI CRM</div>
-                  </a>
-                  
-                  <a href="#ai-agents" role="menuitem" className="flex items-center gap-3 rounded-lg p-3 border border-border hover:bg-muted transition-colors no-underline">
-                    <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                      <Users className="h-5 w-5 text-primary" />
-                    </div>
-                    <div className="text-sm font-medium text-foreground">AI Agents</div>
-                  </a>
-                  
-                  <a href="#ai-notetaker" role="menuitem" className="flex items-center gap-3 rounded-lg p-3 border border-border hover:bg-muted transition-colors no-underline">
-                    <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                      <FileText className="h-5 w-5 text-primary" />
-                    </div>
-                    <div className="text-sm font-medium text-foreground">AI Notetaker</div>
-                  </a>
-                </div>
-              </div>
-            )}
-          </div>
-
-          <a href="#" className="text-sm font-medium text-foreground hover:text-muted-foreground transition-colors no-underline">About</a>
-          <a href="#" className="text-sm font-medium text-foreground hover:text-muted-foreground transition-colors no-underline">Integrations</a>
-          <a href="#" className="text-sm font-medium text-foreground hover:text-muted-foreground transition-colors no-underline">Pricing</a>
-          <a href="#" className="text-sm font-medium text-foreground hover:text-muted-foreground transition-colors no-underline">Contact</a>
-        </nav>
-        
-        {/* Right Side Actions */}
-        <div className="flex items-center gap-3">
-          <Button variant="secondary" size="sm">
-            <Calendar className="h-4 w-4 mr-2" />
-            Book Demo
-          </Button>
-          <Button variant="default" size="sm">
-            <LogIn className="h-4 w-4 mr-2" />
-            Log In
-          </Button>
-        </div>
-      </header>
+      <Navigation />
       
       {/* Main Content */}
       <main className="max-w-[1200px] mx-auto">
