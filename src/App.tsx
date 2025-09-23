@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "@/components/ThemeProvider";
-import { GridBackground } from "@/components/GridBackground";
+import { FixedGradientBackground } from "@/components/FixedGradientBackground";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
@@ -26,7 +26,7 @@ const App = () => (
       <TooltipProvider>
         <Toaster />
         <Sonner />
-<GridBackground className="min-h-screen">
+        <FixedGradientBackground className="min-h-screen">
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<HomePage />} />
@@ -39,7 +39,7 @@ const App = () => (
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>
-        </GridBackground>
+        </FixedGradientBackground>
       </TooltipProvider>
     </ThemeProvider>
   </QueryClientProvider>
