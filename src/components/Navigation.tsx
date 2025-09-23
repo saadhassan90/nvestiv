@@ -75,7 +75,7 @@ const Navigation = () => {
             {/* Desktop Navigation Menu - Centered */}
             <div className="hidden md:flex items-center absolute left-1/2 transform -translate-x-1/2 z-[60]">
               <nav className="flex items-center space-x-1">
-                <a href="#home" className="text-sm font-medium text-foreground hover:text-primary transition-colors px-4 py-2">
+                <a href="#home" className="text-sm font-medium text-foreground hover:text-primary transition-colors px-4 py-2 no-underline">
                   Home
                 </a>
                 
@@ -84,7 +84,7 @@ const Navigation = () => {
                   onMouseEnter={handleProductsMouseEnter}
                   onMouseLeave={handleProductsMouseLeave}
                 >
-                  <button className="text-sm font-medium text-foreground hover:text-primary transition-colors bg-transparent hover:bg-muted/50 px-4 py-2 flex items-center gap-1">
+                  <button className="text-sm font-medium text-foreground hover:text-primary transition-colors bg-transparent hover:bg-muted/50 px-4 py-2 flex items-center gap-1 no-underline">
                     Products
                     <ArrowRight className={`h-3 w-3 transition-transform duration-200 ${isProductsOpen ? 'rotate-90' : 'rotate-0'}`} />
                   </button>
@@ -97,7 +97,7 @@ const Navigation = () => {
                     >
                       <div className="p-4 w-[280px] bg-background border border-border rounded-lg shadow-xl">
                         <div className="space-y-1">
-                          <a href="#iris" className="flex items-center space-x-3 p-3 rounded-lg hover:bg-muted transition-colors cursor-pointer group">
+                          <a href="#iris" className="flex items-center space-x-3 p-3 rounded-lg hover:bg-muted transition-colors cursor-pointer group no-underline">
                             <div className="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
                               <Brain className="h-4 w-4 text-primary" />
                             </div>
@@ -107,7 +107,7 @@ const Navigation = () => {
                             </div>
                           </a>
                           
-                          <a href="/ai-crm" className="flex items-center space-x-3 p-3 rounded-lg hover:bg-muted transition-colors cursor-pointer group">
+                          <a href="/ai-crm" className="flex items-center space-x-3 p-3 rounded-lg hover:bg-muted transition-colors cursor-pointer group no-underline">
                             <div className="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
                               <Database className="h-4 w-4 text-primary" />
                             </div>
@@ -117,7 +117,7 @@ const Navigation = () => {
                             </div>
                           </a>
                           
-                          <a href="#ai-agents" className="flex items-center space-x-3 p-3 rounded-lg hover:bg-muted transition-colors cursor-pointer group">
+                          <a href="#ai-agents" className="flex items-center space-x-3 p-3 rounded-lg hover:bg-muted transition-colors cursor-pointer group no-underline">
                             <div className="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
                               <ChartBar className="h-4 w-4 text-primary" />
                             </div>
@@ -127,7 +127,7 @@ const Navigation = () => {
                             </div>
                           </a>
                           
-                          <a href="#ai-notetaker" className="flex items-center space-x-3 p-3 rounded-lg hover:bg-muted transition-colors cursor-pointer group">
+                          <a href="#ai-notetaker" className="flex items-center space-x-3 p-3 rounded-lg hover:bg-muted transition-colors cursor-pointer group no-underline">
                             <div className="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
                               <Shield className="h-4 w-4 text-primary" />
                             </div>
@@ -142,11 +142,11 @@ const Navigation = () => {
                   )}
                 </div>
                 
-                <a href="#about" className="text-sm font-medium text-foreground hover:text-primary transition-colors px-4 py-2">
+                <a href="#about" className="text-sm font-medium text-foreground hover:text-primary transition-colors px-4 py-2 no-underline">
                   About
                 </a>
                 
-                <a href="#contact" className="text-sm font-medium text-foreground hover:text-primary transition-colors px-4 py-2">
+                <a href="#contact" className="text-sm font-medium text-foreground hover:text-primary transition-colors px-4 py-2 no-underline">
                   Contact
                 </a>
               </nav>
@@ -177,7 +177,7 @@ const Navigation = () => {
                   className="text-sm font-medium px-6 py-2 overflow-visible"
                   asChild
                 >
-                  <a href="https://iris.nvestiv.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 overflow-visible">
+                  <a href="https://iris.nvestiv.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 overflow-visible no-underline">
                     <span>Log In</span>
                     <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-3 group-hover:scale-110" />
                   </a>
@@ -207,30 +207,30 @@ const Navigation = () => {
           {isMobileMenuOpen && (
             <div className="md:hidden mt-4 pt-4 border-t border-border/20">
               <div className="space-y-3">
-                <a href="#home" className="block text-sm font-medium text-foreground hover:text-primary transition-colors py-2">
+                <a href="#home" className="block text-sm font-medium text-foreground hover:text-primary transition-colors py-2 no-underline">
                   Home
                 </a>
                 <div className="space-y-2">
                   <div className="text-sm font-medium text-foreground py-2">Products</div>
                   <div className="pl-4 space-y-2">
-                    <a href="/ai-crm" className="block text-sm text-muted-foreground hover:text-primary transition-colors py-1">
+                    <a href="/ai-crm" className="block text-sm text-muted-foreground hover:text-primary transition-colors py-1 no-underline">
                       AI CRM
                     </a>
-                    <a href="#data-enrichment" className="block text-sm text-muted-foreground hover:text-primary transition-colors py-1">
+                    <a href="#data-enrichment" className="block text-sm text-muted-foreground hover:text-primary transition-colors py-1 no-underline">
                       Data Enrichment
                     </a>
-                    <a href="#analytics" className="block text-sm text-muted-foreground hover:text-primary transition-colors py-1">
+                    <a href="#analytics" className="block text-sm text-muted-foreground hover:text-primary transition-colors py-1 no-underline">
                       Analytics Suite
                     </a>
-                    <a href="#security" className="block text-sm text-muted-foreground hover:text-primary transition-colors py-1">
+                    <a href="#security" className="block text-sm text-muted-foreground hover:text-primary transition-colors py-1 no-underline">
                       Security Center
                     </a>
                   </div>
                 </div>
-                <a href="#about" className="block text-sm font-medium text-foreground hover:text-primary transition-colors py-2">
+                <a href="#about" className="block text-sm font-medium text-foreground hover:text-primary transition-colors py-2 no-underline">
                   About
                 </a>
-                <a href="#contact" className="block text-sm font-medium text-foreground hover:text-primary transition-colors py-2">
+                <a href="#contact" className="block text-sm font-medium text-foreground hover:text-primary transition-colors py-2 no-underline">
                   Contact
                 </a>
                 {/* Mobile Login Button */}
@@ -241,7 +241,7 @@ const Navigation = () => {
                     className="w-full text-sm font-medium overflow-visible"
                     asChild
                   >
-                    <a href="https://iris.nvestiv.com" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 overflow-visible">
+                    <a href="https://iris.nvestiv.com" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 overflow-visible no-underline">
                       <span>Log In</span>
                       <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-3 group-hover:scale-110" />
                     </a>

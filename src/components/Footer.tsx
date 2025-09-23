@@ -120,7 +120,7 @@ const Footer = () => {
                   <li key={name}>
                       <Link
                         to={href}
-                        className="text-sm text-gray-300 hover:text-white transition-colors"
+                        className="text-sm text-gray-300 hover:text-white transition-colors no-underline"
                       >
                       {name}
                     </Link>
@@ -139,7 +139,7 @@ const Footer = () => {
                   <li key={name}>
                       <Link
                         to={href}
-                        className="text-sm text-gray-300 hover:text-white transition-colors"
+                        className="text-sm text-gray-300 hover:text-white transition-colors no-underline"
                       >
                       {name}
                     </Link>
@@ -158,7 +158,7 @@ const Footer = () => {
                   <li key={name}>
                       <Link
                         to={href}
-                        className="text-sm text-gray-300 hover:text-white transition-colors"
+                        className="text-sm text-gray-300 hover:text-white transition-colors no-underline"
                       >
                       {name}
                     </Link>
