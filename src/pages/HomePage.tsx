@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
-import { Database, Bot, Sparkles as SparklesIcon, Search, ArrowRight, FolderOpen, Grid3X3, Settings, Users, FileText, Zap, Circle, TrendingUp, Plus, Folder, Link, Cpu } from "lucide-react";
+import { Database, Bot, Sparkles as SparklesIcon, Search, ArrowRight, ChevronDown, FolderOpen, Grid3X3, Settings, Users, FileText, Zap, Circle, TrendingUp, Plus, Folder, Link, Cpu } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 const HomePage = () => {
@@ -9,6 +9,7 @@ const HomePage = () => {
   const [crmModalOpen, setCrmModalOpen] = useState(false);
   const [agentsModalOpen, setAgentsModalOpen] = useState(false);
   const [irisModalOpen, setIrisModalOpen] = useState(false);
+  const [isProductsOpen, setIsProductsOpen] = useState(false);
   return <div className="min-h-screen bg-transparent">
       {/* Website Header */}
       <header className="h-16 border-b border-border flex items-center justify-between px-6">
@@ -21,7 +22,72 @@ const HomePage = () => {
         {/* Center Navigation */}
         <nav className="flex items-center gap-8" role="navigation" aria-label="Main navigation">
           <a href="#" className="text-sm font-medium text-foreground hover:text-muted-foreground transition-colors no-underline">Home</a>
-          <a href="#" className="text-sm font-medium text-foreground hover:text-muted-foreground transition-colors no-underline">Products</a>
+
+          {/* Products dropdown (hover) */}
+          <div
+            className="relative"
+            onMouseEnter={() => setIsProductsOpen(true)}
+            onMouseLeave={() => setIsProductsOpen(false)}
+          >
+            <button
+              type="button"
+              className="text-sm font-medium text-foreground hover:text-primary transition-colors no-underline inline-flex items-center gap-1"
+              aria-haspopup="menu"
+              aria-expanded={isProductsOpen}
+              aria-controls="products-menu"
+            >
+              Products
+              <ChevronDown className={`h-4 w-4 transition-transform ${isProductsOpen ? 'rotate-180' : ''}`} />
+            </button>
+
+            {isProductsOpen && (
+              <div
+                id="products-menu"
+                role="menu"
+                className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-[420px] rounded-xl border bg-card text-card-foreground shadow-xl z-[100]"
+              >
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 p-3">
+                  <li>
+                    <a href="#iris" role="menuitem" className="flex items-center gap-3 rounded-lg p-3 hover:bg-muted transition-colors">
+                      <img src="/placeholder.svg" alt="IRIS product thumbnail" loading="lazy" className="h-12 w-12 rounded-lg object-cover" />
+                      <div className="min-w-0">
+                        <div className="text-sm font-semibold">IRIS</div>
+                        <p className="text-xs text-muted-foreground truncate">See IRIS in action</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#crm" role="menuitem" className="flex items-center gap-3 rounded-lg p-3 hover:bg-muted transition-colors">
+                      <img src="/placeholder.svg" alt="AI CRM product thumbnail" loading="lazy" className="h-12 w-12 rounded-lg object-cover" />
+                      <div className="min-w-0">
+                        <div className="text-sm font-semibold">AI CRM</div>
+                        <p className="text-xs text-muted-foreground truncate">Get in touch with our team</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#ai-agents" role="menuitem" className="flex items-center gap-3 rounded-lg p-3 hover:bg-muted transition-colors">
+                      <img src="/placeholder.svg" alt="AI Agents product thumbnail" loading="lazy" className="h-12 w-12 rounded-lg object-cover" />
+                      <div className="min-w-0">
+                        <div className="text-sm font-semibold">AI Agents</div>
+                        <p className="text-xs text-muted-foreground truncate">Discover capabilities</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#ai-notetaker" role="menuitem" className="flex items-center gap-3 rounded-lg p-3 hover:bg-muted transition-colors">
+                      <img src="/placeholder.svg" alt="AI Notetaker product thumbnail" loading="lazy" className="h-12 w-12 rounded-lg object-cover" />
+                      <div className="min-w-0">
+                        <div className="text-sm font-semibold">AI Notetaker</div>
+                        <p className="text-xs text-muted-foreground truncate">Who we are, what we do</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            )}
+          </div>
+
           <a href="#" className="text-sm font-medium text-foreground hover:text-muted-foreground transition-colors no-underline">About</a>
           <a href="#" className="text-sm font-medium text-foreground hover:text-muted-foreground transition-colors no-underline">Integrations</a>
           <a href="#" className="text-sm font-medium text-foreground hover:text-muted-foreground transition-colors no-underline">Pricing</a>
