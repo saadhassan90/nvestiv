@@ -42,7 +42,10 @@ const HomePage = () => {
       {/* Main Content */}
       <main className="max-w-[1200px] mx-auto">
         {/* Hero Section */}
-        <section className="w-full h-[700px] flex items-center justify-center px-6 relative overflow-hidden rounded-3xl my-4" style={{ background: 'linear-gradient(to bottom right, #150b36 70%, #19226d)' }} aria-labelledby="hero-heading">
+        <section className="w-full h-[700px] flex items-center justify-center px-6 relative overflow-hidden rounded-3xl my-4" style={{ 
+          background: 'linear-gradient(to bottom right, #150b36 70%, #19226d)',
+          boxShadow: '0 0 80px 20px rgba(15, 23, 42, 0.3), 0 0 120px 40px rgba(30, 41, 59, 0.2)'
+        }} aria-labelledby="hero-heading">
           {/* Request early access button */}
           <div className="absolute top-8 left-8">
             
