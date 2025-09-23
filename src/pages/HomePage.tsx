@@ -360,7 +360,7 @@ const HomePage = () => {
                           </div>
                           
                           <Button variant="default" asChild>
-                            <a href="/ai-crm">Learn More</a>
+                            <a href="/ai-crm" className="text-white no-underline">Learn More</a>
                           </Button>
                         </div>
                       </div>
