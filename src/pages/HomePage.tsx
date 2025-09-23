@@ -107,7 +107,7 @@ const HomePage = () => {
         <section className="w-full py-6 overflow-hidden rounded-3xl mb-4">
           <div className="w-full px-8">
             <div className="text-center mb-12">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-2">
+              <h3 className="text-2xl font-semibold text-foreground mb-2">
                 Trusted by Leading Investment Firms
               </h3>
               
@@ -117,88 +117,88 @@ const HomePage = () => {
               <div className="flex animate-marquee space-x-16">
                 {/* First set of companies */}
                 <div className="flex items-center space-x-4 min-w-max">
-                  <div className="w-12 h-12 bg-gray-300 rounded-lg flex items-center justify-center">
-                    <span className="text-gray-600 font-bold text-lg">KKR</span>
+                  <div className="w-12 h-12 bg-muted rounded-lg flex items-center justify-center">
+                    <span className="text-muted-foreground font-bold text-lg">KKR</span>
                   </div>
-                  <span className="text-gray-700 font-medium whitespace-nowrap">KKR & Co</span>
+                  <span className="text-foreground font-medium whitespace-nowrap">KKR & Co</span>
                 </div>
                 
                 <div className="flex items-center space-x-4 min-w-max">
-                  <div className="w-12 h-12 bg-gray-300 rounded-lg flex items-center justify-center">
-                    <span className="text-gray-600 font-bold text-lg">TPG</span>
+                  <div className="w-12 h-12 bg-muted rounded-lg flex items-center justify-center">
+                    <span className="text-muted-foreground font-bold text-lg">TPG</span>
                   </div>
-                  <span className="text-gray-700 font-medium whitespace-nowrap">TPG Capital</span>
+                  <span className="text-foreground font-medium whitespace-nowrap">TPG Capital</span>
                 </div>
                 
                 <div className="flex items-center space-x-4 min-w-max">
-                  <div className="w-12 h-12 bg-gray-300 rounded-lg flex items-center justify-center">
-                    <span className="text-gray-600 font-bold text-lg">CVC</span>
+                  <div className="w-12 h-12 bg-muted rounded-lg flex items-center justify-center">
+                    <span className="text-muted-foreground font-bold text-lg">CVC</span>
                   </div>
-                  <span className="text-gray-700 font-medium whitespace-nowrap">CVC Capital</span>
+                  <span className="text-foreground font-medium whitespace-nowrap">CVC Capital</span>
                 </div>
                 
                 <div className="flex items-center space-x-4 min-w-max">
-                  <div className="w-12 h-12 bg-gray-300 rounded-lg flex items-center justify-center">
-                    <span className="text-gray-600 font-bold text-lg">BC</span>
+                  <div className="w-12 h-12 bg-muted rounded-lg flex items-center justify-center">
+                    <span className="text-muted-foreground font-bold text-lg">BC</span>
                   </div>
-                  <span className="text-gray-700 font-medium whitespace-nowrap">Bain Capital</span>
+                  <span className="text-foreground font-medium whitespace-nowrap">Bain Capital</span>
                 </div>
                 
                 <div className="flex items-center space-x-4 min-w-max">
-                  <div className="w-12 h-12 bg-gray-300 rounded-lg flex items-center justify-center">
-                    <span className="text-gray-600 font-bold text-lg">A16Z</span>
+                  <div className="w-12 h-12 bg-muted rounded-lg flex items-center justify-center">
+                    <span className="text-muted-foreground font-bold text-lg">A16Z</span>
                   </div>
-                  <span className="text-gray-700 font-medium whitespace-nowrap">Andreessen Horowitz</span>
+                  <span className="text-foreground font-medium whitespace-nowrap">Andreessen Horowitz</span>
                 </div>
                 
                 <div className="flex items-center space-x-4 min-w-max">
-                  <div className="w-12 h-12 bg-gray-300 rounded-lg flex items-center justify-center">
-                    <span className="text-gray-600 font-bold text-lg">SV</span>
+                  <div className="w-12 h-12 bg-muted rounded-lg flex items-center justify-center">
+                    <span className="text-muted-foreground font-bold text-lg">SV</span>
                   </div>
-                  <span className="text-gray-700 font-medium whitespace-nowrap">Sequoia Capital</span>
+                  <span className="text-foreground font-medium whitespace-nowrap">Sequoia Capital</span>
                 </div>
                 
                 {/* Duplicate set for seamless loop */}
                 <div className="flex items-center space-x-4 min-w-max">
-                  <div className="w-12 h-12 bg-gray-300 rounded-lg flex items-center justify-center">
-                    <span className="text-gray-600 font-bold text-lg">KKR</span>
+                  <div className="w-12 h-12 bg-muted rounded-lg flex items-center justify-center">
+                    <span className="text-muted-foreground font-bold text-lg">KKR</span>
                   </div>
-                  <span className="text-gray-700 font-medium whitespace-nowrap">KKR & Co</span>
+                  <span className="text-foreground font-medium whitespace-nowrap">KKR & Co</span>
                 </div>
                 
                 <div className="flex items-center space-x-4 min-w-max">
-                  <div className="w-12 h-12 bg-gray-300 rounded-lg flex items-center justify-center">
-                    <span className="text-gray-600 font-bold text-lg">TPG</span>
+                  <div className="w-12 h-12 bg-muted rounded-lg flex items-center justify-center">
+                    <span className="text-muted-foreground font-bold text-lg">TPG</span>
                   </div>
-                  <span className="text-gray-700 font-medium whitespace-nowrap">TPG Capital</span>
+                  <span className="text-foreground font-medium whitespace-nowrap">TPG Capital</span>
                 </div>
                 
                 <div className="flex items-center space-x-4 min-w-max">
-                  <div className="w-12 h-12 bg-gray-300 rounded-lg flex items-center justify-center">
-                    <span className="text-gray-600 font-bold text-lg">CVC</span>
+                  <div className="w-12 h-12 bg-muted rounded-lg flex items-center justify-center">
+                    <span className="text-muted-foreground font-bold text-lg">CVC</span>
                   </div>
-                  <span className="text-gray-700 font-medium whitespace-nowrap">CVC Capital</span>
+                  <span className="text-foreground font-medium whitespace-nowrap">CVC Capital</span>
                 </div>
                 
                 <div className="flex items-center space-x-4 min-w-max">
-                  <div className="w-12 h-12 bg-gray-300 rounded-lg flex items-center justify-center">
-                    <span className="text-gray-600 font-bold text-lg">BC</span>
+                  <div className="w-12 h-12 bg-muted rounded-lg flex items-center justify-center">
+                    <span className="text-muted-foreground font-bold text-lg">BC</span>
                   </div>
-                  <span className="text-gray-700 font-medium whitespace-nowrap">Bain Capital</span>
+                  <span className="text-foreground font-medium whitespace-nowrap">Bain Capital</span>
                 </div>
                 
                 <div className="flex items-center space-x-4 min-w-max">
-                  <div className="w-12 h-12 bg-gray-300 rounded-lg flex items-center justify-center">
-                    <span className="text-gray-600 font-bold text-lg">A16Z</span>
+                  <div className="w-12 h-12 bg-muted rounded-lg flex items-center justify-center">
+                    <span className="text-muted-foreground font-bold text-lg">A16Z</span>
                   </div>
-                  <span className="text-gray-700 font-medium whitespace-nowrap">Andreessen Horowitz</span>
+                  <span className="text-foreground font-medium whitespace-nowrap">Andreessen Horowitz</span>
                 </div>
                 
                 <div className="flex items-center space-x-4 min-w-max">
-                  <div className="w-12 h-12 bg-gray-300 rounded-lg flex items-center justify-center">
-                    <span className="text-gray-600 font-bold text-lg">SV</span>
+                  <div className="w-12 h-12 bg-muted rounded-lg flex items-center justify-center">
+                    <span className="text-muted-foreground font-bold text-lg">SV</span>
                   </div>
-                  <span className="text-gray-700 font-medium whitespace-nowrap">Sequoia Capital</span>
+                  <span className="text-foreground font-medium whitespace-nowrap">Sequoia Capital</span>
                 </div>
               </div>
             </div>
@@ -210,9 +210,9 @@ const HomePage = () => {
           <div className="">
             {/* Section Label */}
             <div className="flex justify-center mb-8">
-              <div className="relative inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 text-gray-600">
+              <div className="relative inline-flex items-center gap-2 px-4 py-2 rounded-full bg-muted text-muted-foreground">
                 <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#3137fd] from-0% via-[#3137fd] via-70% to-[#3137fd]/10 to-100% p-[1px]">
-                  <div className="h-full w-full rounded-full bg-gray-100"></div>
+                  <div className="h-full w-full rounded-full bg-muted"></div>
                 </div>
                 <div className="relative z-10 flex items-center gap-2">
                   <Cpu className="w-4 h-4" />
@@ -227,7 +227,7 @@ const HomePage = () => {
 
             <Tabs defaultValue="ai-crm" className="w-full">
               <TabsContent value="ai-crm" className="mt-0">
-                <Card className="border border-gray-200 shadow-lg bg-white">
+                <Card className="border border-border shadow-lg bg-card">
                   <div className="p-8">
                     <TabsList className="grid w-full grid-cols-4 mb-8">
                       <TabsTrigger value="ai-crm" className="flex items-center gap-2">
@@ -249,7 +249,7 @@ const HomePage = () => {
                     </TabsList>
                   
                      <div className="grid lg:grid-cols-2 gap-8 items-start">
-                       <div className="space-y-6 flex flex-col justify-start border border-slate-200 rounded-xl p-8">
+                        <div className="space-y-6 flex flex-col justify-start border border-border rounded-xl p-8">
                         <div>
                           <h3 className="h3 mb-4">The CRM That Updates Itself</h3>
                           <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
@@ -289,7 +289,7 @@ const HomePage = () => {
                       <div className="lg:pl-8">
                         <div className="relative rounded-2xl">
                           <div className="pointer-events-none absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-cyan-500 rounded-[18px] blur-md opacity-15"></div>
-                           <div className="relative z-10 bg-white rounded-2xl p-8 h-[500px] flex flex-col shadow-none">
+                           <div className="relative z-10 bg-card rounded-2xl p-8 h-[500px] flex flex-col shadow-none">
                           
                           {/* Chat History Container */}
                           <div className="flex-1 space-y-4 mb-4 overflow-y-auto">
@@ -297,14 +297,14 @@ const HomePage = () => {
                             <div className="flex justify-end gap-2">
                               <div className="flex flex-col items-end max-w-[80%]">
                                 <div className="flex items-center gap-2 mb-1">
-                                  <span className="text-xs text-gray-500">12:34 PM</span>
-                                  <span className="text-xs font-medium text-gray-700">You</span>
-                                  <div className="w-6 h-6 bg-slate-500 rounded-full flex items-center justify-center">
-                                    <span className="text-white font-medium text-xs">Y</span>
-                                  </div>
-                                </div>
-                                <div className="bg-slate-600 text-white rounded-2xl px-4 py-2">
-                                  <p className="text-sm text-white">Who do I know that looks at healthcare rollups in Florida?</p>
+                                   <span className="text-xs text-muted-foreground">12:34 PM</span>
+                                   <span className="text-xs font-medium text-foreground">You</span>
+                                   <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
+                                     <span className="text-primary-foreground font-medium text-xs">Y</span>
+                                   </div>
+                                 </div>
+                                 <div className="bg-primary text-primary-foreground rounded-2xl px-4 py-2">
+                                   <p className="text-sm text-primary-foreground">Who do I know that looks at healthcare rollups in Florida?</p>
                                 </div>
                               </div>
                             </div>
@@ -313,49 +313,49 @@ const HomePage = () => {
                             <div className="flex justify-start gap-2">
                               <div className="flex flex-col items-start max-w-[85%]">
                                 <div className="flex items-center gap-2 mb-1">
-                                  <div className="w-6 h-6 bg-gray-400 rounded-full flex items-center justify-center">
-                                    <span className="text-white font-medium text-xs">I</span>
-                                  </div>
-                                  <span className="text-xs font-medium text-gray-700">IRIS</span>
-                                  <span className="text-xs text-gray-500">12:34 PM</span>
-                                </div>
-                                <div className="bg-gray-100 rounded-2xl px-4 py-2">
-                                  <p className="text-sm text-gray-800">Searched the CRM and found Jason Ozler, who told you in 2024 that he likes to invest in US healthcare PE strategies.</p>
-                                  <p className="text-sm text-gray-800 mt-2 font-medium">Want me to email him requesting a meeting?</p>
+                                   <div className="w-6 h-6 bg-muted rounded-full flex items-center justify-center">
+                                     <span className="text-muted-foreground font-medium text-xs">I</span>
+                                   </div>
+                                   <span className="text-xs font-medium text-foreground">IRIS</span>
+                                   <span className="text-xs text-muted-foreground">12:34 PM</span>
+                                 </div>
+                                 <div className="bg-muted rounded-2xl px-4 py-2">
+                                   <p className="text-sm text-foreground">Searched the CRM and found Jason Ozler, who told you in 2024 that he likes to invest in US healthcare PE strategies.</p>
+                                   <p className="text-sm text-foreground mt-2 font-medium">Want me to email him requesting a meeting?</p>
                                 </div>
                               </div>
                             </div>
                             
                             {/* Contact Card */}
                             <div className="flex justify-start">
-                              <div className="bg-gradient-to-br from-slate-50 to-blue-50/30 border border-slate-200/50 rounded-lg p-2.5 max-w-[85%] shadow-sm hover:shadow-md transition-shadow">
-                                <div className="flex items-center gap-2.5">
-                                  <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center shadow-sm">
-                                    <span className="text-white font-semibold text-xs">JO</span>
-                                  </div>
-                                  <div className="flex-1 min-w-0 space-y-0.5">
-                                    <h4 className="font-semibold text-sm text-gray-900 truncate leading-none">Jason Ozler</h4>
-                                    <p className="text-xs text-blue-600 font-medium truncate leading-none">Partner @ Florida Health Ventures</p>
-                                    <p className="text-xs text-gray-500 leading-none">Last contact: March 2024</p>
-                                  </div>
-                                </div>
-                                <div className="mt-2 pt-2 border-t border-slate-200/50">
-                                  <p className="text-xs text-gray-600 italic leading-tight">"Looking for healthcare PE opportunities in Southeast US markets"</p>
+                               <div className="bg-gradient-to-br from-muted to-accent/30 border border-border rounded-lg p-2.5 max-w-[85%] shadow-sm hover:shadow-md transition-shadow">
+                                 <div className="flex items-center gap-2.5">
+                                   <div className="w-8 h-8 bg-gradient-to-br from-primary to-primary/80 rounded-lg flex items-center justify-center shadow-sm">
+                                     <span className="text-primary-foreground font-semibold text-xs">JO</span>
+                                   </div>
+                                   <div className="flex-1 min-w-0 space-y-0.5">
+                                     <h4 className="font-semibold text-sm text-foreground truncate leading-none">Jason Ozler</h4>
+                                     <p className="text-xs text-primary font-medium truncate leading-none">Partner @ Florida Health Ventures</p>
+                                     <p className="text-xs text-muted-foreground leading-none">Last contact: March 2024</p>
+                                   </div>
+                                 </div>
+                                 <div className="mt-2 pt-2 border-t border-border">
+                                   <p className="text-xs text-muted-foreground italic leading-tight">"Looking for healthcare PE opportunities in Southeast US markets"</p>
                                 </div>
                               </div>
                             </div>
                           </div>
                           
                           {/* Chat Widget */}
-                          <div className="bg-black/5 backdrop-blur-sm rounded-xl p-1 border border-gray-200">
-                            <div className="flex items-center gap-2 p-2">
-                              <div className="flex-1 relative">
-                                <input 
-                                  type="text" 
-                                  placeholder="Ask IRIS something..." 
-                                  className="w-full bg-transparent text-gray-700 placeholder:text-gray-400 text-xs focus:outline-none py-1 px-2" 
-                                  disabled
-                                />
+                           <div className="bg-muted/50 backdrop-blur-sm rounded-xl p-1 border border-border">
+                             <div className="flex items-center gap-2 p-2">
+                               <div className="flex-1 relative">
+                                 <input 
+                                   type="text" 
+                                   placeholder="Ask IRIS something..." 
+                                   className="w-full bg-transparent text-foreground placeholder:text-muted-foreground text-xs focus:outline-none py-1 px-2" 
+                                   disabled
+                                 />
                               </div>
                               <Button size="icon" variant="default" className="w-8 h-8 rounded-lg">
                                 <ArrowRight className="w-3 h-3" />
@@ -371,7 +371,7 @@ const HomePage = () => {
               </TabsContent>
 
               <TabsContent value="ai-agents" className="mt-0">
-                <Card className="border border-gray-200 shadow-lg bg-white">
+                <Card className="border border-border shadow-lg bg-card">
                   <div className="p-8">
                     <TabsList className="grid w-full grid-cols-4 mb-8">
                       <TabsTrigger value="ai-crm" className="flex items-center gap-2">
@@ -393,7 +393,7 @@ const HomePage = () => {
                     </TabsList>
                   
                      <div className="grid lg:grid-cols-2 gap-8 items-start">
-                       <div className="space-y-6 flex flex-col justify-start border border-slate-200 rounded-xl p-8">
+                        <div className="space-y-6 flex flex-col justify-start border border-border rounded-xl p-8">
                         <div>
                            <h3 className="h3 mb-4">Speak Your Workflow Into Existence</h3>
                            <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
