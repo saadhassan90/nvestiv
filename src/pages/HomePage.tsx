@@ -308,9 +308,9 @@ const HomePage = () => {
 
             <Tabs defaultValue="ai-crm" className="w-full">
               <TabsContent value="ai-crm" className="mt-0">
-                <Card className="border-0 shadow-lg bg-white">
-                  <div className="p-6 pb-0">
-                    <TabsList className="grid w-full grid-cols-4">
+                <Card className="border border-gray-200 shadow-lg bg-white">
+                  <div className="p-8">
+                    <TabsList className="grid w-full grid-cols-4 mb-8">
                       <TabsTrigger value="ai-crm" className="flex items-center gap-2">
                         <Database className="w-4 h-4" />
                         <span className="hidden sm:inline">AI CRM</span>
@@ -328,9 +328,8 @@ const HomePage = () => {
                         <span className="hidden sm:inline">Integrations</span>
                       </TabsTrigger>
                     </TabsList>
-                  </div>
-                  <CardContent className="p-8">
-                    <div className="grid lg:grid-cols-2 gap-8 items-start">
+                  
+                     <div className="grid lg:grid-cols-2 gap-8 items-start">
                        <div className="space-y-6 flex flex-col justify-start border border-slate-200 rounded-xl p-8">
                         <div>
                           <h3 className="h3 mb-4">The CRM That Updates Itself</h3>
@@ -443,16 +442,16 @@ const HomePage = () => {
                           </div>
                           </div>
                         </div>
-                      </div>
-                    </div>
-                  </CardContent>
+                       </div>
+                     </div>
+                  </div>
                 </Card>
               </TabsContent>
 
               <TabsContent value="ai-agents" className="mt-0">
-                <Card className="border-0 shadow-lg bg-gray-50">
-                  <div className="p-6 pb-0">
-                    <TabsList className="grid w-full grid-cols-4">
+                <Card className="border border-gray-200 shadow-lg bg-white">
+                  <div className="p-8">
+                    <TabsList className="grid w-full grid-cols-4 mb-8">
                       <TabsTrigger value="ai-crm" className="flex items-center gap-2">
                         <Database className="w-4 h-4" />
                         <span className="hidden sm:inline">AI CRM</span>
@@ -470,9 +469,8 @@ const HomePage = () => {
                         <span className="hidden sm:inline">Integrations</span>
                       </TabsTrigger>
                     </TabsList>
-                  </div>
-                  <CardContent className="p-8">
-                    <div className="grid lg:grid-cols-2 gap-8 items-start">
+                  
+                     <div className="grid lg:grid-cols-2 gap-8 items-start">
                        <div className="space-y-6 flex flex-col justify-start border border-slate-200 rounded-xl p-8">
                         <div>
                            <h3 className="h3 mb-4">Speak Your Workflow Into Existence</h3>
@@ -585,17 +583,17 @@ const HomePage = () => {
                             </div>
                           </div>
                           </div>
-                        </div>
-                      </div>
-                    </div>
-                  </CardContent>
+                       </div>
+                     </div>
+                  </div>
+                  </div>
                 </Card>
               </TabsContent>
 
               <TabsContent value="files" className="mt-0">
-                <Card className="border-0 shadow-lg bg-gray-50">
-                  <div className="p-6 pb-0">
-                    <TabsList className="grid w-full grid-cols-4">
+                <Card className="border border-gray-200 shadow-lg bg-white">
+                  <div className="p-8">
+                    <TabsList className="grid w-full grid-cols-4 mb-8">
                       <TabsTrigger value="ai-crm" className="flex items-center gap-2">
                         <Database className="w-4 h-4" />
                         <span className="hidden sm:inline">AI CRM</span>
@@ -613,8 +611,7 @@ const HomePage = () => {
                         <span className="hidden sm:inline">Integrations</span>
                       </TabsTrigger>
                     </TabsList>
-                  </div>
-                  <CardContent className="p-8">
+                  
                     <div className="grid lg:grid-cols-2 gap-8 items-start">
                        <div className="space-y-6 flex flex-col justify-start border border-slate-200 rounded-xl p-8">
                         <div>
@@ -715,15 +712,15 @@ const HomePage = () => {
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </CardContent>
+                     </div>
+                  </div>
                 </Card>
               </TabsContent>
 
               <TabsContent value="integrations" className="mt-0">
-                <Card className="border-0 shadow-lg bg-gray-50">
-                  <div className="p-6 pb-0">
-                    <TabsList className="grid w-full grid-cols-4">
+                <Card className="border border-gray-200 shadow-lg bg-white">
+                  <div className="p-8">
+                    <TabsList className="grid w-full grid-cols-4 mb-8">
                       <TabsTrigger value="ai-crm" className="flex items-center gap-2">
                         <Database className="w-4 h-4" />
                         <span className="hidden sm:inline">AI CRM</span>
@@ -741,8 +738,7 @@ const HomePage = () => {
                         <span className="hidden sm:inline">Integrations</span>
                       </TabsTrigger>
                     </TabsList>
-                  </div>
-                  <CardContent className="p-8">
+                  
                     <div className="grid lg:grid-cols-2 gap-8 items-start">
                        <div className="space-y-6 flex flex-col justify-start border border-slate-200 rounded-xl p-8">
                          <div>
@@ -857,8 +853,8 @@ const HomePage = () => {
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </CardContent>
+                     </div>
+                  </div>
                 </Card>
               </TabsContent>
             </Tabs>
