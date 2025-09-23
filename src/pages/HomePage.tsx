@@ -111,7 +111,7 @@ const HomePage = () => {
               
             </div>
 
-            <div className="w-full max-w-6xl mx-auto text-center space-y-8 flex flex-col justify-center h-full py-16 relative z-10">
+            <div className="w-full max-w-6xl mx-auto text-center space-y-8 flex flex-col justify-center h-full relative z-10">
             <div className="space-y-4">
               <div className="space-y-6">
                 <div>
