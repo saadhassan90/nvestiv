@@ -4,6 +4,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } f
 import { Database, Bot, Sparkles as SparklesIcon, Search, ArrowRight, ChevronDown, FolderOpen, Grid3X3, Settings, Users, FileText, Zap, Circle, TrendingUp, Plus, Folder, Link, Cpu } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { VideoBackground } from "@/components/VideoBackground";
 const HomePage = () => {
   console.log("HomePage component is rendering");
   const [crmModalOpen, setCrmModalOpen] = useState(false);
@@ -99,13 +100,20 @@ const HomePage = () => {
       {/* Main Content */}
       <main className="max-w-[1200px] mx-auto">
         {/* Hero Section */}
-        <section className="w-full h-[700px] flex items-center justify-center px-6 relative overflow-hidden rounded-3xl my-4" style={{ background: 'linear-gradient(to bottom right, #150b36 70%, #19226d)' }} aria-labelledby="hero-heading">
-          {/* Request early access button */}
-          <div className="absolute top-8 left-8">
+        <VideoBackground 
+          videoUrl="https://cdn.midjourney.com/video/59ad271f-d702-49b6-b74f-ee4f4d2e5e86/3.mp4"
+          className="w-full h-[700px] rounded-3xl my-4"
+        >
+          <section className="w-full h-full flex items-center justify-center px-6 relative overflow-hidden" aria-labelledby="hero-heading">
+            {/* Additional gradient overlay to match existing design */}
+            <div className="absolute inset-0 bg-gradient-to-br from-[#150b36]/90 via-[#150b36]/80 to-[#19226d]/90" />
             
-          </div>
+            {/* Request early access button */}
+            <div className="absolute top-8 left-8 z-10">
+              
+            </div>
 
-          <div className="w-full max-w-6xl mx-auto text-center space-y-8">
+            <div className="w-full max-w-6xl mx-auto text-center space-y-8 relative z-10">
             <div className="space-y-4">
               <div className="space-y-6">
                 <div>
@@ -176,6 +184,7 @@ const HomePage = () => {
             </div>
           </div>
         </section>
+        </VideoBackground>
 
         {/* Companies Marquee Section */}
         <section className="w-full py-6 overflow-hidden rounded-3xl mb-4">
