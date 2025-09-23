@@ -52,6 +52,9 @@ export function VideoBackground({
           <source src={videoUrl} type="video/mp4" />
         </video>
         
+        {/* Deep Navy Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0B0E1F]/85 via-[#0B0E1F]/70 to-blue-900/60" />
+        
         {/* Fallback background */}
         <div className={cn("absolute inset-0 -z-10", fallbackColor)} />
       </div>
