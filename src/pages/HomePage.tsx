@@ -856,8 +856,8 @@ const HomePage = () => {
                     </div>
                     
                     {/* Right Image */}
-                    <div className="lg:pl-8">
-                      <div className="relative rounded-2xl">
+                    <div className="lg:pl-8 h-full">
+                      <div className="relative rounded-2xl h-full">
                         <div className="pointer-events-none absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-cyan-500 rounded-[18px] blur-md opacity-15"></div>
                         <div className="relative z-10 bg-card rounded-2xl p-6 h-full min-h-[500px] flex items-center justify-center shadow-none">
                           <div className="relative">
