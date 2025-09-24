@@ -1015,7 +1015,14 @@ const HomePage = () => {
                         <div className="relative z-10 bg-card rounded-2xl p-6 h-full min-h-[500px] flex items-center justify-center shadow-none">
                           <div className="relative">
                             <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-accent/10 to-primary/20 rounded-full blur-3xl opacity-30 dark:opacity-20"></div>
-                            <img src={irisCharacter} alt="IRIS AI Character" className="relative z-10 w-80 h-80 object-contain animate-fade-in hover:scale-105 transition-all duration-500" />
+                            <video 
+                              src="https://cdn.midjourney.com/video/a6591682-b664-466b-b202-9f54adfa6618/3.mp4"
+                              autoPlay
+                              loop
+                              muted
+                              playsInline
+                              className="relative z-10 w-80 h-80 object-contain animate-fade-in hover:scale-105 transition-all duration-500 rounded-lg"
+                            />
                           </div>
                         </div>
                       </div>
