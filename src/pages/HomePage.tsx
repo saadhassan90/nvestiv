@@ -478,7 +478,7 @@ const HomePage = () => {
                                   </div>
                                   <div className="bg-muted rounded-2xl px-4 py-2">
                                     <p className="text-sm text-foreground mb-2">Done! Just sent email to Jason. I will monitor your inbox and coordinate the meeting. I will let you know when something is on the books.</p>
-                                    <span className="inline-block bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-xs font-medium mt-2">✉️ Sent Email</span>
+                                    <span className="inline-block bg-blue-50 text-blue-600 px-2 py-0.5 rounded-full text-xs font-medium mt-2">✉️ Sent Email</span>
                                  </div>
                                </div>
                              </div>
