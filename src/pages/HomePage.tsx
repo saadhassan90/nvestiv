@@ -787,7 +787,7 @@ const HomePage = () => {
                     {/* Left Content */}
                     <div className="space-y-6 flex flex-col justify-between border border-border rounded-xl p-6 h-full min-h-[500px]">
                       <div>
-                        <h3 className="h3 mb-4 text-card-heading">IRIS</h3>
+                        <h3 className="h3 mb-4 text-card-heading">Meet IRIS, your second brain</h3>
                         <p className="text-lg leading-relaxed text-muted-foreground mb-6">
                           IRIS isn't just an analyst. She's the AI interface built for private markets.
                         </p>
