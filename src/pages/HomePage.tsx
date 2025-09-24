@@ -1063,6 +1063,567 @@ const HomePage = () => {
             </div>
           </div>
         </section>
+
+        {/* Duplicated Product Features Section */}
+        <section className="w-full py-16" aria-labelledby="features-heading-2">
+          <div className="">
+            {/* Section Label */}
+            <div className="flex justify-center mb-6">
+              <div className="relative inline-flex items-center gap-2 px-4 py-2 rounded-full bg-muted text-muted-foreground">
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#3137fd] from-0% via-[#3137fd] via-70% to-[#3137fd]/10 to-100% p-[1px]">
+                  <div className="h-full w-full rounded-full bg-muted"></div>
+                </div>
+                <div className="relative z-10 flex items-center gap-2">
+                  <Cpu className="w-4 h-4" />
+                  <span className="text-sm font-medium">AI Operating System</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="text-center mb-12">
+              <h2 id="features-heading-2" className="h2 mb-4">Complete 360° Intelligence Across Your Investment Operations</h2>
+            </div>
+
+            <Tabs defaultValue="ai-crm" className="w-full">
+              <TabsContent value="ai-crm" className="mt-0">
+                <Card className="border border-border shadow-lg bg-card">
+                  <div className="p-6">
+                    <TabsList className="grid w-full grid-cols-4 mb-6">
+                      <TabsTrigger value="ai-crm" className="flex items-center gap-2">
+                        <Database className="w-4 h-4" />
+                        <span className="hidden sm:inline">AI CRM</span>
+                      </TabsTrigger>
+                      <TabsTrigger value="ai-agents" className="flex items-center gap-2">
+                        <Bot className="w-4 h-4" />
+                        <span className="hidden sm:inline">AI Agents</span>
+                      </TabsTrigger>
+                      <TabsTrigger value="files" className="flex items-center gap-2">
+                        <FileText className="w-4 h-4" />
+                        <span className="hidden sm:inline">Files</span>
+                      </TabsTrigger>
+                      <TabsTrigger value="integrations" className="flex items-center gap-2">
+                        <Settings className="w-4 h-4" />
+                        <span className="hidden sm:inline">Integrations</span>
+                      </TabsTrigger>
+                    </TabsList>
+                  
+                     <div className="grid lg:grid-cols-2 gap-8 items-stretch">
+                          <div className="space-y-6 flex flex-col justify-between border border-border rounded-xl p-6 h-full min-h-[500px]">
+                        <div>
+                          <h3 className="h3 mb-4 text-card-heading">The CRM That Updates Itself</h3>
+                          <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
+                            Every email, every interaction—IRIS reads it all and updates your CRM automatically. Just ask IRIS anything through voice or chat. No manual entry, ever.
+                          </p>
+                          
+                          <div className="space-y-3 mb-6">
+                            <h4 className="font-semibold text-foreground">Key Features</h4>
+                            <ul className="space-y-2 text-sm text-muted-foreground">
+                              <li className="flex items-start gap-2">
+                                <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                                <span><strong>Auto-syncing emails</strong> - Past and incoming emails automatically update contacts</span>
+                              </li>
+                              <li className="flex items-start gap-2">
+                                <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                                <span><strong>Voice & chat interface</strong> - Talk to IRIS through the floating chat bubble</span>
+                              </li>
+                              <li className="flex items-start gap-2">
+                                <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                                <span><strong>Self-managing database</strong> - IRIS creates and updates records autonomously</span>
+                              </li>
+                              <li className="flex items-start gap-2">
+                                <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                                <span><strong>Instant relationship insights</strong> - Ask about any contact or deal pattern</span>
+                              </li>
+                            </ul>
+                          </div>
+                          
+                          <Button variant="default" asChild>
+                            <a href="/ai-crm" className="text-white no-underline flex items-center gap-2">
+                              Learn More
+                              <ArrowRight className="h-4 w-4" />
+                            </a>
+                          </Button>
+                        </div>
+                      </div>
+                      <div className="lg:pl-8">
+                        <div className="relative rounded-2xl">
+                          <div className="pointer-events-none absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-cyan-500 rounded-[18px] blur-md opacity-15"></div>
+                           <div className="relative z-10 bg-card rounded-2xl p-6 h-[700px] flex flex-col shadow-none">
+                          
+                          {/* Chat History Container */}
+                          <div className="flex-1 space-y-4 mb-4 overflow-y-auto">
+                            {/* User Message */}
+                            <div className="flex justify-end gap-2">
+                              <div className="bg-primary text-primary-foreground px-3 py-2 rounded-lg max-w-xs text-sm">
+                                Show me my top 3 deals this month
+                              </div>
+                            </div>
+                            
+                            {/* IRIS Response */}
+                            <div className="flex gap-2">
+                              <div className="w-6 h-6 bg-muted rounded-full flex items-center justify-center flex-shrink-0">
+                                <Bot className="w-3 h-3 text-muted-foreground" />
+                              </div>
+                              <div className="bg-muted text-muted-foreground px-3 py-2 rounded-lg max-w-sm text-sm">
+                                Here are your top 3 deals by value this month:
+                                <div className="mt-2 space-y-1">
+                                  <div className="bg-card p-2 rounded text-xs">
+                                    <strong>HealthTech Solutions</strong> - $45M Series B
+                                  </div>
+                                  <div className="bg-card p-2 rounded text-xs">
+                                    <strong>GreenEnergy Corp</strong> - $32M Series A
+                                  </div>
+                                  <div className="bg-card p-2 rounded text-xs">
+                                    <strong>FinTech Innovations</strong> - $28M Seed
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            
+                            {/* User Follow-up */}
+                            <div className="flex justify-end gap-2">
+                              <div className="bg-primary text-primary-foreground px-3 py-2 rounded-lg max-w-xs text-sm">
+                                What's the status on HealthTech?
+                              </div>
+                            </div>
+                            
+                            {/* IRIS Follow-up Response */}
+                            <div className="flex gap-2">
+                              <div className="w-6 h-6 bg-muted rounded-full flex items-center justify-center flex-shrink-0">
+                                <Bot className="w-3 h-3 text-muted-foreground" />
+                              </div>
+                              <div className="bg-muted text-muted-foreground px-3 py-2 rounded-lg max-w-sm text-sm">
+                                HealthTech Solutions update:
+                                <div className="mt-2 text-xs">
+                                  • Due diligence: 85% complete<br/>
+                                  • Last contact: 2 days ago<br/>
+                                  • Next meeting: Tomorrow 2PM<br/>
+                                  • Decision deadline: End of week
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          {/* Chat Input */}
+                          <div className="bg-black/5 backdrop-blur-sm rounded-xl p-1 border border-border">
+                            <div className="flex items-center gap-2 p-2">
+                              <div className="flex-1 relative">
+                                <input type="text" placeholder="Ask about contacts, deals, portfolio..." className="w-full bg-transparent text-foreground placeholder:text-muted-foreground text-xs focus:outline-none py-1 px-2" disabled />
+                              </div>
+                              <Button size="icon" variant="default" className="w-6 h-6 rounded-md">
+                                <ArrowRight className="w-3 h-3" />
+                              </Button>
+                            </div>
+                          </div>
+                          </div>
+                        </div>
+                      </div>
+                     </div>
+                  </div>
+                </Card>
+              </TabsContent>
+
+              <TabsContent value="ai-agents" className="mt-0">
+                <Card className="border border-border shadow-lg bg-card">
+                  <div className="p-6">
+                    <TabsList className="grid w-full grid-cols-4 mb-6">
+                      <TabsTrigger value="ai-crm" className="flex items-center gap-2">
+                        <Database className="w-4 h-4" />
+                        <span className="hidden sm:inline">AI CRM</span>
+                      </TabsTrigger>
+                      <TabsTrigger value="ai-agents" className="flex items-center gap-2">
+                        <Bot className="w-4 h-4" />
+                        <span className="hidden sm:inline">AI Agents</span>
+                      </TabsTrigger>
+                      <TabsTrigger value="files" className="flex items-center gap-2">
+                        <FileText className="w-4 h-4" />
+                        <span className="hidden sm:inline">Files</span>
+                      </TabsTrigger>
+                      <TabsTrigger value="integrations" className="flex items-center gap-2">
+                        <Settings className="w-4 h-4" />
+                        <span className="hidden sm:inline">Integrations</span>
+                      </TabsTrigger>
+                    </TabsList>
+                  
+                     <div className="grid lg:grid-cols-2 gap-8 items-stretch">
+                          <div className="space-y-6 flex flex-col justify-between border border-border rounded-xl p-6 h-full min-h-[500px]">
+                         <div>
+                           <h3 className="h3 mb-4 text-card-heading">AI Workers That Never Sleep</h3>
+                           <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
+                             Deploy specialized AI agents that work 24/7. From screening deals to managing portfolios, these autonomous agents handle your most repetitive tasks so you can focus on strategy and relationships.
+                           </p>
+                           
+                            <div className="space-y-3 mb-6">
+                              <h4 className="font-semibold text-foreground">Key Features</h4>
+                              <ul className="space-y-2 text-sm text-muted-foreground">
+                               <li className="flex items-start gap-2">
+                                 <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                                 <span><strong>24/7 autonomous operation</strong> - Agents work continuously without supervision</span>
+                               </li>
+                               <li className="flex items-start gap-2">
+                                 <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                                 <span><strong>Specialized agent types</strong> - Deal screeners, due diligence, portfolio monitors</span>
+                               </li>
+                               <li className="flex items-start gap-2">
+                                 <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                                 <span><strong>Custom workflow automation</strong> - Train agents for your specific investment processes</span>
+                               </li>
+                               <li className="flex items-start gap-2">
+                                 <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                                 <span><strong>Multi-platform orchestration</strong> - Agents work across all your connected tools</span>
+                               </li>
+                             </ul>
+                           </div>
+                           
+                           <Button variant="default">
+                             <Play className="h-4 w-4 mr-2" />
+                             Deploy Your First Agent
+                           </Button>
+                         </div>
+                      </div>
+                      <div className="lg:pl-8">
+                        <div className="relative rounded-2xl">
+                          <div className="pointer-events-none absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-cyan-500 rounded-[18px] blur-md opacity-15"></div>
+                           <div className="relative z-10 bg-card rounded-2xl p-6 h-[700px] flex flex-col shadow-none">
+                          
+                          {/* Agent Dashboard */}
+                          <div className="flex-1 space-y-4 mb-4 overflow-y-auto">
+                            <div className="flex items-center justify-between mb-4">
+                              <h4 className="font-semibold text-card-foreground">Active AI Agents</h4>
+                              <span className="text-xs bg-muted text-muted-foreground px-2 py-1 rounded-full">5 Running</span>
+                            </div>
+                            
+                            {/* Agent Cards */}
+                            <div className="space-y-3">
+                              <div className="bg-muted/50 rounded-lg p-3 border border-border">
+                                <div className="flex items-center gap-3 mb-2">
+                                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                                  <span className="text-sm font-medium text-card-foreground">Deal Screener Pro</span>
+                                  <span className="text-xs text-muted-foreground ml-auto">Active</span>
+                                </div>
+                                <p className="text-xs text-muted-foreground mb-2">Processed 247 deals today</p>
+                                <div className="flex gap-1">
+                                  <span className="text-xs bg-green-100 text-green-800 px-2 py-0.5 rounded">Healthcare</span>
+                                  <span className="text-xs bg-blue-100 text-blue-800 px-2 py-0.5 rounded">Series A+</span>
+                                </div>
+                              </div>
+                              
+                              <div className="bg-muted/50 rounded-lg p-3 border border-border">
+                                <div className="flex items-center gap-3 mb-2">
+                                  <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
+                                  <span className="text-sm font-medium text-card-foreground">Portfolio Monitor</span>
+                                  <span className="text-xs text-muted-foreground ml-auto">Working</span>
+                                </div>
+                                <p className="text-xs text-muted-foreground mb-2">Tracking 34 portfolio companies</p>
+                                <div className="flex gap-1">
+                                  <span className="text-xs bg-purple-100 text-purple-800 px-2 py-0.5 rounded">Quarterly</span>
+                                </div>
+                              </div>
+                              
+                              <div className="bg-muted/50 rounded-lg p-3 border border-border">
+                                <div className="flex items-center gap-3 mb-2">
+                                  <div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse"></div>
+                                  <span className="text-sm font-medium text-card-foreground">Due Diligence Bot</span>
+                                  <span className="text-xs text-muted-foreground ml-auto">Analyzing</span>
+                                </div>
+                                <p className="text-xs text-muted-foreground mb-2">Currently: HealthTech DD</p>
+                                <div className="flex gap-1">
+                                  <span className="text-xs bg-orange-100 text-orange-800 px-2 py-0.5 rounded">Financial</span>
+                                </div>
+                              </div>
+                              
+                              <div className="bg-muted/50 rounded-lg p-3 border border-border opacity-60">
+                                <div className="flex items-center gap-3 mb-2">
+                                  <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
+                                  <span className="text-sm font-medium text-card-foreground">Email Parser</span>
+                                  <span className="text-xs text-muted-foreground ml-auto">Idle</span>
+                                </div>
+                                <p className="text-xs text-muted-foreground mb-2">Ready for next batch</p>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          {/* Agent Control */}
+                          <div className="bg-black/5 backdrop-blur-sm rounded-xl p-1 border border-border">
+                            <div className="flex items-center gap-2 p-2">
+                              <div className="flex-1 relative">
+                                <input type="text" placeholder="Deploy new agent or command existing..." className="w-full bg-transparent text-card-foreground placeholder:text-muted-foreground text-xs focus:outline-none py-1 px-2" disabled />
+                              </div>
+                              <Button size="icon" variant="default" className="w-6 h-6 rounded-md">
+                                <Play className="w-3 h-3" />
+                              </Button>
+                            </div>
+                          </div>
+                          </div>
+                        </div>
+                      </div>
+                     </div>
+                  </div>
+                </Card>
+              </TabsContent>
+
+              <TabsContent value="files" className="mt-0">
+                <Card className="border border-border shadow-lg bg-card">
+                  <div className="p-6">
+                    <TabsList className="grid w-full grid-cols-4 mb-6">
+                      <TabsTrigger value="ai-crm" className="flex items-center gap-2">
+                        <Database className="w-4 h-4" />
+                        <span className="hidden sm:inline">AI CRM</span>
+                      </TabsTrigger>
+                      <TabsTrigger value="ai-agents" className="flex items-center gap-2">
+                        <Bot className="w-4 h-4" />
+                        <span className="hidden sm:inline">AI Agents</span>
+                      </TabsTrigger>
+                      <TabsTrigger value="files" className="flex items-center gap-2">
+                        <FileText className="w-4 h-4" />
+                        <span className="hidden sm:inline">Files</span>
+                      </TabsTrigger>
+                      <TabsTrigger value="integrations" className="flex items-center gap-2">
+                        <Settings className="w-4 h-4" />
+                        <span className="hidden sm:inline">Integrations</span>
+                      </TabsTrigger>
+                    </TabsList>
+                  
+                     <div className="grid lg:grid-cols-2 gap-8 items-stretch">
+                          <div className="space-y-6 flex flex-col justify-between border border-border rounded-xl p-6 h-full min-h-[500px]">
+                        <div>
+                          <h3 className="h3 mb-4 text-card-heading">Every File, Perfectly Organized</h3>
+                          <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
+                            Upload directly or connect Google Drive, Microsoft, Dropbox—IRIS reads every file and connects the dots. Auto-organized storage that links documents to contacts, powers your agents, and fuels smarter decisions.
+                          </p>
+                          
+                           <div className="space-y-3 mb-6">
+                             <h4 className="font-semibold text-muted-foreground">Key Features</h4>
+                             <ul className="space-y-2 text-sm text-muted-foreground">
+                              <li className="flex items-start gap-2">
+                                <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                                <span><strong>Universal file integration</strong> - Upload directly or sync cloud drives seamlessly</span>
+                              </li>
+                              <li className="flex items-start gap-2">
+                                <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                                <span><strong>Complete file intelligence</strong> - IRIS processes every document for full context</span>
+                              </li>
+                              <li className="flex items-start gap-2">
+                                <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                                <span><strong>Smart auto-organization</strong> - Files sorted and linked to relevant CRM contacts</span>
+                              </li>
+                              <li className="flex items-start gap-2">
+                                <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                                <span><strong>Agent-ready knowledge</strong> - All files available for automation and research tasks</span>
+                              </li>
+                            </ul>
+                          </div>
+                          
+                          <Button variant="default">
+                            <ArrowRight className="h-4 w-4 mr-2" />
+                            Learn More
+                          </Button>
+                        </div>
+                      </div>
+                      <div className="lg:pl-8">
+                        <div className="relative rounded-2xl">
+                          <div className="pointer-events-none absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-cyan-500 rounded-[18px] blur-md opacity-15"></div>
+                           <div className="relative z-10 bg-white rounded-2xl p-6 h-[500px] flex flex-col shadow-none">
+                          
+                          {/* File Explorer */}
+                          <div className="flex-1 space-y-4 mb-4 overflow-y-auto">
+                            <div className="flex items-center justify-between mb-4">
+                              <h4 className="font-semibold text-gray-900">Document Library</h4>
+                              <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">2,847 Files</span>
+                            </div>
+                            
+                            {/* Folder Structure */}
+                            <div className="space-y-2">
+                              <div className="flex items-center gap-3 p-2 bg-gray-50 rounded-lg">
+                                <Folder className="w-4 h-4 text-blue-500" />
+                                <span className="text-sm text-gray-900">Active Deals</span>
+                                <span className="text-xs text-gray-500 ml-auto">127 files</span>
+                              </div>
+                              
+                              <div className="flex items-center gap-3 p-2 hover:bg-gray-50 rounded-lg">
+                                <Folder className="w-4 h-4 text-purple-500" />
+                                <span className="text-sm text-gray-900">Due Diligence</span>
+                                <span className="text-xs text-gray-500 ml-auto">89 files</span>
+                              </div>
+                              
+                              <div className="flex items-center gap-3 p-2 hover:bg-gray-50 rounded-lg">
+                                <FileText className="w-4 h-4 text-green-500" />
+                                <span className="text-sm text-gray-900">HealthTech_Financials.pdf</span>
+                                <span className="text-xs text-gray-500 ml-auto">2.4 MB</span>
+                              </div>
+                              
+                              <div className="flex items-center gap-3 p-2 hover:bg-gray-50 rounded-lg">
+                                <FileText className="w-4 h-4 text-red-500" />
+                                <span className="text-sm text-gray-900">Market_Analysis_Q4.xlsx</span>
+                                <span className="text-xs text-gray-500 ml-auto">1.8 MB</span>
+                              </div>
+                              
+                              <div className="flex items-center gap-3 p-2 hover:bg-gray-50 rounded-lg">
+                                <FileText className="w-4 h-4 text-orange-500" />
+                                <span className="text-sm text-gray-900">Legal_Review_Summary.docx</span>
+                                <span className="text-xs text-gray-500 ml-auto">956 KB</span>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          {/* Search Bar */}
+                          <div className="bg-black/5 backdrop-blur-sm rounded-xl p-1 border border-gray-200">
+                            <div className="flex items-center gap-2 p-2">
+                              <div className="flex-1 relative">
+                                <input type="text" placeholder="Search files and documents..." className="w-full bg-transparent text-gray-700 placeholder:text-gray-400 text-xs focus:outline-none py-1 px-2" disabled />
+                              </div>
+                              <Button size="icon" variant="default" className="w-6 h-6 rounded-md">
+                                <Search className="w-3 h-3" />
+                              </Button>
+                            </div>
+                          </div>
+                          </div>
+                        </div>
+                      </div>
+                     </div>
+                  </div>
+                </Card>
+              </TabsContent>
+
+              <TabsContent value="integrations" className="mt-0">
+                <Card className="border border-gray-200 shadow-lg bg-white">
+                  <div className="p-6">
+                    <TabsList className="grid w-full grid-cols-4 mb-6">
+                      <TabsTrigger value="ai-crm" className="flex items-center gap-2">
+                        <Database className="w-4 h-4" />
+                        <span className="hidden sm:inline">AI CRM</span>
+                      </TabsTrigger>
+                      <TabsTrigger value="ai-agents" className="flex items-center gap-2">
+                        <Bot className="w-4 h-4" />
+                        <span className="hidden sm:inline">AI Agents</span>
+                      </TabsTrigger>
+                      <TabsTrigger value="files" className="flex items-center gap-2">
+                        <FileText className="w-4 h-4" />
+                        <span className="hidden sm:inline">Files</span>
+                      </TabsTrigger>
+                      <TabsTrigger value="integrations" className="flex items-center gap-2">
+                        <Settings className="w-4 h-4" />
+                        <span className="hidden sm:inline">Integrations</span>
+                      </TabsTrigger>
+                    </TabsList>
+                  
+                    <div className="grid lg:grid-cols-2 gap-8 items-stretch">
+                       <div className="space-y-6 flex flex-col justify-between border border-border rounded-xl p-6 h-full min-h-[500px]">
+                         <div>
+                           <h3 className="h3 mb-4 text-card-heading">One OS, Every Tool</h3>
+                           <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
+                             Connect your entire tech stack into one unified workspace. IRIS doesn't just pull data—she works directly in your connected tools, breaking down silos and orchestrating multi-platform workflows from a single command center.
+                           </p>
+                           
+                            <div className="space-y-3 mb-6">
+                              <h4 className="font-semibold text-muted-foreground">Key Features</h4>
+                             <ul className="space-y-2 text-sm text-muted-foreground">
+                               <li className="flex items-start gap-2">
+                                 <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                                 <span><strong>Complete tech stack integration</strong> - Connect every software you use</span>
+                               </li>
+                               <li className="flex items-start gap-2">
+                                 <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                                 <span><strong>Deep tool connectivity</strong> - IRIS works directly in connected platforms, not just through APIs</span>
+                               </li>
+                               <li className="flex items-start gap-2">
+                                 <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                                 <span><strong>Cross-platform workflows</strong> - Bridge data silos and create seamless pathways</span>
+                               </li>
+                               <li className="flex items-start gap-2">
+                                 <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                                 <span><strong>Multi-tool orchestration</strong> - Engage multiple systems to complete complex tasks</span>
+                               </li>
+                             </ul>
+                           </div>
+                           
+                            <Button variant="default">
+                              <Plug className="h-4 w-4 mr-2" />
+                              See Available Integrations
+                            </Button>
+                         </div>
+                      </div>
+                      <div className="lg:pl-8">
+                        <div className="relative rounded-2xl">
+                          <div className="pointer-events-none absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-cyan-500 rounded-[18px] blur-md opacity-15"></div>
+                          <div className="relative z-10 bg-white rounded-2xl p-6 h-[500px] flex flex-col shadow-none">
+                          
+                          {/* Integration Hub */}
+                          <div className="flex-1 space-y-4 mb-4 overflow-y-auto">
+                            <div className="flex items-center justify-between mb-4">
+                              <h4 className="font-semibold text-gray-900">Connected Services</h4>
+                              <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">12 Active</span>
+                            </div>
+                            
+                            {/* Integration Cards */}
+                            <div className="grid grid-cols-2 gap-3">
+                              <div className="bg-blue-50 rounded-lg p-3 border border-blue-200">
+                                <div className="flex items-center gap-2 mb-2">
+                                  <div className="w-6 h-6 bg-blue-500 rounded-sm"></div>
+                                  <span className="text-xs font-medium text-gray-900">Bloomberg</span>
+                                </div>
+                                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                              </div>
+                              
+                              <div className="bg-orange-50 rounded-lg p-3 border border-orange-200">
+                                <div className="flex items-center gap-2 mb-2">
+                                  <div className="w-6 h-6 bg-orange-500 rounded-sm"></div>
+                                  <span className="text-xs font-medium text-gray-900">PitchBook</span>
+                                </div>
+                                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                              </div>
+                              
+                              <div className="bg-purple-50 rounded-lg p-3 border border-purple-200">
+                                <div className="flex items-center gap-2 mb-2">
+                                  <div className="w-6 h-6 bg-purple-500 rounded-sm"></div>
+                                  <span className="text-xs font-medium text-gray-900">Outlook</span>
+                                </div>
+                                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                              </div>
+                              
+                              <div className="bg-green-50 rounded-lg p-3 border border-green-200">
+                                <div className="flex items-center gap-2 mb-2">
+                                  <div className="w-6 h-6 bg-green-500 rounded-sm"></div>
+                                  <span className="text-xs font-medium text-gray-900">Excel</span>
+                                </div>
+                                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                              </div>
+                              
+                              <div className="bg-red-50 rounded-lg p-3 border border-red-200">
+                                <div className="flex items-center gap-2 mb-2">
+                                  <div className="w-6 h-6 bg-red-500 rounded-sm"></div>
+                                  <span className="text-xs font-medium text-gray-900">CapIQ</span>
+                                </div>
+                                <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                              </div>
+                              
+                              <div className="bg-gray-50 rounded-lg p-3 border border-gray-200 flex items-center justify-center">
+                                <Plus className="w-4 h-4 text-gray-400" />
+                              </div>
+                            </div>
+                          </div>
+                          
+                          {/* Integration Search */}
+                          <div className="bg-black/5 backdrop-blur-sm rounded-xl p-1 border border-gray-200">
+                            <div className="flex items-center gap-2 p-2">
+                              <div className="flex-1 relative">
+                                <input type="text" placeholder="Add new integration..." className="w-full bg-transparent text-gray-700 placeholder:text-gray-400 text-xs focus:outline-none py-1 px-2" disabled />
+                              </div>
+                              <Button size="icon" variant="default" className="w-6 h-6 rounded-md">
+                                <Link className="w-3 h-3" />
+                              </Button>
+                            </div>
+                          </div>
+                          </div>
+                        </div>
+                      </div>
+                     </div>
+                  </div>
+                </Card>
+              </TabsContent>
+            </Tabs>
+          </div>
+        </section>
       </main>
 
 
