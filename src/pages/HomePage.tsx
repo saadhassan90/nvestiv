@@ -782,39 +782,39 @@ const HomePage = () => {
             {/* Meet IRIS Card */}
             <div className="w-full">
               <Card className="border border-border shadow-lg bg-card dark:bg-card/95 backdrop-blur-sm">
-                <div className="p-6 lg:p-8">
-                  <div className="grid lg:grid-cols-2 gap-12 items-center">
+                <div className="p-6">
+                  <div className="grid lg:grid-cols-2 gap-8 items-start">
                     {/* Left Content */}
-                    <div className="space-y-6">
+                    <div className="space-y-6 flex flex-col justify-start border border-border rounded-xl p-6">
                       <div>
                         <h3 className="h3 mb-4 text-card-heading">IRIS</h3>
                         <p className="text-lg leading-relaxed text-muted-foreground mb-6">
                           IRIS isn't just an analyst. She's the AI interface built for private markets.
                         </p>
                         
-                        <div className="space-y-4 mb-6">
+                        <div className="space-y-3 mb-6">
                           <ul className="space-y-2 text-sm text-muted-foreground">
                             <li className="flex items-start gap-2">
-                              <div className="w-1 h-1 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                              <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                               <span>Knows the context—family offices, fund managers, startups.</span>
                             </li>
                             <li className="flex items-start gap-2">
-                              <div className="w-1 h-1 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                              <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                               <span>Sees everything—emails, notes, cloud drives, data rooms, integrations.</span>
                             </li>
                             <li className="flex items-start gap-2">
-                              <div className="w-1 h-1 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                              <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                               <span>Acts across systems—inside Nvestiv and the tools you already use.</span>
                             </li>
                             <li className="flex items-start gap-2">
-                              <div className="w-1 h-1 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                              <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                               <span>Delivers one complete picture of your business, so you can act fast.</span>
                             </li>
                           </ul>
                         </div>
 
-                        <div className="mb-6">
-                          <h4 className="text-sm font-medium text-foreground mb-3">What IRIS can do:</h4>
+                        <div className="space-y-3 mb-6">
+                          <h4 className="font-semibold text-foreground">What IRIS can do:</h4>
                           <div className="flex flex-wrap gap-2">
                             <button className="px-3 py-2 text-xs bg-muted text-muted-foreground rounded-lg hover:bg-muted/80 transition-colors border border-border">
                               📊 Deal Screening
@@ -846,9 +846,9 @@ const HomePage = () => {
                           </div>
                         </div>
                         
-                        <Button variant="default" size="lg" className="mb-6 hover:scale-105 transition-all duration-300" asChild>
-                          <a href="https://iris.nvestiv.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 no-underline">
-                            <Bot className="h-5 w-5" />
+                        <Button variant="default" asChild>
+                          <a href="https://iris.nvestiv.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 no-underline text-white">
+                            <Bot className="h-4 w-4" />
                             Test Drive IRIS
                           </a>
                         </Button>
@@ -856,10 +856,15 @@ const HomePage = () => {
                     </div>
                     
                     {/* Right Image */}
-                    <div className="flex justify-center lg:justify-end">
-                      <div className="relative">
-                        <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-accent/10 to-primary/20 rounded-full blur-3xl opacity-30 dark:opacity-20"></div>
-                        <img src={irisCharacter} alt="IRIS AI Character" className="relative z-10 w-80 h-80 object-contain animate-fade-in hover:scale-105 transition-all duration-500" />
+                    <div className="lg:pl-8">
+                      <div className="relative rounded-2xl">
+                        <div className="pointer-events-none absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-cyan-500 rounded-[18px] blur-md opacity-15"></div>
+                        <div className="relative z-10 bg-card rounded-2xl p-6 h-[500px] flex items-center justify-center shadow-none">
+                          <div className="relative">
+                            <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-accent/10 to-primary/20 rounded-full blur-3xl opacity-30 dark:opacity-20"></div>
+                            <img src={irisCharacter} alt="IRIS AI Character" className="relative z-10 w-80 h-80 object-contain animate-fade-in hover:scale-105 transition-all duration-500" />
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
