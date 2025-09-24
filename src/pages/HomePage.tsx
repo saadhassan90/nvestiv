@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Database, Bot, Sparkles as SparklesIcon, Search, ArrowRight, ChevronDown, FolderOpen, Grid3X3, Settings, Users, FileText, Zap, Circle, TrendingUp, Plus, Folder, Link, Cpu, Calendar, LogIn, Plug, Play, BarChart3, Mail, AlertTriangle } from "lucide-react";
@@ -14,6 +14,32 @@ const HomePage = () => {
   const [agentsModalOpen, setAgentsModalOpen] = useState(false);
   const [irisModalOpen, setIrisModalOpen] = useState(false);
   const [isProductsOpen, setIsProductsOpen] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            video.play();
+          } else {
+            video.pause();
+            video.currentTime = 0; // Reset to beginning when out of view
+          }
+        });
+      },
+      { threshold: 0.5 } // Play when 50% of video is visible
+    );
+
+    observer.observe(video);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
   return <div className="min-h-screen bg-transparent">
       <Navigation />
       
@@ -1008,20 +1034,20 @@ const HomePage = () => {
                       </div>
                     </div>
                     
-                    {/* Right Image */}
+                    {/* Right Video */}
                     <div className="lg:pl-8 h-full">
                       <div className="relative rounded-2xl h-full">
                         <div className="pointer-events-none absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-cyan-500 rounded-[18px] blur-md opacity-15"></div>
                         <div className="relative z-10 bg-card rounded-2xl p-6 h-full min-h-[500px] flex items-center justify-center shadow-none">
-                          <div className="relative">
+                          <div className="relative w-full h-full flex items-center justify-center">
                             <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-accent/10 to-primary/20 rounded-full blur-3xl opacity-30 dark:opacity-20"></div>
                             <video 
+                              ref={videoRef}
                               src="https://cdn.midjourney.com/video/a6591682-b664-466b-b202-9f54adfa6618/3.mp4"
-                              autoPlay
-                              loop
+                              autoPlay={false}
                               muted
                               playsInline
-                              className="relative z-10 w-80 h-80 object-contain animate-fade-in hover:scale-105 transition-all duration-500 rounded-lg"
+                              className="relative z-10 w-full h-full max-w-[400px] max-h-[400px] object-contain animate-fade-in hover:scale-105 transition-all duration-500 rounded-lg"
                             />
                           </div>
                         </div>
