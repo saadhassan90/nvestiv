@@ -252,7 +252,7 @@ const HomePage = () => {
                      <div className="grid lg:grid-cols-2 gap-8 items-start">
                         <div className="space-y-6 flex flex-col justify-start border border-border rounded-xl p-8">
                         <div>
-                          <h3 className="h3 mb-4">The CRM That Updates Itself</h3>
+                          <h3 className="h3 mb-4 text-card-heading">The CRM That Updates Itself</h3>
                           <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
                             Every email, every interaction—IRIS reads it all and updates your CRM automatically. Just ask IRIS anything through voice or chat. No manual entry, ever.
                           </p>
@@ -396,7 +396,7 @@ const HomePage = () => {
                      <div className="grid lg:grid-cols-2 gap-8 items-start">
                         <div className="space-y-6 flex flex-col justify-start border border-border rounded-xl p-8">
                         <div>
-                           <h3 className="h3 mb-4">Speak Your Workflow Into Existence</h3>
+                           <h3 className="h3 mb-4 text-card-heading">Speak Your Workflow Into Existence</h3>
                            <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
                             Create custom AI agents using plain English. Tell IRIS what you need done, which tools to connect, and how—she builds the entire workflow for you. No code, no complexity.
                           </p>
@@ -539,7 +539,7 @@ const HomePage = () => {
                     <div className="grid lg:grid-cols-2 gap-8 items-start">
                        <div className="space-y-6 flex flex-col justify-start border border-slate-200 rounded-xl p-8">
                         <div>
-                           <h3 className="h3 mb-4">Your Files, Intelligently Connected</h3>
+                           <h3 className="h3 mb-4 text-card-heading">Your Files, Intelligently Connected</h3>
                            <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
                             Upload directly or connect Google Drive, Microsoft, Dropbox—IRIS reads every file and connects the dots. Auto-organized storage that links documents to contacts, powers your agents, and fuels smarter decisions.
                           </p>
@@ -667,7 +667,7 @@ const HomePage = () => {
                     <div className="grid lg:grid-cols-2 gap-8 items-start">
                        <div className="space-y-6 flex flex-col justify-start border border-slate-200 rounded-xl p-8">
                          <div>
-                           <h3 className="h3 mb-4">One OS, Every Tool</h3>
+                           <h3 className="h3 mb-4 text-card-heading">One OS, Every Tool</h3>
                            <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
                              Connect your entire tech stack into one unified workspace. IRIS doesn't just pull data—she works directly in your connected tools, breaking down silos and orchestrating multi-platform workflows from a single command center.
                            </p>
@@ -816,7 +816,7 @@ const HomePage = () => {
                     {/* Left Content */}
                     <div className="space-y-6">
                       <div>
-                        <h3 className="h3 mb-4 text-muted-foreground">Meet IRIS, your AI analyst</h3>
+                        <h3 className="h3 mb-4 text-card-heading">Meet IRIS, your AI analyst</h3>
                         <p className="text-lg leading-relaxed text-muted-foreground mb-6">
                           IRIS is your dedicated AI due diligence agent that transforms deal screening. She automates comprehensive analysis, flags potential risks, and benchmarks opportunities—giving you the clear, actionable insights you need to make faster, smarter investment decisions.
                         </p>

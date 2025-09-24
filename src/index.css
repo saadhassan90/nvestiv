@@ -96,7 +96,8 @@
     --brand-navy: 225 39% 8%; /* Deep Navy background */
     --brand-light-bg: 225 30% 12%; /* Light navy for cards */
     
-    /* Typography hierarchy tokens for dark mode */
+    /* Brand-specific text colors for dark mode */
+    --card-heading: 0 0% 31.4%; /* #505050 - Card headings (same in dark mode) */
     --text-display: 0 0% 95%; /* Main headlines */
     --text-primary: 0 0% 92%; /* Primary text */
     --text-secondary: 0 0% 70%; /* Secondary text */
@@ -358,6 +359,16 @@
   /* Perplexity-style Search Box */
   .search-box-perplexity {
     @apply w-full max-w-3xl mx-auto bg-background border border-border rounded-3xl shadow-sm hover:shadow-md transition-all duration-200 focus-within:shadow-lg focus-within:border-primary/50;
+  }
+
+  /* Card heading utility class */
+  .text-card-heading {
+    color: hsl(var(--card-heading));
+  }
+
+  /* Card heading utility class */
+  .text-card-heading {
+    color: hsl(var(--card-heading));
   }
 
   /* Perplexity-style Pills */
