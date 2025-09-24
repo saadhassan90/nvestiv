@@ -203,7 +203,7 @@ const HomePage = () => {
         <section className="w-full py-16" aria-labelledby="features-heading">
           <div className="">
             {/* Section Label */}
-            <div className="flex justify-center mb-8">
+            <div className="flex justify-center mb-6">
               <div className="relative inline-flex items-center gap-2 px-4 py-2 rounded-full bg-muted text-muted-foreground">
                 <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#3137fd] from-0% via-[#3137fd] via-70% to-[#3137fd]/10 to-100% p-[1px]">
                   <div className="h-full w-full rounded-full bg-muted"></div>
@@ -764,7 +764,7 @@ const HomePage = () => {
         <section className="w-full py-16" aria-labelledby="iris-heading">
           <div className="max-w-[1200px] mx-auto px-0">
              <div className="text-center mb-12 w-full">
-              <div className="flex justify-center mb-4">
+              <div className="flex justify-center mb-6">
                 <div className="relative inline-flex items-center gap-2 px-4 py-2 rounded-full bg-muted text-muted-foreground">
                   <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary from-0% via-primary via-70% to-primary/10 to-100% p-[1px]">
                     <div className="h-full w-full rounded-full bg-muted"></div>
