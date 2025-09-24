@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
-import { Database, Bot, Sparkles as SparklesIcon, Search, ArrowRight, ChevronDown, FolderOpen, Grid3X3, Settings, Users, FileText, Zap, Circle, TrendingUp, Plus, Folder, Link, Cpu, Calendar, LogIn, Plug, Play } from "lucide-react";
+import { Database, Bot, Sparkles as SparklesIcon, Search, ArrowRight, ChevronDown, FolderOpen, Grid3X3, Settings, Users, FileText, Zap, Circle, TrendingUp, Plus, Folder, Link, Cpu, Calendar, LogIn, Plug, Play, BarChart3, Mail, AlertTriangle } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { VideoBackground } from "@/components/VideoBackground";
@@ -816,32 +816,41 @@ const HomePage = () => {
                         <div className="space-y-3 mb-6">
                           <h4 className="font-semibold text-foreground">What IRIS can do:</h4>
                           <div className="flex flex-wrap gap-2">
-                            <button className="px-3 py-2 text-xs bg-muted text-muted-foreground rounded-lg hover:bg-muted/80 transition-colors border border-border">
-                              📊 Deal Screening
+                            <button className="px-3 py-2 text-xs bg-muted text-muted-foreground rounded-lg hover:bg-muted/80 transition-colors border border-border flex items-center gap-2">
+                              <BarChart3 className="h-3 w-3 text-gray-600" />
+                              Deal Screening
                             </button>
-                            <button className="px-3 py-2 text-xs bg-muted text-muted-foreground rounded-lg hover:bg-muted/80 transition-colors border border-border">
-                              📝 Memo Generation
+                            <button className="px-3 py-2 text-xs bg-muted text-muted-foreground rounded-lg hover:bg-muted/80 transition-colors border border-border flex items-center gap-2">
+                              <FileText className="h-3 w-3 text-gray-600" />
+                              Memo Generation
                             </button>
-                            <button className="px-3 py-2 text-xs bg-muted text-muted-foreground rounded-lg hover:bg-muted/80 transition-colors border border-border">
-                              📂 DataRoom Analysis
+                            <button className="px-3 py-2 text-xs bg-muted text-muted-foreground rounded-lg hover:bg-muted/80 transition-colors border border-border flex items-center gap-2">
+                              <Folder className="h-3 w-3 text-gray-600" />
+                              DataRoom Analysis
                             </button>
-                            <button className="px-3 py-2 text-xs bg-muted text-muted-foreground rounded-lg hover:bg-muted/80 transition-colors border border-border">
-                              📧 Email Parsing
+                            <button className="px-3 py-2 text-xs bg-muted text-muted-foreground rounded-lg hover:bg-muted/80 transition-colors border border-border flex items-center gap-2">
+                              <Mail className="h-3 w-3 text-gray-600" />
+                              Email Parsing
                             </button>
-                            <button className="px-3 py-2 text-xs bg-muted text-muted-foreground rounded-lg hover:bg-muted/80 transition-colors border border-border">
-                              📞 Meeting Notes
+                            <button className="px-3 py-2 text-xs bg-muted text-muted-foreground rounded-lg hover:bg-muted/80 transition-colors border border-border flex items-center gap-2">
+                              <Calendar className="h-3 w-3 text-gray-600" />
+                              Meeting Notes
                             </button>
-                            <button className="px-3 py-2 text-xs bg-muted text-muted-foreground rounded-lg hover:bg-muted/80 transition-colors border border-border">
-                              ⚡ Workflow Automation
+                            <button className="px-3 py-2 text-xs bg-muted text-muted-foreground rounded-lg hover:bg-muted/80 transition-colors border border-border flex items-center gap-2">
+                              <Zap className="h-3 w-3 text-gray-600" />
+                              Workflow Automation
                             </button>
-                            <button className="px-3 py-2 text-xs bg-muted text-muted-foreground rounded-lg hover:bg-muted/80 transition-colors border border-border">
-                              📈 Portfolio Insights
+                            <button className="px-3 py-2 text-xs bg-muted text-muted-foreground rounded-lg hover:bg-muted/80 transition-colors border border-border flex items-center gap-2">
+                              <TrendingUp className="h-3 w-3 text-gray-600" />
+                              Portfolio Insights
                             </button>
-                            <button className="px-3 py-2 text-xs bg-muted text-muted-foreground rounded-lg hover:bg-muted/80 transition-colors border border-border">
-                              🔎 Risk Flagging
+                            <button className="px-3 py-2 text-xs bg-muted text-muted-foreground rounded-lg hover:bg-muted/80 transition-colors border border-border flex items-center gap-2">
+                              <AlertTriangle className="h-3 w-3 text-gray-600" />
+                              Risk Flagging
                             </button>
-                            <button className="px-3 py-2 text-xs bg-muted text-muted-foreground rounded-lg hover:bg-muted/80 transition-colors border border-border">
-                              🤝 Matchmaking
+                            <button className="px-3 py-2 text-xs bg-muted text-muted-foreground rounded-lg hover:bg-muted/80 transition-colors border border-border flex items-center gap-2">
+                              <Users className="h-3 w-3 text-gray-600" />
+                              Matchmaking
                             </button>
                           </div>
                         </div>
