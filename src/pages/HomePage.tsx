@@ -787,23 +787,61 @@ const HomePage = () => {
                     {/* Left Content */}
                     <div className="space-y-6">
                       <div>
-                        <h3 className="h3 mb-4 text-card-heading">Meet IRIS, your AI analyst</h3>
-                        <div className="flex flex-wrap gap-3 mb-6">
-                          <span className="text-xs bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 px-3 py-1.5 rounded-full font-medium">
-                            AI Due Diligence
-                          </span>
-                          <span className="text-xs bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 px-3 py-1.5 rounded-full font-medium">
-                            Risk Analysis
-                          </span>
-                          <span className="text-xs bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 px-3 py-1.5 rounded-full font-medium">
-                            Deal Screening
-                          </span>
-                          <span className="text-xs bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-300 px-3 py-1.5 rounded-full font-medium">
-                            Benchmarking
-                          </span>
-                          <span className="text-xs bg-teal-100 dark:bg-teal-900/30 text-teal-800 dark:text-teal-300 px-3 py-1.5 rounded-full font-medium">
-                            Smart Insights
-                          </span>
+                        <h3 className="h3 mb-4 text-card-heading">Meet IRIS</h3>
+                        <p className="text-lg leading-relaxed text-muted-foreground mb-4">
+                          IRIS isn't just an analyst. She's the AI interface built for private markets.
+                        </p>
+                        
+                        <ul className="space-y-2 mb-6">
+                          <li className="flex items-start gap-3">
+                            <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0 mt-2"></div>
+                            <span className="text-sm text-foreground"><strong>Knows the context</strong>—family offices, fund managers, startups.</span>
+                          </li>
+                          <li className="flex items-start gap-3">
+                            <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0 mt-2"></div>
+                            <span className="text-sm text-foreground"><strong>Sees everything</strong>—emails, notes, cloud drives, data rooms, integrations.</span>
+                          </li>
+                          <li className="flex items-start gap-3">
+                            <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0 mt-2"></div>
+                            <span className="text-sm text-foreground"><strong>Acts across systems</strong>—inside Nvestiv and the tools you already use.</span>
+                          </li>
+                          <li className="flex items-start gap-3">
+                            <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0 mt-2"></div>
+                            <span className="text-sm text-foreground"><strong>Delivers one complete picture</strong> of your business, so you can act fast.</span>
+                          </li>
+                        </ul>
+
+                        <div className="mb-6">
+                          <h4 className="text-sm font-semibold text-foreground mb-3">What IRIS can do:</h4>
+                          <div className="flex flex-wrap gap-2">
+                            <span className="text-xs bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 px-3 py-1.5 rounded-full font-medium">
+                              📊 Deal Screening
+                            </span>
+                            <span className="text-xs bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 px-3 py-1.5 rounded-full font-medium">
+                              📝 Memo Generation
+                            </span>
+                            <span className="text-xs bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 px-3 py-1.5 rounded-full font-medium">
+                              📂 DataRoom Analysis
+                            </span>
+                            <span className="text-xs bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-300 px-3 py-1.5 rounded-full font-medium">
+                              📧 Email Parsing
+                            </span>
+                            <span className="text-xs bg-teal-100 dark:bg-teal-900/30 text-teal-800 dark:text-teal-300 px-3 py-1.5 rounded-full font-medium">
+                              📞 Meeting Notes
+                            </span>
+                            <span className="text-xs bg-pink-100 dark:bg-pink-900/30 text-pink-800 dark:text-pink-300 px-3 py-1.5 rounded-full font-medium">
+                              ⚡ Workflow Automation
+                            </span>
+                            <span className="text-xs bg-indigo-100 dark:bg-indigo-900/30 text-indigo-800 dark:text-indigo-300 px-3 py-1.5 rounded-full font-medium">
+                              📈 Portfolio Insights
+                            </span>
+                            <span className="text-xs bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-300 px-3 py-1.5 rounded-full font-medium">
+                              🔎 Risk Flagging
+                            </span>
+                            <span className="text-xs bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-300 px-3 py-1.5 rounded-full font-medium">
+                              🤝 Matchmaking
+                            </span>
+                          </div>
                         </div>
                         
                         <Button variant="default" size="lg" className="mb-6 hover:scale-105 transition-all duration-300" asChild>
