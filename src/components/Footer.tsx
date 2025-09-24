@@ -80,7 +80,7 @@ const Footer = () => {
             <div className="lg:col-span-2">
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
-                  <img src="/lovable-uploads/c6f05c4c-ee88-4c86-a4f7-98e6e90e6071.png" alt="Nvestiv Logo" className="h-8 w-8" />
+                  <img src="/lovable-uploads/c6f05c4c-ee88-4c86-a4f7-98e6e90e6071.png" alt="Nvestiv AI CRM for Private Investments Logo" className="h-8 w-8" />
                   <h2 className="text-2xl font-bold text-white font-harabara lowercase">
                     nvestiv
                   </h2>

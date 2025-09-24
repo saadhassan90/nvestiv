@@ -26,7 +26,7 @@ export function ThreeDCardDemo() {
                   New Incoming Email
                 </h1>
                 <div className="flex items-center gap-2">
-                  <img src={jordanAvatar} alt="Jordan Noah" className="w-5 h-5 sm:w-6 sm:h-6 rounded-full border-2 border-gray-200 dark:border-gray-600" />
+                  <img src={jordanAvatar} alt="Jordan Noah - Private Equity Investment Professional Profile" className="w-5 h-5 sm:w-6 sm:h-6 rounded-full border-2 border-gray-200 dark:border-gray-600" />
                   <span className="text-xs sm:text-sm text-neutral-500">from jordan.n@terraview.com</span>
                 </div>
               </div>
@@ -54,7 +54,7 @@ export function ThreeDCardDemo() {
             <div className="space-y-3">
               {/* Outlook API Header */}
               <div className="flex items-center gap-2">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/d/df/Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg" alt="Outlook" className="w-4 h-4" />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/df/Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg" alt="Microsoft Outlook Email Integration for AI Investment CRM" className="w-4 h-4" />
                 <span className="text-sm font-medium text-gray-600 dark:text-gray-400">Outlook API</span>
               </div>
 
@@ -108,7 +108,7 @@ export function ThreeDCardDemo() {
             <div className="space-y-3">
               {/* IRIS CRM Header */}
               <div className="flex items-center gap-2">
-                <img src="/lovable-uploads/f2431190-7d25-4418-8529-0fa8f1178f73.png" alt="IRIS CRM" className="w-4 h-4" />
+                <img src="/lovable-uploads/f2431190-7d25-4418-8529-0fa8f1178f73.png" alt="IRIS AI Agent for Investment Management and Deal Flow" className="w-4 h-4" />
                 <span className="text-sm font-medium text-gray-600 dark:text-gray-400">IRIS CRM Management</span>
               </div>
 
@@ -139,7 +139,7 @@ export function ThreeDCardDemo() {
                     <div className="flex-1 min-w-0 w-full">
                       <div className="flex items-center justify-center gap-2 mb-2 sm:justify-start">
                         <Link className="w-4 h-4 text-gray-500 flex-shrink-0" />
-                        <h3 className="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-1 break-words text-center sm:text-left">Associated File to <img src={jordanAvatar} alt="Jordan Noah" className="w-4 h-4 sm:w-5 sm:h-5 rounded-full border-2 border-gray-200 dark:border-gray-600 mx-1 flex-shrink-0" />Jordan Noah</h3>
+                        <h3 className="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-1 break-words text-center sm:text-left">Associated File to <img src={jordanAvatar} alt="Jordan Noah - Private Equity Professional Contact Profile" className="w-4 h-4 sm:w-5 sm:h-5 rounded-full border-2 border-gray-200 dark:border-gray-600 mx-1 flex-shrink-0" />Jordan Noah</h3>
                       </div>
                       <div className="flex flex-col items-center space-y-1 sm:flex-row sm:space-y-0 gap-2 sm:gap-4 w-full">
                         <p className="text-xs text-gray-500 dark:text-gray-400 break-words text-center sm:text-left">Uploaded file, summarized, and tagged to profile.</p>
@@ -166,7 +166,7 @@ export function ThreeDCardDemo() {
                       <div className="flex flex-col items-center space-y-1 sm:flex-row sm:space-y-0 gap-2 sm:gap-4 w-full">
                         <p className="text-xs text-gray-500 dark:text-gray-400 break-words text-center sm:text-left">Logical next step is to introduce Jordan to</p>
                         <div className="flex items-center gap-2 min-w-0">
-                          <img src={mishaAvatar} alt="Misha Fuentes" className="w-4 h-4 sm:w-5 sm:h-5 rounded-full border-2 border-gray-200 dark:border-gray-600 flex-shrink-0" />
+                          <img src={mishaAvatar} alt="Misha Fuentes - Family Office Investment Director Profile" className="w-4 h-4 sm:w-5 sm:h-5 rounded-full border-2 border-gray-200 dark:border-gray-600 flex-shrink-0" />
                           <span className="text-xs text-gray-600 dark:text-gray-400 truncate">Misha Fuentes @ Demarquay Family Office</span>
                         </div>
                       </div>

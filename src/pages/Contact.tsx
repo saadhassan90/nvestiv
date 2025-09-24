@@ -1,11 +1,14 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
+import { seoPages } from "@/lib/seo-config";
 import { Button } from "@/components/ui/button";
 import { Send } from "lucide-react";
 
 const Contact = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead {...seoPages.contact} />
       <Navigation />
       
       <main className="pt-24 md:pt-28 lg:pt-32 pb-12">

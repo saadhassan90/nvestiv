@@ -1,9 +1,12 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
+import { seoPages } from "@/lib/seo-config";
 
 const About = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead {...seoPages.about} />
       <Navigation />
       
       <main className="pt-24 md:pt-28 lg:pt-32 pb-12">

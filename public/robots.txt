@@ -12,3 +12,19 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+# Block admin and temporary files
+Disallow: /admin/
+Disallow: /tmp/
+Disallow: /_*
+Disallow: /*.json$
+
+# SEO-friendly allowances
+Allow: /ai-crm
+Allow: /about
+Allow: /contact
+Allow: /terms
+Allow: /privacy
+
+# Sitemap location
+Sitemap: https://nvestiv.com/sitemap.xml

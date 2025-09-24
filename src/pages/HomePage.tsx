@@ -7,6 +7,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { VideoBackground } from "@/components/VideoBackground";
 import Footer from "@/components/Footer";
 import Navigation from "@/components/Navigation";
+import SEOHead from "@/components/SEOHead";
+import { seoPages } from "@/lib/seo-config";
 import irisCharacter from "@/assets/iris-character.png";
 const HomePage = () => {
   console.log("HomePage component is rendering");
@@ -41,6 +43,7 @@ const HomePage = () => {
     };
   }, []);
   return <div className="min-h-screen bg-transparent">
+      <SEOHead {...seoPages.home} />
       <Navigation />
       
       {/* Main Content */}
@@ -1048,6 +1051,7 @@ const HomePage = () => {
                               muted
                               playsInline
                               className="relative z-10 w-full h-full object-contain animate-fade-in transition-all duration-500 rounded-lg"
+                              aria-label="IRIS AI agent demonstration video for private investment management"
                             />
                           </div>
                         </div>

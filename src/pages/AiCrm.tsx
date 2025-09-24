@@ -1,5 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
+import { seoPages } from "@/lib/seo-config";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Database, Bot, TrendingUp, Shield, Users, Zap, Target, BarChart3, ArrowRight, Play, Calendar } from "lucide-react";
@@ -7,6 +9,7 @@ import { Database, Bot, TrendingUp, Shield, Users, Zap, Target, BarChart3, Arrow
 const AiCrm = () => {
   return (
     <div className="min-h-screen relative">
+      <SEOHead {...seoPages.aiCrm} />
       <Navigation />
       
       {/* Hero Section */}

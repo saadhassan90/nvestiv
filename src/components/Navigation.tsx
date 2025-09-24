@@ -64,7 +64,7 @@ const Navigation = () => {
             <div className="flex-shrink-0 flex items-center space-x-3">
               <img 
                 src="/lovable-uploads/c6f05c4c-ee88-4c86-a4f7-98e6e90e6071.png" 
-                alt="Nvestiv Logo" 
+                alt="Nvestiv AI for Private Investments Platform Logo" 
                 className="h-8 w-8 md:h-10 md:w-10"
               />
               <h1 className="text-xl md:text-2xl font-bold text-foreground tracking-tight font-harabara lowercase">
