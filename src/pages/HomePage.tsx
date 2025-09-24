@@ -439,8 +439,11 @@ const HomePage = () => {
                                     <span className="text-xs font-medium text-foreground">IRIS</span>
                                     <span className="text-xs text-muted-foreground">12:36 PM</span>
                                   </div>
-                                  <div className="bg-muted rounded-2xl px-4 py-2">
-                                    <p className="text-sm text-foreground mb-2">Checking your calendar for Sept 30 - Oct 1...</p>
+                                   <div className="bg-muted rounded-2xl px-4 py-2">
+                                     <div className="flex items-center gap-2 px-3 py-2 mb-2 bg-muted/50 border border-dashed border-primary/30 rounded-lg">
+                                       <Calendar className="w-4 h-4 text-primary animate-pulse" />
+                                       <p className="text-sm text-muted-foreground italic">Checking your calendar for Sept 30 - Oct 1...</p>
+                                     </div>
                                     <p className="text-sm text-foreground mb-2">Your calendar is pretty full, but you're free the afternoon of Oct 1st. I'd recommend 2:30 PM - that gives you buffer time from your lunch meeting.</p>
                                     <p className="text-sm text-foreground font-medium">Should I send an email to Jason requesting a meeting?</p>
                                  </div>
