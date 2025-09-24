@@ -1047,7 +1047,7 @@ const HomePage = () => {
                               autoPlay={false}
                               muted
                               playsInline
-                              className="relative z-10 w-full h-full object-contain animate-fade-in hover:scale-105 transition-all duration-500 rounded-lg"
+                              className="relative z-10 w-full h-full object-contain animate-fade-in transition-all duration-500 rounded-lg"
                             />
                           </div>
                         </div>
