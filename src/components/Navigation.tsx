@@ -50,7 +50,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-1 left-1/2 transform -translate-x-1/2 z-50 w-full max-w-4xl px-4 sm:px-6 overflow-visible">
+    <nav className="fixed top-2 left-1/2 transform -translate-x-1/2 z-50 w-full max-w-4xl px-4 sm:px-6 overflow-visible">
       <div
         className={`navbar-floating transition-all duration-300 ${
           isScrolled
