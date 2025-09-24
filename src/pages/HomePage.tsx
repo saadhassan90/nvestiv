@@ -593,7 +593,7 @@ const HomePage = () => {
                       <div className="lg:pl-8">
                         <div className="relative rounded-2xl">
                           <div className="pointer-events-none absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-cyan-500 rounded-[18px] blur-md opacity-15"></div>
-                           <div className="relative z-10 bg-white rounded-2xl p-6 h-[500px] flex flex-col shadow-none">
+                           <div className="relative z-10 bg-white rounded-2xl p-6 h-[700px] flex flex-col shadow-none">
                           
                           {/* Agent Dashboard */}
                           <div className="flex-1 space-y-4 mb-4 overflow-y-auto">
@@ -731,7 +731,7 @@ const HomePage = () => {
                       <div className="lg:pl-8">
                         <div className="relative rounded-2xl">
                           <div className="pointer-events-none absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-cyan-500 rounded-[18px] blur-md opacity-15"></div>
-                           <div className="relative z-10 bg-white rounded-2xl p-6 h-[500px] flex flex-col shadow-none">
+                           <div className="relative z-10 bg-white rounded-2xl p-6 h-[700px] flex flex-col shadow-none">
                           
                           {/* File Explorer */}
                           <div className="flex-1 space-y-4 mb-4 overflow-y-auto">
@@ -854,7 +854,7 @@ const HomePage = () => {
                       <div className="lg:pl-8">
                         <div className="relative rounded-2xl">
                           <div className="pointer-events-none absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-cyan-500 rounded-[18px] blur-md opacity-15"></div>
-                          <div className="relative z-10 bg-white rounded-2xl p-6 h-[500px] flex flex-col shadow-none">
+                          <div className="relative z-10 bg-white rounded-2xl p-6 h-[700px] flex flex-col shadow-none">
                           
                           {/* Integration Hub */}
                           <div className="flex-1 space-y-4 mb-4 overflow-y-auto">
@@ -1423,7 +1423,7 @@ const HomePage = () => {
                       <div className="lg:pl-8">
                         <div className="relative rounded-2xl">
                           <div className="pointer-events-none absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-cyan-500 rounded-[18px] blur-md opacity-15"></div>
-                           <div className="relative z-10 bg-white rounded-2xl p-6 h-[500px] flex flex-col shadow-none">
+                           <div className="relative z-10 bg-white rounded-2xl p-6 h-[700px] flex flex-col shadow-none">
                           
                           {/* File Explorer */}
                           <div className="flex-1 space-y-4 mb-4 overflow-y-auto">
@@ -1546,7 +1546,7 @@ const HomePage = () => {
                       <div className="lg:pl-8">
                         <div className="relative rounded-2xl">
                           <div className="pointer-events-none absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-cyan-500 rounded-[18px] blur-md opacity-15"></div>
-                          <div className="relative z-10 bg-white rounded-2xl p-6 h-[500px] flex flex-col shadow-none">
+                          <div className="relative z-10 bg-white rounded-2xl p-6 h-[700px] flex flex-col shadow-none">
                           
                           {/* Integration Hub */}
                           <div className="flex-1 space-y-4 mb-4 overflow-y-auto">
