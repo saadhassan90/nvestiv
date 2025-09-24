@@ -242,8 +242,8 @@ const HomePage = () => {
                       </TabsTrigger>
                     </TabsList>
                   
-                     <div className="grid lg:grid-cols-2 gap-8 items-start">
-                         <div className="space-y-6 flex flex-col justify-start border border-border rounded-xl p-6">
+                     <div className="grid lg:grid-cols-2 gap-8 items-stretch">
+                          <div className="space-y-6 flex flex-col justify-between border border-border rounded-xl p-6 h-full min-h-[500px]">
                         <div>
                           <h3 className="h3 mb-4 text-card-heading">The CRM That Updates Itself</h3>
                           <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
@@ -381,8 +381,8 @@ const HomePage = () => {
                       </TabsTrigger>
                     </TabsList>
                   
-                     <div className="grid lg:grid-cols-2 gap-8 items-start">
-                        <div className="space-y-6 flex flex-col justify-start border border-border rounded-xl p-6">
+                     <div className="grid lg:grid-cols-2 gap-8 items-stretch">
+                        <div className="space-y-6 flex flex-col justify-between border border-border rounded-xl p-6 h-full min-h-[500px]">
                         <div>
                            <h3 className="h3 mb-4 text-card-heading">Speak Your Workflow Into Existence</h3>
                            <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
@@ -519,8 +519,8 @@ const HomePage = () => {
                       </TabsTrigger>
                     </TabsList>
                   
-                    <div className="grid lg:grid-cols-2 gap-8 items-start">
-                       <div className="space-y-6 flex flex-col justify-start border border-slate-200 rounded-xl p-6">
+                    <div className="grid lg:grid-cols-2 gap-8 items-stretch">
+                       <div className="space-y-6 flex flex-col justify-between border border-border rounded-xl p-6 h-full min-h-[500px]">
                         <div>
                            <h3 className="h3 mb-4 text-card-heading">Your Files, Intelligently Connected</h3>
                            <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
@@ -642,8 +642,8 @@ const HomePage = () => {
                       </TabsTrigger>
                     </TabsList>
                   
-                    <div className="grid lg:grid-cols-2 gap-8 items-start">
-                       <div className="space-y-6 flex flex-col justify-start border border-slate-200 rounded-xl p-6">
+                    <div className="grid lg:grid-cols-2 gap-8 items-stretch">
+                       <div className="space-y-6 flex flex-col justify-between border border-border rounded-xl p-6 h-full min-h-[500px]">
                          <div>
                            <h3 className="h3 mb-4 text-card-heading">One OS, Every Tool</h3>
                            <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
@@ -783,9 +783,9 @@ const HomePage = () => {
             <div className="w-full">
               <Card className="border border-border shadow-lg bg-card dark:bg-card/95 backdrop-blur-sm">
                 <div className="p-6">
-                  <div className="grid lg:grid-cols-2 gap-8 items-start">
+                  <div className="grid lg:grid-cols-2 gap-8 items-stretch">
                     {/* Left Content */}
-                    <div className="space-y-6 flex flex-col justify-start border border-border rounded-xl p-6">
+                    <div className="space-y-6 flex flex-col justify-between border border-border rounded-xl p-6 h-full min-h-[500px]">
                       <div>
                         <h3 className="h3 mb-4 text-card-heading">IRIS</h3>
                         <p className="text-lg leading-relaxed text-muted-foreground mb-6">
