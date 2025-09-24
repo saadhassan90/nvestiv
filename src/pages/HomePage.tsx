@@ -20,10 +20,7 @@ const HomePage = () => {
       {/* Main Content */}
       <main className="max-w-[1200px] mx-auto mt-24 px-4">
         {/* Hero Section */}
-        <VideoBackground 
-          videoUrl="https://cdn.midjourney.com/video/59ad271f-d702-49b6-b74f-ee4f4d2e5e86/3.mp4"
-          className="w-full h-[700px] rounded-3xl my-4 flex items-center justify-center"
-        >
+        <VideoBackground videoUrl="https://cdn.midjourney.com/video/59ad271f-d702-49b6-b74f-ee4f4d2e5e86/3.mp4" className="w-full h-[700px] rounded-3xl my-4 flex items-center justify-center">
           <section className="w-full px-8" aria-labelledby="hero-heading">
             
             {/* Request early access button */}
@@ -61,11 +58,7 @@ const HomePage = () => {
               <div className="bg-black/40 backdrop-blur-sm rounded-2xl border border-white/10 overflow-hidden">
                 {/* Input Area - Full Width at Top */}
                 <div className="p-4">
-                  <textarea 
-                    placeholder="Ask IRIS anything about private investments..." 
-                    className="w-full bg-transparent text-white placeholder:text-white/50 text-sm focus:outline-none resize-none min-h-[60px] max-h-[200px] py-3 px-3 overflow-y-auto"
-                    rows={2}
-                  />
+                  <textarea placeholder="Ask IRIS anything about private investments..." className="w-full bg-transparent text-white placeholder:text-white/50 text-sm focus:outline-none resize-none min-h-[60px] max-h-[200px] py-3 px-3 overflow-y-auto" rows={2} />
                 </div>
 
                 {/* Bottom Row - Side by Side Containers */}
@@ -351,12 +344,7 @@ const HomePage = () => {
                            <div className="bg-muted/50 backdrop-blur-sm rounded-xl p-1 border border-border">
                              <div className="flex items-center gap-2 p-2">
                                <div className="flex-1 relative">
-                                 <input 
-                                   type="text" 
-                                   placeholder="Ask IRIS something..." 
-                                   className="w-full bg-transparent text-foreground placeholder:text-muted-foreground text-xs focus:outline-none py-1 px-2" 
-                                   disabled
-                                 />
+                                 <input type="text" placeholder="Ask IRIS something..." className="w-full bg-transparent text-foreground placeholder:text-muted-foreground text-xs focus:outline-none py-1 px-2" disabled />
                               </div>
                               <Button size="icon" variant="default" className="w-8 h-8 rounded-lg">
                                 <ArrowRight className="w-3 h-3" />
@@ -494,12 +482,7 @@ const HomePage = () => {
                           <div className="bg-black/5 backdrop-blur-sm rounded-xl p-1 border border-gray-200">
                             <div className="flex items-center gap-2 p-2">
                               <div className="flex-1 relative">
-                                <input 
-                                  type="text" 
-                                  placeholder="Configure new agent..." 
-                                  className="w-full bg-transparent text-gray-700 placeholder:text-gray-400 text-xs focus:outline-none py-1 px-2" 
-                                  disabled
-                                />
+                                <input type="text" placeholder="Configure new agent..." className="w-full bg-transparent text-gray-700 placeholder:text-gray-400 text-xs focus:outline-none py-1 px-2" disabled />
                               </div>
                               <Button size="icon" variant="default" className="w-6 h-6 rounded-md">
                                 <Plus className="w-3 h-3" />
@@ -622,12 +605,7 @@ const HomePage = () => {
                           <div className="bg-black/5 backdrop-blur-sm rounded-xl p-1 border border-gray-200">
                             <div className="flex items-center gap-2 p-2">
                               <div className="flex-1 relative">
-                                <input 
-                                  type="text" 
-                                  placeholder="Search files and documents..." 
-                                  className="w-full bg-transparent text-gray-700 placeholder:text-gray-400 text-xs focus:outline-none py-1 px-2" 
-                                  disabled
-                                />
+                                <input type="text" placeholder="Search files and documents..." className="w-full bg-transparent text-gray-700 placeholder:text-gray-400 text-xs focus:outline-none py-1 px-2" disabled />
                               </div>
                               <Button size="icon" variant="default" className="w-6 h-6 rounded-md">
                                 <Search className="w-3 h-3" />
@@ -764,12 +742,7 @@ const HomePage = () => {
                           <div className="bg-black/5 backdrop-blur-sm rounded-xl p-1 border border-gray-200">
                             <div className="flex items-center gap-2 p-2">
                               <div className="flex-1 relative">
-                                <input 
-                                  type="text" 
-                                  placeholder="Add new integration..." 
-                                  className="w-full bg-transparent text-gray-700 placeholder:text-gray-400 text-xs focus:outline-none py-1 px-2" 
-                                  disabled
-                                />
+                                <input type="text" placeholder="Add new integration..." className="w-full bg-transparent text-gray-700 placeholder:text-gray-400 text-xs focus:outline-none py-1 px-2" disabled />
                               </div>
                               <Button size="icon" variant="default" className="w-6 h-6 rounded-md">
                                 <Link className="w-3 h-3" />
@@ -803,9 +776,7 @@ const HomePage = () => {
                 </div>
               </div>
               <h2 id="iris-heading" className="h2 mb-4">The Future is AI</h2>
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                Investors and Fund Managers using IRIS will easily surpass their competitors that fail to adapt to the rise of AI
-              </p>
+              
             </div>
 
             {/* Meet IRIS Card */}
@@ -821,12 +792,7 @@ const HomePage = () => {
                           IRIS is your dedicated AI due diligence agent that transforms deal screening. She automates comprehensive analysis, flags potential risks, and benchmarks opportunities—giving you the clear, actionable insights you need to make faster, smarter investment decisions.
                         </p>
                         
-                        <Button 
-                          variant="default" 
-                          size="lg" 
-                          className="mb-6 hover:scale-105 transition-all duration-300"
-                          asChild
-                        >
+                        <Button variant="default" size="lg" className="mb-6 hover:scale-105 transition-all duration-300" asChild>
                           <a href="https://iris.nvestiv.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 no-underline">
                             <Bot className="h-5 w-5" />
                             Test Drive IRIS
@@ -850,11 +816,7 @@ const HomePage = () => {
                     <div className="flex justify-center lg:justify-end">
                       <div className="relative">
                         <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-accent/10 to-primary/20 rounded-full blur-3xl opacity-30 dark:opacity-20"></div>
-                        <img 
-                          src={irisCharacter} 
-                          alt="IRIS AI Character" 
-                          className="relative z-10 w-80 h-80 object-contain animate-fade-in hover:scale-105 transition-all duration-500"
-                        />
+                        <img src={irisCharacter} alt="IRIS AI Character" className="relative z-10 w-80 h-80 object-contain animate-fade-in hover:scale-105 transition-all duration-500" />
                       </div>
                     </div>
                   </div>
