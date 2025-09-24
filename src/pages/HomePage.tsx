@@ -283,7 +283,7 @@ const HomePage = () => {
                       <div className="lg:pl-8">
                         <div className="relative rounded-2xl">
                           <div className="pointer-events-none absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-cyan-500 rounded-[18px] blur-md opacity-15"></div>
-                           <div className="relative z-10 bg-card rounded-2xl p-6 h-[500px] flex flex-col shadow-none">
+                           <div className="relative z-10 bg-card rounded-2xl p-6 h-[700px] flex flex-col shadow-none">
                           
                           {/* Chat History Container */}
                           <div className="flex-1 space-y-4 mb-4 overflow-y-auto">
@@ -320,25 +320,163 @@ const HomePage = () => {
                               </div>
                             </div>
                             
-                            {/* Contact Card */}
-                            <div className="flex justify-start">
-                               <div className="bg-gradient-to-br from-muted to-accent/30 border border-border rounded-lg p-2.5 max-w-[85%] shadow-sm hover:shadow-md transition-shadow">
-                                 <div className="flex items-center gap-2.5">
-                                   <div className="w-8 h-8 bg-gradient-to-br from-primary to-primary/80 rounded-lg flex items-center justify-center shadow-sm">
-                                     <span className="text-primary-foreground font-semibold text-xs">JO</span>
-                                   </div>
-                                   <div className="flex-1 min-w-0 space-y-0.5">
-                                     <h4 className="font-semibold text-sm text-foreground truncate leading-none">Jason Ozler</h4>
-                                     <p className="text-xs text-primary font-medium truncate leading-none">Partner @ Florida Health Ventures</p>
-                                     <p className="text-xs text-muted-foreground leading-none">Last contact: March 2024</p>
-                                   </div>
+                             {/* Contact Card */}
+                             <div className="flex justify-start">
+                                <div className="bg-gradient-to-br from-muted to-accent/30 border border-border rounded-lg p-2.5 max-w-[85%] shadow-sm hover:shadow-md transition-shadow">
+                                  <div className="flex items-center gap-2.5">
+                                    <div className="w-8 h-8 bg-gradient-to-br from-primary to-primary/80 rounded-lg flex items-center justify-center shadow-sm">
+                                      <span className="text-primary-foreground font-semibold text-xs">JO</span>
+                                    </div>
+                                    <div className="flex-1 min-w-0 space-y-0.5">
+                                      <h4 className="font-semibold text-sm text-foreground truncate leading-none">Jason Ozler</h4>
+                                      <p className="text-xs text-primary font-medium truncate leading-none">Partner @ Florida Health Ventures</p>
+                                      <p className="text-xs text-muted-foreground leading-none">Last contact: March 2024</p>
+                                    </div>
+                                  </div>
+                                  <div className="mt-2 pt-2 border-t border-border">
+                                    <p className="text-xs text-muted-foreground italic leading-tight">"Looking for healthcare PE opportunities in Southeast US markets"</p>
                                  </div>
-                                 <div className="mt-2 pt-2 border-t border-border">
-                                   <p className="text-xs text-muted-foreground italic leading-tight">"Looking for healthcare PE opportunities in Southeast US markets"</p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
+                               </div>
+                             </div>
+
+                             {/* User Message - Enrich */}
+                             <div className="flex justify-end gap-2">
+                               <div className="flex flex-col items-end max-w-[80%]">
+                                 <div className="flex items-center gap-2 mb-1">
+                                    <span className="text-xs text-muted-foreground">12:35 PM</span>
+                                    <span className="text-xs font-medium text-foreground">You</span>
+                                    <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
+                                      <span className="text-primary-foreground font-medium text-xs">Y</span>
+                                    </div>
+                                  </div>
+                                  <div className="bg-primary text-primary-foreground rounded-2xl px-4 py-2">
+                                    <p className="text-sm text-primary-foreground">Can you enrich what we know about Jason first?</p>
+                                 </div>
+                               </div>
+                             </div>
+
+                             {/* IRIS Response - Searching */}
+                             <div className="flex justify-start gap-2">
+                               <div className="flex flex-col items-start max-w-[85%]">
+                                 <div className="flex items-center gap-2 mb-1">
+                                    <div className="w-6 h-6 bg-muted rounded-full flex items-center justify-center">
+                                      <span className="text-muted-foreground font-medium text-xs">I</span>
+                                    </div>
+                                    <span className="text-xs font-medium text-foreground">IRIS</span>
+                                    <span className="text-xs text-muted-foreground">12:35 PM</span>
+                                  </div>
+                                  <div className="bg-muted rounded-2xl px-4 py-2">
+                                    <p className="text-sm text-foreground">Searching PitchBook and web sources for Jason Ozler...</p>
+                                 </div>
+                               </div>
+                             </div>
+
+                             {/* IRIS Response - Found Information */}
+                             <div className="flex justify-start gap-2">
+                               <div className="flex flex-col items-start max-w-[85%]">
+                                 <div className="flex items-center gap-2 mb-1">
+                                    <div className="w-6 h-6 bg-muted rounded-full flex items-center justify-center">
+                                      <span className="text-muted-foreground font-medium text-xs">I</span>
+                                    </div>
+                                    <span className="text-xs font-medium text-foreground">IRIS</span>
+                                    <span className="text-xs text-muted-foreground">12:35 PM</span>
+                                  </div>
+                                  <div className="bg-muted rounded-2xl px-4 py-2">
+                                    <p className="text-sm text-foreground mb-2 font-medium">Found updated information! Here's what I discovered:</p>
+                                    
+                                    <div className="space-y-3">
+                                      <div>
+                                        <p className="text-sm text-foreground font-medium mb-1">From PitchBook:</p>
+                                        <ul className="text-xs text-muted-foreground space-y-1 ml-2">
+                                          <li>• Recently promoted to Managing Partner (Aug 2024)</li>
+                                          <li>• Led 3 healthcare deals in past 6 months totaling $47M</li>
+                                          <li>• Focus: ASC rollups, urgent care platforms, behavioral health</li>
+                                          <li>• Active in Tampa Bay & Miami markets</li>
+                                        </ul>
+                                      </div>
+                                      
+                                      <div>
+                                        <p className="text-sm text-foreground font-medium mb-1">From web search:</p>
+                                        <ul className="text-xs text-muted-foreground space-y-1 ml-2">
+                                          <li>• Speaking at HealthTech Summit Miami - Oct 15</li>
+                                          <li>• Recent article in PE Hub about value-based care trends</li>
+                                          <li>• Sits on board of 2 portfolio companies in South Florida</li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                    
+                                    <p className="text-sm text-foreground mt-3 font-medium">I've updated Jason's CRM profile with all this intel. His investment thesis aligns well with your current pipeline.</p>
+                                 </div>
+                               </div>
+                             </div>
+
+                             {/* User Message - Miami Meeting */}
+                             <div className="flex justify-end gap-2">
+                               <div className="flex flex-col items-end max-w-[80%]">
+                                 <div className="flex items-center gap-2 mb-1">
+                                    <span className="text-xs text-muted-foreground">12:36 PM</span>
+                                    <span className="text-xs font-medium text-foreground">You</span>
+                                    <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
+                                      <span className="text-primary-foreground font-medium text-xs">Y</span>
+                                    </div>
+                                  </div>
+                                  <div className="bg-primary text-primary-foreground rounded-2xl px-4 py-2">
+                                    <p className="text-sm text-primary-foreground">I'm going to Miami Sept 30 for 2 days and need a meeting with Jason</p>
+                                 </div>
+                               </div>
+                             </div>
+
+                             {/* IRIS Response - Calendar Check */}
+                             <div className="flex justify-start gap-2">
+                               <div className="flex flex-col items-start max-w-[85%]">
+                                 <div className="flex items-center gap-2 mb-1">
+                                    <div className="w-6 h-6 bg-muted rounded-full flex items-center justify-center">
+                                      <span className="text-muted-foreground font-medium text-xs">I</span>
+                                    </div>
+                                    <span className="text-xs font-medium text-foreground">IRIS</span>
+                                    <span className="text-xs text-muted-foreground">12:36 PM</span>
+                                  </div>
+                                  <div className="bg-muted rounded-2xl px-4 py-2">
+                                    <p className="text-sm text-foreground mb-2">Checking your calendar for Sept 30 - Oct 1...</p>
+                                    <p className="text-sm text-foreground mb-2">Your calendar is pretty full, but you're free the afternoon of Oct 1st. I'd recommend 2:30 PM - that gives you buffer time from your lunch meeting.</p>
+                                    <p className="text-sm text-foreground font-medium">Should I send an email to Jason requesting a meeting?</p>
+                                 </div>
+                               </div>
+                             </div>
+
+                             {/* User Message - Yes */}
+                             <div className="flex justify-end gap-2">
+                               <div className="flex flex-col items-end max-w-[80%]">
+                                 <div className="flex items-center gap-2 mb-1">
+                                    <span className="text-xs text-muted-foreground">12:36 PM</span>
+                                    <span className="text-xs font-medium text-foreground">You</span>
+                                    <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
+                                      <span className="text-primary-foreground font-medium text-xs">Y</span>
+                                    </div>
+                                  </div>
+                                  <div className="bg-primary text-primary-foreground rounded-2xl px-4 py-2">
+                                    <p className="text-sm text-primary-foreground">Yes</p>
+                                 </div>
+                               </div>
+                             </div>
+
+                             {/* IRIS Response - Email Sent */}
+                             <div className="flex justify-start gap-2">
+                               <div className="flex flex-col items-start max-w-[85%]">
+                                 <div className="flex items-center gap-2 mb-1">
+                                    <div className="w-6 h-6 bg-muted rounded-full flex items-center justify-center">
+                                      <span className="text-muted-foreground font-medium text-xs">I</span>
+                                    </div>
+                                    <span className="text-xs font-medium text-foreground">IRIS</span>
+                                    <span className="text-xs text-muted-foreground">12:36 PM</span>
+                                  </div>
+                                  <div className="bg-muted rounded-2xl px-4 py-2">
+                                    <p className="text-sm text-foreground mb-2">Done! Just sent email to Jason. I will monitor your inbox and coordinate the meeting. I will let you know when something is on the books.</p>
+                                    <span className="inline-block bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-xs font-medium mt-2">✉️ Sent Email</span>
+                                 </div>
+                               </div>
+                             </div>
+                           </div>
                           
                           {/* Chat Widget */}
                            <div className="bg-muted/50 backdrop-blur-sm rounded-xl p-1 border border-border">
