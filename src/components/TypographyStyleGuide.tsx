@@ -113,16 +113,23 @@ const TypographyStyleGuide = () => {
         <Card>
           <CardHeader>
             <CardTitle>Buttons & Links</CardTitle>
-            <CardDescription>Only Primary and Secondary button variants - no blue, no underlines</CardDescription>
+            <CardDescription>Primary and Secondary button variants with distinct dark mode styling</CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">
             <div className="space-y-3">
-              <p className="text-small text-muted-foreground">Button Variants - Primary & Secondary Only</p>
+              <p className="text-small text-muted-foreground">Button Variants - Dark Mode Styling</p>
               <div className="flex flex-wrap gap-3">
                 <Button>Primary Action</Button>
                 <Button variant="secondary">Secondary Action</Button>
               </div>
-              <p className="text-xs text-muted-foreground">Note: Only primary and secondary variants are used in the current implementation</p>
+              <div className="mt-3 p-3 bg-muted/50 rounded-lg">
+                <p className="text-xs font-medium text-foreground mb-2">Dark Mode Button Styles:</p>
+                <ul className="text-xs text-muted-foreground space-y-1">
+                  <li>• Primary buttons: White background with dark text</li>
+                  <li>• Secondary buttons: Gray background with border</li>
+                  <li>• No blue buttons anywhere in the interface</li>
+                </ul>
+              </div>
             </div>
             <div>
               <p className="text-small text-muted-foreground mb-2">Link Text - No Underlines, No Blue</p>
