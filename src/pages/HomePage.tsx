@@ -790,7 +790,7 @@ const HomePage = () => {
         {/* IRIS AI Future Section */}
         <section className="w-full py-16" aria-labelledby="iris-heading">
           <div className="max-w-[1200px] mx-auto px-0">
-            <div className="text-center mb-12">
+             <div className="text-center mb-12 w-full">
               <div className="flex justify-center mb-4">
                 <div className="relative inline-flex items-center gap-2 px-4 py-2 rounded-full bg-muted text-muted-foreground">
                   <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary from-0% via-primary via-70% to-primary/10 to-100% p-[1px]">
@@ -809,7 +809,7 @@ const HomePage = () => {
             </div>
 
             {/* Meet IRIS Card */}
-            <div className="max-w-5xl mx-auto">
+            <div className="w-full">
               <Card className="border border-border shadow-lg bg-card dark:bg-card/95 backdrop-blur-sm">
                 <div className="p-8 lg:p-12">
                   <div className="grid lg:grid-cols-2 gap-12 items-center">
