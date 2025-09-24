@@ -377,7 +377,13 @@ const HomePage = () => {
                              {/* IRIS Response - Found Information */}
                              <div className="flex justify-start gap-2">
                                <div className="flex flex-col items-start max-w-[85%]">
-                                 
+                                 <div className="flex items-center gap-2 mb-1">
+                                    <div className="w-6 h-6 bg-muted rounded-full flex items-center justify-center">
+                                      <span className="text-muted-foreground font-medium text-xs">I</span>
+                                    </div>
+                                    <span className="text-xs font-medium text-foreground">IRIS</span>
+                                    <span className="text-xs text-muted-foreground">12:35 PM</span>
+                                  </div>
                                   <div className="bg-muted rounded-2xl px-4 py-2">
                                     <p className="text-sm text-foreground mb-2 font-medium">Found updated information! Here's what I discovered:</p>
                                     
