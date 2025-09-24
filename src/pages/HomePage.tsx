@@ -1038,7 +1038,7 @@ const HomePage = () => {
                     <div className="lg:pl-8 h-full">
                       <div className="relative rounded-2xl h-full">
                         <div className="pointer-events-none absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-cyan-500 rounded-[18px] blur-md opacity-15"></div>
-                        <div className="relative z-10 bg-card rounded-2xl h-full min-h-[500px] flex items-center justify-center shadow-none">
+                        <div className="relative z-10 bg-white rounded-2xl h-full min-h-[500px] flex items-center justify-center shadow-none">
                           <div className="relative w-full h-full flex items-center justify-center">
                             <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-accent/10 to-primary/20 rounded-full blur-3xl opacity-30 dark:opacity-20"></div>
                             <video 
@@ -1047,7 +1047,7 @@ const HomePage = () => {
                               autoPlay={false}
                               muted
                               playsInline
-                              className="relative z-10 w-full h-full max-w-[400px] max-h-[400px] object-contain animate-fade-in hover:scale-105 transition-all duration-500 rounded-lg"
+                              className="relative z-10 w-full h-full object-contain animate-fade-in hover:scale-105 transition-all duration-500 rounded-lg"
                             />
                           </div>
                         </div>
