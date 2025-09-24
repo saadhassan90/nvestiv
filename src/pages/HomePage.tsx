@@ -859,7 +859,7 @@ const HomePage = () => {
                     <div className="lg:pl-8">
                       <div className="relative rounded-2xl">
                         <div className="pointer-events-none absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-cyan-500 rounded-[18px] blur-md opacity-15"></div>
-                        <div className="relative z-10 bg-card rounded-2xl p-6 h-[500px] flex items-center justify-center shadow-none">
+                        <div className="relative z-10 bg-card rounded-2xl p-6 h-full min-h-[500px] flex items-center justify-center shadow-none">
                           <div className="relative">
                             <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-accent/10 to-primary/20 rounded-full blur-3xl opacity-30 dark:opacity-20"></div>
                             <img src={irisCharacter} alt="IRIS AI Character" className="relative z-10 w-80 h-80 object-contain animate-fade-in hover:scale-105 transition-all duration-500" />
