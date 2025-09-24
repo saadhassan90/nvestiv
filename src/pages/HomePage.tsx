@@ -788,9 +788,23 @@ const HomePage = () => {
                     <div className="space-y-6">
                       <div>
                         <h3 className="h3 mb-4 text-card-heading">Meet IRIS, your AI analyst</h3>
-                        <p className="text-lg leading-relaxed text-muted-foreground mb-6">
-                          IRIS is your dedicated AI due diligence agent that transforms deal screening. She automates comprehensive analysis, flags potential risks, and benchmarks opportunities—giving you the clear, actionable insights you need to make faster, smarter investment decisions.
-                        </p>
+                        <div className="flex flex-wrap gap-3 mb-6">
+                          <span className="text-xs bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 px-3 py-1.5 rounded-full font-medium">
+                            AI Due Diligence
+                          </span>
+                          <span className="text-xs bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 px-3 py-1.5 rounded-full font-medium">
+                            Risk Analysis
+                          </span>
+                          <span className="text-xs bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 px-3 py-1.5 rounded-full font-medium">
+                            Deal Screening
+                          </span>
+                          <span className="text-xs bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-300 px-3 py-1.5 rounded-full font-medium">
+                            Benchmarking
+                          </span>
+                          <span className="text-xs bg-teal-100 dark:bg-teal-900/30 text-teal-800 dark:text-teal-300 px-3 py-1.5 rounded-full font-medium">
+                            Smart Insights
+                          </span>
+                        </div>
                         
                         <Button variant="default" size="lg" className="mb-6 hover:scale-105 transition-all duration-300" asChild>
                           <a href="https://iris.nvestiv.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 no-underline">
