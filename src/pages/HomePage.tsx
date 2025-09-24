@@ -786,84 +786,85 @@ const HomePage = () => {
             </Tabs>
           </div>
         </section>
-      </main>
 
-      {/* IRIS AI Future Section */}
-      <section className="w-full py-16 bg-background" aria-labelledby="iris-heading">
-        <div className="max-w-[1200px] mx-auto px-4">
-          <div className="text-center mb-12">
-            <div className="flex justify-center mb-4">
-              <div className="relative inline-flex items-center gap-2 px-4 py-2 rounded-full bg-muted text-muted-foreground">
-                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary from-0% via-primary via-70% to-primary/10 to-100% p-[1px]">
-                  <div className="h-full w-full rounded-full bg-muted"></div>
-                </div>
-                <div className="relative z-10 flex items-center gap-2">
-                  <Bot className="w-4 h-4" />
-                  <span className="text-sm font-medium">IRIS</span>
+        {/* IRIS AI Future Section */}
+        <section className="w-full py-16" aria-labelledby="iris-heading">
+          <div className="max-w-[1200px] mx-auto px-4">
+            <div className="text-center mb-12">
+              <div className="flex justify-center mb-4">
+                <div className="relative inline-flex items-center gap-2 px-4 py-2 rounded-full bg-muted text-muted-foreground">
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary from-0% via-primary via-70% to-primary/10 to-100% p-[1px]">
+                    <div className="h-full w-full rounded-full bg-muted"></div>
+                  </div>
+                  <div className="relative z-10 flex items-center gap-2">
+                    <Bot className="w-4 h-4" />
+                    <span className="text-sm font-medium">IRIS</span>
+                  </div>
                 </div>
               </div>
+              <h2 id="iris-heading" className="h2 mb-4">The Future is AI</h2>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                Investors and Fund Managers using IRIS will easily surpass their competitors that fail to adapt to the rise of AI
+              </p>
             </div>
-            <h2 id="iris-heading" className="h2 mb-4">The Future is AI</h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Investors and Fund Managers using IRIS will easily surpass their competitors that fail to adapt to the rise of AI
-            </p>
-          </div>
 
-          {/* Meet IRIS Card */}
-          <div className="max-w-5xl mx-auto">
-            <Card className="border border-border shadow-lg bg-card dark:bg-card/95 backdrop-blur-sm">
-              <div className="p-8 lg:p-12">
-                <div className="grid lg:grid-cols-2 gap-12 items-center">
-                  {/* Left Content */}
-                  <div className="space-y-6">
-                    <div>
-                      <h3 className="h3 mb-4 text-muted-foreground">Meet IRIS, your AI analyst</h3>
-                      <p className="text-lg leading-relaxed text-muted-foreground mb-6">
-                        IRIS is your dedicated AI due diligence agent that transforms deal screening. She automates comprehensive analysis, flags potential risks, and benchmarks opportunities—giving you the clear, actionable insights you need to make faster, smarter investment decisions.
-                      </p>
-                      
-                      <Button 
-                        variant="default" 
-                        size="lg" 
-                        className="mb-6 hover:scale-105 transition-all duration-300"
-                        asChild
-                      >
-                        <a href="https://iris.nvestiv.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 no-underline">
-                          <Bot className="h-5 w-5" />
-                          Test Drive IRIS
-                        </a>
-                      </Button>
-                      
-                      <div className="space-y-3">
-                        <div className="flex items-center gap-3">
-                          <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0"></div>
-                          <span className="text-sm text-foreground font-medium">Free during BETA</span>
-                        </div>
-                        <div className="flex items-center gap-3">
-                          <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0"></div>
-                          <span className="text-sm text-foreground font-medium">Customized to your mandates</span>
+            {/* Meet IRIS Card */}
+            <div className="max-w-5xl mx-auto">
+              <Card className="border border-border shadow-lg bg-card dark:bg-card/95 backdrop-blur-sm">
+                <div className="p-8 lg:p-12">
+                  <div className="grid lg:grid-cols-2 gap-12 items-center">
+                    {/* Left Content */}
+                    <div className="space-y-6">
+                      <div>
+                        <h3 className="h3 mb-4 text-muted-foreground">Meet IRIS, your AI analyst</h3>
+                        <p className="text-lg leading-relaxed text-muted-foreground mb-6">
+                          IRIS is your dedicated AI due diligence agent that transforms deal screening. She automates comprehensive analysis, flags potential risks, and benchmarks opportunities—giving you the clear, actionable insights you need to make faster, smarter investment decisions.
+                        </p>
+                        
+                        <Button 
+                          variant="default" 
+                          size="lg" 
+                          className="mb-6 hover:scale-105 transition-all duration-300"
+                          asChild
+                        >
+                          <a href="https://iris.nvestiv.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 no-underline">
+                            <Bot className="h-5 w-5" />
+                            Test Drive IRIS
+                          </a>
+                        </Button>
+                        
+                        <div className="space-y-3">
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0"></div>
+                            <span className="text-sm text-foreground font-medium">Free during BETA</span>
+                          </div>
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0"></div>
+                            <span className="text-sm text-foreground font-medium">Customized to your mandates</span>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  
-                  {/* Right Image */}
-                  <div className="flex justify-center lg:justify-end">
-                    <div className="relative">
-                      <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-accent/10 to-primary/20 rounded-full blur-3xl opacity-30 dark:opacity-20"></div>
-                      <img 
-                        src={irisCharacter} 
-                        alt="IRIS AI Character" 
-                        className="relative z-10 w-80 h-80 object-contain animate-fade-in hover:scale-105 transition-all duration-500"
-                      />
+                    
+                    {/* Right Image */}
+                    <div className="flex justify-center lg:justify-end">
+                      <div className="relative">
+                        <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-accent/10 to-primary/20 rounded-full blur-3xl opacity-30 dark:opacity-20"></div>
+                        <img 
+                          src={irisCharacter} 
+                          alt="IRIS AI Character" 
+                          className="relative z-10 w-80 h-80 object-contain animate-fade-in hover:scale-105 transition-all duration-500"
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </Card>
+              </Card>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </main>
+
 
       {/* Modals */}
       {/* CRM Modal */}
