@@ -787,10 +787,64 @@ const HomePage = () => {
                     {/* Left Content */}
                     <div className="space-y-6">
                       <div>
-                        <h3 className="h3 mb-4 text-card-heading">Meet IRIS, your AI analyst</h3>
+                        <h3 className="h3 mb-4 text-card-heading">IRIS</h3>
                         <p className="text-lg leading-relaxed text-muted-foreground mb-6">
-                          IRIS is your dedicated AI due diligence agent that transforms deal screening. She automates comprehensive analysis, flags potential risks, and benchmarks opportunities—giving you the clear, actionable insights you need to make faster, smarter investment decisions.
+                          IRIS isn't just an analyst. She's the AI interface built for private markets.
                         </p>
+                        
+                        <div className="space-y-4 mb-6">
+                          <ul className="space-y-2 text-sm text-muted-foreground">
+                            <li className="flex items-start gap-2">
+                              <div className="w-1 h-1 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                              <span>Knows the context—family offices, fund managers, startups.</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <div className="w-1 h-1 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                              <span>Sees everything—emails, notes, cloud drives, data rooms, integrations.</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <div className="w-1 h-1 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                              <span>Acts across systems—inside Nvestiv and the tools you already use.</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <div className="w-1 h-1 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                              <span>Delivers one complete picture of your business, so you can act fast.</span>
+                            </li>
+                          </ul>
+                        </div>
+
+                        <div className="mb-6">
+                          <h4 className="text-sm font-medium text-foreground mb-3">What IRIS can do:</h4>
+                          <div className="flex flex-wrap gap-2">
+                            <button className="px-3 py-2 text-xs bg-muted text-muted-foreground rounded-lg hover:bg-muted/80 transition-colors border border-border">
+                              📊 Deal Screening
+                            </button>
+                            <button className="px-3 py-2 text-xs bg-muted text-muted-foreground rounded-lg hover:bg-muted/80 transition-colors border border-border">
+                              📝 Memo Generation
+                            </button>
+                            <button className="px-3 py-2 text-xs bg-muted text-muted-foreground rounded-lg hover:bg-muted/80 transition-colors border border-border">
+                              📂 DataRoom Analysis
+                            </button>
+                            <button className="px-3 py-2 text-xs bg-muted text-muted-foreground rounded-lg hover:bg-muted/80 transition-colors border border-border">
+                              📧 Email Parsing
+                            </button>
+                            <button className="px-3 py-2 text-xs bg-muted text-muted-foreground rounded-lg hover:bg-muted/80 transition-colors border border-border">
+                              📞 Meeting Notes
+                            </button>
+                            <button className="px-3 py-2 text-xs bg-muted text-muted-foreground rounded-lg hover:bg-muted/80 transition-colors border border-border">
+                              ⚡ Workflow Automation
+                            </button>
+                            <button className="px-3 py-2 text-xs bg-muted text-muted-foreground rounded-lg hover:bg-muted/80 transition-colors border border-border">
+                              📈 Portfolio Insights
+                            </button>
+                            <button className="px-3 py-2 text-xs bg-muted text-muted-foreground rounded-lg hover:bg-muted/80 transition-colors border border-border">
+                              🔎 Risk Flagging
+                            </button>
+                            <button className="px-3 py-2 text-xs bg-muted text-muted-foreground rounded-lg hover:bg-muted/80 transition-colors border border-border">
+                              🤝 Matchmaking
+                            </button>
+                          </div>
+                        </div>
                         
                         <Button variant="default" size="lg" className="mb-6 hover:scale-105 transition-all duration-300" asChild>
                           <a href="https://iris.nvestiv.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 no-underline">
@@ -798,17 +852,6 @@ const HomePage = () => {
                             Test Drive IRIS
                           </a>
                         </Button>
-                        
-                        <div className="space-y-3">
-                          <div className="flex items-center gap-3">
-                            <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0"></div>
-                            <span className="text-sm text-foreground font-medium">Free during BETA</span>
-                          </div>
-                          <div className="flex items-center gap-3">
-                            <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0"></div>
-                            <span className="text-sm text-foreground font-medium">Customized to your mandates</span>
-                          </div>
-                        </div>
                       </div>
                     </div>
                     
