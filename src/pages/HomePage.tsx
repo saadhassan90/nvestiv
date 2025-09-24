@@ -222,8 +222,8 @@ const HomePage = () => {
             <Tabs defaultValue="ai-crm" className="w-full">
               <TabsContent value="ai-crm" className="mt-0">
                 <Card className="border border-border shadow-lg bg-card">
-                  <div className="p-8">
-                    <TabsList className="grid w-full grid-cols-4 mb-8">
+                  <div className="p-6">
+                    <TabsList className="grid w-full grid-cols-4 mb-6">
                       <TabsTrigger value="ai-crm" className="flex items-center gap-2">
                         <Database className="w-4 h-4" />
                         <span className="hidden sm:inline">AI CRM</span>
@@ -243,7 +243,7 @@ const HomePage = () => {
                     </TabsList>
                   
                      <div className="grid lg:grid-cols-2 gap-8 items-start">
-                        <div className="space-y-6 flex flex-col justify-start border border-border rounded-xl p-8">
+                         <div className="space-y-6 flex flex-col justify-start border border-border rounded-xl p-6">
                         <div>
                           <h3 className="h3 mb-4 text-card-heading">The CRM That Updates Itself</h3>
                           <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
@@ -283,7 +283,7 @@ const HomePage = () => {
                       <div className="lg:pl-8">
                         <div className="relative rounded-2xl">
                           <div className="pointer-events-none absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-cyan-500 rounded-[18px] blur-md opacity-15"></div>
-                           <div className="relative z-10 bg-card rounded-2xl p-8 h-[500px] flex flex-col shadow-none">
+                           <div className="relative z-10 bg-card rounded-2xl p-6 h-[500px] flex flex-col shadow-none">
                           
                           {/* Chat History Container */}
                           <div className="flex-1 space-y-4 mb-4 overflow-y-auto">
@@ -361,8 +361,8 @@ const HomePage = () => {
 
               <TabsContent value="ai-agents" className="mt-0">
                 <Card className="border border-border shadow-lg bg-card">
-                  <div className="p-8">
-                    <TabsList className="grid w-full grid-cols-4 mb-8">
+                  <div className="p-6">
+                    <TabsList className="grid w-full grid-cols-4 mb-6">
                       <TabsTrigger value="ai-crm" className="flex items-center gap-2">
                         <Database className="w-4 h-4" />
                         <span className="hidden sm:inline">AI CRM</span>
@@ -382,7 +382,7 @@ const HomePage = () => {
                     </TabsList>
                   
                      <div className="grid lg:grid-cols-2 gap-8 items-start">
-                        <div className="space-y-6 flex flex-col justify-start border border-border rounded-xl p-8">
+                        <div className="space-y-6 flex flex-col justify-start border border-border rounded-xl p-6">
                         <div>
                            <h3 className="h3 mb-4 text-card-heading">Speak Your Workflow Into Existence</h3>
                            <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
@@ -420,7 +420,7 @@ const HomePage = () => {
                       <div className="lg:pl-8">
                         <div className="relative rounded-2xl">
                           <div className="pointer-events-none absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-cyan-500 rounded-[18px] blur-md opacity-15"></div>
-                           <div className="relative z-10 bg-white rounded-2xl p-8 h-[500px] flex flex-col shadow-none">
+                           <div className="relative z-10 bg-white rounded-2xl p-6 h-[500px] flex flex-col shadow-none">
                           
                           {/* Agent Dashboard */}
                           <div className="flex-1 space-y-4 mb-4 overflow-y-auto">
@@ -499,8 +499,8 @@ const HomePage = () => {
 
               <TabsContent value="files" className="mt-0">
                 <Card className="border border-gray-200 shadow-lg bg-white">
-                  <div className="p-8">
-                    <TabsList className="grid w-full grid-cols-4 mb-8">
+                  <div className="p-6">
+                    <TabsList className="grid w-full grid-cols-4 mb-6">
                       <TabsTrigger value="ai-crm" className="flex items-center gap-2">
                         <Database className="w-4 h-4" />
                         <span className="hidden sm:inline">AI CRM</span>
@@ -520,7 +520,7 @@ const HomePage = () => {
                     </TabsList>
                   
                     <div className="grid lg:grid-cols-2 gap-8 items-start">
-                       <div className="space-y-6 flex flex-col justify-start border border-slate-200 rounded-xl p-8">
+                       <div className="space-y-6 flex flex-col justify-start border border-slate-200 rounded-xl p-6">
                         <div>
                            <h3 className="h3 mb-4 text-card-heading">Your Files, Intelligently Connected</h3>
                            <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
@@ -558,7 +558,7 @@ const HomePage = () => {
                       <div className="lg:pl-8">
                         <div className="relative rounded-2xl">
                           <div className="pointer-events-none absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-cyan-500 rounded-[18px] blur-md opacity-15"></div>
-                           <div className="relative z-10 bg-white rounded-2xl p-8 h-[500px] flex flex-col shadow-none">
+                           <div className="relative z-10 bg-white rounded-2xl p-6 h-[500px] flex flex-col shadow-none">
                           
                           {/* File Explorer */}
                           <div className="flex-1 space-y-4 mb-4 overflow-y-auto">
@@ -622,8 +622,8 @@ const HomePage = () => {
 
               <TabsContent value="integrations" className="mt-0">
                 <Card className="border border-gray-200 shadow-lg bg-white">
-                  <div className="p-8">
-                    <TabsList className="grid w-full grid-cols-4 mb-8">
+                  <div className="p-6">
+                    <TabsList className="grid w-full grid-cols-4 mb-6">
                       <TabsTrigger value="ai-crm" className="flex items-center gap-2">
                         <Database className="w-4 h-4" />
                         <span className="hidden sm:inline">AI CRM</span>
@@ -643,7 +643,7 @@ const HomePage = () => {
                     </TabsList>
                   
                     <div className="grid lg:grid-cols-2 gap-8 items-start">
-                       <div className="space-y-6 flex flex-col justify-start border border-slate-200 rounded-xl p-8">
+                       <div className="space-y-6 flex flex-col justify-start border border-slate-200 rounded-xl p-6">
                          <div>
                            <h3 className="h3 mb-4 text-card-heading">One OS, Every Tool</h3>
                            <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
@@ -681,7 +681,7 @@ const HomePage = () => {
                       <div className="lg:pl-8">
                         <div className="relative rounded-2xl">
                           <div className="pointer-events-none absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-cyan-500 rounded-[18px] blur-md opacity-15"></div>
-                          <div className="relative z-10 bg-white rounded-2xl p-8 h-[500px] flex flex-col shadow-none">
+                          <div className="relative z-10 bg-white rounded-2xl p-6 h-[500px] flex flex-col shadow-none">
                           
                           {/* Integration Hub */}
                           <div className="flex-1 space-y-4 mb-4 overflow-y-auto">
@@ -782,7 +782,7 @@ const HomePage = () => {
             {/* Meet IRIS Card */}
             <div className="w-full">
               <Card className="border border-border shadow-lg bg-card dark:bg-card/95 backdrop-blur-sm">
-                <div className="p-8 lg:p-12">
+                <div className="p-6 lg:p-8">
                   <div className="grid lg:grid-cols-2 gap-12 items-center">
                     {/* Left Content */}
                     <div className="space-y-6">

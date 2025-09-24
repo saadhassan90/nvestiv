@@ -186,6 +186,65 @@ const TypographyStyleGuide = () => {
 
       {/* Brand Component Styles */}
       <section className="space-y-6">
+        <h2 className="text-foreground">Card UI Principles & Standards</h2>
+        <Card>
+          <CardHeader>
+            <CardTitle>Consistent Card Design</CardTitle>
+            <CardDescription>All cards follow strict UI principles for padding, spacing, and layout consistency</CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-6">
+            <div className="space-y-4">
+              <h3 className="text-foreground">Padding Standards</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="p-4 bg-muted/50 rounded-lg border">
+                  <h4 className="text-sm font-medium text-foreground mb-2">Standard Card (p-6)</h4>
+                  <p className="text-xs text-muted-foreground">24px padding on all sides - default for most content cards</p>
+                </div>
+                <div className="p-4 bg-muted/50 rounded-lg border">
+                  <h4 className="text-sm font-medium text-foreground mb-2">Large Card (p-8)</h4>
+                  <p className="text-xs text-muted-foreground">32px padding - only for hero cards and landing sections</p>
+                </div>
+              </div>
+              
+              <h3 className="text-foreground mt-6">Layout Rules</h3>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li>• Equal padding on all sides (top, right, bottom, left)</li>
+                <li>• Consistent spacing between card elements using space-y-4 or space-y-6</li>
+                <li>• CardHeader and CardContent automatically handle proper spacing</li>
+                <li>• No custom padding overrides without design system justification</li>
+                <li>• Border radius follows design system (rounded-lg for cards)</li>
+              </ul>
+              
+              <h3 className="text-foreground mt-6">Content Structure</h3>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li>• Use CardHeader for titles and descriptions</li>
+                <li>• Use CardContent for main content with proper pt-0</li>
+                <li>• Maintain visual hierarchy with proper heading levels</li>
+                <li>• Ensure proper contrast ratios for accessibility</li>
+              </ul>
+            </div>
+            
+            <div className="mt-6">
+              <p className="text-small text-muted-foreground mb-2">Example: Properly Structured Card</p>
+              <Card className="border border-border shadow-sm bg-card max-w-md">
+                <CardHeader>
+                  <CardTitle className="text-card-heading">Card Title</CardTitle>
+                  <CardDescription>Consistent description with proper spacing</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground mb-4">
+                    Content with equal padding, proper typography hierarchy, and semantic color usage.
+                  </p>
+                  <Button>Action Button</Button>
+                </CardContent>
+              </Card>
+            </div>
+          </CardContent>
+        </Card>
+      </section>
+
+      {/* Brand Component Styles */}
+      <section className="space-y-6">
         <h2 className="text-foreground">Brand Component Styles</h2>
         <Card>
           <CardHeader>
