@@ -365,8 +365,11 @@ const HomePage = () => {
                                     <span className="text-xs font-medium text-foreground">IRIS</span>
                                     <span className="text-xs text-muted-foreground">12:35 PM</span>
                                   </div>
-                                  <div className="bg-muted rounded-2xl px-4 py-2">
-                                    <p className="text-sm text-foreground">Searching PitchBook and web sources for Jason Ozler...</p>
+                                  <div className="bg-muted/50 border border-dashed border-muted-foreground/30 rounded-2xl px-4 py-2">
+                                    <div className="flex items-center gap-2">
+                                      <Search className="w-3 h-3 text-muted-foreground animate-pulse" />
+                                      <p className="text-sm text-muted-foreground italic">Searching PitchBook and web sources for Jason Ozler...</p>
+                                    </div>
                                  </div>
                                </div>
                              </div>
