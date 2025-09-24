@@ -97,7 +97,7 @@
     --brand-light-bg: 225 30% 12%; /* Light navy for cards */
     
     /* Brand-specific text colors for dark mode */
-    --card-heading: 0 0% 31.4%; /* #505050 - Card headings (same in dark mode) */
+    --card-heading: 0 0% 95%; /* White card headings for dark mode */
     --text-display: 0 0% 95%; /* Main headlines */
     --text-primary: 0 0% 92%; /* Primary text */
     --text-secondary: 0 0% 70%; /* Secondary text */
