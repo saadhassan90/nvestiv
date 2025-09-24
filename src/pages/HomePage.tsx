@@ -816,7 +816,7 @@ const HomePage = () => {
                     {/* Left Content */}
                     <div className="space-y-6">
                       <div>
-                        <h3 className="h3 mb-4 text-muted-foreground">Meet IRIS, your AI analyst</h3>
+                        <h3 className="h3 mb-4 text-foreground">Meet IRIS, your AI analyst</h3>
                         <p className="text-lg leading-relaxed text-muted-foreground mb-6">
                           IRIS is your dedicated AI due diligence agent that transforms deal screening. She automates comprehensive analysis, flags potential risks, and benchmarks opportunities—giving you the clear, actionable insights you need to make faster, smarter investment decisions.
                         </p>
