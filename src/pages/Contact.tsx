@@ -48,12 +48,9 @@ const Contact = () => {
               {/* Email Section */}
               <div className="space-y-4">
                 <h3 className="text-2xl font-semibold text-foreground">Email Us</h3>
-                <Button 
-                  variant="default" 
-                  className="bg-foreground text-background hover:bg-foreground/90 rounded-full px-6 py-3 text-sm font-medium"
-                  asChild
-                >
-                  <a href="mailto:info@nvestiv.com">
+                <Button variant="default" asChild>
+                  <a href="mailto:info@nvestiv.com" className="text-white no-underline flex items-center gap-2">
+                    <Mail className="h-4 w-4" />
                     info@nvestiv.com
                   </a>
                 </Button>
@@ -65,12 +62,9 @@ const Contact = () => {
               {/* Phone Section */}
               <div className="space-y-4">
                 <h3 className="text-2xl font-semibold text-foreground">Call Us</h3>
-                <Button 
-                  variant="default" 
-                  className="bg-foreground text-background hover:bg-foreground/90 rounded-full px-6 py-3 text-sm font-medium"
-                  asChild
-                >
-                  <a href="tel:+18888319886">
+                <Button variant="default" asChild>
+                  <a href="tel:+18888319886" className="text-white no-underline flex items-center gap-2">
+                    <Phone className="h-4 w-4" />
                     1-888-831-9886
                   </a>
                 </Button>
@@ -127,10 +121,8 @@ const Contact = () => {
                     ></textarea>
                   </div>
                   
-                  <Button
-                    className="w-full bg-foreground text-background hover:bg-foreground/90 py-3 rounded-lg font-medium"
-                    disabled
-                  >
+                  <Button variant="default" className="w-full" disabled>
+                    <Send className="h-4 w-4 mr-2" />
                     Submit
                   </Button>
                 </div>
