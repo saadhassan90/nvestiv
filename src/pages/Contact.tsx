@@ -74,65 +74,20 @@ const Contact = () => {
               </div>
             </div>
             
-            {/* Right Column - Form Placeholder */}
+            {/* Right Column - Notion Form */}
             <div className="space-y-6">
               <h2 className="text-3xl font-semibold text-foreground">Send Us a Message</h2>
               
-              {/* Placeholder for Notion Form */}
-              <div className="bg-card border border-border rounded-xl p-8 space-y-6">
-                <div className="space-y-4">
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium text-foreground">Name</label>
-                    <input
-                      type="text"
-                      placeholder="John Doe"
-                      className="w-full px-4 py-3 bg-background border border-input rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
-                      disabled
-                    />
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium text-foreground">Email</label>
-                    <input
-                      type="email"
-                      placeholder="john@mail.com"
-                      className="w-full px-4 py-3 bg-background border border-input rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
-                      disabled
-                    />
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium text-foreground">Phone Number</label>
-                    <input
-                      type="tel"
-                      placeholder="(xxx) xxx - xxxx"
-                      className="w-full px-4 py-3 bg-background border border-input rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
-                      disabled
-                    />
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium text-foreground">Message</label>
-                    <textarea
-                      placeholder="Message"
-                      rows={5}
-                      className="w-full px-4 py-3 bg-background border border-input rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 resize-none"
-                      disabled
-                    ></textarea>
-                  </div>
-                  
-                  <Button variant="default" className="w-full" disabled>
-                    <Send className="h-4 w-4 mr-2" />
-                    Submit
-                  </Button>
-                </div>
-                
-                {/* Placeholder Notice */}
-                <div className="bg-muted/30 border border-border/50 rounded-lg p-4 text-center">
-                  <p className="text-sm text-muted-foreground">
-                    Form placeholder - Notion embed will be added here
-                  </p>
-                </div>
+              {/* Notion Form Embed */}
+              <div className="bg-card border border-border rounded-xl overflow-hidden">
+                <iframe 
+                  src="https://season-sunscreen-7e6.notion.site/ebd/279374dfd4ed8004ac4bdffd54a04aca" 
+                  width="100%" 
+                  height="600" 
+                  frameBorder="0" 
+                  allowFullScreen
+                  className="w-full"
+                />
               </div>
             </div>
           </div>
