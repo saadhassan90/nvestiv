@@ -11,8 +11,8 @@ const Contact = () => {
       <SEOHead {...seoPages.contact} />
       <Navigation />
       
-      <main className="pt-24 md:pt-28 lg:pt-32 pb-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <main className="max-w-[1200px] mx-auto mt-24 px-4">
+        <div className="pb-16">
           {/* Page Header */}
           <div className="mb-16 space-y-4">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-muted/50 text-muted-foreground text-sm font-medium border border-border/50">
@@ -49,7 +49,7 @@ const Contact = () => {
               <div className="space-y-4">
                 <h3 className="text-2xl font-semibold text-foreground">Email Us</h3>
                 <Button variant="default" asChild>
-                  <a href="mailto:info@nvestiv.com" className="text-white no-underline flex items-center gap-2">
+                  <a href="mailto:info@nvestiv.com?subject=Contact%20from%20Nvestiv.com" className="text-white no-underline flex items-center gap-2">
                     <Mail className="h-4 w-4" />
                     info@nvestiv.com
                   </a>
