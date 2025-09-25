@@ -1089,6 +1089,7 @@ const HomePage = () => {
                 <div className="grid lg:grid-cols-2 gap-8 items-stretch">
                   <div className="space-y-6 flex flex-col justify-between border border-border rounded-xl p-6 h-full min-h-[500px]">
                     <div>
+                      <h3 className="h3 mb-4 text-card-heading">Build. Deploy. Rest Easy.</h3>
                       <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
                         Nvestiv gives you the power to create agents that think and work like your team—without writing a line of code. Speak them into existence using plain english.
                       </p>
