@@ -81,7 +81,7 @@ const Contact = () => {
               {/* Notion Form Embed */}
               <div className="bg-card border border-border rounded-xl overflow-hidden">
                 <iframe 
-                  src="https://season-sunscreen-7e6.notion.site/ebd/279374dfd4ed8004ac4bdffd54a04aca" 
+                  src="https://tally.so/embed/nWyjoL?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1&formEventsForwarding=1" 
                   width="100%" 
                   height="600" 
                   frameBorder="0" 
