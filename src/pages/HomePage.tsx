@@ -23,6 +23,21 @@ const HomePage = () => {
   const [activeTab, setActiveTab] = useState("ai-crm");
   const [crmAnimationStage, setCrmAnimationStage] = useState<'idle' | 'msg1' | 'typing1' | 'msg2' | 'msg3' | 'msg4' | 'typing2' | 'msg5' | 'typing3' | 'msg6' | 'msg7' | 'typing4' | 'msg8' | 'msg9' | 'typing5' | 'complete'>('idle');
   const [filesAnimationStage, setFilesAnimationStage] = useState<'idle' | 'loading' | 'cascading' | 'complete'>('idle');
+
+  // Animation stage order for CRM
+  const crmStageOrder = ['idle', 'msg1', 'typing1', 'msg2', 'msg3', 'msg4', 'typing2', 'msg5', 'typing3', 'msg6', 'msg7', 'typing4', 'msg8', 'msg9', 'typing5', 'complete'];
+  
+  // Helper function to determine if an element should be visible based on current stage
+  const shouldShowElement = (requiredStage: string, currentStage: string = crmAnimationStage): boolean => {
+    const currentIndex = crmStageOrder.indexOf(currentStage);
+    const requiredIndex = crmStageOrder.indexOf(requiredStage);
+    return currentIndex >= requiredIndex;
+  };
+
+  // Helper function to determine if element should animate in (only during its exact stage)
+  const shouldAnimateIn = (targetStage: string, currentStage: string = crmAnimationStage): boolean => {
+    return currentStage === targetStage;
+  };
   const videoRef = useRef<HTMLVideoElement>(null);
   useEffect(() => {
     const video = videoRef.current;
@@ -357,333 +372,373 @@ const HomePage = () => {
                           <div className="pointer-events-none absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-cyan-500 rounded-[18px] blur-md opacity-15"></div>
                            <div className="relative z-10 bg-card rounded-2xl p-6 h-[700px] flex flex-col shadow-none">
                           
-                           {/* Chat History Container */}
-                           <div className="flex-1 space-y-4 mb-4 overflow-y-auto">
-                             {/* User Message 1 */}
-                             <div className={cn("flex justify-end gap-2", crmAnimationStage === 'idle' ? 'opacity-0' : 'animate-slide-in-right')}>
-                               <div className="flex flex-col items-end max-w-[80%]">
-                                 <div className="flex items-center gap-2 mb-1">
-                                    <span className="text-xs text-muted-foreground">12:34 PM</span>
-                                    <span className="text-xs font-medium text-foreground">You</span>
-                                    <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
-                                      <span className="text-primary-foreground font-medium text-xs">Y</span>
-                                    </div>
+                            {/* Chat History Container */}
+                            <div className="flex-1 space-y-4 mb-4 overflow-y-auto">
+                              {/* User Message 1 */}
+                              <div className={cn("flex justify-end gap-2", 
+                                !shouldShowElement('msg1') ? 'opacity-0' : 
+                                shouldAnimateIn('msg1') ? 'animate-slide-in-right' : ''
+                              )}>
+                                <div className="flex flex-col items-end max-w-[80%]">
+                                  <div className="flex items-center gap-2 mb-1">
+                                     <span className="text-xs text-muted-foreground">12:34 PM</span>
+                                     <span className="text-xs font-medium text-foreground">You</span>
+                                     <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
+                                       <span className="text-primary-foreground font-medium text-xs">Y</span>
+                                     </div>
+                                   </div>
+                                   <div className="bg-primary text-primary-foreground rounded-2xl px-4 py-2">
+                                     <p className="text-sm text-primary-foreground">Who do I know that looks at healthcare rollups in Florida?</p>
                                   </div>
-                                  <div className="bg-primary text-primary-foreground rounded-2xl px-4 py-2">
-                                    <p className="text-sm text-primary-foreground">Who do I know that looks at healthcare rollups in Florida?</p>
+                                </div>
+                              </div>
+                              
+                              {/* IRIS Typing Indicator 1 */}
+                              <div className={cn("flex justify-start gap-2", 
+                                !shouldShowElement('typing1') ? 'opacity-0' : 
+                                shouldAnimateIn('typing1') ? 'animate-slide-in-left' : ''
+                              )} style={{ display: !shouldShowElement('typing1') || shouldShowElement('msg2') ? 'none' : 'flex' }}>
+                                <div className="flex flex-col items-start max-w-[85%]">
+                                  <div className="flex items-center gap-2 mb-1">
+                                     <div className="w-6 h-6 bg-muted rounded-full flex items-center justify-center">
+                                       <span className="text-muted-foreground font-medium text-xs">I</span>
+                                     </div>
+                                     <span className="text-xs font-medium text-foreground">IRIS</span>
+                                     <span className="text-xs text-muted-foreground">12:34 PM</span>
+                                   </div>
+                                   <div className="bg-muted/50 rounded-2xl px-4 py-3">
+                                     <div className="flex items-center gap-1">
+                                       <div className="flex space-x-1">
+                                         <div className="w-2 h-2 bg-muted-foreground rounded-full animate-typing-dots"></div>
+                                         <div className="w-2 h-2 bg-muted-foreground rounded-full animate-typing-dots" style={{ animationDelay: '0.2s' }}></div>
+                                         <div className="w-2 h-2 bg-muted-foreground rounded-full animate-typing-dots" style={{ animationDelay: '0.4s' }}></div>
+                                       </div>
+                                       <span className="text-xs text-muted-foreground ml-2">thinking...</span>
+                                     </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              {/* IRIS Response 1 */}
+                              <div className={cn("flex justify-start gap-2", 
+                                !shouldShowElement('msg2') ? 'opacity-0' : 
+                                shouldAnimateIn('msg2') ? 'animate-slide-in-left' : ''
+                              )}>
+                               <div className="flex flex-col items-start max-w-[85%]">
+                                 <div className="flex items-center gap-2 mb-1">
+                                    <div className="w-6 h-6 bg-muted rounded-full flex items-center justify-center">
+                                      <span className="text-muted-foreground font-medium text-xs">I</span>
+                                    </div>
+                                    <span className="text-xs font-medium text-foreground">IRIS</span>
+                                    <span className="text-xs text-muted-foreground">12:34 PM</span>
+                                  </div>
+                                  <div className="bg-muted rounded-2xl px-4 py-2">
+                                    <p className="text-sm text-foreground">Searched the CRM and found Jason Ozler, who told you in 2024 that he likes to invest in US healthcare PE strategies.</p>
+                                    <p className="text-sm text-foreground mt-2 font-medium">Want me to email him requesting a meeting?</p>
                                  </div>
                                </div>
                              </div>
                              
-                             {/* IRIS Typing Indicator 1 */}
-                             <div className={cn("flex justify-start gap-2", crmAnimationStage === 'idle' || crmAnimationStage === 'msg1' ? 'opacity-0' : crmAnimationStage === 'typing1' ? 'animate-slide-in-left' : 'hidden')}>
-                               <div className="flex flex-col items-start max-w-[85%]">
-                                 <div className="flex items-center gap-2 mb-1">
-                                    <div className="w-6 h-6 bg-muted rounded-full flex items-center justify-center">
-                                      <span className="text-muted-foreground font-medium text-xs">I</span>
-                                    </div>
-                                    <span className="text-xs font-medium text-foreground">IRIS</span>
-                                    <span className="text-xs text-muted-foreground">12:34 PM</span>
+                              {/* Contact Card */}
+                              <div className={cn("flex justify-start transition-all duration-500", 
+                                !shouldShowElement('msg3') ? 'opacity-0 translate-y-4' : 
+                                shouldAnimateIn('msg3') ? 'opacity-100 translate-y-0 animate-slide-in-left' : 'opacity-100 translate-y-0'
+                              )}>
+                                 <div className="bg-gradient-to-br from-muted to-accent/30 border border-border rounded-lg p-2.5 max-w-[85%] shadow-sm hover:shadow-md transition-shadow">
+                                   <div className="flex items-center gap-2.5">
+                                     <div className="w-8 h-8 bg-gradient-to-br from-primary to-primary/80 rounded-lg flex items-center justify-center shadow-sm">
+                                       <span className="text-primary-foreground font-semibold text-xs">JO</span>
+                                     </div>
+                                     <div className="flex-1 min-w-0 space-y-0.5">
+                                       <h4 className="font-semibold text-sm text-foreground truncate leading-none">Jason Ozler</h4>
+                                       <p className="text-xs text-primary font-medium truncate leading-none">Partner @ Florida Health Ventures</p>
+                                       <p className="text-xs text-muted-foreground leading-none">Last contact: March 2024</p>
+                                     </div>
+                                   </div>
+                                   <div className="mt-2 pt-2 border-t border-border">
+                                     <p className="text-xs text-muted-foreground italic leading-tight">"Looking for healthcare PE opportunities in Southeast US markets"</p>
                                   </div>
-                                  <div className="bg-muted/50 rounded-2xl px-4 py-3">
-                                    <div className="flex items-center gap-1">
-                                      <div className="flex space-x-1">
-                                        <div className="w-2 h-2 bg-muted-foreground rounded-full animate-typing-dots"></div>
-                                        <div className="w-2 h-2 bg-muted-foreground rounded-full animate-typing-dots" style={{ animationDelay: '0.2s' }}></div>
-                                        <div className="w-2 h-2 bg-muted-foreground rounded-full animate-typing-dots" style={{ animationDelay: '0.4s' }}></div>
+                                </div>
+                              </div>
+
+                               {/* User Message 2 - Enrich */}
+                               <div className={cn("flex justify-end gap-2", 
+                                 !shouldShowElement('msg4') ? 'opacity-0' : 
+                                 shouldAnimateIn('msg4') ? 'animate-slide-in-right' : ''
+                               )}>
+                                 <div className="flex flex-col items-end max-w-[80%]">
+                                   <div className="flex items-center gap-2 mb-1">
+                                      <span className="text-xs text-muted-foreground">12:35 PM</span>
+                                      <span className="text-xs font-medium text-foreground">You</span>
+                                      <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
+                                        <span className="text-primary-foreground font-medium text-xs">Y</span>
                                       </div>
-                                      <span className="text-xs text-muted-foreground ml-2">thinking...</span>
                                     </div>
+                                    <div className="bg-primary text-primary-foreground rounded-2xl px-4 py-2">
+                                      <p className="text-sm text-primary-foreground">Can you enrich what we know about Jason first?</p>
+                                   </div>
                                  </div>
                                </div>
-                             </div>
 
-                             {/* IRIS Response 1 */}
-                             <div className={cn("flex justify-start gap-2", crmAnimationStage === 'idle' || crmAnimationStage === 'msg1' || crmAnimationStage === 'typing1' ? 'opacity-0' : 'animate-slide-in-left')}>
-                              <div className="flex flex-col items-start max-w-[85%]">
-                                <div className="flex items-center gap-2 mb-1">
-                                   <div className="w-6 h-6 bg-muted rounded-full flex items-center justify-center">
-                                     <span className="text-muted-foreground font-medium text-xs">I</span>
+                               {/* IRIS Typing Indicator 2 */}
+                               <div className={cn("flex justify-start gap-2", 
+                                 !shouldShowElement('typing2') ? 'opacity-0' : 
+                                 shouldAnimateIn('typing2') ? 'animate-slide-in-left' : ''
+                               )} style={{ display: !shouldShowElement('typing2') || shouldShowElement('msg5') ? 'none' : 'flex' }}>
+                                 <div className="flex flex-col items-start max-w-[85%]">
+                                   <div className="flex items-center gap-2 mb-1">
+                                      <div className="w-6 h-6 bg-muted rounded-full flex items-center justify-center">
+                                        <span className="text-muted-foreground font-medium text-xs">I</span>
+                                      </div>
+                                      <span className="text-xs font-medium text-foreground">IRIS</span>
+                                      <span className="text-xs text-muted-foreground">12:35 PM</span>
+                                    </div>
+                                    <div className="bg-muted/50 rounded-2xl px-4 py-3">
+                                      <div className="flex items-center gap-1">
+                                        <div className="flex space-x-1">
+                                          <div className="w-2 h-2 bg-muted-foreground rounded-full animate-typing-dots"></div>
+                                          <div className="w-2 h-2 bg-muted-foreground rounded-full animate-typing-dots" style={{ animationDelay: '0.2s' }}></div>
+                                          <div className="w-2 h-2 bg-muted-foreground rounded-full animate-typing-dots" style={{ animationDelay: '0.4s' }}></div>
+                                        </div>
+                                        <span className="text-xs text-muted-foreground ml-2">searching...</span>
+                                      </div>
                                    </div>
-                                   <span className="text-xs font-medium text-foreground">IRIS</span>
-                                   <span className="text-xs text-muted-foreground">12:34 PM</span>
                                  </div>
-                                 <div className="bg-muted rounded-2xl px-4 py-2">
-                                   <p className="text-sm text-foreground">Searched the CRM and found Jason Ozler, who told you in 2024 that he likes to invest in US healthcare PE strategies.</p>
-                                   <p className="text-sm text-foreground mt-2 font-medium">Want me to email him requesting a meeting?</p>
+                               </div>
+
+                               {/* IRIS Response - Searching */}
+                               <div className={cn("flex justify-start gap-2", 
+                                 !shouldShowElement('msg5') ? 'opacity-0' : 
+                                 shouldAnimateIn('msg5') ? 'animate-slide-in-left' : ''
+                               )} style={{ display: !shouldShowElement('msg5') || shouldShowElement('typing3') ? 'none' : 'flex' }}>
+                                 <div className="flex flex-col items-start max-w-[85%]">
+                                   <div className="flex items-center gap-2 mb-1">
+                                      <div className="w-6 h-6 bg-muted rounded-full flex items-center justify-center">
+                                        <span className="text-muted-foreground font-medium text-xs">I</span>
+                                      </div>
+                                      <span className="text-xs font-medium text-foreground">IRIS</span>
+                                      <span className="text-xs text-muted-foreground">12:35 PM</span>
+                                    </div>
+                                    <div className="bg-muted/50 border border-dashed border-muted-foreground/30 rounded-2xl px-4 py-2">
+                                      <div className="flex items-center gap-2">
+                                        <Search className="w-3 h-3 text-muted-foreground animate-pulse" />
+                                        <p className="text-sm text-muted-foreground italic">Searching PitchBook and web sources for Jason Ozler...</p>
+                                      </div>
+                                   </div>
+                                 </div>
+                               </div>
+
+                               {/* IRIS Typing Indicator 3 */}
+                               <div className={cn("flex justify-start gap-2", 
+                                 !shouldShowElement('typing3') ? 'opacity-0' : 
+                                 shouldAnimateIn('typing3') ? 'animate-slide-in-left' : ''
+                               )} style={{ display: !shouldShowElement('typing3') || shouldShowElement('msg6') ? 'none' : 'flex' }}>
+                                 <div className="flex flex-col items-start max-w-[85%]">
+                                   <div className="flex items-center gap-2 mb-1">
+                                      <div className="w-6 h-6 bg-muted rounded-full flex items-center justify-center">
+                                        <span className="text-muted-foreground font-medium text-xs">I</span>
+                                      </div>
+                                      <span className="text-xs font-medium text-foreground">IRIS</span>
+                                      <span className="text-xs text-muted-foreground">12:35 PM</span>
+                                    </div>
+                                    <div className="bg-muted/50 rounded-2xl px-4 py-3">
+                                      <div className="flex items-center gap-1">
+                                        <div className="flex space-x-1">
+                                          <div className="w-2 h-2 bg-muted-foreground rounded-full animate-typing-dots"></div>
+                                          <div className="w-2 h-2 bg-muted-foreground rounded-full animate-typing-dots" style={{ animationDelay: '0.2s' }}></div>
+                                          <div className="w-2 h-2 bg-muted-foreground rounded-full animate-typing-dots" style={{ animationDelay: '0.4s' }}></div>
+                                        </div>
+                                        <span className="text-xs text-muted-foreground ml-2">analyzing data...</span>
+                                      </div>
+                                   </div>
+                                 </div>
+                               </div>
+
+                               {/* IRIS Response - Found Information */}
+                               <div className={cn("flex justify-start gap-2", 
+                                 !shouldShowElement('msg6') ? 'opacity-0' : 
+                                 shouldAnimateIn('msg6') ? 'animate-slide-in-left' : ''
+                               )}>
+                                <div className="flex flex-col items-start max-w-[85%]">
+                                  <div className="flex items-center gap-2 mb-1">
+                                     <div className="w-6 h-6 bg-muted rounded-full flex items-center justify-center">
+                                       <span className="text-muted-foreground font-medium text-xs">I</span>
+                                     </div>
+                                     <span className="text-xs font-medium text-foreground">IRIS</span>
+                                     <span className="text-xs text-muted-foreground">12:35 PM</span>
+                                   </div>
+                                   <div className="bg-muted rounded-2xl px-4 py-2">
+                                     <p className="text-sm text-foreground mb-2 font-medium">Found updated information! Here's what I discovered:</p>
+                                     
+                                     <div className="space-y-3">
+                                       <div>
+                                         <p className="text-sm text-foreground font-medium mb-1">From PitchBook:</p>
+                                         <ul className="text-xs text-muted-foreground space-y-1 ml-2">
+                                           <li>• Recently promoted to Managing Partner (Aug 2024)</li>
+                                           <li>• Led 3 healthcare deals in past 6 months totaling $47M</li>
+                                           <li>• Focus: ASC rollups, urgent care platforms, behavioral health</li>
+                                           <li>• Active in Tampa Bay & Miami markets</li>
+                                         </ul>
+                                       </div>
+                                       
+                                       <div>
+                                         <p className="text-sm text-foreground font-medium mb-1">From web search:</p>
+                                         <ul className="text-xs text-muted-foreground space-y-1 ml-2">
+                                           <li>• Speaking at HealthTech Summit Miami - Oct 15</li>
+                                           <li>• Recent article in PE Hub about value-based care trends</li>
+                                           <li>• Sits on board of 2 portfolio companies in South Florida</li>
+                                         </ul>
+                                       </div>
+                                     </div>
+                                     
+                                     <p className="text-sm text-foreground mt-3 font-medium">I've updated Jason's CRM profile with all this intel. His investment thesis aligns well with your current pipeline.</p>
+                                  </div>
+                                </div>
+                              </div>
+
+                               {/* User Message - Miami Meeting */}
+                               <div className={cn("flex justify-end gap-2", 
+                                 !shouldShowElement('msg7') ? 'opacity-0' : 
+                                 shouldAnimateIn('msg7') ? 'animate-slide-in-right' : ''
+                               )}>
+                                 <div className="flex flex-col items-end max-w-[80%]">
+                                   <div className="flex items-center gap-2 mb-1">
+                                      <span className="text-xs text-muted-foreground">12:36 PM</span>
+                                      <span className="text-xs font-medium text-foreground">You</span>
+                                      <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
+                                        <span className="text-primary-foreground font-medium text-xs">Y</span>
+                                      </div>
+                                    </div>
+                                    <div className="bg-primary text-primary-foreground rounded-2xl px-4 py-2">
+                                      <p className="text-sm text-primary-foreground">I'm going to Miami Sept 30 for 2 days and need a meeting with Jason</p>
+                                   </div>
+                                 </div>
+                               </div>
+
+                               {/* IRIS Typing Indicator 4 */}
+                               <div className={cn("flex justify-start gap-2", 
+                                 !shouldShowElement('typing4') ? 'opacity-0' : 
+                                 shouldAnimateIn('typing4') ? 'animate-slide-in-left' : ''
+                               )} style={{ display: !shouldShowElement('typing4') || shouldShowElement('msg8') ? 'none' : 'flex' }}>
+                                 <div className="flex flex-col items-start max-w-[85%]">
+                                   <div className="flex items-center gap-2 mb-1">
+                                      <div className="w-6 h-6 bg-muted rounded-full flex items-center justify-center">
+                                        <span className="text-muted-foreground font-medium text-xs">I</span>
+                                      </div>
+                                      <span className="text-xs font-medium text-foreground">IRIS</span>
+                                      <span className="text-xs text-muted-foreground">12:36 PM</span>
+                                    </div>
+                                    <div className="bg-muted/50 rounded-2xl px-4 py-3">
+                                      <div className="flex items-center gap-1">
+                                        <div className="flex space-x-1">
+                                          <div className="w-2 h-2 bg-muted-foreground rounded-full animate-typing-dots"></div>
+                                          <div className="w-2 h-2 bg-muted-foreground rounded-full animate-typing-dots" style={{ animationDelay: '0.2s' }}></div>
+                                          <div className="w-2 h-2 bg-muted-foreground rounded-full animate-typing-dots" style={{ animationDelay: '0.4s' }}></div>
+                                        </div>
+                                        <span className="text-xs text-muted-foreground ml-2">checking calendar...</span>
+                                      </div>
+                                   </div>
+                                 </div>
+                               </div>
+
+                               {/* IRIS Response - Calendar Check */}
+                               <div className={cn("flex justify-start gap-2", 
+                                 !shouldShowElement('msg8') ? 'opacity-0' : 
+                                 shouldAnimateIn('msg8') ? 'animate-slide-in-left' : ''
+                               )}>
+                                 <div className="flex flex-col items-start max-w-[85%]">
+                                   <div className="flex items-center gap-2 mb-1">
+                                      <div className="w-6 h-6 bg-muted rounded-full flex items-center justify-center">
+                                        <span className="text-muted-foreground font-medium text-xs">I</span>
+                                      </div>
+                                      <span className="text-xs font-medium text-foreground">IRIS</span>
+                                      <span className="text-xs text-muted-foreground">12:36 PM</span>
+                                    </div>
+                                     <div className="bg-muted rounded-2xl px-4 py-2">
+                                       <div className="flex items-center gap-2 px-3 py-2 mb-2 bg-muted/50 border border-dashed border-primary/30 rounded-lg">
+                                         <Calendar className="w-4 h-4 text-primary animate-pulse" />
+                                         <p className="text-sm text-muted-foreground italic">Checking your calendar for Sept 30 - Oct 1...</p>
+                                       </div>
+                                      <p className="text-sm text-foreground mb-2">Your calendar is pretty full, but you're free the afternoon of Oct 1st. I'd recommend 2:30 PM - that gives you buffer time from your lunch meeting.</p>
+                                      <p className="text-sm text-foreground font-medium">Should I send an email to Jason requesting a meeting?</p>
+                                   </div>
+                                 </div>
+                               </div>
+
+                               {/* User Message - Yes */}
+                               <div className={cn("flex justify-end gap-2", 
+                                 !shouldShowElement('msg9') ? 'opacity-0' : 
+                                 shouldAnimateIn('msg9') ? 'animate-slide-in-right' : ''
+                               )}>
+                                 <div className="flex flex-col items-end max-w-[80%]">
+                                   <div className="flex items-center gap-2 mb-1">
+                                      <span className="text-xs text-muted-foreground">12:36 PM</span>
+                                      <span className="text-xs font-medium text-foreground">You</span>
+                                      <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
+                                        <span className="text-primary-foreground font-medium text-xs">Y</span>
+                                      </div>
+                                    </div>
+                                    <div className="bg-primary text-primary-foreground rounded-2xl px-4 py-2">
+                                      <p className="text-sm text-primary-foreground">Yes</p>
+                                    </div>
+                                  </div>
+                                </div>
+
+                               {/* IRIS Typing Indicator 5 */}
+                               <div className={cn("flex justify-start gap-2", 
+                                 !shouldShowElement('typing5') ? 'opacity-0' : 
+                                 shouldAnimateIn('typing5') ? 'animate-slide-in-left' : ''
+                               )} style={{ display: !shouldShowElement('typing5') || shouldShowElement('complete') ? 'none' : 'flex' }}>
+                                 <div className="flex flex-col items-start max-w-[85%]">
+                                   <div className="flex items-center gap-2 mb-1">
+                                      <div className="w-6 h-6 bg-muted rounded-full flex items-center justify-center">
+                                        <span className="text-muted-foreground font-medium text-xs">I</span>
+                                      </div>
+                                      <span className="text-xs font-medium text-foreground">IRIS</span>
+                                      <span className="text-xs text-muted-foreground">12:36 PM</span>
+                                    </div>
+                                    <div className="bg-muted/50 rounded-2xl px-4 py-3">
+                                      <div className="flex items-center gap-1">
+                                        <div className="flex space-x-1">
+                                          <div className="w-2 h-2 bg-muted-foreground rounded-full animate-typing-dots"></div>
+                                          <div className="w-2 h-2 bg-muted-foreground rounded-full animate-typing-dots" style={{ animationDelay: '0.2s' }}></div>
+                                          <div className="w-2 h-2 bg-muted-foreground rounded-full animate-typing-dots" style={{ animationDelay: '0.4s' }}></div>
+                                        </div>
+                                        <span className="text-xs text-muted-foreground ml-2">composing email...</span>
+                                      </div>
+                                   </div>
+                                 </div>
+                               </div>
+
+                               {/* IRIS Response - Email Sent */}
+                               <div className={cn("flex justify-start gap-2", 
+                                 !shouldShowElement('complete') ? 'opacity-0' : 
+                                 shouldAnimateIn('complete') ? 'animate-slide-in-left' : ''
+                               )}>
+                                <div className="flex flex-col items-start max-w-[85%]">
+                                  <div className="flex items-center gap-2 mb-1">
+                                     <div className="w-6 h-6 bg-muted rounded-full flex items-center justify-center">
+                                       <span className="text-muted-foreground font-medium text-xs">I</span>
+                                     </div>
+                                     <span className="text-xs font-medium text-foreground">IRIS</span>
+                                     <span className="text-xs text-muted-foreground">12:37 PM</span>
+                                   </div>
+                                   <div className="bg-muted rounded-2xl px-4 py-2">
+                                     <div className="flex items-center gap-2 px-3 py-2 mb-2 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-700 rounded-lg">
+                                       <Mail className="w-4 h-4 text-green-600" />
+                                       <p className="text-sm text-green-700 dark:text-green-300 font-medium">Email sent successfully!</p>
+                                     </div>
+                                     <p className="text-sm text-foreground">I've sent Jason a meeting request for October 1st at 2:30 PM in Miami. The email includes:</p>
+                                     <ul className="text-xs text-muted-foreground mt-2 ml-4 space-y-1">
+                                       <li>• Your shared interest in healthcare PE</li>
+                                       <li>• Reference to your mutual connection Sarah Martinez</li>
+                                       <li>• Meeting location suggestions in Miami</li>
+                                     </ul>
+                                     <p className="text-sm text-foreground mt-2 font-medium">I'll notify you as soon as he responds.</p>
+                                  </div>
                                 </div>
                               </div>
                             </div>
-                            
-                             {/* Contact Card */}
-                             <div className={cn("flex justify-start transition-all duration-500", ['idle', 'msg1', 'msg2', 'typing1'].includes(crmAnimationStage) ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0 animate-slide-in-left')}>
-                                <div className="bg-gradient-to-br from-muted to-accent/30 border border-border rounded-lg p-2.5 max-w-[85%] shadow-sm hover:shadow-md transition-shadow">
-                                  <div className="flex items-center gap-2.5">
-                                    <div className="w-8 h-8 bg-gradient-to-br from-primary to-primary/80 rounded-lg flex items-center justify-center shadow-sm">
-                                      <span className="text-primary-foreground font-semibold text-xs">JO</span>
-                                    </div>
-                                    <div className="flex-1 min-w-0 space-y-0.5">
-                                      <h4 className="font-semibold text-sm text-foreground truncate leading-none">Jason Ozler</h4>
-                                      <p className="text-xs text-primary font-medium truncate leading-none">Partner @ Florida Health Ventures</p>
-                                      <p className="text-xs text-muted-foreground leading-none">Last contact: March 2024</p>
-                                    </div>
-                                  </div>
-                                  <div className="mt-2 pt-2 border-t border-border">
-                                    <p className="text-xs text-muted-foreground italic leading-tight">"Looking for healthcare PE opportunities in Southeast US markets"</p>
-                                 </div>
-                               </div>
-                             </div>
-
-                              {/* User Message 2 - Enrich */}
-                              <div className={cn("flex justify-end gap-2", ['idle', 'msg1', 'msg2', 'msg3'].includes(crmAnimationStage) ? 'opacity-0' : 'animate-slide-in-right')}>
-                                <div className="flex flex-col items-end max-w-[80%]">
-                                  <div className="flex items-center gap-2 mb-1">
-                                     <span className="text-xs text-muted-foreground">12:35 PM</span>
-                                     <span className="text-xs font-medium text-foreground">You</span>
-                                     <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
-                                       <span className="text-primary-foreground font-medium text-xs">Y</span>
-                                     </div>
-                                   </div>
-                                   <div className="bg-primary text-primary-foreground rounded-2xl px-4 py-2">
-                                     <p className="text-sm text-primary-foreground">Can you enrich what we know about Jason first?</p>
-                                  </div>
-                                </div>
-                              </div>
-
-                              {/* IRIS Typing Indicator 2 */}
-                              <div className={cn("flex justify-start gap-2", ['idle', 'msg1', 'msg2', 'msg3', 'msg4'].includes(crmAnimationStage) ? 'opacity-0' : crmAnimationStage === 'typing2' ? 'animate-slide-in-left' : 'hidden')}>
-                                <div className="flex flex-col items-start max-w-[85%]">
-                                  <div className="flex items-center gap-2 mb-1">
-                                     <div className="w-6 h-6 bg-muted rounded-full flex items-center justify-center">
-                                       <span className="text-muted-foreground font-medium text-xs">I</span>
-                                     </div>
-                                     <span className="text-xs font-medium text-foreground">IRIS</span>
-                                     <span className="text-xs text-muted-foreground">12:35 PM</span>
-                                   </div>
-                                   <div className="bg-muted/50 rounded-2xl px-4 py-3">
-                                     <div className="flex items-center gap-1">
-                                       <div className="flex space-x-1">
-                                         <div className="w-2 h-2 bg-muted-foreground rounded-full animate-typing-dots"></div>
-                                         <div className="w-2 h-2 bg-muted-foreground rounded-full animate-typing-dots" style={{ animationDelay: '0.2s' }}></div>
-                                         <div className="w-2 h-2 bg-muted-foreground rounded-full animate-typing-dots" style={{ animationDelay: '0.4s' }}></div>
-                                       </div>
-                                       <span className="text-xs text-muted-foreground ml-2">searching...</span>
-                                     </div>
-                                  </div>
-                                </div>
-                              </div>
-
-                              {/* IRIS Response - Searching */}
-                              <div className={cn("flex justify-start gap-2", ['idle', 'msg1', 'msg2', 'msg3', 'msg4', 'typing2'].includes(crmAnimationStage) ? 'opacity-0' : crmAnimationStage === 'msg5' ? 'animate-slide-in-left' : 'hidden')}>
-                                <div className="flex flex-col items-start max-w-[85%]">
-                                  <div className="flex items-center gap-2 mb-1">
-                                     <div className="w-6 h-6 bg-muted rounded-full flex items-center justify-center">
-                                       <span className="text-muted-foreground font-medium text-xs">I</span>
-                                     </div>
-                                     <span className="text-xs font-medium text-foreground">IRIS</span>
-                                     <span className="text-xs text-muted-foreground">12:35 PM</span>
-                                   </div>
-                                   <div className="bg-muted/50 border border-dashed border-muted-foreground/30 rounded-2xl px-4 py-2">
-                                     <div className="flex items-center gap-2">
-                                       <Search className="w-3 h-3 text-muted-foreground animate-pulse" />
-                                       <p className="text-sm text-muted-foreground italic">Searching PitchBook and web sources for Jason Ozler...</p>
-                                     </div>
-                                  </div>
-                                </div>
-                              </div>
-
-                              {/* IRIS Typing Indicator 3 */}
-                              <div className={cn("flex justify-start gap-2", ['idle', 'msg1', 'msg2', 'msg3', 'msg4', 'typing2', 'msg5'].includes(crmAnimationStage) ? 'opacity-0' : crmAnimationStage === 'typing3' ? 'animate-slide-in-left' : 'hidden')}>
-                                <div className="flex flex-col items-start max-w-[85%]">
-                                  <div className="flex items-center gap-2 mb-1">
-                                     <div className="w-6 h-6 bg-muted rounded-full flex items-center justify-center">
-                                       <span className="text-muted-foreground font-medium text-xs">I</span>
-                                     </div>
-                                     <span className="text-xs font-medium text-foreground">IRIS</span>
-                                     <span className="text-xs text-muted-foreground">12:35 PM</span>
-                                   </div>
-                                   <div className="bg-muted/50 rounded-2xl px-4 py-3">
-                                     <div className="flex items-center gap-1">
-                                       <div className="flex space-x-1">
-                                         <div className="w-2 h-2 bg-muted-foreground rounded-full animate-typing-dots"></div>
-                                         <div className="w-2 h-2 bg-muted-foreground rounded-full animate-typing-dots" style={{ animationDelay: '0.2s' }}></div>
-                                         <div className="w-2 h-2 bg-muted-foreground rounded-full animate-typing-dots" style={{ animationDelay: '0.4s' }}></div>
-                                       </div>
-                                       <span className="text-xs text-muted-foreground ml-2">analyzing data...</span>
-                                     </div>
-                                  </div>
-                                </div>
-                              </div>
-
-                              {/* IRIS Response - Found Information */}
-                              <div className={cn("flex justify-start gap-2", ['idle', 'msg1', 'msg2', 'msg3', 'msg4', 'typing2', 'msg5', 'typing3'].includes(crmAnimationStage) ? 'opacity-0' : 'animate-slide-in-left')}>
-                               <div className="flex flex-col items-start max-w-[85%]">
-                                 <div className="flex items-center gap-2 mb-1">
-                                    <div className="w-6 h-6 bg-muted rounded-full flex items-center justify-center">
-                                      <span className="text-muted-foreground font-medium text-xs">I</span>
-                                    </div>
-                                    <span className="text-xs font-medium text-foreground">IRIS</span>
-                                    <span className="text-xs text-muted-foreground">12:35 PM</span>
-                                  </div>
-                                  <div className="bg-muted rounded-2xl px-4 py-2">
-                                    <p className="text-sm text-foreground mb-2 font-medium">Found updated information! Here's what I discovered:</p>
-                                    
-                                    <div className="space-y-3">
-                                      <div>
-                                        <p className="text-sm text-foreground font-medium mb-1">From PitchBook:</p>
-                                        <ul className="text-xs text-muted-foreground space-y-1 ml-2">
-                                          <li>• Recently promoted to Managing Partner (Aug 2024)</li>
-                                          <li>• Led 3 healthcare deals in past 6 months totaling $47M</li>
-                                          <li>• Focus: ASC rollups, urgent care platforms, behavioral health</li>
-                                          <li>• Active in Tampa Bay & Miami markets</li>
-                                        </ul>
-                                      </div>
-                                      
-                                      <div>
-                                        <p className="text-sm text-foreground font-medium mb-1">From web search:</p>
-                                        <ul className="text-xs text-muted-foreground space-y-1 ml-2">
-                                          <li>• Speaking at HealthTech Summit Miami - Oct 15</li>
-                                          <li>• Recent article in PE Hub about value-based care trends</li>
-                                          <li>• Sits on board of 2 portfolio companies in South Florida</li>
-                                        </ul>
-                                      </div>
-                                    </div>
-                                    
-                                    <p className="text-sm text-foreground mt-3 font-medium">I've updated Jason's CRM profile with all this intel. His investment thesis aligns well with your current pipeline.</p>
-                                 </div>
-                               </div>
-                             </div>
-
-                              {/* User Message - Miami Meeting */}
-                              <div className={cn("flex justify-end gap-2", ['idle', 'msg1', 'msg2', 'msg3', 'msg4', 'typing2', 'msg5', 'typing3', 'msg6'].includes(crmAnimationStage) ? 'opacity-0' : 'animate-slide-in-right')}>
-                                <div className="flex flex-col items-end max-w-[80%]">
-                                  <div className="flex items-center gap-2 mb-1">
-                                     <span className="text-xs text-muted-foreground">12:36 PM</span>
-                                     <span className="text-xs font-medium text-foreground">You</span>
-                                     <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
-                                       <span className="text-primary-foreground font-medium text-xs">Y</span>
-                                     </div>
-                                   </div>
-                                   <div className="bg-primary text-primary-foreground rounded-2xl px-4 py-2">
-                                     <p className="text-sm text-primary-foreground">I'm going to Miami Sept 30 for 2 days and need a meeting with Jason</p>
-                                  </div>
-                                </div>
-                              </div>
-
-                              {/* IRIS Typing Indicator 4 */}
-                              <div className={cn("flex justify-start gap-2", ['idle', 'msg1', 'msg2', 'msg3', 'msg4', 'typing2', 'msg5', 'typing3', 'msg6', 'msg7'].includes(crmAnimationStage) ? 'opacity-0' : crmAnimationStage === 'typing4' ? 'animate-slide-in-left' : 'hidden')}>
-                                <div className="flex flex-col items-start max-w-[85%]">
-                                  <div className="flex items-center gap-2 mb-1">
-                                     <div className="w-6 h-6 bg-muted rounded-full flex items-center justify-center">
-                                       <span className="text-muted-foreground font-medium text-xs">I</span>
-                                     </div>
-                                     <span className="text-xs font-medium text-foreground">IRIS</span>
-                                     <span className="text-xs text-muted-foreground">12:36 PM</span>
-                                   </div>
-                                   <div className="bg-muted/50 rounded-2xl px-4 py-3">
-                                     <div className="flex items-center gap-1">
-                                       <div className="flex space-x-1">
-                                         <div className="w-2 h-2 bg-muted-foreground rounded-full animate-typing-dots"></div>
-                                         <div className="w-2 h-2 bg-muted-foreground rounded-full animate-typing-dots" style={{ animationDelay: '0.2s' }}></div>
-                                         <div className="w-2 h-2 bg-muted-foreground rounded-full animate-typing-dots" style={{ animationDelay: '0.4s' }}></div>
-                                       </div>
-                                       <span className="text-xs text-muted-foreground ml-2">checking calendar...</span>
-                                     </div>
-                                  </div>
-                                </div>
-                              </div>
-
-                              {/* IRIS Response - Calendar Check */}
-                              <div className={cn("flex justify-start gap-2", ['idle', 'msg1', 'msg2', 'msg3', 'msg4', 'typing2', 'msg5', 'typing3', 'msg6', 'msg7', 'typing4'].includes(crmAnimationStage) ? 'opacity-0' : 'animate-slide-in-left')}>
-                                <div className="flex flex-col items-start max-w-[85%]">
-                                  <div className="flex items-center gap-2 mb-1">
-                                     <div className="w-6 h-6 bg-muted rounded-full flex items-center justify-center">
-                                       <span className="text-muted-foreground font-medium text-xs">I</span>
-                                     </div>
-                                     <span className="text-xs font-medium text-foreground">IRIS</span>
-                                     <span className="text-xs text-muted-foreground">12:36 PM</span>
-                                   </div>
-                                    <div className="bg-muted rounded-2xl px-4 py-2">
-                                      <div className="flex items-center gap-2 px-3 py-2 mb-2 bg-muted/50 border border-dashed border-primary/30 rounded-lg">
-                                        <Calendar className="w-4 h-4 text-primary animate-pulse" />
-                                        <p className="text-sm text-muted-foreground italic">Checking your calendar for Sept 30 - Oct 1...</p>
-                                      </div>
-                                     <p className="text-sm text-foreground mb-2">Your calendar is pretty full, but you're free the afternoon of Oct 1st. I'd recommend 2:30 PM - that gives you buffer time from your lunch meeting.</p>
-                                     <p className="text-sm text-foreground font-medium">Should I send an email to Jason requesting a meeting?</p>
-                                  </div>
-                                </div>
-                              </div>
-
-                              {/* User Message - Yes */}
-                              <div className={cn("flex justify-end gap-2", ['idle', 'msg1', 'msg2', 'msg3', 'msg4', 'typing2', 'msg5', 'typing3', 'msg6', 'msg7', 'typing4', 'msg8'].includes(crmAnimationStage) ? 'opacity-0' : 'animate-slide-in-right')}>
-                                <div className="flex flex-col items-end max-w-[80%]">
-                                  <div className="flex items-center gap-2 mb-1">
-                                     <span className="text-xs text-muted-foreground">12:36 PM</span>
-                                     <span className="text-xs font-medium text-foreground">You</span>
-                                     <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
-                                       <span className="text-primary-foreground font-medium text-xs">Y</span>
-                                     </div>
-                                   </div>
-                                   <div className="bg-primary text-primary-foreground rounded-2xl px-4 py-2">
-                                     <p className="text-sm text-primary-foreground">Yes</p>
-                                   </div>
-                                 </div>
-                               </div>
-
-                              {/* IRIS Typing Indicator 5 */}
-                              <div className={cn("flex justify-start gap-2", ['idle', 'msg1', 'msg2', 'msg3', 'msg4', 'typing2', 'msg5', 'typing3', 'msg6', 'msg7', 'typing4', 'msg8', 'msg9'].includes(crmAnimationStage) ? 'opacity-0' : crmAnimationStage === 'typing5' ? 'animate-slide-in-left' : 'hidden')}>
-                                <div className="flex flex-col items-start max-w-[85%]">
-                                  <div className="flex items-center gap-2 mb-1">
-                                     <div className="w-6 h-6 bg-muted rounded-full flex items-center justify-center">
-                                       <span className="text-muted-foreground font-medium text-xs">I</span>
-                                     </div>
-                                     <span className="text-xs font-medium text-foreground">IRIS</span>
-                                     <span className="text-xs text-muted-foreground">12:36 PM</span>
-                                   </div>
-                                   <div className="bg-muted/50 rounded-2xl px-4 py-3">
-                                     <div className="flex items-center gap-1">
-                                       <div className="flex space-x-1">
-                                         <div className="w-2 h-2 bg-muted-foreground rounded-full animate-typing-dots"></div>
-                                         <div className="w-2 h-2 bg-muted-foreground rounded-full animate-typing-dots" style={{ animationDelay: '0.2s' }}></div>
-                                         <div className="w-2 h-2 bg-muted-foreground rounded-full animate-typing-dots" style={{ animationDelay: '0.4s' }}></div>
-                                       </div>
-                                       <span className="text-xs text-muted-foreground ml-2">composing email...</span>
-                                     </div>
-                                  </div>
-                                </div>
-                              </div>
-
-                              {/* IRIS Response - Email Sent */}
-                              <div className={cn("flex justify-start gap-2", ['idle', 'msg1', 'msg2', 'msg3', 'msg4', 'typing2', 'msg5', 'typing3', 'msg6', 'msg7', 'typing4', 'msg8', 'msg9', 'typing5'].includes(crmAnimationStage) ? 'opacity-0' : 'animate-slide-in-left')}>
-                               <div className="flex flex-col items-start max-w-[85%]">
-                                 <div className="flex items-center gap-2 mb-1">
-                                    <div className="w-6 h-6 bg-muted rounded-full flex items-center justify-center">
-                                      <span className="text-muted-foreground font-medium text-xs">I</span>
-                                    </div>
-                                    <span className="text-xs font-medium text-foreground">IRIS</span>
-                                    <span className="text-xs text-muted-foreground">12:37 PM</span>
-                                  </div>
-                                  <div className="bg-muted rounded-2xl px-4 py-2">
-                                    <div className="flex items-center gap-2 px-3 py-2 mb-2 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-700 rounded-lg">
-                                      <Mail className="w-4 h-4 text-green-600" />
-                                      <p className="text-sm text-green-700 dark:text-green-300 font-medium">Email sent successfully!</p>
-                                    </div>
-                                    <p className="text-sm text-foreground">I've sent Jason a meeting request for October 1st at 2:30 PM in Miami. The email includes:</p>
-                                    <ul className="text-xs text-muted-foreground mt-2 ml-4 space-y-1">
-                                      <li>• Your shared interest in healthcare PE</li>
-                                      <li>• Reference to your mutual connection Sarah Martinez</li>
-                                      <li>• Meeting location suggestions in Miami</li>
-                                    </ul>
-                                    <p className="text-sm text-foreground mt-2 font-medium">I'll notify you as soon as he responds.</p>
-                                 </div>
-                               </div>
-                             </div>
-
-                             {/* IRIS Response - Email Sent */}
-                             <div className="flex justify-start gap-2">
-                               
-                             </div>
-                           </div>
                           
                           {/* Chat Widget */}
                            <div className="bg-muted/50 backdrop-blur-sm rounded-xl p-1 border border-border">
