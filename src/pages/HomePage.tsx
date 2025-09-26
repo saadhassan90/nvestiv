@@ -20,6 +20,8 @@ const HomePage = () => {
   const [irisModalOpen, setIrisModalOpen] = useState(false);
   const [isProductsOpen, setIsProductsOpen] = useState(false);
   const [activeTab, setActiveTab] = useState("ai-crm");
+  const [crmAnimationStage, setCrmAnimationStage] = useState<'idle' | 'typing-user' | 'ai-thinking' | 'ai-response' | 'typing-again' | 'complete'>('idle');
+  const [filesAnimationStage, setFilesAnimationStage] = useState<'idle' | 'loading' | 'cascading' | 'complete'>('idle');
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
@@ -46,6 +48,50 @@ const HomePage = () => {
       observer.disconnect();
     };
   }, []);
+
+  const handleTabChange = (value: string) => {
+    setActiveTab(value);
+    
+    // Reset animations when switching tabs
+    if (value === "ai-crm" && crmAnimationStage !== 'idle') {
+      setCrmAnimationStage('idle');
+    }
+    if (value === "files" && filesAnimationStage !== 'idle') {
+      setFilesAnimationStage('idle');
+    }
+  };
+
+  // Animation triggers based on active tab
+  useEffect(() => {
+    if (activeTab === "ai-crm" && crmAnimationStage === 'idle') {
+      setCrmAnimationStage('typing-user');
+      
+      // Simulate realistic chat flow
+      const chatFlow = [
+        { stage: 'ai-thinking', delay: 2000 },
+        { stage: 'ai-response', delay: 3000 },
+        { stage: 'typing-again', delay: 2500 },
+        { stage: 'complete', delay: 2000 }
+      ];
+      
+      chatFlow.reduce((promise, { stage, delay }) => {
+        return promise.then(() => new Promise(resolve => {
+          setTimeout(() => {
+            setCrmAnimationStage(stage as any);
+            resolve(undefined);
+          }, delay);
+        }));
+      }, Promise.resolve());
+    }
+    
+    if (activeTab === "files" && filesAnimationStage === 'idle') {
+      setFilesAnimationStage('loading');
+      
+      setTimeout(() => setFilesAnimationStage('cascading'), 2000);
+      setTimeout(() => setFilesAnimationStage('complete'), 4000);
+    }
+  }, [activeTab, crmAnimationStage, filesAnimationStage]);
+
   return <div className="min-h-screen bg-transparent">
       <SEOHead {...seoPages.home} />
       <Navigation />
@@ -252,7 +298,7 @@ const HomePage = () => {
               <h2 id="features-heading" className="h2 mb-4">Complete 360° Intelligence Across Your Investment Operations</h2>
             </div>
 
-            <Tabs defaultValue="ai-crm" value={activeTab} onValueChange={setActiveTab} className="w-full">
+            <Tabs defaultValue="ai-crm" value={activeTab} onValueChange={handleTabChange} className="w-full">
               <TabsContent value="ai-crm" className="mt-0">
                 <Card className="border border-border shadow-lg bg-card">
                   <div className="p-6">
@@ -736,7 +782,10 @@ const HomePage = () => {
           <div className="relative rounded-2xl">
             <div className="pointer-events-none absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-cyan-500 rounded-[18px] blur-md opacity-15"></div>
             <div className="relative z-10">
-              <GoogleDriveInterface className="w-full" />
+              <GoogleDriveInterface 
+                className="w-full" 
+                animationStage={filesAnimationStage}
+              />
             </div>
           </div>
         </div>

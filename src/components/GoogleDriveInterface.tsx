@@ -94,7 +94,10 @@ const fileItems = [
   }
 ];
 
-export const GoogleDriveInterface = ({ className }: { className?: string }) => {
+export const GoogleDriveInterface = ({ className, animationStage = 'idle' }: { 
+  className?: string; 
+  animationStage?: 'idle' | 'loading' | 'cascading' | 'complete';
+}) => {
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('list');
 
   return (
@@ -166,72 +169,141 @@ export const GoogleDriveInterface = ({ className }: { className?: string }) => {
 
         {/* File Grid/List */}
         <ScrollArea className="flex-1">
-          <div className="p-4 space-y-2">
-            {fileItems.map((item) => (
-              <div key={item.id} className="flex items-center gap-3 p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800/50 cursor-pointer transition-colors border border-gray-200/50 dark:border-gray-700/50 bg-white/50 dark:bg-gray-900/30">
-                <div className="flex-shrink-0">
-                  {item.type === 'folder' ? 
-                    <FolderIcon className="w-5 h-5 text-blue-600 dark:text-blue-400" /> : 
-                    <FileIcon className="w-5 h-5 text-gray-600 dark:text-gray-400" />
-                  }
+          {animationStage === 'loading' && (
+            <div className="p-8 flex flex-col items-center justify-center h-full">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-8 h-8 border-2 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">
+                  IRIS is processing your files...
                 </div>
-                
-                <div className="flex-1 min-w-0">
-                  <div className="text-sm font-medium text-gray-700 dark:text-gray-300 truncate">{item.name}</div>
-                  <div className="text-xs text-gray-500 dark:text-gray-400">{item.modified} • {item.size}</div>
-                </div>
-                
-                {/* Connected People Avatars */}
-                <div className="flex -space-x-2">
-                  {item.people.slice(0, 3).map((personKey, index) => {
-                    const person = people[personKey as keyof typeof people];
-                    return (
-                      <Tooltip key={personKey}>
-                        <TooltipTrigger asChild>
-                          <Avatar className="w-6 h-6 border-2 border-white dark:border-gray-900 hover:z-10 relative">
-                            <AvatarImage src={person.avatar} alt={person.name} />
-                            <AvatarFallback className="text-xs bg-gradient-to-br from-blue-500 to-purple-600 text-white">
-                              {person.initials}
-                            </AvatarFallback>
-                          </Avatar>
-                        </TooltipTrigger>
-                        <TooltipContent side="top">
-                          <p className="font-medium">{person.name}</p>
-                          <p className="text-xs text-gray-400">{person.company}</p>
-                        </TooltipContent>
-                      </Tooltip>
-                    );
-                  })}
-                  {item.people.length > 3 && (
-                    <div className="w-6 h-6 rounded-full bg-gray-200 dark:bg-gray-700 border-2 border-white dark:border-gray-900 flex items-center justify-center">
-                      <span className="text-xs text-gray-600 dark:text-gray-300">+{item.people.length - 3}</span>
-                    </div>
-                  )}
-                </div>
-
-                {/* Tasks Icon */}
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <button className="p-1.5 hover:bg-gray-200 dark:hover:bg-gray-700 rounded">
-                      <CheckSquare className="w-4 h-4 text-gray-500 dark:text-gray-400" />
-                    </button>
-                  </TooltipTrigger>
-                  <TooltipContent side="left" className="max-w-xs">
-                    <div className="space-y-1">
-                      <p className="font-medium text-sm">Pending Tasks</p>
-                      {item.tasks.map((task, index) => (
-                        <p key={index} className="text-xs text-gray-300">• {task}</p>
-                      ))}
-                    </div>
-                  </TooltipContent>
-                </Tooltip>
-
-                <button className="opacity-0 group-hover:opacity-100 p-1 hover:bg-gray-200 dark:hover:bg-gray-700 rounded">
-                  <MoreHorizontal className="w-3 h-3 text-gray-500 dark:text-gray-400" />
-                </button>
               </div>
-            ))}
-          </div>
+              <div className="space-y-2 w-full max-w-md">
+                {['Analyzing document relationships...', 'Extracting key insights...', 'Connecting team members...'].map((text, index) => (
+                  <div key={index} className={cn(
+                    "text-xs text-gray-500 dark:text-gray-400 transition-opacity duration-500",
+                    index === 0 ? 'opacity-100' : 
+                    index === 1 ? (animationStage === 'loading' ? 'opacity-60' : 'opacity-30') : 'opacity-30'
+                  )}>
+                    {text}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+          
+          {(animationStage === 'cascading' || animationStage === 'complete') && (
+            <div className="p-4 space-y-2">
+              {fileItems.map((item, index) => (
+                <div 
+                  key={item.id} 
+                  className={cn(
+                    "flex items-center gap-3 p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800/50 cursor-pointer transition-colors border border-gray-200/50 dark:border-gray-700/50 bg-white/50 dark:bg-gray-900/30",
+                    animationStage === 'cascading' && "animate-cascade-in",
+                    animationStage === 'complete' && "opacity-100"
+                  )}
+                  style={{
+                    animationDelay: animationStage === 'cascading' ? `${index * 100}ms` : '0ms'
+                  }}
+                >
+                  <div className="flex-shrink-0">
+                    {item.type === 'folder' ? 
+                      <FolderIcon className="w-5 h-5 text-blue-600 dark:text-blue-400" /> : 
+                      <FileIcon className="w-5 h-5 text-gray-600 dark:text-gray-400" />
+                    }
+                  </div>
+                  
+                  <div className="flex-1 min-w-0">
+                    <div className="text-sm font-medium text-gray-700 dark:text-gray-300 truncate">{item.name}</div>
+                    <div className="text-xs text-gray-500 dark:text-gray-400">{item.modified} • {item.size}</div>
+                  </div>
+                  
+                  {/* Connected People Avatars */}
+                  <div className="flex -space-x-2">
+                    {item.people.slice(0, 3).map((personKey, index) => {
+                      const person = people[personKey as keyof typeof people];
+                      return (
+                        <Tooltip key={personKey}>
+                          <TooltipTrigger asChild>
+                            <Avatar className="w-6 h-6 border-2 border-white dark:border-gray-900 hover:z-10 relative">
+                              <AvatarImage src={person.avatar} alt={person.name} />
+                              <AvatarFallback className="text-xs bg-gradient-to-br from-blue-500 to-purple-600 text-white">
+                                {person.initials}
+                              </AvatarFallback>
+                            </Avatar>
+                          </TooltipTrigger>
+                          <TooltipContent side="top">
+                            <p className="font-medium">{person.name}</p>
+                            <p className="text-xs text-gray-400">{person.company}</p>
+                          </TooltipContent>
+                        </Tooltip>
+                      );
+                    })}
+                    {item.people.length > 3 && (
+                      <div className="w-6 h-6 rounded-full bg-gray-200 dark:bg-gray-700 border-2 border-white dark:border-gray-900 flex items-center justify-center">
+                        <span className="text-xs text-gray-600 dark:text-gray-300">+{item.people.length - 3}</span>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Tasks Icon */}
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <button className="p-1.5 hover:bg-gray-200 dark:hover:bg-gray-700 rounded">
+                        <CheckSquare className="w-4 h-4 text-gray-500 dark:text-gray-400" />
+                      </button>
+                    </TooltipTrigger>
+                    <TooltipContent side="left" className="max-w-xs">
+                      <div className="space-y-1">
+                        <p className="font-medium text-sm">Pending Tasks</p>
+                        {item.tasks.map((task, index) => (
+                          <p key={index} className="text-xs text-gray-300">• {task}</p>
+                        ))}
+                      </div>
+                    </TooltipContent>
+                  </Tooltip>
+
+                  <button className="opacity-0 group-hover:opacity-100 p-1 hover:bg-gray-200 dark:hover:bg-gray-700 rounded">
+                    <MoreHorizontal className="w-3 h-3 text-gray-500 dark:text-gray-400" />
+                  </button>
+                </div>
+              ))}
+            </div>
+          )}
+          
+          {animationStage === 'idle' && (
+            <div className="p-4 space-y-2">
+              {fileItems.map((item) => (
+                <div key={item.id} className="flex items-center gap-3 p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800/50 cursor-pointer transition-colors border border-gray-200/50 dark:border-gray-700/50 bg-white/50 dark:bg-gray-900/30 opacity-30">
+                  <div className="flex-shrink-0">
+                    {item.type === 'folder' ? 
+                      <FolderIcon className="w-5 h-5 text-blue-600 dark:text-blue-400" /> : 
+                      <FileIcon className="w-5 h-5 text-gray-600 dark:text-gray-400" />
+                    }
+                  </div>
+                  
+                  <div className="flex-1 min-w-0">
+                    <div className="text-sm font-medium text-gray-700 dark:text-gray-300 truncate">{item.name}</div>
+                    <div className="text-xs text-gray-500 dark:text-gray-400">{item.modified} • {item.size}</div>
+                  </div>
+                  
+                  {/* Connected People Avatars */}
+                  <div className="flex -space-x-2">
+                    {item.people.slice(0, 3).map((personKey, index) => {
+                      const person = people[personKey as keyof typeof people];
+                      return (
+                        <Avatar key={personKey} className="w-6 h-6 border-2 border-white dark:border-gray-900">
+                          <AvatarImage src={person.avatar} alt={person.name} />
+                          <AvatarFallback className="text-xs bg-gradient-to-br from-blue-500 to-purple-600 text-white">
+                            {person.initials}
+                          </AvatarFallback>
+                        </Avatar>
+                      );
+                    })}
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
         </ScrollArea>
 
         {/* Status Bar */}
