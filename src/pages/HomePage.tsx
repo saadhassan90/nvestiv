@@ -19,6 +19,7 @@ const HomePage = () => {
   const [agentsModalOpen, setAgentsModalOpen] = useState(false);
   const [irisModalOpen, setIrisModalOpen] = useState(false);
   const [isProductsOpen, setIsProductsOpen] = useState(false);
+  const [activeTab, setActiveTab] = useState("ai-crm");
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
@@ -251,7 +252,7 @@ const HomePage = () => {
               <h2 id="features-heading" className="h2 mb-4">Complete 360° Intelligence Across Your Investment Operations</h2>
             </div>
 
-            <Tabs defaultValue="ai-crm" className="w-full">
+            <Tabs defaultValue="ai-crm" value={activeTab} onValueChange={setActiveTab} className="w-full">
               <TabsContent value="ai-crm" className="mt-0">
                 <Card className="border border-border shadow-lg bg-card">
                   <div className="p-6">
@@ -802,17 +803,20 @@ const HomePage = () => {
                             </Button>
                          </div>
                       </div>
-                       <div className="lg:pl-8">
-                         <div className="relative rounded-2xl aspect-[1/1.75]">
-                           {/* Gradient glow border */}
-                           <div className="pointer-events-none absolute -inset-1 bg-gradient-to-r from-primary/30 via-accent/30 to-primary/30 rounded-[18px] blur-md opacity-50 dark:opacity-70"></div>
-                           
-                           {/* 3D Marquee Container */}
-                           <div className="relative z-10 bg-card/90 backdrop-blur-sm rounded-2xl h-full overflow-hidden border border-border/50 shadow-lg">
-                             <Integrations3DMarquee className="w-full h-full" />
-                           </div>
-                         </div>
-                       </div>
+                        <div className="lg:pl-8">
+                          <div className="relative rounded-2xl">
+                            {/* Gradient glow border */}
+                            <div className="pointer-events-none absolute -inset-1 bg-gradient-to-r from-primary/30 via-accent/30 to-primary/30 rounded-[18px] blur-md opacity-50 dark:opacity-70"></div>
+                            
+                            {/* 3D Marquee Container */}
+                            <div className="relative z-10 bg-card/90 backdrop-blur-sm rounded-2xl h-[700px] overflow-hidden border border-border/50 shadow-lg">
+                              <Integrations3DMarquee 
+                                className="w-full h-full" 
+                                triggerAnimation={activeTab === "integrations"}
+                              />
+                            </div>
+                          </div>
+                        </div>
                      </div>
                   </div>
                 </Card>

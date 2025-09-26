@@ -154,6 +154,56 @@ export default {
 				"marquee-down": {
 					"0%": { transform: "translateY(-100%)" },
 					"100%": { transform: "translateY(0%)" }
+				},
+				"cascade": {
+					"0%": { 
+						transform: "translateY(-200px) scale(0.8)",
+						opacity: "0"
+					},
+					"100%": { 
+						transform: "translateY(0) scale(1)",
+						opacity: "1"
+					}
+				},
+				"cascade-1": {
+					"0%": { 
+						transform: "translateY(-300px) rotateX(45deg)",
+						opacity: "0"
+					},
+					"100%": { 
+						transform: "translateY(0) rotateX(0deg)",
+						opacity: "1"
+					}
+				},
+				"cascade-2": {
+					"0%": { 
+						transform: "translateY(-250px) rotateY(30deg)",
+						opacity: "0"
+					},
+					"100%": { 
+						transform: "translateY(0) rotateY(0deg)",
+						opacity: "1"
+					}
+				},
+				"cascade-3": {
+					"0%": { 
+						transform: "translateY(-320px) rotateX(-30deg)",
+						opacity: "0"
+					},
+					"100%": { 
+						transform: "translateY(0) rotateX(0deg)",
+						opacity: "1"
+					}
+				},
+				"cascade-4": {
+					"0%": { 
+						transform: "translateY(-280px) rotateY(-20deg)",
+						opacity: "0"
+					},
+					"100%": { 
+						transform: "translateY(0) rotateY(0deg)",
+						opacity: "1"
+					}
 				}
 			},
 			animation: {
@@ -165,7 +215,12 @@ export default {
 				"sparkle": "sparkle 3s ease-in-out infinite",
 				"marquee": "marquee 30s linear infinite",
 				"marquee-up": "marquee-up 20s linear infinite",
-				"marquee-down": "marquee-down 20s linear infinite"
+				"marquee-down": "marquee-down 20s linear infinite",
+				"cascade": "cascade 1.5s ease-out forwards",
+				"cascade-1": "cascade-1 1.2s ease-out forwards",
+				"cascade-2": "cascade-2 1.4s ease-out forwards 0.2s",
+				"cascade-3": "cascade-3 1.6s ease-out forwards 0.4s",
+				"cascade-4": "cascade-4 1.8s ease-out forwards 0.6s"
 			}
 		}
 	},

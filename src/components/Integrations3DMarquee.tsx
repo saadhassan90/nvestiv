@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
 
 // Import all integration logos
@@ -85,21 +85,15 @@ interface MarqueeColumnProps {
 }
 
 const MarqueeColumn: React.FC<MarqueeColumnProps> = ({ logos, direction, duration, className }) => {
-  // Duplicate logos for seamless oscillation
+  // Duplicate logos for cascade effect - final position is at bottom
   const duplicatedLogos = [...logos, ...logos];
   
   return (
-    <div className={cn("flex flex-col", className)}>
+    <div className={cn("flex flex-col h-full overflow-hidden", className)}>
       <div 
-        className={cn(
-          "flex flex-col",
-          direction === 'up' ? 'animate-marquee-up' : 'animate-marquee-down'
-        )}
+        className="flex flex-col"
         style={{
-          animationDuration: `${duration}s`,
-          animationTimingFunction: 'ease-in-out',
-          animationIterationCount: 'infinite',
-          animationDirection: 'alternate',
+          transform: 'translateY(100%)', // Start from bottom (resting position)
         }}
       >
         {duplicatedLogos.map((logo, index) => (
@@ -112,9 +106,25 @@ const MarqueeColumn: React.FC<MarqueeColumnProps> = ({ logos, direction, duratio
 
 interface Integrations3DMarqueeProps {
   className?: string;
+  triggerAnimation?: boolean;
 }
 
-export const Integrations3DMarquee: React.FC<Integrations3DMarqueeProps> = ({ className }) => {
+export const Integrations3DMarquee: React.FC<Integrations3DMarqueeProps> = ({ className, triggerAnimation = false }) => {
+  const [animationStage, setAnimationStage] = useState<'idle' | 'cascading' | 'settled'>('idle');
+
+  useEffect(() => {
+    if (triggerAnimation && animationStage === 'idle') {
+      setAnimationStage('cascading');
+      
+      // Settle to final position after cascade
+      const timer = setTimeout(() => {
+        setAnimationStage('settled');
+      }, 2500);
+      
+      return () => clearTimeout(timer);
+    }
+  }, [triggerAnimation, animationStage]);
+
   return (
     <div className={cn("relative w-full h-full overflow-hidden", className)}>
       {/* Studio lighting background */}
@@ -137,37 +147,65 @@ export const Integrations3DMarquee: React.FC<Integrations3DMarqueeProps> = ({ cl
             transformStyle: 'preserve-3d',
           }}
         >
-          {/* Column 1 - Moving Up */}
-          <MarqueeColumn 
-            logos={logosColumn1} 
-            direction="up" 
-            duration={15}
-            className="opacity-90"
-          />
+          {/* Column 1 */}
+          <div 
+            className={cn(
+              "transition-all duration-700 ease-out",
+              animationStage === 'cascading' && "animate-cascade-1"
+            )}
+          >
+            <MarqueeColumn 
+              logos={logosColumn1} 
+              direction="up" 
+              duration={1.5}
+              className="opacity-90"
+            />
+          </div>
           
-          {/* Column 2 - Moving Down */}
-          <MarqueeColumn 
-            logos={logosColumn2} 
-            direction="down" 
-            duration={10}
-            className="opacity-95"
-          />
+          {/* Column 2 */}
+          <div 
+            className={cn(
+              "transition-all duration-700 ease-out delay-200",
+              animationStage === 'cascading' && "animate-cascade-2"
+            )}
+          >
+            <MarqueeColumn 
+              logos={logosColumn2} 
+              direction="down" 
+              duration={1.2}
+              className="opacity-95"
+            />
+          </div>
           
-          {/* Column 3 - Moving Up */}
-          <MarqueeColumn 
-            logos={logosColumn3} 
-            direction="up" 
-            duration={12}
-            className="opacity-90"
-          />
+          {/* Column 3 */}
+          <div 
+            className={cn(
+              "transition-all duration-700 ease-out delay-400",
+              animationStage === 'cascading' && "animate-cascade-3"
+            )}
+          >
+            <MarqueeColumn 
+              logos={logosColumn3} 
+              direction="up" 
+              duration={1.8}
+              className="opacity-90"
+            />
+          </div>
           
-          {/* Column 4 - Moving Down */}
-          <MarqueeColumn 
-            logos={logosColumn4} 
-            direction="down" 
-            duration={18}
-            className="opacity-85"
-          />
+          {/* Column 4 */}
+          <div 
+            className={cn(
+              "transition-all duration-700 ease-out delay-600",
+              animationStage === 'cascading' && "animate-cascade-4"
+            )}
+          >
+            <MarqueeColumn 
+              logos={logosColumn4} 
+              direction="down" 
+              duration={2.0}
+              className="opacity-85"
+            />
+          </div>
         </div>
       </div>
       
