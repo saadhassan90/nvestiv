@@ -269,14 +269,23 @@ export default {
 						transform: "translateY(50px)"
 					}
 				},
-				"settle-down": {
-					"0%": { 
-						transform: "translateY(0)"
-					},
-					"100%": { 
-						transform: "translateY(-50px)"
-					}
-				}
+        "slide-in-right": {
+          "0%": { transform: "translateX(100%)", opacity: "0" },
+          "100%": { transform: "translateX(0)", opacity: "1" }
+        },
+        "slide-out-right": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(100%)" }
+        },
+        "slide-in-left": {
+          "0%": { transform: "translateX(-100%)", opacity: "0" },
+          "100%": { transform: "translateX(0)", opacity: "1" }
+        },
+        "typing-dots": {
+          "0%, 20%": { opacity: "0.4" },
+          "50%": { opacity: "1" },
+          "100%": { opacity: "0.4" }
+        },
 			},
 			animation: {
 				"accordion-down": "accordion-down 0.2s ease-out",
@@ -299,6 +308,10 @@ export default {
 				"cascade-towards-2": "cascade-towards-2 1.7s ease-out forwards 0.3s",
 				"cascade-towards-3": "cascade-towards-3 1.9s ease-out forwards 0.6s",
 				"cascade-towards-4": "cascade-towards-4 2.1s ease-out forwards 0.9s",
+        "slide-in-right": "slide-in-right 0.5s ease-out",
+        "slide-out-right": "slide-out-right 0.3s ease-out",
+        "slide-in-left": "slide-in-left 0.5s ease-out",
+        "typing-dots": "typing-dots 1.5s ease-in-out infinite",
 				"settle-up": "settle-up 1s ease-out forwards",
 				"settle-down": "settle-down 1s ease-out forwards"
 			}
