@@ -768,29 +768,29 @@ const HomePage = () => {
                     <div className="grid lg:grid-cols-2 gap-8 items-stretch">
                        <div className="space-y-6 flex flex-col justify-between border border-border rounded-xl p-6 h-full min-h-[500px]">
                          <div>
-                            <h3 className="h3 mb-4 text-card-heading">Connect Everything, Control Everything</h3>
+                            <h3 className="h3 mb-4 text-card-heading">One OS, Every Tool</h3>
                             <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
-                              Transform your fragmented software ecosystem into a unified command center. IRIS integrates with your existing tools to create intelligent workflows that eliminate manual data entry, reduce context switching, and accelerate decision-making across your entire investment operation.
+                              Most investment tools don't let AI work inside them. We build the missing connections. IRIS connects to your entire tech stack through custom-built MCPs, letting her work directly in platforms like PitchBook, Addepar, and Black Diamond—not just pull data, but actually do the work.
                             </p>
                             
                              <div className="space-y-3 mb-6">
-                               <h4 className="font-semibold text-muted-foreground">Integration Capabilities</h4>
+                               <h4 className="font-semibold text-muted-foreground">Key Features</h4>
                               <ul className="space-y-2 text-sm text-muted-foreground">
                                 <li className="flex items-start gap-2">
                                   <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                                  <span><strong>Native platform integration</strong> - Connect Bloomberg, PitchBook, CapIQ, and 200+ tools</span>
+                                  <span><strong>Custom MCP development</strong> - We build the AI connections your tools don't have</span>
                                 </li>
                                 <li className="flex items-start gap-2">
                                   <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                                  <span><strong>Intelligent data synchronization</strong> - Real-time updates across all connected systems</span>
+                                  <span><strong>Direct platform control</strong> - IRIS works inside third-party software, not around it</span>
                                 </li>
                                 <li className="flex items-start gap-2">
                                   <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                                  <span><strong>Automated workflow orchestration</strong> - Chain actions across multiple platforms seamlessly</span>
+                                  <span><strong>Investment-specific integrations</strong> - Built for PitchBook, Addepar, QuickBooks, Black Diamond, and more</span>
                                 </li>
                                 <li className="flex items-start gap-2">
                                   <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                                  <span><strong>Single source of truth</strong> - Unified view of all deal data, contacts, and activities</span>
+                                  <span><strong>True workflow automation</strong> - AI that actually completes tasks across multiple platforms</span>
                                 </li>
                               </ul>
                             </div>
