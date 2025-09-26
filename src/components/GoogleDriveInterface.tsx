@@ -4,14 +4,19 @@ import { Search, Grid3X3, List, Star, Info, MoreHorizontal, FolderIcon, FileIcon
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+import googleDriveLogo from '@/assets/google-drive-logo.png';
 
 const people = {
   jordan: { name: 'Jordan Noah', company: 'Family Office', avatar: '/src/assets/jordan-noah-avatar.jpg', initials: 'JN' },
-  noah: { name: 'Noah Williams', company: 'Investment Advisory', avatar: '/src/assets/jordan-noah-avatar.jpg', initials: 'NW' },
+  alex: { name: 'Alex Rivera', company: 'Investment Advisory', avatar: '', initials: 'AR' },
   misha: { name: 'Misha Fuentes', company: 'Legal Counsel', avatar: '/src/assets/misha-fuentes-avatar.jpg', initials: 'MF' },
   sarah: { name: 'Sarah Chen', company: 'Tax Advisory', avatar: '', initials: 'SC' },
   david: { name: 'David Miller', company: 'Blackstone', avatar: '', initials: 'DM' },
-  emily: { name: 'Emily Johnson', company: 'Foundation Board', avatar: '', initials: 'EJ' }
+  emily: { name: 'Emily Johnson', company: 'Foundation Board', avatar: '', initials: 'EJ' },
+  marcus: { name: 'Marcus Thompson', company: 'Wealth Management', avatar: '', initials: 'MT' },
+  lisa: { name: 'Lisa Park', company: 'Private Equity', avatar: '', initials: 'LP' },
+  robert: { name: 'Robert Kim', company: 'Compliance', avatar: '', initials: 'RK' },
+  nina: { name: 'Nina Rodriguez', company: 'Operations', avatar: '', initials: 'NR' }
 };
 
 const fileItems = [
@@ -21,7 +26,7 @@ const fileItems = [
     type: 'folder', 
     size: '47 items', 
     modified: '2 days ago', 
-    people: ['jordan', 'noah', 'david'],
+    people: ['jordan', 'alex', 'david'],
     tasks: ['Review Q4 portfolio allocation', 'Schedule next committee meeting', 'Update investment guidelines']
   },
   { 
@@ -30,7 +35,7 @@ const fileItems = [
     type: 'folder', 
     size: '23 items', 
     modified: '1 day ago', 
-    people: ['david', 'noah'],
+    people: ['david', 'marcus'],
     tasks: ['Complete Blackstone analysis', 'Request additional financials', 'Schedule management presentation']
   },
   { 
@@ -39,7 +44,7 @@ const fileItems = [
     type: 'folder', 
     size: '156 items', 
     modified: '3 hours ago', 
-    people: ['misha', 'sarah'],
+    people: ['misha', 'lisa'],
     tasks: ['Review trust amendments', 'Update beneficiary information', 'File annual compliance reports']
   },
   { 
@@ -48,7 +53,7 @@ const fileItems = [
     type: 'folder', 
     size: '89 items', 
     modified: '5 hours ago', 
-    people: ['misha', 'sarah', 'jordan'],
+    people: ['robert', 'sarah', 'jordan'],
     tasks: ['Update will provisions', 'Review tax implications', 'Schedule family meeting']
   },
   { 
@@ -57,7 +62,7 @@ const fileItems = [
     type: 'folder', 
     size: '34 items', 
     modified: '1 week ago', 
-    people: ['emily', 'jordan'],
+    people: ['emily', 'nina'],
     tasks: ['Approve grant allocations', 'Review foundation strategy', 'Prepare annual report']
   },
   { 
@@ -66,7 +71,7 @@ const fileItems = [
     type: 'file', 
     size: '2.4 MB', 
     modified: '2 hours ago', 
-    people: ['noah', 'david'],
+    people: ['alex', 'david'],
     tasks: ['Analyze performance metrics', 'Compare to benchmarks', 'Prepare summary for committee']
   },
   { 
@@ -84,7 +89,7 @@ const fileItems = [
     type: 'file', 
     size: '3.8 MB', 
     modified: '3 days ago', 
-    people: ['noah', 'jordan'],
+    people: ['marcus', 'jordan'],
     tasks: ['Update asset allocation', 'Calculate returns', 'Prepare presentation']
   }
 ];
@@ -102,10 +107,12 @@ export const GoogleDriveInterface = ({ className }: { className?: string }) => {
           <div className="flex items-center gap-3">
             <div className="flex items-center gap-2">
               {/* Google Drive Logo */}
-              <div className="w-6 h-6 bg-gradient-to-br from-yellow-400 via-green-500 to-blue-500 rounded-sm flex items-center justify-center">
-                <div className="w-3 h-3 bg-white rounded-sm opacity-90"></div>
-              </div>
-              <span className="text-gray-700 dark:text-gray-200 font-medium text-sm">Drive</span>
+              <img 
+                src={googleDriveLogo} 
+                alt="Google Drive" 
+                className="w-6 h-6"
+              />
+              <span className="text-gray-700 dark:text-gray-200 font-medium text-sm">Google Drive Integration</span>
             </div>
           </div>
           
@@ -158,10 +165,10 @@ export const GoogleDriveInterface = ({ className }: { className?: string }) => {
         </div>
 
         {/* File Grid/List */}
-        <ScrollArea className="flex-1 p-4">
-          <div className="space-y-2">
+        <ScrollArea className="flex-1">
+          <div className="p-4 space-y-2">
             {fileItems.map((item) => (
-              <div key={item.id} className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800/50 cursor-pointer transition-colors border border-gray-200/50 dark:border-gray-700/50 bg-white/50 dark:bg-gray-900/30">
+              <div key={item.id} className="flex items-center gap-3 p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800/50 cursor-pointer transition-colors border border-gray-200/50 dark:border-gray-700/50 bg-white/50 dark:bg-gray-900/30">
                 <div className="flex-shrink-0">
                   {item.type === 'folder' ? 
                     <FolderIcon className="w-5 h-5 text-blue-600 dark:text-blue-400" /> : 
