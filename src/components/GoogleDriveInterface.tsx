@@ -171,22 +171,14 @@ export const GoogleDriveInterface = ({ className, animationStage = 'idle' }: {
         <ScrollArea className="flex-1">
           {animationStage === 'loading' && (
             <div className="p-8 flex flex-col items-center justify-center h-full">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-8 h-8 border-2 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
-                <div className="text-sm text-gray-600 dark:text-gray-400">
-                  IRIS is processing your files...
-                </div>
-              </div>
-              <div className="space-y-2 w-full max-w-md">
-                {['Analyzing document relationships...', 'Extracting key insights...', 'Connecting team members...'].map((text, index) => (
-                  <div key={index} className={cn(
-                    "text-xs text-gray-500 dark:text-gray-400 transition-opacity duration-500",
-                    index === 0 ? 'opacity-100' : 
-                    index === 1 ? (animationStage === 'loading' ? 'opacity-60' : 'opacity-30') : 'opacity-30'
-                  )}>
-                    {text}
-                  </div>
-                ))}
+              <img 
+                src={googleDriveLogo} 
+                alt="Google Drive" 
+                className="w-12 h-12 object-contain mb-6"
+              />
+              <div className="w-8 h-8 border-2 border-blue-500 border-t-transparent rounded-full animate-spin mb-4"></div>
+              <div className="text-sm text-gray-600 dark:text-gray-400">
+                Integrating your Google Drive
               </div>
             </div>
           )}

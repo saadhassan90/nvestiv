@@ -62,22 +62,22 @@ const HomePage = () => {
     if (activeTab === "ai-crm" && crmAnimationStage === 'idle') {
       setCrmAnimationStage('msg1');
 
-      // CRM Animation sequence with typing indicators
-      setTimeout(() => setCrmAnimationStage('msg1'), 500);
-      setTimeout(() => setCrmAnimationStage('typing1'), 1500);
-      setTimeout(() => setCrmAnimationStage('msg2'), 3500);
-      setTimeout(() => setCrmAnimationStage('msg3'), 4500);
-      setTimeout(() => setCrmAnimationStage('msg4'), 5500);
-      setTimeout(() => setCrmAnimationStage('typing2'), 6500);
-      setTimeout(() => setCrmAnimationStage('msg5'), 8500);
-      setTimeout(() => setCrmAnimationStage('typing3'), 9500);
-      setTimeout(() => setCrmAnimationStage('msg6'), 11500);
-      setTimeout(() => setCrmAnimationStage('msg7'), 12500);
-      setTimeout(() => setCrmAnimationStage('typing4'), 13500);
-      setTimeout(() => setCrmAnimationStage('msg8'), 15500);
-      setTimeout(() => setCrmAnimationStage('msg9'), 16500);
-      setTimeout(() => setCrmAnimationStage('typing5'), 17500);
-      setTimeout(() => setCrmAnimationStage('complete'), 19500);
+      // CRM Animation sequence with typing indicators (slowed to 0.5x speed)
+      setTimeout(() => setCrmAnimationStage('msg1'), 1000);
+      setTimeout(() => setCrmAnimationStage('typing1'), 3000);
+      setTimeout(() => setCrmAnimationStage('msg2'), 7000);
+      setTimeout(() => setCrmAnimationStage('msg3'), 9000);
+      setTimeout(() => setCrmAnimationStage('msg4'), 11000);
+      setTimeout(() => setCrmAnimationStage('typing2'), 13000);
+      setTimeout(() => setCrmAnimationStage('msg5'), 17000);
+      setTimeout(() => setCrmAnimationStage('typing3'), 19000);
+      setTimeout(() => setCrmAnimationStage('msg6'), 23000);
+      setTimeout(() => setCrmAnimationStage('msg7'), 25000);
+      setTimeout(() => setCrmAnimationStage('typing4'), 27000);
+      setTimeout(() => setCrmAnimationStage('msg8'), 31000);
+      setTimeout(() => setCrmAnimationStage('msg9'), 33000);
+      setTimeout(() => setCrmAnimationStage('typing5'), 35000);
+      setTimeout(() => setCrmAnimationStage('complete'), 39000);
     }
     if (activeTab === "files" && filesAnimationStage === 'idle') {
       setFilesAnimationStage('loading');

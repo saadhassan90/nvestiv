@@ -146,7 +146,7 @@ export const Integrations3DMarquee: React.FC<Integrations3DMarqueeProps> = ({ cl
         }}
       >
         <div
-          className="flex gap-2 sm:gap-4 h-full scale-[2.93] sm:scale-[3.42]"
+          className="flex gap-2 sm:gap-4 h-full scale-[5.86] sm:scale-[6.84]"
           style={{
             transform: 'rotateX(55deg) rotateZ(-45deg) translateY(-20px)',
             transformStyle: 'preserve-3d',
