@@ -89,15 +89,15 @@ const MarqueeColumn: React.FC<MarqueeColumnProps> = ({ logos, direction, duratio
   const duplicatedLogos = [...logos, ...logos, ...logos];
   
   return (
-    <div className={cn("flex flex-col overflow-hidden", className)}>
+    <div className={cn("flex flex-col", className)}>
       <div 
         className={cn(
           "flex flex-col",
-          direction === 'up' ? 'animate-marquee-up' : 'animate-marquee-down'
+          direction === 'up' ? 'animate-marquee-cycle-up' : 'animate-marquee-cycle-down'
         )}
         style={{
           animationDuration: `${duration}s`,
-          animationTimingFunction: 'linear',
+          animationTimingFunction: 'ease-in-out',
           animationIterationCount: 'infinite',
         }}
       >
@@ -121,17 +121,17 @@ export const Integrations3DMarquee: React.FC<Integrations3DMarqueeProps> = ({ cl
     if (triggerAnimation && animationStage === 'idle') {
       setAnimationStage('scrolling');
       
-      // Stop scrolling and settle after a few seconds
-      const timer = setTimeout(() => {
-        setAnimationStage('settled');
-      }, 4000);
+      // Keep scrolling continuously - no settling
+      // const timer = setTimeout(() => {
+      //   setAnimationStage('settled');
+      // }, 4000);
       
-      return () => clearTimeout(timer);
+      // return () => clearTimeout(timer);
     }
   }, [triggerAnimation, animationStage]);
 
   return (
-    <div className={cn("relative w-full h-full overflow-hidden", className)}>
+    <div className={cn("relative w-full h-full", className)}>
       {/* Studio lighting background */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-white to-slate-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900" />
       <div className="absolute inset-0 bg-gradient-radial from-transparent via-primary/5 to-transparent" />
@@ -146,68 +146,48 @@ export const Integrations3DMarquee: React.FC<Integrations3DMarqueeProps> = ({ cl
         }}
       >
         <div
-          className="flex gap-2 sm:gap-4 h-full scale-110 sm:scale-125"
+          className="flex gap-2 sm:gap-4 h-full scale-150 sm:scale-175"
           style={{
             transform: 'rotateX(55deg) rotateZ(-45deg)',
             transformStyle: 'preserve-3d',
           }}
         >
           {/* Column 1 - Moving Up */}
-          <div 
-            className={cn(
-              "opacity-90",
-              animationStage === 'settled' && "animate-settle-up"
-            )}
-          >
+          <div className="opacity-90">
             <MarqueeColumn 
               logos={logosColumn1} 
               direction="up" 
-              duration={animationStage === 'scrolling' ? 15 : 0}
+              duration={animationStage === 'scrolling' ? 30 : 0}
               className=""
             />
           </div>
           
           {/* Column 2 - Moving Down */}
-          <div 
-            className={cn(
-              "opacity-95",
-              animationStage === 'settled' && "animate-settle-down"
-            )}
-          >
+          <div className="opacity-95">
             <MarqueeColumn 
               logos={logosColumn2} 
               direction="down" 
-              duration={animationStage === 'scrolling' ? 10 : 0}
+              duration={animationStage === 'scrolling' ? 25 : 0}
               className=""
             />
           </div>
           
           {/* Column 3 - Moving Up */}
-          <div 
-            className={cn(
-              "opacity-90",
-              animationStage === 'settled' && "animate-settle-up"
-            )}
-          >
+          <div className="opacity-90">
             <MarqueeColumn 
               logos={logosColumn3} 
               direction="up" 
-              duration={animationStage === 'scrolling' ? 12 : 0}
+              duration={animationStage === 'scrolling' ? 35 : 0}
               className=""
             />
           </div>
           
           {/* Column 4 - Moving Down */}
-          <div 
-            className={cn(
-              "opacity-85",
-              animationStage === 'settled' && "animate-settle-down"
-            )}
-          >
+          <div className="opacity-85">
             <MarqueeColumn 
               logos={logosColumn4} 
               direction="down" 
-              duration={animationStage === 'scrolling' ? 18 : 0}
+              duration={animationStage === 'scrolling' ? 40 : 0}
               className=""
             />
           </div>

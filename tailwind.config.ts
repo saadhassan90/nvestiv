@@ -147,13 +147,15 @@ export default {
 					"0%": { transform: "translateX(0%)" },
 					"100%": { transform: "translateX(-50%)" }
 				},
-				"marquee-up": {
+				"marquee-cycle-up": {
 					"0%": { transform: "translateY(0%)" },
-					"100%": { transform: "translateY(-100%)" }
-				},
-				"marquee-down": {
-					"0%": { transform: "translateY(-100%)" },
+					"50%": { transform: "translateY(-100%)" },
 					"100%": { transform: "translateY(0%)" }
+				},
+				"marquee-cycle-down": {
+					"0%": { transform: "translateY(-100%)" },
+					"50%": { transform: "translateY(0%)" },
+					"100%": { transform: "translateY(-100%)" }
 				},
 				"cascade": {
 					"0%": { 
@@ -260,8 +262,8 @@ export default {
 				"typing": "typing 6s steps(30) infinite, blink .7s infinite",
 				"sparkle": "sparkle 3s ease-in-out infinite",
 				"marquee": "marquee 30s linear infinite",
-				"marquee-up": "marquee-up 20s linear infinite",
-				"marquee-down": "marquee-down 20s linear infinite",
+				"marquee-cycle-up": "marquee-cycle-up 20s ease-in-out infinite",
+				"marquee-cycle-down": "marquee-cycle-down 20s ease-in-out infinite",
 				"cascade": "cascade 1.5s ease-out forwards",
 				"cascade-1": "cascade-1 1.2s ease-out forwards",
 				"cascade-2": "cascade-2 1.4s ease-out forwards 0.2s",
