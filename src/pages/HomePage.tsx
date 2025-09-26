@@ -730,9 +730,14 @@ const HomePage = () => {
                           </Button>
                         </div>
                       </div>
-                       <div className="lg:pl-8">
-                         <GoogleDriveInterface className="w-full" />
-                       </div>
+        <div className="lg:pl-8">
+          <div className="relative rounded-2xl">
+            <div className="pointer-events-none absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-cyan-500 rounded-[18px] blur-md opacity-15"></div>
+            <div className="relative z-10">
+              <GoogleDriveInterface className="w-full" />
+            </div>
+          </div>
+        </div>
                      </div>
                   </div>
                 </Card>
