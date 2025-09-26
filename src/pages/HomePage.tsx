@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
-import { Database, Bot, Sparkles as SparklesIcon, Search, ArrowRight, ChevronDown, FolderOpen, Grid3X3, Settings, Users, FileText, Zap, Circle, TrendingUp, Plus, Folder, Link, Cpu, Calendar, LogIn, Plug, Play, BarChart3, Mail, AlertTriangle } from "lucide-react";
+import { Database, Bot, Sparkles as SparklesIcon, Search, ArrowRight, ChevronDown, FolderOpen, Grid3X3, Settings, Users, FileText, Zap, Circle, TrendingUp, Plus, Folder, Link, Cpu, Calendar, LogIn, Plug, Play, BarChart3, Mail, AlertTriangle, BookOpen } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { VideoBackground } from "@/components/VideoBackground";
@@ -304,7 +304,7 @@ const HomePage = () => {
                           
                           <Button variant="default" asChild>
                             <a href="/ai-crm" className="text-white no-underline flex items-center gap-2">
-                              <ArrowRight className="h-4 w-4" />
+                              <BookOpen className="h-4 w-4" />
                               Learn More
                             </a>
                           </Button>
@@ -724,7 +724,7 @@ const HomePage = () => {
                           </div>
                           
                           <Button variant="default">
-                            <ArrowRight className="h-4 w-4 mr-2" />
+                            <BookOpen className="h-4 w-4 mr-2" />
                             Learn More
                           </Button>
                         </div>
