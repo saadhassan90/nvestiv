@@ -143,6 +143,14 @@ export default {
 				"marquee": {
 					"0%": { transform: "translateX(0%)" },
 					"100%": { transform: "translateX(-50%)" }
+				},
+				"marquee-up": {
+					"0%": { transform: "translateY(0%)" },
+					"100%": { transform: "translateY(-100%)" }
+				},
+				"marquee-down": {
+					"0%": { transform: "translateY(-100%)" },
+					"100%": { transform: "translateY(0%)" }
 				}
 			},
 			animation: {
@@ -152,7 +160,9 @@ export default {
 				"parallax-float": "parallax-float 6s ease-in-out infinite",
 				"typing": "typing 6s steps(30) infinite, blink .7s infinite",
 				"sparkle": "sparkle 3s ease-in-out infinite",
-				"marquee": "marquee 30s linear infinite"
+				"marquee": "marquee 30s linear infinite",
+				"marquee-up": "marquee-up 20s linear infinite",
+				"marquee-down": "marquee-down 20s linear infinite"
 			}
 		}
 	},
