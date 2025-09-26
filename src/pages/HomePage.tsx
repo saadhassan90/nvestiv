@@ -11,6 +11,7 @@ import SEOHead from "@/components/SEOHead";
 import { seoPages } from "@/lib/seo-config";
 import irisCharacter from "@/assets/iris-character.png";
 import { ListeningWaveform } from "@/components/ListeningWaveform";
+import { GoogleDriveInterface } from "@/components/GoogleDriveInterface";
 const HomePage = () => {
   console.log("HomePage component is rendering");
   const [crmModalOpen, setCrmModalOpen] = useState(false);
@@ -729,66 +730,9 @@ const HomePage = () => {
                           </Button>
                         </div>
                       </div>
-                      <div className="lg:pl-8">
-                        <div className="relative rounded-2xl">
-                          <div className="pointer-events-none absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-cyan-500 rounded-[18px] blur-md opacity-15"></div>
-                           <div className="relative z-10 bg-card rounded-2xl p-6 h-[700px] flex flex-col shadow-none">
-                          
-                          {/* File Explorer */}
-                          <div className="flex-1 space-y-4 mb-4 overflow-y-auto">
-                            <div className="flex items-center justify-between mb-4">
-                              <h4 className="font-semibold text-foreground">Document Library</h4>
-                              <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">2,847 Files</span>
-                            </div>
-                            
-                            {/* Folder Structure */}
-                            <div className="space-y-2">
-                              <div className="flex items-center gap-3 p-2 bg-gray-50 rounded-lg">
-                                <Folder className="w-4 h-4 text-blue-500" />
-                                <span className="text-sm text-gray-900">Active Deals</span>
-                                <span className="text-xs text-gray-500 ml-auto">127 files</span>
-                              </div>
-                              
-                              <div className="flex items-center gap-3 p-2 hover:bg-gray-50 rounded-lg">
-                                <Folder className="w-4 h-4 text-purple-500" />
-                                <span className="text-sm text-gray-900">Due Diligence</span>
-                                <span className="text-xs text-gray-500 ml-auto">89 files</span>
-                              </div>
-                              
-                              <div className="flex items-center gap-3 p-2 hover:bg-gray-50 rounded-lg">
-                                <FileText className="w-4 h-4 text-green-500" />
-                                <span className="text-sm text-gray-900">HealthTech_Financials.pdf</span>
-                                <span className="text-xs text-gray-500 ml-auto">2.4 MB</span>
-                              </div>
-                              
-                              <div className="flex items-center gap-3 p-2 hover:bg-gray-50 rounded-lg">
-                                <FileText className="w-4 h-4 text-red-500" />
-                                <span className="text-sm text-gray-900">Market_Analysis_Q4.xlsx</span>
-                                <span className="text-xs text-gray-500 ml-auto">1.8 MB</span>
-                              </div>
-                              
-                              <div className="flex items-center gap-3 p-2 hover:bg-gray-50 rounded-lg">
-                                <FileText className="w-4 h-4 text-orange-500" />
-                                <span className="text-sm text-gray-900">Legal_Review_Summary.docx</span>
-                                <span className="text-xs text-gray-500 ml-auto">956 KB</span>
-                              </div>
-                            </div>
-                          </div>
-                          
-                          {/* Search Bar */}
-                          <div className="bg-muted/50 backdrop-blur-sm rounded-xl p-1 border border-border">
-                            <div className="flex items-center gap-2 p-2">
-                              <div className="flex-1 relative">
-                                <input type="text" placeholder="Search files and documents..." className="w-full bg-transparent text-foreground placeholder:text-muted-foreground text-xs focus:outline-none py-1 px-2" disabled />
-                              </div>
-                              <Button size="icon" variant="default" className="w-6 h-6 rounded-md">
-                                <Search className="w-3 h-3" />
-                              </Button>
-                            </div>
-                          </div>
-                          </div>
-                        </div>
-                      </div>
+                       <div className="lg:pl-8">
+                         <GoogleDriveInterface className="w-full" />
+                       </div>
                      </div>
                   </div>
                 </Card>
