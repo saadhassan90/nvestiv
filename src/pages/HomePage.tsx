@@ -768,36 +768,36 @@ const HomePage = () => {
                     <div className="grid lg:grid-cols-2 gap-8 items-stretch">
                        <div className="space-y-6 flex flex-col justify-between border border-border rounded-xl p-6 h-full min-h-[500px]">
                          <div>
-                           <h3 className="h3 mb-4 text-card-heading">One OS, Every Tool</h3>
-                           <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
-                             Connect your entire tech stack into one unified workspace. IRIS doesn't just pull data—she works directly in your connected tools, breaking down silos and orchestrating multi-platform workflows from a single command center.
-                           </p>
-                           
-                            <div className="space-y-3 mb-6">
-                              <h4 className="font-semibold text-muted-foreground">Key Features</h4>
-                             <ul className="space-y-2 text-sm text-muted-foreground">
-                               <li className="flex items-start gap-2">
-                                 <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                                 <span><strong>Complete tech stack integration</strong> - Connect every software you use</span>
-                               </li>
-                               <li className="flex items-start gap-2">
-                                 <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                                 <span><strong>Deep tool connectivity</strong> - IRIS works directly in connected platforms, not just through APIs</span>
-                               </li>
-                               <li className="flex items-start gap-2">
-                                 <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                                 <span><strong>Cross-platform workflows</strong> - Bridge data silos and create seamless pathways</span>
-                               </li>
-                               <li className="flex items-start gap-2">
-                                 <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                                 <span><strong>Multi-tool orchestration</strong> - Engage multiple systems to complete complex tasks</span>
-                               </li>
-                             </ul>
-                           </div>
-                           
-                            <Button variant="default">
-                              <Plug className="h-4 w-4 mr-2" />
-                              See Available Integrations
+                            <h3 className="h3 mb-4 text-card-heading">Connect Everything, Control Everything</h3>
+                            <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
+                              Transform your fragmented software ecosystem into a unified command center. IRIS integrates with your existing tools to create intelligent workflows that eliminate manual data entry, reduce context switching, and accelerate decision-making across your entire investment operation.
+                            </p>
+                            
+                             <div className="space-y-3 mb-6">
+                               <h4 className="font-semibold text-muted-foreground">Integration Capabilities</h4>
+                              <ul className="space-y-2 text-sm text-muted-foreground">
+                                <li className="flex items-start gap-2">
+                                  <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                                  <span><strong>Native platform integration</strong> - Connect Bloomberg, PitchBook, CapIQ, and 200+ tools</span>
+                                </li>
+                                <li className="flex items-start gap-2">
+                                  <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                                  <span><strong>Intelligent data synchronization</strong> - Real-time updates across all connected systems</span>
+                                </li>
+                                <li className="flex items-start gap-2">
+                                  <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                                  <span><strong>Automated workflow orchestration</strong> - Chain actions across multiple platforms seamlessly</span>
+                                </li>
+                                <li className="flex items-start gap-2">
+                                  <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                                  <span><strong>Single source of truth</strong> - Unified view of all deal data, contacts, and activities</span>
+                                </li>
+                              </ul>
+                            </div>
+                            
+                             <Button variant="default">
+                               <Plug className="h-4 w-4 mr-2" />
+                               Explore Integration Library
                             </Button>
                          </div>
                       </div>
