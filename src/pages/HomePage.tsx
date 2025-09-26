@@ -24,35 +24,30 @@ const HomePage = () => {
   const [crmAnimationStage, setCrmAnimationStage] = useState<'idle' | 'msg1' | 'msg2' | 'msg3' | 'msg4' | 'msg5' | 'msg6' | 'msg7' | 'msg8' | 'msg9' | 'complete'>('idle');
   const [filesAnimationStage, setFilesAnimationStage] = useState<'idle' | 'loading' | 'cascading' | 'complete'>('idle');
   const videoRef = useRef<HTMLVideoElement>(null);
-
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            video.play();
-          } else {
-            video.pause();
-            video.currentTime = 0; // Reset to beginning when out of view
-          }
-        });
-      },
-      { threshold: 0.5 } // Play when 50% of video is visible
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          video.play();
+        } else {
+          video.pause();
+          video.currentTime = 0; // Reset to beginning when out of view
+        }
+      });
+    }, {
+      threshold: 0.5
+    } // Play when 50% of video is visible
     );
-
     observer.observe(video);
-
     return () => {
       observer.disconnect();
     };
   }, []);
-
   const handleTabChange = (value: string) => {
     setActiveTab(value);
-    
+
     // Reset animations when switching tabs
     if (value === "ai-crm" && crmAnimationStage !== 'idle') {
       setCrmAnimationStage('idle');
@@ -66,21 +61,57 @@ const HomePage = () => {
   useEffect(() => {
     if (activeTab === "ai-crm" && crmAnimationStage === 'idle') {
       setCrmAnimationStage('msg1');
-      
+
       // Simulate realistic chat flow with sequential messages
-      const chatFlow = [
-        { stage: 'msg2', delay: 1500 },   // IRIS response
-        { stage: 'msg3', delay: 1000 },   // Contact card
-        { stage: 'msg4', delay: 1500 },   // User follow up
-        { stage: 'msg5', delay: 800 },    // IRIS searching
-        { stage: 'msg6', delay: 2500 },   // IRIS enriched info
-        { stage: 'msg7', delay: 1200 },   // User Miami message
-        { stage: 'msg8', delay: 1800 },   // IRIS calendar check
-        { stage: 'msg9', delay: 1000 },   // User "Yes"
-        { stage: 'complete', delay: 1500 } // Final IRIS response
+      const chatFlow = [{
+        stage: 'msg2',
+        delay: 1500
+      },
+      // IRIS response
+      {
+        stage: 'msg3',
+        delay: 1000
+      },
+      // Contact card
+      {
+        stage: 'msg4',
+        delay: 1500
+      },
+      // User follow up
+      {
+        stage: 'msg5',
+        delay: 800
+      },
+      // IRIS searching
+      {
+        stage: 'msg6',
+        delay: 2500
+      },
+      // IRIS enriched info
+      {
+        stage: 'msg7',
+        delay: 1200
+      },
+      // User Miami message
+      {
+        stage: 'msg8',
+        delay: 1800
+      },
+      // IRIS calendar check
+      {
+        stage: 'msg9',
+        delay: 1000
+      },
+      // User "Yes"
+      {
+        stage: 'complete',
+        delay: 1500
+      } // Final IRIS response
       ];
-      
-      chatFlow.reduce((promise, { stage, delay }) => {
+      chatFlow.reduce((promise, {
+        stage,
+        delay
+      }) => {
         return promise.then(() => new Promise(resolve => {
           setTimeout(() => {
             setCrmAnimationStage(stage as any);
@@ -89,15 +120,12 @@ const HomePage = () => {
         }));
       }, Promise.resolve());
     }
-    
     if (activeTab === "files" && filesAnimationStage === 'idle') {
       setFilesAnimationStage('loading');
-      
       setTimeout(() => setFilesAnimationStage('cascading'), 2000);
       setTimeout(() => setFilesAnimationStage('complete'), 4000);
     }
   }, [activeTab, crmAnimationStage, filesAnimationStage]);
-
   return <div className="min-h-screen bg-transparent">
       <SEOHead {...seoPages.home} />
       <Navigation />
@@ -373,10 +401,7 @@ const HomePage = () => {
                           {/* Chat History Container */}
                           <div className="flex-1 space-y-4 mb-4 overflow-y-auto">
                             {/* User Message 1 */}
-                            <div className={cn(
-                              "flex justify-end gap-2 transition-all duration-500",
-                              crmAnimationStage === 'idle' ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'
-                            )}>
+                            <div className={cn("flex justify-end gap-2 transition-all duration-500", crmAnimationStage === 'idle' ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0')}>
                               <div className="flex flex-col items-end max-w-[80%]">
                                 <div className="flex items-center gap-2 mb-1">
                                    <span className="text-xs text-muted-foreground">12:34 PM</span>
@@ -392,10 +417,7 @@ const HomePage = () => {
                             </div>
                             
                             {/* IRIS Response 1 */}
-                            <div className={cn(
-                              "flex justify-start gap-2 transition-all duration-500 delay-200",
-                              (crmAnimationStage === 'idle' || crmAnimationStage === 'msg1') ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'
-                            )}>
+                            <div className={cn("flex justify-start gap-2 transition-all duration-500 delay-200", crmAnimationStage === 'idle' || crmAnimationStage === 'msg1' ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0')}>
                               <div className="flex flex-col items-start max-w-[85%]">
                                 <div className="flex items-center gap-2 mb-1">
                                    <div className="w-6 h-6 bg-muted rounded-full flex items-center justify-center">
@@ -412,10 +434,7 @@ const HomePage = () => {
                             </div>
                             
                              {/* Contact Card */}
-                             <div className={cn(
-                               "flex justify-start transition-all duration-500 delay-200",
-                               (crmAnimationStage === 'idle' || crmAnimationStage === 'msg1' || crmAnimationStage === 'msg2') ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'
-                             )}>
+                             <div className={cn("flex justify-start transition-all duration-500 delay-200", crmAnimationStage === 'idle' || crmAnimationStage === 'msg1' || crmAnimationStage === 'msg2' ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0')}>
                                 <div className="bg-gradient-to-br from-muted to-accent/30 border border-border rounded-lg p-2.5 max-w-[85%] shadow-sm hover:shadow-md transition-shadow">
                                   <div className="flex items-center gap-2.5">
                                     <div className="w-8 h-8 bg-gradient-to-br from-primary to-primary/80 rounded-lg flex items-center justify-center shadow-sm">
@@ -434,10 +453,7 @@ const HomePage = () => {
                              </div>
 
                              {/* User Message 2 - Enrich */}
-                             <div className={cn(
-                               "flex justify-end gap-2 transition-all duration-500 delay-200",
-                               (crmAnimationStage === 'idle' || crmAnimationStage === 'msg1' || crmAnimationStage === 'msg2' || crmAnimationStage === 'msg3') ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'
-                             )}>
+                             <div className={cn("flex justify-end gap-2 transition-all duration-500 delay-200", crmAnimationStage === 'idle' || crmAnimationStage === 'msg1' || crmAnimationStage === 'msg2' || crmAnimationStage === 'msg3' ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0')}>
                                <div className="flex flex-col items-end max-w-[80%]">
                                  <div className="flex items-center gap-2 mb-1">
                                     <span className="text-xs text-muted-foreground">12:35 PM</span>
@@ -453,10 +469,7 @@ const HomePage = () => {
                              </div>
 
                              {/* IRIS Response - Searching */}
-                             <div className={cn(
-                               "flex justify-start gap-2 transition-all duration-500 delay-200",
-                               (crmAnimationStage === 'idle' || crmAnimationStage === 'msg1' || crmAnimationStage === 'msg2' || crmAnimationStage === 'msg3' || crmAnimationStage === 'msg4') ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'
-                             )}>
+                             <div className={cn("flex justify-start gap-2 transition-all duration-500 delay-200", crmAnimationStage === 'idle' || crmAnimationStage === 'msg1' || crmAnimationStage === 'msg2' || crmAnimationStage === 'msg3' || crmAnimationStage === 'msg4' ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0')}>
                                <div className="flex flex-col items-start max-w-[85%]">
                                  <div className="flex items-center gap-2 mb-1">
                                     <div className="w-6 h-6 bg-muted rounded-full flex items-center justify-center">
@@ -475,10 +488,7 @@ const HomePage = () => {
                              </div>
 
                              {/* IRIS Response - Found Information */}
-                             <div className={cn(
-                               "flex justify-start gap-2 transition-all duration-500 delay-200",
-                               (crmAnimationStage === 'idle' || crmAnimationStage === 'msg1' || crmAnimationStage === 'msg2' || crmAnimationStage === 'msg3' || crmAnimationStage === 'msg4' || crmAnimationStage === 'msg5') ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'
-                             )}>
+                             <div className={cn("flex justify-start gap-2 transition-all duration-500 delay-200", crmAnimationStage === 'idle' || crmAnimationStage === 'msg1' || crmAnimationStage === 'msg2' || crmAnimationStage === 'msg3' || crmAnimationStage === 'msg4' || crmAnimationStage === 'msg5' ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0')}>
                                <div className="flex flex-col items-start max-w-[85%]">
                                  <div className="flex items-center gap-2 mb-1">
                                     <div className="w-6 h-6 bg-muted rounded-full flex items-center justify-center">
@@ -517,10 +527,7 @@ const HomePage = () => {
                              </div>
 
                              {/* User Message - Miami Meeting */}
-                             <div className={cn(
-                               "flex justify-end gap-2 transition-all duration-500 delay-200",
-                               ['idle', 'msg1', 'msg2', 'msg3', 'msg4', 'msg5', 'msg6'].includes(crmAnimationStage) ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'
-                             )}>
+                             <div className={cn("flex justify-end gap-2 transition-all duration-500 delay-200", ['idle', 'msg1', 'msg2', 'msg3', 'msg4', 'msg5', 'msg6'].includes(crmAnimationStage) ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0')}>
                                <div className="flex flex-col items-end max-w-[80%]">
                                  <div className="flex items-center gap-2 mb-1">
                                     <span className="text-xs text-muted-foreground">12:36 PM</span>
@@ -536,10 +543,7 @@ const HomePage = () => {
                              </div>
 
                              {/* IRIS Response - Calendar Check */}
-                             <div className={cn(
-                               "flex justify-start gap-2 transition-all duration-500 delay-200",
-                               ['idle', 'msg1', 'msg2', 'msg3', 'msg4', 'msg5', 'msg6', 'msg7'].includes(crmAnimationStage) ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'
-                             )}>
+                             <div className={cn("flex justify-start gap-2 transition-all duration-500 delay-200", ['idle', 'msg1', 'msg2', 'msg3', 'msg4', 'msg5', 'msg6', 'msg7'].includes(crmAnimationStage) ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0')}>
                                <div className="flex flex-col items-start max-w-[85%]">
                                  <div className="flex items-center gap-2 mb-1">
                                     <div className="w-6 h-6 bg-muted rounded-full flex items-center justify-center">
@@ -560,10 +564,7 @@ const HomePage = () => {
                              </div>
 
                              {/* User Message - Yes */}
-                             <div className={cn(
-                               "flex justify-end gap-2 transition-all duration-500 delay-200",
-                               ['idle', 'msg1', 'msg2', 'msg3', 'msg4', 'msg5', 'msg6', 'msg7', 'msg8'].includes(crmAnimationStage) ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'
-                             )}>
+                             <div className={cn("flex justify-end gap-2 transition-all duration-500 delay-200", ['idle', 'msg1', 'msg2', 'msg3', 'msg4', 'msg5', 'msg6', 'msg7', 'msg8'].includes(crmAnimationStage) ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0')}>
                                <div className="flex flex-col items-end max-w-[80%]">
                                  <div className="flex items-center gap-2 mb-1">
                                     <span className="text-xs text-muted-foreground">12:36 PM</span>
@@ -579,10 +580,7 @@ const HomePage = () => {
                               </div>
 
                              {/* IRIS Response - Email Sent */}
-                             <div className={cn(
-                               "flex justify-start gap-2 transition-all duration-500 delay-200",
-                               ['idle', 'msg1', 'msg2', 'msg3', 'msg4', 'msg5', 'msg6', 'msg7', 'msg8', 'msg9'].includes(crmAnimationStage) ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'
-                             )}>
+                             <div className={cn("flex justify-start gap-2 transition-all duration-500 delay-200", ['idle', 'msg1', 'msg2', 'msg3', 'msg4', 'msg5', 'msg6', 'msg7', 'msg8', 'msg9'].includes(crmAnimationStage) ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0')}>
                                <div className="flex flex-col items-start max-w-[85%]">
                                  <div className="flex items-center gap-2 mb-1">
                                     <div className="w-6 h-6 bg-muted rounded-full flex items-center justify-center">
@@ -609,19 +607,7 @@ const HomePage = () => {
 
                              {/* IRIS Response - Email Sent */}
                              <div className="flex justify-start gap-2">
-                               <div className="flex flex-col items-start max-w-[85%]">
-                                 <div className="flex items-center gap-2 mb-1">
-                                    <div className="w-6 h-6 bg-muted rounded-full flex items-center justify-center">
-                                      <span className="text-muted-foreground font-medium text-xs">I</span>
-                                    </div>
-                                    <span className="text-xs font-medium text-foreground">IRIS</span>
-                                    <span className="text-xs text-muted-foreground">12:36 PM</span>
-                                  </div>
-                                  <div className="bg-muted rounded-2xl px-4 py-2">
-                                    <p className="text-sm text-foreground mb-2">Done! Just sent email to Jason. I will monitor your inbox and coordinate the meeting. I will let you know when something is on the books.</p>
-                                    <span className="inline-block bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-medium mt-2">✉️ Sent Email</span>
-                                 </div>
-                               </div>
+                               
                              </div>
                            </div>
                           
@@ -844,10 +830,7 @@ const HomePage = () => {
           <div className="relative rounded-2xl">
             <div className="pointer-events-none absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-cyan-500 rounded-[18px] blur-md opacity-15"></div>
             <div className="relative z-10">
-              <GoogleDriveInterface 
-                className="w-full" 
-                animationStage={filesAnimationStage}
-              />
+              <GoogleDriveInterface className="w-full" animationStage={filesAnimationStage} />
             </div>
           </div>
         </div>
@@ -921,10 +904,7 @@ const HomePage = () => {
                             
                             {/* 3D Marquee Container */}
                             <div className="relative z-10 bg-card/90 backdrop-blur-sm rounded-2xl h-[700px] overflow-hidden border border-border/50 shadow-lg">
-                              <Integrations3DMarquee 
-                                className="w-full h-full" 
-                                triggerAnimation={activeTab === "integrations"}
-                              />
+                              <Integrations3DMarquee className="w-full h-full" triggerAnimation={activeTab === "integrations"} />
                             </div>
                           </div>
                         </div>
@@ -1047,15 +1027,7 @@ const HomePage = () => {
                         <div className="relative z-10 bg-white rounded-2xl h-full min-h-[500px] flex items-center justify-center shadow-none">
                           <div className="relative w-full h-full flex items-center justify-center">
                             <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-accent/10 to-primary/20 rounded-full blur-3xl opacity-30 dark:opacity-20"></div>
-                            <video 
-                              ref={videoRef}
-                              src="https://cdn.midjourney.com/video/a6591682-b664-466b-b202-9f54adfa6618/3.mp4"
-                              autoPlay={false}
-                              muted
-                              playsInline
-                              className="relative z-10 w-full h-full object-contain animate-fade-in transition-all duration-500 rounded-lg"
-                              aria-label="IRIS AI agent demonstration video for private investment management"
-                            />
+                            <video ref={videoRef} src="https://cdn.midjourney.com/video/a6591682-b664-466b-b202-9f54adfa6618/3.mp4" autoPlay={false} muted playsInline className="relative z-10 w-full h-full object-contain animate-fade-in transition-all duration-500 rounded-lg" aria-label="IRIS AI agent demonstration video for private investment management" />
                           </div>
                         </div>
                       </div>
