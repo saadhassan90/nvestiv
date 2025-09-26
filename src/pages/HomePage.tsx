@@ -12,6 +12,7 @@ import { seoPages } from "@/lib/seo-config";
 import irisCharacter from "@/assets/iris-character.png";
 import { ListeningWaveform } from "@/components/ListeningWaveform";
 import { GoogleDriveInterface } from "@/components/GoogleDriveInterface";
+import { Integrations3DMarquee } from "@/components/Integrations3DMarquee";
 const HomePage = () => {
   console.log("HomePage component is rendering");
   const [crmModalOpen, setCrmModalOpen] = useState(false);
@@ -801,80 +802,17 @@ const HomePage = () => {
                             </Button>
                          </div>
                       </div>
-                      <div className="lg:pl-8">
-                        <div className="relative rounded-2xl">
-                          <div className="pointer-events-none absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-cyan-500 rounded-[18px] blur-md opacity-15"></div>
-                          <div className="relative z-10 bg-card rounded-2xl p-6 h-[700px] flex flex-col shadow-none">
-                          
-                          {/* Integration Hub */}
-                          <div className="flex-1 space-y-4 mb-4 overflow-y-auto">
-                            <div className="flex items-center justify-between mb-4">
-                              <h4 className="font-semibold text-foreground">Connected Services</h4>
-                              <span className="text-xs bg-green-500/10 text-green-600 dark:text-green-400 px-2 py-1 rounded-full">12 Active</span>
-                            </div>
-                            
-                            {/* Integration Cards */}
-                            <div className="grid grid-cols-2 gap-3">
-                              <div className="bg-blue-500/10 rounded-lg p-3 border border-border">
-                                <div className="flex items-center gap-2 mb-2">
-                                  <div className="w-6 h-6 bg-blue-500 rounded-sm"></div>
-                                  <span className="text-xs font-medium text-foreground">Bloomberg</span>
-                                </div>
-                                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                              </div>
-                              
-                              <div className="bg-orange-500/10 rounded-lg p-3 border border-border">
-                                <div className="flex items-center gap-2 mb-2">
-                                  <div className="w-6 h-6 bg-orange-500 rounded-sm"></div>
-                                  <span className="text-xs font-medium text-foreground">PitchBook</span>
-                                </div>
-                                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                              </div>
-                              
-                              <div className="bg-purple-500/10 rounded-lg p-3 border border-border">
-                                <div className="flex items-center gap-2 mb-2">
-                                  <div className="w-6 h-6 bg-purple-500 rounded-sm"></div>
-                                  <span className="text-xs font-medium text-foreground">Outlook</span>
-                                </div>
-                                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                              </div>
-                              
-                              <div className="bg-green-500/10 rounded-lg p-3 border border-border">
-                                <div className="flex items-center gap-2 mb-2">
-                                  <div className="w-6 h-6 bg-green-500 rounded-sm"></div>
-                                  <span className="text-xs font-medium text-foreground">Excel</span>
-                                </div>
-                                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                              </div>
-                              
-                              <div className="bg-red-500/10 rounded-lg p-3 border border-border">
-                                <div className="flex items-center gap-2 mb-2">
-                                  <div className="w-6 h-6 bg-red-500 rounded-sm"></div>
-                                  <span className="text-xs font-medium text-foreground">CapIQ</span>
-                                </div>
-                                <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
-                              </div>
-                              
-                              <div className="bg-muted rounded-lg p-3 border border-border flex items-center justify-center">
-                                <Plus className="w-4 h-4 text-muted-foreground" />
-                              </div>
-                            </div>
-                          </div>
-                          
-                          {/* Integration Search */}
-                          <div className="bg-muted/50 backdrop-blur-sm rounded-xl p-1 border border-border">
-                            <div className="flex items-center gap-2 p-2">
-                              <div className="flex-1 relative">
-                                <input type="text" placeholder="Add new integration..." className="w-full bg-transparent text-foreground placeholder:text-muted-foreground text-xs focus:outline-none py-1 px-2" disabled />
-                              </div>
-                              <Button size="icon" variant="default" className="w-6 h-6 rounded-md">
-                                <Link className="w-3 h-3" />
-                              </Button>
-                            </div>
-                          </div>
-                          </div>
-                        </div>
-                      </div>
+                       <div className="lg:pl-8">
+                         <div className="relative rounded-2xl aspect-[1/1.75]">
+                           {/* Gradient glow border */}
+                           <div className="pointer-events-none absolute -inset-1 bg-gradient-to-r from-primary/30 via-accent/30 to-primary/30 rounded-[18px] blur-md opacity-50 dark:opacity-70"></div>
+                           
+                           {/* 3D Marquee Container */}
+                           <div className="relative z-10 bg-card/90 backdrop-blur-sm rounded-2xl h-full overflow-hidden border border-border/50 shadow-lg">
+                             <Integrations3DMarquee className="w-full h-full" />
+                           </div>
+                         </div>
+                       </div>
                      </div>
                   </div>
                 </Card>
