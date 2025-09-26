@@ -508,7 +508,7 @@ const HomePage = () => {
                                   </div>
                                   <div className="bg-muted rounded-2xl px-4 py-2">
                                     <p className="text-sm text-foreground mb-2">Done! Just sent email to Jason. I will monitor your inbox and coordinate the meeting. I will let you know when something is on the books.</p>
-                                    <span className="inline-block bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-xs font-medium mt-2">✉️ Sent Email</span>
+                                    <span className="inline-block bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-medium mt-2">✉️ Sent Email</span>
                                  </div>
                                </div>
                              </div>
@@ -594,56 +594,56 @@ const HomePage = () => {
                       <div className="lg:pl-8">
                         <div className="relative rounded-2xl">
                           <div className="pointer-events-none absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-cyan-500 rounded-[18px] blur-md opacity-15"></div>
-                           <div className="relative z-10 bg-white rounded-2xl p-6 h-[700px] flex flex-col shadow-none">
+                           <div className="relative z-10 bg-card rounded-2xl p-6 h-[700px] flex flex-col shadow-none">
                           
                           {/* Agent Dashboard */}
                           <div className="flex-1 space-y-4 mb-4 overflow-y-auto">
                             <div className="flex items-center justify-between mb-4">
-                              <h4 className="font-semibold text-gray-900">Active AI Agents</h4>
-                              <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">3 Active</span>
+                              <h4 className="font-semibold text-foreground">Active AI Agents</h4>
+                              <span className="text-xs bg-green-500/10 text-green-600 dark:text-green-400 px-2 py-1 rounded-full">3 Active</span>
                             </div>
                             
                             {/* Agent Cards */}
                             <div className="space-y-3">
-                              <div className="bg-gray-50 rounded-lg p-4">
+                              <div className="bg-muted rounded-lg p-4">
                                 <div className="flex items-start justify-between">
                                   <div className="flex items-center gap-3">
                                     <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
                                       <Bot className="w-4 h-4 text-white" />
                                     </div>
                                     <div>
-                                      <h5 className="font-medium text-gray-900 text-sm">Deal Screener</h5>
-                                      <p className="text-xs text-gray-500">Processing 12 new deals</p>
+                                      <h5 className="font-medium text-foreground text-sm">Deal Screener</h5>
+                                      <p className="text-xs text-muted-foreground">Processing 12 new deals</p>
                                     </div>
                                   </div>
                                   <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                                 </div>
                               </div>
                               
-                              <div className="bg-gray-50 rounded-lg p-4">
+                              <div className="bg-muted rounded-lg p-4">
                                 <div className="flex items-start justify-between">
                                   <div className="flex items-center gap-3">
                                     <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center">
                                       <Search className="w-4 h-4 text-white" />
                                     </div>
                                     <div>
-                                      <h5 className="font-medium text-gray-900 text-sm">Due Diligence</h5>
-                                      <p className="text-xs text-gray-500">Analyzing HealthTech Inc.</p>
+                                      <h5 className="font-medium text-foreground text-sm">Due Diligence</h5>
+                                      <p className="text-xs text-muted-foreground">Analyzing HealthTech Inc.</p>
                                     </div>
                                   </div>
                                   <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                                 </div>
                               </div>
                               
-                              <div className="bg-gray-50 rounded-lg p-4">
+                              <div className="bg-muted rounded-lg p-4">
                                 <div className="flex items-start justify-between">
                                   <div className="flex items-center gap-3">
                                     <div className="w-8 h-8 bg-pink-500 rounded-full flex items-center justify-center">
                                       <TrendingUp className="w-4 h-4 text-white" />
                                     </div>
                                     <div>
-                                      <h5 className="font-medium text-gray-900 text-sm">Market Intel</h5>
-                                      <p className="text-xs text-gray-500">Tracking SaaS trends</p>
+                                      <h5 className="font-medium text-foreground text-sm">Market Intel</h5>
+                                      <p className="text-xs text-muted-foreground">Tracking SaaS trends</p>
                                     </div>
                                   </div>
                                   <div className="w-2 h-2 bg-green-500 rounded-full"></div>
@@ -653,10 +653,10 @@ const HomePage = () => {
                           </div>
                           
                           {/* Quick Actions */}
-                          <div className="bg-black/5 backdrop-blur-sm rounded-xl p-1 border border-gray-200">
+                          <div className="bg-muted/50 backdrop-blur-sm rounded-xl p-1 border border-border">
                             <div className="flex items-center gap-2 p-2">
                               <div className="flex-1 relative">
-                                <input type="text" placeholder="Configure new agent..." className="w-full bg-transparent text-gray-700 placeholder:text-gray-400 text-xs focus:outline-none py-1 px-2" disabled />
+                                <input type="text" placeholder="Configure new agent..." className="w-full bg-transparent text-foreground placeholder:text-muted-foreground text-xs focus:outline-none py-1 px-2" disabled />
                               </div>
                               <Button size="icon" variant="default" className="w-6 h-6 rounded-md">
                                 <Plus className="w-3 h-3" />
@@ -672,7 +672,7 @@ const HomePage = () => {
               </TabsContent>
 
               <TabsContent value="files" className="mt-0">
-                <Card className="border border-gray-200 shadow-lg bg-white">
+                <Card className="border border-border shadow-lg bg-card">
                   <div className="p-6">
                     <TabsList className="grid w-full grid-cols-4 mb-6">
                       <TabsTrigger value="ai-crm" className="flex items-center gap-2">
@@ -732,13 +732,13 @@ const HomePage = () => {
                       <div className="lg:pl-8">
                         <div className="relative rounded-2xl">
                           <div className="pointer-events-none absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-cyan-500 rounded-[18px] blur-md opacity-15"></div>
-                           <div className="relative z-10 bg-white rounded-2xl p-6 h-[700px] flex flex-col shadow-none">
+                           <div className="relative z-10 bg-card rounded-2xl p-6 h-[700px] flex flex-col shadow-none">
                           
                           {/* File Explorer */}
                           <div className="flex-1 space-y-4 mb-4 overflow-y-auto">
                             <div className="flex items-center justify-between mb-4">
-                              <h4 className="font-semibold text-gray-900">Document Library</h4>
-                              <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">2,847 Files</span>
+                              <h4 className="font-semibold text-foreground">Document Library</h4>
+                              <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">2,847 Files</span>
                             </div>
                             
                             {/* Folder Structure */}
@@ -776,10 +776,10 @@ const HomePage = () => {
                           </div>
                           
                           {/* Search Bar */}
-                          <div className="bg-black/5 backdrop-blur-sm rounded-xl p-1 border border-gray-200">
+                          <div className="bg-muted/50 backdrop-blur-sm rounded-xl p-1 border border-border">
                             <div className="flex items-center gap-2 p-2">
                               <div className="flex-1 relative">
-                                <input type="text" placeholder="Search files and documents..." className="w-full bg-transparent text-gray-700 placeholder:text-gray-400 text-xs focus:outline-none py-1 px-2" disabled />
+                                <input type="text" placeholder="Search files and documents..." className="w-full bg-transparent text-foreground placeholder:text-muted-foreground text-xs focus:outline-none py-1 px-2" disabled />
                               </div>
                               <Button size="icon" variant="default" className="w-6 h-6 rounded-md">
                                 <Search className="w-3 h-3" />
@@ -795,7 +795,7 @@ const HomePage = () => {
               </TabsContent>
 
               <TabsContent value="integrations" className="mt-0">
-                <Card className="border border-gray-200 shadow-lg bg-white">
+                <Card className="border border-border shadow-lg bg-card">
                   <div className="p-6">
                     <TabsList className="grid w-full grid-cols-4 mb-6">
                       <TabsTrigger value="ai-crm" className="flex items-center gap-2">
@@ -855,68 +855,68 @@ const HomePage = () => {
                       <div className="lg:pl-8">
                         <div className="relative rounded-2xl">
                           <div className="pointer-events-none absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-cyan-500 rounded-[18px] blur-md opacity-15"></div>
-                          <div className="relative z-10 bg-white rounded-2xl p-6 h-[700px] flex flex-col shadow-none">
+                          <div className="relative z-10 bg-card rounded-2xl p-6 h-[700px] flex flex-col shadow-none">
                           
                           {/* Integration Hub */}
                           <div className="flex-1 space-y-4 mb-4 overflow-y-auto">
                             <div className="flex items-center justify-between mb-4">
-                              <h4 className="font-semibold text-gray-900">Connected Services</h4>
-                              <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">12 Active</span>
+                              <h4 className="font-semibold text-foreground">Connected Services</h4>
+                              <span className="text-xs bg-green-500/10 text-green-600 dark:text-green-400 px-2 py-1 rounded-full">12 Active</span>
                             </div>
                             
                             {/* Integration Cards */}
                             <div className="grid grid-cols-2 gap-3">
-                              <div className="bg-blue-50 rounded-lg p-3 border border-blue-200">
+                              <div className="bg-blue-500/10 rounded-lg p-3 border border-border">
                                 <div className="flex items-center gap-2 mb-2">
                                   <div className="w-6 h-6 bg-blue-500 rounded-sm"></div>
-                                  <span className="text-xs font-medium text-gray-900">Bloomberg</span>
+                                  <span className="text-xs font-medium text-foreground">Bloomberg</span>
                                 </div>
                                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                               </div>
                               
-                              <div className="bg-orange-50 rounded-lg p-3 border border-orange-200">
+                              <div className="bg-orange-500/10 rounded-lg p-3 border border-border">
                                 <div className="flex items-center gap-2 mb-2">
                                   <div className="w-6 h-6 bg-orange-500 rounded-sm"></div>
-                                  <span className="text-xs font-medium text-gray-900">PitchBook</span>
+                                  <span className="text-xs font-medium text-foreground">PitchBook</span>
                                 </div>
                                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                               </div>
                               
-                              <div className="bg-purple-50 rounded-lg p-3 border border-purple-200">
+                              <div className="bg-purple-500/10 rounded-lg p-3 border border-border">
                                 <div className="flex items-center gap-2 mb-2">
                                   <div className="w-6 h-6 bg-purple-500 rounded-sm"></div>
-                                  <span className="text-xs font-medium text-gray-900">Outlook</span>
+                                  <span className="text-xs font-medium text-foreground">Outlook</span>
                                 </div>
                                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                               </div>
                               
-                              <div className="bg-green-50 rounded-lg p-3 border border-green-200">
+                              <div className="bg-green-500/10 rounded-lg p-3 border border-border">
                                 <div className="flex items-center gap-2 mb-2">
                                   <div className="w-6 h-6 bg-green-500 rounded-sm"></div>
-                                  <span className="text-xs font-medium text-gray-900">Excel</span>
+                                  <span className="text-xs font-medium text-foreground">Excel</span>
                                 </div>
                                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                               </div>
                               
-                              <div className="bg-red-50 rounded-lg p-3 border border-red-200">
+                              <div className="bg-red-500/10 rounded-lg p-3 border border-border">
                                 <div className="flex items-center gap-2 mb-2">
                                   <div className="w-6 h-6 bg-red-500 rounded-sm"></div>
-                                  <span className="text-xs font-medium text-gray-900">CapIQ</span>
+                                  <span className="text-xs font-medium text-foreground">CapIQ</span>
                                 </div>
                                 <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
                               </div>
                               
-                              <div className="bg-gray-50 rounded-lg p-3 border border-gray-200 flex items-center justify-center">
-                                <Plus className="w-4 h-4 text-gray-400" />
+                              <div className="bg-muted rounded-lg p-3 border border-border flex items-center justify-center">
+                                <Plus className="w-4 h-4 text-muted-foreground" />
                               </div>
                             </div>
                           </div>
                           
                           {/* Integration Search */}
-                          <div className="bg-black/5 backdrop-blur-sm rounded-xl p-1 border border-gray-200">
+                          <div className="bg-muted/50 backdrop-blur-sm rounded-xl p-1 border border-border">
                             <div className="flex items-center gap-2 p-2">
                               <div className="flex-1 relative">
-                                <input type="text" placeholder="Add new integration..." className="w-full bg-transparent text-gray-700 placeholder:text-gray-400 text-xs focus:outline-none py-1 px-2" disabled />
+                                <input type="text" placeholder="Add new integration..." className="w-full bg-transparent text-foreground placeholder:text-muted-foreground text-xs focus:outline-none py-1 px-2" disabled />
                               </div>
                               <Button size="icon" variant="default" className="w-6 h-6 rounded-md">
                                 <Link className="w-3 h-3" />
@@ -991,39 +991,39 @@ const HomePage = () => {
                           <h4 className="font-semibold text-foreground">What IRIS can do:</h4>
                            <div className="flex flex-wrap gap-2">
                              <button className="px-2 py-1 text-xs bg-muted text-muted-foreground rounded-lg hover:bg-muted/80 transition-colors border border-border flex items-center gap-2">
-                               <BarChart3 className="h-3 w-3 text-gray-600" />
+                               <BarChart3 className="h-3 w-3 text-muted-foreground" />
                                Deal Screening
                              </button>
                              <button className="px-2 py-1 text-xs bg-muted text-muted-foreground rounded-lg hover:bg-muted/80 transition-colors border border-border flex items-center gap-2">
-                               <FileText className="h-3 w-3 text-gray-600" />
+                               <FileText className="h-3 w-3 text-muted-foreground" />
                                Memo Generation
                              </button>
                              <button className="px-2 py-1 text-xs bg-muted text-muted-foreground rounded-lg hover:bg-muted/80 transition-colors border border-border flex items-center gap-2">
-                               <Folder className="h-3 w-3 text-gray-600" />
+                               <Folder className="h-3 w-3 text-muted-foreground" />
                                DataRoom Analysis
                              </button>
                              <button className="px-2 py-1 text-xs bg-muted text-muted-foreground rounded-lg hover:bg-muted/80 transition-colors border border-border flex items-center gap-2">
-                               <Mail className="h-3 w-3 text-gray-600" />
+                               <Mail className="h-3 w-3 text-muted-foreground" />
                                Email Parsing
                              </button>
                              <button className="px-2 py-1 text-xs bg-muted text-muted-foreground rounded-lg hover:bg-muted/80 transition-colors border border-border flex items-center gap-2">
-                               <Calendar className="h-3 w-3 text-gray-600" />
+                               <Calendar className="h-3 w-3 text-muted-foreground" />
                                Meeting Notes
                              </button>
                              <button className="px-2 py-1 text-xs bg-muted text-muted-foreground rounded-lg hover:bg-muted/80 transition-colors border border-border flex items-center gap-2">
-                               <Zap className="h-3 w-3 text-gray-600" />
+                               <Zap className="h-3 w-3 text-muted-foreground" />
                                Workflow Automation
                              </button>
                              <button className="px-2 py-1 text-xs bg-muted text-muted-foreground rounded-lg hover:bg-muted/80 transition-colors border border-border flex items-center gap-2">
-                               <TrendingUp className="h-3 w-3 text-gray-600" />
+                               <TrendingUp className="h-3 w-3 text-muted-foreground" />
                                Portfolio Insights
                              </button>
                              <button className="px-2 py-1 text-xs bg-muted text-muted-foreground rounded-lg hover:bg-muted/80 transition-colors border border-border flex items-center gap-2">
-                               <AlertTriangle className="h-3 w-3 text-gray-600" />
+                               <AlertTriangle className="h-3 w-3 text-muted-foreground" />
                                Risk Flagging
                              </button>
                              <button className="px-2 py-1 text-xs bg-muted text-muted-foreground rounded-lg hover:bg-muted/80 transition-colors border border-border flex items-center gap-2">
-                               <Users className="h-3 w-3 text-gray-600" />
+                               <Users className="h-3 w-3 text-muted-foreground" />
                                Matchmaking
                              </button>
                            </div>
