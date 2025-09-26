@@ -85,12 +85,22 @@ interface MarqueeColumnProps {
 }
 
 const MarqueeColumn: React.FC<MarqueeColumnProps> = ({ logos, direction, duration, className }) => {
-  // Duplicate logos for seamless loop effect
-  const duplicatedLogos = [...logos, ...logos];
+  // Duplicate logos for seamless scrolling effect
+  const duplicatedLogos = [...logos, ...logos, ...logos];
   
   return (
-    <div className={cn("flex flex-col", className)}>
-      <div className="flex flex-col">
+    <div className={cn("flex flex-col overflow-hidden", className)}>
+      <div 
+        className={cn(
+          "flex flex-col",
+          direction === 'up' ? 'animate-marquee-up' : 'animate-marquee-down'
+        )}
+        style={{
+          animationDuration: `${duration}s`,
+          animationTimingFunction: 'linear',
+          animationIterationCount: 'infinite',
+        }}
+      >
         {duplicatedLogos.map((logo, index) => (
           <LogoCard key={`${logo.name}-${index}`} logo={logo} />
         ))}
@@ -105,16 +115,16 @@ interface Integrations3DMarqueeProps {
 }
 
 export const Integrations3DMarquee: React.FC<Integrations3DMarqueeProps> = ({ className, triggerAnimation = false }) => {
-  const [animationStage, setAnimationStage] = useState<'idle' | 'cascading' | 'settled'>('idle');
+  const [animationStage, setAnimationStage] = useState<'idle' | 'scrolling' | 'settled'>('idle');
 
   useEffect(() => {
     if (triggerAnimation && animationStage === 'idle') {
-      setAnimationStage('cascading');
+      setAnimationStage('scrolling');
       
-      // Settle to final position after cascade
+      // Stop scrolling and settle after a few seconds
       const timer = setTimeout(() => {
         setAnimationStage('settled');
-      }, 3000);
+      }, 4000);
       
       return () => clearTimeout(timer);
     }
@@ -142,79 +152,63 @@ export const Integrations3DMarquee: React.FC<Integrations3DMarqueeProps> = ({ cl
             transformStyle: 'preserve-3d',
           }}
         >
-          {/* Column 1 */}
+          {/* Column 1 - Moving Up */}
           <div 
             className={cn(
-              "transform-gpu",
-              animationStage === 'cascading' && "animate-cascade-towards-1"
+              "opacity-90",
+              animationStage === 'settled' && "animate-settle-up"
             )}
-            style={{
-              transform: animationStage === 'idle' ? 'translateZ(-400px)' : undefined,
-              transformStyle: 'preserve-3d',
-            }}
           >
             <MarqueeColumn 
               logos={logosColumn1} 
               direction="up" 
-              duration={1.5}
-              className="opacity-90"
+              duration={animationStage === 'scrolling' ? 15 : 0}
+              className=""
             />
           </div>
           
-          {/* Column 2 */}
+          {/* Column 2 - Moving Down */}
           <div 
             className={cn(
-              "transform-gpu",
-              animationStage === 'cascading' && "animate-cascade-towards-2"
+              "opacity-95",
+              animationStage === 'settled' && "animate-settle-down"
             )}
-            style={{
-              transform: animationStage === 'idle' ? 'translateZ(-350px)' : undefined,
-              transformStyle: 'preserve-3d',
-            }}
           >
             <MarqueeColumn 
               logos={logosColumn2} 
               direction="down" 
-              duration={1.2}
-              className="opacity-95"
+              duration={animationStage === 'scrolling' ? 10 : 0}
+              className=""
             />
           </div>
           
-          {/* Column 3 */}
+          {/* Column 3 - Moving Up */}
           <div 
             className={cn(
-              "transform-gpu",
-              animationStage === 'cascading' && "animate-cascade-towards-3"
+              "opacity-90",
+              animationStage === 'settled' && "animate-settle-up"
             )}
-            style={{
-              transform: animationStage === 'idle' ? 'translateZ(-450px)' : undefined,
-              transformStyle: 'preserve-3d',
-            }}
           >
             <MarqueeColumn 
               logos={logosColumn3} 
               direction="up" 
-              duration={1.8}
-              className="opacity-90"
+              duration={animationStage === 'scrolling' ? 12 : 0}
+              className=""
             />
           </div>
           
-          {/* Column 4 */}
+          {/* Column 4 - Moving Down */}
           <div 
             className={cn(
-              "transform-gpu",
-              animationStage === 'cascading' && "animate-cascade-towards-4"
+              "opacity-85",
+              animationStage === 'settled' && "animate-settle-down"
             )}
-            style={{
-              transform: animationStage === 'idle' ? 'translateZ(-300px)' : undefined,
-              transformStyle: 'preserve-3d',
-            }}
           >
             <MarqueeColumn 
               logos={logosColumn4} 
               direction="down" 
-              duration={2.0}
-              className="opacity-85"
+              duration={animationStage === 'scrolling' ? 18 : 0}
+              className=""
             />
           </div>
         </div>

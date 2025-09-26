@@ -235,14 +235,20 @@ export default {
 						opacity: "1"
 					}
 				},
-				"cascade-towards-4": {
+				"settle-up": {
 					"0%": { 
-						transform: "translateZ(-300px) scale(0.9)",
-						opacity: "0.5"
+						transform: "translateY(0)"
 					},
 					"100%": { 
-						transform: "translateZ(0px) scale(1)",
-						opacity: "1"
+						transform: "translateY(50px)"
+					}
+				},
+				"settle-down": {
+					"0%": { 
+						transform: "translateY(0)"
+					},
+					"100%": { 
+						transform: "translateY(-50px)"
 					}
 				}
 			},
@@ -264,7 +270,9 @@ export default {
 				"cascade-towards-1": "cascade-towards-1 1.5s ease-out forwards",
 				"cascade-towards-2": "cascade-towards-2 1.7s ease-out forwards 0.3s",
 				"cascade-towards-3": "cascade-towards-3 1.9s ease-out forwards 0.6s",
-				"cascade-towards-4": "cascade-towards-4 2.1s ease-out forwards 0.9s"
+				"cascade-towards-4": "cascade-towards-4 2.1s ease-out forwards 0.9s",
+				"settle-up": "settle-up 1s ease-out forwards",
+				"settle-down": "settle-down 1s ease-out forwards"
 			}
 		}
 	},
