@@ -79,7 +79,7 @@ const Footer = () => {
             {/* Brand Section */}
             <div className="lg:col-span-2">
               <div className="space-y-4">
-                <div className="flex items-center space-x-3">
+                <div className="flex items-center justify-center space-x-3">
                   <img src="/lovable-uploads/c6f05c4c-ee88-4c86-a4f7-98e6e90e6071.png" alt="Nvestiv AI CRM for Private Investments Logo" className="h-8 w-8 rounded-lg" />
                   <h2 className="text-2xl font-bold text-white font-harabara lowercase leading-none">
                     nvestiv
