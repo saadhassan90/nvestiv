@@ -146,9 +146,9 @@ export const Integrations3DMarquee: React.FC<Integrations3DMarqueeProps> = ({ cl
         }}
       >
         <div
-          className="flex gap-2 sm:gap-4 h-full scale-150 sm:scale-175"
+          className="flex gap-2 sm:gap-4 h-full scale-[1.95] sm:scale-[2.28]"
           style={{
-            transform: 'rotateX(55deg) rotateZ(-45deg)',
+            transform: 'rotateX(55deg) rotateZ(-45deg) translateY(-20px)',
             transformStyle: 'preserve-3d',
           }}
         >
@@ -157,7 +157,7 @@ export const Integrations3DMarquee: React.FC<Integrations3DMarqueeProps> = ({ cl
             <MarqueeColumn 
               logos={logosColumn1} 
               direction="up" 
-              duration={animationStage === 'scrolling' ? 30 : 0}
+              duration={animationStage === 'scrolling' ? 60 : 0}
               className=""
             />
           </div>
@@ -167,7 +167,7 @@ export const Integrations3DMarquee: React.FC<Integrations3DMarqueeProps> = ({ cl
             <MarqueeColumn 
               logos={logosColumn2} 
               direction="down" 
-              duration={animationStage === 'scrolling' ? 25 : 0}
+              duration={animationStage === 'scrolling' ? 50 : 0}
               className=""
             />
           </div>
@@ -177,7 +177,7 @@ export const Integrations3DMarquee: React.FC<Integrations3DMarqueeProps> = ({ cl
             <MarqueeColumn 
               logos={logosColumn3} 
               direction="up" 
-              duration={animationStage === 'scrolling' ? 35 : 0}
+              duration={animationStage === 'scrolling' ? 70 : 0}
               className=""
             />
           </div>
@@ -187,7 +187,7 @@ export const Integrations3DMarquee: React.FC<Integrations3DMarqueeProps> = ({ cl
             <MarqueeColumn 
               logos={logosColumn4} 
               direction="down" 
-              duration={animationStage === 'scrolling' ? 40 : 0}
+              duration={animationStage === 'scrolling' ? 80 : 0}
               className=""
             />
           </div>
