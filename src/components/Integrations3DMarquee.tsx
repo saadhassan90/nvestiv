@@ -65,9 +65,9 @@ interface LogoCardProps {
 }
 
 const LogoCard: React.FC<LogoCardProps> = ({ logo }) => (
-  <div className="flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 bg-card/80 backdrop-blur-sm rounded-lg shadow-sm border border-border/50 flex items-center justify-center p-2 sm:p-3 mb-3 sm:mb-4 group relative overflow-hidden">
+  <div className="flex-shrink-0 w-24 h-24 sm:w-28 sm:h-28 bg-white rounded-xl shadow-lg border border-border/30 flex items-center justify-center p-3 sm:p-4 mb-4 sm:mb-6 group relative overflow-hidden">
     {/* Gradient glow effect */}
-    <div className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-br from-primary/20 via-transparent to-accent/20" />
+    <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-br from-primary/20 via-transparent to-accent/20" />
     <img
       src={logo.src}
       alt={logo.alt}
@@ -85,8 +85,8 @@ interface MarqueeColumnProps {
 }
 
 const MarqueeColumn: React.FC<MarqueeColumnProps> = ({ logos, direction, duration, className }) => {
-  // Duplicate logos for seamless loop
-  const duplicatedLogos = [...logos, ...logos, ...logos];
+  // Duplicate logos for seamless oscillation
+  const duplicatedLogos = [...logos, ...logos];
   
   return (
     <div className={cn("flex flex-col", className)}>
@@ -97,8 +97,9 @@ const MarqueeColumn: React.FC<MarqueeColumnProps> = ({ logos, direction, duratio
         )}
         style={{
           animationDuration: `${duration}s`,
-          animationTimingFunction: 'linear',
+          animationTimingFunction: 'ease-in-out',
           animationIterationCount: 'infinite',
+          animationDirection: 'alternate',
         }}
       >
         {duplicatedLogos.map((logo, index) => (
@@ -116,16 +117,21 @@ interface Integrations3DMarqueeProps {
 export const Integrations3DMarquee: React.FC<Integrations3DMarqueeProps> = ({ className }) => {
   return (
     <div className={cn("relative w-full h-full overflow-hidden", className)}>
+      {/* Studio lighting background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-white to-slate-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900" />
+      <div className="absolute inset-0 bg-gradient-radial from-transparent via-primary/5 to-transparent" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-1/2 bg-gradient-to-b from-white/20 via-transparent to-transparent dark:from-white/10 blur-3xl" />
+      
       {/* 3D Container with isometric perspective */}
       <div 
-        className="absolute inset-0 flex justify-center items-center px-4 sm:px-0"
+        className="absolute inset-0 flex justify-center items-center px-2 sm:px-4"
         style={{
-          perspective: '1000px',
+          perspective: '1200px',
           perspectiveOrigin: 'center center',
         }}
       >
         <div
-          className="flex gap-3 sm:gap-6 h-full"
+          className="flex gap-2 sm:gap-4 h-full scale-110 sm:scale-125"
           style={{
             transform: 'rotateX(55deg) rotateZ(-45deg)',
             transformStyle: 'preserve-3d',
@@ -165,12 +171,12 @@ export const Integrations3DMarquee: React.FC<Integrations3DMarqueeProps> = ({ cl
         </div>
       </div>
       
-      {/* Gradient overlay for depth and theme compatibility */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/20 pointer-events-none" />
+      {/* Subtle vignette effect */}
+      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-background/10 pointer-events-none" />
       
-      {/* Additional border glow effect */}
-      <div className="absolute inset-0 rounded-lg opacity-30">
-        <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-primary/10 via-transparent to-accent/10" />
+      {/* Border glow effect */}
+      <div className="absolute inset-0 rounded-lg opacity-20">
+        <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-primary/20 via-transparent to-accent/20" />
       </div>
     </div>
   );
