@@ -110,7 +110,7 @@ export const GoogleDriveInterface = ({ className }: { className?: string }) => {
               <img 
                 src={googleDriveLogo} 
                 alt="Google Drive" 
-                className="w-6 h-6"
+                className="w-6 h-6 object-contain"
               />
               <span className="text-gray-700 dark:text-gray-200 font-medium text-sm">Google Drive Integration</span>
             </div>
