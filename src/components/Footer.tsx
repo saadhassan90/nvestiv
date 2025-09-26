@@ -75,13 +75,13 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Main Footer Content */}
         <div className="py-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
             {/* Brand Section */}
             <div className="lg:col-span-2">
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
-                  <img src="/lovable-uploads/c6f05c4c-ee88-4c86-a4f7-98e6e90e6071.png" alt="Nvestiv AI CRM for Private Investments Logo" className="h-8 w-8" />
-                  <h2 className="text-2xl font-bold text-white font-harabara lowercase">
+                  <img src="/lovable-uploads/c6f05c4c-ee88-4c86-a4f7-98e6e90e6071.png" alt="Nvestiv AI CRM for Private Investments Logo" className="h-8 w-8 rounded-lg" />
+                  <h2 className="text-2xl font-bold text-white font-harabara lowercase leading-none">
                     nvestiv
                   </h2>
                 </div>
@@ -124,32 +124,79 @@ const Footer = () => {
                 Pages
               </h3>
               <ul className="space-y-3">
-                {pageLinks.map(({
-                name,
-                href
-              }) => <li key={name}>
-                      <Link to={href} className="text-sm text-gray-300 hover:text-white transition-colors no-underline">
-                      {name}
-                    </Link>
-                  </li>)}
+                <li>
+                  <Link to="/" className="text-sm text-gray-300 hover:text-white transition-colors no-underline">
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/about" className="text-sm text-gray-300 hover:text-white transition-colors no-underline">
+                    About
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/pricing" className="text-sm text-gray-300 hover:text-white transition-colors no-underline">
+                    Pricing
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/contact" className="text-sm text-gray-300 hover:text-white transition-colors no-underline">
+                    Contact
+                  </Link>
+                </li>
               </ul>
             </div>
 
-            {/* Resources Section */}
-            <div>
+            {/* Products Section - Split into 2 columns */}
+            <div className="md:col-span-2">
               <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
-                Resources
+                Products
               </h3>
-              <ul className="space-y-3">
-                {resourceLinks.map(({
-                name,
-                href
-              }) => <li key={name}>
-                      <Link to={href} className="text-sm text-gray-300 hover:text-white transition-colors no-underline">
-                      {name}
-                    </Link>
-                  </li>)}
-              </ul>
+              <div className="grid grid-cols-2 gap-8">
+                <div>
+                  <ul className="space-y-3">
+                    <li>
+                      <Link to="/iris" className="text-sm text-gray-300 hover:text-white transition-colors no-underline">
+                        IRIS
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/ai-crm" className="text-sm text-gray-300 hover:text-white transition-colors no-underline">
+                        CRM
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/notetaker" className="text-sm text-gray-300 hover:text-white transition-colors no-underline">
+                        Notetaker
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/agents" className="text-sm text-gray-300 hover:text-white transition-colors no-underline">
+                        Agents
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <ul className="space-y-3">
+                    <li>
+                      <Link to="/due-diligence" className="text-sm text-gray-300 hover:text-white transition-colors no-underline">
+                        Due Diligence
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/portfolio-management" className="text-sm text-gray-300 hover:text-white transition-colors no-underline">
+                        Portfolio Management
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/marketplace" className="text-sm text-gray-300 hover:text-white transition-colors no-underline">
+                        Marketplace
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
 
             {/* Legal Section */}
@@ -158,14 +205,36 @@ const Footer = () => {
                 Legal
               </h3>
               <ul className="space-y-3">
-                {legalLinks.map(({
-                name,
-                href
-              }) => <li key={name}>
-                      <Link to={href} className="text-sm text-gray-300 hover:text-white transition-colors no-underline">
-                      {name}
-                    </Link>
-                  </li>)}
+                <li>
+                  <Link to="/terms" className="text-sm text-gray-300 hover:text-white transition-colors no-underline">
+                    Terms of Service
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/privacy" className="text-sm text-gray-300 hover:text-white transition-colors no-underline">
+                    Privacy Policy
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/cookies" className="text-sm text-gray-300 hover:text-white transition-colors no-underline">
+                    Cookie Policy
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/data-processing" className="text-sm text-gray-300 hover:text-white transition-colors no-underline">
+                    Data Processing
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/security" className="text-sm text-gray-300 hover:text-white transition-colors no-underline">
+                    Security
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/compliance" className="text-sm text-gray-300 hover:text-white transition-colors no-underline">
+                    Compliance
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>

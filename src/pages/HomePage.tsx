@@ -267,7 +267,7 @@ const HomePage = () => {
                         <span className="hidden sm:inline">Files</span>
                       </TabsTrigger>
                       <TabsTrigger value="integrations" className="flex items-center gap-2">
-                        <Settings className="w-4 h-4" />
+                        <Plug className="w-4 h-4" />
                         <span className="hidden sm:inline">Integrations</span>
                       </TabsTrigger>
                     </TabsList>
@@ -550,7 +550,7 @@ const HomePage = () => {
                         <span className="hidden sm:inline">Files</span>
                       </TabsTrigger>
                       <TabsTrigger value="integrations" className="flex items-center gap-2">
-                        <Settings className="w-4 h-4" />
+                        <Plug className="w-4 h-4" />
                         <span className="hidden sm:inline">Integrations</span>
                       </TabsTrigger>
                     </TabsList>
@@ -688,7 +688,7 @@ const HomePage = () => {
                         <span className="hidden sm:inline">Files</span>
                       </TabsTrigger>
                       <TabsTrigger value="integrations" className="flex items-center gap-2">
-                        <Settings className="w-4 h-4" />
+                        <Plug className="w-4 h-4" />
                         <span className="hidden sm:inline">Integrations</span>
                       </TabsTrigger>
                     </TabsList>
@@ -811,7 +811,7 @@ const HomePage = () => {
                         <span className="hidden sm:inline">Files</span>
                       </TabsTrigger>
                       <TabsTrigger value="integrations" className="flex items-center gap-2">
-                        <Settings className="w-4 h-4" />
+                        <Plug className="w-4 h-4" />
                         <span className="hidden sm:inline">Integrations</span>
                       </TabsTrigger>
                     </TabsList>

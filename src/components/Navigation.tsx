@@ -65,7 +65,7 @@ const Navigation = () => {
               <img 
                 src="/lovable-uploads/c6f05c4c-ee88-4c86-a4f7-98e6e90e6071.png" 
                 alt="Nvestiv AI for Private Investments Platform Logo" 
-                className="h-8 w-8 md:h-10 md:w-10"
+                className="h-8 w-8 md:h-10 md:w-10 rounded-lg"
               />
               <h1 className="text-xl md:text-2xl font-bold text-foreground tracking-tight font-harabara lowercase">
                 nvestiv
