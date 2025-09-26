@@ -304,8 +304,8 @@ const HomePage = () => {
                           
                           <Button variant="default" asChild>
                             <a href="/ai-crm" className="text-white no-underline flex items-center gap-2">
-                              Learn More
                               <ArrowRight className="h-4 w-4" />
+                              Learn More
                             </a>
                           </Button>
                         </div>
@@ -1122,8 +1122,8 @@ const HomePage = () => {
                       
                       <Button variant="default" asChild>
                         <a href="#" className="text-white no-underline flex items-center gap-2">
-                          Create Your First Agent
                           <ArrowRight className="h-4 w-4" />
+                          Create Your First Agent
                         </a>
                       </Button>
                     </div>

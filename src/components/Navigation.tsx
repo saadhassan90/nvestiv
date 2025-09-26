@@ -172,7 +172,7 @@ const Navigation = () => {
               {/* Login Button - Desktop */}
               <div className="hidden md:block overflow-visible">
                 <Button
-                  variant="default"
+                  variant="login"
                   size="sm"
                   className="text-sm font-medium px-6 py-2 overflow-visible"
                   asChild
@@ -236,7 +236,7 @@ const Navigation = () => {
                 {/* Mobile Login Button */}
                 <div className="pt-2 border-t border-border/20">
                   <Button
-                    variant="default"
+                    variant="login"
                     size="sm"
                     className="w-full text-sm font-medium overflow-visible"
                     asChild

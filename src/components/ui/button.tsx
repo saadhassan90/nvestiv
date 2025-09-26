@@ -21,6 +21,7 @@ const buttonVariants = cva(
         // Special variants for specific use cases
         "theme-toggle": "text-black hover:bg-gray-100 dark:text-white dark:hover:bg-gray-800 hover:scale-110 [&_svg]:hover:scale-100 [&_svg]:hover:translate-x-0",
         "nav-mobile": "text-black hover:bg-gray-100 dark:text-white dark:hover:bg-gray-800 hover:scale-110 [&_svg]:hover:scale-100 [&_svg]:hover:translate-x-0",
+        "login": "bg-black text-white hover:bg-gray-900 dark:bg-white dark:text-black dark:hover:bg-gray-100",
       },
       size: {
         default: "h-10 px-4 py-2",
