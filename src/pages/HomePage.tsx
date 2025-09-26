@@ -416,7 +416,7 @@ const HomePage = () => {
                             </div>
                             
                              {/* Contact Card */}
-                             <div className={cn("flex justify-start transition-all duration-500 delay-200", crmAnimationStage === 'idle' || crmAnimationStage === 'msg1' || crmAnimationStage === 'msg2' ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0')}>
+                             <div className={cn("flex justify-start transition-all duration-500", ['idle', 'msg1', 'msg2', 'typing1'].includes(crmAnimationStage) ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0 animate-slide-in-left')}>
                                 <div className="bg-gradient-to-br from-muted to-accent/30 border border-border rounded-lg p-2.5 max-w-[85%] shadow-sm hover:shadow-md transition-shadow">
                                   <div className="flex items-center gap-2.5">
                                     <div className="w-8 h-8 bg-gradient-to-br from-primary to-primary/80 rounded-lg flex items-center justify-center shadow-sm">
