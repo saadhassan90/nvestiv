@@ -9,10 +9,10 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        // Primary - White in dark mode, black in light mode
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
-        // Secondary - Gray with border in dark mode
-        secondary: "bg-gray-200 text-gray-800 hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-700 dark:border dark:border-gray-600",
+        // Primary - Black in light mode, white in dark mode
+        default: "bg-black text-white hover:bg-gray-900 dark:bg-white dark:text-black dark:hover:bg-gray-100",
+        // Secondary - Bordered gray
+        secondary: "border border-gray-600 bg-transparent text-black hover:bg-gray-100 dark:border-gray-400 dark:text-white dark:hover:bg-gray-800",
         // Other variants
         destructive: "bg-red-600 text-white hover:bg-red-700 dark:bg-red-700 dark:hover:bg-red-800",
         outline: "border border-gray-300 bg-transparent text-black hover:bg-gray-100 dark:border-gray-600 dark:text-white dark:hover:bg-gray-800",
