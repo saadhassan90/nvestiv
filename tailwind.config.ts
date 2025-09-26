@@ -167,41 +167,81 @@ export default {
 				},
 				"cascade-1": {
 					"0%": { 
-						transform: "translateY(-300px) rotateX(45deg)",
-						opacity: "0"
+						transform: "translateZ(-400px) scale(0.7)",
+						opacity: "0.3"
 					},
 					"100%": { 
-						transform: "translateY(0) rotateX(0deg)",
+						transform: "translateZ(0px) scale(1)",
 						opacity: "1"
 					}
 				},
 				"cascade-2": {
 					"0%": { 
-						transform: "translateY(-250px) rotateY(30deg)",
-						opacity: "0"
+						transform: "translateZ(-350px) scale(0.8)",
+						opacity: "0.4"
 					},
 					"100%": { 
-						transform: "translateY(0) rotateY(0deg)",
+						transform: "translateZ(0px) scale(1)",
 						opacity: "1"
 					}
 				},
 				"cascade-3": {
 					"0%": { 
-						transform: "translateY(-320px) rotateX(-30deg)",
-						opacity: "0"
+						transform: "translateZ(-450px) scale(0.6)",
+						opacity: "0.2"
 					},
 					"100%": { 
-						transform: "translateY(0) rotateX(0deg)",
+						transform: "translateZ(0px) scale(1)",
 						opacity: "1"
 					}
 				},
 				"cascade-4": {
 					"0%": { 
-						transform: "translateY(-280px) rotateY(-20deg)",
-						opacity: "0"
+						transform: "translateZ(-300px) scale(0.9)",
+						opacity: "0.5"
 					},
 					"100%": { 
-						transform: "translateY(0) rotateY(0deg)",
+						transform: "translateZ(0px) scale(1)",
+						opacity: "1"
+					}
+				},
+				"cascade-towards-1": {
+					"0%": { 
+						transform: "translateZ(-400px) scale(0.7)",
+						opacity: "0.3"
+					},
+					"100%": { 
+						transform: "translateZ(0px) scale(1)",
+						opacity: "1"
+					}
+				},
+				"cascade-towards-2": {
+					"0%": { 
+						transform: "translateZ(-350px) scale(0.8)",
+						opacity: "0.4"
+					},
+					"100%": { 
+						transform: "translateZ(0px) scale(1)",
+						opacity: "1"
+					}
+				},
+				"cascade-towards-3": {
+					"0%": { 
+						transform: "translateZ(-450px) scale(0.6)",
+						opacity: "0.2"
+					},
+					"100%": { 
+						transform: "translateZ(0px) scale(1)",
+						opacity: "1"
+					}
+				},
+				"cascade-towards-4": {
+					"0%": { 
+						transform: "translateZ(-300px) scale(0.9)",
+						opacity: "0.5"
+					},
+					"100%": { 
+						transform: "translateZ(0px) scale(1)",
 						opacity: "1"
 					}
 				}
@@ -220,7 +260,11 @@ export default {
 				"cascade-1": "cascade-1 1.2s ease-out forwards",
 				"cascade-2": "cascade-2 1.4s ease-out forwards 0.2s",
 				"cascade-3": "cascade-3 1.6s ease-out forwards 0.4s",
-				"cascade-4": "cascade-4 1.8s ease-out forwards 0.6s"
+				"cascade-4": "cascade-4 1.8s ease-out forwards 0.6s",
+				"cascade-towards-1": "cascade-towards-1 1.5s ease-out forwards",
+				"cascade-towards-2": "cascade-towards-2 1.7s ease-out forwards 0.3s",
+				"cascade-towards-3": "cascade-towards-3 1.9s ease-out forwards 0.6s",
+				"cascade-towards-4": "cascade-towards-4 2.1s ease-out forwards 0.9s"
 			}
 		}
 	},

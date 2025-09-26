@@ -85,17 +85,12 @@ interface MarqueeColumnProps {
 }
 
 const MarqueeColumn: React.FC<MarqueeColumnProps> = ({ logos, direction, duration, className }) => {
-  // Duplicate logos for cascade effect - final position is at bottom
+  // Duplicate logos for seamless loop effect
   const duplicatedLogos = [...logos, ...logos];
   
   return (
-    <div className={cn("flex flex-col h-full overflow-hidden", className)}>
-      <div 
-        className="flex flex-col"
-        style={{
-          transform: 'translateY(100%)', // Start from bottom (resting position)
-        }}
-      >
+    <div className={cn("flex flex-col", className)}>
+      <div className="flex flex-col">
         {duplicatedLogos.map((logo, index) => (
           <LogoCard key={`${logo.name}-${index}`} logo={logo} />
         ))}
@@ -119,7 +114,7 @@ export const Integrations3DMarquee: React.FC<Integrations3DMarqueeProps> = ({ cl
       // Settle to final position after cascade
       const timer = setTimeout(() => {
         setAnimationStage('settled');
-      }, 2500);
+      }, 3000);
       
       return () => clearTimeout(timer);
     }
@@ -150,9 +145,13 @@ export const Integrations3DMarquee: React.FC<Integrations3DMarqueeProps> = ({ cl
           {/* Column 1 */}
           <div 
             className={cn(
-              "transition-all duration-700 ease-out",
-              animationStage === 'cascading' && "animate-cascade-1"
+              "transform-gpu",
+              animationStage === 'cascading' && "animate-cascade-towards-1"
             )}
+            style={{
+              transform: animationStage === 'idle' ? 'translateZ(-400px)' : undefined,
+              transformStyle: 'preserve-3d',
+            }}
           >
             <MarqueeColumn 
               logos={logosColumn1} 
@@ -165,9 +164,13 @@ export const Integrations3DMarquee: React.FC<Integrations3DMarqueeProps> = ({ cl
           {/* Column 2 */}
           <div 
             className={cn(
-              "transition-all duration-700 ease-out delay-200",
-              animationStage === 'cascading' && "animate-cascade-2"
+              "transform-gpu",
+              animationStage === 'cascading' && "animate-cascade-towards-2"
             )}
+            style={{
+              transform: animationStage === 'idle' ? 'translateZ(-350px)' : undefined,
+              transformStyle: 'preserve-3d',
+            }}
           >
             <MarqueeColumn 
               logos={logosColumn2} 
@@ -180,9 +183,13 @@ export const Integrations3DMarquee: React.FC<Integrations3DMarqueeProps> = ({ cl
           {/* Column 3 */}
           <div 
             className={cn(
-              "transition-all duration-700 ease-out delay-400",
-              animationStage === 'cascading' && "animate-cascade-3"
+              "transform-gpu",
+              animationStage === 'cascading' && "animate-cascade-towards-3"
             )}
+            style={{
+              transform: animationStage === 'idle' ? 'translateZ(-450px)' : undefined,
+              transformStyle: 'preserve-3d',
+            }}
           >
             <MarqueeColumn 
               logos={logosColumn3} 
@@ -195,9 +202,13 @@ export const Integrations3DMarquee: React.FC<Integrations3DMarqueeProps> = ({ cl
           {/* Column 4 */}
           <div 
             className={cn(
-              "transition-all duration-700 ease-out delay-600",
-              animationStage === 'cascading' && "animate-cascade-4"
+              "transform-gpu",
+              animationStage === 'cascading' && "animate-cascade-towards-4"
             )}
+            style={{
+              transform: animationStage === 'idle' ? 'translateZ(-300px)' : undefined,
+              transformStyle: 'preserve-3d',
+            }}
           >
             <MarqueeColumn 
               logos={logosColumn4} 
