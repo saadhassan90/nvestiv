@@ -2,9 +2,11 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { FileText, Cloud, Database, Link } from "lucide-react";
 import { useEffect, useState } from "react";
-import googleDriveLogo from "@/assets/google-drive-logo.png";
-import dropboxLogo from "@/assets/logos/dropbox-logo.png";
-import outlookLogo from "@/assets/logos/outlook-logo.png";
+import googleDriveLogo from "@/assets/logos/google-drive-new.png";
+import dropboxLogo from "@/assets/logos/dropbox-new.png";
+import onedriveLogo from "@/assets/logos/onedrive-new.png";
+import sharepointLogo from "@/assets/logos/sharepoint-new.png";
+import boxLogo from "@/assets/logos/box-new.png";
 
 const FilesIntegrationSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -18,10 +20,10 @@ const FilesIntegrationSection = () => {
 
   const integrations = [
     { name: "Google Drive", icon: googleDriveLogo },
-    { name: "OneDrive", icon: outlookLogo },
+    { name: "OneDrive", icon: onedriveLogo },
     { name: "Dropbox", icon: dropboxLogo },
-    { name: "SharePoint", icon: outlookLogo },
-    { name: "Box", icon: outlookLogo }
+    { name: "SharePoint", icon: sharepointLogo },
+    { name: "Box", icon: boxLogo }
   ];
 
   const files = [
@@ -50,10 +52,10 @@ const FilesIntegrationSection = () => {
               </div>
               <div className="flex-1">
                 <h3 className="text-xl font-semibold mb-4">Direct Integration</h3>
-                <div className="flex gap-3 flex-wrap">
+                <div className="flex gap-2 flex-wrap">
                   {integrations.slice(0, 4).map((integration, index) => (
-                    <div key={integration.name} className="w-10 h-10 rounded-lg bg-card dark:bg-card border border-border dark:border-border flex items-center justify-center shadow-sm">
-                      <img src={integration.icon} alt={integration.name} className="w-5 h-5" />
+                    <div key={integration.name} className="w-8 h-8 rounded-lg bg-card dark:bg-card border border-border dark:border-border flex items-center justify-center shadow-sm">
+                      <img src={integration.icon} alt={integration.name} className="w-6 h-6 object-contain" />
                     </div>
                   ))}
                 </div>
@@ -91,12 +93,12 @@ const FilesIntegrationSection = () => {
             <div className="flex justify-center space-x-4 mb-8">
               {integrations.map((integration, index) => (
                 <div key={integration.name} className="text-center">
-                  <div className={`w-12 h-12 rounded-xl border-2 flex items-center justify-center transition-all duration-500 ${
+                  <div className={`w-10 h-10 rounded-lg border-2 flex items-center justify-center transition-all duration-500 ${
                     activeIndex === index 
                       ? 'border-primary bg-primary/10 shadow-lg scale-110' 
                       : 'border-muted-foreground/30 bg-card dark:bg-card'
                   }`}>
-                    <img src={integration.icon} alt={integration.name} className="w-6 h-6" />
+                    <img src={integration.icon} alt={integration.name} className="w-6 h-6 object-contain" />
                   </div>
                 </div>
               ))}
