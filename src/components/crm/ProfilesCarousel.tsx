@@ -8,27 +8,37 @@ const profiles = [
     name: "Sarah Chen",
     title: "Managing Partner",
     organization: "Apex Capital Partners",
+    location: "San Francisco, CA",
     color: "bg-blue-500",
+    avatar: "SC",
     data: {
       "AUM": "$3.2B",
       "Focus": "Growth Equity",
       "Geography": "North America",
       "Stage": "Series B-D",
-      "Sector": "Enterprise SaaS"
+      "Sector": "Enterprise SaaS",
+      "Recent Deal": "Invested $25M in CloudTech",
+      "Portfolio Size": "28 companies",
+      "Years Active": "12+ years"
     }
   },
   {
     type: "Startup",
     name: "TechFlow Inc.",
     title: "Series B Startup",
-    organization: "AI Infrastructure",
+    organization: "AI Infrastructure Platform",
+    location: "Austin, TX",
     color: "bg-green-500",
+    avatar: "TF",
     data: {
       "Stage": "Series B",
       "Raised": "$45M",
       "Valuation": "$200M", 
       "Employees": "120+",
-      "Revenue": "$15M ARR"
+      "Revenue": "$15M ARR",
+      "Growth Rate": "300% YoY",
+      "Founded": "2021",
+      "CEO": "Michael Zhang"
     }
   },
   {
@@ -36,13 +46,18 @@ const profiles = [
     name: "David Kumar",
     title: "General Partner",
     organization: "Venture Growth Fund III",
+    location: "New York, NY",
     color: "bg-purple-500",
+    avatar: "DK",
     data: {
       "Fund Size": "$500M",
       "Portfolio": "42 companies",
       "IRR": "24.5%",
       "Vintage": "2021",
-      "Status": "Fundraising"
+      "Status": "75% deployed",
+      "LP Base": "Institutional",
+      "Investment Focus": "B2B SaaS",
+      "Avg Check Size": "$8M"
     }
   },
   {
@@ -50,13 +65,18 @@ const profiles = [
     name: "OpenAI SPV 2024",
     title: "Special Purpose Vehicle",
     organization: "Lead: Maria Rodriguez", 
+    location: "Delaware",
     color: "bg-orange-500",
+    avatar: "OA",
     data: {
       "Target": "$50M",
       "Committed": "$38M",
-      "Investors": "24",
+      "Investors": "24 LPs",
       "Min Check": "$250K",
-      "Close Date": "Q2 2024"
+      "Close Date": "Q2 2024",
+      "Lead GP": "Maria Rodriguez",
+      "Management Fee": "2.5%",
+      "Carry": "25%"
     }
   },
   {
@@ -64,13 +84,18 @@ const profiles = [
     name: "Alex Thompson",
     title: "Investment Banker",
     organization: "Goldman Sachs Private Markets",
-    color: "bg-red-500", 
+    location: "London, UK",
+    color: "bg-red-500",
+    avatar: "AT",
     data: {
       "Deals": "150+ completed",
       "Volume": "$12B lifetime",
       "Specialization": "Tech M&A",
       "Geography": "Global",
-      "Recent": "3 deals this quarter"
+      "Recent": "3 deals this quarter",
+      "Avg Deal Size": "$85M",
+      "Success Rate": "94%",
+      "Years Experience": "15+ years"
     }
   }
 ];
@@ -128,7 +153,7 @@ const ProfilesCarousel = () => {
                   <div className="relative z-10 bg-card rounded-2xl p-6 shadow-none h-96 flex items-center justify-center">
                     
                     {/* Cascading Cards Container */}
-                    <div className="relative w-72 h-80">
+                    <div className="relative w-80 h-80 flex items-center justify-center">
                       {profiles.map((profile, index) => {
                         // Calculate position in carousel
                         const position = (index - currentIndex + profiles.length) % profiles.length;
@@ -170,31 +195,53 @@ const ProfilesCarousel = () => {
                         return (
                           <div
                             key={index}
-                            className="absolute top-0 left-1/2 -translate-x-1/2 w-64 border border-muted/50 rounded-lg p-4 bg-background/90 backdrop-blur-sm shadow-lg transition-all duration-700 ease-in-out"
+                            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 border border-muted/50 rounded-lg p-4 bg-background/90 backdrop-blur-sm shadow-lg transition-all duration-700 ease-in-out"
                             style={{
-                              transform,
+                              transform: `translate(-50%, -50%) ${transform}`,
                               zIndex,
                               opacity,
                             }}
                           >
+                            {/* Header */}
                             <div className="flex items-center gap-3 mb-3">
-                              <div className={`w-3 h-3 rounded-full ${profile.color}`} />
-                              <Badge variant="outline" className="text-xs">
-                                {profile.type}
-                              </Badge>
+                              <div className={`w-10 h-10 rounded-full ${profile.color} flex items-center justify-center text-white font-semibold text-sm`}>
+                                {profile.avatar}
+                              </div>
+                              <div className="flex-1">
+                                <div className="flex items-center gap-2 mb-1">
+                                  <Badge variant="outline" className="text-xs">
+                                    {profile.type}
+                                  </Badge>
+                                </div>
+                                <h4 className="text-sm font-semibold text-foreground">{profile.name}</h4>
+                              </div>
                             </div>
-                            <h4 className="text-sm font-semibold mb-1 text-foreground">{profile.name}</h4>
-                            <p className="text-xs text-muted-foreground mb-1">{profile.title}</p>
-                            <p className="text-xs font-medium mb-3 text-foreground">{profile.organization}</p>
                             
-                            <div className="space-y-2">
-                              {Object.entries(profile.data).slice(0, 3).map(([key, value]) => (
+                            {/* Title & Organization */}
+                            <div className="mb-3">
+                              <p className="text-xs text-muted-foreground mb-1">{profile.title}</p>
+                              <p className="text-xs font-medium text-foreground mb-1">{profile.organization}</p>
+                              <p className="text-xs text-muted-foreground">{profile.location}</p>
+                            </div>
+                            
+                            {/* Key Data Points */}
+                            <div className="space-y-1.5">
+                              {Object.entries(profile.data).slice(0, 5).map(([key, value]) => (
                                 <div key={key} className="flex justify-between items-center">
                                   <span className="text-xs text-muted-foreground">{key}:</span>
-                                  <span className="text-xs font-medium text-foreground">{value}</span>
+                                  <span className="text-xs font-medium text-foreground text-right">{value}</span>
                                 </div>
                               ))}
                             </div>
+                            
+                            {/* Additional Info Indicator */}
+                            {Object.keys(profile.data).length > 5 && (
+                              <div className="mt-3 pt-2 border-t border-muted/30">
+                                <p className="text-xs text-muted-foreground text-center">
+                                  +{Object.keys(profile.data).length - 5} more fields
+                                </p>
+                              </div>
+                            )}
                           </div>
                         );
                       })}
