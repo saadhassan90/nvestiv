@@ -13,7 +13,6 @@ import irisCharacter from "@/assets/iris-character.png";
 import { ListeningWaveform } from "@/components/ListeningWaveform";
 import { GoogleDriveInterface } from "@/components/GoogleDriveInterface";
 import { Integrations3DMarquee } from "@/components/Integrations3DMarquee";
-import LiveAgentFeed from "@/components/LiveAgentFeed";
 import { cn } from "@/lib/utils";
 const HomePage = () => {
   console.log("HomePage component is rendering");
@@ -1221,7 +1220,71 @@ const HomePage = () => {
                     <div className="relative rounded-2xl">
                       <div className="pointer-events-none absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-cyan-500 rounded-[18px] blur-md opacity-15"></div>
                       <div className="relative z-10 bg-card rounded-2xl p-6 h-[700px] flex flex-col shadow-none">
-                        <LiveAgentFeed />
+                      
+                        {/* Agent Builder Interface */}
+                        <div className="flex-1 space-y-4 mb-4 overflow-y-auto">
+                          <div className="flex items-center justify-between mb-4">
+                            <h4 className="font-semibold text-card-foreground">Agent Builder</h4>
+                            <span className="text-xs bg-muted text-muted-foreground px-2 py-1 rounded-full">Draft Mode</span>
+                          </div>
+                          
+                          {/* Voice Input Simulation */}
+                          <div className="bg-muted/50 rounded-lg p-4 border border-border">
+                            <div className="flex items-center gap-3 mb-3">
+                              <ListeningWaveform className="w-6" />
+                              <span className="text-sm text-muted-foreground">Listening...</span>
+                            </div>
+                            <div className="bg-card rounded p-3 text-sm text-card-foreground italic">
+                              "Create an agent that screens healthcare deals over $10M, checks if they fit our thesis, and automatically schedules intro calls for qualified opportunities."
+                            </div>
+                          </div>
+
+                          {/* Agent Configuration Preview */}
+                          <div className="space-y-3">
+                            <div className="bg-muted/30 rounded-lg p-3 border border-border">
+                              <div className="flex items-center gap-2 mb-2">
+                                <Bot className="w-4 h-4 text-primary" />
+                                <span className="text-sm font-medium text-card-foreground">Healthcare Deal Screener</span>
+                              </div>
+                              <div className="text-xs text-muted-foreground space-y-1">
+                                <div>• Screen: Healthcare deals &gt;$10M</div>
+                                <div>• Check: Thesis alignment</div>
+                                <div>• Action: Schedule qualified intro calls</div>
+                              </div>
+                            </div>
+                            
+                            <div className="bg-muted/30 rounded-lg p-3 border border-border">
+                              <div className="text-xs text-muted-foreground">
+                                <div className="font-medium mb-1">Data Sources:</div>
+                                <div>✓ CRM Contacts</div>
+                                <div>✓ Email Inbox</div>
+                                <div>✓ Deal Pipeline</div>
+                                <div>✓ Calendar System</div>
+                              </div>
+                            </div>
+
+                            <div className="bg-muted/30 rounded-lg p-3 border border-border">
+                              <div className="text-xs text-muted-foreground">
+                                <div className="font-medium mb-1">Triggers:</div>
+                                <div>• New deal email received</div>
+                                <div>• Pitch deck uploaded</div>
+                                <div>• Contact form submitted</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        {/* Action Button */}
+                        <div className="bg-black/5 backdrop-blur-sm rounded-xl p-3 border border-border">
+                          <div className="flex items-center justify-between">
+                            <div className="text-sm text-muted-foreground">
+                              Agent configured and ready
+                            </div>
+                            <Button size="sm" variant="default" className="text-xs">
+                              Deploy Agent
+                            </Button>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
