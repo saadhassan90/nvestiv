@@ -203,6 +203,24 @@
     background-color: hsl(0 0% 40%);
   }
 
+  /* Carousel scroll animation */
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-33.333%);
+    }
+  }
+  
+  .animate-scroll-left {
+    animation: scroll-left 15s linear infinite;
+  }
+
+  .dark *::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(0 0% 40%);
+  }
+
   .dark * {
     scrollbar-color: hsl(0 0% 30%) transparent;
   }

@@ -1,147 +1,179 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { FileText, Link2, Folder } from "lucide-react";
+import { FileText, Cloud, Database, Link } from "lucide-react";
+import { useEffect, useState } from "react";
 import googleDriveLogo from "@/assets/google-drive-logo.png";
-import { useState, useEffect } from "react";
+import dropboxLogo from "@/assets/logos/dropbox-logo.png";
+import outlookLogo from "@/assets/logos/outlook-logo.png";
 
 const FilesIntegrationSection = () => {
-  const [animateFiles, setAnimateFiles] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setAnimateFiles(prev => !prev);
-    }, 3000);
+      setActiveIndex((prev) => (prev + 1) % 5);
+    }, 2000);
     return () => clearInterval(interval);
   }, []);
 
-  const fileProviders = [
+  const integrations = [
     { name: "Google Drive", icon: googleDriveLogo },
-    { name: "Dropbox", icon: "📁" },
-    { name: "OneDrive", icon: "📂" },
-    { name: "DataRooms", icon: "🔐" }
+    { name: "OneDrive", icon: outlookLogo },
+    { name: "Dropbox", icon: dropboxLogo },
+    { name: "SharePoint", icon: outlookLogo },
+    { name: "Box", icon: outlookLogo }
   ];
 
-  const sampleFiles = [
-    { name: "Investor_Deck.pdf", linkedTo: "Startup X", type: "Pitch Deck" },
-    { name: "Due_Diligence.xlsx", linkedTo: "Series B Round", type: "Financial" },
-    { name: "Term_Sheet.docx", linkedTo: "TechFlow Inc.", type: "Legal" },
-    { name: "Market_Analysis.pptx", linkedTo: "Growth Equity", type: "Research" }
+  const files = [
+    { name: "Series A Pitch.pdf", linkedTo: "TechFlow Inc.", type: "Pitch Deck" },
+    { name: "LP Agreement.docx", linkedTo: "Venture Growth Fund", type: "Legal Doc" },
+    { name: "Due Diligence.xlsx", linkedTo: "Sarah Chen", type: "Analysis" },
+    { name: "Market Research.pdf", linkedTo: "AI Infrastructure", type: "Research" }
   ];
 
   return (
-    <section className="py-20 bg-muted/30 rounded-2xl">
+    <section className="py-20">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="h2 mb-6">Files That Fuel Your CRM (Not Just Attach to It)</h2>
+          <h2 className="h2 mb-6">Files That Fuel Your CRM</h2>
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             Other CRMs treat documents as static. Nvestiv makes them actionable.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* File Providers */}
+          {/* Left Side - Features */}
           <div className="space-y-8">
-            <div>
-              <h3 className="text-xl font-semibold mb-6">Direct Integration With</h3>
-              <div className="grid grid-cols-2 gap-4">
-                {fileProviders.map((provider, index) => (
-                  <Card key={index} className="p-6 text-center hover:shadow-lg transition-shadow">
-                    <div className="flex flex-col items-center gap-3">
-                      {provider.icon.includes('.png') ? (
-                        <img src={provider.icon} alt={provider.name} className="w-8 h-8" />
-                      ) : (
-                        <span className="text-2xl">{provider.icon}</span>
-                      )}
-                      <span className="font-medium">{provider.name}</span>
-                    </div>
-                  </Card>
-                ))}
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                <Cloud className="w-6 h-6 text-primary" />
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold mb-2">Direct Integration</h3>
+                <p className="text-muted-foreground">
+                  Google Drive, OneDrive, Dropbox, and DataRooms connect seamlessly.
+                </p>
               </div>
             </div>
 
-            <div className="space-y-4">
-              <h4 className="font-semibold">How It Works:</h4>
-              <ul className="space-y-2 text-muted-foreground">
-                <li className="flex items-start gap-2">
-                  <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
-                  Direct integration with Google Drive, OneDrive, Dropbox, and DataRooms
-                </li>
-                <li className="flex items-start gap-2">
-                  <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
-                  Files ingested, vectorized, and linked to other objects in the CRM
-                </li>
-                <li className="flex items-start gap-2">
-                  <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
-                  IRIS understands what's inside files, when to use it, and organizes for you
-                </li>
-              </ul>
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                <Database className="w-6 h-6 text-primary" />
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold mb-2">Smart Processing</h3>
+                <p className="text-muted-foreground">
+                  Files ingested, vectorized, and linked to other objects in the CRM.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                <Link className="w-6 h-6 text-primary" />
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold mb-2">AI Understanding</h3>
+                <p className="text-muted-foreground">
+                  IRIS understands what's inside files, when to use it, and organizes for you.
+                </p>
+              </div>
             </div>
           </div>
 
-          {/* File Flow Visualization */}
+          {/* Right Side - Graph Animation */}
           <div className="relative">
-            <div className="space-y-6">
-              <h3 className="text-lg font-semibold text-center">Intelligent File Processing</h3>
-              
-              {/* File Tiles */}
-              <div className="grid grid-cols-2 gap-4">
-                {sampleFiles.map((file, index) => (
-                  <div 
-                    key={index}
-                    className={`transition-all duration-500 ${
-                      animateFiles ? 'transform translate-x-2 scale-105' : ''
-                    }`}
-                  >
-                    <Card className="p-4 hover:shadow-lg transition-shadow">
-                      <CardContent className="p-0">
-                        <div className="flex items-center gap-3 mb-3">
-                          <FileText className="w-5 h-5 text-primary" />
-                          <span className="text-sm font-medium truncate">{file.name}</span>
-                        </div>
-                        <Badge variant="outline" className="text-xs mb-2">
-                          {file.type}
-                        </Badge>
-                        <div className="flex items-center gap-1 text-xs text-muted-foreground">
-                          <Link2 className="w-3 h-3" />
-                          <span>Linked to {file.linkedTo}</span>
-                        </div>
-                      </CardContent>
-                    </Card>
+            {/* Integration Icons */}
+            <div className="flex justify-center space-x-4 mb-12">
+              {integrations.map((integration, index) => (
+                <div key={integration.name} className="text-center">
+                  <div className={`w-12 h-12 rounded-xl bg-background border-2 flex items-center justify-center transition-all duration-500 ${
+                    activeIndex === index ? 'border-primary shadow-lg scale-110' : 'border-muted'
+                  }`}>
+                    <img src={integration.icon} alt={integration.name} className="w-6 h-6" />
                   </div>
-                ))}
-              </div>
-
-              {/* Connection Lines */}
-              <div className="relative h-20">
-                <svg className="absolute inset-0 w-full h-full" viewBox="0 0 400 80">
-                  {[0, 1, 2, 3].map((index) => (
-                    <line
-                      key={index}
-                      x1={50 + (index % 2) * 150}
-                      y1={Math.floor(index / 2) * 40 + 20}
-                      x2={200}
-                      y2={60}
-                      stroke="hsl(var(--primary))"
-                      strokeWidth="1"
-                      opacity="0.5"
-                      className={`transition-all duration-500 ${
-                        animateFiles ? 'opacity-100' : 'opacity-30'
-                      }`}
-                    />
-                  ))}
-                </svg>
-              </div>
-
-              {/* Central Graph Node */}
-              <div className="text-center">
-                <div className={`w-16 h-16 mx-auto rounded-xl bg-primary/10 border-2 border-primary flex items-center justify-center transition-all duration-500 ${
-                  animateFiles ? 'shadow-lg shadow-primary/25 scale-110' : ''
-                }`}>
-                  <Folder className="w-8 h-8 text-primary" />
                 </div>
-                <p className="text-sm text-muted-foreground mt-2">Knowledge Graph</p>
-              </div>
+              ))}
             </div>
+
+            {/* Graph Network */}
+            <div className="relative h-64">
+              <svg className="w-full h-full" viewBox="0 0 400 200">
+                {/* Connection Lines */}
+                {integrations.map((_, index) => {
+                  const startX = 60 + index * 70;
+                  const startY = 20;
+                  const connections = [
+                    { x: 100, y: 120 },
+                    { x: 200, y: 100 },
+                    { x: 300, y: 140 },
+                    { x: 250, y: 160 }
+                  ];
+                  
+                  return connections.map((end, connIndex) => (
+                    <line
+                      key={`${index}-${connIndex}`}
+                      x1={startX}
+                      y1={startY}
+                      x2={end.x}
+                      y2={end.y}
+                      stroke={activeIndex === index ? "hsl(var(--primary))" : "hsl(var(--muted-foreground))"}
+                      strokeWidth="2"
+                      className="transition-all duration-500"
+                      opacity={activeIndex === index ? "0.8" : "0.2"}
+                    />
+                  ));
+                })}
+                
+                {/* Document Nodes */}
+                {files.map((file, index) => {
+                  const positions = [
+                    { x: 100, y: 120 },
+                    { x: 200, y: 100 },
+                    { x: 300, y: 140 },
+                    { x: 250, y: 160 }
+                  ];
+                  const pos = positions[index];
+                  
+                  return (
+                    <g key={file.name}>
+                      <circle
+                        cx={pos.x}
+                        cy={pos.y}
+                        r="20"
+                        fill={activeIndex === index ? "hsl(var(--primary))" : "hsl(var(--muted))"}
+                        className="transition-all duration-500"
+                      />
+                      <FileText
+                        x={pos.x - 8}
+                        y={pos.y - 8}
+                        width="16"
+                        height="16"
+                        className="text-white"
+                      />
+                    </g>
+                  );
+                })}
+              </svg>
+            </div>
+
+            {/* Active File Info */}
+            <Card className="mt-6 border-primary/20 bg-primary/5">
+              <CardContent className="p-4">
+                <div className="flex items-center gap-3">
+                  <FileText className="w-5 h-5 text-primary" />
+                  <div className="flex-1">
+                    <p className="text-sm font-medium">{files[activeIndex % files.length].name}</p>
+                    <p className="text-xs text-muted-foreground">
+                      Linked to {files[activeIndex % files.length].linkedTo}
+                    </p>
+                  </div>
+                  <Badge variant="outline" className="text-xs">
+                    {files[activeIndex % files.length].type}
+                  </Badge>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </div>

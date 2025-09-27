@@ -86,7 +86,7 @@ const ProfilesCarousel = () => {
   }, []);
 
   return (
-    <section className="py-20 bg-muted/30 rounded-2xl">
+    <section className="py-20">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="h2 mb-6">Profiles That Match the Market</h2>
@@ -96,11 +96,28 @@ const ProfilesCarousel = () => {
           </p>
         </div>
 
-        {/* Carousel Container */}
+        {/* Description Cards - Above Carousel */}
+        <div className="grid md:grid-cols-2 gap-6 mb-16">
+          <Card className="p-6 border-muted/50">
+            <p className="text-muted-foreground mb-3">
+              Structured fields capture mandates, allocations, deals, and track records.
+            </p>
+            <p className="text-muted-foreground">
+              Profiles change dynamically by role: Investor, Fund Manager, Startup, SPV, Broker.
+            </p>
+          </Card>
+          <Card className="p-6 border-muted/50">
+            <p className="text-muted-foreground">
+              AI maintains smart lists and keeps groups automatically updated.
+            </p>
+          </Card>
+        </div>
+
+        {/* Continuous Carousel Container */}
         <div className="relative overflow-hidden">
           <div 
-            className="flex transition-transform duration-500 ease-in-out gap-6"
-            style={{ transform: `translateX(-${currentIndex * (100 / 3)}%)` }}
+            className="flex gap-6 animate-scroll-left"
+            style={{ width: 'calc(300% + 3rem)' }}
           >
             {[...profiles, ...profiles, ...profiles].map((profile, index) => (
               <Card 
@@ -131,31 +148,6 @@ const ProfilesCarousel = () => {
               </Card>
             ))}
           </div>
-        </div>
-
-        {/* Carousel Indicators */}
-        <div className="flex justify-center mt-8 gap-2">
-          {profiles.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentIndex(index)}
-              className={`w-2 h-2 rounded-full transition-colors ${
-                index === currentIndex ? 'bg-primary' : 'bg-muted-foreground/30'
-              }`}
-            />
-          ))}
-        </div>
-
-        <div className="text-center mt-12 space-y-4">
-          <p className="text-muted-foreground">
-            Structured fields capture mandates, allocations, deals, and track records.
-          </p>
-          <p className="text-muted-foreground">
-            Profiles change dynamically by role: Investor, Fund Manager, Startup, SPV, Broker.
-          </p>
-          <p className="text-muted-foreground">
-            AI maintains smart lists and keeps groups automatically updated.
-          </p>
         </div>
       </div>
     </section>

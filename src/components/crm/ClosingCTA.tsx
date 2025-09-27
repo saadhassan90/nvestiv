@@ -6,7 +6,7 @@ const ClosingCTA = () => {
     <section className="py-20 relative overflow-hidden">
       {/* Background with gradient and network lines */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-background via-muted/20 to-primary/5" />
+        <div className="absolute inset-0 bg-gradient-to-br from-background via-muted/10 to-primary/5" />
         
         {/* Abstract network lines */}
         <svg className="absolute inset-0 w-full h-full opacity-10" viewBox="0 0 1000 400">

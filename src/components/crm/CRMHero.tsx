@@ -6,7 +6,7 @@ const CRMHero = () => {
     <section className="relative pt-20 pb-32 overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-primary/5" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/3" />
         {/* Floating particles */}
         <div className="absolute inset-0">
           {[...Array(20)].map((_, i) => (
