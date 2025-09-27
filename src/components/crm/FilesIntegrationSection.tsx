@@ -44,7 +44,7 @@ const FilesIntegrationSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Side - Features */}
           <div className="space-y-8">
-            <div className="flex items-start gap-4">
+            <div className="flex items-center gap-4">
               <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
                 <Cloud className="w-6 h-6 text-primary" />
               </div>
@@ -60,7 +60,7 @@ const FilesIntegrationSection = () => {
               </div>
             </div>
 
-            <div className="flex items-start gap-4">
+            <div className="flex items-center gap-4">
               <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
                 <Database className="w-6 h-6 text-primary" />
               </div>
@@ -72,7 +72,7 @@ const FilesIntegrationSection = () => {
               </div>
             </div>
 
-            <div className="flex items-start gap-4">
+            <div className="flex items-center gap-4">
               <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
                 <Link className="w-6 h-6 text-primary" />
               </div>

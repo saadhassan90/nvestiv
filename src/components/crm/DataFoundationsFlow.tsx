@@ -98,7 +98,7 @@ const DataFoundationsFlow = () => {
           {/* Feature Cards */}
           <div className="space-y-6">
             <Card className="p-6 border-muted/50 hover:border-primary/20 transition-colors">
-              <div className="flex items-start gap-4">
+              <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
                   <Mail className="w-6 h-6 text-primary" />
                 </div>
@@ -113,7 +113,7 @@ const DataFoundationsFlow = () => {
             </Card>
 
             <Card className="p-6 border-muted/50 hover:border-primary/20 transition-colors">
-              <div className="flex items-start gap-4">
+              <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
                   <Calendar className="w-6 h-6 text-primary" />
                 </div>
@@ -127,7 +127,7 @@ const DataFoundationsFlow = () => {
             </Card>
 
             <Card className="p-6 border-muted/50 hover:border-primary/20 transition-colors">
-              <div className="flex items-start gap-4">
+              <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
                   <FileText className="w-6 h-6 text-primary" />
                 </div>
@@ -141,7 +141,7 @@ const DataFoundationsFlow = () => {
             </Card>
 
             <Card className="p-6 border-muted/50 hover:border-primary/20 transition-colors">
-              <div className="flex items-start gap-4">
+              <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
                   <Database className="w-6 h-6 text-primary" />
                 </div>
