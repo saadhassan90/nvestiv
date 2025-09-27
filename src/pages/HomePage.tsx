@@ -13,6 +13,7 @@ import irisCharacter from "@/assets/iris-character.png";
 import { ListeningWaveform } from "@/components/ListeningWaveform";
 import { GoogleDriveInterface } from "@/components/GoogleDriveInterface";
 import { Integrations3DMarquee } from "@/components/Integrations3DMarquee";
+import { LiveAgentFeed } from "@/components/LiveAgentFeed";
 import { cn } from "@/lib/utils";
 const HomePage = () => {
   console.log("HomePage component is rendering");
@@ -804,80 +805,13 @@ const HomePage = () => {
                           </Button>
                         </div>
                       </div>
-                      <div className="lg:pl-8">
-                        <div className="relative rounded-2xl">
-                          <div className="pointer-events-none absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-cyan-500 rounded-[18px] blur-md opacity-15"></div>
-                           <div className="relative z-10 bg-card rounded-2xl p-6 h-[700px] flex flex-col shadow-none">
-                          
-                          {/* Agent Dashboard */}
-                          <div className="flex-1 space-y-4 mb-4 overflow-y-auto">
-                            <div className="flex items-center justify-between mb-4">
-                              <h4 className="font-semibold text-foreground">Active AI Agents</h4>
-                              <span className="text-xs bg-green-500/10 text-green-600 dark:text-green-400 px-2 py-1 rounded-full">3 Active</span>
-                            </div>
-                            
-                            {/* Agent Cards */}
-                            <div className="space-y-3">
-                              <div className="bg-muted rounded-lg p-4">
-                                <div className="flex items-start justify-between">
-                                  <div className="flex items-center gap-3">
-                                    <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
-                                      <Bot className="w-4 h-4 text-white" />
-                                    </div>
-                                    <div>
-                                      <h5 className="font-medium text-foreground text-sm">Deal Screener</h5>
-                                      <p className="text-xs text-muted-foreground">Processing 12 new deals</p>
-                                    </div>
-                                  </div>
-                                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                                </div>
-                              </div>
-                              
-                              <div className="bg-muted rounded-lg p-4">
-                                <div className="flex items-start justify-between">
-                                  <div className="flex items-center gap-3">
-                                    <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center">
-                                      <Search className="w-4 h-4 text-white" />
-                                    </div>
-                                    <div>
-                                      <h5 className="font-medium text-foreground text-sm">Due Diligence</h5>
-                                      <p className="text-xs text-muted-foreground">Analyzing HealthTech Inc.</p>
-                                    </div>
-                                  </div>
-                                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                                </div>
-                              </div>
-                              
-                              <div className="bg-muted rounded-lg p-4">
-                                <div className="flex items-start justify-between">
-                                  <div className="flex items-center gap-3">
-                                    <div className="w-8 h-8 bg-pink-500 rounded-full flex items-center justify-center">
-                                      <TrendingUp className="w-4 h-4 text-white" />
-                                    </div>
-                                    <div>
-                                      <h5 className="font-medium text-foreground text-sm">Market Intel</h5>
-                                      <p className="text-xs text-muted-foreground">Tracking SaaS trends</p>
-                                    </div>
-                                  </div>
-                                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          
-                          {/* Quick Actions */}
-                          <div className="bg-muted/50 backdrop-blur-sm rounded-xl p-1 border border-border">
-                            <div className="flex items-center gap-2 p-2">
-                              <div className="flex-1 relative">
-                                <input type="text" placeholder="Configure new agent..." className="w-full bg-transparent text-foreground placeholder:text-muted-foreground text-xs focus:outline-none py-1 px-2" disabled />
-                              </div>
-                              <Button size="icon" variant="default" className="w-6 h-6 rounded-md">
-                                <Plus className="w-3 h-3" />
-                              </Button>
-                            </div>
-                          </div>
-                          </div>
-                       </div>
+                       <div className="lg:pl-8">
+                         <div className="relative rounded-2xl">
+                           <div className="pointer-events-none absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-cyan-500 rounded-[18px] blur-md opacity-15"></div>
+                           <div className="relative z-10">
+                             <LiveAgentFeed />
+                           </div>
+                        </div>
                      </div>
                   </div>
                   </div>
