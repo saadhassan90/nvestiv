@@ -57,44 +57,73 @@ const ValuePropositionSection = () => {
   return (
     <section className="py-20">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 className="h2 mb-6">
             The Private Investments CRM That Fixes{" "}
             <span className="text-primary">"Garbage In, Garbage Out"</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            Most CRMs fail because they rely on people to keep data clean. The result? 
-            Incomplete, outdated, unreliable records. Nvestiv flips the model: we automate 
-            every input so your CRM updates itself—structured, complete, and always current.
-          </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {features.map((feature, index) => {
-            const Icon = feature.icon;
-            return (
-              <Card 
-                key={index} 
-                className="group relative overflow-hidden border-muted/50 hover:border-primary/20 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
-              >
-                <CardHeader className="pb-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                    <Icon className="w-6 h-6 text-primary" />
+        <Card className="border border-border shadow-lg bg-card">
+          <div className="p-6">
+            <div className="grid lg:grid-cols-2 gap-8 items-stretch">
+              {/* Left Column - Text Content */}
+              <div className="space-y-6 flex flex-col justify-between border border-border rounded-xl p-6 h-full">
+                <div>
+                  <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
+                    Most CRMs fail because they rely on people to keep data clean. The result? 
+                    Incomplete, outdated, unreliable records. Nvestiv flips the model: we automate 
+                    every input so your CRM updates itself—structured, complete, and always current.
+                  </p>
+                  
+                  <div className="space-y-3 mb-6">
+                    <h4 className="font-semibold text-foreground">Key Features</h4>
+                    <ul className="space-y-2 text-sm text-muted-foreground">
+                      {features.slice(0, 4).map((feature, index) => {
+                        const Icon = feature.icon;
+                        return (
+                          <li key={index} className="flex items-start gap-3">
+                            <Icon className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                            <span><strong>{feature.title}</strong> - {feature.description}</span>
+                          </li>
+                        );
+                      })}
+                    </ul>
                   </div>
-                  <CardTitle className="text-lg">{feature.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-sm leading-relaxed">
-                    {feature.description}
-                  </CardDescription>
-                </CardContent>
-                
-                {/* Subtle gradient overlay on hover */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
-              </Card>
-            );
-          })}
-        </div>
+                </div>
+              </div>
+
+              {/* Right Column - Feature Grid Visual */}
+              <div className="lg:pl-8">
+                <div className="relative rounded-2xl">
+                  <div className="pointer-events-none absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-cyan-500 rounded-[18px] blur-md opacity-15"></div>
+                  <div className="relative z-10 bg-card rounded-2xl p-6 shadow-none">
+                    <div className="grid grid-cols-2 gap-4">
+                      {features.slice(4).map((feature, index) => {
+                        const Icon = feature.icon;
+                        return (
+                          <div 
+                            key={index} 
+                            className="group p-4 border border-muted/50 rounded-lg hover:border-primary/20 transition-all duration-300 hover:shadow-lg"
+                          >
+                            <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center mb-3 group-hover:bg-primary/20 transition-colors">
+                              <Icon className="w-4 h-4 text-primary" />
+                            </div>
+                            <h5 className="text-sm font-semibold mb-1">{feature.title}</h5>
+                            <p className="text-xs text-muted-foreground leading-relaxed">
+                              {feature.description}
+                            </p>
+                            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none rounded-lg" />
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Card>
       </div>
     </section>
   );

@@ -1,188 +1,123 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { FileText, Cloud, Database, Link } from "lucide-react";
-import { useEffect, useState } from "react";
-import googleDriveLogo from "@/assets/logos/google-drive-new.png";
-import dropboxLogo from "@/assets/logos/dropbox-new.png";
-import onedriveLogo from "@/assets/logos/onedrive-new.png";
-import sharepointLogo from "@/assets/logos/sharepoint-new.png";
-import boxLogo from "@/assets/logos/box-new.png";
+import { FileSearch, Link, MessageSquare } from "lucide-react";
+import googleDrive from "@/assets/logos/google-drive-new.png";
+import dropbox from "@/assets/logos/dropbox-new.png";
+import onedrive from "@/assets/logos/onedrive-new.png";
+import sharepoint from "@/assets/logos/sharepoint-new.png";
+import box from "@/assets/logos/box-new.png";
 
 const FilesIntegrationSection = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % 5);
-    }, 2000);
-    return () => clearInterval(interval);
-  }, []);
-
-  const integrations = [
-    { name: "Google Drive", icon: googleDriveLogo },
-    { name: "OneDrive", icon: onedriveLogo },
-    { name: "Dropbox", icon: dropboxLogo },
-    { name: "SharePoint", icon: sharepointLogo },
-    { name: "Box", icon: boxLogo }
-  ];
-
-  const files = [
-    { name: "Series A Pitch.pdf", linkedTo: "TechFlow Inc.", type: "Pitch Deck" },
-    { name: "LP Agreement.docx", linkedTo: "Venture Growth Fund", type: "Legal Doc" },
-    { name: "Due Diligence.xlsx", linkedTo: "Sarah Chen", type: "Analysis" },
-    { name: "Market Research.pdf", linkedTo: "AI Infrastructure", type: "Research" }
-  ];
-
   return (
     <section className="py-20">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="h2 mb-6">Files That Fuel Your CRM</h2>
-          <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            Other CRMs treat documents as static. Nvestiv makes them actionable.
-          </p>
+        <div className="text-center mb-12">
+          <h2 className="h2 mb-6">Files That Actually Work For You</h2>
         </div>
-
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Side - Features */}
-          <div className="space-y-6">
-            <Card className="group relative overflow-hidden border-muted/50 hover:border-primary/20 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 p-6">
-              <div className="flex items-center gap-4">
-                <div className="flex items-center gap-3">
-                  <Cloud className="w-6 h-6 text-primary" />
-                  <h3 className="text-xl font-semibold">Direct Integration</h3>
+        
+        <Card className="border border-border shadow-lg bg-card">
+          <div className="p-6">
+            <div className="grid lg:grid-cols-2 gap-8 items-stretch">
+              {/* Left Column - Text Content */}
+              <div className="space-y-6 flex flex-col justify-between border border-border rounded-xl p-6 h-full">
+                <div>
+                  <h3 className="h3 mb-4 text-card-heading">AI-Powered Document Intelligence</h3>
+                  <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
+                    Connect your cloud drives and IRIS automatically indexes, vectorizes, and links 
+                    every document to relevant contacts and deals. No more lost files or manual organization.
+                  </p>
+                  
+                  <div className="space-y-4 mb-6">
+                    <div className="flex items-center gap-3">
+                      <FileSearch className="w-5 h-5 text-blue-500" />
+                      <span className="text-sm"><strong>Smart Document Indexing</strong> - Every file automatically processed and linked</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <Link className="w-5 h-5 text-green-500" />
+                      <span className="text-sm"><strong>Contextual Linking</strong> - Pitch decks, term sheets auto-connect to deals</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <MessageSquare className="w-5 h-5 text-primary" />
+                      <span className="text-sm"><strong>Instant Q&A</strong> - Ask questions about any document set</span>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div className="flex gap-2 flex-wrap mt-4">
-                {integrations.slice(0, 4).map((integration, index) => (
-                  <div key={integration.name} className="w-8 h-8 rounded-lg bg-muted/50 border border-border flex items-center justify-center shadow-sm">
-                    <img src={integration.icon} alt={integration.name} className="w-6 h-6 object-contain" />
+
+              {/* Right Column - Integration Visual */}
+              <div className="lg:pl-8">
+                <div className="relative rounded-2xl">
+                  <div className="pointer-events-none absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-cyan-500 rounded-[18px] blur-md opacity-15"></div>
+                  <div className="relative z-10 bg-card rounded-2xl p-6 shadow-none">
+                    {/* Cloud Storage Icons */}
+                    <div className="flex justify-center items-center gap-4 mb-6">
+                      <div className="w-12 h-12 bg-white rounded-lg shadow-sm flex items-center justify-center hover:scale-105 transition-transform">
+                        <img
+                          src={googleDrive}
+                          alt="Google Drive"
+                          className="w-8 h-8 object-contain"
+                        />
+                      </div>
+                      <div className="w-12 h-12 bg-white rounded-lg shadow-sm flex items-center justify-center hover:scale-105 transition-transform">
+                        <img
+                          src={onedrive}
+                          alt="OneDrive"
+                          className="w-8 h-8 object-contain"
+                        />
+                      </div>
+                      <div className="w-12 h-12 bg-white rounded-lg shadow-sm flex items-center justify-center hover:scale-105 transition-transform">
+                        <img
+                          src={dropbox}
+                          alt="Dropbox"
+                          className="w-8 h-8 object-contain"
+                        />
+                      </div>
+                      <div className="w-12 h-12 bg-white rounded-lg shadow-sm flex items-center justify-center hover:scale-105 transition-transform">
+                        <img
+                          src={sharepoint}
+                          alt="SharePoint"
+                          className="w-8 h-8 object-contain"
+                        />
+                      </div>
+                      <div className="w-12 h-12 bg-white rounded-lg shadow-sm flex items-center justify-center hover:scale-105 transition-transform">
+                        <img
+                          src={box}
+                          alt="Box"
+                          className="w-8 h-8 object-contain"
+                        />
+                      </div>
+                    </div>
+
+                    {/* Connection Arrow */}
+                    <div className="flex justify-center mb-6">
+                      <div className="w-px h-8 bg-gradient-to-b from-transparent via-primary to-transparent"></div>
+                    </div>
+
+                    {/* IRIS Processing */}
+                    <div className="bg-primary/10 border border-primary/20 rounded-lg p-4 text-center mb-6">
+                      <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center mx-auto mb-2">
+                        <span className="text-primary-foreground font-bold text-sm">IRIS</span>
+                      </div>
+                      <p className="text-sm text-muted-foreground">AI Processing Engine</p>
+                    </div>
+
+                    {/* Results */}
+                    <div className="grid grid-cols-2 gap-3">
+                      <div className="bg-green-500/10 border border-green-500/20 rounded-lg p-3 text-center">
+                        <div className="text-sm font-semibold text-green-700 dark:text-green-400">1,247</div>
+                        <div className="text-xs text-muted-foreground">Docs Processed</div>
+                      </div>
+                      <div className="bg-blue-500/10 border border-blue-500/20 rounded-lg p-3 text-center">
+                        <div className="text-sm font-semibold text-blue-700 dark:text-blue-400">89%</div>
+                        <div className="text-xs text-muted-foreground">Auto-Linked</div>
+                      </div>
+                    </div>
                   </div>
-                ))}
+                </div>
               </div>
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
-            </Card>
-
-            <Card className="group relative overflow-hidden border-muted/50 hover:border-primary/20 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 p-6">
-              <div className="flex items-center gap-3 mb-2">
-                <Database className="w-6 h-6 text-primary" />
-                <h3 className="text-xl font-semibold">Smart Processing</h3>
-              </div>
-              <p className="text-muted-foreground">
-                Files ingested, vectorized, and linked to other objects in the CRM.
-              </p>
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
-            </Card>
-
-            <Card className="group relative overflow-hidden border-muted/50 hover:border-primary/20 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 p-6">
-              <div className="flex items-center gap-3 mb-2">
-                <Link className="w-6 h-6 text-primary" />
-                <h3 className="text-xl font-semibold">AI Understanding</h3>
-              </div>
-              <p className="text-muted-foreground">
-                IRIS understands what's inside files, when to use it, and organizes for you.
-              </p>
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
-            </Card>
+            </div>
           </div>
-
-          {/* Right Side - Graph Animation */}
-          <Card className="group relative overflow-hidden border-muted/50 hover:border-primary/20 transition-all duration-300 hover:shadow-lg p-6">
-            {/* Integration Icons (top of graph) */}
-            <div className="flex justify-center space-x-4 mb-8">
-              {integrations.map((integration, index) => (
-                <div key={integration.name} className="text-center">
-                  <div className={`w-10 h-10 rounded-lg border-2 flex items-center justify-center transition-all duration-500 ${
-                    activeIndex === index 
-                      ? 'border-primary bg-primary/10 shadow-lg scale-110' 
-                      : 'border-muted-foreground/30 bg-muted/30'
-                  }`}>
-                    <img src={integration.icon} alt={integration.name} className="w-6 h-6 object-contain" />
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Graph Network */}
-            <div className="relative h-64">
-              <svg className="w-full h-full" viewBox="0 0 400 200">
-                {/* Connection Lines */}
-                {integrations.map((_, index) => {
-                  const startX = 60 + index * 70;
-                  const startY = 20;
-                  const connections = [
-                    { x: 100, y: 120 },
-                    { x: 200, y: 100 },
-                    { x: 300, y: 140 },
-                    { x: 250, y: 160 }
-                  ];
-                  
-                  return connections.map((end, connIndex) => (
-                    <line
-                      key={`${index}-${connIndex}`}
-                      x1={startX}
-                      y1={startY}
-                      x2={end.x}
-                      y2={end.y}
-                      stroke={activeIndex === index ? "hsl(var(--primary))" : "hsl(var(--muted-foreground))"}
-                      strokeWidth="2"
-                      className="transition-all duration-500"
-                      opacity={activeIndex === index ? "0.8" : "0.2"}
-                    />
-                  ));
-                })}
-                
-                {/* Document Nodes */}
-                {files.map((file, index) => {
-                  const positions = [
-                    { x: 100, y: 120 },
-                    { x: 200, y: 100 },
-                    { x: 300, y: 140 },
-                    { x: 250, y: 160 }
-                  ];
-                  const pos = positions[index];
-                  
-                  return (
-                    <g key={file.name}>
-                      <circle
-                        cx={pos.x}
-                        cy={pos.y}
-                        r="20"
-                        fill={activeIndex === index ? "hsl(var(--primary))" : "hsl(var(--muted) / 0.6)"}
-                        stroke={activeIndex === index ? "hsl(var(--primary))" : "hsl(var(--border))"}
-                        strokeWidth="2"
-                        className="transition-all duration-500"
-                      />
-                      <foreignObject x={pos.x - 8} y={pos.y - 8} width="16" height="16">
-                        <FileText className={`w-4 h-4 ${activeIndex === index ? 'text-white dark:text-white' : 'text-foreground'}`} />
-                      </foreignObject>
-                    </g>
-                  );
-                })}
-              </svg>
-            </div>
-
-            {/* Active File Info */}
-            <Card className="mt-6 border-primary/20 bg-primary/5">
-              <CardContent className="p-4">
-                <div className="flex items-center gap-3">
-                  <FileText className="w-5 h-5 text-primary" />
-                  <div className="flex-1">
-                    <p className="text-sm font-medium">{files[activeIndex % files.length].name}</p>
-                    <p className="text-xs text-muted-foreground">
-                      Linked to {files[activeIndex % files.length].linkedTo}
-                    </p>
-                  </div>
-                  <Badge variant="outline" className="text-xs">
-                    {files[activeIndex % files.length].type}
-                  </Badge>
-                </div>
-              </CardContent>
-            </Card>
-            
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
-          </Card>
-        </div>
+        </Card>
       </div>
     </section>
   );

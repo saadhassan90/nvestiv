@@ -48,7 +48,8 @@ const CRMHero = () => {
         
         {/* CRM Dashboard Mockup */}
         <div className="relative max-w-5xl mx-auto">
-          <div className="aspect-[16/10] bg-gradient-to-br from-background to-muted/50 rounded-2xl border shadow-2xl overflow-hidden">
+          <div className="pointer-events-none absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-cyan-500 rounded-[18px] blur-md opacity-15"></div>
+          <div className="relative z-10 aspect-[16/10] bg-gradient-to-br from-background to-muted/50 rounded-2xl border shadow-2xl overflow-hidden">
             <div className="p-8 h-full flex flex-col">
               {/* Dashboard Header */}
               <div className="flex items-center justify-between mb-8">
