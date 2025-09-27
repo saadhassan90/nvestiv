@@ -26,7 +26,7 @@ const HomePage = () => {
 
   // Animation stage order for CRM
   const crmStageOrder = ['idle', 'msg1', 'typing1', 'msg2', 'msg3', 'msg4', 'typing2', 'msg5', 'typing3', 'msg6', 'msg7', 'typing4', 'msg8', 'msg9', 'typing5', 'complete'];
-  
+
   // Helper function to determine if an element should be visible based on current stage
   const shouldShowElement = (requiredStage: string, currentStage: string = crmAnimationStage): boolean => {
     const currentIndex = crmStageOrder.indexOf(currentStage);
@@ -375,10 +375,7 @@ const HomePage = () => {
                             {/* Chat History Container */}
                             <div className="flex-1 space-y-4 mb-4 overflow-y-auto">
                               {/* User Message 1 */}
-                              <div className={cn("flex justify-end gap-2", 
-                                !shouldShowElement('msg1') ? 'opacity-0' : 
-                                shouldAnimateIn('msg1') ? 'animate-slide-in-right' : ''
-                              )}>
+                              <div className={cn("flex justify-end gap-2", !shouldShowElement('msg1') ? 'opacity-0' : shouldAnimateIn('msg1') ? 'animate-slide-in-right' : '')}>
                                 <div className="flex flex-col items-end max-w-[80%]">
                                   <div className="flex items-center gap-2 mb-1">
                                      <span className="text-xs text-muted-foreground">12:34 PM</span>
@@ -394,10 +391,9 @@ const HomePage = () => {
                               </div>
                               
                               {/* IRIS Typing Indicator 1 */}
-                              <div className={cn("flex justify-start gap-2", 
-                                !shouldShowElement('typing1') ? 'opacity-0' : 
-                                shouldAnimateIn('typing1') ? 'animate-slide-in-left' : ''
-                              )} style={{ display: !shouldShowElement('typing1') || shouldShowElement('msg2') ? 'none' : 'flex' }}>
+                              <div className={cn("flex justify-start gap-2", !shouldShowElement('typing1') ? 'opacity-0' : shouldAnimateIn('typing1') ? 'animate-slide-in-left' : '')} style={{
+                              display: !shouldShowElement('typing1') || shouldShowElement('msg2') ? 'none' : 'flex'
+                            }}>
                                 <div className="flex flex-col items-start max-w-[85%]">
                                   <div className="flex items-center gap-2 mb-1">
                                      <div className="w-6 h-6 bg-muted rounded-full flex items-center justify-center">
@@ -410,8 +406,12 @@ const HomePage = () => {
                                      <div className="flex items-center gap-1">
                                        <div className="flex space-x-1">
                                          <div className="w-2 h-2 bg-muted-foreground rounded-full animate-typing-dots"></div>
-                                         <div className="w-2 h-2 bg-muted-foreground rounded-full animate-typing-dots" style={{ animationDelay: '0.2s' }}></div>
-                                         <div className="w-2 h-2 bg-muted-foreground rounded-full animate-typing-dots" style={{ animationDelay: '0.4s' }}></div>
+                                         <div className="w-2 h-2 bg-muted-foreground rounded-full animate-typing-dots" style={{
+                                        animationDelay: '0.2s'
+                                      }}></div>
+                                         <div className="w-2 h-2 bg-muted-foreground rounded-full animate-typing-dots" style={{
+                                        animationDelay: '0.4s'
+                                      }}></div>
                                        </div>
                                        <span className="text-xs text-muted-foreground ml-2">thinking...</span>
                                      </div>
@@ -420,10 +420,7 @@ const HomePage = () => {
                               </div>
 
                               {/* IRIS Response 1 */}
-                              <div className={cn("flex justify-start gap-2", 
-                                !shouldShowElement('msg2') ? 'opacity-0' : 
-                                shouldAnimateIn('msg2') ? 'animate-slide-in-left' : ''
-                              )}>
+                              <div className={cn("flex justify-start gap-2", !shouldShowElement('msg2') ? 'opacity-0' : shouldAnimateIn('msg2') ? 'animate-slide-in-left' : '')}>
                                <div className="flex flex-col items-start max-w-[85%]">
                                  <div className="flex items-center gap-2 mb-1">
                                     <div className="w-6 h-6 bg-muted rounded-full flex items-center justify-center">
@@ -440,10 +437,7 @@ const HomePage = () => {
                              </div>
                              
                               {/* Contact Card */}
-                              <div className={cn("flex justify-start transition-all duration-500", 
-                                !shouldShowElement('msg3') ? 'opacity-0 translate-y-4' : 
-                                shouldAnimateIn('msg3') ? 'opacity-100 translate-y-0 animate-slide-in-left' : 'opacity-100 translate-y-0'
-                              )}>
+                              <div className={cn("flex justify-start transition-all duration-500", !shouldShowElement('msg3') ? 'opacity-0 translate-y-4' : shouldAnimateIn('msg3') ? 'opacity-100 translate-y-0 animate-slide-in-left' : 'opacity-100 translate-y-0')}>
                                  <div className="bg-gradient-to-br from-muted to-accent/30 border border-border rounded-lg p-2.5 max-w-[85%] shadow-sm hover:shadow-md transition-shadow">
                                    <div className="flex items-center gap-2.5">
                                      <div className="w-8 h-8 bg-gradient-to-br from-primary to-primary/80 rounded-lg flex items-center justify-center shadow-sm">
@@ -462,10 +456,7 @@ const HomePage = () => {
                               </div>
 
                                {/* User Message 2 - Enrich */}
-                               <div className={cn("flex justify-end gap-2", 
-                                 !shouldShowElement('msg4') ? 'opacity-0' : 
-                                 shouldAnimateIn('msg4') ? 'animate-slide-in-right' : ''
-                               )}>
+                               <div className={cn("flex justify-end gap-2", !shouldShowElement('msg4') ? 'opacity-0' : shouldAnimateIn('msg4') ? 'animate-slide-in-right' : '')}>
                                  <div className="flex flex-col items-end max-w-[80%]">
                                    <div className="flex items-center gap-2 mb-1">
                                       <span className="text-xs text-muted-foreground">12:35 PM</span>
@@ -481,10 +472,9 @@ const HomePage = () => {
                                </div>
 
                                {/* IRIS Typing Indicator 2 */}
-                               <div className={cn("flex justify-start gap-2", 
-                                 !shouldShowElement('typing2') ? 'opacity-0' : 
-                                 shouldAnimateIn('typing2') ? 'animate-slide-in-left' : ''
-                               )} style={{ display: !shouldShowElement('typing2') || shouldShowElement('msg5') ? 'none' : 'flex' }}>
+                               <div className={cn("flex justify-start gap-2", !shouldShowElement('typing2') ? 'opacity-0' : shouldAnimateIn('typing2') ? 'animate-slide-in-left' : '')} style={{
+                              display: !shouldShowElement('typing2') || shouldShowElement('msg5') ? 'none' : 'flex'
+                            }}>
                                  <div className="flex flex-col items-start max-w-[85%]">
                                    <div className="flex items-center gap-2 mb-1">
                                       <div className="w-6 h-6 bg-muted rounded-full flex items-center justify-center">
@@ -497,8 +487,12 @@ const HomePage = () => {
                                       <div className="flex items-center gap-1">
                                         <div className="flex space-x-1">
                                           <div className="w-2 h-2 bg-muted-foreground rounded-full animate-typing-dots"></div>
-                                          <div className="w-2 h-2 bg-muted-foreground rounded-full animate-typing-dots" style={{ animationDelay: '0.2s' }}></div>
-                                          <div className="w-2 h-2 bg-muted-foreground rounded-full animate-typing-dots" style={{ animationDelay: '0.4s' }}></div>
+                                          <div className="w-2 h-2 bg-muted-foreground rounded-full animate-typing-dots" style={{
+                                        animationDelay: '0.2s'
+                                      }}></div>
+                                          <div className="w-2 h-2 bg-muted-foreground rounded-full animate-typing-dots" style={{
+                                        animationDelay: '0.4s'
+                                      }}></div>
                                         </div>
                                         <span className="text-xs text-muted-foreground ml-2">searching...</span>
                                       </div>
@@ -507,10 +501,9 @@ const HomePage = () => {
                                </div>
 
                                {/* IRIS Response - Searching */}
-                               <div className={cn("flex justify-start gap-2", 
-                                 !shouldShowElement('msg5') ? 'opacity-0' : 
-                                 shouldAnimateIn('msg5') ? 'animate-slide-in-left' : ''
-                               )} style={{ display: !shouldShowElement('msg5') || shouldShowElement('typing3') ? 'none' : 'flex' }}>
+                               <div className={cn("flex justify-start gap-2", !shouldShowElement('msg5') ? 'opacity-0' : shouldAnimateIn('msg5') ? 'animate-slide-in-left' : '')} style={{
+                              display: !shouldShowElement('msg5') || shouldShowElement('typing3') ? 'none' : 'flex'
+                            }}>
                                  <div className="flex flex-col items-start max-w-[85%]">
                                    <div className="flex items-center gap-2 mb-1">
                                       <div className="w-6 h-6 bg-muted rounded-full flex items-center justify-center">
@@ -529,10 +522,9 @@ const HomePage = () => {
                                </div>
 
                                {/* IRIS Typing Indicator 3 */}
-                               <div className={cn("flex justify-start gap-2", 
-                                 !shouldShowElement('typing3') ? 'opacity-0' : 
-                                 shouldAnimateIn('typing3') ? 'animate-slide-in-left' : ''
-                               )} style={{ display: !shouldShowElement('typing3') || shouldShowElement('msg6') ? 'none' : 'flex' }}>
+                               <div className={cn("flex justify-start gap-2", !shouldShowElement('typing3') ? 'opacity-0' : shouldAnimateIn('typing3') ? 'animate-slide-in-left' : '')} style={{
+                              display: !shouldShowElement('typing3') || shouldShowElement('msg6') ? 'none' : 'flex'
+                            }}>
                                  <div className="flex flex-col items-start max-w-[85%]">
                                    <div className="flex items-center gap-2 mb-1">
                                       <div className="w-6 h-6 bg-muted rounded-full flex items-center justify-center">
@@ -545,8 +537,12 @@ const HomePage = () => {
                                       <div className="flex items-center gap-1">
                                         <div className="flex space-x-1">
                                           <div className="w-2 h-2 bg-muted-foreground rounded-full animate-typing-dots"></div>
-                                          <div className="w-2 h-2 bg-muted-foreground rounded-full animate-typing-dots" style={{ animationDelay: '0.2s' }}></div>
-                                          <div className="w-2 h-2 bg-muted-foreground rounded-full animate-typing-dots" style={{ animationDelay: '0.4s' }}></div>
+                                          <div className="w-2 h-2 bg-muted-foreground rounded-full animate-typing-dots" style={{
+                                        animationDelay: '0.2s'
+                                      }}></div>
+                                          <div className="w-2 h-2 bg-muted-foreground rounded-full animate-typing-dots" style={{
+                                        animationDelay: '0.4s'
+                                      }}></div>
                                         </div>
                                         <span className="text-xs text-muted-foreground ml-2">analyzing data...</span>
                                       </div>
@@ -555,10 +551,7 @@ const HomePage = () => {
                                </div>
 
                                {/* IRIS Response - Found Information */}
-                               <div className={cn("flex justify-start gap-2", 
-                                 !shouldShowElement('msg6') ? 'opacity-0' : 
-                                 shouldAnimateIn('msg6') ? 'animate-slide-in-left' : ''
-                               )}>
+                               <div className={cn("flex justify-start gap-2", !shouldShowElement('msg6') ? 'opacity-0' : shouldAnimateIn('msg6') ? 'animate-slide-in-left' : '')}>
                                 <div className="flex flex-col items-start max-w-[85%]">
                                   <div className="flex items-center gap-2 mb-1">
                                      <div className="w-6 h-6 bg-muted rounded-full flex items-center justify-center">
@@ -597,10 +590,7 @@ const HomePage = () => {
                               </div>
 
                                {/* User Message - Miami Meeting */}
-                               <div className={cn("flex justify-end gap-2", 
-                                 !shouldShowElement('msg7') ? 'opacity-0' : 
-                                 shouldAnimateIn('msg7') ? 'animate-slide-in-right' : ''
-                               )}>
+                               <div className={cn("flex justify-end gap-2", !shouldShowElement('msg7') ? 'opacity-0' : shouldAnimateIn('msg7') ? 'animate-slide-in-right' : '')}>
                                  <div className="flex flex-col items-end max-w-[80%]">
                                    <div className="flex items-center gap-2 mb-1">
                                       <span className="text-xs text-muted-foreground">12:36 PM</span>
@@ -616,10 +606,9 @@ const HomePage = () => {
                                </div>
 
                                {/* IRIS Typing Indicator 4 */}
-                               <div className={cn("flex justify-start gap-2", 
-                                 !shouldShowElement('typing4') ? 'opacity-0' : 
-                                 shouldAnimateIn('typing4') ? 'animate-slide-in-left' : ''
-                               )} style={{ display: !shouldShowElement('typing4') || shouldShowElement('msg8') ? 'none' : 'flex' }}>
+                               <div className={cn("flex justify-start gap-2", !shouldShowElement('typing4') ? 'opacity-0' : shouldAnimateIn('typing4') ? 'animate-slide-in-left' : '')} style={{
+                              display: !shouldShowElement('typing4') || shouldShowElement('msg8') ? 'none' : 'flex'
+                            }}>
                                  <div className="flex flex-col items-start max-w-[85%]">
                                    <div className="flex items-center gap-2 mb-1">
                                       <div className="w-6 h-6 bg-muted rounded-full flex items-center justify-center">
@@ -632,8 +621,12 @@ const HomePage = () => {
                                       <div className="flex items-center gap-1">
                                         <div className="flex space-x-1">
                                           <div className="w-2 h-2 bg-muted-foreground rounded-full animate-typing-dots"></div>
-                                          <div className="w-2 h-2 bg-muted-foreground rounded-full animate-typing-dots" style={{ animationDelay: '0.2s' }}></div>
-                                          <div className="w-2 h-2 bg-muted-foreground rounded-full animate-typing-dots" style={{ animationDelay: '0.4s' }}></div>
+                                          <div className="w-2 h-2 bg-muted-foreground rounded-full animate-typing-dots" style={{
+                                        animationDelay: '0.2s'
+                                      }}></div>
+                                          <div className="w-2 h-2 bg-muted-foreground rounded-full animate-typing-dots" style={{
+                                        animationDelay: '0.4s'
+                                      }}></div>
                                         </div>
                                         <span className="text-xs text-muted-foreground ml-2">checking calendar...</span>
                                       </div>
@@ -642,10 +635,7 @@ const HomePage = () => {
                                </div>
 
                                {/* IRIS Response - Calendar Check */}
-                               <div className={cn("flex justify-start gap-2", 
-                                 !shouldShowElement('msg8') ? 'opacity-0' : 
-                                 shouldAnimateIn('msg8') ? 'animate-slide-in-left' : ''
-                               )}>
+                               <div className={cn("flex justify-start gap-2", !shouldShowElement('msg8') ? 'opacity-0' : shouldAnimateIn('msg8') ? 'animate-slide-in-left' : '')}>
                                  <div className="flex flex-col items-start max-w-[85%]">
                                    <div className="flex items-center gap-2 mb-1">
                                       <div className="w-6 h-6 bg-muted rounded-full flex items-center justify-center">
@@ -666,10 +656,7 @@ const HomePage = () => {
                                </div>
 
                                {/* User Message - Yes */}
-                               <div className={cn("flex justify-end gap-2", 
-                                 !shouldShowElement('msg9') ? 'opacity-0' : 
-                                 shouldAnimateIn('msg9') ? 'animate-slide-in-right' : ''
-                               )}>
+                               <div className={cn("flex justify-end gap-2", !shouldShowElement('msg9') ? 'opacity-0' : shouldAnimateIn('msg9') ? 'animate-slide-in-right' : '')}>
                                  <div className="flex flex-col items-end max-w-[80%]">
                                    <div className="flex items-center gap-2 mb-1">
                                       <span className="text-xs text-muted-foreground">12:36 PM</span>
@@ -685,10 +672,9 @@ const HomePage = () => {
                                 </div>
 
                                {/* IRIS Typing Indicator 5 */}
-                               <div className={cn("flex justify-start gap-2", 
-                                 !shouldShowElement('typing5') ? 'opacity-0' : 
-                                 shouldAnimateIn('typing5') ? 'animate-slide-in-left' : ''
-                               )} style={{ display: !shouldShowElement('typing5') || shouldShowElement('complete') ? 'none' : 'flex' }}>
+                               <div className={cn("flex justify-start gap-2", !shouldShowElement('typing5') ? 'opacity-0' : shouldAnimateIn('typing5') ? 'animate-slide-in-left' : '')} style={{
+                              display: !shouldShowElement('typing5') || shouldShowElement('complete') ? 'none' : 'flex'
+                            }}>
                                  <div className="flex flex-col items-start max-w-[85%]">
                                    <div className="flex items-center gap-2 mb-1">
                                       <div className="w-6 h-6 bg-muted rounded-full flex items-center justify-center">
@@ -701,8 +687,12 @@ const HomePage = () => {
                                       <div className="flex items-center gap-1">
                                         <div className="flex space-x-1">
                                           <div className="w-2 h-2 bg-muted-foreground rounded-full animate-typing-dots"></div>
-                                          <div className="w-2 h-2 bg-muted-foreground rounded-full animate-typing-dots" style={{ animationDelay: '0.2s' }}></div>
-                                          <div className="w-2 h-2 bg-muted-foreground rounded-full animate-typing-dots" style={{ animationDelay: '0.4s' }}></div>
+                                          <div className="w-2 h-2 bg-muted-foreground rounded-full animate-typing-dots" style={{
+                                        animationDelay: '0.2s'
+                                      }}></div>
+                                          <div className="w-2 h-2 bg-muted-foreground rounded-full animate-typing-dots" style={{
+                                        animationDelay: '0.4s'
+                                      }}></div>
                                         </div>
                                         <span className="text-xs text-muted-foreground ml-2">composing email...</span>
                                       </div>
@@ -711,10 +701,7 @@ const HomePage = () => {
                                </div>
 
                                {/* IRIS Response - Email Sent */}
-                               <div className={cn("flex justify-start gap-2", 
-                                 !shouldShowElement('complete') ? 'opacity-0' : 
-                                 shouldAnimateIn('complete') ? 'animate-slide-in-left' : ''
-                               )}>
+                               <div className={cn("flex justify-start gap-2", !shouldShowElement('complete') ? 'opacity-0' : shouldAnimateIn('complete') ? 'animate-slide-in-left' : '')}>
                                 <div className="flex flex-col items-start max-w-[85%]">
                                   <div className="flex items-center gap-2 mb-1">
                                      <div className="w-6 h-6 bg-muted rounded-full flex items-center justify-center">
@@ -1194,9 +1181,7 @@ const HomePage = () => {
                   <div className="space-y-6 flex flex-col justify-between border border-border rounded-xl p-6 h-full min-h-[500px]">
                     <div>
                       <h3 className="h3 mb-4 text-card-heading">AI Agents That Work Like You</h3>
-                      <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
-                        Nvestiv gives you the power to create agents that think and work like your team—without writing a line of code. Speak them into existence using plain english.
-                      </p>
+                      <p className="text-lg leading-relaxed mb-6 text-muted-foreground">Generic AI doesn’t cut it for private markets. Nvestiv gives you the power to create agents that think & work like your team—without writing a line of code. Speak them into existence using plain English.</p>
                       
                       <div className="space-y-3 mb-6">
                         <ul className="space-y-4 text-sm text-muted-foreground">
