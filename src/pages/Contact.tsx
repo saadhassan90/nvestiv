@@ -7,7 +7,7 @@ import { Mail, Phone, MapPin, Send } from "lucide-react";
 
 const Contact = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-transparent">
       <SEOHead {...seoPages.contact} />
       <Navigation />
       

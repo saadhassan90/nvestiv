@@ -8,13 +8,14 @@ import { Database, Bot, TrendingUp, Shield, Users, Zap, Target, BarChart3, Arrow
 
 const AiCrm = () => {
   return (
-    <div className="min-h-screen relative">
+    <div className="min-h-screen bg-transparent">
       <SEOHead {...seoPages.aiCrm} />
       <Navigation />
       
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto text-center">
+      <main className="max-w-[1200px] mx-auto mt-24 px-4">
+        {/* Hero Section */}
+        <section className="pt-8 pb-20">
+          <div className="max-w-6xl mx-auto text-center">
           <div className="mb-8">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary mb-6">
               <Database className="w-4 h-4" />
@@ -56,9 +57,9 @@ const AiCrm = () => {
         </div>
       </section>
 
-      {/* Key Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
+        {/* Key Features Section */}
+        <section className="py-20">
+          <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="h2 mb-4">Everything You Need to Manage Relationships</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -184,9 +185,9 @@ const AiCrm = () => {
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
-        <div className="max-w-6xl mx-auto">
+        {/* Benefits Section */}
+        <section className="py-20 bg-muted/30 rounded-2xl">
+          <div className="max-w-6xl mx-auto px-8">
           <div className="text-center mb-16">
             <h2 className="h2 mb-4">Built for Investment Professionals</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -245,9 +246,9 @@ const AiCrm = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
+        {/* CTA Section */}
+        <section className="py-20">
+          <div className="max-w-4xl mx-auto text-center">
           <h2 className="h2 mb-4">Ready to Transform Your Investment Process?</h2>
           <p className="text-xl text-muted-foreground mb-8">
             Join hundreds of investment professionals who trust Nvestiv CRM to manage their most important relationships
@@ -264,7 +265,8 @@ const AiCrm = () => {
             </Button>
           </div>
         </div>
-      </section>
+        </section>
+      </main>
 
       <Footer />
     </div>

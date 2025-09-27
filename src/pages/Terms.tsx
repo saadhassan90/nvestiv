@@ -5,12 +5,12 @@ import { seoPages } from "@/lib/seo-config";
 
 const Terms = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-transparent">
       <SEOHead {...seoPages.terms} />
       <Navigation />
       
-      <main className="pt-24 md:pt-28 lg:pt-32 pb-12">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <main className="max-w-[1200px] mx-auto mt-24 px-4 py-12">
+        <div className="max-w-4xl mx-auto">
           <div className="space-y-8">
             <header className="text-center space-y-4">
               <h1 className="text-4xl lg:text-5xl font-bold text-foreground">
