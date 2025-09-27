@@ -81,7 +81,7 @@ const ProfilesCarousel = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % profiles.length);
-    }, 3000);
+    }, 4000); // Slower animation - 4 seconds
     return () => clearInterval(interval);
   }, []);
 
@@ -121,41 +121,85 @@ const ProfilesCarousel = () => {
                 </div>
               </div>
 
-              {/* Right Column - Profile Carousel */}
+              {/* Right Column - Cascading Profile Cards */}
               <div className="lg:pl-8">
                 <div className="relative rounded-2xl">
                   <div className="pointer-events-none absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-cyan-500 rounded-[18px] blur-md opacity-15"></div>
-                  <div className="relative z-10 bg-card rounded-2xl p-6 shadow-none overflow-hidden">
-                    <div 
-                      className="flex gap-4 animate-scroll-left"
-                      style={{ width: 'calc(300% + 2rem)' }}
-                    >
-                      {[...profiles, ...profiles, ...profiles].map((profile, index) => (
-                        <div 
-                          key={index}
-                          className="flex-shrink-0 w-full border border-muted/50 rounded-lg p-4 bg-background/50"
-                        >
-                          <div className="flex items-center gap-3 mb-3">
-                            <div className={`w-3 h-3 rounded-full ${profile.color}`} />
-                            <Badge variant="outline" className="text-xs">
-                              {profile.type}
-                            </Badge>
+                  <div className="relative z-10 bg-card rounded-2xl p-6 shadow-none h-96 flex items-center justify-center">
+                    
+                    {/* Cascading Cards Container */}
+                    <div className="relative w-72 h-80">
+                      {profiles.map((profile, index) => {
+                        // Calculate position in carousel
+                        const position = (index - currentIndex + profiles.length) % profiles.length;
+                        const isActive = position === 0;
+                        const isNext = position === 1;
+                        const isPrev = position === profiles.length - 1;
+                        
+                        // Calculate transform based on position
+                        let transform = '';
+                        let zIndex = 0;
+                        let opacity = 0;
+                        
+                        if (isActive) {
+                          transform = 'translateX(0px) translateY(0px) rotate(0deg) scale(1)';
+                          zIndex = 30;
+                          opacity = 1;
+                        } else if (isNext) {
+                          transform = 'translateX(20px) translateY(10px) rotate(3deg) scale(0.95)';
+                          zIndex = 20;
+                          opacity = 0.8;
+                        } else if (isPrev) {
+                          transform = 'translateX(-20px) translateY(10px) rotate(-3deg) scale(0.95)';
+                          zIndex = 20;
+                          opacity = 0.8;
+                        } else if (position === 2) {
+                          transform = 'translateX(40px) translateY(20px) rotate(6deg) scale(0.9)';
+                          zIndex = 10;
+                          opacity = 0.6;
+                        } else if (position === profiles.length - 2) {
+                          transform = 'translateX(-40px) translateY(20px) rotate(-6deg) scale(0.9)';
+                          zIndex = 10;
+                          opacity = 0.6;
+                        } else {
+                          transform = 'translateX(0px) translateY(40px) rotate(0deg) scale(0.85)';
+                          zIndex = 5;
+                          opacity = 0.3;
+                        }
+                        
+                        return (
+                          <div
+                            key={index}
+                            className="absolute top-0 left-1/2 -translate-x-1/2 w-64 border border-muted/50 rounded-lg p-4 bg-background/90 backdrop-blur-sm shadow-lg transition-all duration-700 ease-in-out"
+                            style={{
+                              transform,
+                              zIndex,
+                              opacity,
+                            }}
+                          >
+                            <div className="flex items-center gap-3 mb-3">
+                              <div className={`w-3 h-3 rounded-full ${profile.color}`} />
+                              <Badge variant="outline" className="text-xs">
+                                {profile.type}
+                              </Badge>
+                            </div>
+                            <h4 className="text-sm font-semibold mb-1 text-foreground">{profile.name}</h4>
+                            <p className="text-xs text-muted-foreground mb-1">{profile.title}</p>
+                            <p className="text-xs font-medium mb-3 text-foreground">{profile.organization}</p>
+                            
+                            <div className="space-y-2">
+                              {Object.entries(profile.data).slice(0, 3).map(([key, value]) => (
+                                <div key={key} className="flex justify-between items-center">
+                                  <span className="text-xs text-muted-foreground">{key}:</span>
+                                  <span className="text-xs font-medium text-foreground">{value}</span>
+                                </div>
+                              ))}
+                            </div>
                           </div>
-                          <h4 className="text-sm font-semibold mb-1">{profile.name}</h4>
-                          <p className="text-xs text-muted-foreground mb-1">{profile.title}</p>
-                          <p className="text-xs font-medium mb-3">{profile.organization}</p>
-                          
-                          <div className="space-y-2">
-                            {Object.entries(profile.data).slice(0, 3).map(([key, value]) => (
-                              <div key={key} className="flex justify-between items-center">
-                                <span className="text-xs text-muted-foreground">{key}:</span>
-                                <span className="text-xs font-medium">{value}</span>
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-                      ))}
+                        );
+                      })}
                     </div>
+                    
                   </div>
                 </div>
               </div>
