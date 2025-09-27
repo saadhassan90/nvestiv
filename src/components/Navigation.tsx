@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { useTheme } from "next-themes";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
 import { Moon, Sun, Menu, X, ArrowRight, Brain, Database, ChartBar, Shield } from "lucide-react";
@@ -75,9 +76,9 @@ const Navigation = () => {
             {/* Desktop Navigation Menu - Centered */}
             <div className="hidden md:flex items-center absolute left-1/2 transform -translate-x-1/2 z-[60]">
               <nav className="flex items-center space-x-1">
-                <a href="#home" className="text-sm font-medium text-foreground hover:text-primary transition-colors px-4 py-2 no-underline">
+                <Link to="/" className="text-sm font-medium text-foreground hover:text-primary transition-colors px-4 py-2 no-underline">
                   Home
-                </a>
+                </Link>
                 
                 <div 
                   className="relative"
@@ -142,13 +143,13 @@ const Navigation = () => {
                   )}
                 </div>
                 
-                <a href="#about" className="text-sm font-medium text-foreground hover:text-primary transition-colors px-4 py-2 no-underline">
+                <Link to="/about" className="text-sm font-medium text-foreground hover:text-primary transition-colors px-4 py-2 no-underline">
                   About
-                </a>
+                </Link>
                 
-                <a href="#contact" className="text-sm font-medium text-foreground hover:text-primary transition-colors px-4 py-2 no-underline">
+                <Link to="/contact" className="text-sm font-medium text-foreground hover:text-primary transition-colors px-4 py-2 no-underline">
                   Contact
-                </a>
+                </Link>
               </nav>
             </div>
 
@@ -207,9 +208,9 @@ const Navigation = () => {
           {isMobileMenuOpen && (
             <div className="md:hidden mt-4 pt-4 border-t border-border/20">
               <div className="space-y-3">
-                <a href="#home" className="block text-sm font-medium text-foreground hover:text-primary transition-colors py-2 no-underline">
+                <Link to="/" className="block text-sm font-medium text-foreground hover:text-primary transition-colors py-2 no-underline">
                   Home
-                </a>
+                </Link>
                 <div className="space-y-2">
                   <div className="text-sm font-medium text-foreground py-2">Products</div>
                   <div className="pl-4 space-y-2">
@@ -227,12 +228,12 @@ const Navigation = () => {
                     </a>
                   </div>
                 </div>
-                <a href="#about" className="block text-sm font-medium text-foreground hover:text-primary transition-colors py-2 no-underline">
+                <Link to="/about" className="block text-sm font-medium text-foreground hover:text-primary transition-colors py-2 no-underline">
                   About
-                </a>
-                <a href="#contact" className="block text-sm font-medium text-foreground hover:text-primary transition-colors py-2 no-underline">
+                </Link>
+                <Link to="/contact" className="block text-sm font-medium text-foreground hover:text-primary transition-colors py-2 no-underline">
                   Contact
-                </a>
+                </Link>
                 {/* Mobile Login Button */}
                 <div className="pt-2 border-t border-border/20">
                   <Button

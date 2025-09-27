@@ -135,11 +135,6 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/pricing" className="text-sm text-gray-300 hover:text-white transition-colors no-underline">
-                    Pricing
-                  </Link>
-                </li>
-                <li>
                   <Link to="/contact" className="text-sm text-gray-300 hover:text-white transition-colors no-underline">
                     Contact
                   </Link>
@@ -156,42 +151,8 @@ const Footer = () => {
                 <div>
                   <ul className="space-y-3">
                     <li>
-                      <Link to="/iris" className="text-sm text-gray-300 hover:text-white transition-colors no-underline">
-                        IRIS
-                      </Link>
-                    </li>
-                    <li>
                       <Link to="/ai-crm" className="text-sm text-gray-300 hover:text-white transition-colors no-underline">
-                        CRM
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/notetaker" className="text-sm text-gray-300 hover:text-white transition-colors no-underline">
-                        Notetaker
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/agents" className="text-sm text-gray-300 hover:text-white transition-colors no-underline">
-                        Agents
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <ul className="space-y-3">
-                    <li>
-                      <Link to="/due-diligence" className="text-sm text-gray-300 hover:text-white transition-colors no-underline">
-                        Due Diligence
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/portfolio-management" className="text-sm text-gray-300 hover:text-white transition-colors no-underline">
-                        Portfolio Management
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/marketplace" className="text-sm text-gray-300 hover:text-white transition-colors no-underline">
-                        Marketplace
+                        AI CRM
                       </Link>
                     </li>
                   </ul>
@@ -213,26 +174,6 @@ const Footer = () => {
                 <li>
                   <Link to="/privacy" className="text-sm text-gray-300 hover:text-white transition-colors no-underline">
                     Privacy Policy
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/cookies" className="text-sm text-gray-300 hover:text-white transition-colors no-underline">
-                    Cookie Policy
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/data-processing" className="text-sm text-gray-300 hover:text-white transition-colors no-underline">
-                    Data Processing
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/security" className="text-sm text-gray-300 hover:text-white transition-colors no-underline">
-                    Security
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/compliance" className="text-sm text-gray-300 hover:text-white transition-colors no-underline">
-                    Compliance
                   </Link>
                 </li>
               </ul>
