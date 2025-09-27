@@ -5,57 +5,10 @@ import {
   Building2, 
   Workflow
 } from "lucide-react";
-import { useEffect, useState } from "react";
-
-// Import logos
-import addepar from "@/assets/logos/addepar-logo.png";
-import allvue from "@/assets/logos/allvue-logo.png";
-import bloomberg from "@/assets/logos/bloomberg-logo.png";
-import carta from "@/assets/logos/carta-logo.png";
-import efront from "@/assets/logos/efront-logo.png";
-import fintrx from "@/assets/logos/fintrx-logo.png";
-import juniper from "@/assets/logos/juniper-square-logo.png";
-import pinnacle from "@/assets/logos/pinnacle-logo.png";
-import pitchbook from "@/assets/logos/pitchbook-logo.png";
-import preqin from "@/assets/logos/preqin-logo.jpeg";
-import gmail from "@/assets/logos/gmail-logo.png";
-import outlook from "@/assets/logos/outlook-logo.png";
-import excel from "@/assets/logos/excel-logo.png";
-import trello from "@/assets/logos/trello-logo.png";
+import { Integrations3DMarquee } from "@/components/Integrations3DMarquee";
 
 const IntegrationsSection = () => {
-  const [currentRing, setCurrentRing] = useState(0);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentRing((prev) => (prev + 1) % 3);
-    }, 2000);
-    return () => clearInterval(interval);
-  }, []);
-
-  const integrationCategories = [
-    {
-      title: "Productivity Apps",
-      description: "Linked via MCPs for cross-app workflows",
-      logos: [gmail, outlook, excel, trello],
-      color: "text-blue-500",
-      bgColor: "bg-blue-500/10"
-    },
-    {
-      title: "Fund Admins & Custodians",
-      description: "Where APIs don't exist, we build MCPs",
-      logos: [addepar, allvue, efront, juniper],
-      color: "text-green-500",
-      bgColor: "bg-green-500/10"
-    },
-    {
-      title: "PM Tools & Data",
-      description: "Real-time sync with your investment stack",
-      logos: [bloomberg, pitchbook, preqin, carta],
-      color: "text-purple-500",
-      bgColor: "bg-purple-500/10"
-    }
-  ];
 
   return (
     <section className="py-20">
@@ -101,75 +54,12 @@ const IntegrationsSection = () => {
               {/* Right Column - Integration Visual */}
               <div className="lg:pl-8">
                 <div className="relative rounded-2xl">
-                  <div className="pointer-events-none absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-cyan-500 rounded-[18px] blur-md opacity-15"></div>
-                  <div className="relative z-10 bg-card rounded-2xl p-6 shadow-none flex items-center justify-center h-96">
-                    {/* Central IRIS Hub */}
-                    <div className="absolute w-20 h-20 bg-primary rounded-2xl flex items-center justify-center z-10 shadow-lg">
-                      <span className="text-white font-bold">IRIS</span>
-                    </div>
-
-                    {/* Integration Rings */}
-                    {integrationCategories.map((category, ringIndex) => (
-                      <div
-                        key={ringIndex}
-                        className={`absolute w-full h-full transition-all duration-1000 ${
-                          currentRing === ringIndex ? 'opacity-100 scale-100' : 'opacity-40 scale-95'
-                        }`}
-                        style={{
-                          animation: `rotate-ring-${ringIndex} 20s linear infinite`,
-                        }}
-                      >
-                        {category.logos.map((logo, logoIndex) => {
-                          const angle = (logoIndex * 90) - 45;
-                          const radius = 100 + ringIndex * 20;
-                          const x = Math.cos((angle * Math.PI) / 180) * radius;
-                          const y = Math.sin((angle * Math.PI) / 180) * radius;
-
-                          return (
-                            <div
-                              key={logoIndex}
-                              className="absolute w-12 h-12 bg-background rounded-lg border border-muted flex items-center justify-center shadow-sm transition-all duration-500 hover:scale-110"
-                              style={{
-                                left: `calc(50% + ${x}px - 24px)`,
-                                top: `calc(50% + ${y}px - 24px)`,
-                              }}
-                            >
-                              <img
-                                src={logo}
-                                alt="Integration"
-                                className="w-6 h-6 object-contain"
-                              />
-                            </div>
-                          );
-                        })}
-                      </div>
-                    ))}
-
-                    {/* Connection Lines */}
-                    <svg className="absolute inset-0 w-full h-full pointer-events-none">
-                      {integrationCategories.map((category, ringIndex) => 
-                        category.logos.map((_, logoIndex) => {
-                          const angle = (logoIndex * 90) - 45;
-                          const radius = 100 + ringIndex * 20;
-                          const x1 = 50 + (Math.cos((angle * Math.PI) / 180) * radius) / 4;
-                          const y1 = 50 + (Math.sin((angle * Math.PI) / 180) * radius) / 4;
-
-                          return (
-                            <line
-                              key={`${ringIndex}-${logoIndex}`}
-                              x1="50%"
-                              y1="50%"
-                              x2={`${x1}%`}
-                              y2={`${y1}%`}
-                              stroke={currentRing === ringIndex ? "hsl(var(--primary))" : "hsl(var(--muted-foreground))"}
-                              strokeWidth="1"
-                              opacity={currentRing === ringIndex ? "0.6" : "0.2"}
-                              className="transition-all duration-500"
-                            />
-                          );
-                        })
-                      )}
-                    </svg>
+                  {/* Gradient glow border */}
+                  <div className="pointer-events-none absolute -inset-1 bg-gradient-to-r from-primary/30 via-accent/30 to-primary/30 rounded-[18px] blur-md opacity-50 dark:opacity-70"></div>
+                  
+                  {/* 3D Marquee Container */}
+                  <div className="relative z-10 bg-card/90 backdrop-blur-sm rounded-2xl h-[700px] overflow-hidden border border-border/50 shadow-lg">
+                    <Integrations3DMarquee className="w-full h-full" triggerAnimation={true} />
                   </div>
                 </div>
               </div>
