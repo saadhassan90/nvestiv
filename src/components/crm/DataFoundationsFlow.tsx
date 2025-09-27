@@ -36,7 +36,7 @@ const DataFoundationsFlow = () => {
                   <div className={`w-16 h-16 rounded-xl border-2 flex items-center justify-center mb-3 transition-all duration-500 ${
                     pulseIndex === index 
                       ? 'border-primary bg-primary/10 shadow-lg shadow-primary/25' 
-                      : 'border-muted-foreground/30 bg-card dark:bg-card'
+                      : 'border-muted/30 bg-muted/20'
                   }`}>
                     <Icon className={`w-8 h-8 ${pulseIndex === index ? 'text-primary' : 'text-muted-foreground'}`} />
                   </div>
@@ -97,61 +97,49 @@ const DataFoundationsFlow = () => {
 
           {/* Feature Cards */}
           <div className="space-y-6">
-            <Card className="p-6 border-muted/50 hover:border-primary/20 transition-colors">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Mail className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Email</h3>
-                  <p className="text-muted-foreground">
-                    Retroactively ingests history, creates contacts, summarizes relationships, 
-                    and updates continuously from ongoing dialogue.
-                  </p>
-                </div>
+            <Card className="group relative overflow-hidden border-muted/50 hover:border-primary/20 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 p-6">
+              <div className="flex items-center gap-3 mb-2">
+                <Mail className="w-6 h-6 text-primary" />
+                <h3 className="text-xl font-semibold">Email</h3>
               </div>
+              <p className="text-muted-foreground">
+                Retroactively ingests history, creates contacts, summarizes relationships, 
+                and updates continuously from ongoing dialogue.
+              </p>
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
             </Card>
 
-            <Card className="p-6 border-muted/50 hover:border-primary/20 transition-colors">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Calendar className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Calendar</h3>
-                  <p className="text-muted-foreground">
-                    Every event logged and linked to the right record.
-                  </p>
-                </div>
+            <Card className="group relative overflow-hidden border-muted/50 hover:border-primary/20 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 p-6">
+              <div className="flex items-center gap-3 mb-2">
+                <Calendar className="w-6 h-6 text-primary" />
+                <h3 className="text-xl font-semibold">Calendar</h3>
               </div>
+              <p className="text-muted-foreground">
+                Every event logged and linked to the right record.
+              </p>
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
             </Card>
 
-            <Card className="p-6 border-muted/50 hover:border-primary/20 transition-colors">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <FileText className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Meeting Notes</h3>
-                  <p className="text-muted-foreground">
-                    Notetaker transcripts vectorized and attached.
-                  </p>
-                </div>
+            <Card className="group relative overflow-hidden border-muted/50 hover:border-primary/20 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 p-6">
+              <div className="flex items-center gap-3 mb-2">
+                <FileText className="w-6 h-6 text-primary" />
+                <h3 className="text-xl font-semibold">Meeting Notes</h3>
               </div>
+              <p className="text-muted-foreground">
+                Notetaker transcripts vectorized and attached.
+              </p>
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
             </Card>
 
-            <Card className="p-6 border-muted/50 hover:border-primary/20 transition-colors">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Database className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Smart Ops</h3>
-                  <p className="text-muted-foreground">
-                    AI auto-generates lists, tasks, and reminders from your goals.
-                  </p>
-                </div>
+            <Card className="group relative overflow-hidden border-muted/50 hover:border-primary/20 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 p-6">
+              <div className="flex items-center gap-3 mb-2">
+                <Database className="w-6 h-6 text-primary" />
+                <h3 className="text-xl font-semibold">Smart Ops</h3>
               </div>
+              <p className="text-muted-foreground">
+                AI auto-generates lists, tasks, and reminders from your goals.
+              </p>
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
             </Card>
 
             {/* Status Panel */}

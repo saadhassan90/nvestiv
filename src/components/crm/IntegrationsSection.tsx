@@ -1,4 +1,5 @@
 import { Badge } from "@/components/ui/badge";
+import { Card } from "@/components/ui/card";
 import { 
   Zap, 
   Building2, 
@@ -69,38 +70,35 @@ const IntegrationsSection = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Side - Features */}
-          <div className="space-y-8">
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center flex-shrink-0">
+          <div className="space-y-6">
+            <Card className="group relative overflow-hidden border-muted/50 hover:border-primary/20 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 p-6">
+              <div className="flex items-center gap-3 mb-2">
                 <Zap className="w-6 h-6 text-blue-500" />
+                <h3 className="text-xl font-semibold">Productivity apps</h3>
               </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-2">Productivity apps</h3>
-                <p className="text-muted-foreground">Linked via MCPs for cross-app workflows.</p>
-              </div>
-            </div>
+              <p className="text-muted-foreground">Linked via MCPs for cross-app workflows.</p>
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
+            </Card>
 
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 bg-green-500/10 rounded-xl flex items-center justify-center flex-shrink-0">
+            <Card className="group relative overflow-hidden border-muted/50 hover:border-primary/20 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 p-6">
+              <div className="flex items-center gap-3 mb-2">
                 <Building2 className="w-6 h-6 text-green-500" />
+                <h3 className="text-xl font-semibold">Fund admins, custodians, PM tools</h3>
               </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-2">Fund admins, custodians, PM tools</h3>
-                <p className="text-muted-foreground">Where APIs don't exist, we build MCPs.</p>
-              </div>
-            </div>
+              <p className="text-muted-foreground">Where APIs don't exist, we build MCPs.</p>
+              <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
+            </Card>
 
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+            <Card className="group relative overflow-hidden border-muted/50 hover:border-primary/20 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 p-6">
+              <div className="flex items-center gap-3 mb-2">
                 <Workflow className="w-6 h-6 text-primary" />
+                <h3 className="text-xl font-semibold">Cross-app orchestration</h3>
               </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-2">Cross-app orchestration</h3>
-                <p className="text-muted-foreground">
-                  IRIS chains workflows across systems, so you can act from one place.
-                </p>
-              </div>
-            </div>
+              <p className="text-muted-foreground">
+                IRIS chains workflows across systems, so you can act from one place.
+              </p>
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
+            </Card>
           </div>
 
           {/* Right Side - Integration Rings */}

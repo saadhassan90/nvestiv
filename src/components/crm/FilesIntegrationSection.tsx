@@ -45,50 +45,49 @@ const FilesIntegrationSection = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Side - Features */}
-          <div className="space-y-8">
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                <Cloud className="w-6 h-6 text-primary" />
-              </div>
-              <div className="flex-1">
-                <h3 className="text-xl font-semibold mb-4">Direct Integration</h3>
-                <div className="flex gap-2 flex-wrap">
-                  {integrations.slice(0, 4).map((integration, index) => (
-                    <div key={integration.name} className="w-8 h-8 rounded-lg bg-card dark:bg-card border border-border dark:border-border flex items-center justify-center shadow-sm">
-                      <img src={integration.icon} alt={integration.name} className="w-6 h-6 object-contain" />
-                    </div>
-                  ))}
+          <div className="space-y-6">
+            <Card className="group relative overflow-hidden border-muted/50 hover:border-primary/20 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 p-6">
+              <div className="flex items-center gap-4">
+                <div className="flex items-center gap-3">
+                  <Cloud className="w-6 h-6 text-primary" />
+                  <h3 className="text-xl font-semibold">Direct Integration</h3>
                 </div>
               </div>
-            </div>
+              <div className="flex gap-2 flex-wrap mt-4">
+                {integrations.slice(0, 4).map((integration, index) => (
+                  <div key={integration.name} className="w-8 h-8 rounded-lg bg-muted/50 border border-border flex items-center justify-center shadow-sm">
+                    <img src={integration.icon} alt={integration.name} className="w-6 h-6 object-contain" />
+                  </div>
+                ))}
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
+            </Card>
 
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+            <Card className="group relative overflow-hidden border-muted/50 hover:border-primary/20 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 p-6">
+              <div className="flex items-center gap-3 mb-2">
                 <Database className="w-6 h-6 text-primary" />
+                <h3 className="text-xl font-semibold">Smart Processing</h3>
               </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-2">Smart Processing</h3>
-                <p className="text-muted-foreground">
-                  Files ingested, vectorized, and linked to other objects in the CRM.
-                </p>
-              </div>
-            </div>
+              <p className="text-muted-foreground">
+                Files ingested, vectorized, and linked to other objects in the CRM.
+              </p>
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
+            </Card>
 
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+            <Card className="group relative overflow-hidden border-muted/50 hover:border-primary/20 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 p-6">
+              <div className="flex items-center gap-3 mb-2">
                 <Link className="w-6 h-6 text-primary" />
+                <h3 className="text-xl font-semibold">AI Understanding</h3>
               </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-2">AI Understanding</h3>
-                <p className="text-muted-foreground">
-                  IRIS understands what's inside files, when to use it, and organizes for you.
-                </p>
-              </div>
-            </div>
+              <p className="text-muted-foreground">
+                IRIS understands what's inside files, when to use it, and organizes for you.
+              </p>
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
+            </Card>
           </div>
 
           {/* Right Side - Graph Animation */}
-          <div className="relative">
+          <Card className="group relative overflow-hidden border-muted/50 hover:border-primary/20 transition-all duration-300 hover:shadow-lg p-6">
             {/* Integration Icons (top of graph) */}
             <div className="flex justify-center space-x-4 mb-8">
               {integrations.map((integration, index) => (
@@ -96,7 +95,7 @@ const FilesIntegrationSection = () => {
                   <div className={`w-10 h-10 rounded-lg border-2 flex items-center justify-center transition-all duration-500 ${
                     activeIndex === index 
                       ? 'border-primary bg-primary/10 shadow-lg scale-110' 
-                      : 'border-muted-foreground/30 bg-card dark:bg-card'
+                      : 'border-muted-foreground/30 bg-muted/30'
                   }`}>
                     <img src={integration.icon} alt={integration.name} className="w-6 h-6 object-contain" />
                   </div>
@@ -149,7 +148,7 @@ const FilesIntegrationSection = () => {
                         cx={pos.x}
                         cy={pos.y}
                         r="20"
-                        fill={activeIndex === index ? "hsl(var(--primary))" : "hsl(var(--muted-foreground) / 0.3)"}
+                        fill={activeIndex === index ? "hsl(var(--primary))" : "hsl(var(--muted) / 0.6)"}
                         stroke={activeIndex === index ? "hsl(var(--primary))" : "hsl(var(--border))"}
                         strokeWidth="2"
                         className="transition-all duration-500"
@@ -180,7 +179,9 @@ const FilesIntegrationSection = () => {
                 </div>
               </CardContent>
             </Card>
-          </div>
+            
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
+          </Card>
         </div>
       </div>
     </section>
