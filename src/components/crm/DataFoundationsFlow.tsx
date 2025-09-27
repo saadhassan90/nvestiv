@@ -36,7 +36,7 @@ const DataFoundationsFlow = () => {
                   <div className={`w-16 h-16 rounded-xl border-2 flex items-center justify-center mb-3 transition-all duration-500 ${
                     pulseIndex === index 
                       ? 'border-primary bg-primary/10 shadow-lg shadow-primary/25' 
-                      : 'border-muted bg-background'
+                      : 'border-muted-foreground/30 bg-card dark:bg-card'
                   }`}>
                     <Icon className={`w-8 h-8 ${pulseIndex === index ? 'text-primary' : 'text-muted-foreground'}`} />
                   </div>

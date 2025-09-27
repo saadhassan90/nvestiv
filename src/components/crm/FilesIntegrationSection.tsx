@@ -48,11 +48,15 @@ const FilesIntegrationSection = () => {
               <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
                 <Cloud className="w-6 h-6 text-primary" />
               </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-2">Direct Integration</h3>
-                <p className="text-muted-foreground">
-                  Google Drive, OneDrive, Dropbox, and DataRooms connect seamlessly.
-                </p>
+              <div className="flex-1">
+                <h3 className="text-xl font-semibold mb-4">Direct Integration</h3>
+                <div className="flex gap-3 flex-wrap">
+                  {integrations.slice(0, 4).map((integration, index) => (
+                    <div key={integration.name} className="w-10 h-10 rounded-lg bg-card dark:bg-card border border-border dark:border-border flex items-center justify-center shadow-sm">
+                      <img src={integration.icon} alt={integration.name} className="w-5 h-5" />
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
 
@@ -83,12 +87,14 @@ const FilesIntegrationSection = () => {
 
           {/* Right Side - Graph Animation */}
           <div className="relative">
-            {/* Integration Icons */}
-            <div className="flex justify-center space-x-4 mb-12">
+            {/* Integration Icons (top of graph) */}
+            <div className="flex justify-center space-x-4 mb-8">
               {integrations.map((integration, index) => (
                 <div key={integration.name} className="text-center">
-                  <div className={`w-12 h-12 rounded-xl bg-background border-2 flex items-center justify-center transition-all duration-500 ${
-                    activeIndex === index ? 'border-primary shadow-lg scale-110' : 'border-muted'
+                  <div className={`w-12 h-12 rounded-xl border-2 flex items-center justify-center transition-all duration-500 ${
+                    activeIndex === index 
+                      ? 'border-primary bg-primary/10 shadow-lg scale-110' 
+                      : 'border-muted-foreground/30 bg-card dark:bg-card'
                   }`}>
                     <img src={integration.icon} alt={integration.name} className="w-6 h-6" />
                   </div>
@@ -141,16 +147,14 @@ const FilesIntegrationSection = () => {
                         cx={pos.x}
                         cy={pos.y}
                         r="20"
-                        fill={activeIndex === index ? "hsl(var(--primary))" : "hsl(var(--muted))"}
+                        fill={activeIndex === index ? "hsl(var(--primary))" : "hsl(var(--muted-foreground) / 0.3)"}
+                        stroke={activeIndex === index ? "hsl(var(--primary))" : "hsl(var(--border))"}
+                        strokeWidth="2"
                         className="transition-all duration-500"
                       />
-                      <FileText
-                        x={pos.x - 8}
-                        y={pos.y - 8}
-                        width="16"
-                        height="16"
-                        className="text-white"
-                      />
+                      <foreignObject x={pos.x - 8} y={pos.y - 8} width="16" height="16">
+                        <FileText className={`w-4 h-4 ${activeIndex === index ? 'text-white dark:text-white' : 'text-foreground'}`} />
+                      </foreignObject>
                     </g>
                   );
                 })}
