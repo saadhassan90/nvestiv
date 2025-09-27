@@ -1187,7 +1187,7 @@ const HomePage = () => {
                         <ul className="space-y-4 text-sm text-muted-foreground">
                           <li className="flex items-start gap-3">
                             <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                            <span><strong>Build from scratch</strong> – Drag-and-drop your workflow. Plug into your data. Make it yours.</span>
+                            <span><strong>Built from scratch</strong> - Tell IRIS what you want and she builds for you instantly. Plug in your data sources and credentials to third-party apps. Deploy- Just like that!</span>
                           </li>
                           <li className="flex items-start gap-3">
                             <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
