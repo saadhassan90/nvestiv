@@ -209,7 +209,7 @@ const ProfilesCarousel = () => {
                               </div>
                               <div className="flex-1">
                                 <div className="flex items-center gap-2 mb-1">
-                                  <Badge variant="outline" className="text-xs border-gray-600 dark:border-gray-300">
+                                  <Badge variant="outline" className="text-xs text-gray-400 dark:text-gray-600 border-gray-600 dark:border-gray-400">
                                     {profile.type}
                                   </Badge>
                                 </div>
