@@ -4,21 +4,8 @@ import SEOHead from "@/components/SEOHead";
 import { seoPages } from "@/lib/seo-config";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
-import { useEffect } from "react";
 
 const Contact = () => {
-  useEffect(() => {
-    // Load Typeform embed script
-    const script = document.createElement('script');
-    script.src = '//embed.typeform.com/next/embed.js';
-    script.async = true;
-    document.body.appendChild(script);
-
-    return () => {
-      // Cleanup script on unmount
-      document.body.removeChild(script);
-    };
-  }, []);
   return (
     <div className="min-h-screen bg-transparent">
       <SEOHead {...seoPages.contact} />
@@ -91,14 +78,32 @@ const Contact = () => {
             <div className="space-y-6 lg:justify-self-center">
               <h2 className="text-3xl font-semibold text-foreground">Send Us a Message</h2>
               
-              {/* Typeform Embed */}
-              <div className="bg-card border border-border rounded-xl overflow-hidden w-full max-w-[560px] mx-auto min-w-0 h-[600px] md:h-[570px] lg:h-[540px]">
-                <div className="origin-top transform-gpu scale-100 md:scale-95 lg:scale-90">
-                  <div 
-                    data-tf-live="01K674B1HRJQH01GACPKKV4CCE"
-                    style={{ width: '100%', height: '600px' }}
-                  ></div>
+              {/* Contact Form Card */}
+              <div className="bg-card border border-border rounded-xl p-8 w-full max-w-[560px] mx-auto space-y-6">
+                <div className="text-center space-y-4">
+                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
+                    <Send className="h-8 w-8 text-primary" />
+                  </div>
+                  <div className="space-y-2">
+                    <h3 className="text-xl font-semibold text-foreground">Get in Touch</h3>
+                    <p className="text-text-secondary">
+                      Fill out our quick form to get started. We'll get back to you within 24 hours.
+                    </p>
+                  </div>
                 </div>
+                
+                <Button 
+                  onClick={() => window.open('https://form.typeform.com/to/SgQ7HmYI', '_blank')}
+                  className="w-full h-12 text-white"
+                  size="lg"
+                >
+                  <Send className="h-4 w-4 mr-2" />
+                  Open Contact Form
+                </Button>
+                
+                <p className="text-xs text-text-secondary text-center">
+                  The form will open in a new window for the best experience.
+                </p>
               </div>
             </div>
           </div>
