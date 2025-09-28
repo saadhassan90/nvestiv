@@ -4,8 +4,21 @@ import SEOHead from "@/components/SEOHead";
 import { seoPages } from "@/lib/seo-config";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { useEffect } from "react";
 
 const Contact = () => {
+  useEffect(() => {
+    // Load Typeform embed script
+    const script = document.createElement('script');
+    script.src = '//embed.typeform.com/next/embed.js';
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      // Cleanup script on unmount
+      document.body.removeChild(script);
+    };
+  }, []);
   return (
     <div className="min-h-screen bg-transparent">
       <SEOHead {...seoPages.contact} />
@@ -74,14 +87,16 @@ const Contact = () => {
               </div>
             </div>
             
-            {/* Right Column - Notion Form */}
+            {/* Right Column - Contact Form */}
             <div className="space-y-6">
               <h2 className="text-3xl font-semibold text-foreground">Send Us a Message</h2>
               
               {/* Typeform Embed */}
-              <div className="bg-card border border-border rounded-xl overflow-hidden p-4">
-                <div data-tf-live="01K674B1HRJQH01GACPKKV4CCE"></div>
-                <script src="//embed.typeform.com/next/embed.js"></script>
+              <div className="bg-card border border-border rounded-xl overflow-hidden">
+                <div 
+                  data-tf-live="01K674B1HRJQH01GACPKKV4CCE"
+                  style={{ width: '100%', height: '600px' }}
+                ></div>
               </div>
             </div>
           </div>
