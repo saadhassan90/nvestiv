@@ -88,15 +88,17 @@ const Contact = () => {
             </div>
             
             {/* Right Column - Contact Form */}
-            <div className="space-y-6">
+            <div className="space-y-6 lg:justify-self-center">
               <h2 className="text-3xl font-semibold text-foreground">Send Us a Message</h2>
               
               {/* Typeform Embed */}
-              <div className="bg-card border border-border rounded-xl overflow-hidden">
-                <div 
-                  data-tf-live="01K674B1HRJQH01GACPKKV4CCE"
-                  style={{ width: '100%', height: '600px' }}
-                ></div>
+              <div className="bg-card border border-border rounded-xl overflow-hidden w-full max-w-[560px] mx-auto min-w-0 h-[600px] md:h-[570px] lg:h-[540px]">
+                <div className="origin-top transform-gpu scale-100 md:scale-95 lg:scale-90">
+                  <div 
+                    data-tf-live="01K674B1HRJQH01GACPKKV4CCE"
+                    style={{ width: '100%', height: '600px' }}
+                  ></div>
+                </div>
               </div>
             </div>
           </div>
