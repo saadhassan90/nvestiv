@@ -150,10 +150,10 @@ const ProfilesCarousel = () => {
               <div className="lg:pl-8">
                 <div className="relative rounded-2xl">
                   <div className="pointer-events-none absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-cyan-500 rounded-[18px] blur-md opacity-15"></div>
-                  <div className="relative z-10 bg-card rounded-2xl p-6 shadow-none h-96 flex items-center justify-center">
+                  <div className="relative z-10 bg-gradient-to-br from-muted/20 via-background/50 to-muted/30 dark:from-muted/40 dark:via-background/70 dark:to-muted/50 rounded-2xl p-8 shadow-none h-[480px] flex items-center justify-center overflow-hidden">
                     
                     {/* Cascading Cards Container */}
-                    <div className="relative w-80 h-80 flex items-center justify-center">
+                    <div className="relative w-[480px] h-[400px] flex items-center justify-center">
                       {profiles.map((profile, index) => {
                         // Calculate position in carousel
                         const position = (index - currentIndex + profiles.length) % profiles.length;
