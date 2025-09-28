@@ -3,7 +3,9 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import { seoPages } from "@/lib/seo-config";
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { useState } from "react";
 
 const Contact = () => {
   return (
@@ -92,17 +94,28 @@ const Contact = () => {
                   </div>
                 </div>
                 
-                <Button 
-                  onClick={() => window.open('https://form.typeform.com/to/SgQ7HmYI', '_blank')}
-                  className="w-full h-12 text-white"
-                  size="lg"
-                >
-                  <Send className="h-4 w-4 mr-2" />
-                  Open Contact Form
-                </Button>
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <Button 
+                      className="w-full h-12 text-white"
+                      size="lg"
+                    >
+                      <Send className="h-4 w-4 mr-2" />
+                      Open Contact Form
+                    </Button>
+                  </DialogTrigger>
+                  <DialogContent className="w-[80vw] h-[80vh] max-w-none p-0 gap-0">
+                    <iframe
+                      src="https://form.typeform.com/to/SgQ7HmYI"
+                      className="w-full h-full rounded-lg"
+                      frameBorder="0"
+                      title="Contact Form"
+                    />
+                  </DialogContent>
+                </Dialog>
                 
                 <p className="text-xs text-text-secondary text-center">
-                  The form will open in a new window for the best experience.
+                  Click the button above to fill out our contact form.
                 </p>
               </div>
             </div>
