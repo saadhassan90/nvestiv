@@ -6,10 +6,8 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import { useState } from "react";
-
 const Contact = () => {
-  return (
-    <div className="min-h-screen bg-transparent">
+  return <div className="min-h-screen bg-transparent">
       <SEOHead {...seoPages.contact} />
       <Navigation />
       
@@ -78,7 +76,7 @@ const Contact = () => {
             
             {/* Right Column - Contact Form */}
             <div className="space-y-6 lg:justify-self-center">
-              <h2 className="text-3xl font-semibold text-foreground">Send Us a Message</h2>
+              
               
               {/* Contact Form Card */}
               <div className="bg-card border border-border rounded-xl p-8 w-full max-w-[560px] mx-auto space-y-6">
@@ -96,21 +94,13 @@ const Contact = () => {
                 
                 <Dialog>
                   <DialogTrigger asChild>
-                    <Button 
-                      className="w-full h-12 text-white"
-                      size="lg"
-                    >
+                    <Button className="w-full h-12 text-white" size="lg">
                       <Send className="h-4 w-4 mr-2" />
                       Open Contact Form
                     </Button>
                   </DialogTrigger>
                   <DialogContent className="w-[80vw] h-[80vh] max-w-none p-0 gap-0">
-                    <iframe
-                      src="https://form.typeform.com/to/SgQ7HmYI"
-                      className="w-full h-full rounded-lg"
-                      frameBorder="0"
-                      title="Contact Form"
-                    />
+                    <iframe src="https://form.typeform.com/to/SgQ7HmYI" className="w-full h-full rounded-lg" frameBorder="0" title="Contact Form" />
                   </DialogContent>
                 </Dialog>
                 
@@ -124,8 +114,6 @@ const Contact = () => {
       </main>
       
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Contact;
