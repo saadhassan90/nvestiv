@@ -195,24 +195,24 @@ const ProfilesCarousel = () => {
                         return (
                           <div
                             key={index}
-                            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 border border-border/60 rounded-lg p-4 bg-gray-900 dark:bg-white text-white dark:text-gray-900 shadow-lg transition-all duration-700 ease-in-out"
+                            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 border border-border/60 rounded-lg p-4 bg-gray-900 dark:bg-white text-white dark:text-gray-900 shadow-lg transition-all duration-700 ease-in-out relative"
                             style={{
                               transform: `translate(-50%, -50%) ${transform}`,
                               zIndex,
                               opacity,
                             }}
                           >
+                            {/* Badge in top right */}
+                            <Badge variant="outline" className="absolute top-3 right-3 text-xs bg-gray-200 text-gray-800 border-gray-400 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-600">
+                              {profile.type}
+                            </Badge>
+                            
                             {/* Header */}
                             <div className="flex items-center gap-3 mb-3 pb-3 border-b border-gray-600 dark:border-gray-300">
                               <div className={`w-10 h-10 rounded-full ${profile.color} flex items-center justify-center text-white font-semibold text-sm`}>
                                 {profile.avatar}
                               </div>
                               <div className="flex-1">
-                                <div className="flex items-center gap-2 mb-1">
-                                  <Badge variant="outline" className="text-xs border-gray-600 dark:border-gray-300">
-                                    {profile.type}
-                                  </Badge>
-                                </div>
                                 <h4 className="text-sm font-semibold text-white dark:text-gray-900">{profile.name}</h4>
                               </div>
                             </div>
