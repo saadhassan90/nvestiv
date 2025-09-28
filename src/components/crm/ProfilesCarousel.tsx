@@ -171,31 +171,31 @@ const ProfilesCarousel = () => {
                           zIndex = 30;
                           opacity = 1;
                         } else if (isNext) {
-                          transform = 'translateX(20px) translateY(10px) rotate(3deg) scale(0.95)';
+                          transform = 'translateX(35px) translateY(15px) rotate(4deg) scale(0.95)';
                           zIndex = 20;
-                          opacity = 0.8;
+                          opacity = 0.95;
                         } else if (isPrev) {
-                          transform = 'translateX(-20px) translateY(10px) rotate(-3deg) scale(0.95)';
+                          transform = 'translateX(-35px) translateY(15px) rotate(-4deg) scale(0.95)';
                           zIndex = 20;
-                          opacity = 0.8;
+                          opacity = 0.95;
                         } else if (position === 2) {
-                          transform = 'translateX(40px) translateY(20px) rotate(6deg) scale(0.9)';
+                          transform = 'translateX(60px) translateY(30px) rotate(8deg) scale(0.9)';
                           zIndex = 10;
-                          opacity = 0.6;
+                          opacity = 0.85;
                         } else if (position === profiles.length - 2) {
-                          transform = 'translateX(-40px) translateY(20px) rotate(-6deg) scale(0.9)';
+                          transform = 'translateX(-60px) translateY(30px) rotate(-8deg) scale(0.9)';
                           zIndex = 10;
-                          opacity = 0.6;
+                          opacity = 0.85;
                         } else {
-                          transform = 'translateX(0px) translateY(40px) rotate(0deg) scale(0.85)';
+                          transform = 'translateX(0px) translateY(50px) rotate(0deg) scale(0.85)';
                           zIndex = 5;
-                          opacity = 0.3;
+                          opacity = 0.7;
                         }
                         
                         return (
                           <div
                             key={index}
-                            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 border border-muted/50 rounded-lg p-4 bg-background/90 backdrop-blur-sm shadow-lg transition-all duration-700 ease-in-out"
+                            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 border border-border/60 rounded-lg p-4 bg-card shadow-lg transition-all duration-700 ease-in-out"
                             style={{
                               transform: `translate(-50%, -50%) ${transform}`,
                               zIndex,
@@ -203,7 +203,7 @@ const ProfilesCarousel = () => {
                             }}
                           >
                             {/* Header */}
-                            <div className="flex items-center gap-3 mb-3">
+                            <div className="flex items-center gap-3 mb-3 pb-3 border-b border-border/30">
                               <div className={`w-10 h-10 rounded-full ${profile.color} flex items-center justify-center text-white font-semibold text-sm`}>
                                 {profile.avatar}
                               </div>
@@ -218,7 +218,7 @@ const ProfilesCarousel = () => {
                             </div>
                             
                             {/* Title & Organization */}
-                            <div className="mb-3">
+                            <div className="mb-3 pb-3 border-b border-border/30">
                               <p className="text-xs text-muted-foreground mb-1">{profile.title}</p>
                               <p className="text-xs font-medium text-foreground mb-1">{profile.organization}</p>
                               <p className="text-xs text-muted-foreground">{profile.location}</p>
