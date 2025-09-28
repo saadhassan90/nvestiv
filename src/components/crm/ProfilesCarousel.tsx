@@ -195,7 +195,7 @@ const ProfilesCarousel = () => {
                         return (
                           <div
                             key={index}
-                            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 border border-border/60 rounded-lg p-4 bg-card shadow-lg transition-all duration-700 ease-in-out"
+                            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 border border-border/60 rounded-lg p-4 bg-gray-900 dark:bg-white text-white dark:text-gray-900 shadow-lg transition-all duration-700 ease-in-out"
                             style={{
                               transform: `translate(-50%, -50%) ${transform}`,
                               zIndex,
@@ -203,41 +203,41 @@ const ProfilesCarousel = () => {
                             }}
                           >
                             {/* Header */}
-                            <div className="flex items-center gap-3 mb-3 pb-3 border-b border-border/30">
+                            <div className="flex items-center gap-3 mb-3 pb-3 border-b border-gray-600 dark:border-gray-300">
                               <div className={`w-10 h-10 rounded-full ${profile.color} flex items-center justify-center text-white font-semibold text-sm`}>
                                 {profile.avatar}
                               </div>
                               <div className="flex-1">
                                 <div className="flex items-center gap-2 mb-1">
-                                  <Badge variant="outline" className="text-xs">
+                                  <Badge variant="outline" className="text-xs border-gray-600 dark:border-gray-300">
                                     {profile.type}
                                   </Badge>
                                 </div>
-                                <h4 className="text-sm font-semibold text-foreground">{profile.name}</h4>
+                                <h4 className="text-sm font-semibold text-white dark:text-gray-900">{profile.name}</h4>
                               </div>
                             </div>
                             
                             {/* Title & Organization */}
-                            <div className="mb-3 pb-3 border-b border-border/30">
-                              <p className="text-xs text-muted-foreground mb-1">{profile.title}</p>
-                              <p className="text-xs font-medium text-foreground mb-1">{profile.organization}</p>
-                              <p className="text-xs text-muted-foreground">{profile.location}</p>
+                            <div className="mb-3 pb-3 border-b border-gray-600 dark:border-gray-300">
+                              <p className="text-xs text-gray-300 dark:text-gray-600 mb-1">{profile.title}</p>
+                              <p className="text-xs font-medium text-white dark:text-gray-900 mb-1">{profile.organization}</p>
+                              <p className="text-xs text-gray-300 dark:text-gray-600">{profile.location}</p>
                             </div>
                             
                             {/* Key Data Points */}
                             <div className="space-y-1.5">
                               {Object.entries(profile.data).slice(0, 5).map(([key, value]) => (
                                 <div key={key} className="flex justify-between items-center">
-                                  <span className="text-xs text-muted-foreground">{key}:</span>
-                                  <span className="text-xs font-medium text-foreground text-right">{value}</span>
+                                  <span className="text-xs text-gray-300 dark:text-gray-600">{key}:</span>
+                                  <span className="text-xs font-medium text-white dark:text-gray-900 text-right">{value}</span>
                                 </div>
                               ))}
                             </div>
                             
                             {/* Additional Info Indicator */}
                             {Object.keys(profile.data).length > 5 && (
-                              <div className="mt-3 pt-2 border-t border-muted/30">
-                                <p className="text-xs text-muted-foreground text-center">
+                              <div className="mt-3 pt-2 border-t border-gray-600 dark:border-gray-300">
+                                <p className="text-xs text-gray-300 dark:text-gray-600 text-center">
                                   +{Object.keys(profile.data).length - 5} more fields
                                 </p>
                               </div>
