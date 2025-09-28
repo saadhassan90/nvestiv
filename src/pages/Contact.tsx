@@ -78,16 +78,10 @@ const Contact = () => {
             <div className="space-y-6">
               <h2 className="text-3xl font-semibold text-foreground">Send Us a Message</h2>
               
-              {/* Notion Form Embed */}
-              <div className="bg-card border border-border rounded-xl overflow-hidden">
-                <iframe 
-                  src="https://tally.so/embed/nWyjoL?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1&formEventsForwarding=1" 
-                  width="100%" 
-                  height="600" 
-                  frameBorder="0" 
-                  allowFullScreen
-                  className="w-full"
-                />
+              {/* Typeform Embed */}
+              <div className="bg-card border border-border rounded-xl overflow-hidden p-4">
+                <div data-tf-live="01K674B1HRJQH01GACPKKV4CCE"></div>
+                <script src="//embed.typeform.com/next/embed.js"></script>
               </div>
             </div>
           </div>
