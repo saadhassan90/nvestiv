@@ -84,7 +84,7 @@ const ValuePropositionSection = () => {
                     return (
                       <div 
                         key={index} 
-                        className="group p-5 border border-muted/50 rounded-lg hover:border-primary/20 transition-all duration-300 hover:shadow-lg relative"
+                        className="group p-5 border border-border/60 rounded-lg hover:border-primary/40 transition-all duration-300 hover:shadow-lg relative"
                       >
                         <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
                           <Icon className="w-5 h-5 text-primary" />
