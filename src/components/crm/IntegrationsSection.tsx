@@ -39,7 +39,7 @@ const IntegrationsSection = () => {
                       <span className="text-sm"><strong>Fund Admins & Custodians</strong> - Where APIs don't exist, we build MCPs</span>
                     </div>
                     <div className="flex items-center gap-3">
-                      <Workflow className="w-5 h-5 text-primary" />
+                      <Workflow className="w-5 h-5 text-foreground" />
                       <span className="text-sm"><strong>Cross-App Orchestration</strong> - IRIS chains workflows across systems</span>
                     </div>
                   </div>

@@ -37,7 +37,7 @@ const FilesIntegrationSection = () => {
                       <span className="text-sm"><strong>Contextual Linking</strong> - Pitch decks, term sheets auto-connect to deals</span>
                     </div>
                     <div className="flex items-center gap-3">
-                      <MessageSquare className="w-5 h-5 text-primary" />
+                      <MessageSquare className="w-5 h-5 text-foreground" />
                       <span className="text-sm"><strong>Instant Q&A</strong> - Ask questions about any document set</span>
                     </div>
                   </div>

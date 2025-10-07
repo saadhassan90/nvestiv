@@ -84,16 +84,16 @@ const ValuePropositionSection = () => {
                     return (
                       <div 
                         key={index} 
-                        className="group p-5 border border-border/60 rounded-lg hover:border-primary/40 transition-all duration-300 hover:shadow-lg relative"
+                        className="group p-5 border border-border/60 rounded-lg hover:border-primary/40 transition-all duration-75 hover:shadow-lg relative"
                       >
-                        <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                          <Icon className="w-5 h-5 text-primary" />
+                        <div className="w-10 h-10 bg-muted rounded-lg flex items-center justify-center mb-4 group-hover:bg-muted/80 transition-colors duration-75">
+                          <Icon className="w-5 h-5 text-foreground" />
                         </div>
                         <h5 className="text-sm font-semibold mb-2">{feature.title}</h5>
                         <p className="text-xs text-muted-foreground leading-relaxed">
                           {feature.description}
                         </p>
-                        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none rounded-lg" />
+                        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-75 pointer-events-none rounded-lg" />
                       </div>
                     );
                   })}

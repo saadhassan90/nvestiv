@@ -32,7 +32,7 @@ const DataFoundationsFlow = () => {
                       <span className="text-sm"><strong>AI Entity Extraction</strong> - Contacts, companies, deals identified</span>
                     </div>
                     <div className="flex items-center gap-3">
-                      <Database className="w-5 h-5 text-primary" />
+                      <Database className="w-5 h-5 text-foreground" />
                       <span className="text-sm"><strong>Auto-Populated CRM</strong> - Clean, structured data ready to use</span>
                     </div>
                   </div>
@@ -80,8 +80,8 @@ const DataFoundationsFlow = () => {
                       {/* Step 3 */}
                       <div className="border border-muted/50 rounded-lg p-4 bg-primary/5">
                         <div className="flex items-center gap-3 mb-3">
-                          <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center">
-                            <Database className="w-4 h-4 text-primary" />
+                          <div className="w-8 h-8 bg-muted rounded-lg flex items-center justify-center">
+                            <Database className="w-4 h-4 text-foreground" />
                           </div>
                           <span className="text-sm font-semibold">CRM Ready</span>
                           <div className="w-2 h-2 bg-green-500 rounded-full ml-auto"></div>
