@@ -96,44 +96,44 @@ const Navigation = () => {
                       onMouseEnter={handleSubmenuMouseEnter}
                       onMouseLeave={handleSubmenuMouseLeave}
                     >
-                      <div className="p-3 w-[640px] bg-background/95 backdrop-blur-sm border border-border rounded-xl shadow-2xl">
-                        <div className="divide-y divide-border/40">
-                          <a href="#iris" className="flex items-start gap-4 p-4 rounded-lg hover:bg-muted/80 transition-all duration-150 cursor-pointer group no-underline border border-transparent hover:border-border/60">
-                            <div className="w-12 h-12 bg-gradient-to-br from-primary/20 to-primary/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform duration-150">
-                              <Brain className="h-6 w-6 text-primary" />
+                      <div className="p-3 w-[640px] bg-background border border-border rounded-xl shadow-lg">
+                        <div className="space-y-2">
+                          <a href="#iris" className="flex items-start gap-4 p-4 rounded-lg hover:bg-accent transition-all duration-150 cursor-pointer group no-underline border border-border">
+                            <div className="w-12 h-12 bg-muted rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-accent transition-colors duration-150">
+                              <Brain className="h-6 w-6 text-foreground" />
                             </div>
                             <div className="flex-1 pt-1">
-                              <div className="font-semibold text-foreground text-base mb-1 group-hover:text-primary transition-colors">IRIS</div>
+                              <div className="font-semibold text-foreground text-base mb-1">IRIS</div>
                               <div className="text-sm text-muted-foreground leading-relaxed">One AI bot to action all your investment workflows automatically</div>
                             </div>
                           </a>
                           
-                          <a href="/ai-crm" className="flex items-start gap-4 p-4 rounded-lg hover:bg-muted/80 transition-all duration-150 cursor-pointer group no-underline border border-transparent hover:border-border/60">
-                            <div className="w-12 h-12 bg-gradient-to-br from-primary/20 to-primary/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform duration-150">
-                              <Database className="h-6 w-6 text-primary" />
+                          <a href="/ai-crm" className="flex items-start gap-4 p-4 rounded-lg hover:bg-accent transition-all duration-150 cursor-pointer group no-underline border border-border">
+                            <div className="w-12 h-12 bg-muted rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-accent transition-colors duration-150">
+                              <Database className="h-6 w-6 text-foreground" />
                             </div>
                             <div className="flex-1 pt-1">
-                              <div className="font-semibold text-foreground text-base mb-1 group-hover:text-primary transition-colors">AI CRM</div>
+                              <div className="font-semibold text-foreground text-base mb-1">AI CRM</div>
                               <div className="text-sm text-muted-foreground leading-relaxed">Intelligent relationship management platform built for private markets</div>
                             </div>
                           </a>
                           
-                          <a href="#ai-agents" className="flex items-start gap-4 p-4 rounded-lg hover:bg-muted/80 transition-all duration-150 cursor-pointer group no-underline border border-transparent hover:border-border/60">
-                            <div className="w-12 h-12 bg-gradient-to-br from-primary/20 to-primary/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform duration-150">
-                              <ChartBar className="h-6 w-6 text-primary" />
+                          <a href="#ai-agents" className="flex items-start gap-4 p-4 rounded-lg hover:bg-accent transition-all duration-150 cursor-pointer group no-underline border border-border">
+                            <div className="w-12 h-12 bg-muted rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-accent transition-colors duration-150">
+                              <ChartBar className="h-6 w-6 text-foreground" />
                             </div>
                             <div className="flex-1 pt-1">
-                              <div className="font-semibold text-foreground text-base mb-1 group-hover:text-primary transition-colors">AI Agents</div>
+                              <div className="font-semibold text-foreground text-base mb-1">AI Agents</div>
                               <div className="text-sm text-muted-foreground leading-relaxed">Design custom AI agents with specific capabilities for your investment process</div>
                             </div>
                           </a>
                           
-                          <a href="#ai-notetaker" className="flex items-start gap-4 p-4 rounded-lg hover:bg-muted/80 transition-all duration-150 cursor-pointer group no-underline border border-transparent hover:border-border/60">
-                            <div className="w-12 h-12 bg-gradient-to-br from-primary/20 to-primary/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform duration-150">
-                              <Shield className="h-6 w-6 text-primary" />
+                          <a href="#ai-notetaker" className="flex items-start gap-4 p-4 rounded-lg hover:bg-accent transition-all duration-150 cursor-pointer group no-underline border border-border">
+                            <div className="w-12 h-12 bg-muted rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-accent transition-colors duration-150">
+                              <Shield className="h-6 w-6 text-foreground" />
                             </div>
                             <div className="flex-1 pt-1">
-                              <div className="font-semibold text-foreground text-base mb-1 group-hover:text-primary transition-colors">AI Notetaker</div>
+                              <div className="font-semibold text-foreground text-base mb-1">AI Notetaker</div>
                               <div className="text-sm text-muted-foreground leading-relaxed">Intelligent meeting assistant that captures, organizes, and actions your calls</div>
                             </div>
                           </a>
