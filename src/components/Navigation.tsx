@@ -3,7 +3,9 @@ import { useTheme } from "next-themes";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
-import { Moon, Sun, Menu, X, ArrowRight, Brain, Database, ChartBar, Shield } from "lucide-react";
+import { Moon, Sun, Menu, X, ArrowRight, Database, Mic, Bot } from "lucide-react";
+import irisDashboard from "@/assets/iris-dashboard-preview.jpg";
+import walkthroughPreview from "@/assets/walkthrough-preview.jpg";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -96,44 +98,68 @@ const Navigation = () => {
                       onMouseEnter={handleSubmenuMouseEnter}
                       onMouseLeave={handleSubmenuMouseLeave}
                     >
-                      <div className="p-8 w-[720px] bg-popover border border-border rounded-lg shadow-xl">
-                        <div className="grid grid-cols-2 gap-x-12 gap-y-6">
-                          <div className="space-y-6">
-                            <div className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-4">Platform</div>
-                            
-                            <a href="#iris" className="flex items-start gap-3 hover:opacity-70 transition-opacity duration-200 cursor-pointer group no-underline">
-                              <Brain className="h-5 w-5 text-foreground mt-0.5 flex-shrink-0" />
-                              <div className="flex-1 min-w-0">
-                                <div className="font-semibold text-sm text-foreground mb-1">IRIS</div>
-                                <div className="text-xs text-muted-foreground leading-relaxed">One AI bot to action all your investment workflows automatically</div>
-                              </div>
-                            </a>
+                      <div className="p-8 w-[840px] bg-popover border border-border rounded-lg shadow-xl">
+                        <div className="flex gap-8">
+                          {/* Left Column - Products */}
+                          <div className="flex-1 space-y-6">
+                            <div className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-4">Products</div>
                             
                             <a href="/ai-crm" className="flex items-start gap-3 hover:opacity-70 transition-opacity duration-200 cursor-pointer group no-underline">
                               <Database className="h-5 w-5 text-foreground mt-0.5 flex-shrink-0" />
                               <div className="flex-1 min-w-0">
-                                <div className="font-semibold text-sm text-foreground mb-1">AI CRM</div>
-                                <div className="text-xs text-muted-foreground leading-relaxed">Intelligent relationship management platform built for private markets</div>
-                              </div>
-                            </a>
-                          </div>
-                          
-                          <div className="space-y-6">
-                            <div className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-4">Features</div>
-                            
-                            <a href="#ai-agents" className="flex items-start gap-3 hover:opacity-70 transition-opacity duration-200 cursor-pointer group no-underline">
-                              <ChartBar className="h-5 w-5 text-foreground mt-0.5 flex-shrink-0" />
-                              <div className="flex-1 min-w-0">
-                                <div className="font-semibold text-sm text-foreground mb-1">AI Agents</div>
-                                <div className="text-xs text-muted-foreground leading-relaxed">Design custom AI agents with specific capabilities for your investment process</div>
+                                <div className="font-semibold text-sm text-foreground mb-1">CRM</div>
+                                <div className="text-xs text-muted-foreground leading-relaxed">Intelligent relationship management for private markets</div>
                               </div>
                             </a>
                             
                             <a href="#ai-notetaker" className="flex items-start gap-3 hover:opacity-70 transition-opacity duration-200 cursor-pointer group no-underline">
-                              <Shield className="h-5 w-5 text-foreground mt-0.5 flex-shrink-0" />
+                              <Mic className="h-5 w-5 text-foreground mt-0.5 flex-shrink-0" />
                               <div className="flex-1 min-w-0">
-                                <div className="font-semibold text-sm text-foreground mb-1">AI Notetaker</div>
-                                <div className="text-xs text-muted-foreground leading-relaxed">Intelligent meeting assistant that captures, organizes, and actions your calls</div>
+                                <div className="font-semibold text-sm text-foreground mb-1">Notetaker</div>
+                                <div className="text-xs text-muted-foreground leading-relaxed">AI assistant that captures and actions your calls</div>
+                              </div>
+                            </a>
+                            
+                            <a href="#ai-agents" className="flex items-start gap-3 hover:opacity-70 transition-opacity duration-200 cursor-pointer group no-underline">
+                              <Bot className="h-5 w-5 text-foreground mt-0.5 flex-shrink-0" />
+                              <div className="flex-1 min-w-0">
+                                <div className="font-semibold text-sm text-foreground mb-1">Agents</div>
+                                <div className="text-xs text-muted-foreground leading-relaxed">Custom AI agents for your investment workflow</div>
+                              </div>
+                            </a>
+                          </div>
+                          
+                          {/* Right Column - Feature Cards */}
+                          <div className="w-[340px] space-y-4">
+                            <a href="#iris" className="block group no-underline">
+                              <div className="border border-border rounded-lg overflow-hidden hover:border-primary/50 transition-colors duration-200">
+                                <div className="aspect-video w-full overflow-hidden bg-gradient-to-br from-background to-muted">
+                                  <img 
+                                    src={irisDashboard} 
+                                    alt="IRIS AI Platform Dashboard" 
+                                    className="w-full h-full object-cover"
+                                  />
+                                </div>
+                                <div className="p-4">
+                                  <div className="font-semibold text-sm text-foreground mb-1">IRIS</div>
+                                  <div className="text-xs text-muted-foreground">AI-powered investment intelligence</div>
+                                </div>
+                              </div>
+                            </a>
+                            
+                            <a href="#walkthrough" className="block group no-underline">
+                              <div className="border border-border rounded-lg overflow-hidden hover:border-primary/50 transition-colors duration-200">
+                                <div className="aspect-video w-full overflow-hidden bg-gradient-to-br from-background to-muted">
+                                  <img 
+                                    src={walkthroughPreview} 
+                                    alt="Nvestiv Platform Walkthrough" 
+                                    className="w-full h-full object-cover"
+                                  />
+                                </div>
+                                <div className="p-4">
+                                  <div className="font-semibold text-sm text-foreground mb-1">Nvestiv Walkthrough</div>
+                                  <div className="text-xs text-muted-foreground">See how it all works together</div>
+                                </div>
                               </div>
                             </a>
                           </div>
