@@ -101,10 +101,10 @@ const Navigation = () => {
                       <div className="p-8 w-[840px] bg-popover border border-border rounded-lg shadow-xl">
                         <div className="flex gap-8">
                           {/* Left Column - Products */}
-                          <div className="flex-1 space-y-6">
+                          <div className="flex-1 space-y-3">
                             <div className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-4">Products</div>
                             
-                            <a href="/ai-crm" className="flex items-start gap-3 hover:opacity-70 transition-opacity duration-200 cursor-pointer group no-underline">
+                            <a href="/ai-crm" className="flex items-start gap-3 p-3 rounded-md border border-border hover:bg-muted/50 transition-colors duration-200 cursor-pointer group no-underline">
                               <Database className="h-5 w-5 text-foreground mt-0.5 flex-shrink-0" />
                               <div className="flex-1 min-w-0">
                                 <div className="font-semibold text-sm text-foreground mb-1">CRM</div>
@@ -112,7 +112,7 @@ const Navigation = () => {
                               </div>
                             </a>
                             
-                            <a href="#ai-notetaker" className="flex items-start gap-3 hover:opacity-70 transition-opacity duration-200 cursor-pointer group no-underline">
+                            <a href="#ai-notetaker" className="flex items-start gap-3 p-3 rounded-md border border-border hover:bg-muted/50 transition-colors duration-200 cursor-pointer group no-underline">
                               <Mic className="h-5 w-5 text-foreground mt-0.5 flex-shrink-0" />
                               <div className="flex-1 min-w-0">
                                 <div className="font-semibold text-sm text-foreground mb-1">Notetaker</div>
@@ -120,7 +120,7 @@ const Navigation = () => {
                               </div>
                             </a>
                             
-                            <a href="#ai-agents" className="flex items-start gap-3 hover:opacity-70 transition-opacity duration-200 cursor-pointer group no-underline">
+                            <a href="#ai-agents" className="flex items-start gap-3 p-3 rounded-md border border-border hover:bg-muted/50 transition-colors duration-200 cursor-pointer group no-underline">
                               <Bot className="h-5 w-5 text-foreground mt-0.5 flex-shrink-0" />
                               <div className="flex-1 min-w-0">
                                 <div className="font-semibold text-sm text-foreground mb-1">Agents</div>
@@ -130,9 +130,9 @@ const Navigation = () => {
                           </div>
                           
                           {/* Right Column - Feature Cards */}
-                          <div className="w-[340px] space-y-4">
+                          <div className="w-[340px] space-y-3">
                             <a href="#iris" className="block group no-underline">
-                              <div className="border border-border rounded-lg overflow-hidden hover:border-primary/50 transition-colors duration-200">
+                              <div className="border border-border rounded-lg overflow-hidden hover:bg-muted/30 hover:border-primary/50 transition-all duration-200">
                                 <div className="aspect-video w-full overflow-hidden bg-gradient-to-br from-background to-muted">
                                   <img 
                                     src={irisDashboard} 
@@ -148,7 +148,7 @@ const Navigation = () => {
                             </a>
                             
                             <a href="#walkthrough" className="block group no-underline">
-                              <div className="border border-border rounded-lg overflow-hidden hover:border-primary/50 transition-colors duration-200">
+                              <div className="border border-border rounded-lg overflow-hidden hover:bg-muted/30 hover:border-primary/50 transition-all duration-200">
                                 <div className="aspect-video w-full overflow-hidden bg-gradient-to-br from-background to-muted">
                                   <img 
                                     src={walkthroughPreview} 
