@@ -1155,66 +1155,120 @@ const HomePage = () => {
                       <div className="pointer-events-none absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 via-pink-500 to-cyan-500 rounded-[18px] blur-md opacity-15"></div>
                       <div className="relative z-10 bg-card rounded-2xl p-6 h-[700px] flex flex-col shadow-none">
                       
-                        {/* Agent Builder Interface */}
-                        <div className="flex-1 space-y-4 mb-4 overflow-y-auto">
-                          <div className="flex items-center justify-between mb-4">
-                            <h4 className="font-semibold text-card-foreground">Agent Builder</h4>
-                            <span className="text-xs bg-muted text-muted-foreground px-2 py-1 rounded-full">Draft Mode</span>
+                        {/* Agent Builder Interface - Claude-style */}
+                        <div className="flex-1 space-y-3 mb-4 overflow-y-auto">
+                          <div className="flex items-center justify-between mb-3">
+                            <h4 className="text-sm font-semibold text-card-foreground">Agent Builder</h4>
+                            <span className="text-xs bg-muted text-muted-foreground px-2 py-0.5 rounded">Building...</span>
                           </div>
                           
-                          {/* Voice Input Simulation */}
-                          <div className="bg-muted/50 rounded-lg p-4 border border-border">
-                            <div className="flex items-center gap-3 mb-3">
-                              <ListeningWaveform className="w-6" />
-                              <span className="text-sm text-muted-foreground">Listening...</span>
-                            </div>
-                            <div className="bg-card rounded p-3 text-sm text-card-foreground italic">
-                              "Create an agent that screens healthcare deals over $10M, checks if they fit our thesis, and automatically schedules intro calls for qualified opportunities."
+                          {/* User Input */}
+                          <div className="bg-muted/30 rounded-lg p-3 border border-border/50">
+                            <div className="text-xs font-medium text-muted-foreground mb-1.5">You</div>
+                            <div className="text-sm text-card-foreground leading-relaxed">
+                              Create an agent that screens healthcare deals over $10M, checks if they fit our thesis, and automatically schedules intro calls for qualified opportunities.
                             </div>
                           </div>
 
-                          {/* Agent Configuration Preview */}
-                          <div className="space-y-3">
-                            <div className="bg-muted/30 rounded-lg p-3 border border-border">
-                              <div className="flex items-center gap-2 mb-2">
-                                <Bot className="w-4 h-4 text-primary" />
-                                <span className="text-sm font-medium text-card-foreground">Healthcare Deal Screener</span>
-                              </div>
-                              <div className="text-xs text-muted-foreground space-y-1">
-                                <div>• Screen: Healthcare deals &gt;$10M</div>
-                                <div>• Check: Thesis alignment</div>
-                                <div>• Action: Schedule qualified intro calls</div>
-                              </div>
+                          {/* Thinking Block */}
+                          <div className="bg-muted/20 rounded-lg p-3 border border-border/30">
+                            <div className="flex items-center gap-2 mb-2">
+                              <div className="w-1 h-1 rounded-full bg-muted-foreground/40 animate-pulse"></div>
+                              <div className="text-xs font-medium text-muted-foreground">Analyzing requirements...</div>
                             </div>
-                            
-                            <div className="bg-muted/30 rounded-lg p-3 border border-border">
-                              <div className="text-xs text-muted-foreground">
-                                <div className="font-medium mb-1">Data Sources:</div>
-                                <div>✓ CRM Contacts</div>
-                                <div>✓ Email Inbox</div>
-                                <div>✓ Deal Pipeline</div>
-                                <div>✓ Calendar System</div>
-                              </div>
+                            <div className="text-xs text-muted-foreground/70 leading-relaxed space-y-1 pl-3">
+                              <div>• Identified: Deal screening workflow</div>
+                              <div>• Target: Healthcare sector, $10M+ deals</div>
+                              <div>• Actions: Thesis validation → Calendar scheduling</div>
                             </div>
+                          </div>
 
-                            <div className="bg-muted/30 rounded-lg p-3 border border-border">
-                              <div className="text-xs text-muted-foreground">
-                                <div className="font-medium mb-1">Triggers:</div>
-                                <div>• New deal email received</div>
-                                <div>• Pitch deck uploaded</div>
-                                <div>• Contact form submitted</div>
+                          {/* Step 1: Agent Structure */}
+                          <div className="space-y-2">
+                            <div className="text-xs font-medium text-card-foreground flex items-center gap-2">
+                              <span className="text-muted-foreground">Step 1:</span>
+                              <span>Agent Structure</span>
+                              <div className="w-1.5 h-1.5 rounded-full bg-green-500"></div>
+                            </div>
+                            <div className="bg-card border border-border/50 rounded-lg p-3">
+                              <div className="flex items-center gap-2 mb-2">
+                                <Bot className="w-3.5 h-3.5 text-foreground" />
+                                <span className="text-xs font-medium">Healthcare Deal Screener</span>
+                              </div>
+                              <div className="text-xs text-muted-foreground space-y-0.5 pl-5">
+                                <div>→ Filter deals by sector & deal size</div>
+                                <div>→ Score thesis alignment (0-100)</div>
+                                <div>→ Auto-schedule when score &gt; 75</div>
+                              </div>
+                            </div>
+                          </div>
+
+                          {/* Step 2: Data Connections */}
+                          <div className="space-y-2">
+                            <div className="text-xs font-medium text-card-foreground flex items-center gap-2">
+                              <span className="text-muted-foreground">Step 2:</span>
+                              <span>Data Connections</span>
+                              <div className="w-1.5 h-1.5 rounded-full bg-green-500"></div>
+                            </div>
+                            <div className="bg-card border border-border/50 rounded-lg p-3">
+                              <div className="grid grid-cols-2 gap-2 text-xs">
+                                <div className="flex items-center gap-1.5">
+                                  <div className="w-1 h-1 rounded-full bg-green-500"></div>
+                                  <span className="text-muted-foreground">CRM Pipeline</span>
+                                </div>
+                                <div className="flex items-center gap-1.5">
+                                  <div className="w-1 h-1 rounded-full bg-green-500"></div>
+                                  <span className="text-muted-foreground">Email Inbox</span>
+                                </div>
+                                <div className="flex items-center gap-1.5">
+                                  <div className="w-1 h-1 rounded-full bg-green-500"></div>
+                                  <span className="text-muted-foreground">Investment Thesis</span>
+                                </div>
+                                <div className="flex items-center gap-1.5">
+                                  <div className="w-1 h-1 rounded-full bg-green-500"></div>
+                                  <span className="text-muted-foreground">Calendar API</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          {/* Step 3: Automation Rules */}
+                          <div className="space-y-2">
+                            <div className="text-xs font-medium text-card-foreground flex items-center gap-2">
+                              <span className="text-muted-foreground">Step 3:</span>
+                              <span>Automation Rules</span>
+                              <div className="w-1.5 h-1.5 rounded-full bg-green-500"></div>
+                            </div>
+                            <div className="bg-card border border-border/50 rounded-lg p-3 space-y-2">
+                              <div className="text-xs">
+                                <div className="text-muted-foreground mb-1">Trigger Conditions:</div>
+                                <div className="pl-3 space-y-0.5 text-muted-foreground/80">
+                                  <div>• New inbound deal email</div>
+                                  <div>• Pitch deck attachment detected</div>
+                                  <div>• Deal form submission</div>
+                                </div>
+                              </div>
+                              <div className="text-xs border-t border-border/30 pt-2">
+                                <div className="text-muted-foreground mb-1">Actions:</div>
+                                <div className="pl-3 space-y-0.5 text-muted-foreground/80">
+                                  <div>1. Extract deal metadata</div>
+                                  <div>2. Run thesis scoring algorithm</div>
+                                  <div>3. Schedule intro call if qualified</div>
+                                  <div>4. Send notification to investment team</div>
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
                         
-                        {/* Action Button */}
-                        <div className="bg-black/5 backdrop-blur-sm rounded-xl p-3 border border-border">
+                        {/* Completion Status */}
+                        <div className="bg-green-500/5 backdrop-blur-sm rounded-lg p-3 border border-green-500/20">
                           <div className="flex items-center justify-between">
-                            <div className="text-sm text-muted-foreground">
-                              Agent configured and ready
+                            <div className="flex items-center gap-2">
+                              <div className="w-2 h-2 rounded-full bg-green-500"></div>
+                              <span className="text-xs text-card-foreground font-medium">Agent ready to deploy</span>
                             </div>
-                            <Button size="sm" variant="default" className="text-xs">
+                            <Button size="sm" variant="default" className="text-xs h-7">
                               Deploy Agent
                             </Button>
                           </div>
