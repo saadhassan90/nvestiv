@@ -96,7 +96,7 @@ const Navigation = () => {
                       onMouseEnter={handleSubmenuMouseEnter}
                       onMouseLeave={handleSubmenuMouseLeave}
                     >
-                      <div className="p-2 w-[580px] bg-popover border border-border rounded-lg shadow-xl">
+                      <div className="p-2 w-[580px] bg-gradient-to-br from-popover to-background border border-border rounded-lg shadow-xl">
                         <div className="space-y-2">
                           <a href="#iris" className="flex items-start gap-3 p-3 rounded-md border border-border hover:bg-muted/50 transition-colors duration-200 cursor-pointer group no-underline">
                             <div className="w-10 h-10 bg-muted/30 rounded-md flex items-center justify-center flex-shrink-0">
