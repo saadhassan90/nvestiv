@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useEffect, useState } from "react";
+import { Users } from "lucide-react";
 
 const profiles = [
   {
@@ -113,6 +114,19 @@ const ProfilesCarousel = () => {
   return (
     <section className="py-20">
       <div className="max-w-6xl mx-auto px-4">
+        {/* Section Label */}
+        <div className="flex justify-center mb-6">
+          <div className="relative inline-flex items-center gap-2 px-4 py-2 rounded-full bg-muted text-muted-foreground">
+            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary from-0% via-primary via-70% to-primary/10 to-100% p-[1px]">
+              <div className="h-full w-full rounded-full bg-muted"></div>
+            </div>
+            <div className="relative z-10 flex items-center gap-2">
+              <Users className="w-4 h-4" />
+              <span className="text-sm font-medium">Smart Profiles</span>
+            </div>
+          </div>
+        </div>
+        
         <div className="text-center mb-12">
           <h2 className="h2 mb-6">Profiles That Match the Market</h2>
         </div>

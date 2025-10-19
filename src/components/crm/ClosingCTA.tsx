@@ -1,9 +1,24 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Rocket } from "lucide-react";
 
 const ClosingCTA = () => {
   return (
     <section className="py-20 relative overflow-hidden">
+      <div className="max-w-6xl mx-auto px-4">
+        {/* Section Label */}
+        <div className="flex justify-center mb-12">
+          <div className="relative inline-flex items-center gap-2 px-4 py-2 rounded-full bg-muted text-muted-foreground">
+            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary from-0% via-primary via-70% to-primary/10 to-100% p-[1px]">
+              <div className="h-full w-full rounded-full bg-muted"></div>
+            </div>
+            <div className="relative z-10 flex items-center gap-2">
+              <Rocket className="w-4 h-4" />
+              <span className="text-sm font-medium">Get Started</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
       {/* Background with gradient and network lines */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-background via-muted/10 to-primary/5" />

@@ -1,22 +1,9 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play, Database } from "lucide-react";
+import { ArrowRight, Play } from "lucide-react";
 
 const CRMHero = () => {
   return (
     <section className="relative pt-12 pb-16">
-      {/* Section Label */}
-      <div className="flex justify-center mb-8">
-        <div className="relative inline-flex items-center gap-2 px-4 py-2 rounded-full bg-muted text-muted-foreground">
-          <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary from-0% via-primary via-70% to-primary/10 to-100% p-[1px]">
-            <div className="h-full w-full rounded-full bg-muted"></div>
-          </div>
-          <div className="relative z-10 flex items-center gap-2">
-            <Database className="w-4 h-4" />
-            <span className="text-sm font-medium">AI CRM</span>
-          </div>
-        </div>
-      </div>
-
       {/* Hero Card with Gradient Background */}
       <div className="w-full h-[700px] rounded-3xl overflow-hidden relative bg-gradient-to-br from-primary/20 via-primary/5 to-background border border-border">
         {/* Gradient overlay effects */}
@@ -56,7 +43,7 @@ const CRMHero = () => {
                 Try the CRM
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-4">
+              <Button variant="secondary" size="lg" className="text-lg px-8 py-4">
                 <Play className="mr-2 h-5 w-5" />
                 Video Demo
               </Button>

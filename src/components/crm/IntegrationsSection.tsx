@@ -3,7 +3,8 @@ import { Card } from "@/components/ui/card";
 import { 
   Zap, 
   Building2, 
-  Workflow
+  Workflow,
+  Plug
 } from "lucide-react";
 import { Integrations3DMarquee } from "@/components/Integrations3DMarquee";
 
@@ -13,6 +14,19 @@ const IntegrationsSection = () => {
   return (
     <section className="py-20">
       <div className="max-w-6xl mx-auto px-4">
+        {/* Section Label */}
+        <div className="flex justify-center mb-6">
+          <div className="relative inline-flex items-center gap-2 px-4 py-2 rounded-full bg-muted text-muted-foreground">
+            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary from-0% via-primary via-70% to-primary/10 to-100% p-[1px]">
+              <div className="h-full w-full rounded-full bg-muted"></div>
+            </div>
+            <div className="relative z-10 flex items-center gap-2">
+              <Plug className="w-4 h-4" />
+              <span className="text-sm font-medium">Integrations</span>
+            </div>
+          </div>
+        </div>
+        
         <div className="text-center mb-12">
           <h2 className="h2 mb-6">Your Stack, Now Intelligent</h2>
         </div>
