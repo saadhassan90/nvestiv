@@ -26,23 +26,22 @@ const CRMHero = () => {
 
       <div className="relative max-w-6xl mx-auto text-center px-4">
         <h1 className="h1 mb-6 max-w-4xl mx-auto">
-          The CRM Built for{" "}
-          <span className="text-primary">Private Investments</span>
+          The CRM that{" "}
+          <span className="text-primary">UPDATES ITSELF</span>
         </h1>
         
         <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-          The first AI-native CRM that updates itself. One system to unify your relationships, 
-          data, and workflows—built for how investors actually work.
+          Relationship intelligence on autopilot. IRIS captures every signal—from emails, meetings, to files—and updates your CRM like magic.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
           <Button size="lg" className="text-lg px-8 py-4 shadow-lg hover:shadow-xl transition-shadow">
-            Try the AI-Native CRM
+            Try the CRM
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
           <Button variant="outline" size="lg" className="text-lg px-8 py-4">
             <Play className="mr-2 h-5 w-5" />
-            Book a Demo
+            Video Demo
           </Button>
         </div>
         
