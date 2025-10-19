@@ -26,7 +26,7 @@ const CRMHero = () => {
 
       <div className="relative max-w-6xl mx-auto text-center px-4">
         <h1 className="h1 mb-6 max-w-4xl mx-auto">
-          The CRM that{" "}
+          THE CRM THAT{" "}
           <span className="text-primary">UPDATES ITSELF</span>
         </h1>
         
