@@ -19,8 +19,9 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'sans': ['Roboto', 'sans-serif'],
-				'harabara': ['Harabara', 'sans-serif'],
+				'heading': ['Nunito', 'sans-serif'],
+				'body': ['Lora', 'serif'],
+				'sans': ['Nunito', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',

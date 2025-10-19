@@ -124,6 +124,7 @@
     position: relative;
     background: white;
     overflow-x: hidden;
+    font-family: 'Lora', serif;
   }
 
   body::before {
@@ -230,6 +231,7 @@
   /* Display Typography - For heroes and major headings */
   .text-display {
     @apply text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight;
+    font-family: 'Nunito', sans-serif;
     color: hsl(var(--text-display));
   }
   
@@ -241,64 +243,68 @@
   /* H1 - Page Title (SEO: One per page) */
   h1, .h1 {
     @apply scroll-m-20 text-4xl md:text-5xl font-bold tracking-tight leading-tight;
+    font-family: 'Nunito', sans-serif;
     color: hsl(var(--text-display));
   }
   
   /* H2 - Section Headers */
   h2, .h2 {
     @apply scroll-m-20 text-3xl md:text-4xl font-semibold tracking-tight leading-tight mt-12 mb-6 first:mt-0;
+    font-family: 'Nunito', sans-serif;
     color: hsl(var(--text-primary));
   }
   
   /* H3 - Subsection Headers */
   h3, .h3 {
     @apply scroll-m-20 text-2xl md:text-3xl font-semibold tracking-tight leading-tight mt-8 mb-4;
+    font-family: 'Nunito', sans-serif;
     color: hsl(var(--text-primary));
   }
   
   /* H4 - Content Block Headers */
   h4, .h4 {
     @apply scroll-m-20 text-xl md:text-2xl font-semibold tracking-tight leading-tight mt-6 mb-3;
+    font-family: 'Nunito', sans-serif;
     color: hsl(var(--text-primary));
   }
 
   /* H5 - Subheadings */
   h5, .h5 {
     @apply scroll-m-20 text-lg md:text-xl font-medium tracking-tight leading-tight mt-4 mb-2;
+    font-family: 'Nunito', sans-serif;
     color: hsl(var(--text-primary));
   }
 
   /* H6 - Minor headings */
   h6, .h6 {
     @apply scroll-m-20 text-base md:text-lg font-medium tracking-tight leading-tight mt-3 mb-2;
+    font-family: 'Nunito', sans-serif;
     color: hsl(var(--text-secondary));
   }
 
   /* Body Typography */
   p, .text-body {
     @apply leading-relaxed text-base md:text-lg [&:not(:first-child)]:mt-4;
+    font-family: 'Lora', serif;
     color: hsl(var(--text-primary));
   }
 
   .text-secondary {
     @apply leading-relaxed text-sm md:text-base;
+    font-family: 'Lora', serif;
     color: hsl(var(--text-secondary));
   }
   /* Large body text for hero sections */
   .text-hero-body {
     @apply leading-relaxed text-lg md:text-xl lg:text-2xl;
+    font-family: 'Lora', serif;
     color: hsl(var(--text-secondary));
   }
 
   .text-muted {
     @apply leading-relaxed text-sm;
+    font-family: 'Lora', serif;
     color: hsl(var(--text-muted));
-  }
-
-  /* Large body text for hero sections */
-  .text-hero-body {
-    @apply leading-relaxed text-lg md:text-xl lg:text-2xl;
-    color: hsl(var(--text-secondary));
   }
 
   /* Accent text using brand blue */
